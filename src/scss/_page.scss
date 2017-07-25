@@ -1,0 +1,101 @@
+@import "_variables.scss";
+
+.page-container {
+  margin-top: 2em;
+}
+
+.post {
+  .post-header {
+    margin-bottom: 2em;
+
+    h2 {
+      font-weight: bold;
+    }
+  }
+}
+
+.page-header {
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+
+  time {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 80%;
+  }
+}
+
+.page {
+
+  h1, h2, h3, h4, p, ul, ol, code {
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  pre {
+    code {
+      display: block;
+    }
+  }
+
+  p, ul, ol {
+    margin-bottom: 1em;
+  }
+
+  h2, h3, h4 {
+    margin-top: 1em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  h2 {
+    font-size: 150%;
+  }
+
+  h3 {
+    font-size: 100%;
+  }
+
+  h4 {
+    font-size: 80%;
+  }
+
+  ul, ol {
+    padding-left: 3em;
+  }
+
+  ol {
+    list-style-type: lower-roman;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+}
+
+figure.highlight {
+  padding: 1em;
+  margin: 1em 0;
+  background-color: #333;
+  color: #eee;
+  overflow-x: auto;
+
+  .gutter pre {
+    margin-right: 1em;
+    text-align: right;
+    font-size: 80%;
+    color: #666;
+  }
+
+  .code {
+    .built_in {
+      color: #e77;
+    }
+
+    .string {
+      color: greenyellow;
+    }
+  }
+}
