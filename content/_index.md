@@ -1,5 +1,5 @@
 +++
-title: "Yo"
+title = "Yo"
 +++
 
 # Heya

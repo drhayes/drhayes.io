@@ -1,0 +1,15 @@
+{{ partial "header" . }}
+
+{{ .Content }}
+
+<ol>
+  {{ range first 10 .Data.Pages }}
+    <li>
+      <a href="{{ .Permalink }}">
+        {{ .Title }}
+      </a>
+    </li>
+  {{ end }}
+</ol>
+
+{{ partial "footer" . }}
