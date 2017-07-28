@@ -1,3 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "http://drhayes.io/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+PygmentsCodeFences = true
+
+[taxonomies]
+category = "categories"

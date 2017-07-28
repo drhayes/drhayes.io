@@ -75,9 +75,10 @@
   }
 }
 
-figure.highlight {
+.highlight {
+  max-width: 53rem;
   padding: 1em;
-  margin: 1em 0;
+  margin: 1em auto;
   background-color: #333;
   color: #eee;
   overflow-x: auto;
