@@ -1,7 +1,13 @@
 baseURL = "http://drhayes.io/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+title = "drhayes.io"
 PygmentsCodeFences = true
+sectionPagesMenu = "main"
 
 [taxonomies]
 category = "categories"
+
+[[menu.main]]
+  name = "Impact Stuff"
+  weight = -10
+  identifier = "impact-stuff"
+  url = "/impact-stuff/"

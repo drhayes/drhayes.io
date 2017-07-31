@@ -1,6 +1,6 @@
-+++
-title = "Home"
-+++
+---
+title: Home
+---
 
 ## Here
 
@@ -16,6 +16,9 @@ title = "Home"
   * [Keybase][keybase]
   * [Goodreads][goodreads]
 
+---
+[About][]
+
 
 [impact]: /impact-stuff
 [blaster]: /blaster
@@ -25,3 +28,4 @@ title = "Home"
 [tumblr]: https://drhayes.tumblr.com
 [keybase]: http://keybase.io/drhayes
 [goodreads]: https://www.goodreads.com/drhayes
+[about]: /about

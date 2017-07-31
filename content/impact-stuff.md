@@ -1,6 +1,6 @@
 ---
-title: Impact Stuff
 date: 2015-02-09 16:37:00
+title: Impact Stuff
 ---
 
 Here's a collection of code and stuff for [ImpactJS][impact], the JavaScript game engine.

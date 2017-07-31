@@ -4,6 +4,7 @@
 @import "_page.scss";
 @import "_prism.scss";
 @import "_grid.scss";
+@import "_nav.scss";
 
 * {
   box-sizing: border-box;
@@ -25,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   position: relative;
+  cursor: pointer;
   color: $linkColor;
   text-decoration: none;
   -webkit-transition: text-shadow 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
@@ -142,28 +144,6 @@ a[href*=tumblr] {
     background-size: 1em 1em;
     background-repeat: no-repeat;
     background-color: white;
-  }
-}
-
-.breadcrumbs {
-  margin-bottom: 1em;
-  font-size: 80%;
-  color: rgba(0, 0, 0, 0.5);
-
-  li {
-    display: inline-block;
-
-    a {
-      color: rgba(70, 130, 180, 0.5);
-    }
-
-    &:after {
-      content: '»';
-    }
-
-    &:last-child:after {
-      content: '';
-    }
   }
 }
 

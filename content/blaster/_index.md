@@ -1,8 +1,7 @@
-+++
-title = "Blaster Overview"
-date = "2015-09-27 8:20:00"
-show_categories = true
-+++
+---
+date: 2015-09-27 8:20:00
+title: Blaster
+---
 
 ![Screenshot of Blaster](/images/blaster-screenshot.png)
 
@@ -15,9 +14,6 @@ I also wanted to take the opportunity to write out a tutorial of sorts around ho
 Blaster uses [Phaser][] and a host of web-based technologies.
 
 Here is the [repository for the project][repo].
-
-## Steps:
-
 
 [playblaster]: http://blaster.drhayes.io
 [phaser]: https://phaser.io/

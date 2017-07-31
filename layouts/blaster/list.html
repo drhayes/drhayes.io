@@ -9,15 +9,17 @@
 
 <article class="page">
 {{ .Content }}
-{{ if .Params.show_categories }}
+<h2>Steps</h2>
 <ol>
-  {{ range .Pages.Reverse }}
+  {{ range $.Pages.ByDate }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ol>
-{{ end }}
+
 </article>
 
 </section>
 
 {{ partial "footer" . }}
+
+

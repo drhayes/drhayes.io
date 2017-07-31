@@ -1,10 +1,10 @@
 ---
-title: Part Two, Shooting and Explosions
-date: 2015-10-05 13:00:00
-categories:
-  - blaster
 aliases:
-  - /blaster/part2.html
+- /blaster/part2.html
+categories:
+- blaster
+date: 2015-10-05 13:00:00
+title: Part Two, Shooting and Explosions
 ---
 
 This is the second part of an extended write-up I'm doing about my [Phaser](http://phaser.io) game, Blaster. [Play Blaster here][playblaster].
