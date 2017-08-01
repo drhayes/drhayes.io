@@ -2,12 +2,3 @@ baseURL = "http://drhayes.io/"
 title = "drhayes.io"
 PygmentsCodeFences = true
 sectionPagesMenu = "main"
-
-[taxonomies]
-category = "categories"
-
-[[menu.main]]
-  name = "Impact Stuff"
-  weight = -10
-  identifier = "impact-stuff"
-  url = "/impact-stuff/"
