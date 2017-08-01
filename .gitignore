@@ -2,3 +2,4 @@ public
 static/css
 static/images
 .sass-cache/
+node_modules/

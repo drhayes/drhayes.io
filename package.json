@@ -1,0 +1,19 @@
+{
+  "name": "drhayes.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "cat ./src/scss/style.scss | node-sass --include-path ./src/scss --source-map ./static/css/style.css.map --output ./static/css ./static/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/drhayes/drhayes.io.git"
+  },
+  "author": "David Hayes <drhayes@gmail.com> (http://drhayes.io/)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/drhayes/drhayes.io#readme",
+  "dependencies": {
+    "node-sass": "4.5.3"
+  }
+}
