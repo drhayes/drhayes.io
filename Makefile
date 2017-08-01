@@ -6,7 +6,7 @@ public: static/css/style.css $(STATIC_IMAGE_FILES)
 	hugo
 
 static/css/style.css: $(SCSS_FILES)
-	@Mkdir -p ./static/css
+	@mkdir -p ./static/css
 	sass ./src/scss/style.scss ./static/css/style.css
 
 static/images/%.png: src/images/%.png
