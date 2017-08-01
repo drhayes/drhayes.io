@@ -8,7 +8,6 @@ title: Home
   * [ImpactJS][]
 * [Games][]
   * [Blaster][]
-  * [The Secret Game][secretgame]
 
 ## Elsewhere
 
@@ -26,7 +25,6 @@ title: Home
 [games]: /games
 [impactjs]: /code/impactjs
 [blaster]: /games/blaster
-[secretgame]: /games/secret-game
 
 [github]: https://github.com/drhayes
 [tumblr]: https://drhayes.tumblr.com
