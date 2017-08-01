@@ -8,7 +8,6 @@
 
 <article class="page">
 {{ .Content }}
-<h2>Steps</h2>
 <ol>
   {{ range $.Pages.ByDate }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
