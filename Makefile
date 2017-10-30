@@ -1,9 +1,13 @@
 SCSS_FILES := $(shell find src -type f -name '*.scss')
 SRC_IMAGE_FILES := $(shell find src -type f -name '*.png')
 STATIC_IMAGE_FILES := $(subst src,static,$(SRC_IMAGE_FILES))
+FILES=$(shell find content layouts static themes -type f)
 
-public: static/css/style.css $(STATIC_IMAGE_FILES)
+public: $(FILES) config.toml
 	hugo
+
+watch:
+	hugo server -w
 
 static/css/style.css: $(SCSS_FILES)
 	@mkdir -p ./static/css
