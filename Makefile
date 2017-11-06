@@ -17,6 +17,10 @@ static/images/%.png: src/images/%.png
 	@mkdir -p "$(@D)"
 	@cp $< $@
 
+clean:
+	rm -rf public/
+
 print-%  : ; @echo $* = $($*)
 
 
+.PHONY: clean print-%
