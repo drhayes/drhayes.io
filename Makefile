@@ -29,5 +29,7 @@ clean:
 
 print-%  : ; @echo $* = $($*)
 
+publish: public
+	gsutil rsync -R public/ gs://drhayes.io
 
-.PHONY: clean print-%
+.PHONY: clean print-% publish
