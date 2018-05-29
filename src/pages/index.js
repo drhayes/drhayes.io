@@ -1,16 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Header from '../components/header';
-
-const BigHeader = ({ children }) => (
-  <h1 style={{
-    fontFamily: 'Oswald',
-    fontSize: '200%',
-    marginBottom: '1em'
-  }}>
-    {children}
-  </h1>
-)
+import BigHeader from '../components/bigHeader';
 
 const GrayAndSmall = ({ children }) => (
   <small style={{
@@ -18,7 +8,7 @@ const GrayAndSmall = ({ children }) => (
     fontSize: '50%',
     fontWeight: 'normal',
     fontFamily: 'Roboto',
-    color: '#777',
+    color: 'lightslategray',
     marginTop: '.5em'
   }}>
     {children}
@@ -27,13 +17,25 @@ const GrayAndSmall = ({ children }) => (
 
 const MediumHeader = ({ children }) => (
   <h2 style={{
+    color: 'steelblue',
     fontFamily: 'Oswald',
-    fontSize: '115%',
-    marginBottom: '2em'
+    fontSize: '150%',
+    marginBottom: '1em',
   }}>
     {children}
   </h2>
 )
+
+const List = ({ children }) => {
+  const listItems = React.Children.map(children, c => <li>{c}</li>);
+  return (
+    <ul style={{
+      marginBottom: '3em'
+    }}>
+      {listItems}
+    </ul>
+  );
+}
 
 const IndexPage = ({ data }) => (
   <div>
@@ -42,29 +44,17 @@ const IndexPage = ({ data }) => (
       <GrayAndSmall>The personal website of David R. Hayes </GrayAndSmall>
     </BigHeader>
     <MediumHeader>Here</MediumHeader>
-    <MediumHeader>Elsewhere</MediumHeader>
-    <ul>
+    <List>
+      <Link to="/games/blaster">Blaster</Link>
+      <Link to="/about">About</Link>
+    </List>
 
-    </ul>
+    <MediumHeader>Elsewhere</MediumHeader>
+    <List>
+
+    </List>
   </div>
 )
 
 export default IndexPage
 
-export const query = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
