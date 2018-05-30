@@ -53,13 +53,19 @@ const IndexPage = ({ data }) => (
     <List>
       <Link to="/games/blaster">Blaster</Link>
       <Link to="/impactjs">ImpactJS</Link>
-      <Link to="/about">About</Link>
     </List>
 
     <MediumHeader>Elsewhere</MediumHeader>
     <List>
-
+      <a href="https://micro.blog/drhayes" rel="me">My Micro.blog</a>
+      <a href="https://keybase.io/drhayes" rel="me">Keybase</a>
+      <a href="https://github.com/drhayes">GitHub</a>
+      <a href="https://drhayes.tumblr.com">Tumblr</a>
+      <a href="https://www.goodreads.com/drhayes">Goodreads</a>
+      <a href="https://twitter.com/drhayes">@drhayes</a>
     </List>
+
+    <Link to="/about">About</Link>
   </div>
 )
 

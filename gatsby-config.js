@@ -21,6 +21,7 @@ module.exports = {
               classPrefix: 'language-',
             }
           },
+          'gatsby-remark-copy-images',
           'gatsby-remark-copy-linked-files'
         ]
       }
