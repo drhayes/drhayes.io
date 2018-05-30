@@ -1,14 +1,16 @@
 const path = require('path');
 
-// exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-//   const { createNodeField } = boundActionCreators;
-//   if (node.internal.type === 'MarkdownRemark') {
-//     const fileNode = getNode(node.parent);
-//     console.log(fileNode);
-
-//     createNodeField({ node, name: 'cats', value: 'pants' });
-//   }
-// }
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators;
+  if (node.internal.type === 'MarkdownRemark') {
+    const fileNode = getNode(node.parent);
+    const matches = fileNode.absolutePath.match(/pages\/(.+)\.md$/i);
+    if (matches) {
+      const likelyPath = matches[1].replace(/index$/, '');
+      createNodeField({ node, name: 'path', value: likelyPath });
+    }
+  }
+}
 
 exports.createPages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
@@ -32,6 +34,7 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
   `);
 
   const gamePostTemplate = path.resolve('src/templates/gamePost.js');
+  const gamePostIndexTemplate = path.resolve('src/templates/gameIndexPost.js');
 
   // Game posts.
   allMarkdown.data.allMarkdownRemark.edges
@@ -39,11 +42,13 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
     .forEach(({ node }) => {
       const matches = node.fileAbsolutePath.match(/pages\/(games\/\w+\/\w+)\.md$/i);
       if (matches.length) {
+        const path = matches[1].replace(/index$/, '');
+        const component = matches[1].includes('index') ? gamePostIndexTemplate : gamePostTemplate;
         createPage({
-          path: matches[1],
-          component: gamePostTemplate,
+          path, component,
           context: {
-            absolutePath: node.fileAbsolutePath
+            absolutePath: node.fileAbsolutePath,
+            game: node.frontmatter.game
           }
         });
       }

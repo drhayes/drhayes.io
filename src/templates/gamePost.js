@@ -1,15 +1,16 @@
 import React from 'react'
-import Container from '../components/container';
 import '../pages/prism.css';
 import BigHeader from '../components/bigHeader';
+
+import './gamePost.css';
 
 export default function GamePost({ data }) {
   const { html, frontmatter: { title } } = data.markdownRemark;
   return (
-    <Container>
-      <BigHeader>{title} - drhayes.io</BigHeader>
+    <div>
+      <BigHeader>{title}</BigHeader>
       <div dangerouslySetInnerHTML={{__html: html}}></div>
-    </Container>
+    </div>
   );
 }
 

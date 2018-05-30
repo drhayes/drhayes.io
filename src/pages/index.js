@@ -7,9 +7,8 @@ const GrayAndSmall = ({ children }) => (
     display: 'block',
     fontSize: '50%',
     fontWeight: 'normal',
-    fontFamily: 'Roboto',
-    color: 'lightslategray',
-    marginTop: '.5em'
+    fontFamily: 'Lato',
+    color: 'darkslategray',
   }}>
     {children}
   </small>
