@@ -52,6 +52,7 @@ const IndexPage = ({ data }) => (
     <MediumHeader>Here</MediumHeader>
     <List>
       <Link to="/games/blaster">Blaster</Link>
+      <Link to="/impactjs">ImpactJS</Link>
       <Link to="/about">About</Link>
     </List>
 

@@ -1,24 +1,22 @@
 import React from 'react'
-import '../pages/prism.css';
 import BigHeader from '../components/bigHeader';
 import MainHeader from '../components/mainHeader';
 
 import './gamePost.css';
 
-export default function GamePost({ data }) {
-  const { html, frontmatter: { title, game } } = data.markdownRemark;
-  const casedGame = game.replace(/(\b[a-z](?!\s))/g, d => d.toUpperCase());
+export default function MarkdownPage({ data }) {
+  const { html, frontmatter: { title } } = data.markdownRemark;
   return (
     <div>
       <MainHeader />
-      <BigHeader>{title} - {casedGame}</BigHeader>
+      <BigHeader>{title}</BigHeader>
       <div dangerouslySetInnerHTML={{__html: html}}></div>
     </div>
   );
 }
 
 export const pageQuery = graphql`
-query GamePostByPath($absolutePath: String!) {
+query MarkdownPageByPath($absolutePath: String!) {
   markdownRemark(fileAbsolutePath: {eq: $absolutePath}) {
     fileAbsolutePath
     html

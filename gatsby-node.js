@@ -24,6 +24,9 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
             id
             fileAbsolutePath
             html
+            fields {
+              path
+            }
             frontmatter {
               title
               date
@@ -35,6 +38,7 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
     }
   `);
 
+  const markdownPageTemplate = path.resolve('src/templates/markdownPage.js');
   const gamePostTemplate = path.resolve('src/templates/gamePost.js');
   const gamePostIndexTemplate = path.resolve('src/templates/gameIndexPost.js');
 
@@ -55,8 +59,18 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
         });
       }
     });
-    // createPage({
-      // path: '/thing',
-      // context: {}
-    // });
+
+  // Other posts.
+  allMarkdown.data.allMarkdownRemark.edges
+    // We don't need to handle game pages anymore.
+    .filter(({ node }) => !node.frontmatter.game)
+    .forEach(({ node }) => {
+      createPage({
+        path: node.fields.path,
+        component: markdownPageTemplate,
+        context: {
+          absolutePath: node.fileAbsolutePath
+        }
+      });
+    });
 }

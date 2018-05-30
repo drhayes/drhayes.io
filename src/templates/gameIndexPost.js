@@ -2,6 +2,7 @@ import React from 'react'
 import '../pages/prism.css';
 import BigHeader from '../components/bigHeader';
 import Link from 'gatsby-link';
+import MainHeader from '../components/mainHeader';
 
 import './gamePost.css';
 
@@ -21,6 +22,7 @@ export default function GameIndexPost({ data }) {
     ))
   return (
     <div>
+      <MainHeader />
       <BigHeader>{title}</BigHeader>
       <div dangerouslySetInnerHTML={{__html: html}}></div>
       <h2>Articles</h2>
