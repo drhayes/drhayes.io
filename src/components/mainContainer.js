@@ -2,11 +2,8 @@ import React from 'react'
 
 const MainContainer = ({ children }) => (
   <div
+    id="MainContainer"
     style={{
-      margin: '1em auto',
-      padding: '1em',
-      width: '40em',
-      backgroundColor: 'white',
     }}
   >
     { children }

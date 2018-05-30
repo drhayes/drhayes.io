@@ -79,3 +79,18 @@ pre, code {
 p {
   margin-bottom: 1em;
 }
+
+#MainContainer {
+  box-sizing: border-box;
+  margin: 1em auto;
+  padding: 1em;
+  width: 40em;
+  background-color: white;
+}
+
+@media(max-width: 600px) {
+  #MainContainer {
+    width: 100%;
+    padding: 5px;
+  }
+}
