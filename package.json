@@ -7,7 +7,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "publish": "gatsby build && surge -d drhayes.io public/"
+    "publish": "rm -rf public/ && gatsby build && surge -d https://drhayes.io public/"
   },
   "repository": {
     "type": "git",
