@@ -1,14 +1,16 @@
 const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
   if (node.internal.type === 'MarkdownRemark') {
-    const fileNode = getNode(node.parent);
-    const matches = fileNode.absolutePath.match(/pages\/(.+)\.md$/i);
-    if (matches) {
-      const likelyPath = matches[1].replace(/index$/, '');
-      createNodeField({ node, name: 'path', value: likelyPath });
-    }
+    const nodePath = createFilePath({
+      node,
+      getNode,
+      basePath: 'pages/',
+      trailingSlash: false
+    });
+    createNodeField({ node, name: 'path', value: nodePath });
   }
 }
 

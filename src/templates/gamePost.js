@@ -5,10 +5,11 @@ import BigHeader from '../components/bigHeader';
 import './gamePost.css';
 
 export default function GamePost({ data }) {
-  const { html, frontmatter: { title } } = data.markdownRemark;
+  const { html, frontmatter: { title, game } } = data.markdownRemark;
+  const casedGame = game.replace(/(\b[a-z](?!\s))/g, d => d.toUpperCase());
   return (
     <div>
-      <BigHeader>{title}</BigHeader>
+      <BigHeader>{title} - {casedGame}</BigHeader>
       <div dangerouslySetInnerHTML={{__html: html}}></div>
     </div>
   );
@@ -22,6 +23,7 @@ query GamePostByPath($absolutePath: String!) {
     frontmatter {
       date(formatString: "MMMM DD, YYYY")
       title
+      game
     }
   }
 }

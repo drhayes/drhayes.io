@@ -11,7 +11,7 @@ export default function GameIndexPost({ data }) {
     .map(({ node }) => ({
       id: node.id,
       title: node.frontmatter.title,
-      path: `/${node.fields.path}`
+      path: node.fields.path
     }));
   const articleElems = articles
     .map(article => (
