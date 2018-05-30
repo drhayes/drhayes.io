@@ -20,14 +20,21 @@ const MediumHeader = ({ children }) => (
     color: 'steelblue',
     fontFamily: 'Oswald',
     fontSize: '150%',
-    marginBottom: '1em',
+    marginBottom: '.5em',
   }}>
     {children}
   </h2>
 )
 
 const List = ({ children }) => {
-  const listItems = React.Children.map(children, c => <li>{c}</li>);
+  const listItems = React.Children.map(children, c => (
+    <li style={{
+      marginLeft: '1em'
+    }}>
+      {c}
+    </li>
+    )
+  );
   return (
     <ul style={{
       marginBottom: '3em'

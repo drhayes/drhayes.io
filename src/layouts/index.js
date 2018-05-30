@@ -24,7 +24,7 @@ Layout.propTypes = {
 export default Layout
 
 export const query = graphql`
-  query SiteTitleQuery2 {
+  query SiteTitleQuery {
     site {
       siteMetadata {
         title

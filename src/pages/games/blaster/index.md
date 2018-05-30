@@ -1,9 +1,10 @@
 ---
 date: 2015-09-27 8:20:00
 title: Blaster
+game: blaster
 ---
 
-![Screenshot of Blaster](/images/blaster-screenshot.png)
+![Screenshot of Blaster](blaster-screenshot.png)
 
 [Play the game here][playblaster].
 
