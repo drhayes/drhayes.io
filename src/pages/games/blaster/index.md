@@ -4,7 +4,7 @@ title: Blaster
 game: blaster
 ---
 
-![Screenshot of Blaster](blaster-screenshot.png)
+![](blaster-screenshot.png)
 
 [Play the game here][playblaster].
 

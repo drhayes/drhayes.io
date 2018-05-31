@@ -1,27 +1,15 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import BigHeader from '../components/bigHeader';
+import GrayAndSmall from '../components/grayAndSmall';
 
-const GrayAndSmall = ({ children }) => (
-  <small style={{
-    display: 'block',
-    fontSize: '50%',
-    fontWeight: 'normal',
-    fontFamily: ['proxima-nova-1', 'proxima-nova-2'],
-    color: 'darkslategray',
-    letterSpacing: 'initial'
-  }}>
-    {children}
-  </small>
-)
 // .tk-proxima-nova
 const MediumHeader = ({ children }) => (
   <h2 style={{
     color: 'steelblue',
-    fontFamily: 'league-gothic-1',
+    fontFamily: 'Roboto',
     fontSize: '150%',
     marginBottom: '.5em',
-    letterSpacing: '0.05em'
   }}>
     {children}
   </h2>

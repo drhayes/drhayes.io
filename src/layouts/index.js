@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
+// Fonts.
+import 'typeface-raleway';
+import 'typeface-roboto';
+
 import MainContainer from '../components/mainContainer';
 import './index.css'
 
@@ -9,7 +13,6 @@ const Layout = ({ children, data }) => (
   <div>
     <Helmet>
       <title>{data.site.siteMetadata.title}</title>
-      <link rel="stylesheet" href="https://use.typekit.net/ctu8ime.css" />
     </Helmet>
     <MainContainer>
       {children()}

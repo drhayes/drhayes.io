@@ -55,7 +55,7 @@ table {
 Site-specific.
 */
 body {
-  font-family: "proxima-nova-1","proxima-nova-2",sans-serif;
+  font-family: 'Raleway' ,sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6em;
@@ -63,7 +63,7 @@ body {
 }
 
 a {
-  font-family: "proxima-nova-1","proxima-nova-2",sans-serif;
+  font-family: 'Raleway' ,sans-serif;
   text-decoration: none;
   color: steelblue;
   border-bottom: 1px transparent solid;
