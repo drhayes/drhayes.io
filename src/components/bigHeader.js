@@ -2,9 +2,10 @@ import React from 'react';
 
 const BigHeader = ({ children }) => (
   <h1 style={{
+    fontFamily: ['league-gothic-1', 'Georgia', 'serif'],
     color: 'steelblue',
-    fontFamily: 'league-gothic-1',
-    fontSize: '200%',
+    marginTop: '1em',
+    letterSpacing: '0.05em',
     marginBottom: '1em',
   }}>
     {children}

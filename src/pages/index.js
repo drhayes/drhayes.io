@@ -9,6 +9,7 @@ const GrayAndSmall = ({ children }) => (
     fontWeight: 'normal',
     fontFamily: ['proxima-nova-1', 'proxima-nova-2'],
     color: 'darkslategray',
+    letterSpacing: 'initial'
   }}>
     {children}
   </small>
@@ -20,6 +21,7 @@ const MediumHeader = ({ children }) => (
     fontFamily: 'league-gothic-1',
     fontSize: '150%',
     marginBottom: '.5em',
+    letterSpacing: '0.05em'
   }}>
     {children}
   </h2>
