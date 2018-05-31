@@ -1,11 +1,7 @@
 import React from 'react'
 
 const MainContainer = ({ children }) => (
-  <div
-    id="MainContainer"
-    style={{
-    }}
-  >
+  <div id="MainContainer">
     { children }
   </div>
 )

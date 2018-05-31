@@ -7,17 +7,17 @@ const GrayAndSmall = ({ children }) => (
     display: 'block',
     fontSize: '50%',
     fontWeight: 'normal',
-    fontFamily: 'Lato',
+    fontFamily: ['proxima-nova-1', 'proxima-nova-2'],
     color: 'darkslategray',
   }}>
     {children}
   </small>
 )
-
+// .tk-proxima-nova
 const MediumHeader = ({ children }) => (
   <h2 style={{
     color: 'steelblue',
-    fontFamily: 'Oswald',
+    fontFamily: 'league-gothic-1',
     fontSize: '150%',
     marginBottom: '.5em',
   }}>

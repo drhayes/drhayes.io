@@ -9,7 +9,7 @@ const Layout = ({ children, data }) => (
   <div>
     <Helmet>
       <title>{data.site.siteMetadata.title}</title>
-      <link href="https://fonts.googleapis.com/css?family=Oswald|Lato" rel="stylesheet" />
+      <link rel="stylesheet" href="https://use.typekit.net/ctu8ime.css" />
     </Helmet>
     <MainContainer>
       {children()}

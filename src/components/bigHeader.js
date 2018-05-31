@@ -3,7 +3,7 @@ import React from 'react';
 const BigHeader = ({ children }) => (
   <h1 style={{
     color: 'steelblue',
-    fontFamily: 'Oswald',
+    fontFamily: 'league-gothic-1',
     fontSize: '200%',
     marginBottom: '1em',
   }}>
