@@ -47,12 +47,11 @@ const IndexPage = ({ data }) => (
 
     <MediumHeader>Elsewhere</MediumHeader>
     <List>
-      <a href="https://micro.blog/drhayes" rel="me">My Micro.blog</a>
+      <a href="https://mastodon.technology/@drhayes" rel="me>@drhayes@mastodon.technology</a>
       <a href="https://keybase.io/drhayes" rel="me">Keybase</a>
       <a href="https://github.com/drhayes">GitHub</a>
       <a href="https://drhayes.tumblr.com">Tumblr</a>
       <a href="https://www.goodreads.com/drhayes">Goodreads</a>
-      <a href="https://twitter.com/drhayes">@drhayes</a>
     </List>
 
     <Link to="/about">About</Link>
