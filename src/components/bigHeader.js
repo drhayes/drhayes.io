@@ -9,6 +9,6 @@ const BigHeader = ({ children }) => (
   }}>
     {children}
   </h1>
-)
+);
 
-export default BigHeader
+export default BigHeader;

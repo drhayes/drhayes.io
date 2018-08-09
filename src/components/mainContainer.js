@@ -4,6 +4,6 @@ const MainContainer = ({ children }) => (
   <div id="MainContainer">
     { children }
   </div>
-)
+);
 
-export default MainContainer
+export default MainContainer;

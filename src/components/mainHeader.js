@@ -8,7 +8,7 @@ const MenuItem = ({ children }) => (
   }}>
     {children}
   </li>
-)
+);
 
 const MainHeader = () => (
   <ul style={{

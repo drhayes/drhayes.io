@@ -2,36 +2,10 @@ import React from 'react';
 import Link from 'gatsby-link';
 import BigHeader from '../components/bigHeader';
 import GrayAndSmall from '../components/grayAndSmall';
+import MainList from '../components/mainList';
+import MediumHeader from '../components/mediumHeader';
 
 // .tk-proxima-nova
-const MediumHeader = ({ children }) => (
-  <h2 style={{
-    color: 'steelblue',
-    fontFamily: 'Roboto',
-    fontSize: '150%',
-    marginBottom: '.5em',
-  }}>
-    {children}
-  </h2>
-)
-
-const List = ({ children }) => {
-  const listItems = React.Children.map(children, c => (
-    <li style={{
-      marginLeft: '1em'
-    }}>
-      {c}
-    </li>
-    )
-  );
-  return (
-    <ul style={{
-      marginBottom: '3em'
-    }}>
-      {listItems}
-    </ul>
-  );
-}
 
 const IndexPage = ({ data }) => (
   <div>
@@ -46,13 +20,13 @@ const IndexPage = ({ data }) => (
     </List>
 
     <MediumHeader>Elsewhere</MediumHeader>
-    <List>
+    <MainList>
       <a href="https://mastodon.technology/@drhayes" rel="me>@drhayes@mastodon.technology</a>
       <a href="https://keybase.io/drhayes" rel="me">Keybase</a>
       <a href="https://github.com/drhayes">GitHub</a>
       <a href="https://drhayes.tumblr.com">Tumblr</a>
       <a href="https://www.goodreads.com/drhayes">Goodreads</a>
-    </List>
+    </MainList>
 
     <Link to="/about">About</Link>
   </div>
