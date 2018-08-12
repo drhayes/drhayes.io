@@ -1,0 +1,5 @@
+baseURL = "/"
+title = "drhayes.io"
+defaultContentLanguage = "en"
+theme = "drhayes"
+metaDataFormat = "yaml"
