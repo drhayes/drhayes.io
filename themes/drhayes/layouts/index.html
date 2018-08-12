@@ -1,17 +1,51 @@
 {{ partial "header.html" . }}
 
-<h1>posts</h1>
-  {{ range first 10 .Data.Pages }}
-    {{ if eq .Type "post"}}
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ end }}
-  {{ end }}
+<div id="MainContainer">
 
-  <h1>pages</h1>
-  {{ range .Data.Pages }}
-    {{ if eq .Type "page" }}
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <h1 id="mainHeader">
+    drhayes.io
+    <small>The personal website of David R. Hayes </small>
+  </h1>
+
+  <section class="frontPage">
+    <h2>Here</h2>
+    <ul>
+    {{ range first 10 .Data.Pages }}
+      {{ if eq .Type "posts"}}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
     {{ end }}
-  {{ end }}</body>
+    </ul>
+  </section>
+
+  <section class="frontPage">
+    <h2>Elsewhere</h2>
+    <ul>
+      <li><a href="https://mastodon.technology/@drhayes" rel="me">@drhayes@mastodon.technology</a></li>
+      <li><a href="https://keybase.io/drhayes" rel="me">Keybase</a></li>
+      <li><a href="https://github.com/drhayes">GitHub</a></li>
+      <li><a href="https://drhayes.tumblr.com">Tumblr</a></li>
+      <li><a href="https://www.goodreads.com/drhayes">Goodreads</a></li>
+    </ul>
+  </section>
+
+</div>
 
 {{ partial "footer.html" . }}
+
+/*
+<div>
+    <MediumHeader>Here</MediumHeader>
+    <List>
+      <Link to="/games/blaster">Blaster</Link>
+      <Link to="/impactjs">ImpactJS</Link>
+    </List>
+
+    <MediumHeader>Elsewhere</MediumHeader>
+    <MainList>
+    </MainList>
+
+    <Link to="/about">About</Link>
+  </div>
+
+*/

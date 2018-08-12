@@ -55,7 +55,7 @@ table {
 Site-specific.
 */
 body {
-  font-family: 'Raleway' ,sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6em;
@@ -63,7 +63,7 @@ body {
 }
 
 a {
-  font-family: 'Raleway' ,sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-decoration: none;
   color: steelblue;
   border-bottom: 1px transparent solid;
@@ -94,4 +94,36 @@ p {
     width: 100%;
     padding: 5px;
   }
+}
+
+#mainHeader {
+  font-size: 200%;
+  font-family: 'Roboto', serif;
+  color: steelblue;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#mainHeader small {
+  display: block;
+  font-size: 50%;
+  font-weight: normal;
+  font-family: 'Raleway';
+  color: lightslategray;
+  letter-spacing: initial;
+}
+
+h2 {
+  color: steelblue;
+  font-family: 'Roboto';
+  font-size: 150%;
+  margin-bottom: 0.5em;
+}
+
+ul, ol {
+  margin-left: 1em;
+}
+
+.frontPage {
+  margin-bottom: 2em;
 }
