@@ -11,9 +11,7 @@
     <h2>Here</h2>
     <ul>
     {{ range first 10 .Data.Pages }}
-      {{ if eq .Type "posts"}}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-      {{ end }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
     </ul>
   </section>
@@ -32,20 +30,3 @@
 </div>
 
 {{ partial "footer.html" . }}
-
-/*
-<div>
-    <MediumHeader>Here</MediumHeader>
-    <List>
-      <Link to="/games/blaster">Blaster</Link>
-      <Link to="/impactjs">ImpactJS</Link>
-    </List>
-
-    <MediumHeader>Elsewhere</MediumHeader>
-    <MainList>
-    </MainList>
-
-    <Link to="/about">About</Link>
-  </div>
-
-*/

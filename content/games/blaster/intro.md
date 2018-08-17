@@ -1,6 +1,4 @@
 ---
-aliases:
-- /blaster/intro.html
 categories:
 - blaster
 date: 2015-09-27 8:19:00

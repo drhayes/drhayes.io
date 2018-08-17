@@ -55,15 +55,15 @@ table {
 Site-specific.
 */
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
+  line-height: 25px;
   font-weight: 400;
   line-height: 1.6em;
   background-color: #f0f0f0;
 }
 
 a {
-  font-family: 'Raleway', sans-serif;
   text-decoration: none;
   color: steelblue;
   border-bottom: 1px transparent solid;
@@ -96,9 +96,23 @@ p {
   }
 }
 
-#mainHeader {
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arvo', Georgia, Times, serif;
+  color: steelblue;
+}
+
+h1 {
   font-size: 200%;
-  font-family: 'Roboto', serif;
+  margin-bottom: .5em;
+}
+
+h2 {
+  font-size: 150%;
+  margin-bottom: 0.5em;
+}
+
+
+#mainHeader {
   color: steelblue;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -106,18 +120,12 @@ p {
 
 #mainHeader small {
   display: block;
+  margin-top: 0.4em;
   font-size: 50%;
   font-weight: normal;
-  font-family: 'Raleway';
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   color: lightslategray;
   letter-spacing: initial;
-}
-
-h2 {
-  color: steelblue;
-  font-family: 'Roboto';
-  font-size: 150%;
-  margin-bottom: 0.5em;
 }
 
 ul, ol {

@@ -1,9 +1,15 @@
 ---
-title: "about"
-description: "about this blog"
-date: "2018-02-11"
+title: 'About'
 ---
 
-# About Me
+My name is David Hayes. I do stuff with computers. I live in Austin, TX.
 
-Hi there, you just reached my blog.
+This site is made with some help from these technologies and media:
+
+* [Hugo][hugo]
+* [PrismJS][prism]
+* [Markdown][markdown]
+
+[hugo]: https://gohugo.io
+[prism]: http://prismjs.com/
+[markdown]: https://daringfireball.net/projects/markdown/

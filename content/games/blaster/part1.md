@@ -1,6 +1,4 @@
 ---
-aliases:
-- /blaster/part1.html
 categories:
 - blaster
 date: 2015-09-27 8:20:00
