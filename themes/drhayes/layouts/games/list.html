@@ -1,7 +1,9 @@
 {{ partial "header.html" . }}
 
+<div id="MainContainer">
 {{ range .Data.Pages }}
   <a href={{ .Permalink }}>{{ .Title }}</a>
 {{ end }}
+</div>
 
 {{- partial "footer.html" . -}}
