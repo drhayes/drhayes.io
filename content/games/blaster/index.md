@@ -2,6 +2,7 @@
 date: 2015-09-27 8:20:00
 title: Blaster
 game: blaster
+menu: 'games'
 ---
 
 ![](blaster-screenshot.png)
