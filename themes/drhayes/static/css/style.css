@@ -135,3 +135,17 @@ ul, ol {
 .frontPage {
   margin-bottom: 2em;
 }
+
+.sidebar-nav {
+  width: 60em;
+  margin: 1em auto;
+}
+
+nav ol {
+  margin: 0;
+}
+
+.sidebar-nav-item {
+  display: inline-block;
+  width: 2em;
+}

@@ -3,3 +3,11 @@ title = "drhayes.io"
 defaultContentLanguage = "en"
 theme = "drhayes"
 metaDataFormat = "yaml"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = -110

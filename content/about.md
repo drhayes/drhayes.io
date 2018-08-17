@@ -1,5 +1,6 @@
 ---
 title: 'About'
+menu: 'main'
 ---
 
 My name is David Hayes. I do stuff with computers. I live in Austin, TX.
