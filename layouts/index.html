@@ -19,11 +19,13 @@
   <section class="frontPage">
     <h2>Elsewhere</h2>
     <ul>
-      <li><a href="https://mastodon.technology/@drhayes" rel="me">@drhayes@mastodon.technology</a></li>
-      <li><a href="https://keybase.io/drhayes" rel="me">Keybase</a></li>
-      <li><a href="https://github.com/drhayes">GitHub</a></li>
-      <li><a href="https://drhayes.tumblr.com">Tumblr</a></li>
-      <li><a href="https://www.goodreads.com/drhayes">Goodreads</a></li>
+      {{ $headless := .Site.GetPage "/elsewhere" }}
+      {{ $reusablePages := $headless.Resources.ByType "page" }}
+      {{ range $reusablePages }}
+          <li>
+            <a href="{{ .Params.link }}">{{ .Title }}</a>
+          </li>
+      {{ end }}
     </ul>
   </section>
 
