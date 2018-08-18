@@ -153,3 +153,9 @@ nav ul {
   display: inline-block;
   margin-right: 1.5em;
 }
+
+pre {
+  overflow: auto;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}

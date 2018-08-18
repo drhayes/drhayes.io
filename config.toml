@@ -2,6 +2,7 @@ baseURL = "/"
 title = "drhayes.io"
 defaultContentLanguage = "en"
 metaDataFormat = "yaml"
+pygmentsCodeFences = true
 
 [menu]
 
