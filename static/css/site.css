@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 200%;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
 }
 
 h2 {
@@ -129,7 +129,11 @@ h2 {
 }
 
 ul, ol {
-  margin-left: 1em;
+  margin-left: 2em;
+}
+
+ol {
+  list-style-type: decimal;
 }
 
 .frontPage {
