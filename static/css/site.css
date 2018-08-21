@@ -32,12 +32,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
 blockquote, q {
   quotes: none;
 }
@@ -56,10 +50,9 @@ Site-specific.
 */
 body {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 1.6;
   font-weight: 400;
-  line-height: 1.6em;
   background-color: #f0f0f0;
   color: #333;
 }
@@ -71,15 +64,12 @@ a {
 }
 
 a:hover {
+  color: cornflowerblue;
   border-bottom-color: cornflowerblue;
 }
 
 pre, code {
   font-family: monospace;
-}
-
-p {
-  margin-bottom: 1em;
 }
 
 #MainContainer {
@@ -101,19 +91,29 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Arvo', Georgia, Times, serif;
   font-weight: bold;
   color: #444;
-  /* color: steelblue; */
 }
 
 h1 {
   font-size: 200%;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 h2 {
   font-size: 150%;
-  margin-bottom: 0.5em;
+  margin-top: 0.8em;
+  margin-bottom: 0.1em;
 }
 
+h3 {
+  font-size: 125%;
+  margin-top: 0.8em;
+  margin-bottom: 0.1em;
+}
+
+h4 {
+  font-size: 110%;
+  margin-top: 1.2em;
+}
 
 #mainHeader {
   color: steelblue;
@@ -171,4 +171,34 @@ pre {
 
 .breadcrumb-link {
   font-size: 50%;
+}
+
+.post-nav {
+  margin-top: 1em;
+}
+
+.post-nav dt {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  opacity: 0.6;
+}
+
+.post-nav dd {
+  margin-bottom: 1em;
+}
+
+.post-nav .previous::before {
+  content: '←';
+}
+
+.post-nav .next::after {
+  content: '→'
+}
+
+.post-date {
+  display: block;
+  font-size: 50%;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  opacity: 0.6;
 }

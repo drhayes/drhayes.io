@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<div id="MainContainer">
+<article id="MainContainer">
   <h1>
     {{ .Title }}
     <small>
@@ -8,26 +8,34 @@
         &laquo; {{ .CurrentSection.Title }}
       </a>
     </small>
+    <span class="post-date">
+      Published: <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006.01.02" }}</time>
+    </span>
   </h1>
+
   {{ .Content }}
 
-  <ul>
-  {{ if .PrevInSection }}
-  <li>Previous:
-    <a href="{{ .PrevInSection.Permalink }}">
-      {{ .PrevInSection.Title }}
-    </a>
-  </li>
-  {{ end }}
-  {{ if .NextInSection }}
-  <li>Next:
-    <a href="{{ .NextInSection.Permalink }}">
-      {{ .NextInSection.Title }}
-    </a>
-  </li>
-  {{ end }}
-  </ul>
+  <section class="post-nav">
+    <dl>
+      {{ if .PrevInSection }}
+      <dt>Previous</dt>
+      <dd class="previous">
+        <a href="{{ .PrevInSection.Permalink }}">
+          {{ .PrevInSection.Title }}
+        </a>
+      </dd>
+      {{ end }}
+      {{ if .NextInSection }}
+      <dt>Next</dt>
+      <dd class="next">
+        <a href="{{ .NextInSection.Permalink }}">
+          {{ .NextInSection.Title }}
+        </a>
+      </dd>
+      {{ end }}
+    </dl>
+  </section>
 
-</div>
+</article>
 
 {{ partial "footer.html" . }}
