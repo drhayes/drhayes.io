@@ -1,6 +1,7 @@
 ---
 title: 'About'
 menu: 'main'
+date: 2018-08-21
 ---
 
 My name is David Hayes. I do stuff with computers. I live in Austin, TX.
