@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://drhayes.io/"
 title = "drhayes.io"
 defaultContentLanguage = "en"
 metaDataFormat = "yaml"
