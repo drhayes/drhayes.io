@@ -50,7 +50,7 @@ Site-specific.
 */
 body {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.6;
   font-weight: 400;
   background-color: #f0f0f0;
@@ -88,9 +88,9 @@ pre, code {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arvo', Georgia, Times, serif;
-  font-weight: bold;
-  color: #444;
+  font-family: 'Montserrat', Georgia, Times, serif;
+  font-weight: 600;
+  color: #222;
 }
 
 h1 {
