@@ -1,9 +1,9 @@
-<nav class="sidebar-nav">
+<nav class="top-nav">
     <ul>
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
             {{ if .HasChildren }}
-                <li class="sidebar-nav-item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                <li class="top-nav-item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
                     <a href="#">
                         {{ .Pre }}
                         <span>{{ .Name }}</span>
@@ -17,7 +17,7 @@
                     {{ end }}
                 </ul>
             {{ else }}
-                <li class="sidebar-nav-item">
+                <li class="top-nav-item">
                     <a href="{{ .URL }}">
                         {{ .Pre }}
                         <span>{{ .Name }}</span>
