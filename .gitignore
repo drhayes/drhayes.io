@@ -1,8 +1,8 @@
-# Project dependencies
+# Stupid Mac things.
+.DS_Store
+
+# Project dependencies.
 .cache
-node_modules
-yarn-error.log
 
 # Build directory
-/public
-.DS_Store
+_site/
