@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{ .Title }}</title>
-  {{ .Hugo.Generator }}
+  <title>{% if page.title %} {{ page.title }} · {% endif %} drhayes.io</title>
   <link rel="stylesheet" href="/css/site.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
   <meta name="google-site-verification" content="blpqoyJP6QdBNmkuqzE0LkXaRBHOgZa1cILyoCNFRAw" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{- partial "head.html" . -}}
 </head>
 <body>
-  {{- partial "nav.html" . }}
+  <div id="content">
+    {{ content }}
+  </div>
+</body>
+</html>
