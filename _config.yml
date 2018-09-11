@@ -4,9 +4,13 @@ defaults:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: "/blaster"
+    values:
+      layout: "game"
 highlighter: rouge
 collections:
   blaster:
     output: true
     permalink: /:collection/:name
-    layout: "game"

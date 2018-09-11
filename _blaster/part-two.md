@@ -1,6 +1,5 @@
 ---
 title: Part Two, Shooting and Explosions
-layout: game
 date: 2015-10-05
 game: blaster
 ---

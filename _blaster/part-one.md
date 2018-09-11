@@ -1,6 +1,5 @@
 ---
 title: Part One, The Player
-layout: game
 date: 2015-09-27
 game: blaster
 ---

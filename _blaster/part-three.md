@@ -1,6 +1,5 @@
 ---
 title: Part Three, Enemies and AI
-layout: game
 date: 2015-10-15
 game: blaster
 ---
