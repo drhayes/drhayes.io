@@ -9,3 +9,4 @@ collections:
   blaster:
     output: true
     permalink: /:collection/:name
+    layout: "game"

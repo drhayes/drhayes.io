@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<h1>
+  {{ page.title }}
+  <small>
+    <a class="breadcrumb-link" href="{{ base.url}}/{{ page.game }}">
+      « {{ page.game | capitalize }}
+    </a>
+  </small>
+
+  <span class="post-date">
+    Published: <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+  </span>
+
+</h1>
+
+
+{{ content }}
