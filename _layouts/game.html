@@ -5,7 +5,7 @@ layout: default
 <h1>
   {{ page.title }}
   <small>
-    <a class="breadcrumb-link" href="{{ base.url}}/{{ page.game }}">
+    <a class="breadcrumb-link" href="{{ base.url}}/games/{{ page.game }}">
       « {{ page.game | capitalize }}
     </a>
   </small>
@@ -18,3 +18,27 @@ layout: default
 
 
 {{ content }}
+
+<section class="post-nav">
+    <dl>
+
+      {% if page.next %}
+      <dt>Next</dt>
+      <dd class="next">
+        <a href="{{ page.next.url }}">
+          {{ page.next.title }}
+        </a>
+      </dd>
+      {% endif %}
+
+      {% if page.previous %}
+      <dt>Previous</dt>
+      <dd class="previous">
+        <a href="{{ page.previous.url }}">
+          {{ page.previous.title }}
+        </a>
+      </dd>
+      {% endif %}
+
+    </dl>
+  </section>

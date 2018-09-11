@@ -1,5 +1,6 @@
 ---
 title: Blaster
+permalink: /games/blaster
 ---
 
 # Blaster

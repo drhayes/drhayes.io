@@ -6,9 +6,10 @@ defaults:
       layout: "default"
   -
     scope:
-      path: "/blaster"
+      path: "_blaster"
     values:
       layout: "game"
+      permalink: "/games/blaster/:slug"
 highlighter: rouge
 collections:
   blaster:
