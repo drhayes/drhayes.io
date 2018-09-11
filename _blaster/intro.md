@@ -1,10 +1,9 @@
 ---
-categories:
-- blaster
-date: 2015-09-27 8:19:00
+categories: [blaster]
 title: Introduction
-game: blaster
 ---
+
+# Blaster: Introduction
 
 I'm working on a _Big Game_ that will likely take me more than a year to finish. It's nowhere near content complete. I don't know what all the puzzles and levels look like. I haven't finished writing all the bosses. I'm still learning to draw as I go, so sometimes I have to go back and update my art assets as I become a better artist. It's very rewarding and I'm looking forward to finishing it.
 

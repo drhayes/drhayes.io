@@ -4,3 +4,8 @@ defaults:
       path: ""
     values:
       layout: "default"
+highlighter: rouge
+collections:
+  blaster:
+    output: true
+    permalink: /:collection/:name

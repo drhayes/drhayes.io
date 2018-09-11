@@ -1,10 +1,9 @@
 ---
-categories:
-- blaster
-date: 2015-10-15 22:20:00
+categories: [blaster]
 title: Part Three, Enemies and AI
-game: blaster
 ---
+
+# Blaster, Part Three: Enemies and AI
 
 This is the third part of an extended write-up I'm doing about my [Phaser](http://phaser.io) game, Blaster. [Play Blaster here][playblaster].
 

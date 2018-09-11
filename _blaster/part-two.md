@@ -1,10 +1,9 @@
 ---
-categories:
-- blaster
-date: 2015-10-05 13:00:00
+categories: [blaster]
 title: Part Two, Shooting and Explosions
-game: blaster
 ---
+
+# Blaster, Part Two: Shooting and Explosions
 
 This is the second part of an extended write-up I'm doing about my [Phaser](http://phaser.io) game, Blaster. [Play Blaster here][playblaster].
 

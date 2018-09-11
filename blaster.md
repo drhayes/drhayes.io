@@ -1,10 +1,10 @@
 ---
-date: 2015-09-27 8:20:00
 title: Blaster
-game: blaster
 ---
 
-![](blaster-screenshot.png)
+# Blaster
+
+<img src="{{ base.url }}/assets/blaster-screenshot.png">
 
 [Play the game here][playblaster].
 
@@ -17,6 +17,12 @@ Blaster uses [Phaser][] and a host of web-based technologies.
 Here is the [repository for the project][repo].
 
 ## Articles
+
+<ol>
+{% for page in site.blaster %}
+  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+</ol>
 
 [playblaster]: http://blaster.drhayes.io
 [phaser]: https://phaser.io/

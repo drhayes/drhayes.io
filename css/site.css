@@ -51,7 +51,7 @@ Site-specific.
 body {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   font-size: 19px;
-  line-height: 1.6;
+  line-height: 1.4em;
   font-weight: 400;
   background-color: #f0f0f0;
   color: #333;
@@ -72,7 +72,7 @@ pre, code {
   font-family: monospace;
 }
 
-#MainContainer {
+#content{
   box-sizing: border-box;
   margin: 1em auto;
   padding: 1em;
@@ -83,15 +83,10 @@ pre, code {
 #frontPage {
   display: flex;
   justify-content: space-around;
-  box-sizing: border-box;
-  margin: 1em auto;
-  padding: 1em;
-  width: 60em;
-  background-color: white;
 }
 
 @media(max-width: 600px) {
-  #MainContainer {
+  #content {
     width: 100%;
     padding: 5px;
   }
@@ -117,24 +112,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 200%;
+  font-size: 2em;
   margin-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 150%;
-  margin-top: 0.8em;
-  margin-bottom: 0.1em;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 h3 {
-  font-size: 125%;
-  margin-top: 0.8em;
-  margin-bottom: 0.1em;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
 }
 
 h4 {
-  font-size: 110%;
+  font-size: 1.1em;
   margin-top: 1.2em;
 }
 
@@ -153,9 +146,13 @@ h4 {
   letter-spacing: initial;
 }
 
-ul, ol {
-  margin-left: 2em;
+p {
   margin-bottom: 1em;
+}
+
+ul, ol {
+  padding-left: 3em;
+  margin-bottom: 1.2em;
 }
 
 ul {
@@ -164,10 +161,6 @@ ul {
 
 ol {
   list-style-type: decimal;
-}
-
-.frontPage {
-  margin-bottom: 2em;
 }
 
 .top-nav {

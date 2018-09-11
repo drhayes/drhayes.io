@@ -1,10 +1,9 @@
 ---
-categories:
-- blaster
-date: 2015-09-27 8:20:00
+categories: [blaster]
 title: Part One, The Player
-game: blaster
 ---
+
+# Blaster, Part One: The Player
 
 This is the first part of an extended write-up I'm doing about my [Phaser](http://phaser.io) game, Blaster. [Play Blaster here][playblaster].
 
