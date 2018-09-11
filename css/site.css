@@ -105,22 +105,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2em;
-  /*margin-bottom: 0.5em;*/
 }
 
 h2 {
   font-size: 1.5em;
-  /*margin-bottom: 0.5em;*/
 }
 
 h3 {
   font-size: 1.25em;
-  /*margin-bottom: 0.5em;*/
 }
 
 h4 {
   font-size: 1.1em;
-  /*margin-top: 1.2em;*/
 }
 
 .logo {
@@ -158,7 +154,7 @@ p {
 }
 
 ul, ol {
-  padding-left: 1.5em;
+  padding-left: 2em;
   margin-bottom: 1.2em;
 }
 
@@ -191,7 +187,6 @@ strong {
   }
 }
 
-
 nav ul {
   margin: 0;
 }
@@ -209,6 +204,7 @@ pre {
 
 .no-bullets {
   list-style: none;
+  padding-left: 1em;
 }
 
 .post-nav {
@@ -239,6 +235,11 @@ pre {
 
 .main-footer {
   font-size: 80%;
-  margin-top: 1em;
+  margin-top: 3em;
   padding-bottom: 1em;
+}
+
+.main-footer img {
+  width: auto;
+  vertical-align: sub;
 }
