@@ -139,6 +139,7 @@ h4 {
 
 #mainHeader small {
   display: block;
+  padding-top: 0.4em;
   font-size: 50%;
   font-weight: normal;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;

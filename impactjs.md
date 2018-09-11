@@ -3,6 +3,8 @@ date: 2015-02-09 16:37:00
 title: ImpactJS
 ---
 
+# ImpactJS
+
 Here's a collection of code and stuff for [ImpactJS][impact], the JavaScript game engine.
 
 ## Code
