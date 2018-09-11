@@ -3,14 +3,34 @@
 <head>
   <title>{% if page.title %} {{ page.title }} · {% endif %} drhayes.io</title>
   <link rel="stylesheet" href="/css/site.css">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
   <meta name="google-site-verification" content="blpqoyJP6QdBNmkuqzE0LkXaRBHOgZa1cILyoCNFRAw" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div id="content">
+  <div id="site">
+    <div class="logo">
+      <img src="/assets/raven.png">
+    </div>
+
+    <nav class="main-nav">
+      <ul class="main-nav-items">
+        <li>
+          <a href="{{ base.url }}/">drhayes.io</a>
+        </li>
+        <li>
+          <a href="{{ base.url }}{% link blaster.md %}">Blaster</a>
+        </li>
+        <li>
+          <a href="{{ base.url }}{% link about.md %}">About</a>
+        </li>
+      </ul>
+    </nav>
+
     {{ content }}
+
+    <footer class="main-footer">
+      All content &copy; David Hayes 2018
+    </footer>
   </div>
 </body>
 </html>

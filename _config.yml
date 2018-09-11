@@ -1,9 +1,21 @@
+paginate: 10
+plugins: [jekyll-paginate]
 defaults:
   -
     scope:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "_drafts"
+    values:
+      layout: "post"
   -
     scope:
       path: "_blaster"
@@ -15,3 +27,4 @@ collections:
   blaster:
     output: true
     permalink: /:collection/:name
+
