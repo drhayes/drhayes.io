@@ -84,7 +84,7 @@ pre, code {
 @media(max-width: 600px) {
   #site {
     width: 100%;
-    padding: 5px;
+    padding: 0;
   }
 }
 
@@ -95,6 +95,7 @@ pre, code {
 img {
   box-sizing: border-box;
   width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 h1, h2, h3, h4, h5, h6 {
