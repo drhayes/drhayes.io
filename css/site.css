@@ -245,38 +245,3 @@ pre {
   width: auto;
   vertical-align: sub;
 }
-
-.contact-form {
-  width: 30em;
-}
-
-.contact-form label {
-  display: none;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  display: block;
-  font-size: 1em;
-  padding: 0.9em;
-  margin-bottom: 0.5em;
-  outline: none;
-  border: 1px solid #ccc;
-}
-
-.contact-form button {
-  font-size: 1em;
-  padding: 0.9em;
-  background: #fff;
-  border: 1px solid #ccc;
-}
-
-.contact-form textarea {
-  height: 10em;
-}
-
-@media(max-width: 600px) {
-  .contact-form {
-    width: 90%;
-  }
-}

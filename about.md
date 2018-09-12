@@ -19,18 +19,9 @@ This site is made with some help from these technologies and media:
 
 ## Contact Me
 
-<div class="contact-form">
-  <form action="https://formspree.io/drhayes@gmail.com" method="POST">
-    <label for="email">Email:</label>
-    <input type="text" name="email" id="email" placeholder="Your email">
+I can be found pretty much everywhere as `drhayes` or some variation.
 
-    <label for="message">Message:</label>
-    <textarea name="message" id="message" placeholder="Your message"></textarea>
-
-    <button type="submit">Contact Me</button>
-  </form>
-</div>
-
+In particular, you can email me at <a href="mailto:drhayes@gmail.com">drhayes@gmail.com</a> or chat me at <a href="https://t.me/drhayes">@drhayes on Telegram</a> and I might even answer.
 
 [sublime]: https://www.sublimetext.com/3
 [markdown]: https://daringfireball.net/projects/markdown/
