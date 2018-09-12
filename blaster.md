@@ -5,7 +5,7 @@ permalink: /games/blaster
 
 # Blaster
 
-<img src="{{ base.url }}/assets/blaster-screenshot.png">
+![Neato screenshot of game]({{ base.url }}/assets/blaster-screenshot.png "Screenshot of Blaster")
 
 [Play the game here][playblaster].
 
