@@ -1,5 +1,3 @@
-asciidoctor:
-  template_dir: _templates
 timezone: America/Chicago
 defaults:
   -
