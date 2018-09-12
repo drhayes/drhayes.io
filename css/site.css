@@ -76,8 +76,9 @@ pre, code {
   background-color: #fff;
   padding-left: 1em;
   padding-right: 1em;
-  width: 50em;
+  max-width: 50em;
   margin: 0 auto;
+  box-shadow: 0 0 5em -1em #ccc;
 }
 
 @media(max-width: 600px) {
@@ -97,6 +98,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
   font-weight: 600;
   color: #222;
   margin-top: 1em;
