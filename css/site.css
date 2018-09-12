@@ -250,7 +250,3 @@ pre {
   width: auto;
   vertical-align: sub;
 }
-
-li > p {
-  margin: 0;
-}
