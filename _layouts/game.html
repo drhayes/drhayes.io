@@ -12,8 +12,9 @@ layout: default
 </h1>
 
 <span class="post-date">
-  Published: <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+  Published: <time datetime="{{ page.date }}">{{ page.date | date: "%Y.%m.%d" }}</time>
 </span>
+
 
 {{ content }}
 
