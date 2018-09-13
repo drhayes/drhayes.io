@@ -2,6 +2,7 @@
 title: Gemini Rising
 date: 2018-09-13 2:00
 layout: default
+permalink: /games/gemini-rising
 ---
 
 # Gemini Rising
