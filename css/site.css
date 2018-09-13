@@ -250,3 +250,30 @@ pre {
   width: auto;
   vertical-align: sub;
 }
+
+.tags {
+}
+
+.tags-label {
+  opacity: 0.5;
+}
+
+.tag-list {
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.tag-item {
+  display: inline-block;
+}
+
+.tag-item + .tag-item::before {
+  content: '· ';
+}
+
+.archive-list {}
+
+.archive-list-item {
+  list-style-type: none;
+}

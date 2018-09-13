@@ -10,6 +10,7 @@ layout: default
   Published: <time datetime="{{ page.date }}">{{ page.date | date: "%Y.%m.%d" }}</time>
 </span>
 
+{% include tags-list.html post=page %}
 
 {{ content }}
 
