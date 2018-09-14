@@ -13,7 +13,16 @@ Gemini Rising is a Metroidvania with crafting elements and procedural generation
 
 My goal is to make the entire game by myself: programming, graphics, sound, and music.
 
-Watch this space for longer-form articles. [Check out the "gemini-rising" tag for blog posts about it]({{ base.url }}/tags/gemini-rising).
+[Check out the "gemini-rising" tag for blog posts about it]({{ base.url }}/tags/gemini-rising).
+
+## Articles
+
+<ol>
+{% for page in site.gemini-rising %}
+  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+</ol>
+
 
 ## Video Dev Log
 

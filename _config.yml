@@ -21,9 +21,19 @@ defaults:
     values:
       layout: "game"
       permalink: "/games/blaster/:slug"
-highlighter: rouge
+      game: "Blaster"
+  -
+    scope:
+      path: "_gemini-rising"
+    values:
+      layout: "game"
+      permalink: "/games/gemini-rising/:slug"
+      game: "Gemini Rising"
 collections:
   blaster:
     output: true
     permalink: /:collection/:name
-
+  gemini-rising:
+    output: true
+    permalink: /:collection/:name
+highlighter: rouge

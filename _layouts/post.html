@@ -6,10 +6,7 @@ layout: default
   {{ page.title }}
 </h1>
 
-<span class="post-date">
-  Published: <time datetime="{{ page.date }}">{{ page.date | date: "%Y.%m.%d" }}</time>
-</span>
-
+{% include date-string.html post=page %}
 {% include tags-list.html post=page %}
 
 {{ content }}

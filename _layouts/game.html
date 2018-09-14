@@ -6,14 +6,12 @@ layout: default
   {{ page.title }}
   <small>
     <a class="breadcrumb-link" href="{{ base.url}}/games/{{ page.game }}">
-      « {{ page.game | capitalize }}
+      «  {{ page.game }}
     </a>
   </small>
 </h1>
 
-<span class="post-date">
-  Published: <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
-</span>
+{% include date-string.html post=page %}
 
 {{ content }}
 
