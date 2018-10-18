@@ -59,13 +59,11 @@ body {
 
 a {
   text-decoration: none;
-  color: steelblue;
-  /*border-bottom: 1px transparent solid;*/
+  color: #3d719c;
 }
 
 a:hover {
   color: cornflowerblue;
-  /*border-bottom-color: cornflowerblue;*/
 }
 
 pre, code {
