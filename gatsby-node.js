@@ -5,7 +5,9 @@ const dayjs = require('dayjs');
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const date = dayjs(node.frontmatter.date);
+    // I always write in CST, so just adjust the incoming date to reflect that.
+    // Makes the slug actually work instead of "losing" a day.
+    const date = dayjs(node.frontmatter.date).add(5, 'hour');
     const slug = createFilePath({ node, getNode, basePath: `posts/` });
     createNodeField({
       node,
