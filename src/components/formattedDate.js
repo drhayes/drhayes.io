@@ -6,7 +6,7 @@ const Time = styled('time')`
 `;
 
 const FormattedDate = ({ date }) => (
-  <Time datetime={date.toISOString()}>{date.format('YYYY.MM.DD')}</Time>
+  <Time dateTime={date.toISOString()}>{date.format('YYYY.MM.DD')}</Time>
 );
 
 export default FormattedDate

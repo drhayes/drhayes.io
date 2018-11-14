@@ -24,13 +24,14 @@ const Container = styled('div')`
   }
 `;
 
-const Layout = ({ children }) => (
+const Layout = ({ children, data : topLevelData }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
             title
+            hostPrefix
           }
         }
       }
@@ -39,6 +40,7 @@ const Layout = ({ children }) => (
       <>
         <Helmet titleTemplate={`%s · ${data.site.siteMetadata.title}`}>
           <html lang="en" />
+          <link rel="canonical" href={`${data.site.siteMetadata.hostPrefix}${topLevelData.location.pathname}`} />
         </Helmet>
         <Container>
 

@@ -25,9 +25,9 @@ const MeLink = ({ title, url }) => (
   </li>
 );
 
-const IndexPage = () => (
+const IndexPage = (data) => (
   <React.Fragment>
-    <Layout>
+    <Layout data={data}>
       <FrontPageSection title="Blog">
       </FrontPageSection>
 

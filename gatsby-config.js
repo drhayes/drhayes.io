@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'drhayes.io',
+    hostPrefix: 'https://drhayes.io'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

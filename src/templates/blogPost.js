@@ -5,12 +5,13 @@ import { graphql } from 'gatsby'
 import FormattedDate from '../components/formattedDate';
 import dayjs from 'dayjs';
 
-const BlogPost = ({ data }) => {
+const BlogPost = (topLevelData) => {
+  const { data } = topLevelData;
   const title = data.markdownRemark.frontmatter.title;
   const date = dayjs(data.markdownRemark.frontmatter.date);
   return (
     <React.Fragment>
-      <Layout>
+      <Layout data={topLevelData}>
         <h1>{title}</h1>
 
         <span style={{ opacity: 0.5 }}>Published: </span>
@@ -20,9 +21,6 @@ const BlogPost = ({ data }) => {
             __html: data.markdownRemark.html
         }} />
 
-        <pre>
-          {JSON.stringify(data, null, 2)}
-        </pre>
       </Layout>
       <Helmet>
         <title>{title}</title>
