@@ -22,10 +22,6 @@ const NavItem = styled('li')`
 
   & + li::before {
     content: ' · ';
-  }
-
-  &::after {
-    content: ' ';
     white-space: pre;
   }
 `;

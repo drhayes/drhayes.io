@@ -7,7 +7,7 @@ import styled from 'react-emotion';
 
 import './layout.css'
 
-const Container = styled('div')`
+const Container = styled('main')`
   background-color: #fff;
   padding-left: 1em;
   padding-right: 1em;
@@ -37,7 +37,7 @@ const Layout = ({ children, data : topLevelData }) => (
       }
     `}
     render={data => (
-      <>
+      <React.Fragment>
         <Helmet titleTemplate={`%s · ${data.site.siteMetadata.title}`}>
           <html lang="en" />
           <link rel="canonical" href={`${data.site.siteMetadata.hostPrefix}${topLevelData.location.pathname}`} />
@@ -56,7 +56,7 @@ const Layout = ({ children, data : topLevelData }) => (
           </footer>
 
         </Container>
-      </>
+      </React.Fragment>
     )}
   />
 )

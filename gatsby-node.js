@@ -17,36 +17,79 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
-  return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              date
-            }
-            html
-          }
+const makeBlogPostPages = ({ graphql, actions }) => graphql(`
+{
+  allMarkdownRemark(
+    sort: { order: DESC, fields: [frontmatter___date] }
+  ) {
+    edges {
+      next {
+        id
+      }
+      previous {
+        id
+      }
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date
+        }
+        html
+      }
+    }
+  }
+}`).then(result => {
+  const { createPage, createNodeField } = actions;
+  result.data.allMarkdownRemark.edges.forEach(({ next, previous, node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve('./src/templates/blogPost.js'),
+      context: {
+        slug: node.fields.slug,
+        previousId: next && next.id,
+        nextId: previous && previous.id,
+      }
+    });
+  });
+});
+
+const makeTagPages = ({ graphql, actions }) => graphql(`
+{
+  allMarkdownRemark {
+    edges {
+      node {
+        frontmatter {
+          tags
         }
       }
     }
-  `
-  ).then(result => {
-    const { createPage } = actions;
-
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve('./src/templates/blogPost.js'),
-        context: {
-          slug: node.fields.slug
-        }
-      });
+  }
+}`).then(result => {
+  const { createPage } = actions;
+  const tagSet = new Set();
+  result.data.allMarkdownRemark.edges.forEach(({ node: { frontmatter: { tags }} }) => {
+    if (!tags) {
+      return;
+    }
+    tags.forEach(tag => tagSet.add(tag));
+  });
+  tagSet.forEach(tag => {
+    createPage({
+      path: `/tags/${tag}`,
+      component: path.resolve('./src/templates/tagPage.js'),
+      context: {
+        tag
+      }
     });
   });
+});
+
+exports.createPages = ({ graphql, actions }) => {
+  return Promise.all([
+    makeBlogPostPages({ graphql, actions}),
+    makeTagPages({ graphql, actions}),
+  ]);
 }

@@ -167,28 +167,6 @@ pre {
   font-size: 50%;
 }
 
-.post-nav {
-  margin-top: 1em;
-}
-
-.post-nav dt {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  opacity: 0.6;
-}
-
-.post-nav dd {
-  margin-bottom: 1em;
-}
-
-.post-nav .previous::before {
-  content: '←';
-}
-
-.post-nav .next::after {
-  content: '→'
-}
-
 .main-footer {
   font-size: 80%;
   margin-top: 3em;

@@ -37,4 +37,4 @@ As of today, the game has around 15k lines of code in it:
 That's startling to me given what the game can and cannot do at this point. This project is officially the largest single thing I've ever written and I don't think I can call myself a dilettante game programmer. So, yay?
 
 
-[gr]: {{ base.url }}{% link gemini-rising.md %}
+[gr]: /games/gemini-rising
