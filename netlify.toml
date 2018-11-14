@@ -1,6 +1,0 @@
-[Settings]
-  ID = "drhayesio"
-
-[build]
-  publish = "_site/"
-  command = "jekyll build"
