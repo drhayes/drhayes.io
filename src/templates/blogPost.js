@@ -4,8 +4,8 @@ import Layout from '../components/layout';
 import { graphql } from 'gatsby'
 import BlogTitleStuff from '../components/blogTitleStuff';
 import BlogContent from '../components/blogContent';
-import { Link } from 'gatsby';
 import styled from 'react-emotion';
+import BlogLink from '../components/blogLink';
 
 const NavLabel = styled('dt')`
   text-transform: uppercase;
@@ -20,7 +20,7 @@ const PostNav = ({ previous, next }) => {
     <React.Fragment>
       <NavLabel>Previous</NavLabel>
       <dd>
-        ← <Link to={previous.fields.slug}>{previous.frontmatter.title}</Link>
+        ← <BlogLink blog={previous} />
       </dd>
     </React.Fragment>
   );
@@ -28,7 +28,7 @@ const PostNav = ({ previous, next }) => {
     <React.Fragment>
       <NavLabel>Next</NavLabel>
       <dd>
-        <Link to={next.fields.slug}>{next.frontmatter.title}</Link> →
+        <BlogLink blog={next} /> →
       </dd>
     </React.Fragment>
   );

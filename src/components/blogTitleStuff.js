@@ -2,12 +2,12 @@ import React from 'react';
 import FormattedDate from '../components/formattedDate';
 import dayjs from 'dayjs';
 import TagList from '../components/tagList';
-import { Link } from 'gatsby';
+import BlogLink from './blogLink';
 
 const BlogTitleStuff = ({ post, isH1=true }) => {
   const title = post.frontmatter.title;
   const date = dayjs(post.frontmatter.date);
-  const titleElem = isH1 ? <h1>{title}</h1> : <h2><Link to={post.fields.slug}>{title}</Link></h2>;
+  const titleElem = isH1 ? <h1>{title}</h1> : <h2><BlogLink post={post} /></h2>;
   const tagsElem = post.frontmatter.tags && (
     <div>
       <span style={{ opacity: 0.5}}>Tags: </span>

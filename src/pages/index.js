@@ -2,6 +2,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 import styled from 'react-emotion';
+import { StaticQuery, graphql } from 'gatsby';
+import FormattedDate from '../components/formattedDate';
+import dayjs from 'dayjs';
+import BlogLink from '../components/blogLink';
 
 const Section = styled('section')`
   margin-top: 2em;
@@ -25,10 +29,55 @@ const MeLink = ({ title, url }) => (
   </li>
 );
 
+const NoNumberList = styled('ol')`
+  padding-left: 1em;
+  list-style-type: none;
+`;
+
+const ListOfBlogPosts = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          limit: 10
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                date(formatString: "MMMM DD, YYYY")
+                tags
+              }
+              excerpt
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      return (
+        <NoNumberList>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <li key={node.id}>
+              <FormattedDate date={dayjs(node.frontmatter.date)} /> » <BlogLink blog={node} />
+            </li>
+          ))}
+        </NoNumberList>
+      );
+    }}
+  />
+);
+
 const IndexPage = (data) => (
   <React.Fragment>
     <Layout data={data}>
       <FrontPageSection title="Blog">
+        <ListOfBlogPosts />
       </FrontPageSection>
 
       <FrontPageSection title="Me Elsewhere">
