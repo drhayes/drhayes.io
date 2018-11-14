@@ -7,7 +7,7 @@ import BlogLink from './blogLink';
 const BlogTitleStuff = ({ post, isH1=true }) => {
   const title = post.frontmatter.title;
   const date = dayjs(post.frontmatter.date);
-  const titleElem = isH1 ? <h1>{title}</h1> : <h2><BlogLink post={post} /></h2>;
+  const titleElem = isH1 ? <h1>{title}</h1> : <h2><BlogLink blog={post} /></h2>;
   const tagsElem = post.frontmatter.tags && (
     <div>
       <span style={{ opacity: 0.5}}>Tags: </span>
