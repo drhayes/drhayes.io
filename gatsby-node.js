@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-const makeBlogPostPages = ({ graphql, actions }) => graphql(`
+const makeBlogPostPages = ({ graphql, actions, getNode }) => graphql(`
 {
   allMarkdownRemark(
     sort: { order: DESC, fields: [frontmatter___date] }
@@ -30,6 +30,9 @@ const makeBlogPostPages = ({ graphql, actions }) => graphql(`
         id
       }
       node {
+        parent {
+          id
+        }
         fields {
           slug
         }
@@ -42,18 +45,25 @@ const makeBlogPostPages = ({ graphql, actions }) => graphql(`
     }
   }
 }`).then(result => {
-  const { createPage, createNodeField } = actions;
-  result.data.allMarkdownRemark.edges.forEach(({ next, previous, node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve('./src/templates/blogPost.js'),
-      context: {
-        slug: node.fields.slug,
-        previousId: next && next.id,
-        nextId: previous && previous.id,
-      }
+  const { createPage } = actions;
+  result.data.allMarkdownRemark.edges
+    .filter(({ node }) => {
+      // Check the parent of this node. Is it sitting in the "posts" directory? If so, it's
+      // a blog post.
+      const parentNode = getNode(node.parent.id);
+      return parentNode.sourceInstanceName === 'posts';
+    })
+    .forEach(({ next, previous, node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve('./src/templates/blogPost.js'),
+        context: {
+          slug: node.fields.slug,
+          previousId: next && next.id,
+          nextId: previous && previous.id,
+        }
+      });
     });
-  });
 });
 
 const makeTagPages = ({ graphql, actions }) => graphql(`
@@ -87,9 +97,44 @@ const makeTagPages = ({ graphql, actions }) => graphql(`
   });
 });
 
-exports.createPages = ({ graphql, actions }) => {
+const makeGamePages = ({ graphql, actions }) => graphql(`
+{
+  allFile(
+    filter: { sourceInstanceName: { eq: "games" }}
+  ) {
+    edges {
+      node {
+        name
+        childMarkdownRemark {
+          html
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+}`).then(result => {
+  const { createPage } = actions;
+  result.data.allFile.edges
+    .forEach(({ node }) => {
+      const { name, childMarkdownRemark: { html, frontmatter: { title } } } = node;
+      createPage({
+        path: `/games/${name}`,
+        component: path.resolve('./src/templates/gamePage.js'),
+        context: {
+          title,
+          html,
+        }
+      });
+    });
+});
+
+
+exports.createPages = (params) => {
   return Promise.all([
-    makeBlogPostPages({ graphql, actions}),
-    makeTagPages({ graphql, actions}),
+    makeBlogPostPages(params),
+    makeTagPages(params),
+    makeGamePages(params),
   ]);
 }
