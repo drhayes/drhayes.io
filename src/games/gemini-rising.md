@@ -4,7 +4,7 @@ title: Gemini Rising
 
 Gemini Rising is a Metroidvania with crafting elements and procedural generation that I'm working on. It should be out "soon".
 
-![Neato screenshot of game](/gr/screenshot-2018-09-12.png "Screenshot as of 2018-09-12")
+![Neato screenshot of game](screenshot-2018-09-12.png "Screenshot as of 2018-09-12")
 
 My goal is to make the entire game by myself: programming, graphics, sound, and music.
 

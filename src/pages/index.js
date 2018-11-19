@@ -40,7 +40,7 @@ const ListOfBlogPosts = () => (
       query {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { fields: { blogPost: { eq: true } } }
+          filter: { fields: { blogPost: { eq: true } }, frontmatter: { published: { eq: true } } }
           limit: 10
         ) {
           edges {

@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'drhayes.io',
-    hostPrefix: 'https://drhayes.io'
+    hostPrefix: 'https://drhayes.io',
+    siteUrl: 'https://drhayes.io',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -38,6 +39,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 590,
+              showCaptions: true,
             },
           },
           `gatsby-remark-prismjs`,

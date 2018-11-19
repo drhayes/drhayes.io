@@ -4,6 +4,7 @@ tags:
   - gemini-rising
   - stats
 date: 2018-09-14
+published: true
 ---
 
 I thought it'd be interesting to include stats about the game as I develop it.

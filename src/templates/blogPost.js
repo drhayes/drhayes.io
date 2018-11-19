@@ -43,7 +43,9 @@ const PostNav = ({ previous, next }) => {
 };
 
 const BlogPost = (topLevelData) => {
-  const { next, previous, post } = topLevelData.data;
+  console.log(topLevelData);
+  const { next, previous } = topLevelData.pageContext;
+  const { post } = topLevelData.data;
   const title = post.frontmatter.title;
   return (
     <React.Fragment>
@@ -65,23 +67,7 @@ const BlogPost = (topLevelData) => {
 export default BlogPost;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!, $nextId: String, $previousId: String) {
-    next: markdownRemark(id: { eq: $nextId }) {
-      frontmatter {
-        title
-      }
-      fields {
-        slug
-      }
-    }
-    previous: markdownRemark(id: { eq: $previousId }) {
-      frontmatter {
-        title
-      }
-      fields {
-        slug
-      }
-    }
+  query BlogPostBySlug($slug: String!) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt

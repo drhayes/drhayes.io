@@ -21,21 +21,28 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: true
     });
   }
+  if (node.internal.type === 'MarkdownRemark' && parentNode && parentNode.sourceInstanceName === 'games') {
+    const slug = createFilePath({ node, getNode, basePath: `posts/` });
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug,
+    });
+    createNodeField({
+      node,
+      name: 'gamePost',
+      value: true,
+    });
+  }
 }
 
 const makeBlogPostPages = ({ graphql, actions, getNode }) => graphql(`
 {
   allMarkdownRemark(
     sort: { order: DESC, fields: [frontmatter___date] }
-    filter: { fields: { blogPost: { eq: true } } }
+    filter: { fields: { blogPost: { eq: true } }, frontmatter: { published: { eq: true } } }
   ) {
     edges {
-      next {
-        id
-      }
-      previous {
-        id
-      }
       node {
         parent {
           id
@@ -46,6 +53,7 @@ const makeBlogPostPages = ({ graphql, actions, getNode }) => graphql(`
         frontmatter {
           title
           date
+          published
         }
         html
       }
@@ -53,21 +61,18 @@ const makeBlogPostPages = ({ graphql, actions, getNode }) => graphql(`
   }
 }`).then(result => {
   const { createPage } = actions;
-  result.data.allMarkdownRemark.edges
-    .filter(({ node }) => {
-      // Check the parent of this node. Is it sitting in the "posts" directory? If so, it's
-      // a blog post.
-      const parentNode = getNode(node.parent.id);
-      return parentNode.sourceInstanceName === 'posts';
-    })
-    .forEach(({ next, previous, node }) => {
+  const posts = result.data.allMarkdownRemark.edges;
+  posts
+    .forEach(({ node }, index) => {
+      const previous = index === posts.length - 1 ? false: posts[index + 1].node;
+      const next = index === 0 ? false : posts[index - 1].node
       createPage({
         path: node.fields.slug,
         component: path.resolve('./src/templates/blogPost.js'),
         context: {
           slug: node.fields.slug,
-          previousId: next && next.id,
-          nextId: previous && previous.id,
+          previous,
+          next
         }
       });
     });
@@ -106,28 +111,31 @@ const makeTagPages = ({ graphql, actions }) => graphql(`
 
 const makeGamePages = ({ graphql, actions }) => graphql(`
 {
-  allFile(
-    filter: { sourceInstanceName: { eq: "games" }}
+  allMarkdownRemark(
+    sort: { order: DESC, fields: [frontmatter___date] }
+    filter: { fields: { gamePost: { eq: true } } }
   ) {
     edges {
       node {
-        name
-        childMarkdownRemark {
-          html
-          frontmatter {
-            title
-          }
+        fields {
+          slug
         }
+        frontmatter {
+          title
+          date
+        }
+        html
       }
     }
   }
 }`).then(result => {
   const { createPage } = actions;
-  result.data.allFile.edges
+  const gamePages = result.data.allMarkdownRemark.edges;
+  gamePages
     .forEach(({ node }) => {
-      const { name, childMarkdownRemark: { html, frontmatter: { title } } } = node;
+      const { frontmatter: { title }, html, fields: { slug } } = node;
       createPage({
-        path: `/games/${name}`,
+        path: `/games${slug}`,
         component: path.resolve('./src/templates/gamePage.js'),
         context: {
           title,
