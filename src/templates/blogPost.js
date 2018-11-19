@@ -43,7 +43,6 @@ const PostNav = ({ previous, next }) => {
 };
 
 const BlogPost = (topLevelData) => {
-  console.log(topLevelData);
   const { next, previous } = topLevelData.pageContext;
   const { post } = topLevelData.data;
   const title = post.frontmatter.title;
