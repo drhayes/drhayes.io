@@ -40,6 +40,7 @@ const ListOfBlogPosts = () => (
       query {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { fields: { blogPost: { eq: true } } }
           limit: 10
         ) {
           edges {
@@ -62,11 +63,13 @@ const ListOfBlogPosts = () => (
     render={data => {
       return (
         <NoNumberList>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <li key={node.id}>
-              <FormattedDate date={dayjs(node.frontmatter.date)} /> » <BlogLink blog={node} />
-            </li>
-          ))}
+          {data.allMarkdownRemark.edges
+            .map(({ node }) => (
+              <li key={node.id}>
+                <FormattedDate date={dayjs(new Date(node.frontmatter.date))} /> » <BlogLink blog={node} />
+              </li>
+            ))
+          }
         </NoNumberList>
       );
     }}

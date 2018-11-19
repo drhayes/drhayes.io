@@ -1,6 +1,7 @@
 import React from 'react';
 import NavImage from './navImage';
 import styled from 'react-emotion';
+import { Link } from 'gatsby'
 
 const Nav = styled('nav')`
   padding-top: 1em;
@@ -31,16 +32,16 @@ export default () => (
     <NavImage />
     <NavItems>
       <NavItem>
-        <a href="/">drhayes.io</a>
+        <Link to="/">drhayes.io</Link>
       </NavItem>
       <NavItem>
-        <a href="/">Gemini Rising</a>
+        <Link to="/games/gemini-rising">Gemini Rising</Link>
       </NavItem>
       <NavItem>
-        <a href="/">Blaster</a>
+        <Link to="/games/blaster">Blaster</Link>
       </NavItem>
       <NavItem>
-        <a href="/">About</a>
+        <Link to="/about">About</Link>
       </NavItem>
     </NavItems>
   </Nav>

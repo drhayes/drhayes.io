@@ -4,7 +4,8 @@ const dayjs = require('dayjs');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
+  const parentNode = getNode(node.parent);
+  if (node.internal.type === `MarkdownRemark` && parentNode && parentNode.sourceInstanceName === 'posts') {
     // I always write in CST, so just adjust the incoming date to reflect that.
     // Makes the slug actually work instead of "losing" a day.
     const date = dayjs(node.frontmatter.date).add(5, 'hour');
@@ -14,6 +15,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: `/${date.format('YYYY/MM/DD')}${slug}`,
     });
+    createNodeField({
+      node,
+      name: 'blogPost',
+      value: true
+    });
   }
 }
 
@@ -21,6 +27,7 @@ const makeBlogPostPages = ({ graphql, actions, getNode }) => graphql(`
 {
   allMarkdownRemark(
     sort: { order: DESC, fields: [frontmatter___date] }
+    filter: { fields: { blogPost: { eq: true } } }
   ) {
     edges {
       next {
