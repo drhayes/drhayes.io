@@ -2,7 +2,7 @@
 title: Blaster
 ---
 
-![Neato screenshot of game](/blaster/blaster-screenshot.png "Screenshot of Blaster")
+![Neato screenshot of game](blaster-screenshot.png "Screenshot of Blaster")
 
 [Play the game here][playblaster].
 

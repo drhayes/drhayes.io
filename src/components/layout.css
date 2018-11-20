@@ -204,3 +204,8 @@ pre {
 .archive-list-item {
   list-style-type: none;
 }
+
+.gatsby-resp-image-figcaption {
+  text-align: center;
+  font-size: 90%;
+}
