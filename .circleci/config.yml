@@ -21,11 +21,11 @@ jobs:
 
       - run:
           name: Install System Dependencies
-          command: sudo apt-get update && sudo apt-get install -y python python-dev py-pip build-base
+          command: sudo apt-get update && sudo apt-get install -y python3 python3-pip
 
       - run:
           name: Install AWS CLI
-          command: pip install awscli
+          command: sudo pip3 install awscli
 
       - run: npm install
 
