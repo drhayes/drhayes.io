@@ -12,12 +12,7 @@ My goal is to make the entire game by myself: programming, graphics, sound, and 
 
 ## Articles
 
-<ol>
-{% for page in site.gemini-rising %}
-  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endfor %}
-</ol>
-
+<articles-list game="gemini-rising"></articles-list>
 
 ## Video Dev Log
 

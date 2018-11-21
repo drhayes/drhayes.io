@@ -9,7 +9,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     // I always write in CST, so just adjust the incoming date to reflect that.
     // Makes the slug actually work instead of "losing" a day.
     const date = dayjs(node.frontmatter.date).add(5, 'hour');
-    const slug = createFilePath({ node, getNode, basePath: `posts/` });
+    const slug = createFilePath({ node, getNode, basePath: `src/posts` });
     createNodeField({
       node,
       name: `slug`,
@@ -22,11 +22,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
   }
   if (node.internal.type === 'MarkdownRemark' && parentNode && parentNode.sourceInstanceName === 'games') {
-    const slug = createFilePath({ node, getNode, basePath: `posts/` });
+    const slug = createFilePath({ node, getNode, basePath: `src/games` });
     createNodeField({
       node,
       name: 'slug',
-      value: slug,
+      value: `/games${slug}`,
     });
     createNodeField({
       node,
@@ -124,7 +124,7 @@ const makeGamePages = ({ graphql, actions }) => graphql(`
           title
           date
         }
-        html
+        htmlAst
       }
     }
   }
@@ -133,13 +133,13 @@ const makeGamePages = ({ graphql, actions }) => graphql(`
   const gamePages = result.data.allMarkdownRemark.edges;
   gamePages
     .forEach(({ node }) => {
-      const { frontmatter: { title }, html, fields: { slug } } = node;
+      const { frontmatter: { title }, htmlAst, fields: { slug } } = node;
       createPage({
-        path: `/games${slug}`,
+        path: slug,
         component: path.resolve('./src/templates/gamePage.js'),
         context: {
           title,
-          html,
+          htmlAst,
         }
       });
     });
@@ -147,6 +147,15 @@ const makeGamePages = ({ graphql, actions }) => graphql(`
 
 
 exports.createPages = (params) => {
+  const { createRedirect } = params.actions;
+  // Add some redirects.
+  createRedirect({ fromPath: "/gemini-rising/technology", toPath: "/gemini-rising/articles/technology/", isPermanent: true });
+  createRedirect({ fromPath: "/blaster/intro", toPath: "/blaster/articles/intro/", isPermanent: true });
+  createRedirect({ fromPath: "/blaster/part-one", toPath: "/blaster/articles/part-one/", isPermanent: true });
+  createRedirect({ fromPath: "/blaster/part-two", toPath: "/blaster/articles/part-two/", isPermanent: true });
+  createRedirect({ fromPath: "/blaster/part-three", toPath: "/blaster/articles/part-three/", isPermanent: true });
+
+  // Generate the pages I care about.
   return Promise.all([
     makeBlogPostPages(params),
     makeTagPages(params),

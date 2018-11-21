@@ -16,11 +16,7 @@ Here is the [repository for the project][repo].
 
 ## Articles
 
-<ol>
-{% for page in site.blaster %}
-  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endfor %}
-</ol>
+<articles-list game="blaster" />
 
 [playblaster]: http://blaster.drhayes.io
 [phaser]: https://phaser.io/

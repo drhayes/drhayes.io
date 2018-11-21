@@ -51,7 +51,7 @@ const BlogPost = (topLevelData) => {
       <Layout data={topLevelData}>
         <article>
           <BlogTitleStuff post={post} />
-          <BlogContent content={post.html} />
+          <BlogContent htmlAst={post.htmlAst} />
         </article>
         <PostNav previous={previous} next={next} />
       </Layout>
@@ -70,7 +70,7 @@ export const pageQuery = graphql`
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt
-      html
+      htmlAst
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

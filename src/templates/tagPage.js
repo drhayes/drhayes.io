@@ -4,7 +4,6 @@ import Layout from '../components/layout';
 import { graphql } from 'gatsby'
 import BlogTitleStuff from '../components/blogTitleStuff';
 import styled from 'react-emotion';
-import BlogContent from '../components/blogContent';
 
 const ArchiveList = styled('ol')`
   padding-left: 2em;
@@ -25,7 +24,7 @@ const TagPage = (topLevelData) => {
           {posts.map(post => (
             <li key={post.id}>
               <BlogTitleStuff post={post} isH1={false} />
-              <BlogContent content={post.excerpt} />
+              <div>{post.excerpt}</div>
             </li>
           ))}
         </ArchiveList>

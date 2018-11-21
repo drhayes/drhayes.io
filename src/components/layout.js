@@ -6,6 +6,7 @@ import Nav from './nav';
 import styled from 'react-emotion';
 
 import './layout.css'
+import './prism-ghcolors.css';
 
 const Container = styled('main')`
   background-color: #fff;

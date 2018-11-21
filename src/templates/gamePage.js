@@ -4,12 +4,12 @@ import Layout from '../components/layout';
 import BlogContent from '../components/blogContent';
 
 const GamePage = (data) => {
-  const { pageContext: { title, html } } = data;
+  const { pageContext: { title, htmlAst } } = data;
   return (
     <React.Fragment>
       <Layout data={data}>
         <h1>{title}</h1>
-        <BlogContent content={html} />
+        <BlogContent htmlAst={htmlAst} />
       </Layout>
       <Helmet>
         <title>{title}</title>

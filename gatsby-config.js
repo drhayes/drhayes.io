@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-catch-links',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,6 +36,7 @@ module.exports = {
       options: {
         excerpt_separator: `<!--more-->`,
         plugins: [
+          'gatsby-remark-component',
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -45,7 +47,14 @@ module.exports = {
               showCaptions: true,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases: {
+                js: 'javascript',
+              }
+            }
+          },
           `gatsby-remark-copy-linked-files`,
         ]
       }
