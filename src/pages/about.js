@@ -1,6 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
+import styled from 'react-emotion';
+
+const BuildBadge = styled('img')`
+  width: 70px;
+  vertical-align: middle;
+  margin-left: 5px;
+  box-shadow: none;
+`;
 
 const IndexPage = (data) => (
   <React.Fragment>
@@ -20,11 +28,12 @@ const IndexPage = (data) => (
         <li><a href="https://github.com/">GitHub</a> hosts the code.</li>
         <li><a href="https://aws.amazon.com/">Amazon AWS</a> publishes the site via S3.</li>
         <li><a href="https://www.cloudflare.com/">Cloudflare</a> makes it fast.</li>
+        <li><a href="https://circleci.com/">CircleCI</a> builds it when it changes. The current build status is: <BuildBadge src="https://circleci.com/gh/drhayes/drhayes.io.svg?style=svg" /></li>
       </ul>
 
       <h2 id="contact-me">Contact Me</h2>
 
-      <p>I can be found pretty much everywhere fine Internets are made as <code class="highlighter-rouge">drhayes</code> or some variation.</p>
+      <p>I can be found pretty much everywhere fine Internets are made as <code className="language-text">drhayes</code> or some variation.</p>
 
       <p>In particular, you can email me at <a href="mailto:drhayes@gmail.com">drhayes@gmail.com</a> or chat me at <a href="https://t.me/drhayes">@drhayes on Telegram</a> and I might even answer.</p>
 
