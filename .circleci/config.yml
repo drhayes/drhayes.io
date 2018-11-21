@@ -38,6 +38,10 @@ jobs:
       # Build the site.
       - run: npm run build
 
+      - run:
+          name: Check My Sanity
+          command: pwd && ls -larth .
+
       - deploy:
           name: deploy to AWS
           command: |
