@@ -19,6 +19,14 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      - run:
+          name: Install System Dependencies
+          command: sudo apt-get update && sudo apt-get install -y python python-dev py-pip build-base
+
+      - run:
+          name: Install AWS CLI
+          command: pip install awscli
+
       - run: npm install
 
       # Cache dependencies.
@@ -29,10 +37,6 @@ jobs:
 
       # Build the site.
       - run: npm build
-
-      # Update the things and install awscli.
-      - run: apt-get install python python-dev py-pip build-base
-      - run: pip install awscli
 
       - deploy:
           name: deploy to AWS
