@@ -7,7 +7,7 @@ jobs:
 
     working_directory: ~/repo
     environment:
-      GATSBY_BUILD_DIR: ~/repo/public
+      GATSBY_BUILD_DIR: ~/repo/public/
 
     steps:
       - checkout
@@ -42,8 +42,7 @@ jobs:
           name: deploy to AWS
           command: |
             if [ "${CIRCLE_BRANCH}" = "master" ]; then
-              aws s3 sync $GATSBY_BUILD_DIR \
-              s3://drhayes.io --delete
+              aws s3 sync $GATSBY_BUILD_DIR s3://drhayes.io --delete
             else
               echo "Not master branch, dry run only"
             fi
