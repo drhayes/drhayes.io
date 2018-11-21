@@ -1,8 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
-import styled from 'react-emotion';
-
 
 const IndexPage = (data) => (
   <React.Fragment>
