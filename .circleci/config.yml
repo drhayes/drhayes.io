@@ -31,7 +31,7 @@ jobs:
       - run: npm build
 
       # Update the things and install awscli.
-      - run: apk add --update python python-dev py-pip build-base
+      - run: apt-get install python python-dev py-pip build-base
       - run: pip install awscli
 
       - deploy:
