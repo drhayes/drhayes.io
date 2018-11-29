@@ -1,11 +1,10 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import Layout from '../components/layout';
-import styled from 'react-emotion';
-import { StaticQuery, graphql } from 'gatsby';
+import styled from '@emotion/styled';
 import FormattedDate from '../components/formattedDate';
 import dayjs from 'dayjs';
 import BlogLink from '../components/blogLink';
+import Head from 'next/head';
 
 const Section = styled('section')`
   margin-top: 2em;
@@ -34,50 +33,25 @@ const NoNumberList = styled('ol')`
   list-style-type: none;
 `;
 
-const ListOfBlogPosts = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { fields: { blogPost: { eq: true } }, frontmatter: { published: { eq: true } } }
-          limit: 10
-        ) {
-          edges {
-            node {
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                date(formatString: "MMMM DD, YYYY")
-                tags
-              }
-              excerpt
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      return (
-        <NoNumberList>
-          {data.allMarkdownRemark.edges
-            .map(({ node }) => (
-              <li key={node.id}>
-                <FormattedDate date={dayjs(new Date(node.frontmatter.date))} /> » <BlogLink blog={node} />
-              </li>
-            ))
-          }
-        </NoNumberList>
-      );
-    }}
-  />
+const ListOfBlogPosts = ({ posts = [] }) => (
+  <NoNumberList>
+    {posts
+      .map(({ node }) => (
+        <li key={node.id}>
+          <FormattedDate date={dayjs(new Date(node.frontmatter.date))} /> » <BlogLink blog={node} />
+        </li>
+      ))
+    }
+  </NoNumberList>
 );
 
 const IndexPage = (data) => (
   <React.Fragment>
+    <Head>
+      <title key="title">David Hayes · drhayes.io</title>
+      <meta name="google-site-verification" content="blpqoyJP6QdBNmkuqzE0LkXaRBHOgZa1cILyoCNFRAw" />
+    </Head>
+
     <Layout data={data}>
       <FrontPageSection title="Blog">
         <ListOfBlogPosts />
@@ -109,10 +83,6 @@ const IndexPage = (data) => (
         ]
       })}
     </script>
-    <Helmet>
-      <title>David Hayes</title>
-      <meta name="google-site-verification" content="blpqoyJP6QdBNmkuqzE0LkXaRBHOgZa1cILyoCNFRAw" />
-    </Helmet>
   </React.Fragment>
 );
 

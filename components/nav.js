@@ -1,8 +1,8 @@
 import React from 'react';
 import NavImage from './navImage';
-import styled from 'react-emotion';
-import { Link } from 'gatsby'
-import { css } from 'emotion';
+import styled from '@emotion/styled';
+import Link from 'next/link'
+import { css, jsx } from '@emotion/core';
 
 const active = css`
   border-bottom: 1px solid rgba(61, 113, 156, 0.5);
@@ -37,16 +37,16 @@ export default () => (
     <NavImage />
     <NavItems>
       <NavItem>
-        <Link to="/" activeClassName={active}>drhayes.io</Link>
+        <Link href="/" activeClassName={active}>drhayes.io</Link>
       </NavItem>
       <NavItem>
-        <Link to="/games/gemini-rising" activeClassName={active}>Gemini Rising</Link>
+        <Link href="/games/gemini-rising" activeClassName={active}>Gemini Rising</Link>
       </NavItem>
       <NavItem>
-        <Link to="/games/blaster" activeClassName={active}>Blaster</Link>
+        <Link href="/games/blaster" activeClassName={active}>Blaster</Link>
       </NavItem>
       <NavItem>
-        <Link to="/about" activeClassName={active}>About</Link>
+        <Link href="/about" activeClassName={active}>About</Link>
       </NavItem>
     </NavItems>
   </Nav>
