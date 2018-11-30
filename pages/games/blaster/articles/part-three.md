@@ -166,7 +166,7 @@ The Enforcer takes two shots: one at the player's current position, and another 
 
 Honestly, I lucked out here: the second shot's delay and velocity, combined with the player's maximum velocity, means the Enforcer's score direct hits with the second bullet *all the time* if the player travels in straight lines and doesn't dodge. Combining a lot of Enforcers together makes things pretty deadly.
 
-Note that I'm not using `Phaser.Point.normalize` correctly here: I should be calling `this.angleForShoot`'s method instead of the static version. Oops. ¯\\\_(ツ)\_/¯
+Note that I'm not using `Phaser.Point.normalize` correctly here: I should be calling `this.angleForShoot`'s method instead of the static version. Oops. ¯\_(ツ)\_/¯
 
 ### Spawn
 

@@ -14,8 +14,12 @@ const withMDX = require('@zeit/next-mdx')({
 
 const config = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+
   publicRuntimeConfig: {
-    cat: 'pants',
+  },
+
+  exportPathMap: async function (defaultPathMap) {
+    return defaultPathMap;
   }
 };
 
