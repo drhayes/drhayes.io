@@ -1,8 +1,12 @@
----
-title: Blaster
----
+import Layout from '../../../components/layout';
+import ArticlesList from '../../../components/articlesList';
 
-![Neato screenshot of game](blaster-screenshot.png "Screenshot of Blaster")
+export default ({ children }) => (
+  <Layout title='Blaster'>{children}</Layout>
+);
+
+
+![Neato screenshot of game](/static/games/blaster/blaster-screenshot.png "Screenshot of Blaster")
 
 [Play the game here][playblaster].
 
@@ -16,7 +20,7 @@ Here is the [repository for the project][repo].
 
 ## Articles
 
-<articles-list game="blaster" />
+<ArticlesList game="blaster" />
 
 [playblaster]: http://blaster.drhayes.io
 [phaser]: https://phaser.io/

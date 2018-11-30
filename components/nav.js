@@ -4,10 +4,6 @@ import styled from '@emotion/styled';
 import Link from 'next/link'
 import { css, jsx } from '@emotion/core';
 
-const active = css`
-  border-bottom: 1px solid rgba(61, 113, 156, 0.5);
-`;
-
 const Nav = styled('nav')`
   padding-top: 1em;
   padding-bottom: 1em;
@@ -37,16 +33,16 @@ export default () => (
     <NavImage />
     <NavItems>
       <NavItem>
-        <Link href="/" activeClassName={active}>drhayes.io</Link>
+        <Link href="/"><a>drhayes.io</a></Link>
       </NavItem>
       <NavItem>
-        <Link href="/games/gemini-rising" activeClassName={active}>Gemini Rising</Link>
+        <Link href="/games/gemini-rising"><a>Gemini Rising</a></Link>
       </NavItem>
       <NavItem>
-        <Link href="/games/blaster" activeClassName={active}>Blaster</Link>
+        <Link href="/games/blaster"><a>Blaster</a></Link>
       </NavItem>
       <NavItem>
-        <Link href="/about" activeClassName={active}>About</Link>
+        <Link href="/about"><a>About</a></Link>
       </NavItem>
     </NavItems>
   </Nav>

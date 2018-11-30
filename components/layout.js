@@ -24,11 +24,15 @@ const Container = styled('main')`
   }
 `;
 
-const Layout = ({ children, data : topLevelData }) => (
+const defaultTitle = 'drhayes.io';
+
+const Layout = ({ children, title }) => (
   <React.Fragment>
     <Head>
       <html lang="en" />
-      <title key="title">drhayes.io</title>
+      <title key="title">
+        {title ? `${title} · drhayes.io` : 'drhayes.io'}
+      </title>
     </Head>
 
     <Container>

@@ -45,14 +45,14 @@ const ListOfBlogPosts = ({ posts = [] }) => (
   </NoNumberList>
 );
 
-const IndexPage = (data) => (
+const IndexPage = () => (
   <React.Fragment>
     <Head>
       <title key="title">David Hayes · drhayes.io</title>
       <meta name="google-site-verification" content="blpqoyJP6QdBNmkuqzE0LkXaRBHOgZa1cILyoCNFRAw" />
     </Head>
 
-    <Layout data={data}>
+    <Layout>
       <FrontPageSection title="Blog">
         <ListOfBlogPosts />
       </FrontPageSection>

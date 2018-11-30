@@ -1,53 +1,19 @@
 import React from 'react';
+import getConfig from 'next/config';
+import Link from 'next/link'
 
-export default () => (
+const { publicRuntimeConfig: { games } } = getConfig();
+
+const ArticlesList = ({ game }) => (
   <ol>
-    <li>Thing</li>
+    {games[game].articles.map(article => (
+      <li key={article.title}>
+        <Link href={article.slug}>
+          <a>{article.title}</a>
+        </Link>
+      </li>
+    ))}
   </ol>
 );
-// import React from 'react';
-// import { StaticQuery, graphql, Link } from 'gatsby';
 
-// function renderArticleList(game) {
-//   return function(data) {
-//     const posts = data.allMarkdownRemark.edges;
-//     const links = posts
-//       .filter(({ node }) => node.fields.slug.includes(`${game}/articles`))
-//       .map(({ node }) => (
-//         <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-//       ));
-//     return (
-//       <ol>
-//         {links.map((link, i) => <li key={i}>{link}</li>)}
-//       </ol>
-//     );
-//   }
-// }
-
-// const query = graphql`
-// {
-//   allMarkdownRemark(
-//     sort: { order: ASC, fields: [frontmatter___date] }
-//     filter: { fields: { gamePost: { eq: true }}}
-//   ) {
-//     edges {
-//       node {
-//         fields {
-//           slug
-//         }
-//         frontmatter {
-//           title
-//         }
-//       }
-//     }
-//   }
-// }`;
-
-// const ArticlesList = ({ game }) => (
-//   <StaticQuery
-//     query={query}
-//     render={renderArticleList(game)}
-//   />
-// );
-
-// export default ArticlesList;
+export default ArticlesList;
