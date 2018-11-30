@@ -1,7 +1,3 @@
-import Layout from '../components/layout';
-
-export default Layout;
-
 # About :wave:
 
 My name is David Hayes. I do stuff with computers. I live in Austin, TX.

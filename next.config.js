@@ -4,57 +4,76 @@ const emoji = require('remark-emoji')
 const fs = require('fs');
 const path = require('path');
 const fm = require('front-matter');
+const slug = require('slug');
+const dayjs = require('dayjs');
 
-const withMDX = require('@zeit/next-mdx')({
-  extension: /\.mdx?$/,
-  options: {
-    mdPlugins: [emoji]
-  }
-});
+const slugify = text => slug(text, {
+    lower: true,
+    symbols: true,
+  });
 
-const config = {
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+const contentDir = path.join(__dirname, 'content');
 
-  publicRuntimeConfig: {
-  },
+function generateGamePages() {
+  const pages = {};
+  // Enumerate the game articles sorted by date.
+  const gamesDir = path.join(contentDir, 'games');
+  const dirents = fs.readdirSync(gamesDir, {
+    withFileTypes: true
+  });
+  const dirs = dirents.filter(dirent => dirent.isDirectory());
+  dirs.forEach(dir => {
+    const gameInfo = {};
+    const gameDir = path.join(gamesDir, dir.name);
+    const filenames = fs.readdirSync(path.join(gameDir, 'articles'));
+    const articles = filenames
+      .filter(filename => filename.endsWith('.md'))
+      .map(filename => ({
+        filename,
+        frontmatter: fm(fs.readFileSync(path.join(gameDir, 'articles', filename), 'utf8')).attributes
+      }));
+    // Ensure dates.
+    articles.filter(({ frontmatter }) => !Boolean(frontmatter.date))
+      .forEach(article => {
+        throw Error(`Missing date for article: ${article.frontmatter.title}`)
+      });
+    articles.sort((a, b) => a.frontmatter.date < a.frontmatter.date);
+    gameInfo.articles = articles.map(article => ({
+      title: article.frontmatter.title,
+      slug: `/games/${dir.name}/articles/${path.basename(article.filename, '.md')}`
+    }));
+  });
+  return pages;
+}
 
-  exportPathMap: async function (defaultPathMap) {
-    return defaultPathMap;
-  }
-};
-
-// Enumerate the game articles sorted by date.
-const gamesDir = path.join(__dirname, 'pages', 'games');
-const dirents = fs.readdirSync(gamesDir, {
-  withFileTypes: true
-});
-const games = {}
-const dirs = dirents.filter(dirent => dirent.isDirectory());
-dirs.forEach(dir => {
-  const gameInfo = {};
-  const gameDir = path.join(gamesDir, dir.name);
-  const filenames = fs.readdirSync(path.join(gameDir, 'articles'));
-  const articles = filenames
+function generateBlogPosts() {
+  const posts = {};
+  const postsDir = path.join(__dirname, 'blogPosts');
+  const blogPosts = fs.readdirSync(postsDir)
     .filter(filename => filename.endsWith('.md'))
     .map(filename => ({
       filename,
-      frontmatter: fm(fs.readFileSync(path.join(gameDir, 'articles', filename), 'utf8')).attributes
+      contents: fs.readFileSync(path.join(postsDir, filename), 'utf8')
+    }))
+    .map(post => ({
+      ...post,
+      frontmatter: fm(post.contents).attributes
     }));
-  // Ensure dates.
-  articles.filter(({ frontmatter }) => !Boolean(frontmatter.date))
-    .forEach(article => {
-      throw Error(`Missing date for article: ${article.frontmatter.title}`)
-    });
-  articles.sort((a, b) => a.frontmatter.date < a.frontmatter.date);
-  gameInfo.articles = articles.map(article => ({
-    title: article.frontmatter.title,
-    slug: `/games/${dir.name}/articles/${path.basename(article.filename, '.md')}`
-  }));
-  games[dir.name] = gameInfo;
-});
-config.publicRuntimeConfig.games = games;
+  blogPosts.forEach(post => {
+    const date = dayjs(post.frontmatter.date).add(6, 'hour');
+    const postSlug = `/${date.format('YYYY/MM/DD')}/${slugify(post.frontmatter.title)}`;
+    posts[postSlug] = {
+      page: '/blogPost',
+      query: post
+    };
+  });
+  return posts;
+}
 
+const config = {
+  exportPathMap: async function () {
+    return Object.assign({}, generateBlogPosts());
+  }
+};
 
-// process.exit();
-
-module.exports = withCSS(withMDX(config));
+module.exports = withCSS(config);
