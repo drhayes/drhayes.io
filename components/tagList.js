@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'react-emotion';
-import { Link } from "gatsby"
+import styled from '@emotion/styled';
+import Link from 'next/link';
 
 const TagList = styled('ul')`
   display: inline-block;
@@ -22,8 +22,8 @@ const FormattedDate = ({ tags }) => (
   <TagList>
     {tags.map((tag, i) => (
       <Tag key={i}>
-        <Link to={`/tags/${tag}`}>
-          {tag}
+        <Link href={`/tags/${tag}`}>
+          <a>{tag}</a>
         </Link>
       </Tag>
     ))}

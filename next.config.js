@@ -46,33 +46,53 @@ function generateGamePages() {
   return pages;
 }
 
-function generateBlogPosts() {
-  const posts = {};
+function getBlogPosts() {
   const postsDir = path.join(__dirname, 'blogPosts');
-  const blogPosts = fs.readdirSync(postsDir)
+  return fs.readdirSync(postsDir)
     .filter(filename => filename.endsWith('.md'))
     .map(filename => ({
       filename,
       contents: fs.readFileSync(path.join(postsDir, filename), 'utf8')
     }))
-    .map(post => ({
-      ...post,
-      frontmatter: fm(post.contents).attributes
-    }));
-  blogPosts.forEach(post => {
-    const date = dayjs(post.frontmatter.date).add(6, 'hour');
-    const postSlug = `/${date.format('YYYY/MM/DD')}/${slugify(post.frontmatter.title)}`;
-    posts[postSlug] = {
-      page: '/blogPost',
-      query: post
-    };
-  });
-  return posts;
+    .map(post => {
+      const { attributes: frontmatter, body } = fm(post.contents);
+      return {
+        ...post,
+        frontmatter,
+        body
+      };
+    })
+    .map(post => {
+      const date = dayjs(post.frontmatter.date).add(6, 'hour');
+      post.slug = `/${date.format('YYYY/MM/DD')}/${slugify(post.frontmatter.title)}`
+      return post;
+    });
 }
 
 const config = {
-  exportPathMap: async function () {
-    return Object.assign({}, generateBlogPosts());
+  useFileSystemPublicRoutes: false,
+
+  exportPathMap: async function (defaultPathMap) {
+    const blogPosts = getBlogPosts();
+    const pathMap = Object.assign({}, defaultPathMap);
+
+    // First, add the blog posts.
+    blogPosts.forEach(post => {
+      pathMap[post.slug] = {
+        page: '/blogPost',
+        query: post
+      }
+    });
+
+    // Set up the index page blog posts.
+    pathMap['/'] = {
+      page: '/frontPage',
+      query: {
+        blogPosts: blogPosts
+      }
+    }
+
+    return pathMap;
   }
 };
 

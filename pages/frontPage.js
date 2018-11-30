@@ -5,6 +5,7 @@ import FormattedDate from '../components/formattedDate';
 import dayjs from 'dayjs';
 import BlogLink from '../components/blogLink';
 import Head from 'next/head';
+import { withRouter } from 'next/router'
 
 const Section = styled('section')`
   margin-top: 2em;
@@ -33,19 +34,21 @@ const NoNumberList = styled('ol')`
   list-style-type: none;
 `;
 
-const ListOfBlogPosts = ({ posts = [] }) => (
-  <NoNumberList>
-    {posts
-      .map(({ node }) => (
-        <li key={node.id}>
-          <FormattedDate date={dayjs(new Date(node.frontmatter.date))} /> » <BlogLink blog={node} />
-        </li>
-      ))
-    }
-  </NoNumberList>
-);
+const ListOfBlogPosts = ({ posts }) => {
+  return (
+    <NoNumberList>
+      {posts
+        .map(post => (
+          <li key={post.frontmatter.date}>
+            <FormattedDate date={dayjs(new Date(post.frontmatter.date))} /> » <BlogLink blog={post} />
+          </li>
+        ))
+      }
+    </NoNumberList>
+  );
+}
 
-const IndexPage = () => (
+const FrontPage = ({ router }) => (
   <React.Fragment>
     <Head>
       <title key="title">David Hayes · drhayes.io</title>
@@ -54,7 +57,7 @@ const IndexPage = () => (
 
     <Layout>
       <FrontPageSection title="Blog">
-        <ListOfBlogPosts />
+        <ListOfBlogPosts posts={router.query.blogPosts} />
       </FrontPageSection>
 
       <FrontPageSection title="Me Elsewhere">
@@ -86,4 +89,4 @@ const IndexPage = () => (
   </React.Fragment>
 );
 
-export default IndexPage;
+export default withRouter(FrontPage);

@@ -1,6 +1,9 @@
 ---
 title: Oh Well, Gatsby It Is
 date: 2018-11-24
+tags:
+  - gatsby
+  - static-site-generators
 published: true
 ---
 
