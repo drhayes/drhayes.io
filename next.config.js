@@ -64,6 +64,7 @@ function getBlogPosts() {
     })
     .map(post => {
       const date = dayjs(post.frontmatter.date).add(6, 'hour');
+      post.frontmatter.date = date;
       post.slug = `/${date.format('YYYY/MM/DD')}/${slugify(post.frontmatter.title)}`
       return post;
     });
@@ -77,14 +78,33 @@ const config = {
     const pathMap = Object.assign({}, defaultPathMap);
 
     // First, add the blog posts.
+    const tags = new Map();
     blogPosts.forEach(post => {
       pathMap[post.slug] = {
         page: '/blogPost',
         query: post
       }
+      // Aggregate the tags.
+      if (post.frontmatter.tags) {
+        post.frontmatter.tags.forEach(tag => {
+          if (!tags.has(tag)) {
+            tags.set(tag, []);
+          }
+          tags.get(tag).push(post);
+        });
+      }
     });
 
-    // Set up the index page blog posts.
+    // Make some tag pages.
+    tags.forEach((posts, tag) => {
+      const slug = `/tags/${slugify(tag)}`;
+      pathMap[slug] = {
+        page: '/tagPage',
+        query: { tag, posts }
+      }
+    });
+
+    // Set up the front page.
     pathMap['/'] = {
       page: '/frontPage',
       query: {

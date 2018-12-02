@@ -35,12 +35,13 @@ const NoNumberList = styled('ol')`
 `;
 
 const ListOfBlogPosts = ({ posts }) => {
+  posts.sort((a,b) => a.frontmatter.date < b.frontmatter.date);
   return (
     <NoNumberList>
       {posts
         .map(post => (
           <li key={post.frontmatter.date}>
-            <FormattedDate date={dayjs(new Date(post.frontmatter.date))} /> » <BlogLink blog={post} />
+            <FormattedDate date={dayjs(post.frontmatter.date)} /> » <BlogLink blog={post} />
           </li>
         ))
       }
