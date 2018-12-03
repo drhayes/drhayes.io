@@ -75,7 +75,11 @@ const config = {
 
   exportPathMap: async function () {
     const blogPosts = getBlogPosts();
-    const pathMap = {};
+    const pathMap = {
+      '/404': {
+        page: '/404'
+      }
+    };
 
     // First, add the blog posts.
     const tags = new Map();
