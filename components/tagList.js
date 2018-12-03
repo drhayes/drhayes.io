@@ -21,7 +21,7 @@ const Tag = styled('li')`
 const FormattedDate = ({ tags }) => (
   <TagList>
     {tags.map((tag, i) => (
-      <Tag key={i}>
+      <Tag key={tag}>
         <Link href={`/tags/${tag}`}>
           <a>{tag}</a>
         </Link>
