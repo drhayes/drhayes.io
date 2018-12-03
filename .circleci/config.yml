@@ -34,17 +34,14 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # Build the site.
-      - run: npm run build
-
-      - run:
-          name: Check My Sanity
-          command: pwd && ls -larth .
+      - run: npm run export
 
       - deploy:
           name: deploy to AWS
           command: |
             if [ "${CIRCLE_BRANCH}" = "master" ]; then
-              aws s3 sync ~/repo/public/ s3://drhayes.io --delete
+              aws s3 sync ~/repo/out/ s3://drhayes.io --delete
             else
               echo "Not master branch, dry run only"
+              ls -larth ~/repo/out/
             fi
