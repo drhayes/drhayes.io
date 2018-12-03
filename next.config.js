@@ -73,9 +73,9 @@ function getBlogPosts() {
 const config = {
   useFileSystemPublicRoutes: false,
 
-  exportPathMap: async function (defaultPathMap) {
+  exportPathMap: async function () {
     const blogPosts = getBlogPosts();
-    const pathMap = Object.assign({}, defaultPathMap);
+    const pathMap = {};
 
     // First, add the blog posts.
     const tags = new Map();
