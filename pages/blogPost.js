@@ -1,21 +1,15 @@
 import React from 'react';
 import Layout from '../components/layout';
 import BlogTitleStuff from '../components/blogTitleStuff';
-import remark from 'remark';
-import remark2react from 'remark-react';
-import emoji from 'remark-emoji';
 import { withRouter } from 'next/router'
+import markdownProcessor from '../lib/markdownProcessor';
 
 const BlogPost = ({ router: { query: post } }) => {
+  const processed = markdownProcessor(post.body);
   return (
     <Layout title={post.frontmatter.title}>
       <BlogTitleStuff post={post} />
-      {
-        remark()
-          .use(remark2react)
-          .use(emoji)
-          .processSync(post.body).contents
-      }
+      {processed.contents}
     </Layout>
   );
 };

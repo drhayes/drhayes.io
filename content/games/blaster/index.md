@@ -16,7 +16,10 @@ Here is the [repository for the project][repo].
 
 ## Articles
 
-<ArticlesList game="blaster" />
+  1. [Introduction](/games/blaster/articles/intro)
+  1. [Part One: The Player](/games/blaster/articles/part-one)
+  1. [Part Two: Shooting and Explosions](/games/blaster/articles/part-two)
+  1. [Part Three: Enemies and AI](/games/blaster/articles/part-three)
 
 [playblaster]: http://blaster.drhayes.io
 [phaser]: https://phaser.io/

@@ -12,7 +12,9 @@ My goal is to make the entire game by myself: programming, graphics, sound, and 
 
 ## Articles
 
-<ArticlesList game="gemini-rising" />
+<articles-list></articles-list>
+
+  1. [Technology](/games/gemini-rising/articles/technology)
 
 ## Video Dev Log
 
