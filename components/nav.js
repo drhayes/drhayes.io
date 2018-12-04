@@ -33,16 +33,16 @@ export default () => (
     <NavImage />
     <NavItems>
       <NavItem>
-        <Link href="/"><a>drhayes.io</a></Link>
+        <Link prefetch href="/"><a>drhayes.io</a></Link>
       </NavItem>
       <NavItem>
-        <Link href="/games/gemini-rising"><a>Gemini Rising</a></Link>
+        <Link prefetch href="/games/gemini-rising"><a>Gemini Rising</a></Link>
       </NavItem>
       <NavItem>
-        <Link href="/games/blaster"><a>Blaster</a></Link>
+        <Link prefetch href="/games/blaster"><a>Blaster</a></Link>
       </NavItem>
       <NavItem>
-        <Link href="/about"><a>About</a></Link>
+        <Link prefetch href="/about"><a>About</a></Link>
       </NavItem>
     </NavItems>
   </Nav>
