@@ -70,6 +70,21 @@ function getBlogPosts() {
     });
 }
 
+function* contentDirectoryIterator(contentPath) {
+  const entries = fs.readdirSync(contentPath, {
+    withFileTypes: true
+  });
+  for (let i = 0; i < entries.length; i++) {
+    const entry = entries[i];
+    const entryName = path.join(contentPath, entry.name)
+    if (entry.isDirectory()) {
+      yield* contentDirectoryIterator(entryName);
+    } else {
+      yield entryName;
+    }
+  }
+}
+
 const config = {
   useFileSystemPublicRoutes: false,
 
@@ -107,6 +122,24 @@ const config = {
         query: { tag, posts }
       }
     });
+
+    // Iterate the content pages.
+    const contentPath = path.join(__dirname, 'content');
+    for (let filename of contentDirectoryIterator(contentPath)) {
+      const relativePath = path.relative(contentPath, filename);
+      const content = fs.readFileSync(filename, 'utf8');
+      let slug = `/${relativePath}`;
+      if (slug.match(/\.md/gi)) {
+        slug = slug.replace(/\.md$/g, '');
+      }
+      if (slug.match(/\/index/gi)) {
+        slug = slug.replace(/\/index$/gi, '');
+      }
+      pathMap[slug] = {
+        page: '/contentPage',
+        query: { content }
+      }
+    }
 
     // Set up the front page.
     pathMap['/'] = {

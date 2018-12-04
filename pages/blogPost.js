@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import BlogTitleStuff from '../components/blogTitleStuff';
 import remark from 'remark';
 import remark2react from 'remark-react';
+import emoji from 'remark-emoji';
 import { withRouter } from 'next/router'
 
 const BlogPost = ({ router: { query: post } }) => {
@@ -12,6 +13,7 @@ const BlogPost = ({ router: { query: post } }) => {
       {
         remark()
           .use(remark2react)
+          .use(emoji)
           .processSync(post.body).contents
       }
     </Layout>

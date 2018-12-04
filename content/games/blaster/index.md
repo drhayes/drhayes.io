@@ -1,10 +1,6 @@
-import Layout from '../../../components/layout';
-import ArticlesList from '../../../components/articlesList';
-
-export default ({ children }) => (
-  <Layout title='Blaster'>{children}</Layout>
-);
-
+---
+title: Blaster
+---
 
 ![Neato screenshot of game](/static/games/blaster/blaster-screenshot.png "Screenshot of Blaster")
 

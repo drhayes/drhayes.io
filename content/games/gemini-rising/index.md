@@ -1,9 +1,6 @@
-import Layout from '../../../components/layout';
-import ArticlesList from '../../../components/articlesList';
-
-export default ({ children }) => (
-  <Layout title='Gemini Rising'>{children}</Layout>
-);
+---
+title: Gemini Rising
+---
 
 Gemini Rising is a Metroidvania with crafting elements and procedural generation that I'm working on. It should be out "soon".
 
