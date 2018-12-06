@@ -34,7 +34,7 @@ jobs:
   deploy:
     docker:
       - image: devillex/docker-firebase
-    working_directory: /tmp/workspace
+    working_directory: /tmp/workspace/site
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
