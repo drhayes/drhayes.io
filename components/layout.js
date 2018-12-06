@@ -5,7 +5,6 @@ import styled from '@emotion/styled';
 import Head from 'next/head';
 
 import './layout.css'
-import './prism-ghcolors.css';
 
 const Container = styled('main')`
   background-color: #fff;
@@ -33,6 +32,7 @@ const Layout = ({ children, title }) => (
       <title>
         {title ? `${title} · drhayes.io` : 'drhayes.io'}
       </title>
+      <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet"></link>
     </Head>
 
     <Container>

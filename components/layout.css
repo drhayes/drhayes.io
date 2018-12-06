@@ -95,6 +95,16 @@ h4 {
   font-size: 1.1em;
 }
 
+code, pre {
+  font-family: 'Fira Mono', monospace;
+  line-height: 1.7;
+}
+
+pre {
+  background-color: #f1efee;
+  margin-right: 2em;
+}
+
 .logo {
   width: 5em;
   height: 5em;
@@ -205,3 +215,4 @@ pre {
   font-size: 90%;
   opacity: 0.5;
 }
+

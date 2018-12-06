@@ -44,11 +44,11 @@ After some quick fiddling with the `ANGLE_RATIO` coefficient, I got the effect I
 It looks like a lot of code so let's break it down:
 
 ```js
-  let player = entity.game.player;
-  if (!player || !player.alive) {
-    entity.body.velocity.set(0);
-    return;
-  }
+let player = entity.game.player;
+if (!player || !player.alive) {
+  entity.body.velocity.set(0);
+  return;
+}
 ```
 
 If there's no player, stop moving and do nothing else from this method.
