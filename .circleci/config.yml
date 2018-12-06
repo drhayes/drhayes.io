@@ -14,7 +14,13 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install
+      - run:
+          name: Install top-level NPM packages
+          command: npm install
+
+      - run:
+          name: NPM Install Functions
+          command: cd functions && npm install && cd ..
 
       # Cache dependencies.
       - save_cache:
