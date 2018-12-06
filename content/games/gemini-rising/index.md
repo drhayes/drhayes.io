@@ -20,5 +20,7 @@ My goal is to make the entire game by myself: programming, graphics, sound, and 
 
 Here's a list of videos I've made of the game's progress so far. My game was codenamed "Basement" before I came up with its current title.
 
+https://www.youtube.com/embed/videoseries?list=PLQuDSztE3xlPBszv48dtN3TFsKUP9s_mO
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLQuDSztE3xlPBszv48dtN3TFsKUP9s_mO" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
 

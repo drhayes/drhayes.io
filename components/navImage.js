@@ -6,6 +6,10 @@ const Image = styled('img')`
   width: 80px;
   box-shadow: none;
   vertical-align: middle;
+
+  @media (max-width: 40em) {
+    width: 120px;
+  }
 `;
 
 const NavImage = () => (

@@ -7,6 +7,27 @@ import BlogLink from '../components/blogLink';
 import Head from 'next/head';
 import { withRouter } from 'next/router'
 
+const schemaOrgMe = {
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "David Hayes",
+  "url": "https://drhayes.io",
+  "sameAs": [
+    "https://plus.google.com/u/0/102508315195752885470",
+    "https://drhayes.tumblr.com/",
+    "https://soundcloud.com/drhayes",
+    "https://mastodon.technology/@drhayes",
+    "https://www.linkedin.com/in/drhayes/",
+    "https://twitter.com/drhayes"
+  ]
+};
+
+const JsonLd = () =>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgMe) }}
+    />
+
 const Section = styled('section')`
   margin-top: 2em;
 `;
@@ -21,6 +42,10 @@ const FrontPageSection = ({ title, children }) => (
 const MeLinks = styled('ul')`
   list-style: none;
   padding-left: 1em;
+
+  @media (max-width: 40em) {
+    padding-left: 0;
+  }
 `;
 
 const MeLink = ({ title, url }) => (
@@ -32,6 +57,10 @@ const MeLink = ({ title, url }) => (
 const NoNumberList = styled('ol')`
   padding-left: 1em;
   list-style-type: none;
+
+  @media (max-width: 40em) {
+    padding-left: 0;
+  }
 `;
 
 const ListOfBlogPosts = ({ posts }) => {
@@ -71,22 +100,8 @@ const FrontPage = ({ router }) => (
         </MeLinks>
       </FrontPageSection>
     </Layout>
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "David Hayes",
-        "url": "https://drhayes.io",
-        "sameAs": [
-          "https://plus.google.com/u/0/102508315195752885470",
-          "https://drhayes.tumblr.com/",
-          "https://soundcloud.com/drhayes",
-          "https://mastodon.technology/@drhayes",
-          "https://www.linkedin.com/in/drhayes/",
-          "https://twitter.com/drhayes"
-        ]
-      })}
-    </script>
+
+    <JsonLd />
   </React.Fragment>
 );
 

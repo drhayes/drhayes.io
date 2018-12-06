@@ -14,15 +14,18 @@ const Container = styled('main')`
   margin: 0 auto;
   box-shadow: 0 0 5em -1em #ccc;
 
-  @media(max-width: 425px) {
-    & {
-      padding-left: .5em;
-      padding-right: .5em;
-      width: 100%;
-      max-width: 100%;
-    }
+  @media (min-width: 40em) {
   }
 `;
+
+/*
+
+  @media only screen and (max-width: 425px) {
+    padding-left: .5em;
+    padding-right: .5em;
+    width: 100%;
+    max-width: 100%;
+  }*/
 
 const defaultTitle = 'drhayes.io';
 
@@ -34,6 +37,7 @@ const Layout = ({ children, title }) => (
         {title ? `${title} · drhayes.io` : 'drhayes.io'}
       </title>
       <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet"></link>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     </Head>
 
     <Container>

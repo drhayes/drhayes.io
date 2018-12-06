@@ -5,10 +5,14 @@ import Link from 'next/link'
 import { css, jsx } from '@emotion/core';
 
 const Nav = styled('nav')`
+  display: block;
   padding-top: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid #eee;
-  width: 100%;
+
+  @media (max-width: 40em) {
+    border-bottom: none;
+  }
 `;
 
 const NavItems = styled('ul')`
@@ -17,6 +21,10 @@ const NavItems = styled('ul')`
   margin-left: 1em;
   padding-left: 0;
   text-transform: lowercase;
+
+  @media (max-width: 40em) {
+    vertical-align: middle;
+  }
 `;
 
 const NavItem = styled('li')`
@@ -25,6 +33,13 @@ const NavItem = styled('li')`
   & + li::before {
     content: ' · ';
     white-space: pre;
+  }
+
+  @media (max-width: 40em) {
+    display: block;
+    & + li::before {
+      content: '';
+    }
   }
 `;
 
