@@ -14,11 +14,12 @@ const Container = styled('main')`
   margin: 0 auto;
   box-shadow: 0 0 5em -1em #ccc;
 
-  @media(max-width: 600px) {
+  @media(max-width: 425px) {
     & {
-      font-size: 18px;
       padding-left: .5em;
       padding-right: .5em;
+      width: 100%;
+      max-width: 100%;
     }
   }
 `;
@@ -48,7 +49,7 @@ const Layout = ({ children, title }) => (
           This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> by David R. Hayes.
       </footer>
 
-      <script src="/unregisterSW.js"></script>
+      <script src="/static/unregisterSW.js"></script>
 
     </Container>
   </React.Fragment>
