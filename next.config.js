@@ -6,6 +6,8 @@ const path = require('path');
 const fm = require('front-matter');
 const slug = require('slug');
 const dayjs = require('dayjs');
+const { promisify } = require('util');
+const copyFile = promisify(fs.copyFile);
 
 const slugify = text => slug(text, {
     lower: true,
@@ -88,7 +90,7 @@ function* contentDirectoryIterator(contentPath) {
 const config = {
   useFileSystemPublicRoutes: false,
 
-  exportPathMap: async function () {
+  exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     const blogPosts = getBlogPosts();
     const pathMap = {
       '/404': {
@@ -147,6 +149,11 @@ const config = {
       query: {
         blogPosts: blogPosts
       }
+    }
+
+    // Keybase proof.
+    if (!dev) {
+      await copyFile(path.join(dir, 'keybase.txt'), path.join(outDir, 'keybase.txt'))
     }
 
     return pathMap;
