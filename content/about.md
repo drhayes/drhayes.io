@@ -11,7 +11,7 @@ This site is made with some help from these technologies and media:
 * [Markdown] has the content.
 * [NextJS] generates the site.
 * [GitHub][github] hosts the code.
-* [Firebase] publishes the site.
+* [Firebase] hosts the site.
 * [Cloudflare][cloudflare] makes it fast.
 * [CircleCI][circleci] builds it when it changes.
 
