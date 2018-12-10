@@ -4,15 +4,26 @@ const extract = require('remark-extract-frontmatter');
 const yaml = require('yaml');
 const emoji = require('remark-emoji');
 
+const addIt = () => {
+  console.log('outer');
+  return function() {
+    console.log('inner');
+    console.log(arguments);
+  }
+};
+
 const withCSS = require('@zeit/next-css');
 const withMDX = require('@zeit/next-mdx')({
   extension: /.mdx?$/,
 
-  mdPlugins: [
-    [ frontmatter, ['yaml'] ],
-    [ extract, { yaml: yaml.parse } ],
-    [ emoji ],
-  ],
+  options: {
+    mdPlugins: [
+      [ frontmatter, ['yaml'] ],
+      [ extract, { yaml: yaml.parse } ],
+      [ emoji ],
+      [ addIt ]
+    ],
+  },
 });
 const fs = require('fs');
 const path = require('path');
@@ -57,6 +68,7 @@ const config = {
   pageExtensions: ['jsx', 'js', 'md', 'mdx'],
 
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
+    console.log(Object.keys(defaultPathMap));
     const pathMap = Object.assign({
       '/404': {
         page: '/404'
@@ -67,10 +79,10 @@ const config = {
     // First, add the blog posts.
     const tags = new Map();
     blogPosts.forEach(post => {
-      pathMap[post.slug] = {
-        page: '/blogPost',
-        query: post
-      }
+      // pathMap[post.slug] = {
+      //   page: '/blogPost',
+      //   query: post
+      // }
       // Aggregate the tags.
       if (post.frontmatter.tags) {
         post.frontmatter.tags.forEach(tag => {
@@ -106,6 +118,9 @@ const config = {
 
     delete pathMap['blogPost'];
     delete pathMap['tagPage'];
+
+    console.log(JSON.stringify(Object.keys(pathMap), null, 2));
+    throw Error('cats');
 
     return pathMap;
   }

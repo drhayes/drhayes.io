@@ -85,21 +85,19 @@ const FrontPage = ({ router }) => (
       <meta name="google-site-verification" content="blpqoyJP6QdBNmkuqzE0LkXaRBHOgZa1cILyoCNFRAw" />
     </Head>
 
-    <Layout>
-      <FrontPageSection title="Blog">
-        <ListOfBlogPosts posts={router.query.blogPosts} />
-      </FrontPageSection>
+    <FrontPageSection title="Blog">
+      <ListOfBlogPosts posts={router.query.blogPosts} />
+    </FrontPageSection>
 
-      <FrontPageSection title="Me Elsewhere">
-        <MeLinks>
-          <MeLink title="drhayes@mastodon.technology" url="https://mastodon.technology/@drhayes" />
-          <MeLink title="Keybase" url="https://keybase.io/drhayes" />
-          <MeLink title="GitHub" url="https://github.com/drhayes" />
-          <MeLink title="Tumblr" url="https://drhayes.tumblr.com" />
-          <MeLink title="Goodreads" url="https://www.goodreads.com/drhayes" />
-        </MeLinks>
-      </FrontPageSection>
-    </Layout>
+    <FrontPageSection title="Me Elsewhere">
+      <MeLinks>
+        <MeLink title="drhayes@mastodon.technology" url="https://mastodon.technology/@drhayes" />
+        <MeLink title="Keybase" url="https://keybase.io/drhayes" />
+        <MeLink title="GitHub" url="https://github.com/drhayes" />
+        <MeLink title="Tumblr" url="https://drhayes.tumblr.com" />
+        <MeLink title="Goodreads" url="https://www.goodreads.com/drhayes" />
+      </MeLinks>
+    </FrontPageSection>
 
     <JsonLd />
   </React.Fragment>
