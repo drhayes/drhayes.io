@@ -1,6 +1,19 @@
-// next.config.js
-const withCSS = require('@zeit/next-css')
-const emoji = require('remark-emoji')
+// Markdown processing.
+const frontmatter = require('remark-frontmatter');
+const extract = require('remark-extract-frontmatter');
+const yaml = require('yaml');
+const emoji = require('remark-emoji');
+
+const withCSS = require('@zeit/next-css');
+const withMDX = require('@zeit/next-mdx')({
+  extension: /.mdx?$/,
+
+  mdPlugins: [
+    [ frontmatter, ['yaml'] ],
+    [ extract, { yaml: yaml.parse } ],
+    [ emoji ],
+  ],
+});
 const fs = require('fs');
 const path = require('path');
 const fm = require('front-matter');
@@ -15,38 +28,6 @@ const slugify = text => slug(text, {
   });
 
 const contentDir = path.join(__dirname, 'content');
-
-function generateGamePages() {
-  const pages = {};
-  // Enumerate the game articles sorted by date.
-  const gamesDir = path.join(contentDir, 'games');
-  const dirents = fs.readdirSync(gamesDir, {
-    withFileTypes: true
-  });
-  const dirs = dirents.filter(dirent => dirent.isDirectory());
-  dirs.forEach(dir => {
-    const gameInfo = {};
-    const gameDir = path.join(gamesDir, dir.name);
-    const filenames = fs.readdirSync(path.join(gameDir, 'articles'));
-    const articles = filenames
-      .filter(filename => filename.endsWith('.md'))
-      .map(filename => ({
-        filename,
-        frontmatter: fm(fs.readFileSync(path.join(gameDir, 'articles', filename), 'utf8')).attributes
-      }));
-    // Ensure dates.
-    articles.filter(({ frontmatter }) => !Boolean(frontmatter.date))
-      .forEach(article => {
-        throw Error(`Missing date for article: ${article.frontmatter.title}`)
-      });
-    articles.sort((a, b) => a.frontmatter.date < a.frontmatter.date);
-    gameInfo.articles = articles.map(article => ({
-      title: article.frontmatter.title,
-      slug: `/games/${dir.name}/articles/${path.basename(article.filename, '.md')}`
-    }));
-  });
-  return pages;
-}
 
 function getBlogPosts() {
   const postsDir = path.join(__dirname, 'blogPosts');
@@ -72,32 +53,17 @@ function getBlogPosts() {
     });
 }
 
-function* contentDirectoryIterator(contentPath) {
-  const entries = fs.readdirSync(contentPath, {
-    withFileTypes: true
-  });
-  for (let i = 0; i < entries.length; i++) {
-    const entry = entries[i];
-    const entryName = path.join(contentPath, entry.name)
-    if (entry.isDirectory()) {
-      yield* contentDirectoryIterator(entryName);
-    } else {
-      yield entryName;
-    }
-  }
-}
-
 const config = {
-  useFileSystemPublicRoutes: false,
+  pageExtensions: ['jsx', 'js', 'md', 'mdx'],
 
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
-    const blogPosts = getBlogPosts();
-    const pathMap = {
+    const pathMap = Object.assign({
       '/404': {
         page: '/404'
       }
-    };
+    }, defaultPathMap);
 
+    const blogPosts = getBlogPosts();
     // First, add the blog posts.
     const tags = new Map();
     blogPosts.forEach(post => {
@@ -125,27 +91,9 @@ const config = {
       }
     });
 
-    // Iterate the content pages.
-    const contentPath = path.join(__dirname, 'content');
-    for (let filename of contentDirectoryIterator(contentPath)) {
-      const relativePath = path.relative(contentPath, filename);
-      const content = fs.readFileSync(filename, 'utf8');
-      let slug = `/${relativePath}`;
-      if (slug.match(/\.md/gi)) {
-        slug = slug.replace(/\.md$/g, '');
-      }
-      if (slug.match(/\/index/gi)) {
-        slug = slug.replace(/\/index$/gi, '');
-      }
-      pathMap[slug] = {
-        page: '/contentPage',
-        query: { content }
-      }
-    }
-
     // Set up the front page.
     pathMap['/'] = {
-      page: '/frontPage',
+      page: '/index',
       query: {
         blogPosts: blogPosts
       }
@@ -156,8 +104,11 @@ const config = {
       await copyFile(path.join(dir, 'keybase.txt'), path.join(outDir, 'keybase.txt'))
     }
 
+    delete pathMap['blogPost'];
+    delete pathMap['tagPage'];
+
     return pathMap;
   }
 };
 
-module.exports = withCSS(config);
+module.exports = withCSS(withMDX(config));
