@@ -1,3 +1,3 @@
 # drhayes.io
 
-My personal webiste, built using Gatsby.
+My personal webiste, built using NextJS.
