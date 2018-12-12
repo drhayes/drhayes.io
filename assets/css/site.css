@@ -7,3 +7,7 @@ body {
 code {
   font-family: "Fira Mono", monospace;
 }
+
+.dotted-list li+li::before {
+  content: '·';
+}

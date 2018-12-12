@@ -1,0 +1,9 @@
+<ul class="list dotted-list ma0 pa0 dib">
+    {{ range .Params.tags }}
+     <li class="list dib ma0 pa0">
+       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="link color-inherit no-underline dim">
+         {{- . -}}
+       </a>
+     </li>
+    {{ end }}
+  </ul>

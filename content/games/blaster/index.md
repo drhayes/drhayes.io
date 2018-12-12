@@ -2,7 +2,7 @@
 title: Blaster
 ---
 
-![Neato screenshot of game](/static/games/blaster/blaster-screenshot.png "Screenshot of Blaster")
+![Neato screenshot of game](/games/blaster/blaster-screenshot.png "Screenshot of Blaster")
 
 [Play the game here][playblaster].
 
@@ -17,9 +17,9 @@ Here is the [repository for the project][repo].
 ## Articles
 
   1. [Introduction](/games/blaster/articles/intro)
-  1. [Part One: The Player](/games/blaster/articles/part-one)
-  1. [Part Two: Shooting and Explosions](/games/blaster/articles/part-two)
-  1. [Part Three: Enemies and AI](/games/blaster/articles/part-three)
+  2. [Part One: The Player](/games/blaster/articles/part-one)
+  3. [Part Two: Shooting and Explosions](/games/blaster/articles/part-two)
+  4. [Part Three: Enemies and AI](/games/blaster/articles/part-three)
 
 [playblaster]: http://blaster.drhayes.io
 [phaser]: https://phaser.io/
