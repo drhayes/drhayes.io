@@ -3,15 +3,12 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.14
+      - image: cibuild/hugo:0.52
     working_directory: ~/site
     environment:
       HUGO_BUILD_DIR: ~/site/public
     steps:
       - checkout
-
-      - run:
-          name: Install Hugo
-          command: go get -v github.com/gohugoio/hugo
 
       # Build the site.
       - run:
