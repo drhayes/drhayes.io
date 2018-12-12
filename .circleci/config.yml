@@ -11,7 +11,7 @@ jobs:
 
       - run:
           name: Download Hugo
-          command: curl https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.tar.gz -O
+          command: curl https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.tar.gz -LO
 
       - run:
           name: Unpack Hugo
