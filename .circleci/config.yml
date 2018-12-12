@@ -15,12 +15,12 @@ jobs:
 
       - run:
           name: Unpack Hugo
-          command: tar -xvzf hugo_0.52_Linux-64bit.tar.gz -C hugo
+          command: tar -xvzf hugo_0.52_Linux-64bit.tar.gz
 
       # Build the site.
       - run:
           name: Run hugo
-          command: HUGO_ENV=production hugo/hugo -v -d $HUGO_BUILD_DIR
+          command: HUGO_ENV=production hugo_0.52_Linux-64bit/hugo -v -d $HUGO_BUILD_DIR
 
       - run:
           name: NPM Install Functions
