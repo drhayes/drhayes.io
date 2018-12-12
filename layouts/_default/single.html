@@ -13,7 +13,7 @@
         {{- .Title -}}
       </h1>
 
-      {{ if .Date }}
+      {{ if .Params.Date }}
       <div class="silver lh-copy">
         Published:
         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
