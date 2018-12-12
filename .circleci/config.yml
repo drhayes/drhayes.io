@@ -11,7 +11,7 @@ jobs:
 
       - run:
           name: Install PostCSS
-          command: npm install -g postcss-cli
+          command: sudo npm install -g postcss-cli
 
       - run:
           name: Download Hugo
