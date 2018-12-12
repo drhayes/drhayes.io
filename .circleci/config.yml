@@ -10,6 +10,10 @@ jobs:
       - checkout
 
       - run:
+          name: Install PostCSS
+          command: npm install -g postcss-cli
+
+      - run:
           name: Download Hugo
           command: curl https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.tar.gz -LO
 
