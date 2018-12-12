@@ -3,11 +3,13 @@ title: Ha Ha, Just Kidding, I'm Using NextJS Now
 tags:
   - static-site-generators
   - nextjs
-date: 2018-12-6
+date: 2018-12-06
 published: true
 ---
 
 Just when I thought I was done tinkering with my site I found [NextJS]. Oops.
+
+<!--more-->
 
 I mean, I don't need an excuse to tinker with things that are better left alone. I apparently derive great joy from experimenting with static-site-generators including [hugo] and [gatsby] and [metalsmith]. Before that, I had a lot of fun playing around with seemingly every open source PHP-based CMS in existence. My bookshelf is full of blank books that have one page written in them before I moved on to something else because the current notebooks just weren't good enough for some reason. I re-arrange my office once a year or so. Just to put all this in context.
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>drhayes.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet"></link>
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+  {{ $css := resources.Get "css/site.css" }}
+  {{ $style := $css | resources.PostCSS }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+<body>
+  <main class="pb7" role="main">
+      {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>

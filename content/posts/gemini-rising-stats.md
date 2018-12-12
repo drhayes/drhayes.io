@@ -9,6 +9,8 @@ published: true
 
 I thought it'd be interesting to include stats about the game as I develop it.
 
+<!--more-->
+
  Gemini Rising has 14,852 lines of Lua in it excluding libraries and generated files. As a friend of mine put it, that's "profit", not "revenue" -- I've written and re-written lots of the game up to now. Hopefully I'm done doing large scale rewrites. Hopefully. Sure.
 
  The longest module in the project is `ui.lua` at 669 lines, the immediate-mode keyboard/gamepad accessible UI library I wrote for the game. Every other UI library I could find relied on using the mouse, which wasn't going to work for me. I think it might make a good library someday.
