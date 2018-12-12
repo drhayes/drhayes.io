@@ -1,5 +1,8 @@
 ---
 title: Gemini Rising
+menu:
+  main:
+    weight: 10
 ---
 
 Gemini Rising is a Metroidvania with crafting elements and procedural generation that I'm working on. It should be out "soon".

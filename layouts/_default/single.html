@@ -1,15 +1,14 @@
+{{ define "header" }}
+  <div class="mw8 center ph3 ph0-l">
+    {{ partial "site-navigation.html" . }}
+  </div>
+{{ end }}
+
 {{ define "main" }}
   {{ $section := .Site.GetPage "section" .Section }}
   <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
 
-    <header class="mt4 w-100">
-      <p class="f6 b tracked">
-          {{/*
-          CurrentSection allows us to use the section title instead of inferring from the folder.
-          https://gohugo.io/variables/page/#section-variables-and-methods
-          */}}
-        {{with .CurrentSection.Title }}{{. | upper }}{{end}}
-      </p>
+    <header class="w-100">
       <h1 class="f1 mb1">
         {{- .Title -}}
       </h1>

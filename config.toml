@@ -5,3 +5,12 @@ assetDir = "assets"
 
 [permalinks]
   posts = "/:year/:month/:day/:title"
+
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home-link"
+    name = "drhayes.io"
+    url = "/"
+    weight = -900

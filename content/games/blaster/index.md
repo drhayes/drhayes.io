@@ -1,5 +1,8 @@
 ---
 title: Blaster
+menu:
+  main:
+    weight: 20
 ---
 
 ![Neato screenshot of game](/games/blaster/blaster-screenshot.png "Screenshot of Blaster")

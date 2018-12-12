@@ -1,3 +1,9 @@
+{{ define "header" }}
+  <div class="mw8 center ph3 ph0-l">
+    {{ partial "site-navigation.html" . }}
+  </div>
+{{ end }}
+
 {{ define "main" }}
 {{ $data := .Data }}
 <div class="mw8 center">

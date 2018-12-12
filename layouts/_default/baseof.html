@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>drhayes.io</title>
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} &#183; {{ end }}drhayes.io{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet"></link>
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
@@ -12,7 +12,8 @@
 </head>
 <body>
   <main class="pb7" role="main">
-      {{ block "main" . }}{{ end }}
+    {{ block "header" . }}{{ end }}
+    {{ block "main" . }}{{ end }}
   </main>
 </body>
 </html>

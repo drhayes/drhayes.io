@@ -1,0 +1,14 @@
+<nav class="pt3 flex w-100" role="navigation">
+  <a class="link no-underline pr3" href="/" title="home page">
+    <img src="/raven.png" alt="Raven" class="mw4">
+  </a>
+  <ul class="list pl0 flex flex-column flex-row-ns items-center">
+    {{ range .Site.Menus.main }}
+    <li class="list f4 fw4 pr3 lh-copy">
+      <a class="link no-underline dim color-inherit ttl" href="{{ .URL }}" title="{{ .Name }} page">
+        {{ .Name }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
