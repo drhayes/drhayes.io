@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://drhayes.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "drhayes.io"
 assetDir = "assets"
 
 [permalinks]

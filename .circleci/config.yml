@@ -10,13 +10,17 @@ jobs:
       - checkout
 
       - run:
-          name: Install Hugo
-          command: sudo apt-get install hugo
+          name: Download Hugo
+          command: curl -o https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.tar.gz
+
+      - run:
+          name: Unpack Hugo
+          command: tar -xvzf hugo_0.52_Linux-64bit.tar.gz -C hugo
 
       # Build the site.
       - run:
           name: Run hugo
-          command: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+          command: HUGO_ENV=production hugo/hugo -v -d $HUGO_BUILD_DIR
 
       - run:
           name: NPM Install Functions
