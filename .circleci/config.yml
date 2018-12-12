@@ -4,32 +4,23 @@ jobs:
     docker:
       - image: circleci/node:10.14
     working_directory: ~/site
+    environment:
+      HUGO_BUILD_DIR: ~/site/public
     steps:
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
       - run:
-          name: Install top-level NPM packages
-          command: npm install
+          name: Install Hugo
+          command: go get -v github.com/gohugoio/hugo
+
+      # Build the site.
+      - run:
+          name: Run hugo
+          command: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
 
       - run:
           name: NPM Install Functions
           command: cd functions && npm install && cd ..
-
-      # Cache dependencies.
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # Build the site.
-      - run: NODE_ENV=production npm run export
 
       - persist_to_workspace:
           root: ~/
