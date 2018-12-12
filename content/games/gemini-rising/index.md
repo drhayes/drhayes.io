@@ -7,9 +7,12 @@ tags:
   - gemini-rising
 ---
 
+![Neato screenshot of game](/games/gemini-rising/screenshot-2018-09-12.png "Screenshot as of 2018-09-12")
+
 Gemini Rising is a Metroidvania with crafting elements and procedural generation that I'm working on. It should be out "soon".
 
-![Neato screenshot of game](/games/gemini-rising/screenshot-2018-09-12.png "Screenshot as of 2018-09-12")
+<!--more-->
+
 
 My goal is to make the entire game by myself: programming, graphics, sound, and music.
 
