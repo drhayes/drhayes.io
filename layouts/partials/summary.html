@@ -1,0 +1,15 @@
+<div class="mid-gray overflow-hidden">
+    {{ if .Date }}
+      <time class="silver mr1" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        {{ dateFormat "2006.01.02" .Date }}
+      </time>
+    {{ end }}
+    <h1 class="f3 near-black">
+      <a href="{{ .URL }}" class="link black dim">
+        {{ .Title }}
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      {{ .Summary  }}
+    </div>
+  </div>
