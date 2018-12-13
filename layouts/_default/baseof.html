@@ -17,6 +17,10 @@
     {{ end }}
 
     {{ block "main" . }}{{ end }}
+
+    {{ block "footer" . }}
+      {{ partial "page-footer.html" . }}
+    {{ end }}
   </main>
 </body>
 </html>
