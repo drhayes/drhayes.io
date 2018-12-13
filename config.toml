@@ -14,3 +14,7 @@ assetDir = "assets"
     name = "drhayes.io"
     url = "/"
     weight = -1
+
+
+[taxonomies]
+  tag = "tags"

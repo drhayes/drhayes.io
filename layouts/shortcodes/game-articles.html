@@ -1,0 +1,11 @@
+{{ $game := .Get 0 }}
+{{ $articles := where .Site.RegularPages "Dir" "eq" (print "games/" $game "/") }}
+{{ $first := index $articles 0 }}
+<ol>
+  {{ range sort $articles ".Date" }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ol>
+
