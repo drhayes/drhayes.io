@@ -13,4 +13,4 @@ assetDir = "assets"
     identifier = "home-link"
     name = "drhayes.io"
     url = "/"
-    weight = -900
+    weight = -1

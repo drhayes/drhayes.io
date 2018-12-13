@@ -1,6 +1,8 @@
 ---
 title: Part Two, Shooting and Explosions
 date: 2015-10-05
+aliases:
+  - /games/blaster/articles/part-two
 ---
 
 This is the second part of an extended write-up I'm doing about my [Phaser](http://phaser.io) game, Blaster. [Play Blaster here][playblaster].

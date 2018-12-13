@@ -1,6 +1,8 @@
 ---
 title: Part Three, Enemies and AI
 date: 2015-10-15
+aliases:
+  - /games/blaster/articles/part-three
 ---
 
 This is the third part of an extended write-up I'm doing about my [Phaser](http://phaser.io) game, Blaster. [Play Blaster here][playblaster].
