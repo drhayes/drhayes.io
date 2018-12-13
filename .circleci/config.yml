@@ -4,8 +4,6 @@ jobs:
     docker:
       - image: circleci/node:10.14
     working_directory: ~/site
-    environment:
-      HUGO_BUILD_DIR: ~/site/public
     steps:
       - checkout
 
@@ -20,7 +18,7 @@ jobs:
       # Build the site.
       - run:
           name: Run hugo
-          command: HUGO_ENV=production ./hugo -v -d $HUGO_BUILD_DIR
+          command: HUGO_ENV=production ./hugo -v
 
       - run:
           name: NPM Install Functions
