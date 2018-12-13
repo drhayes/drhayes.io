@@ -5,6 +5,7 @@ menu:
     weight: 10
 tags:
   - gemini-rising
+toc: true
 ---
 
 ![Neato screenshot of game](/games/gemini-rising/screenshot-2018-09-12.png "Screenshot as of 2018-09-12")

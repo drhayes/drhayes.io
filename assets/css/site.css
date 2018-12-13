@@ -15,3 +15,7 @@ code {
 .dotted-list li+li::before {
   content: '·';
 }
+
+main p:first-child {
+  margin-top: 0;
+}
