@@ -1,10 +1,10 @@
 {{ $game := .Get 0 }}
 {{ $articles := where .Site.RegularPages "Dir" "eq" (print "games/" $game "/") }}
 {{ $first := index $articles 0 }}
-<ol>
+<ol class="pl0 ml4 mv0 nested-links">
   {{ range sort $articles ".Date" }}
   <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <a href="{{ .Permalink }}" class="link">{{ .Title }}</a>
   </li>
   {{ end }}
 </ol>
