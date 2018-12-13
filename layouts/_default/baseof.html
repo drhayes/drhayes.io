@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
   {{ $css := resources.Get "css/site.css" }}
   <link rel="stylesheet" href="{{ $css.Permalink }}">
+
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
 </head>
 <body>
   <main class="pb7" role="main">
