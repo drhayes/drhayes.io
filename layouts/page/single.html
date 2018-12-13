@@ -1,20 +1,12 @@
-{{ define "header" }}
-<div class="mw8 center ph3 ph0-l">
-  {{ partial "site-navigation.html" . }}
-</div>
-{{ end }}
-
 {{ define "main" }}
-  <div class="mw8 center ph3 ph0-l">
-    <article class="center">
-      <header class="w-100 mb4 mid-gray">
-        <h1 class="f2 mb1">
-          {{ .Title }}
-        </h1>
-      </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img measure">
-        {{ .Content }}
-      </div>
-    </article>
+<article class="mw8 center mh2 mh0-m">
+  <header class="w-100 mb4 mid-gray lh-title">
+    <h1 class="f2 mb1 mid-gray lh-title">
+      {{ .Title }}
+    </h1>
+  </header>
+  <div class="nested-copy-line-height lh-copy f4 nested-links nested-img measure">
+    {{ .Content }}
   </div>
+</article>
 {{ end }}

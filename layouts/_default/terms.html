@@ -1,13 +1,7 @@
-{{ define "header" }}
-  <div class="mw8 center ph3 ph0-l">
-    {{ partial "site-navigation.html" . }}
-  </div>
-{{ end }}
-
 {{ define "main" }}
 {{ $data := .Data }}
 <div class="mw8 center">
-  <section class="ph4">
+  <section class="mh4">
     {{ range $key, $value := .Data.Terms }}
     <h2 class="f2 mid-gray">
       <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}" class="link dim silver">

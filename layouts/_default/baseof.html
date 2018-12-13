@@ -12,7 +12,10 @@
 </head>
 <body>
   <main class="pb7" role="main">
-    {{ block "header" . }}{{ end }}
+    {{ block "header" . }}
+      {{ partial "page-header.html" . }}
+    {{ end }}
+
     {{ block "main" . }}{{ end }}
   </main>
 </body>

@@ -1,15 +1,9 @@
-{{ define "header" }}
-  <div class="mw8 center ph3 ph0-l">
-    {{ partial "site-navigation.html" . }}
-  </div>
-{{ end }}
-
 {{ define "main" }}
   {{ $section := .Site.GetPage "section" .Section }}
-  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+  <article class="flex-l flex-wrap justify-between mw8 center mh3 mh0-m">
 
     <header class="w-100 mb4">
-      <h1 class="f2 mb1 mid-gray">
+      <h1 class="f2 mb1 mid-gray lh-title">
         {{- .Title -}}
       </h1>
 
