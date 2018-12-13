@@ -4,6 +4,9 @@ title = "drhayes.io"
 assetDir = "assets"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License by David R. Hayes."
 
+pygmentsCodefences = true
+pygmentsStyle = "solarized-dark"
+
 [author]
   name = "David R. Hayes"
 
