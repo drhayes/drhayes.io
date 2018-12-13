@@ -1,86 +1,82 @@
+{{ define "header"}}
+<!-- empty -->
+{{ end }}
+
 {{ define "main" }}
-<!-- mw8 center ph3 ph0-l
-  ph3 ph2-l -->
-  <article class="mw8 center lh-copy mid-gray flex items-start justify-between flex-wrap mh2 mh0-m">
 
-    {{ $section_name := "posts" }}
-    {{ $posts := (slice "posts") }}
-    {{/* Create a variable with that section to use in multiple places. */}}
-    {{ $section := where .Site.RegularPages "Section" "in" $posts }}
-    {{/* Check to see if the section is defined for ranging through it */}}
-    {{ $section_count := len $section }}
+<section class="pa4 tc vh-100 flex flex-column items-center flex-row-l h5-l mt5-l mb4-l">
+  <div class="w-50-l tr-l mr4-l">
+    <img src="/raven.png" alt="Raven" class="br-100 h5 w5">
+  </div>
+  <div class="w-50-l tl-l">
+    <h1 class="f1">Hi there. 👋🏽 </h1>
+    <h2 class="f3 fw4">My name is David Hayes. I'm a technologist living in Austin, TX.</h2>
+  </div>
+</section>
 
-    <div class="w-100 w-two-thirds-l ph0">
-      <h1 class="f2 mb1 mid-gray lh-title">Here</h1>
-
-      {{ $n_posts := 5 }}
-
-      <section class="mw8">
-        {{/* Range through the first $n_posts items of the section */}}
-        {{ range (first $n_posts $section) }}
-        <div class="mb4">
-          <article>
-            <div class="ph0 dark-gray">
-              <!-- <div class="w-100"> -->
-                <h1 class="f4 fw4 mv0 lh-title mw7 mw8-l">
-                  <a href="{{.URL}}" class="dib color-inherit dim link">
-                    {{ .Title }}
-                  </a>
-                </h1>
-                <time class="dib silver w100 mb2" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                  {{ dateFormat "2006.01.02" .Date }}
-                </time>
-                <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-                  {{ .Summary }}
-                </div>
-                <a href="{{.URL}}" class="bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">Read more...</a>
-                <!-- </div> -->
-              </div>
-            </article>
-
+<div class="flex flex-column flex-row-l">
+  <section class="pa4 tc w-50-l">
+    <h1 class="f2">I make games.</h1>
+    {{ $gamePages := where .Site.RegularPages "Type" "in" (slice "game-page") }}
+    <ol class="list pa0 ma0 flex flex-column">
+      {{ range $gamePages }}
+      <li class="pa4 bb b--black-10">
+        <article class="flex flex-column">
+          <a href="{{.URL}}" class="dib color-inherit dim link order-1 order-0-l">
+            <h2 class="f3 fw5 lh-title mv2 f2-l">{{ .Title }}</h2>
+          </a>
+          <div>
+            <img src="{{ .Params.Screenshot}}" alt="" class="w-100">
           </div>
-          {{ end }}
-        </section>
-      </div>
+          <div class="f5 lh-copy nested-copy-line-height nested-links f4-l order-2">
+            {{ .Summary }}
+          </div>
+        </article>
+      </li>
+      {{ end}}
+    </ol>
+  </section>
 
-      <div class="w-100 w-30-l pl2-l">
-        <h1>Elsewhere</h1>
+  <section class="pa4 tc w-50-l">
+    <h1 class="f2">I write blog posts.</h1>
+    {{ $blogPages := where .Site.RegularPages "Section" "in" (slice "posts") }}
+    <ol class="list pa0 ma0 flex flex-column">
+      {{ range (first 4 $blogPages) }}
+      <li class="pa4 bb b--black-10">
+        <article class="flex flex-column">
+          <a href="{{.URL}}" class="dib color-inherit dim link">
+            <h2 class="f3 fw5 lh-title mv2 f2-l fw4-l mid-gray">{{ .Title }}</h2>
+          </a>
+          <div class="f5 lh-copy nested-copy-line-height nested-links f4-l">
+            {{ .Summary }}
+          </div>
+        </article>
+      </li>
+      {{ end}}
+    </ol>
+  </section>
+</div>
 
-        <ul class="list ph0 f6 f5-l lh-copy nested-copy-line-height">
-          <li>
-            <a href="https://mastodon.technology/@drhayes" class="color-inherit dim link">drhayes@mastodon</a>
-          </li>
-          <li>
-            <a href="https://keybase.io/drhayes" class="color-inherit dim link">Keybase</a>
-          </li>
-          <li>
-            <a href="https://github.com/drhayes" class="color-inherit dim link">GitHub</a>
-          </li>
-          <li>
-            <a href="https://drhayes.tumblr.com" class="color-inherit dim link">Tumblr</a>
-          </li>
-          <li>
-            <a href="https://www.goodreads.com/drhayes" class="color-inherit dim link">Goodreads</a>
-          </li>
-        </ul>
-      </div>
+<section class="pa4 tc">
+  <h1 class="f2 f3-l">I'm elsewhere on the web.</h1>
+  <ul class="list pa0 ma0 flex flex-column">
+    <li class="mb3">
+      <a href="https://mastodon.technology/@drhayes" class="color-inherit dim f4 link">drhayes@mastodon</a>
+    </li>
+    <li class="mb3">
+      <a href="https://keybase.io/drhayes" class="color-inherit dim f4 link">Keybase</a>
+    </li>
+    <li class="mb3">
+      <a href="https://github.com/drhayes" class="color-inherit dim f4 link">GitHub</a>
+    </li>
+    <li class="mb3">
+      <a href="https://drhayes.tumblr.com" class="color-inherit dim f4 link">Tumblr</a>
+    </li>
+    <li class="mb3">
+      <a href="https://www.goodreads.com/drhayes" class="color-inherit dim f4 link">Goodreads</a>
+    </li>
+  </ul>
+</section>
 
-      <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "Person",
-          "name": "David Hayes",
-          "url": "https://drhayes.io",
-          "sameAs": [
-            "https://plus.google.com/u/0/102508315195752885470",
-            "https://drhayes.tumblr.com/",
-            "https://soundcloud.com/drhayes",
-            "https://mastodon.technology/@drhayes",
-            "https://www.linkedin.com/in/drhayes/",
-            "https://twitter.com/drhayes"
-          ]
-        }
-      </script>
 
-    </article>
-    {{ end }}
+{{ end }}

@@ -1,37 +1,40 @@
 {{ define "main" }}
-  {{ $section := .Site.GetPage "section" .Section }}
-  <article class="flex-l flex-wrap justify-between mw8 center mh3 mh0-m">
+{{ $section := .Site.GetPage "section" .Section }}
+<article class="flex-l flex-wrap justify-between mw8 center mh3 mh0-m">
 
-    <header class="w-100 mb4">
-      <h1 class="f2 mb1 mid-gray lh-title">
-        {{- .Title -}}
-      </h1>
+  <header class="w-100 mb4">
+    <h1 class="f2 mb1 mid-gray lh-title">
+      {{- .Title -}}
+    </h1>
 
-      {{ if .Params.Date }}
-      <div class="silver lh-copy">
-        Published:
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-          {{- .Date.Format "2006.01.02" -}}
-        </time>
-      </div>
-      {{ end }}
+    {{ if .Params.Date }}
+    <div class="silver lh-copy">
+      Published:
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        {{- .Date.Format "2006.01.02" -}}
+      </time>
+    </div>
+    {{ end }}
 
-      {{ if .Params.tags }}
-      <div class="silver lh-copy">
-        Tags:
-        {{ partial "tags.html" . }}
-      </div>
-      {{ end }}
+    {{ if .Params.tags }}
+    <div class="silver lh-copy">
+      Tags:
+      {{ partial "tags.html" . }}
+    </div>
+    {{ end }}
 
-    </header>
+  </header>
 
-    <main class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
-        {{- .Content -}}
-    </main>
+  <main class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+    {{ if .Params.Screenshot }}
+      <img src="{{ .Params.Screenshot}}" alt="Cool screenshot" class="w-100">
+    {{ end }}
+    {{- .Content -}}
+  </main>
 
-    <aside class="w-30-l">
-      {{- partial "menu-contextual.html" . -}}
-    </aside>
+  <aside class="w-30-l">
+    {{- partial "menu-contextual.html" . -}}
+  </aside>
 
-  </article>
+</article>
 {{ end }}

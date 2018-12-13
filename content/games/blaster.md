@@ -5,9 +5,9 @@ menu:
     weight: 20
 tags:
   - blaster
+type: game-page
+screenshot: /games/blaster/blaster-screenshot.png
 ---
-
-![Neato screenshot of game](/games/blaster/blaster-screenshot.png "Screenshot of Blaster")
 
 [Play the game here][playblaster].
 
