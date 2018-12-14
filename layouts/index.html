@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="pa4 tc vh-100 flex flex-column items-center pa1-m flex-row-ns h-100-ns mt4-ns">
+<section class="pa4 tc vh-100 flex flex-column items-center pa1-m flex-row-ns h-100-ns mt2-ns">
   <div class="w-40-ns tr-ns mr4-ns">
     <img src="/raven.png" alt="Raven" class="br-100 h5 w5">
   </div>
@@ -11,21 +11,23 @@
 </section>
 
 <div class="flex flex-column flex-row-l">
-  <section class="pa4 tc w-50-l">
-    <h1 class="f2">I make games.</h1>
+  <section class="pa4 tc w-50-l pa1-ns tl-ns">
+    <h1 class="f2 tc">I make games.</h1>
     {{ $gamePages := where .Site.RegularPages "Type" "in" (slice "game-page") }}
     <ol class="list pa0 ma0 flex flex-column">
       {{ range $gamePages }}
-      <li class="pa4 bb b--black-10">
-        <article class="flex flex-column">
-          <div>
+      <li class="pa4 bb b--black-10 pa1-ns pb4-ns bn-ns">
+        <article class="flex flex-column flex-row-ns">
+          <div class="w-third-ns">
             <img src="{{ .Params.Screenshot}}" alt="" class="w-100">
           </div>
-          <a href="{{.URL}}" class="dib color-inherit dim link">
-            <h2 class="f3 fw5 lh-title mv2 f2-l">{{ .Title }}</h2>
-          </a>
-          <div class="f5 lh-copy nested-copy-line-height nested-links f4-l">
-            {{ .Summary }}
+          <div class="w-two-thirds-ns pl2-ns">
+            <a href="{{.URL}}" class="dib color-inherit dim link">
+              <h2 class="f3 fw5 lh-title mv2 mt0-ns">{{ .Title }}</h2>
+            </a>
+            <div class="f5 lh-copy nested-copy-line-height nested-links">
+              {{ .Summary }}
+            </div>
           </div>
         </article>
       </li>
@@ -33,17 +35,17 @@
     </ol>
   </section>
 
-  <section class="pa4 tc w-50-l">
-    <h1 class="f2">I write blog posts.</h1>
+  <section class="pa4 tc w-50-l pa1-ns tl-ns">
+    <h1 class="f2 tc">I write blog posts.</h1>
     {{ $blogPages := where .Site.RegularPages "Section" "in" (slice "posts") }}
     <ol class="list pa0 ma0 flex flex-column">
       {{ range (first 4 $blogPages) }}
-      <li class="pa4 bb b--black-10">
+      <li class="pa4 bb b--black-10 pa1-ns pb4-ns bn-ns">
         <article class="flex flex-column">
           <a href="{{.URL}}" class="dib color-inherit dim link">
-            <h2 class="f3 fw5 lh-title mv2 f2-l fw4-l mid-gray">{{ .Title }}</h2>
+            <h2 class="f3 fw5 lh-title mv2 mt0-ns">{{ .Title }}</h2>
           </a>
-          <div class="f5 lh-copy nested-copy-line-height nested-links f4-l">
+          <div class="f5 lh-copy nested-copy-line-height nested-links">
             {{ .Summary }}
           </div>
         </article>
