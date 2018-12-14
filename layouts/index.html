@@ -1,14 +1,10 @@
-{{ define "header"}}
-<!-- empty -->
-{{ end }}
-
 {{ define "main" }}
 
-<section class="pa4 tc vh-100 flex flex-column items-center flex-row-l h5-l mt5-l mb4-l">
-  <div class="w-50-l tr-l mr4-l">
+<section class="pa4 tc vh-100 flex flex-column items-center pa1-m flex-row-ns h-100-ns mt4-ns">
+  <div class="w-40-ns tr-ns mr4-ns">
     <img src="/raven.png" alt="Raven" class="br-100 h5 w5">
   </div>
-  <div class="w-50-l tl-l">
+  <div class="w-40-ns tl-ns">
     <h1 class="f1">Hi there. 👋🏽 </h1>
     <h2 class="f3 fw4">My name is David Hayes. I'm a technologist living in Austin, TX.</h2>
   </div>
@@ -22,13 +18,13 @@
       {{ range $gamePages }}
       <li class="pa4 bb b--black-10">
         <article class="flex flex-column">
-          <a href="{{.URL}}" class="dib color-inherit dim link order-1 order-0-l">
-            <h2 class="f3 fw5 lh-title mv2 f2-l">{{ .Title }}</h2>
-          </a>
           <div>
             <img src="{{ .Params.Screenshot}}" alt="" class="w-100">
           </div>
-          <div class="f5 lh-copy nested-copy-line-height nested-links f4-l order-2">
+          <a href="{{.URL}}" class="dib color-inherit dim link">
+            <h2 class="f3 fw5 lh-title mv2 f2-l">{{ .Title }}</h2>
+          </a>
+          <div class="f5 lh-copy nested-copy-line-height nested-links f4-l">
             {{ .Summary }}
           </div>
         </article>

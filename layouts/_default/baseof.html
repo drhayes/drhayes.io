@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet"></link>
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
   {{ $css := resources.Get "css/site.css" }}
-  <link rel="stylesheet" href="{{ $css.Permalink }}">
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
