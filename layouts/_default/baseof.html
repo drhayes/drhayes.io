@@ -14,7 +14,7 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
 </head>
-<body>
+<body class="">
   <main class="pb7" role="main">
     {{ block "header" . }}
       {{ partial "page-header.html" . }}

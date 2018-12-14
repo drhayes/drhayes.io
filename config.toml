@@ -18,12 +18,6 @@ pygmentsStyle = "solarized-dark"
 [menu]
 
   [[menu.main]]
-    identifier = "home-link"
-    name = "drhayes.io"
-    url = "/"
-    weight = -10
-
-  [[menu.main]]
     identifier = "blog-link"
     name = "blog"
     url = "/posts"

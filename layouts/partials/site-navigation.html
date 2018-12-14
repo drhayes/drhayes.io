@@ -1,14 +1,20 @@
-<nav class="pt3 flex w-100" role="navigation">
-  <a class="link no-underline pr3" href="/" title="home page">
-    <img src="/raven.png" alt="Raven" class="mw4">
+<nav class="pt3 flex flex-row items-center" role="navigation">
+  <a href="/" class="f3 fw8 w-40 color-inherit link no-underline ttu">
+    <!-- <img src="/raven.png" alt="Raven" class="mw3 v-mid"> -->
+    <span>drhayes.io</span>
   </a>
-  <ul class="list pl0 flex flex-column flex-row-ns items-center nested-links">
+  <ul class="list flex flex-row justify-between mv0 w-60 content-end">
     {{ range .Site.Menus.main }}
-    <li class="list f4 fw4 pr3 lh-copy">
+    <li class="dn db-ns list f4 fw4 pr3 lh-copy">
       <a class="link no-underline color-inherit ttl" href="{{ .URL }}" title="{{ .Name }} page">
         {{ .Name }}
       </a>
     </li>
     {{ end }}
+    <li class="dn-ns list f4 fw4 lh-copy">
+      <a class="link no-underline color-inherit" href="/about" title="About page">
+        about
+      </a>
+    </li>
   </ul>
 </nav>
