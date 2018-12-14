@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="mh2 flex flex-column flex-row-ns">
+<div class="flex flex-column flex-row-ns mt5">
 
   {{ $section_name := "posts" }}
   {{ $posts := (slice "posts") }}
@@ -9,7 +9,7 @@
   {{ $section_count := len $section }}
 
   <div class="">
-    <h1 class="f3 f2-ns lh-title">Blog</h1>
+    <h1 class="f6 lh-title ttu tracked mv0">Blog</h1>
     {{ $n_posts := 5 }}
     <section class="">
       {{/* Range through the first $n_posts items of the section */}}
@@ -18,7 +18,7 @@
         <li class="pv2 bb b--black-05 b--none-ns">
           <article>
             <div class="ph0">
-              <h1 class="f4 fw4 lh-title">
+              <h1 class="f4 fw4 lh-title mt0">
                 <a href="{{.URL}}" class="dib color-inherit dim link">
                   {{ .Title }}
                 </a>
@@ -37,8 +37,8 @@
     </section>
   </div>
 
-  <div class="w-third-ns">
-    <h1 class="f3 f2-ns lh-title">Around the web</h1>
+  <div class="">
+    <h1 class="f6 lh-title ttu-ns tracked-ns">Around the web</h1>
 
     <ul class="list ma0 pa0 lh-copy nested-links">
       <li>
