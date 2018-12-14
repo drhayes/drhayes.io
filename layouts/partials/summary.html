@@ -1,5 +1,5 @@
-<div class="mid-gray overflow-hidden">
-  <h1 class="f3 mid-gray{{ if .Params.Date }} mb2 {{- end -}}">
+<div class="overflow-hidden">
+  <h1 class="f3{{ if .Params.Date }} mb2 {{- end -}}">
     <a href="{{ .URL }}" class="link color-inherit dim">
       {{ .Title }}
     </a>
@@ -10,7 +10,7 @@
   </time>
   {{ end }}
 
-  <div class="nested-links f5 lh-copy nested-copy-line-height">
+  <div class="nested-links f4 lh-copy nested-copy-line-height">
     {{ .Summary  }}
   </div>
 </div>
