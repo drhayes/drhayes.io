@@ -18,11 +18,17 @@ This site is made with some help from these technologies and media:
 * [Cloudflare][cloudflare] makes it fast.
 * [CircleCI][circleci] builds it when it changes.
 
+## Colophon
+
+This site is generated in [Hugo]. The site is styled using [Tachyons]. The font used is [the system font for the browser][system-fonts] you're viewing this in.
+
 ## Contact Me
 
 I can be found pretty much everywhere fine Internets are made as `drhayes` or some variation.
 
 In particular, you can email me at drhayes@gmail.com or chat me at [@drhayes on Telegram][telegram] and I might even answer.
+
+<img src="/raven.png" style="width: 50%;" class="mv3" alt="Raven">
 
 [sublime]: https://www.sublimetext.com/3
 [vsc]: https://code.visualstudio.com/
@@ -33,3 +39,5 @@ In particular, you can email me at drhayes@gmail.com or chat me at [@drhayes on 
 [cloudflare]: https://www.cloudflare.com/
 [circleci]: https://circleci.com/
 [telegram]: https://t.me/drhayes
+[tachyons]: https://tachyons.io/
+[system-fonts]: https://css-tricks.com/snippets/css/system-font-stack/

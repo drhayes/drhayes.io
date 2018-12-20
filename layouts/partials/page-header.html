@@ -1,1 +1,19 @@
-{{ partial "site-navigation.html" . }}
+<nav class="pt3 flex flex-row items-center mh3 mh0-ns" role="navigation">
+  <a href="/" class="f4 fw8 w-40 color-inherit link no-underline ttu">
+    <span>drhayes.io</span>
+  </a>
+  <ul class="list flex flex-row mv0 w-100 justify-end nested-links">
+    {{ range .Site.Menus.main }}
+    <li class="dn db-ns list f4 fw4 pr3 lh-copy">
+      <a class="link ttl" href="{{ .URL }}" title="{{ .Name }} page">
+        {{ .Name }}
+      </a>
+    </li>
+    {{ end }}
+    <li class="dn-ns list f4 fw4 lh-copy">
+      <a class="link" href="/about" title="About page">
+        about
+      </a>
+    </li>
+  </ul>
+</nav>
