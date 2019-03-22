@@ -51,7 +51,7 @@ The version I was working with is here: https://gist.github.com/drhayes/340fbc7f
 
 The basic idea is that the game AI will look relatively straightforward, lots of "make decision about how to do this" followed by "wait for it to finish".
 
-The scripts would be loaded from disk and passed to the `Brain.create` function. More on that janky-looking 'loadString(string.dump(f))' business below.
+The scripts would be loaded from disk and passed to the `Brain.create` function. More on that janky-looking `loadString(string.dump(f))` business below.
 
 I thought to myself, *How great this'll be! I can write the game AI as normal Lua programs without having to muck around with all those weird data structures that are in state machines and stuff.*
 

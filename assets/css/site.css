@@ -10,8 +10,6 @@ a {
 
 code {
   font-family: "Fira Mono", monospace;
-  background-color: #f0f0f0;
-  /* font-size: 80%; */
 }
 
 .highlight code {
@@ -27,8 +25,12 @@ main p:first-child {
 }
 
 .highlight pre {
-  /* width: 60rem; */
   font-size: 80%;
   overflow: auto;
   padding: 0.5rem;
 }
+
+.highlight pre code {
+  line-height: 1.4;
+}
+
