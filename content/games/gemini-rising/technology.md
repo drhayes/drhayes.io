@@ -26,6 +26,7 @@ I always want to know what tools were used to make the games that I play, so I t
   * [baton][]
 * [Sublime Text 3][sublime]
 * [Visual Studio Code][vsc]
+* [vim][]
 * [Aseprite][]
 * [cfxr][]
 * [Ocean Audio][ocean]
@@ -62,6 +63,7 @@ My toolchain consists of Git, a `Makefile`, and the outputs of lots of those pro
 [baton]: https://github.com/tesselode/baton
 [sublime]: https://www.sublimetext.com/3
 [vsc]: https://code.visualstudio.com/
+[vim]: https://www.vim.org/
 [aseprite]: https://www.aseprite.org/
 [cfxr]: https://github.com/nevyn/cfxr
 [ocean]: https://www.ocenaudio.com/en/whatis
