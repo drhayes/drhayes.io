@@ -97,11 +97,23 @@ Turns out it doesn't go so well.
 
 Looking at this code now makes me cringe. There are so many lessons to be learned here that I hadn't learned yet. I was so busy trying to get the animations and pathing to work that I wasn't handling cases like *Did I just get shot and need to play my hurt animation?* and *Am I actually dead?*.
 
-I wanted my game agents to be responsive to outside stimuli, which meant that after every `wait*` call I'd have to check if the sprite was dead. Or, if it died during the `wait*` calls I'd have to... what, exactly? I never figured it out with this method.
+I thought what I wanted was imperative, synchronous-looking code for my AI routines. I thought writing the AI for this game would be simpler that way. But it's not; I don't think an imperative solution to my event-based problem was going to work.
 
-I didn't realize it at the time, but my `Brain`s were doing too much. If you look at the libraries that are getting exported into the environments that my `Brain`s use, I was planning on making the AI portion of my entities run the animations, the sound, and the physics. That's a lot of responsibility! This mistake would come back to haunt me.
+I wanted my game entities to be responsive to outside stimuli, which meant that after every `wait*` call I'd have to check if the sprite was dead. Or, if it died during the `wait*` calls I'd have to... what, exactly? I never figured it out with this method because I knew the end-result would be a tangled mess of repetition and a bad representation of what I really wanted the entities to do.
 
-In addition to all that, there were even bigger problems!
+Imagine after every wait a multi-line `if` statement about what to do if my entity had died. Or what to set the animation to if it had been hurt during one of those `wait`s. Now repeat it after every wait. For this simple example it's not so bad. For something with more complex behavior such as a patrolling guard that chases you from platform to platform before giving up and returning to trigger an alarm panel it could get truly gross.
+
+On top of that, the `Brain`s are doing too much. This code is not only making decisions in response to what the player is doing, it is also managing the animations, playing sounds, adjusting physics. If I have multiple strategies for each enemy type (one that patrols, one that stands guard, one that investigates noises) then each one of those `Brain`s will have to duplicate the logic of how to handle the animations, sound, and physics.
+
+By interleaving all those game system decisions with the entity-level decisions, I was obscuring the unique value of the brain as well, making it less self-documenting. I would argue that the most important line out of that prior script is this one:
+
+```lua
+if sprite.y < player.y and distance < 200 then
+```
+
+Every other line in that script obscures the true *behavior* of this entity's brain: if the player is below me and less than 200 distance away, swoop down and get them.
+
+But those are just stylistic problems. I haven't gotten to the big bug yet.
 
 ## In Which I Make Things Too Complicated
 
@@ -139,11 +151,15 @@ end
 
 Note to any programmers out there: if the solution to your problem is to dump the function as a string and then, basically, `eval` it back into your environment... you might be on the wrong path.
 
-It was around this time that I abandoned this approach.
+When I touched on the possible code duplication in the last section, one could argue that the common behaviors for any particular `Brain` could be refactored out into a common script that was then included in every `Brain` that needed it. But, with `setfenv`, how would I do that? I'd have to pass the "common" scripts into the environment that I was passing into my script. That "common" script area now becomes a kind of kitchen sink of code that applies to several different `Brain`s, an organizational mess -- all to solve a problem I'm imposing on myself because I was fascinated with isolating the scripts' environments. Not a good move.
+
+If I were truly interested in making my game use a plugin architecture then I would revisit these issues. `setfenv` is not to blame here; *I* am, for cursing the limitations of a tool that solves a problem that I created myself. Once I unpacked all of that, I abandoned this approach.
 
 # Finale
 
 I don't want to throw the baby out with the bathwater. Coroutines are very useful constructs. There are parts of my game today that still use them for straightforward timing that doesn't need to react to any outside events. I coordinate my coroutines these days using the excellent [knife.convoke][convoke] library.
+
+Coroutines for my game AI, though, are the wrong approach. They are iterative where I need something more event-based. My initial foray, at least, wasn't modular enough to get me a lot of bang for my buck.
 
 `setfenv` is not a solution to a problem I have. Simple as that.
 
