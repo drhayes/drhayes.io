@@ -5,12 +5,12 @@
     </a>
   </h1>
   {{ if .Params.Date }}
-  <time class="dib silver mb3" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  <time class="f5 dib silver mb3" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
     {{ dateFormat "2006.01.02" .Date }}
   </time>
   {{ end }}
 
-  <div class="nested-links f4 lh-copy nested-copy-line-height">
+  <div class="nested-links f5 lh-copy nested-copy-line-height">
     {{ .Summary  }}
   </div>
 </div>
