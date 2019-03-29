@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="flex flex-column flex-row-ns mt4 mh3 mh0-ns">
+<div class="mt4 mh3 mh0-ns">
 
   {{ $section_name := "posts" }}
   {{ $posts := (slice "posts") }}
@@ -8,24 +8,24 @@
   {{/* Check to see if the section is defined for ranging through it */}}
   {{ $section_count := len $section }}
 
-  <div class="">
+  <div>
     <h1 class="f6 lh-title ttu tracked mv0">Blog</h1>
     {{ $n_posts := 5 }}
     <section class="">
       {{/* Range through the first $n_posts items of the section */}}
       <ol class="list ma0 pa0">
         {{ range (first $n_posts $section) }}
-        <li class="pv2 bb b--black-05 b--none-ns">
+        <li class="pb3">
           <article>
             <div class="ph0">
-              <h1 class="f3 fw6 lh-title mt0">
+              <h1 class="f4 fw6 lh-title">
                 <a href="{{.URL}}" class="dib color-inherit dim link">
                   {{ .Title }}
                 </a>
+                <time class="f5 fw4 dib silver" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                  {{ dateFormat "2006.01.02" .Date }}
+                </time>
               </h1>
-              <time class="f5 dib silver" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                {{ dateFormat "2006.01.02" .Date }}
-              </time>
               <div class="f5 lh-copy measure-wide nested-copy-line-height nested-links">
                 {{ .Summary }}
               </div>
@@ -38,7 +38,7 @@
   </div>
 
   <div class="">
-    <h1 class="f6 lh-title ttu-ns tracked-ns">Around the web</h1>
+    <h1 class="f6 lh-title ttu tracked">Around the web</h1>
 
     <ul class="list ma0 pa0 lh-copy nested-links">
       <li>
