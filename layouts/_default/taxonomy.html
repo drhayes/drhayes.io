@@ -1,15 +1,13 @@
 {{ define "main" }}
-<div class="">
-  <div class="f5 lh-copy nested-copy-line-height">
-    <h1 class="f2">Pages tagged “{{ .Title }}”</h1>
-  </div>
+<div class="mt4 mh3 mh0-ns">
+  <h1 class="f6 lh-title ttu tracked mv0">Pages tagged “{{ .Title }}”</h1>
 
-  <section class="">
+  <ol class="list mh0 pa0">
     {{ range  .Pages }}
-    <div class="relative mb4 bg-white">
+    <li class="mb4">
       {{ partial "summary.html" . }}
-    </div>
+    </li>
     {{ end }}
-  </section>
+  </ol>
 </div>
 {{ end }}
