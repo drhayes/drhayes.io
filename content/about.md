@@ -11,16 +11,17 @@ This site is made with some help from these technologies and media:
 
 * [Sublime Text 3][sublime] is where the typing happens.
 * [Visual Studio Code][vsc] is also where the typing happens.
-* [Markdown] has the content.
-* [Hugo] generates the site.
+* [vim][] is where yet more typing happens.
+* [Markdown][] has the content.
+* [Hugo][] generates the site.
 * [GitHub][github] hosts the code.
-* [Firebase] hosts the site.
+* [Firebase][] hosts the site.
 * [Cloudflare][cloudflare] makes it fast.
 * [CircleCI][circleci] builds it when it changes.
 
 ## Colophon
 
-This site is generated in [Hugo]. The site is styled using [Tachyons]. The font used is [the system font for the browser][system-fonts] you're viewing this in.
+This site is generated in [Hugo]. The site is styled using [Tachyons].
 
 ## Contact Me
 
@@ -32,6 +33,7 @@ In particular, you can email me at drhayes@gmail.com or chat me at [@drhayes on 
 
 [sublime]: https://www.sublimetext.com/3
 [vsc]: https://code.visualstudio.com/
+[vim]: https://www.vim.org/
 [markdown]: https://daringfireball.net/projects/markdown/
 [hugo]: https://gohugo.io/
 [github]: https://github.com/
@@ -40,4 +42,3 @@ In particular, you can email me at drhayes@gmail.com or chat me at [@drhayes on 
 [circleci]: https://circleci.com/
 [telegram]: https://t.me/drhayes
 [tachyons]: https://tachyons.io/
-[system-fonts]: https://css-tricks.com/snippets/css/system-font-stack/
