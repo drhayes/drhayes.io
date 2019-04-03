@@ -5,6 +5,7 @@ menu:
     weight: 20
 tags:
   - blaster
+url: /games/blaster
 ---
 
 ![Neato screenshot of game](/games/blaster/blaster-screenshot.png "Screenshot of Blaster")

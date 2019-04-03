@@ -42,5 +42,5 @@ Here are the posts that are ready.
    1. [Lua Scripting][luascripting]
 
 
-[gr]: {{< ref "/games/gemini-rising" >}}
-[luascripting]: {{< ref "/gemini-rising-ai-lua-scripting.md" >}}
+[gr]: {{< ref "gemini-rising" >}}
+[luascripting]: {{< ref "gemini-rising-ai-lua-scripting.md" >}}

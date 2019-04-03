@@ -1,12 +1,23 @@
 {{ define "main" }}
 <article class="mh3 mh0-ns">
+
   <header class="mb4">
     <h1 class="f2 mb1 lh-title tracked-tight">
       {{ .Title }}
     </h1>
+
+    {{ if .Params.tags }}
+    <div class="f5 silver lh-title">
+      Tags:
+      {{ partial "tags.html" . }}
+    </div>
+    {{ end }}
+
   </header>
+
   <main class="nested-copy-line-height f5 nested-links nested-img measure">
     {{ .Content }}
   </main>
+
 </article>
 {{ end }}
