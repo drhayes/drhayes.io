@@ -13,6 +13,11 @@ code {
 
 .highlight code {
   background-color: inherit;
+  font-size: .9rem;
+}
+
+.highlight pre code {
+  line-height: 1.5 !important;
 }
 
 .dotted-list li+li::before {
