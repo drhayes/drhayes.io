@@ -2,9 +2,9 @@
 title: Gemini Rising AI - Lua Scripting
 date: 2019-03-22T11:10:26-05:00
 tags:
-  - gemini-rising
-  - ai
-  - gemini-rising-ai
+  - Gemini Rising
+  - AI
+  - Gemini Rising AI
   - setfenv
   - coroutines
 ---

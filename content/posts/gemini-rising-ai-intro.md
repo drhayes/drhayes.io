@@ -2,9 +2,9 @@
 title: Gemini Rising AI - Introduction
 date: 2019-03-21T16:10:51-05:00
 tags:
-  - gemini-rising
-  - ai
-  - gemini-rising-ai
+  - Gemini Rising
+  - AI
+  - Gemini Rising AI
 ---
 
 When I went looking for articles about game AI that went beyond the most basic level I had a hard time finding any. Most articles were more interested in defining one basic concept and providing an easy, "Hello World" example than diving deep into solving real problems in a real game.

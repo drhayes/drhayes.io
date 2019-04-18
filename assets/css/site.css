@@ -38,3 +38,11 @@ main p:first-child {
   line-height: 1.4;
 }
 
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left-style: solid;
+  border-width: 0.25rem;
+  border-color: steelblue;
+  color: #666;
+}
