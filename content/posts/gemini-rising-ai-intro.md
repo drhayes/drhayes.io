@@ -17,14 +17,12 @@ I'm going to write a series of posts about my experiences crafting the AI for my
 
 # Overview
 
-Here are the solutions I tried, in order:
+Here are the solutions I tried, in roughly chronological order:
 
    * Lua scripting with coroutines
    * Behavior trees
    * Goal-oriented action planning
    * Behavior trees (but better this time)
-
-That's roughly in chronological order.
 
 # Goals
 
@@ -40,7 +38,9 @@ My goals shifted over time, but here is the list in priority order:
 Here are the posts that are ready.
 
    1. [Lua Scripting][luascripting]
+   2. [Behavior Trees][bt]
 
 
 [gr]: {{< ref "gemini-rising" >}}
 [luascripting]: {{< ref "gemini-rising-ai-lua-scripting.md" >}}
+[bt]: {{< ref "gemini-rising-ai-behavior-trees.md" >}}

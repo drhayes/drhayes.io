@@ -6,7 +6,6 @@ tags:
   - AI
   - Gemini Rising AI
   - behavior trees
-draft: true
 ---
 
 This post is the second in a [series I'm writing about scripting the AI in my game, Gemini Rising][grai]. This one is about behavior trees.

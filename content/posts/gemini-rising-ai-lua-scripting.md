@@ -165,7 +165,7 @@ Coroutines for my game AI, though, are the wrong approach. They are iterative wh
 
 In hindsight, some of these were newbie Lua programmer mistakes. I also hadn't settled on a larger architecture for my game yet, so there were lots of encapsulation violations flying around in my codebase that I knew I'd have to fix later.
 
-The next post will cover my initial adventure into behavior trees.
+The [next post][bts] will cover my initial adventure into behavior trees.
 
 [grai]: {{< ref "gemini-rising-ai-intro.md" >}}
 [gr]: https://drhayes.io/games/gemini-rising
@@ -173,3 +173,4 @@ The next post will cover my initial adventure into behavior trees.
 [coroutines]: https://en.wikipedia.org/wiki/Coroutine
 [setfenv]: https://www.lua.org/pil/14.3.html
 [convoke]: https://github.com/airstruck/knife/blob/master/readme/convoke.md
+[bts]: {{<ref "gemini-rising-ai-behavior-trees.md" >}}
