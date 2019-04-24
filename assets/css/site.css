@@ -9,6 +9,8 @@ a {
 
 code {
   font-family: "Fira Mono", monospace;
+  color: #000;
+  background-color: #eee;
 }
 
 .highlight code {
