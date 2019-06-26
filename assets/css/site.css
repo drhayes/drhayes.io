@@ -10,7 +10,8 @@ a {
 code {
   font-family: "Fira Mono", monospace;
   color: #000;
-  background-color: #eee;
+  background-color: #f0f3f3;
+  padding: 0.5rem;
 }
 
 .highlight code {
