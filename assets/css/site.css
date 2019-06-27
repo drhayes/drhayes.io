@@ -1,3 +1,7 @@
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: Helvetica;
   color: #333;
@@ -48,4 +52,8 @@ blockquote {
   border-width: 0.25rem;
   border-color: steelblue;
   color: #666;
+}
+
+article main p {
+  line-height: 1.715;
 }
