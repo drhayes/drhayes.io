@@ -61,3 +61,13 @@ blockquote {
 article main p {
   line-height: 1.715;
 }
+
+.hamnav {
+  height: 0;
+  overflow: hidden;
+  transition: height .5s ease;
+}
+
+#hamburger:checked ~ .hamnav {
+  height: 120px;
+}

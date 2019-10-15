@@ -1,21 +1,21 @@
-<nav class="pt3 flex flex-row items-center mh3 mh0-ns" role="navigation">
-  <ul class="list flex f5 pa0">
-    <li class="pr3">
-      <a href="/" class="fw6 color-inherit link no-underline">
-        <span>drhayes.io</span>
-      </a>
-    </li>
+<nav class="dt w-100 border-box pa3">
+  <a href="/" class="dtc v-mid w-25">
+    <img src="/raven.png" class="w3" alt="drhayes.io">
+  </a>
+  <div class="dtc w-75 tr v-mid">
+    <label for="hamburger" class="dib dn-ns">Menu</label>
+    <input type="checkbox" class="dn" id="hamburger">
+    <ul class="list hamnav pa0 ma0">
+      {{ range .Site.Menus.main }}
+      <li class="lh-copy">
+        <a class="link ttl" href="{{ .URL }}" title="{{ .Name }} page">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
     {{ range .Site.Menus.main }}
-    <li class="dn db-ns list pr3">
-      <a class="link ttl" href="{{ .URL }}" title="{{ .Name }} page">
-        {{ .Name }}
-      </a>
-    </li>
+    <a class="link ttl dn dib-ns pl3" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
     {{ end }}
-    <li>
-      <a href="/about/" class="link dn-ns" title="About page">
-        about
-      </a>
-    </li>
-  </ul>
+  </div>
 </nav>
