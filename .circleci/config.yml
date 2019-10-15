@@ -20,6 +20,10 @@ jobs:
           name: Run hugo
           command: HUGO_ENV=production ./hugo -v
 
+      - run:
+          name: Sanity check
+          command: tree public/ && cat public/css/site.css || true
+
       - persist_to_workspace:
           root: ~/
           paths:
