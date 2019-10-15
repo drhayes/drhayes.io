@@ -9,7 +9,7 @@
       <img src="{{ $menuIcon.Permalink }}" class="w2" alt="menu">
     </label>
     <input type="checkbox" class="dn" id="hamburger">
-    <ul class="list hamnav pa0 ma0">
+    <ul class="list hamnav pa0 ma0 dn-ns">
       {{ range .Site.Menus.main }}
       <li class="lh-copy">
         <a class="link ttl" href="{{ .URL }}" title="{{ .Name }} page">
