@@ -20,10 +20,6 @@ jobs:
           name: Run hugo
           command: HUGO_ENV=production ./hugo -v
 
-      - run:
-          name: NPM Install Functions
-          command: cd functions && npm install && cd ..
-
       - persist_to_workspace:
           root: ~/
           paths:
