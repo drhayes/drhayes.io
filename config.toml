@@ -19,7 +19,7 @@ pygmentsStyle = "manni"
 
   [[menu.main]]
     identifier = "blog-link"
-    name = "blog"
+    name = "Blog"
     url = "/posts"
     weight = -5
 

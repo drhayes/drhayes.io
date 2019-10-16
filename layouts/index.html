@@ -1,11 +1,20 @@
 {{ define "header"}}
-<header class="tc pv4 h-card vcard">
+<header class="tc pt4 h-card vcard">
   {{ $logo := resources.Get "raven.png" }}
   <a href="https://drhayes.io" class="u-url url">
     <img src="{{ $logo.RelPermalink }}" alt="drhayes.io raven logo" class="w4 h4 br-100 pa1 u-photo">
   </a>
   <h1 class="f3 lh-title mb1 tracked-tight p-name fn">David Hayes</h1>
-  <a href="mailto:hi@drhayes.io" class="f5 tracked link u-email email">hi@drhayes.io</a>
+  <a href="mailto:hi@drhayes.io" class="f5 black link u-email email">hi@drhayes.io</a>
+  <nav class="db mv4">
+    <ul class="list pa0 ma0 nowrap overflow-x-auto">
+      {{ range .Site.Menus.main }}
+      <li class="dib ph2">
+        <a class="f5 gray dim link" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
 </header>
 {{ end }}
 
@@ -20,7 +29,7 @@
 {{ $n_posts := 5 }}
 
 
-<section class="mh1">
+<section class="">
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
     <article class="blog-article pa3 mh2 mb2 grow br2">
