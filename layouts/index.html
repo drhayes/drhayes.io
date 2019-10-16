@@ -1,82 +1,37 @@
+{{ define "header"}}
+<header class="tc pv4 h-card vcard">
+  {{ $logo := resources.Get "raven.png" }}
+  <a href="https://drhayes.io" class="u-url url">
+    <img src="{{ $logo.RelPermalink }}" alt="drhayes.io raven logo" class="w4 h4 br-100 pa1 u-photo">
+  </a>
+  <h1 class="f3 lh-title mb1 tracked-tight p-name fn">David Hayes</h1>
+  <a href="mailto:yo@drhayes.io" class="f5 tracked link u-email email">yo@drhayes.io</a>
+</header>
+{{ end }}
+
 {{ define "main" }}
-<div class="mt4 mh3 mh0-ns">
 
-  {{ $section_name := "posts" }}
-  {{ $posts := (slice "posts") }}
-  {{/* Create a variable with that section to use in multiple places. */}}
-  {{ $section := where .Site.RegularPages "Section" "in" $posts }}
-  {{/* Check to see if the section is defined for ranging through it */}}
-  {{ $section_count := len $section }}
+{{ $section_name := "posts" }}
+{{ $posts := (slice "posts") }}
+{{/* Create a variable with that section to use in multiple places. */}}
+{{ $section := where .Site.RegularPages "Section" "in" $posts }}
+{{/* Check to see if the section is defined for ranging through it */}}
+{{ $section_count := len $section }}
+{{ $n_posts := 5 }}
 
-  <div>
-    <h1 class="f6 lh-title ttu tracked mv0">Blog</h1>
-    {{ $n_posts := 5 }}
-    <section class="">
-      {{/* Range through the first $n_posts items of the section */}}
-      <ol class="list ma0 pa0">
-        {{ range (first $n_posts $section) }}
-        <li class="mb4">
-          <article>
-            <div class="ph0">
-              <h1 class="f4 fw6 lh-title">
-                <a href="{{.URL}}" class="dib color-inherit dim link">
-                  {{ .Title }}
-                </a>
-                <time class="f5 fw4 dib silver" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                  {{ dateFormat "2006.01.02" .Date }}
-                </time>
-              </h1>
-              <div class="f5 lh-copy measure-wide">
-                {{ .Summary }}
-              </div>
-            </div>
-          </article>
-        </li>
-        {{ end }}
-      </ol>
-    </section>
-  </div>
 
-  <div class="">
-    <h1 class="f6 lh-title ttu tracked">Around the web</h1>
+<section class="">
+  {{ $first_post := first 1 $section }}
+  {{ range $first_post }}
+    <article class="tc">
+      <h1 class="f4">{{ .Title }}</h1>
+    </article>
+  {{ end }}
 
-    <ul class="list ma0 pa0 lh-copy">
-      <li>
-        <a rel="me" href="https://mastodon.technology/@drhayes" class="color-inherit dim link">drhayes@Mastodon</a>
-      </li>
-      <li>
-        <a rel="me" href="https://keybase.io/drhayes" class="color-inherit dim link">Keybase</a>
-      </li>
-      <li>
-        <a rel="me" href="https://github.com/drhayes" class="color-inherit dim link">GitHub</a>
-      </li>
-      <li>
-        <a rel="me" href="https://drhayes.tumblr.com" class="color-inherit dim link">Tumblr</a>
-      </li>
-      <li>
-        <a rel="me" href="https://www.goodreads.com/drhayes" class="color-inherit dim link">Goodreads</a>
-      </li>
-    </ul>
-    {{ $logo := resources.Get "raven.png" }}
-    <img src="{{ $logo.RelPermalink }}" alt="drhayes.io raven logo" class="mw3 v-mid mt3">
-  </div>
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "David Hayes",
-      "url": "https://drhayes.io",
-      "sameAs": [
-      "https://plus.google.com/u/0/102508315195752885470",
-      "https://drhayes.tumblr.com/",
-      "https://soundcloud.com/drhayes",
-      "https://mastodon.technology/@drhayes",
-      "https://www.linkedin.com/in/drhayes/",
-      "https://mastodon.technology/@drhayes"
-      ]
-    }
-  </script>
-
-</div>
+  {{ range (first $n_posts (after 1 $section)) }}
+    <article class="tc">
+      <h1 class="f4">{{ .Title }}</h1>
+    </article>
+  {{ end }}
+</section>
 {{ end }}
