@@ -4,7 +4,7 @@
 <ol class="pl0 ml4 mv0">
   {{ range sort $articles ".Date" }}
   <li>
-    <a href="{{ .Permalink }}" class="link">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a>
   </li>
   {{ end }}
 </ol>

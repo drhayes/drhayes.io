@@ -2,11 +2,11 @@
 {{ $menuIcon := resources.Get "hamburger.svg" }}
 <nav class="dt w-100 border-box pa3">
   <a href="/" class="dtc v-mid w-25">
-    <img src="{{ $logo.Permalink }}" class="w3" alt="drhayes.io">
+    <img src="{{ $logo.RelPermalink }}" class="w3" alt="drhayes.io">
   </a>
   <div class="dtc w-75 tr v-mid">
     <label for="hamburger" class="dib dn-ns">
-      <img src="{{ $menuIcon.Permalink }}" class="w2" alt="menu">
+      <img src="{{ $menuIcon.RelPermalink }}" class="w2" alt="menu">
     </label>
     <input type="checkbox" class="dn" id="hamburger">
     <ul class="list hamnav pa0 ma0 dn-ns">
