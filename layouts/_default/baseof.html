@@ -5,11 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} &#183; {{ end }}drhayes.io{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet"></link>
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet"></link>
   {{ $css := resources.Get "css/site.css" }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}?breakit">
-
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   <!-- Favicon stuff -->
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -29,7 +28,6 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="google-site-verification" content="62OprotnkXjdlu5isXeGX010S3smwpIK4aHKez_WBJU" />
-
   {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
