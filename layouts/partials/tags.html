@@ -1,7 +1,7 @@
-<ul class="list dotted-list ma0 pa0 dib">
+<ul class="list mt3 mb0 pa0 flex flex-wrap">
     {{ range .Params.tags }}
-     <li class="list dib ma0 pa0">
-       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="link color-inherit no-underline dim">
+     <li class="list mr2 mb3">
+       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="f7 black br-pill bg-light-gray ph3 pv2 ttl tracked-tight">
          {{- . -}}
        </a>
      </li>

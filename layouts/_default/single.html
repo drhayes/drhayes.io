@@ -1,38 +1,34 @@
 {{ define "main" }}
-  {{ $section := .Site.GetPage "section" .Section }}
-  <article class="flex flex-wrap justify-between mh3 mh0-ns">
+{{ $section := .Site.GetPage "section" .Section }}
+<article class="mh2 mw8 center-ns flex flex-column flex-row-ns flex-wrap">
 
-    <header class="w-100 mb4">
-      <h1 class="f2 mb1 lh-title tracked-tight">
-        {{- .Title -}}
-      </h1>
+  <header class="w-100 mb2">
+    <h1 class="f2 mb1 lh-title tracked-tight">
+      {{- .Title -}}
+    </h1>
 
-      {{ if .Params.Date }}
-      <div class="f5 silver lh-title">
-        Published:
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-          {{- .Date.Format "2006.01.02" -}}
-        </time>
-      </div>
-      {{ end }}
+    {{ if .Params.Date }}
+    <div class="f5 silver lh-title">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        {{- .Date.Format "2006.01.02" -}}
+      </time>
+    </div>
+    {{ end }}
 
-      {{ if .Params.tags }}
-      <div class="f5 silver lh-title">
-        Tags:
-        {{ partial "tags.html" . }}
-      </div>
-      {{ end }}
+    {{ if .Params.tags }}
+    {{ partial "tags.html" . }}
+    {{ end }}
 
-    </header>
+  </header>
 
-    <main class="lh-copy f5 pr4-l w-two-thirds-l w-100">
-        {{- .Content -}}
-        {{- partial "comments.html" . -}}
-    </main>
+  <main class="w-100 lh-copy measure f5 f4-ns mr3-ns">
+    {{- .Content -}}
+    {{- partial "comments.html" . -}}
+  </main>
 
-    <aside class="w-30-l">
-      {{- partial "menu-contextual.html" . -}}
-    </aside>
+  <aside class="w-30-l order-0">
+    {{- partial "menu-contextual.html" . -}}
+  </aside>
 
-  </article>
+</article>
 {{ end }}
