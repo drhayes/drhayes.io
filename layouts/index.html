@@ -5,7 +5,7 @@
     <img src="{{ $logo.RelPermalink }}" alt="drhayes.io raven logo" class="w4 h4 br-100 pa1 u-photo">
   </a>
   <h1 class="f3 lh-title mb1 tracked-tight p-name fn">David Hayes</h1>
-  <a href="mailto:yo@drhayes.io" class="f5 tracked link u-email email">yo@drhayes.io</a>
+  <a href="mailto:hi@drhayes.io" class="f5 tracked link u-email email">hi@drhayes.io</a>
 </header>
 {{ end }}
 
@@ -20,11 +20,16 @@
 {{ $n_posts := 5 }}
 
 
-<section class="">
+<section class="mh1">
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
-    <article class="tc">
-      <h1 class="f4">{{ .Title }}</h1>
+    <article class="blog-article pv3 mh1 ph1 grow br1">
+      <h1 class="f4 tc">
+        <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
+      </h1>
+      <p class="f5 lh-copy">
+        <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
+      </p>
     </article>
   {{ end }}
 
