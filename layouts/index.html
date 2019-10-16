@@ -23,19 +23,26 @@
 <section class="mh1">
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
-    <article class="blog-article pv3 mh1 ph1 grow br1">
-      <h1 class="f4 tc">
+    <article class="blog-article pa3 mh2 mb2 grow br2">
+      <h1 class="f4 tc lh-title">
         <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
       </h1>
-      <p class="f5 lh-copy">
+      <p class="f5 tj lh-copy">
         <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
       </p>
+      <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
     </article>
   {{ end }}
 
   {{ range (first $n_posts (after 1 $section)) }}
-    <article class="tc">
-      <h1 class="f4">{{ .Title }}</h1>
+    <article class="blog-article pa3 mh2 mb2 grow br2">
+      <h1 class="f4 tc lh-title">
+        <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
+      </h1>
+      <p class="f5 tj lh-copy">
+        <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
+      </p>
+      <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
     </article>
   {{ end }}
 </section>
