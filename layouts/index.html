@@ -1,5 +1,5 @@
 {{ define "header"}}
-<header class="tc pt4 h-card vcard">
+<header class="tc pt4 mw9 center h-card vcard">
   {{ $logo := resources.Get "raven.png" }}
   <a href="https://drhayes.io" class="u-url url">
     <img src="{{ $logo.RelPermalink }}" alt="drhayes.io raven logo" class="w4 h4 br-100 pa1 u-photo">
@@ -29,10 +29,10 @@
 {{ $n_posts := 5 }}
 
 
-<section class="">
+<section class="mw9 center">
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
-    <article class="blog-article pa3 mh2 mb2 grow br2">
+    <article class="blog-article pa3 mh2 mb2 grow br2 mr1-ns">
       <h1 class="f4 tc lh-title">
         <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
       </h1>
@@ -43,16 +43,20 @@
     </article>
   {{ end }}
 
+  <div class="flex flex-column flex-row-ns flex-wrap">
   {{ range (first $n_posts (after 1 $section)) }}
-    <article class="blog-article pa3 mh2 mb2 grow br2">
-      <h1 class="f4 tc lh-title">
-        <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
-      </h1>
-      <p class="f5 tj lh-copy">
+    <div class="w-50-ns mb2">
+      <article class="blog-article border-box pa3 mh2 h-100 grow br2 mr1-ns">
+        <h1 class="f4 tc lh-title">
+          <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
+        </h1>
+        <p class="f5 tj lh-copy">
         <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
-      </p>
-      <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
-    </article>
+        </p>
+        <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
+      </article>
+    </div>
   {{ end }}
+  </div>
 </section>
 {{ end }}
