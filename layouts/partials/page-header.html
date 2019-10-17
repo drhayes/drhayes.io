@@ -10,7 +10,7 @@
       <img src="{{ $menuIcon.RelPermalink }}" class="w2" alt="menu">
     </label>
     {{ range .Site.Menus.main }}
-    <a class="link ttl dn dib-ns pl3" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
+    <a class="link dn dib-ns pl3" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
     {{ end }}
   </div>
 
@@ -19,7 +19,7 @@
 <ul class="list hamnav pa0 ma2 dn-ns tc ba b--light-gray">
   {{ range .Site.Menus.main }}
   <li class="lh-copy">
-    <a class="link ttl" href="{{ .URL }}" title="{{ .Name }} page">
+    <a class="link" href="{{ .URL }}" title="{{ .Name }} page">
       {{ .Name }}
     </a>
   </li>

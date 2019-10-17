@@ -29,8 +29,6 @@ I can be found pretty much everywhere fine Internets are made as `drhayes` or so
 
 In particular, you can email me at drhayes@gmail.com or chat me at [@drhayes on Telegram][telegram] and I might even answer.
 
-<img src="/raven.png" style="width: 50%;" class="mv3" alt="Raven">
-
 [sublime]: https://www.sublimetext.com/3
 [vsc]: https://code.visualstudio.com/
 [vim]: https://www.vim.org/

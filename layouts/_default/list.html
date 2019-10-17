@@ -2,12 +2,12 @@
 <article class="">
 
   {{ if .Content }}
-  <main class="ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+  <main class="">
     {{- .Content -}}
   </main>
   {{ end }}
 
-  <div class="mw8 center">
+  <div class="mh2">
     <section class="measure">
       {{ range .Paginator.Pages }}
       <div class="relative w-100 mb4">
