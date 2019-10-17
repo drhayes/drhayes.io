@@ -15,7 +15,7 @@ I'd like to change that for future programmers like me looking for guidance.
 
 I'm going to write a series of posts about my experiences crafting the AI for my game, [Gemini Rising][gr]. Since I was learning as I go I'm sure there are going to be mistakes; I'd love to hear about them!
 
-# Overview
+## Overview
 
 Here are the solutions I tried, in roughly chronological order:
 
@@ -24,7 +24,7 @@ Here are the solutions I tried, in roughly chronological order:
    * Goal-oriented action planning
    * Behavior trees (but better this time)
 
-# Goals
+## Goals
 
 My goals shifted over time, but here is the list in priority order:
 
@@ -33,7 +33,7 @@ My goals shifted over time, but here is the list in priority order:
    * **Be easy for me**. I'm jealous of my time as a hobbyist gamedev, so anything that required too much brainpower to adapt, use, modify, or fix was right out. I didn't need visual designers, but if I couldn't fix AI problems relatively easily then this wasn't the method for me.
    * **Be predictable**. This one was added later; I'll talk about it more when it becomes important.
 
-# The Posts
+## The Posts
 
 Here are the posts that are ready.
 

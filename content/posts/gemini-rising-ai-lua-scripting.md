@@ -13,29 +13,29 @@ This post is the first in [a series I'm writing about scripting the AI in my gam
 
 <!--more-->
 
-# Intro
+## Intro
 
 When I started this game I'd never programmed seriously in Lua before. I'd purchased the Lua book a long time ago, read it once, then never had a chance to use the language again.
 
 Until I fell in [Löve][love2d].
 
-So I set about hoovering up as much Lua content as I could. I was excited to dig into what seemed from the outside to be *the* gamedev scripting language. 
+So I set about hoovering up as much Lua content as I could. I was excited to dig into what seemed from the outside to be *the* gamedev scripting language.
 
 The first decision I made regarding my game AI was what technology to use. I decided that I would use a scripting language. The first language I considered was...well, Lua. Since I was already using a scripting language I didn't see the point in introducing another complexity into my hobby project.
 
-## Coroutines
+### Coroutines
 
 I'm not going to talk about what a coroutine is. There are [great references for coroutines][coroutines] out there.
 
 Suffice to say, the canonical example for using coroutines is for AI in video games. This models well inside the code since a video game could be said to be a cooperative multitasking endeavor. I figured I was on firm ground.
 
-## `setfenv`
+### `setfenv`
 
 Löve uses Lua 5.1, which means I have access to `setfenv`. It lets you isolate the environment that your function runs in. It's been removed from later versions of the language. That is what we in the writing business call "foreshadowing".
 
 Here are the [docs for `setfenv`][setfenv].
 
-# Scripting with `setfenv`
+## Scripting with `setfenv`
 
 I had some vague notion of organizing my game as a series of plugins. At this point, every entity in my game was an object that lived in an array of `entities` somewhere in the `game` global object. I felt like I needed some kind of overall architecture, even at this early phase. I find hard API boundaries impose rigor on my coding and make sure I don't make too many hacky messes off in the dark corners of a codebase.
 
@@ -45,7 +45,7 @@ Enter `setfenv`.
 
 Wiser heads than mine warned me not to do this. I thought I'd be fine. I was wrong.
 
-## The `Brain`
+### The `Brain`
 
 The version I was working with is here: https://gist.github.com/drhayes/340fbc7f967b35dbc462efd5f187619d
 
@@ -115,7 +115,7 @@ Every other line in that script obscures the true *behavior* of this entity's br
 
 But those are just stylistic problems. I haven't gotten to the big bug yet.
 
-## In Which I Make Things Too Complicated
+### In Which I Make Things Too Complicated
 
 Remember how I said I wanted a plugin architecture for my game? At this point, the code for the entities' AI were stored as Lua scripts somewhat separate from the codebase. Instead of getting `require`d in, they would be read from the filesystem and handed to the `Brain` when needed. This seemed like a fantastic idea at the time; I could customize what brain an entity had in the tilemap editor by writing its name as a string!
 
@@ -155,7 +155,7 @@ When I touched on the possible code duplication in the last section, one could a
 
 If I were truly interested in making my game use a plugin architecture then I would revisit these issues. `setfenv` is not to blame here; *I* am, for cursing the limitations of a tool that solves a problem that I created myself. Once I unpacked all of that, I abandoned this approach.
 
-# Finale
+## Finale
 
 I don't want to throw the baby out with the bathwater. Coroutines are very useful constructs. There are parts of my game today that still use them for straightforward timing that doesn't need to react to any outside events. I coordinate my coroutines these days using the excellent [knife.convoke][convoke] library.
 
