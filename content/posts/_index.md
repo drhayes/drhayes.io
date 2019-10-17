@@ -1,3 +1,3 @@
 ---
-title: drhayes' blog
+title: Blog
 ---

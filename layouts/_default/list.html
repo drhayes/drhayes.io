@@ -1,5 +1,9 @@
 {{ define "main" }}
-<article class="">
+<article class="mh2 mw8 center-ns">
+
+  {{ if .Title }}
+  <h1 class="f1 tc">{{ .Title }}</h1>
+  {{ end }}
 
   {{ if .Content }}
   <main class="">
@@ -7,12 +11,12 @@
   </main>
   {{ end }}
 
-  <div class="mh2">
-    <section class="measure">
+  <div class="">
+    <section class="">
       {{ range .Paginator.Pages }}
-      <div class="relative w-100 mb4">
+      <article class="relative w-100 mb4">
         {{- partial "summary.html" . -}}
-      </div>
+      </article>
       {{ end }}
     </section>
   </div>

@@ -1,9 +1,9 @@
 <div class="overflow-hidden">
-  <h1 class="f2 lh-title mb0">
+  <h2 class="f2 lh-title mb0">
     <a href="{{ .URL }}" class="link color-inherit dim">
       {{ .Title }}
     </a>
-  </h1>
+  </h2>
   {{ if .Params.Date }}
   <time class="db f5 fw4 silver" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
     {{ dateFormat "2006.01.02" .Date }}
@@ -12,4 +12,5 @@
   <div class="f5 lh-copy mt3 measure-wide">
     {{ .Summary  }}
   </div>
+  <p class="f7 tracked ttu">{{ .ReadingTime }} minute read</p>
 </div>
