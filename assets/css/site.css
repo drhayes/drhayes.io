@@ -67,10 +67,12 @@ article main p {
   height: 0;
   overflow: hidden;
   transition: height .5s ease;
+  border-width: 0;
 }
 
 #hamburger:checked ~ .hamnav {
   height: 120px;
+  border-width: 1px;
 }
 
 .blog-article {

@@ -1,25 +1,28 @@
 {{ $logo := resources.Get "raven.png" }}
 {{ $menuIcon := resources.Get "hamburger.svg" }}
-<nav class="dt w-100 border-box pv3 mw8 center-ns ph0-ns">
-  <a href="/" class="dtc v-mid w-25">
+<nav class="w-100 border-box pv3 mh2 mw8 center-ns ph0-ns flex flex-wrap items-center justify-between">
+  <a href="/" class="v-mid">
     <img src="{{ $logo.RelPermalink }}" class="br-100 w3" alt="drhayes.io">
   </a>
-  <div class="dtc w-75 tr v-mid">
+
+  <div class="tr pr3">
     <label for="hamburger" class="dib dn-ns">
       <img src="{{ $menuIcon.RelPermalink }}" class="w2" alt="menu">
     </label>
-    <input type="checkbox" class="dn" id="hamburger">
-    <ul class="list hamnav pa0 ma0 dn-ns">
-      {{ range .Site.Menus.main }}
-      <li class="lh-copy">
-        <a class="link ttl" href="{{ .URL }}" title="{{ .Name }} page">
-          {{ .Name }}
-        </a>
-      </li>
-      {{ end }}
-    </ul>
     {{ range .Site.Menus.main }}
     <a class="link ttl dn dib-ns pl3" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
     {{ end }}
   </div>
+
 </nav>
+<input type="checkbox" class="dn" id="hamburger">
+<ul class="list hamnav pa0 ma2 dn-ns tc ba b--light-gray">
+  {{ range .Site.Menus.main }}
+  <li class="lh-copy">
+    <a class="link ttl" href="{{ .URL }}" title="{{ .Name }} page">
+      {{ .Name }}
+    </a>
+  </li>
+  {{ end }}
+</ul>
+
