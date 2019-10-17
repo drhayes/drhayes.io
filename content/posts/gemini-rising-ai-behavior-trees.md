@@ -14,13 +14,13 @@ This post is the second in a [series I'm writing about scripting the AI in my ga
 
 There aren't enough resources out there that dive deeply into interesting programming topics. It's easy to find "hello world" examples, but it's harder to find meaty essays that discuss pros and cons, tradeoffs taken, long-term consequences unforeseen. These posts are my attempt to fix that.
 
-# Intro
+## Intro
 
 After [deciding that scripting the AI in straight Lua wasn't for me][lua-scripting], I cast around looking for another solution for my game's AI routines. I eventually settled on behavior trees.
 
 As of April, 2019, this is the AI solution for Gemini Rising going forward.
 
-## But What About State Machines?
+### But What About State Machines?
 
 The short answer is: the combinatorial explosion of states for any reasonably "smart" behavior violated my **be easy for me** rule of hobbyist game development.
 
@@ -47,7 +47,7 @@ That said, I did find some valuable resources along the way:
 * [Statecharts][] Having a visual editor for a state machine would be neat, and they are hierarchical. Alas, I discovered this one once I was already sold on behavior trees. Maybe next time!
 * [Game Programming Patterns: State][gppstate] This book is a fantastic reference that every hobbyist game programmer should buy.
 
-# Behavior Trees
+## Behavior Trees
 
 As is my wont, I'm not going to introduce what behavior trees are. Other authors have done much better jobs of that. [This is my favorite behavior trees intro][btree-intro].
 
@@ -63,11 +63,11 @@ The expected return values from this function should be one of `success`, `failu
 
 It doesn't get much simpler than that.
 
-# In Which I Make Things More Complicated
+## In Which I Make Things More Complicated
 
 Coders gonna code, as they say, and I regret the waffling I did while pursuing this solution and the code I committed, removed, re-wrote, tested, removed, then revamped along the way. But at least my game ended up better for it... hopefully.
 
-## To Restart Or Not To Restart?
+### To Restart Or Not To Restart?
 
 The first hurdle I ran into was a surprisingly basic one. Given that `sequence` and `selector` iterate their children, what do they do if a child returned `running` the last time the tree was ticked?
 
@@ -193,7 +193,7 @@ Suddenly nodes could operate on the memory instead. `hasTarget` could look for t
 
 It was only after I played around with goal-oriented action planning, though, that I realized I should formalize the "language" of my AIs with components and systems that represented that "language". For example, if multiple entities were trying to target the player, then there should be a `TargettingSystem` that tracked where the player was, if entities could see it, how long ago that was, etc.
 
-Thinking about my game in terms of the "verbs" of the game helped define the systems and their responsibilities. I wanted entities that could "see" the player, could "track" where they went. 
+Thinking about my game in terms of the "verbs" of the game helped define the systems and their responsibilities. I wanted entities that could "see" the player, could "track" where they went.
 
 Another great example is the `NavMeshSystem`. Rather than relying on physics to determine where an entity could walk on a platform or fly through the level, I can pre-compute these areas and store them as navigation meshes. That way, when something goes to `wanderOnPlatform` it can look up where it is in the `platform` navmesh and find the edges very rapidly and simply.
 
@@ -229,11 +229,11 @@ Here is that implementation as OOP, using `classic` as our library of choice:
 local Node = require 'core.behaviortree.node'
 
 local IsAware = Node:extend()
- 
+
 function IsAware:new(level)
   self.level = level
 end
- 
+
 function IsAware:update(entity)
   local aware = entity.awareness
   if aware.level == self.level then
@@ -331,7 +331,7 @@ The `SensesSystem` automatically targets the player if they are seen. This is pa
 
 This script also matches my requirements. It has **at-a-glance readability**, it is **predictable** as a function of player behavior, and it's actually pretty **fun** trying to dodge a pack of these things as they try to bomb you when you're playing.
 
-# Further Reading
+## Further Reading
 
 Here are the behavior tree links that helped me the most:
 
@@ -346,7 +346,7 @@ Note that the "Actions That Take Longer Than One Tick" confused the hell out of 
 
 Now I believe that the author was assuming that the root node was something like a `parallel` node. A `parallel` would still evaluate the "higher-priority" nodes.
 
-# Conclusion
+## Conclusion
 
 Behavior trees rule. Behavior trees are my goto AI scripting solution for Gemini Rising. I imagine I'm going to use them for more than just entity AI in this game as well, but that's a blog post for another time.
 

@@ -34,7 +34,7 @@
   {{ .Hugo.Generator }}
 </head>
 <body class="">
-  <main class="" role="main">
+  <div class="">
     {{ block "header" . }}
     {{ partial "page-header.html" . }}
     {{ end }}
@@ -44,6 +44,6 @@
     {{ block "footer" . }}
     {{ partial "page-footer.html" . }}
     {{ end }}
-  </main>
+  </div>
 </body>
 </html>

@@ -7,7 +7,7 @@ html,body { font-family: 'Inter', sans-serif; }
 }
 
 body {
-  font-size: 18px;
+  font-size: 16px;
   color: #333;
   background-color: whitesmoke;
 }
@@ -77,4 +77,13 @@ article main p {
 
 .blog-article {
   background-color: white;
+}
+
+main h1,h2,h3,h4,h5 {
+  margin-top: 2em;
+  margin-bottom: -.2em;
+}
+
+main h2,h3,h4,h5 {
+  border-bottom: 1px dotted #ccc;
 }
