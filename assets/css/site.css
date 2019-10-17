@@ -79,11 +79,11 @@ article main p {
   background-color: white;
 }
 
-main h1,h2,h3,h4,h5 {
+article main h1, article main h2, article main h3, article main h4, article main h5 {
   margin-top: 2em;
   margin-bottom: -.2em;
 }
 
-main h2,h3,h4,h5 {
+article main h2,article main h3, article main h4, article main h5 {
   border-bottom: 1px dotted #ccc;
 }
