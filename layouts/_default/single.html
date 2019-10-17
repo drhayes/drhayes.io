@@ -2,13 +2,13 @@
 {{ $section := .Site.GetPage "section" .Section }}
 <article class="mh2 mw8 center-ns flex flex-column flex-row-ns flex-wrap">
 
-  <header class="w-100 mb2">
-    <h1 class="f2 mb1 lh-title tracked-tight">
+  <header class="w-100 mb4">
+    <h1 class="f2 f-headline-ns lh-solid mb1 lh-title tracked-tight tc">
       {{- .Title -}}
     </h1>
 
     {{ if .Params.Date }}
-    <div class="f5 silver lh-title">
+    <div class="f5 silver lh-title tc">
       <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{- .Date.Format "2006.01.02" -}}
       </time>
