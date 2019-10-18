@@ -33,14 +33,21 @@
 <section class="mw9 center">
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
-    <article class="blog-article pa3 mh2 mb2 br2 mr1-ns">
-      <h1 class="f4 tc lh-title">
-        <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
-      </h1>
-      <p class="f5 tj lh-copy">
-        <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
-      </p>
-      <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
+    <article class="blog-article pa3 mh2 mb2 br2 mr1-ns flex justify-center">
+      {{ with .Resources.Match "images/featured*" }}
+      <div>
+        <img src="{{ .RelPermalink  }}" alt="{{ .Title }}">
+      </div>
+      {{ end }}
+      <div>
+        <h1 class="f4 tc lh-title">
+          <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
+        </h1>
+        <p class="f5 tj lh-copy">
+          <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
+        </p>
+        <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
+      </div>
     </article>
   {{ end }}
 
