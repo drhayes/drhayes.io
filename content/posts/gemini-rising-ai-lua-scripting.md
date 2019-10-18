@@ -173,4 +173,4 @@ The [next post][bts] will cover my initial adventure into behavior trees.
 [coroutines]: https://en.wikipedia.org/wiki/Coroutine
 [setfenv]: https://www.lua.org/pil/14.3.html
 [convoke]: https://github.com/airstruck/knife/blob/master/readme/convoke.md
-[bts]: {{<ref "gemini-rising-ai-behavior-trees.md" >}}
+[bts]: {{<ref "gemini-rising-ai-behavior-trees/index.md" >}}

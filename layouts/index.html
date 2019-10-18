@@ -30,16 +30,14 @@
 {{ $n_posts := 5 }}
 
 
-<section class="mw9 center">
+<section class="mw8 center">
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
-    <article class="blog-article pa3 mh2 mb2 br2 mr1-ns flex justify-center">
-      {{ with .Resources.Match "images/featured*" }}
-      <div>
-        <img src="{{ .RelPermalink  }}" alt="{{ .Title }}">
-      </div>
+    <article class="blog-article mh2 mb2 br2 mr1-ns flex justify-center">
+      {{ with .Resources.GetMatch "images/featured*" }}
+      <div style="background-image: url('{{ .RelPermalink }}')" class="w-60 cover"></div>
       {{ end }}
-      <div>
+      <div class="pa3 w-40">
         <h1 class="f4 tc lh-title">
           <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
         </h1>
