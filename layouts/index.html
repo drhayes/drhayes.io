@@ -33,11 +33,11 @@
 <section class="mw8 center">
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
-    <article class="blog-article mh2 mb2 br2 mr1-ns flex justify-center">
+    <article class="border-box mh2 mb2 br2 mr1-ns flex flex-column flex-row-ns justify-center bg-white">
       {{ with .Resources.GetMatch "images/featured*" }}
-      <div style="background-image: url('{{ .RelPermalink }}')" class="w-60 cover"></div>
+      <div style="background-image: url('{{ .RelPermalink }}')" class="w-60-ns cover h5"></div>
       {{ end }}
-      <div class="pa3 w-40">
+      <div class="pa3 w-40-ns">
         <h1 class="f4 tc lh-title">
           <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
         </h1>
@@ -52,7 +52,7 @@
   <div class="flex flex-column flex-row-ns flex-wrap">
   {{ range (first $n_posts (after 1 $section)) }}
     <div class="w-50-ns mb2">
-      <article class="blog-article border-box pa3 mh2 h-100 br2 mr1-ns">
+      <article class="border-box pa3 mh2 h-100 br2 mr1-ns bg-white flex flex-column justify-center">
         <h1 class="f4 tc lh-title">
           <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
         </h1>

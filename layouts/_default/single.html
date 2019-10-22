@@ -21,6 +21,8 @@
 
   </header>
 
+  {{ with .Resources.GetMatch "images/featured*" }}
+  {{ end }}
   {{ with .Params.headerPhoto }}
     <figure class="w-100 pa0 ma0 mb3 flex flex-column" style="max-height: 20rem;"> <!-- post-image -->
       <img src="images/{{ .url }}" class="order-0 order-1-ns">

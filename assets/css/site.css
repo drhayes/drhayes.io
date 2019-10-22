@@ -75,10 +75,6 @@ article main p {
   border-width: 1px;
 }
 
-.blog-article {
-  background-color: white;
-}
-
 article main h1, article main h2, article main h3, article main h4, article main h5 {
   margin-top: 2em;
   margin-bottom: -.2em;
@@ -90,7 +86,7 @@ article main h2,article main h3, article main h4, article main h5 {
 
 article main p:first-child {
   font-size: 150%;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: -.05em;
   line-height: 1.4;
 }
