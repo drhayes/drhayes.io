@@ -6,8 +6,8 @@ tags:
   - AI
   - Gemini Rising AI
   - behavior trees
-photoCredit: Markus Spiske from Unsplash
 description: An exploration of behavior trees within Gemini Rising.
+photoCredit: israel palacio on Unsplash
 ---
 
 This post is the second in a [series I'm writing about scripting the AI in my game, Gemini Rising][grai]. This one is about behavior trees.
@@ -354,8 +354,8 @@ Behavior trees rule. Behavior trees are my goto AI scripting solution for Gemini
 
 But in line with my general experience reading about stuff on the web, I wish I'd seen more recommendations about how to implement and use them effectively. Hopefully I've helped there somewhat.
 
-[grai]: {{< ref "gemini-rising-ai-intro.md" >}}
-[lua-scripting]: {{< ref "gemini-rising-ai-lua-scripting.md" >}}
+[grai]: {{< ref "gemini-rising-ai-intro/index.md" >}}
+[lua-scripting]: {{< ref "gemini-rising-ai-lua-scripting/index.md" >}}
 [lsm]: https://github.com/kyleconroy/lua-state-machine
 [statecharts]: https://statecharts.github.io
 [gppstate]: https://gameprogrammingpatterns.com/state.html

@@ -30,18 +30,18 @@
 {{ $n_posts := 5 }}
 
 
-<section class="mw8 center">
+<section class="mw8 center flex flex-wrap">
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
-    <article class="border-box mh2 mb2 br2 mr1-ns flex flex-column flex-row-ns justify-center bg-white">
-      {{ with .Resources.GetMatch "images/featured*" }}
-      <div style="background-image: url('{{ .RelPermalink }}')" class="w-60-ns cover h5"></div>
-      {{ end }}
-      <div class="pa3 w-40-ns">
-        <h1 class="f4 tc lh-title">
+    <article class="db border-box mh2 mb2 br2 mr1-ns flex flex-column flex-row-l justify-center bg-white overflow-hidden" style="min-height: 25rem;">
+      {{ partial "featured-image.html" . }}
+      <!-- <div style="background-image: url('{{ .RelPermalink }}'); min-height: 25rem;" class="w-60-l cover"></div> -->
+      <!-- <img src="{{ .RelPermalink }}" class="w-60-l cover"> -->
+      <div class="pa3 w-40-l">
+        <h1 class="f4 f3-ns tc lh-title">
           <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
         </h1>
-        <p class="f5 tj lh-copy">
+        <p class="f5 f4-ns tj lh-copy">
           <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
         </p>
         <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
@@ -49,23 +49,21 @@
     </article>
   {{ end }}
 
-  <div class="flex flex-column flex-row-ns flex-wrap">
   {{ range (first $n_posts (after 1 $section)) }}
-    <div class="w-50-ns mb2">
-      <article class="border-box pa3 mh2 h-100 br2 mr1-ns bg-white flex flex-column justify-center">
+      <article class="border-box mb2 mh2 h-100 br3 mr1-ns bg-white flex flex-column overflow-hidden" style="flex: 1 1 20rem;">
         {{ with .Resources.GetMatch "images/featured*" }}
-        <div style="background-image: url('{{ .RelPermalink }}')" class="w-60-ns cover h5"></div>
+        <div style="background-image: url('{{ .RelPermalink }}')" class="cover h5"></div>
         {{ end }}
-        <h1 class="f4 tc lh-title">
-          <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
-        </h1>
-        <p class="f5 tj lh-copy">
-        <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
-        </p>
-        <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
+        <div class="pa3">
+          <h1 class="f4 tc lh-title">
+            <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
+          </h1>
+          <p class="f5 tj lh-copy">
+          <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
+          </p>
+          <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
+        </div>
       </article>
-    </div>
   {{ end }}
-  </div>
 </section>
 {{ end }}
