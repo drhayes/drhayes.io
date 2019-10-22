@@ -21,13 +21,12 @@
 
   </header>
 
-  {{ with .Resources.GetMatch "images/featured*" }}
-  {{ end }}
-  {{ with .Params.headerPhoto }}
-    <figure class="w-100 pa0 ma0 mb3 flex flex-column" style="max-height: 20rem;"> <!-- post-image -->
-      <img src="images/{{ .url }}" class="order-0 order-1-ns">
-      {{ if .credit}}
-        <figcaption class="f7 tc tl-ns mv2 mh2">Photo credit: {{ .credit }}</figcaption>
+  {{ if .Resources.GetMatch "images/featured*" }}
+    <figure class="w-100 pa0 ma0 mb3 flex flex-column" style="max-height: 20rem;">
+      <!-- post-image -->
+      <img src="{{ (.Resources.GetMatch "images/featured*").RelPermalink }}" class="order-0 order-1-ns">
+      {{ with .Params.photoCredit }}
+      <figcaption class="f7 tc tl-ns mv2 mh2">Photo credit: {{ . }}</figcaption>
       {{ end }}
     </figure>
   {{ end }}

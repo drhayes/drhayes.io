@@ -53,6 +53,9 @@
   {{ range (first $n_posts (after 1 $section)) }}
     <div class="w-50-ns mb2">
       <article class="border-box pa3 mh2 h-100 br2 mr1-ns bg-white flex flex-column justify-center">
+        {{ with .Resources.GetMatch "images/featured*" }}
+        <div style="background-image: url('{{ .RelPermalink }}')" class="w-60-ns cover h5"></div>
+        {{ end }}
         <h1 class="f4 tc lh-title">
           <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
         </h1>
