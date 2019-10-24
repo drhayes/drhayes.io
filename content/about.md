@@ -28,6 +28,8 @@ I can be found pretty much everywhere fine Internets are made as `drhayes` or so
 
 In particular, you can email me at <hi@drhayes.io> or chat me at [@drhayes on Telegram][telegram] and I might even answer.
 
+Just testing some stuff real quick like.
+
 [sublime]: https://www.sublimetext.com/3
 [vsc]: https://code.visualstudio.com/
 [vim]: https://www.vim.org/
