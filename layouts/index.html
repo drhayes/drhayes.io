@@ -31,9 +31,10 @@
 
 
 <section class="mw8 center flex flex-wrap">
+  {{ .Scratch.Set "imgClasses" "w-60-l" }}
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
-    <article class="db border-box mh2 mb2 br2 mr1-ns flex flex-column flex-row-l justify-center bg-white overflow-hidden" style="min-height: 25rem;">
+    <article class="db border-box mh2 mb4 br2 mr1-ns flex flex-column flex-row-l justify-center bg-white overflow-hidden" style="min-height: 25rem;">
       {{ partial "featured-image.html" . }}
       <!-- <div style="background-image: url('{{ .RelPermalink }}'); min-height: 25rem;" class="w-60-l cover"></div> -->
       <!-- <img src="{{ .RelPermalink }}" class="w-60-l cover"> -->
@@ -50,9 +51,9 @@
   {{ end }}
 
   {{ range (first $n_posts (after 1 $section)) }}
-      <article class="border-box mb2 mh2 h-100 br3 mr1-ns bg-white flex flex-column overflow-hidden" style="flex: 1 1 20rem;">
-        {{ with .Resources.GetMatch "images/featured*" }}
-        <div style="background-image: url('{{ .RelPermalink }}')" class="cover h5"></div>
+      <article class="border-box mb4 mh2 h-100 br3 mr1-ns bg-white flex flex-column overflow-hidden" style="flex: 1 1 20rem;">
+        {{ if .Resources.GetMatch "images/featured*" }}
+        {{ partial "featured-image.html" . }}
         {{ end }}
         <div class="pa3">
           <h1 class="f4 tc lh-title">
