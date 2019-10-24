@@ -17,10 +17,9 @@ This site is generated in [Hugo]. The site is styled using [Tachyons].
 * [vim] is where yet more typing happens.
 * [Markdown] has the content.
 * [Hugo] generates the site.
-* [GitHub] hosts the code.
+* [GitHub] hosts the code and builds it when it changes.
 * [Firebase] hosts the site.
 * [Cloudflare] makes it fast.
-* [CircleCI] builds it when it changes.
 
 ## Contact Me
 
@@ -36,6 +35,5 @@ In particular, you can email me at <hi@drhayes.io> or chat me at [@drhayes on Te
 [github]: https://github.com/
 [firebase]: https://firebase.google.com/
 [cloudflare]: https://www.cloudflare.com/
-[circleci]: https://circleci.com/
 [telegram]: https://t.me/drhayes
 [tachyons]: https://tachyons.io/
