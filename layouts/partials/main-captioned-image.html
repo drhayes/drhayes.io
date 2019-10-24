@@ -26,19 +26,26 @@
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
-<img sizes="(min-width: 35em) 1200px, 100vw" srcset='
-  {{ if ge $src.Width "500" }}
-    {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
+<figure class="w-100 pa0 ma0 mb3 flex flex-column" style="max-height: 50vh;">
+  <img sizes="(min-width: 35em) 1200px, 100vw" srcset='
+    {{ if ge $src.Width "500" }}
+      {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
+    {{ end }}
+    {{ if ge $src.Width "800" }}
+      {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
+    {{ end }}
+    {{ if ge $src.Width "1200" }}
+      {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
+    {{ end }}
+    {{ if ge $src.Width "1500" }}
+      {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
+    {{ end }}' src="{{ $src.RelPermalink }}" class="order-0 order-1-ns" style="object-fit: cover;">
+
+  {{ with .Params.photoCredit }}
+  <figcaption class="f7 tc tl-ns mv2 mh2">Photo credit: {{ . }}</figcaption>
   {{ end }}
-  {{ if ge $src.Width "800" }}
-    {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
-  {{ end }}
-  {{ if ge $src.Width "1200" }}
-    {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
-  {{ end }}
-  {{ if ge $src.Width "1500" }}
-    {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
-  {{ end }}' src="{{ $src.RelPermalink }}" class="{{ .Scratch.Get "imgClasses" }}">
+</figure>
+
 
 {{ else }}
   <img src="{{ $src.RelPermalink }}" class="{{ .Scratch.Get "imgClasses" }}">

@@ -22,16 +22,10 @@
   </header>
 
   {{ if .Resources.GetMatch "images/featured*" }}
-    <figure class="w-100 pa0 ma0 mb3 flex flex-column" style="max-height: 20rem;">
-      <!-- post-image -->
-      <img src="{{ (.Resources.GetMatch "images/featured*").RelPermalink }}" class="order-0 order-1-ns">
-      {{ with .Params.photoCredit }}
-      <figcaption class="f7 tc tl-ns mv2 mh2">Photo credit: {{ . }}</figcaption>
-      {{ end }}
-    </figure>
+    {{ partial "main-captioned-image.html" . }}
   {{ end }}
 
-  <section class="mh2 mh5-ns mw8 relative pa3-ns br2-ns center-ns" style="background-color: whitesmoke;">
+  <section class="mh2 mh5-ns mw8 relative pa3-ns br2-ns center-ns bg-white">
     <aside class="fr-ns mb2">
       {{- partial "menu-contextual.html" . -}}
     </aside>
