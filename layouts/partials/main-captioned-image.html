@@ -26,7 +26,7 @@
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
-<figure class="w-100 pa0 ma0 mb3 flex flex-column" style="max-height: 50vh;">
+<figure class="w-100 pa0 ma0 mb3 flex flex-column" style="max-height: 20rem;">
   <img sizes="(min-width: 35em) 1200px, 100vw" srcset='
     {{ if ge $src.Width "500" }}
       {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
