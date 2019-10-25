@@ -38,8 +38,8 @@
   {{ end }}
   {{ if ge $src.Width "1500" }}
     {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
-  {{ end }}' src="{{ $src.RelPermalink }}" class="{{ .Scratch.Get "imgClasses" }}">
+  {{ end }}' src="{{ $src.RelPermalink }}" class="{{ .Scratch.Get "imgClasses" }}" style="object-fit: cover;">
 
 {{ else }}
-  <img src="{{ $src.RelPermalink }}" class="{{ .Scratch.Get "imgClasses" }}">
+  <img src="{{ $src.RelPermalink }}" class="{{ .Scratch.Get "imgClasses" }}" style="object-fit: cover;">
 {{ end }}
