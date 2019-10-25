@@ -23,7 +23,7 @@ code {
 }
 
 .highlight code {
-  background-color: inherit;
+  background-color: initial;
   font-size: .9rem;
 }
 

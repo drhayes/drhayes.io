@@ -40,8 +40,10 @@ Here are the posts that are ready.
 
    1. [Lua Scripting][luascripting]
    2. [Behavior Trees][bt]
+   3. [Goal-Oriented Action Planning][goap]
 
 
 [gr]: {{< ref "gemini-rising" >}}
 [luascripting]: {{< ref "gemini-rising-ai-lua-scripting/index.md" >}}
 [bt]: {{< ref "gemini-rising-ai-behavior-trees/index.md" >}}
+[goap]: {{< ref "gemini-rising-ai-goap/index.md" >}}
