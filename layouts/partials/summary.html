@@ -10,7 +10,7 @@
   </time>
   {{ end }}
   <div class="f5 lh-copy mt3 measure-wide">
-    {{ .Summary  }}
+    {{ plainify .Summary  | safeHTML }}
   </div>
   <p class="f7 tracked ttu">{{ .ReadingTime }} minute read</p>
 </div>
