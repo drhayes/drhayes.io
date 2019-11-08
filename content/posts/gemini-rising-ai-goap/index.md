@@ -1,7 +1,6 @@
 ---
 title: Gemini Rising AI -  Goal-Oriented Action Planning
 date: 2019-10-25T10:32:01-05:00
-draft: true
 tags:
   - Gemini Rising
   - AI
@@ -420,13 +419,13 @@ If I pressed <kbd>F2</kbd> then I would get a dump of the state of every entity'
 
 ## Complications
 
-It didn't all work immediately. I found bugs in my implementation that I didn't see anyone else write about. I don't know if that's because they're obvious, they're bugs I wrote because I don't understand what I'm doing, or what. *¿porque no los dos?*
+It didn't all work immediately. I found bugs and complications in my implementation that I didn't see anyone else write about. I don't know if that's because they're obvious, they're bugs I wrote because I don't understand what I'm doing, or what. *¿porque no los dos?*
 
 ### Timeouts
 
 Some actions that I wrote required timeouts. I wanted certain enemies to give up if they couldn't reach the player within a certain time so they would try something else, but I wanted this to happen while they still remembered the player.
 
-The `ActionManager` that each entity's brain maintains as a way of running sequences of actions maintains a timeout.
+Each entity's brain has an `ActionManager` that has a way of running sequences of actions. It maintains this timeout.
 
 ### Planner Graphs
 
@@ -452,22 +451,21 @@ The problem is that it actually stopped being fun.
 
 I think there's room in this world for games with really smart enemies, guards that corner the player and make them hide until they are eventually found and killed if they take no other action. Sentries that coordinate their attacks with suppressing fire while they leap-frog and advance upon the player's position. Enemies that have no discernable pattern, that swarm the player with overwhleming odds, and deny victory to all but the swiftest, most combat-oriented of players.
 
-But that's not the game I want to make. And, dammit, I'd spent a lot of time researching, designing, and implementing something that I was now about to rip out completely because *it didn't serve my game*. That's probably the worst part of all this, my wasted time and effort. Hopefully the lesson will stick this time.
+But that's not the game I want to make. 
+
+And, dammit, I'd spent a lot of time researching, designing, and implementing something that I was now about to rip out completely because *it didn't serve my game*. That's probably the worst part of all this, my wasted time and effort. Hopefully the lesson will stick this time.
 
 ### Silver Lining
 
 The silver lining of this is that the AI subsystems became *a lot* smarter in the process. When I returned to my behavior trees I was pleasantly surprised at how much easier they were this time around. But that's a topic for another blog post.
 
-[grai]: {{< ref "/posts/gemini-rising-ai-intro/index.md" >}} [gr]: {{< ref
-"/gemini-rising.md" >}} [goap]:
-http://alumni.media.mit.edu/~jorkin/goap.html [orkin1]:
-http://alumni.media.mit.edu/~jorkin/GOAP_draft_AIWisdom2_2003.pdf
-[gametuts]:
-https://gamedevelopment.tutsplus.com/tutorials/goal-oriented-action-planning-for-a-smarter-ai--cms-20793
-[thiefsenses]:
-https://www.gamasutra.com/view/feature/131297/building_an_ai_sensory_system_.php
+[grai]: {{< ref "/posts/gemini-rising-ai-intro/index.md" >}} 
+[gr]: {{< ref "/gemini-rising.md" >}} 
+[goap]: http://alumni.media.mit.edu/~jorkin/goap.html 
+[orkin1]: http://alumni.media.mit.edu/~jorkin/GOAP_draft_AIWisdom2_2003.pdf
+[gametuts]: https://gamedevelopment.tutsplus.com/tutorials/goal-oriented-action-planning-for-a-smarter-ai--cms-20793
+[thiefsenses]: https://www.gamasutra.com/view/feature/131297/building_an_ai_sensory_system_.php
 [armyofficerstest]: {{< ref "/parables/army-officers-test" >}}
-[aiforgames]:
-https://smile.amazon.com/AI-Games-Third-Ian-Millington/dp/1138483974/ref=sr_1_1?keywords=artificial+intelligence+for+games&qid=1572234715&sr=8-1
-[malcolm-video]: https://www.youtube.com/watch?v=4PLvdmifDSk [astar]:
-https://en.wikipedia.org/wiki/A*_search_algorithm
+[aiforgames]: https://smile.amazon.com/AI-Games-Third-Ian-Millington/dp/1138483974/ref=sr_1_1?keywords=artificial+intelligence+for+games&qid=1572234715&sr=8-1
+[malcolm-video]: https://www.youtube.com/watch?v=4PLvdmifDSk 
+[astar]: https://en.wikipedia.org/wiki/A*_search_algorithm
