@@ -47,6 +47,7 @@ main p:first-child {
 
 .highlight pre code {
   line-height: 1.4;
+  padding: initial;
 }
 
 blockquote {
