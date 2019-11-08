@@ -1,0 +1,35 @@
+{{ define "main" }}
+<main class="mh2 mw8 center-ns">
+
+  {{ if .Title }}
+  <h1 class="f1 tc">{{ .Title }}</h1>
+  {{ end }}
+
+  {{ if .Content }}
+  <section class="">
+    {{- .Content -}}
+  </section>
+  {{ end }}
+
+  <section class="">
+    {{ range .Paginator.Pages }}
+    <article class="border-box mb4 br3 bg-white flex flex-column flex-row-ns">
+      {{ if .Resources.GetMatch "images/featured*" }}
+      {{ $src := (.Resources.GetMatch "images/featured*") }}
+      <img src="{{ $src.RelPermalink}}" class="db w-100 w-40-ns">
+      {{ end }}
+      <div class="pa3">
+        <h1 class="f4 tc lh-title">
+          <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
+        </h1>
+        <p class="f5 tj lh-copy">
+        <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
+        </p>
+        <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
+      </div>
+    </article>
+    {{ end }}
+  </section>
+  {{- template "_internal/pagination.html" . -}}
+</main>
+{{ end }}
