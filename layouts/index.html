@@ -34,8 +34,7 @@
   {{ $first_post := first 1 $section }}
   {{ range $first_post }}
     <article class="db border-box mh2-ns mb4 br2 mr1-ns flex flex-column flex-row-l justify-center bg-white overflow-hidden" style="min-height: 25rem;">
-      {{ .Scratch.Set "imgClasses" "w-60-l" }}
-      {{ partial "featured-image.html" . }}
+      <img {{ safeHTMLAttr (partial "featured-image.html" (.Resources.GetMatch "images/featured*")) }} class="w-60-l">
       <!-- <div style="background-image: url('{{ .RelPermalink }}'); min-height: 25rem;" class="w-60-l cover"></div> -->
       <!-- <img src="{{ .RelPermalink }}" class="w-60-l cover"> -->
       <div class="pa3 w-40-l">
@@ -53,8 +52,7 @@
   {{ range (first $n_posts (after 1 $section)) }}
       <article class="border-box mb4 h-100 mh2-ns br3 mr1-ns bg-white flex flex-column overflow-hidden" style="flex: 1 1 20rem;">
         {{ if .Resources.GetMatch "images/featured*" }}
-        {{ .Scratch.Set "imgClasses" "h5" }}
-        {{ partial "featured-image.html" . }}
+        <img {{ safeHTMLAttr (partial "featured-image.html" (.Resources.GetMatch "images/featured*")) }} class="h5">
         {{ end }}
         <div class="pa3">
           <h1 class="f4 tc lh-title">

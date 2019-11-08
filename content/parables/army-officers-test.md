@@ -1,7 +1,6 @@
 ---
 title: The Army Officer's Test
 date: 2019-10-25T10:32:01-05:00
-draft: true
 ---
 
 ## Problem
