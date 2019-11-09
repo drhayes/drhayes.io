@@ -1,4 +1,4 @@
-name: CI
+name: Deploy that pig
 
 on:
   push:
@@ -27,3 +27,10 @@ jobs:
         args: deploy
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      uses: Ilshidur/action-discord@master
+      with:
+        args: 'drhayes.io has been deployed.'
