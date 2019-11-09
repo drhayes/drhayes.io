@@ -298,7 +298,7 @@ Check out that `slowRadius` stuff. That's pretty legendary. It makes enemies loo
 
 As always when I praise something, it's because I got the idea from something else. My goto reference for the basics of AI game programming has always been [AI for Games by Ian Millington][aiforgames]. I adore this book and have read it cover-to-cover multiple times. I have the second edition but I can only imagine the third edition is just as good.
 
-There are more steering behaviors like `stop`, `arrive`, `chase`, etc... but the GOAP-level action knows none of those things. All it knows is `gotoNode`. Entities decide how they get places -- the AI tells them where to go. That separation cleans everything up and pays off big when (spoiler alert!) I swapped out AI systems again after GOAP. 
+There are more steering behaviors like `stop`, `arrive`, `chase`, etc... but the GOAP-level action knows none of those things. All it knows is `gotoNode`. Entities decide how they get places -- the AI tells them where to go. That separation cleans everything up and pays off big when (spoiler alert!) I swapped out AI systems again after GOAP.
 
 ## Examples
 
@@ -315,45 +315,45 @@ Here's a small sample:
 
 `wanderOnPlatform` is a nice barometer of how good my AI solution is treating me. Here's a snippet of the important bits:
 
-```lua 
-function WanderOnPlatform:new() 
+```lua
+function WanderOnPlatform:new()
   WanderOnPlatform.super.new(self)
-  self.cost = 5 
-  self.effect:set('hasDestination', true) 
-  if love.math.random() > 0.5 then 
-    self.wanderDir = 'left' 
-  else 
-    self.wanderDir = 'right' 
-  end 
+  self.cost = 5
+  self.effect:set('hasDestination', true)
+  if love.math.random() > 0.5 then
+    self.wanderDir = 'left'
+  else
+    self.wanderDir = 'right'
+  end
 end
 
-function WanderOnPlatform:run(entity) 
+function WanderOnPlatform:run(entity)
   local pos, brain = entity:get(Position), entity:get(Brain)
 
   local navTile = navMeshSystem:queryByPixelPos('platform', pos.x, pos.y)
-  if not navTile then 
-    return 'failure' 
+  if not navTile then
+    return 'failure'
   end
 
   local ctx = brain.context
 
-  local dest = nil 
-  if self.wanderDir == 'left' then 
-    dest = navTile:leftMost() 
-  elseif self.wanderDir == 'right' then 
-    dest = navTile:rightMost() 
+  local dest = nil
+  if self.wanderDir == 'left' then
+    dest = navTile:leftMost()
+  elseif self.wanderDir == 'right' then
+    dest = navTile:rightMost()
   end
 
-  if self.wanderDir == 'left' then 
-    self.wanderDir = 'right' 
+  if self.wanderDir == 'left' then
+    self.wanderDir = 'right'
   else
-    self.wanderDir = 'left' 
+    self.wanderDir = 'left'
   end
 
   brain.context.destination = dest aiSystem:set(entity, 'hasDestination', true)
 
-  return 'success' 
-end 
+  return 'success'
+end
 ```
 
 There's the navmesh. There's the `effect`, which is the change to the world state for the entity after this action has been successfully run; that helps the planner figure out if it should use this action or not. Once it runs its job is complete; the steering system takes over as the entity wanders back and forth on the platform.
@@ -364,55 +364,55 @@ Without the physics code intertwined here, and without having to worry about "ju
 
 While setting goals and writing actions I needed some way of seeing what the entities thought was going on. I implemented a `debugDraw` method on my `AISystem` to help me out:
 
-```lua 
-function AISystem:drawDebug() 
-  for i = 1, self.pool.size do 
-    local entity = self.pool:get(i) 
-    local brain = entity:get(Brain) 
+```lua
+function AISystem:drawDebug()
+  for i = 1, self.pool.size do
+    local entity = self.pool:get(i)
+    local brain = entity:get(Brain)
 
-    if brain.context.destination then 
-      local dx, dy = brain.context.destination:center() 
+    if brain.context.destination then
+      local dx, dy = brain.context.destination:center()
       love.graphics.setColor(1, 0, 0, .5)
-      love.graphics.rectangle('fill', dx - 2, dy - 2, 5, 5) 
-    end 
-    
-    local pos = entity:get(Position) 
+      love.graphics.rectangle('fill', dx - 2, dy - 2, 5, 5)
+    end
+
+    local pos = entity:get(Position)
     local actionManager = self.actionManagers[entity]
-    actionManager:drawDebug(pos.x, pos.y) 
-  end 
-end 
+    actionManager:drawDebug(pos.x, pos.y)
+  end
+end
 ```
 
 It draws a rectangle to indicate an entity's destination (if it has one) and calls `actionManager:drawDebug`. All that does is this:
 
-```lua 
-function ActionManager:drawDebug(x, y) 
-  local name = 'nil' 
-  local currentAction = self.actions and self.actions[self.current] 
-  if currentAction then 
-    name = tostring(currentAction.class) 
+```lua
+function ActionManager:drawDebug(x, y)
+  local name = 'nil'
+  local currentAction = self.actions and self.actions[self.current]
+  if currentAction then
+    name = tostring(currentAction.class)
   end
-  love.graphics.setColor(1, 1, 1, 1) 
+  love.graphics.setColor(1, 1, 1, 1)
   love.graphics.print(name, x, y)
-end 
+end
 ```
 
 These probably shouldn't have been separate methods, to be honest. But by printing what the action the entity is executing I can zero in on their confusing behavior.
 
 One more debug method rounded out my arsenal:
 
-```lua 
-function AISystem:keypressed(key, scancode, isRepeat) 
-  if key == 'f2' then 
-    print('ai state:') 
-    for i = 1, self.pool.size do 
-      local entity = self.pool:get(i) 
-      local brain = entity:get(Brain) 
-      local ws = self:convertBrainToWorldState(entity) 
-      print(brain.goalListName, ws:debug()) 
-    end 
-  end 
-end 
+```lua
+function AISystem:keypressed(key, scancode, isRepeat)
+  if key == 'f2' then
+    print('ai state:')
+    for i = 1, self.pool.size do
+      local entity = self.pool:get(i)
+      local brain = entity:get(Brain)
+      local ws = self:convertBrainToWorldState(entity)
+      print(brain.goalListName, ws:debug())
+    end
+  end
+end
 ```
 
 If I pressed <kbd>F2</kbd> then I would get a dump of the state of every entity's world state and goal. This helped enormously when my entities inevitably ran wild, didn't shoot the perfectly available and obvious player, ran into things, and generally didn't behave as menacing enemies in a video game.
@@ -451,7 +451,7 @@ The problem is that it actually stopped being fun.
 
 I think there's room in this world for games with really smart enemies, guards that corner the player and make them hide until they are eventually found and killed if they take no other action. Sentries that coordinate their attacks with suppressing fire while they leap-frog and advance upon the player's position. Enemies that have no discernable pattern, that swarm the player with overwhleming odds, and deny victory to all but the swiftest, most combat-oriented of players.
 
-But that's not the game I want to make. 
+But that's not the game I want to make.
 
 And, dammit, I'd spent a lot of time researching, designing, and implementing something that I was now about to rip out completely because *it didn't serve my game*. That's probably the worst part of all this, my wasted time and effort. Hopefully the lesson will stick this time.
 
@@ -459,13 +459,13 @@ And, dammit, I'd spent a lot of time researching, designing, and implementing so
 
 The silver lining of this is that the AI subsystems became *a lot* smarter in the process. When I returned to my behavior trees I was pleasantly surprised at how much easier they were this time around. But that's a topic for another blog post.
 
-[grai]: {{< ref "/posts/gemini-rising-ai-intro/index.md" >}} 
-[gr]: {{< ref "/gemini-rising.md" >}} 
-[goap]: http://alumni.media.mit.edu/~jorkin/goap.html 
+[grai]: {{< ref "/posts/gemini-rising-ai-intro/index.md" >}}
+[gr]: {{< ref "/gemini-rising.md" >}}
+[goap]: http://alumni.media.mit.edu/~jorkin/goap.html
 [orkin1]: http://alumni.media.mit.edu/~jorkin/GOAP_draft_AIWisdom2_2003.pdf
 [gametuts]: https://gamedevelopment.tutsplus.com/tutorials/goal-oriented-action-planning-for-a-smarter-ai--cms-20793
 [thiefsenses]: https://www.gamasutra.com/view/feature/131297/building_an_ai_sensory_system_.php
 [armyofficerstest]: {{< ref "/parables/army-officers-test.md" >}}
 [aiforgames]: https://smile.amazon.com/AI-Games-Third-Ian-Millington/dp/1138483974/ref=sr_1_1?keywords=artificial+intelligence+for+games&qid=1572234715&sr=8-1
-[malcolm-video]: https://www.youtube.com/watch?v=4PLvdmifDSk 
+[malcolm-video]: https://www.youtube.com/watch?v=4PLvdmifDSk
 [astar]: https://en.wikipedia.org/wiki/A*_search_algorithm
