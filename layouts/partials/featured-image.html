@@ -1,4 +1,5 @@
 {{ $attributes := print "src=\"" .RelPermalink "\"" }}
+{{/* TODO: Rename this from featured-image to responsive-image-attributes or something */}}
 {{ if not (strings.HasSuffix .RelPermalink "svg") }}
 
 {{ $tiny := (.Resize "500x") }}
