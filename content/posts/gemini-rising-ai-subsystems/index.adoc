@@ -1,0 +1,24 @@
+---
+title: Gemini Rising - AI Subsystems
+date: 2019-11-11T16:48:18-06:00
+description: My forays into GOAP were not completely worthless; here's how my AI subsystems improved.
+tags:
+  - Gemini Rising
+  - AI
+  - Gemini Rising AI
+photoCredit: Markus Spiske on Unsplash
+draft: true
+---
+
+Something something something.
+
+[source,lua,]
+----
+function Thing:new(x, y)
+end
+----
+
+
+== Intro
+
+Some text obviously goes here. And hopefully it's more text than
