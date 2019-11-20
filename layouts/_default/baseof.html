@@ -26,12 +26,28 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
   <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  {{ if or (eq .Kind "home") (eq .Kind "page")}}
+  {{ if isset .Params "canonical" }}
+  <link rel="canonical" href="{{ .Params.Canonical}}" />
+  {{ else }}
+  <link rel="canonical" href="{{ .Permalink}}" />
+  {{ end }}
+  {{ end }}
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="google-site-verification" content="62OprotnkXjdlu5isXeGX010S3smwpIK4aHKez_WBJU">
-  {{ if or .Description .Summary }}
-  <meta name="description" content="{{ or .Description .Summary }}">
+  <meta name="description" content="{{ with .Description }}
+{{ . }}
+{{ else }}
+{{if .IsPage}}{{ .Summary }}
+{{ else }}{{ with .Site.Params.description }}
+{{ . }}
+{{ end }}{{ end }}{{ end }}">
+  {{ if and (eq .Kind "taxonomy") (eq .Type "categories")}}
+  <meta name="robots" content="noindex, follow"/>
+  {{ else }}
+  <meta name="robots" content="index, follow"/>
   {{ end }}
   {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}

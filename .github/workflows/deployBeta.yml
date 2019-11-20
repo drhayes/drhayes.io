@@ -2,8 +2,8 @@ name: Deploy that pig
 
 on:
   push:
-    branches-ignore:
-      - master
+    branches:
+      - 'beta/**'
 
 jobs:
   deploy:
@@ -33,4 +33,4 @@ jobs:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       uses: Ilshidur/action-discord@master
       with:
-        args: 'drhayes.io has been deployed.'
+        args: 'beta.drhayes.io has been deployed.'
