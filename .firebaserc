@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "drhayes-io-195815"
+  },
+  "targets": {
+    "drhayes-io-195815": {
+      "hosting": {
+        "personalSite": [
+          "main-drhayes-io"
+        ],
+        "personalSiteBeta": [
+          "beta-drhayes-io"
+        ]
+      }
+    }
   }
 }

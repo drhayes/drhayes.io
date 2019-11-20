@@ -24,7 +24,7 @@ jobs:
     - name: Deploy
       uses: w9jds/firebase-action@master
       with:
-        args: deploy
+        args: deploy --only hosting:personalSite
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
