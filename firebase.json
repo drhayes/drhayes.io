@@ -1,10 +1,19 @@
 {
-  "hosting": {
+  "hosting": [{
+    "target": "main",
     "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ]
-  }
+  }, {
+    "target": "beta",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }]
 }
