@@ -1,7 +1,7 @@
 <ul class="list mt3 mb0 pa0 flex flex-wrap justify-center">
     {{ range .Params.tags }}
      <li class="list mr2 mb3">
-       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="f7 black br-pill bg-light-gray ph3 pv2 ttl tracked-tight">
+       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="f5 black br-pill bg-light-gray ph3 pv2 ttl">
          {{- . -}}
        </a>
      </li>
