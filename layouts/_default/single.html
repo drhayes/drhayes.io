@@ -3,13 +3,13 @@
 <article class="center-ns">
 
   <header class="w-100 mb4 mh2 mw8 center-ns">
-    <h1 class="f2 f1-ns lh-solid mt0 mb1 ph1 lh-title tracked-tight tc">
+    <h1 class="f2 f1-ns mt0 mb1 ph1 lh-title tracked-tight tc">
       {{- .Title -}}
     </h1>
 
     {{ if .Params.Date }}
-    <div class="f5 silver lh-title tc">
-      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+    <div class="f5 tc">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="sans-fonts">
         {{- .Date.Format "2006.01.02" -}}
       </time>
     </div>
