@@ -109,3 +109,12 @@ article main p:first-child::first-letter {
   padding-top: 0.8rem;
   padding-bottom: 0;
 }
+
+main blockquote p:first-child::first-letter {
+  color: inherit;
+  float: initial;
+  font-size: inherit;
+  font-weight: normal;
+  margin: inherit;
+  padding: inherit;
+}
