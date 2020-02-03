@@ -44,6 +44,6 @@ Here are the posts that are ready.
 
 
 [gr]: {{< ref "gemini-rising" >}}
-[luascripting]: {{< ref "gemini-rising-ai-lua-scripting/index.md" >}}
-[bt]: {{< ref "gemini-rising-ai-behavior-trees/index.md" >}}
-[goap]: {{< ref "gemini-rising-ai-goap/index.md" >}}
+[luascripting]: {{< ref "gemini-rising-ai-lua-scripting" >}}
+[bt]: {{< ref "gemini-rising-ai-behavior-trees" >}}
+[goap]: {{< ref "gemini-rising-ai-goap" >}}
