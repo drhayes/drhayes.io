@@ -1,5 +1,5 @@
 {{ $game := .Get 0 }}
-{{ $articles := where .Site.RegularPages "Dir" "eq" (print "games/" $game "/") }}
+{{ $articles := where .Site.RegularPages ".File.Dir" "eq" (print "games/" $game "/") }}
 {{ $first := index $articles 0 }}
 <ol class="pl0 ml4 mv0">
   {{ range sort $articles ".Date" }}

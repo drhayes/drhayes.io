@@ -103,11 +103,11 @@ article main p:first-child::first-letter {
   color: steelblue;
   float: left;
   font-family: "Inter", Helvetica, serif;
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: 800;
   margin: 0;
-  padding-top: 0.8rem;
-  padding-bottom: 0;
+  margin-top: -3rem;
+  padding: 0;
 }
 
 main blockquote p:first-child::first-letter {
