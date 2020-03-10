@@ -1,15 +1,15 @@
-<div class="overflow-hidden">
-  <h2 class="f2 lh-title mb0">
-    <a href="{{ .Permalink }}" class="link color-inherit dim">
+<div class="">
+  <h2 class="">
+    <a href="{{ .Permalink }}" class="">
       {{ .Title }}
     </a>
   </h2>
   {{ if .Params.Date }}
-  <time class="db f5 fw4 silver" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  <time class="" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
     {{ dateFormat "2006.01.02" .Date }}
   </time>
   {{ end }}
-  <div class="f5 lh-copy mt3 measure-wide">
+  <div class="">
     {{ plainify .Summary  | safeHTML }}
   </div>
   <p class="f7 tracked ttu">{{ .ReadingTime }} minute read</p>

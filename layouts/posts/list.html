@@ -2,7 +2,7 @@
 <main class="mh2 mw8 center-ns">
 
   {{ if .Title }}
-  <h1 class="f1 tc">{{ .Title }}</h1>
+  <h1 class="">{{ .Title }}</h1>
   {{ end }}
 
   {{ if .Content }}
@@ -13,20 +13,17 @@
 
   <section class="">
     {{ range .Paginator.Pages }}
-    <article class="border-box mb4 br3 bg-white flex flex-column flex-row-ns">
-      {{ if .Resources.GetMatch "images/featured*" }}
-      <img {{ safeHTMLAttr (partial "featured-image.html" (.Resources.GetMatch "images/featured*")) }} class="db w-100 w-40-ns">
-      {{ end }}
-      <div class="pa3 w-100 w-60-ns">
-        <h1 class="f4 tc lh-title">
-          <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
+    <main class="">
+      <div class="">
+        <h1 class="">
+          <a href="{{ .RelPermalink }}" class="">{{ .Title }}</a>
         </h1>
-        <p class="f5 tj lh-copy">
-        <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
+        <p class="">
+        <a href="{{ .RelPermalink }}" class="">{{ plainify .Summary | safeHTML }}</a>
         </p>
-        <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
+        <p class="">{{ .ReadingTime }} minute read</p>
       </div>
-    </article>
+    </main>
     {{ end }}
   </section>
   {{- template "_internal/pagination.html" . -}}

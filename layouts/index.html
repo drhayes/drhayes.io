@@ -1,69 +1,25 @@
 {{ define "header"}}
-<header class="tc pt4 mw9 center h-card vcard">
-  {{ $logo := resources.Get "raven.png" }}
-  <a href="https://drhayes.io" class="u-url url">
-    <img src="{{ $logo.RelPermalink }}" alt="drhayes.io raven logo" class="w4 h4 br-100 pa1 u-photo">
-  </a>
-  <h1 class="f2 lh-title mb1 tracked-tight p-name fn">Hi, I'm David Hayes. 👋🏽</h1>
-  <a href="mailto:hi@drhayes.io" class="f5 black link u-email email" rel="me">hi@drhayes.io</a>
-  <h3 class="f5 normal tc">I do stuff with computers. I live in Austin, TX.</h3>
-  <nav class="db mv4">
-    <ul class="list pa0 ma0 nowrap overflow-x-auto">
-      {{ range .Site.Menus.main }}
-      <li class="dib ph2">
-        <a class="f5 gray dim link" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
-</header>
+<!--  -->
 {{ end }}
 
 {{ define "main" }}
+<main class="front-page h-card vcard">
+  {{ $logo := resources.Get "raven.png" }}
+  <a href="/" class="site-logo">
+    <img src="{{ $logo.RelPermalink }}" alt="drhayes.io">
+  </a>
+  <h1 class="p-name fn">Hi, I'm David Hayes. 👋🏽</h1>
+  <a href="mailto:hi@drhayes.io" class="u-email email" rel="me">hi@drhayes.io</a>
+  <h3 class="">I do stuff with computers. I live in Austin, TX.</h3>
 
-{{ $section_name := "posts" }}
-{{ $posts := (slice "posts") }}
-{{/* Create a variable with that section to use in multiple places. */}}
-{{ $section := where .Site.RegularPages "Section" "in" $posts }}
-{{/* Check to see if the section is defined for ranging through it */}}
-{{ $section_count := len $section }}
-{{ $n_posts := 5 }}
+  <div class="site-menu">
+    {{ range .Site.Menus.main }}
+    <a class="site-menu-item" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
+    {{ end }}
+  </div>
+</main>
+{{ end }}
 
-
-<section class="mw8 center flex flex-wrap">
-  {{ $first_post := first 1 $section }}
-  {{ range $first_post }}
-    <article class="db border-box mh2-ns mb4 br2 mr1-ns flex flex-column flex-row-l justify-center bg-white overflow-hidden" style="min-height: 25rem;">
-      <img {{ safeHTMLAttr (partial "featured-image.html" (.Resources.GetMatch "images/featured*")) }} class="w-60-l">
-      <!-- <div style="background-image: url('{{ .RelPermalink }}'); min-height: 25rem;" class="w-60-l cover"></div> -->
-      <!-- <img src="{{ .RelPermalink }}" class="w-60-l cover"> -->
-      <div class="pa3 w-40-l">
-        <h1 class="f4 f3-ns tc lh-title">
-          <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
-        </h1>
-        <p class="f5 f4-ns tj lh-copy">
-          <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
-        </p>
-        <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
-      </div>
-    </article>
-  {{ end }}
-
-  {{ range (first $n_posts (after 1 $section)) }}
-      <article class="border-box mb4 h-100 mh2-ns br3 mr1-ns bg-white flex flex-column overflow-hidden" style="flex: 1 1 20rem;">
-        {{ if .Resources.GetMatch "images/featured*" }}
-        <img {{ safeHTMLAttr (partial "featured-image.html" (.Resources.GetMatch "images/featured*")) }} class="h5">
-        {{ end }}
-        <div class="pa3">
-          <h1 class="f4 tc lh-title">
-            <a href="{{ .RelPermalink }}" class="black link">{{ .Title }}</a>
-          </h1>
-          <p class="f5 tj lh-copy">
-          <a href="{{ .RelPermalink }}" class="black link">{{ plainify .Summary | safeHTML }}</a>
-          </p>
-          <p class="tr f7 tracked ttu">{{ .ReadingTime }} minute read</p>
-        </div>
-      </article>
-  {{ end }}
-</section>
+{{ define "footer" }}
+<!--  -->
 {{ end }}
