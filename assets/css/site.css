@@ -1,34 +1,24 @@
-@import url('https://rsms.me/inter/inter.css');
-
-@supports (font-variation-settings: normal) {
-  html,body { font-family: 'Inter var', sans-serif; }
-}
-
 body {
   font-size: 18px;
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-  color: #111;
+  font-family: monospace;
+
+  background: #111;
+  color: #fff;
 }
 
 a {
   text-decoration: none;
-}
-
-.sans-fonts {
-    font-family: "Inter", Helvetica, sans-serif;
+  color: cornflowerblue;
 }
 
 code {
   font-family: "Inconsolata", monospace;
-  color: #000;
-  background-color: #f0f3f3;
   padding: 0.5rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
   /* font-family: -apple-system,BlinkMacSystemFont,"Segoe
   UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
-  font-family: "Inter", Helvetica, sans-serif;
 }
 
 .highlight code {
@@ -42,10 +32,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .dotted-list li+li::before {
   content: '·';
-}
-
-main p:first-child {
-  margin-top: 0;
 }
 
 .highlight pre {
@@ -68,20 +54,12 @@ blockquote {
   color: #222;
 }
 
+code {
+  background: #222;
+}
+
 article main p {
-  line-height: 1.715;
-}
-
-.hamnav {
-  height: 0;
-  overflow: hidden;
-  transition: height .5s ease;
-  border-width: 0;
-}
-
-#hamburger:checked ~ .hamnav {
-  height: 120px;
-  border-width: 1px;
+  line-height: 1.6;
 }
 
 article main h1, article main h2, article main h3, article main h4, article main h5 {
@@ -93,28 +71,73 @@ article main h2,article main h3, article main h4, article main h5 {
   border-bottom: 1px dotted #ccc;
 }
 
-article main p:first-child {
-  font-size: 150%;
-  font-weight: 400;
-  letter-spacing: -.05em;
+.content {
+  width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-article main p:first-child::first-letter {
-  color: steelblue;
-  float: left;
-  font-family: "Inter", Helvetica, serif;
-  font-size: 8rem;
-  font-weight: 800;
-  margin: 0;
-  margin-top: -3rem;
-  padding: 0;
+.site-logo {
+  display: block;
+  text-align: center;
 }
 
-main blockquote p:first-child::first-letter {
-  color: inherit;
-  float: initial;
-  font-size: inherit;
-  font-weight: normal;
-  margin: inherit;
-  padding: inherit;
+.site-logo img {
+  width: 10rem;
+  margin-bottom: 1rem;
+  filter: invert(94%);
+}
+
+.site-menu {
+  text-align: center;
+}
+
+.site-menu-item {
+  margin-right: 1rem;
+}
+
+.tags {
+  text-align: center;
+  font-size: 90%;
+}
+
+.tags .tag {
+  display: inline-block;
+}
+
+.article-date {
+  border-bottom: 1px dotted #777;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.article-date time {
+  display: inline-block;
+  position: relative;
+  top: .6rem;
+  background: #111;
+  padding: 0 1rem;
+  font-style: italic;
+}
+
+article {
+  margin-top: 1rem;
+}
+
+.title {
+  text-align: center;
+}
+
+article aside {
+  float: right;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+}
+
+article aside h3 {
+  margin-top: .5rem;
+}
+
+article section {
+  margin-top: 4rem;
 }

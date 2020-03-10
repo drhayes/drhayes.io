@@ -4,8 +4,8 @@
 */}}
 
 {{- if .Params.toc -}}
-  <div class="bg-light-gray pa3 nested-list-reset lh-copy">
-    <p class="f5 b mb3">Table of Contents</p>
+  <div class="">
+    <p class="">Table of Contents</p>
       {{ .TableOfContents }}
   </div>
 {{- end -}}
@@ -18,11 +18,11 @@
 {{ $related := .Site.RegularPages.Related . | first 15 }}
 
 {{ with $related }}
-  <div class="bg-light-gray pa3 ma3 nested-list-reset lh-copy">
-    <p class="f5 b ma0 mb3">Related</p>
-    <ul class="pa0 list">
+  <div class="">
+    <h3 class="">Related</h3>
+    <ul class="">
 	   {{ range . }}
-	     <li  class="mb2">
+	     <li  class="">
           <a href="{{ .RelPermalink }}">
             {{- .Title -}}
           </a>

@@ -1,29 +1,13 @@
 {{ $logo := resources.Get "raven.png" }}
 {{ $menuIcon := resources.Get "hamburger.svg" }}
-<nav class="w-100 border-box pv3 mh2 mw8 center-ns ph0-ns flex flex-wrap items-center
-justify-between sans-fonts">
-  <a href="/" class="v-mid">
-    <img src="{{ $logo.RelPermalink }}" class="br-100 w3" alt="drhayes.io">
+<nav class="">
+  <a href="/" class="site-logo">
+    <img src="{{ $logo.RelPermalink }}" alt="drhayes.io">
   </a>
 
-  <div class="tr pr3">
-    <label for="hamburger" class="dib dn-ns">
-      <img src="{{ $menuIcon.RelPermalink }}" class="w2" alt="menu">
-    </label>
+  <div class="site-menu">
     {{ range .Site.Menus.main }}
-    <a class="link dn dib-ns pl3" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
+    <a class="site-menu-item" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
     {{ end }}
   </div>
-
 </nav>
-<input type="checkbox" class="dn" id="hamburger">
-<ul class="list hamnav pa0 ma2 dn-ns tc ba b--light-gray">
-  {{ range .Site.Menus.main }}
-  <li class="lh-copy">
-    <a class="link" href="{{ .URL }}" title="{{ .Name }} page">
-      {{ .Name }}
-    </a>
-  </li>
-  {{ end }}
-</ul>
-
