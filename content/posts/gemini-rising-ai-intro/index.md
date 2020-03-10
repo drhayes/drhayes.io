@@ -5,7 +5,6 @@ tags:
   - Gemini Rising
   - AI
   - Gemini Rising AI
-photoCredit: Franck V. on Unsplash
 ---
 
 When I went looking for articles about game AI that went beyond the most basic level I had a hard time finding any. Most articles were more interested in defining one basic concept and providing an easy, "Hello World" example than diving deep into solving real problems in a real game.

@@ -8,7 +8,6 @@ tags:
   - goap
   - pathfinding
 description: My exploration of goal-oriented action planning and why I eventually decided not to use it.
-photoCredit: Isaac Smith on Unsplash
 ---
 
 This post is the (long overdue) third post in a series I'm writing about [scripting the AI in my game, Gemini Rising][grai]. This one is about goal-oriented action planning, or <abbr title="goal-oriented action planning">GOAP</abbr>.

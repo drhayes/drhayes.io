@@ -7,7 +7,6 @@ tags:
   - Gemini Rising AI
   - behavior trees
 description: An exploration of behavior trees within Gemini Rising.
-photoCredit: israel palacio on Unsplash
 ---
 
 This post is the second in a [series I'm writing about scripting the AI in my game, Gemini Rising][grai]. This one is about behavior trees.
