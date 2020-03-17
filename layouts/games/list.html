@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main class="">
+
+  {{ if .Title }}
+  <h1 class="">{{ .Title }}</h1>
+  {{ end }}
+
+  <ol class="game-list">
+  {{ range .Sections }}
+    <li class="game-list-item">
+      <h2>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+    </li>
+  {{ end}}
+  </ol>
+
+</main>
+{{ end }}

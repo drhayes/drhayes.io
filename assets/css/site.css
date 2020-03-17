@@ -164,3 +164,17 @@ footer {
 .blog-post p {
   margin: 0;
 }
+
+.game-list {
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.game-list-item {
+  padding: 1rem;
+  border: 1px solid black;
+  flex: 4rem;
+  margin: 1rem;
+}

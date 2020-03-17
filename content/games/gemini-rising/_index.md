@@ -1,12 +1,8 @@
 ---
 title: Gemini Rising
-menu:
-  main:
-    weight: 10
 tags:
   - gemini-rising
 toc: true
-url: /games/gemini-rising
 ---
 
 ![Neato screenshot of game](/games/gemini-rising/screenshot-2018-09-12.png "Screenshot as of 2018-09-12")

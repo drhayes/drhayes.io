@@ -459,7 +459,7 @@ And, dammit, I'd spent a lot of time researching, designing, and implementing so
 The silver lining of this is that the AI subsystems became *a lot* smarter in the process. When I returned to my behavior trees I was pleasantly surprised at how much easier they were this time around. But that's a topic for another blog post.
 
 [grai]: {{< ref "/posts/gemini-rising-ai-intro/index.md" >}}
-[gr]: {{< ref "/gemini-rising.md" >}}
+[gr]: {{< ref "/games/gemini-rising" >}}
 [goap]: http://alumni.media.mit.edu/~jorkin/goap.html
 [orkin1]: http://alumni.media.mit.edu/~jorkin/GOAP_draft_AIWisdom2_2003.pdf
 [gametuts]: https://gamedevelopment.tutsplus.com/tutorials/goal-oriented-action-planning-for-a-smarter-ai--cms-20793
