@@ -3,6 +3,8 @@ title: Gemini Rising
 tags:
   - gemini-rising
 toc: true
+screenshot: /games/gemini-rising/screenshot-2018-09-12.png
+layout: article-list
 ---
 
 ![Neato screenshot of game](/games/gemini-rising/screenshot-2018-09-12.png "Screenshot as of 2018-09-12")

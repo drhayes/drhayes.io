@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main class="">
+
+  {{ if .Title }}
+  <h1 class="">{{ .Title }}</h1>
+  {{ end }}
+
+  <article>
+    {{ .Content }}
+  </article>
+
+  {{ if .Pages }}
+  <h2>Articles</h2>
+  <ol class="articles">
+    {{ range sort .Pages "Date" "asc" }}
+    <li class="article">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ol>
+  {{ end }}
+
+</main>
+{{ end }}

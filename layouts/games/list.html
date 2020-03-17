@@ -12,23 +12,12 @@
   {{ if .Sections }}
   <ol class="game-list">
   {{ range sort .Sections "Date" "desc" }}
-    <li class="game-list-item">
-      <h2>
+    <li class="game-list-item" style="background-image: url('{{ .Params.screenshot }}')">
+      <h2 class="game-title">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
     </li>
   {{ end}}
-  </ol>
-  {{ end }}
-
-  {{ if .Pages }}
-  <h2>Articles</h2>
-  <ol class="articles">
-    {{ range sort .Pages "Date" "asc" }}
-    <li class="article">
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
   </ol>
   {{ end }}
 
