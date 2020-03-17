@@ -173,21 +173,21 @@ footer {
 }
 
 .game-list-item {
-  border: 1px solid black;
-  margin: .5rem;
-  width: 25rem;
-  height: 25rem;
   background-size: cover;
+  margin: 0.5rem;
 }
 
 .game-list-item .game-title {
-  padding-top: 8rem;
-  text-align: center;
 }
 
 .game-list-item .game-title a {
+  display: inline-block;
+  text-align: center;
   color: white;
   text-shadow: 0 0 2rem white;
+  width: 25rem;
+  height: 15rem;
+  padding-top: 10rem;
 }
 
 .site-footer {
