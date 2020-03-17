@@ -18,10 +18,6 @@ Blaster uses [Phaser][] and a host of web-based technologies.
 
 Here is the [repository for the project][repo].
 
-## Articles
-
-{{% game-articles "blaster" %}}
-
 [playblaster]: http://blaster.drhayes.io
 [phaser]: https://phaser.io/
 [repo]: https://github.com/drhayes/blaster

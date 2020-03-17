@@ -5,8 +5,13 @@
   <h1 class="">{{ .Title }}</h1>
   {{ end }}
 
+  <article>
+    {{ .Content }}
+  </article>
+
+  {{ if .Sections }}
   <ol class="game-list">
-  {{ range .Sections }}
+  {{ range sort .Sections "Date" "desc" }}
     <li class="game-list-item">
       <h2>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -14,6 +19,18 @@
     </li>
   {{ end}}
   </ol>
+  {{ end }}
+
+  {{ if .Pages }}
+  <h2>Articles</h2>
+  <ol class="articles">
+    {{ range sort .Pages "Date" "asc" }}
+    <li class="article">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ol>
+  {{ end }}
 
 </main>
 {{ end }}
