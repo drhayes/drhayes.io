@@ -147,3 +147,20 @@ footer {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.blog-posts-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.blog-post {
+  margin-bottom: 2rem;
+}
+
+.blog-post h2 {
+  margin: 0;
+}
+
+.blog-post p {
+  margin: 0;
+}
