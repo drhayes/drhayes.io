@@ -24,7 +24,6 @@ code {
 
 .highlight pre code {
   line-height: 1.5 !important;
-  /*max-width: 40rem;*/
 }
 
 .dotted-list li+li::before {
@@ -80,12 +79,14 @@ article main h2,article main h3, article main h4, article main h5 {
 }
 
 .site-menu {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   list-style-type: none;
 }
 
 .site-menu-item {
-  display: inline-block;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -141,38 +142,38 @@ footer {
 }
 
 .front-page {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 @media (max-width: 400px) {
-  .front-page {
-    font-size: 90%;
-    width: 100%;
-  }
-
   .front-page h1 {
-    font-size: 1.2rem;
+    font-size: calc(1rem + 1vmin)
   }
 
   .front-page h2, .front-page h3 {
-    font-size: 1rem;
+    font-size: calc(.7rem + 1vmin);
   }
 
   .front-page .site-logo {
-    display: inline-block;
-    float: left;
   }
 
   .page-header {
     display: flex;
   }
 
+  .front-page .site-menu {
+    flex-direction: row;
+  }
+
   .site-menu {
+    width: 100%;
     text-align: right;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .site-menu-item {

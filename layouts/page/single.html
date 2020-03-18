@@ -1,8 +1,8 @@
 {{ define "main" }}
-<article class="mh2 mw8 center-ns">
+<main class="">
 
-  <header class="w-100 mb4">
-    <h1 class="f1 lh-solid mt0 mb1 ph1 lh-title tracked-tight tc">
+  <header class="">
+    <h1 class="title">
       {{ .Title }}
     </h1>
 
@@ -12,9 +12,9 @@
 
   </header>
 
-  <main class="mw-100 w-100 lh-copy f5 f4-ns">
+  <article class="">
     {{ .Content }}
-  </main>
+  </article>
 
-</article>
+</main>
 {{ end }}

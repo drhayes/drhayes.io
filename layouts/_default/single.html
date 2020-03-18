@@ -1,6 +1,5 @@
 {{ define "main" }}
-{{ $section := .Site.GetPage "section" .Section }}
-<article class="">
+<main class="">
 
   <header class="">
     {{ if .Params.Date }}
@@ -21,16 +20,12 @@
 
   </header>
 
-  <section class="">
-    <aside class="">
-      {{- partial "menu-contextual.html" . -}}
-    </aside>
+  <aside class="">
+    {{- partial "menu-contextual.html" . -}}
+  </aside>
 
-    <main class="">
-      {{- .Content -}}
-      {{- partial "comments.html" . -}}
-    </main>
-  </section>
+  {{- .Content -}}
+  {{- partial "comments.html" . -}}
 
-</article>
+</main>
 {{ end }}
