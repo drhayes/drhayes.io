@@ -17,9 +17,7 @@ jobs:
       uses: peaceiris/actions-hugo@v2.2.2
       with:
         hugo-version: 'latest'
-
-    - name: Install asciidoctor
-      run: sudo apt-get install -y asciidoctor
+        extended: true
 
     - name: Build
       run: hugo --gc --minify -v

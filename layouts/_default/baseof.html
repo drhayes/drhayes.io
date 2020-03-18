@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/> -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700|Inconsolata:400" rel="stylesheet"> -->
-  {{ $css := resources.Get "css/site.css" | minify | fingerprint }}
+  {{ $css := resources.Get "sass/site.scss" | resources.ToCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
   <!-- Favicon stuff -->
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
