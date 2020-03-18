@@ -1,6 +1,6 @@
 body {
   font-size: 18px;
-  font-family: monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   background: #fff;
   color: #111;
   line-height: 1.6;
@@ -12,13 +12,8 @@ a {
 }
 
 code {
-  font-family: "Inconsolata", monospace;
   padding: 0.5rem;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  /* font-family: -apple-system,BlinkMacSystemFont,"Segoe
-  UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
+  background-color: #f0f3f3;
 }
 
 .highlight code {
