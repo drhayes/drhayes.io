@@ -156,34 +156,46 @@ footer {
 }
 
 @media (max-width: 400px) {
-  .front-page h1 {
-    font-size: calc(1rem + 1vmin)
+  body {
+    font-size: calc(12px + 1vmin);
   }
 
-  .front-page h2, .front-page h3 {
-    font-size: calc(.7rem + 1vmin);
-  }
+  .front-page {
+    h1 {
+      font-size: calc(1rem + 1vmin)
+    }
 
-  .front-page .site-logo {
+    h2, h3 {
+      font-size: calc(.7rem + 1vmin);
+    }
+
+    .site-menu {
+      flex-direction: row;
+    }
   }
 
   .page-header {
     display: flex;
   }
 
-  .front-page .site-menu {
-    flex-direction: row;
-  }
-
   .site-menu {
     width: 100%;
+    font-size: 120%;
     text-align: right;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: flex-end;
   }
 
   .site-menu-item {
     display: block;
+  }
+
+  article {
+    aside {
+      float: none;
+      margin: 1rem;
+    }
   }
 }
 
