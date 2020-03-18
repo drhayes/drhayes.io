@@ -50,15 +50,15 @@ blockquote {
   color: #222;
 }
 
-article main p {
+article p {
 }
 
-article main h1, article main h2, article main h3, article main h4, article main h5 {
-  margin-top: 2em;
-  margin-bottom: -.2em;
+article h1, article h2, article h3, article h4, article h5 {
+  margin-top: 2rem;
+  margin-bottom: -.2rem;
 }
 
-article main h2,article main h3, article main h4, article main h5 {
+article h2,article h3, article h4, article h5 {
   border-bottom: 1px dotted #ccc;
 }
 
@@ -192,7 +192,9 @@ footer {
 
 .blog-post h2 {
   margin: 0;
+  border: none;
 }
+
 
 .blog-post p {
   margin: 0;
@@ -250,6 +252,6 @@ footer {
   opacity: .8;
 }
 
-.content main article img {
+.content article img {
   max-width: 100%;
 }

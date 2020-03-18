@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main class="">
+<article class="">
 
   <header class="">
     {{ if .Params.Date }}
@@ -27,5 +27,5 @@
   {{- .Content -}}
   {{- partial "comments.html" . -}}
 
-</main>
+</article>
 {{ end }}

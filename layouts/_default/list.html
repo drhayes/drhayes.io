@@ -8,11 +8,13 @@
   <ol class="blog-posts-list">
     {{ range .Paginator.Pages }}
     <li class="blog-post">
-      <h2>
-        <a href="{{ .RelPermalink }}" class="">{{ .Title }}</a>
-      </h2>
-      <p>{{ plainify .Summary | safeHTML }}</p>
-      <p class="reading-time">{{ .ReadingTime }} minute read</p>
+      <article>
+        <h2>
+          <a href="{{ .RelPermalink }}" class="">{{ .Title }}</a>
+        </h2>
+        <p>{{ plainify .Summary | safeHTML }}</p>
+        <p class="reading-time">{{ .ReadingTime }} minute read</p>
+      </article>
     </li>
     {{ end }}
   </ol>
