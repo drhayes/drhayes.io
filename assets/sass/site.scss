@@ -35,8 +35,12 @@ code {
   }
 }
 
-.dotted-list li+li::before {
-  content: '·';
+.dotted-list {
+  li+li {
+    &::before {
+      content: '·';
+    }
+  }
 }
 
 blockquote {
@@ -116,11 +120,16 @@ article {
 }
 
 .tags {
-  text-align: center;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-item: center;
+  align-content: space-evenly;
   font-size: 90%;
 
   .tag {
-    display: inline-block;
+    list-style-type: none;
+    margin-right: 1rem;
   }
 }
 
