@@ -36,13 +36,7 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="google-site-verification" content="62OprotnkXjdlu5isXeGX010S3smwpIK4aHKez_WBJU">
-  <meta name="description" content="{{ with .Description }}
-{{ . }}
-{{ else }}
-{{if .IsPage}}{{ .Summary }}
-{{ else }}{{ with .Site.Params.description }}
-{{ . }}
-{{ end }}{{ end }}{{ end }}">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
   {{ if and (eq .Kind "taxonomy") (eq .Type "categories")}}
   <meta name="robots" content="noindex, follow"/>
   {{ else }}

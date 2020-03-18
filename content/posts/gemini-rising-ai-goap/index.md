@@ -10,7 +10,7 @@ tags:
 description: My exploration of goal-oriented action planning and why I eventually decided not to use it.
 ---
 
-This post is the (long overdue) third post in a series I'm writing about [scripting the AI in my game, Gemini Rising][grai]. This one is about goal-oriented action planning, or <abbr title="goal-oriented action planning">GOAP</abbr>.
+This post is the (long overdue) third post in a series I'm writing about [scripting the AI in my game, Gemini Rising][grai]. This one is about goal-oriented action planning, or {{< abbr GOAP "goal-oriented action planning" >}}.
 
 <!--more-->
 
@@ -18,11 +18,11 @@ I'm often frustrated to find that the blog posts I read don't dig into enough de
 
 ## Intro
 
-Before deciding on behavior trees for the AI of [Gemini Rising][gr], I flirted with using <abbr title="goal-oriented action planning">GOAP</abbr>. Simply put, <abbr title="goal-oriented action planning">GOAP</abbr> involves giving your actors goals and a collection of actions. The goal is represented as a desired world-state. The actions have metadata that shows how taking that action mutates the world-state. The actors then path-find through the space of sequences of actions to see if any sequence will help them reach their goals.
+Before deciding on behavior trees for the AI of [Gemini Rising][gr], I flirted with using {{< abbr GOAP "goal-oriented action planning" >}}. Simply put, {{< abbr GOAP "goal-oriented action planning" >}} involves giving your actors goals and a collection of actions. The goal is represented as a desired world-state. The actions have metadata that shows how taking that action mutates the world-state. The actors then path-find through the space of sequences of actions to see if any sequence will help them reach their goals.
 
-<abbr title="goal-oriented action planning">GOAP</abbr> has been used in many video games, most notably perhaps in F.E.A.R. It's very interesting, surprisingly simple... and complete overkill for my project. I ended up removing it from Gemini Rising. However, the decisions that I made along the way of exploring GOAP helped me create an improved implementation of behavior trees, so I consider it worth the effort. Mostly.
+{{< abbr GOAP "goal-oriented action planning" >}} has been used in many video games, most notably perhaps in F.E.A.R. It's very interesting, surprisingly simple... and complete overkill for my project. I ended up removing it from Gemini Rising. However, the decisions that I made along the way of exploring GOAP helped me create an improved implementation of behavior trees, so I consider it worth the effort. Mostly.
 
-As is my wont in these articles, I'm not going to go in-depth in defining what <abbr title="goal-oriented action planning">GOAP</abbr> is. For that, I'd refer you to the [<abbr title="goal-oriented action planning">GOAP</abbr> site itself][goap], as well as a [paper written by Jeff Orkin, the guy who originated the technique][orkin1]. Another good reference is [this gamedev tutsplus article about <abbr title="goal-oriented action planning">GOAP</abbr>][gametuts] with some nice examples.
+As is my wont in these articles, I'm not going to go in-depth in defining what {{< abbr GOAP "goal-oriented action planning" >}} is. For that, I'd refer you to the [{{< abbr GOAP "goal-oriented action planning" >}} site itself][goap], as well as a [paper written by Jeff Orkin, the guy who originated the technique][orkin1]. Another good reference is [this gamedev tutsplus article about {{< abbr GOAP "goal-oriented action planning" >}}][gametuts] with some nice examples.
 
 ## Goals
 
