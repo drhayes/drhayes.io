@@ -1,25 +1,23 @@
 {{ define "main" }}
-<article class="mh2 mw8 center-ns">
+<main class="">
 
   {{ if .Title }}
-  <h1 class="f1 tc">{{ .Title }}</h1>
+  <h1 class="">{{ .Title }}</h1>
   {{ end }}
 
-  {{ if .Content }}
-  <main class="">
-    {{- .Content -}}
-  </main>
-  {{ end }}
+  <ol class="blog-posts-list">
+    {{ range .Paginator.Pages }}
+    <li class="blog-post">
+      <h2>
+        <a href="{{ .RelPermalink }}" class="">{{ .Title }}</a>
+      </h2>
+      <p>{{ plainify .Summary | safeHTML }}</p>
+      <p class="reading-time">{{ .ReadingTime }} minute read</p>
+    </li>
+    {{ end }}
+  </ol>
 
-  <div class="">
-    <section class="">
-      {{ range .Paginator.Pages }}
-      <article class="relative w-100 mb4">
-        {{- partial "summary.html" . -}}
-      </article>
-      {{ end }}
-    </section>
-  </div>
   {{- template "_internal/pagination.html" . -}}
-</article>
+
+</main>
 {{ end }}

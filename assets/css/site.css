@@ -108,7 +108,7 @@ article main h2,article main h3, article main h4, article main h5 {
 .article-date time {
   display: inline-block;
   position: relative;
-  top: .6rem;
+  top: .8rem;
   background: white;
   padding: 0 1rem;
   font-style: italic;
@@ -192,4 +192,27 @@ footer {
 
 .site-footer {
   margin-top: 6rem;
+}
+
+.taxonomy-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.taxon-item {
+  margin-bottom: 2rem;
+}
+
+.taxon-item h2 {
+  margin: 0;
+}
+
+.taxon-item p {
+  margin: 0;
+}
+
+.reading-time {
+  font-style: italic;
+  font-size: 90%;
+  opacity: .8;
 }

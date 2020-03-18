@@ -12,7 +12,7 @@
         <a href="{{ .RelPermalink }}" class="">{{ .Title }}</a>
       </h2>
       <p>{{ plainify .Summary | safeHTML }}</p>
-      <p class="">{{ .ReadingTime }} minute read</p>
+      <p class="reading-time">{{ .ReadingTime }} minute read</p>
     </li>
     {{ end }}
   </ol>

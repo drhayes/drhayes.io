@@ -1,13 +1,23 @@
 {{ define "main" }}
-<div class="mh2 mw8 center-ns">
-  <h1 class="f5 ttu tracked mv2">Pages tagged “{{ .Title }}”</h1>
+<main class="">
 
-  <ol class="list ma0 pa0">
-    {{ range  .Pages }}
-    <li class="mb2">
-      {{ partial "summary.html" . }}
+  {{ if .Title }}
+  <h1 class="">Pages tagged "{{ .Title }}"</h1>
+  {{ end }}
+
+  <ol class="taxonomy-list">
+    {{ range .Paginator.Pages }}
+    <li class="taxon-item">
+      <h2>
+        <a href="{{ .RelPermalink }}" class="">{{ .Title }}</a>
+      </h2>
+      <p>{{ plainify .Summary | safeHTML }}</p>
+      <p class="reading-time">{{ .ReadingTime }} minute read</p>
     </li>
     {{ end }}
   </ol>
-</div>
+
+  {{- template "_internal/pagination.html" . -}}
+
+</main>
 {{ end }}
