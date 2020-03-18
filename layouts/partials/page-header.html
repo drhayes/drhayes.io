@@ -1,12 +1,14 @@
 {{ $logo := resources.Get "raven.png" }}
-<nav class="">
+<nav class="page-header">
   <a href="/" class="site-logo">
     <img src="{{ $logo.RelPermalink }}" alt="drhayes.io">
   </a>
 
-  <div class="site-menu">
+  <ul class="site-menu">
     {{ range .Site.Menus.main }}
-    <a class="site-menu-item" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
+    <li class="site-menu-item">
+      <a class="" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
+    </li>
     {{ end }}
-  </div>
+  </ul>
 </nav>

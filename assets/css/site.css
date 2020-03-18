@@ -1,6 +1,7 @@
 body {
   font-size: 18px;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, FreeMono, monospace;
+  font-weight: 400;
   background: #fff;
   color: #111;
   line-height: 1.6;
@@ -23,6 +24,7 @@ code {
 
 .highlight pre code {
   line-height: 1.5 !important;
+  /*max-width: 40rem;*/
 }
 
 .dotted-list li+li::before {
@@ -62,7 +64,7 @@ article main h2,article main h3, article main h4, article main h5 {
 }
 
 .content {
-  width: 60rem;
+  max-width: 60rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -79,9 +81,12 @@ article main h2,article main h3, article main h4, article main h5 {
 
 .site-menu {
   text-align: center;
+  list-style-type: none;
 }
 
 .site-menu-item {
+  display: inline-block;
+  margin-left: 1rem;
   margin-right: 1rem;
 }
 
@@ -141,6 +146,38 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+@media (max-width: 400px) {
+  .front-page {
+    font-size: 90%;
+    width: 100%;
+  }
+
+  .front-page h1 {
+    font-size: 1.2rem;
+  }
+
+  .front-page h2, .front-page h3 {
+    font-size: 1rem;
+  }
+
+  .front-page .site-logo {
+    display: inline-block;
+    float: left;
+  }
+
+  .page-header {
+    display: flex;
+  }
+
+  .site-menu {
+    text-align: right;
+  }
+
+  .site-menu-item {
+    display: block;
+  }
 }
 
 .blog-posts-list {
@@ -210,4 +247,8 @@ footer {
   font-style: italic;
   font-size: 90%;
   opacity: .8;
+}
+
+.content main article img {
+  max-width: 100%;
 }
