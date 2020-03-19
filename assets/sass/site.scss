@@ -1,3 +1,5 @@
+$border-color: #ccc;
+
 body {
   font-size: 18px;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, FreeMono, monospace;
@@ -69,7 +71,7 @@ article {
   }
 
   h2,h3,h4,h5 {
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px dotted $border-color;
   }
 
   header {
@@ -106,7 +108,7 @@ article {
         font-weight: bold;
         padding: .5rem .9rem;
         margin-right: .5rem;
-        border: 1px dotted #ccc;
+        border: 1px dotted $border-color;
         float: left;
       }
     }
@@ -157,7 +159,7 @@ article {
 }
 
 .article-date {
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted $border-color;
   text-align: center;
   margin-bottom: 3rem;
 
@@ -173,10 +175,6 @@ article {
 
 .title {
   text-align: center;
-}
-
-footer {
-  font-size: 90%;
 }
 
 .front-page {
@@ -249,6 +247,12 @@ footer {
       top: 0.9rem;
     }
   }
+
+  .site-footer {
+    .creative-commons-license {
+      flex-direction: column;
+    }
+  }
 }
 
 .blog-posts-list {
@@ -295,7 +299,36 @@ footer {
 }
 
 .site-footer {
-  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 80%;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px dotted $border-color;
+
+  .creative-commons-license {
+    display: flex;
+    align-content: flex-start;
+
+    a {
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  .find-me {
+    p {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+  }
 }
 
 .taxonomy-list {
