@@ -24,8 +24,13 @@
     {{- partial "menu-contextual.html" . -}}
   </aside>
 
+  <section class="article-content">
   {{- .Content -}}
+  </section>
+
+  <section class="comments">
   {{- partial "comments.html" . -}}
+  </section>
 
 </article>
 {{ end }}

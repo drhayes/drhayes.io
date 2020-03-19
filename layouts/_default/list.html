@@ -12,7 +12,9 @@
         <h2>
           <a href="{{ .RelPermalink }}" class="">{{ .Title }}</a>
         </h2>
-        <p>{{ plainify .Summary | safeHTML }}</p>
+        <p>
+          {{ if .Params.description }}{{ .Params.description }}{{ else }}{{ plainify (.Summary) | safeHTML }}{{ end }}
+        </p>
         <p class="reading-time">{{ .ReadingTime }} minute read</p>
       </article>
     </li>
