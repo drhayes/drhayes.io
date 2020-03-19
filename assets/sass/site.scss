@@ -72,6 +72,10 @@ article {
     border-bottom: 1px dotted #ccc;
   }
 
+  header {
+    margin-bottom: 4rem;
+  }
+
   section {
     margin-top: 4rem;
   }
@@ -82,12 +86,27 @@ article {
     margin-bottom: 3rem;
 
     h3 {
-      margin-top: .5rem;
+      margin-top: 0;
     }
 
     ul,ol {
       padding: 0;
       list-style-type: none;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  p:first-of-type {
+    &:first-letter {
+      font-size: 300%;
+      font-weight: bold;
+      padding: .5rem .9rem;
+      margin-right: .2rem;
+      border: 1px dotted #ccc;
+      float: left;
     }
   }
 }
@@ -96,12 +115,6 @@ article {
   max-width: 60rem;
   margin-left: auto;
   margin-right: auto;
-
-  article {
-    img {
-     max-width: 100%;
-    }
-  }
 }
 
 .site-logo {
@@ -142,14 +155,14 @@ article {
 }
 
 .article-date {
-  border-bottom: 1px dotted #777;
+  border-bottom: 1px dotted #ccc;
   text-align: center;
   margin-bottom: 3rem;
 
   time {
     display: inline-block;
     position: relative;
-    top: .8rem;
+    top: 1rem;
     background: white;
     padding: 0 1rem;
     font-style: italic;
@@ -172,18 +185,18 @@ footer {
   height: 100vh;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   body {
-    font-size: calc(12px + 1vmin);
+    font-size: 16px;
   }
 
   .front-page {
     h1 {
-      font-size: calc(1rem + 1vmin)
+      font-size: 1.5rem;
     }
 
     h2, h3 {
-      font-size: calc(.7rem + 1vmin);
+      font-size: 1rem;
     }
 
     .site-menu {
@@ -197,7 +210,6 @@ footer {
 
   .site-menu {
     width: 100%;
-    font-size: 120%;
     text-align: right;
     flex-direction: column;
     justify-content: space-evenly;
@@ -211,7 +223,26 @@ footer {
   article {
     aside {
       float: none;
-      margin: 1rem;
+      // margin: 1rem 0;
+      margin: 0;
+      margin-bottom: 3rem;
+    }
+
+    p:first-of-type {
+      &:first-letter {
+        font-size: inherit;
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+        border: none;
+        float: none;
+      }
+    }
+  }
+
+  .article-date {
+    time {
+      top: 0.9rem;
     }
   }
 }
