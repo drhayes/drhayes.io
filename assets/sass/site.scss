@@ -99,14 +99,16 @@ article {
     max-width: 100%;
   }
 
-  p:first-of-type {
-    &:first-letter {
-      font-size: 300%;
-      font-weight: bold;
-      padding: .5rem .9rem;
-      margin-right: .2rem;
-      border: 1px dotted #ccc;
-      float: left;
+  .article-content {
+    p:first-of-type {
+      &::first-letter {
+        font-size: 300%;
+        font-weight: bold;
+        padding: .5rem .9rem;
+        margin-right: .5rem;
+        border: 1px dotted #ccc;
+        float: left;
+      }
     }
   }
 }
@@ -228,14 +230,16 @@ footer {
       margin-bottom: 3rem;
     }
 
-    p:first-of-type {
-      &:first-letter {
-        font-size: inherit;
-        font-weight: normal;
-        padding: 0;
-        margin: 0;
-        border: none;
-        float: none;
+    .article-content {
+      p:first-of-type {
+        &:first-letter {
+          font-size: inherit;
+          font-weight: normal;
+          padding: 0;
+          margin: 0;
+          border: none;
+          float: none;
+        }
       }
     }
   }
@@ -271,21 +275,21 @@ footer {
   padding-left: 0;
   list-style-type: none;
   flex-wrap: wrap;
-}
 
-.game-list-item {
-  background-size: cover;
-  margin: 0.5rem;
+  .game-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    margin: 0.5rem;
+    width: 25rem;
+    height: 25rem;
 
-  .game-title {
-    a {
-      display: inline-block;
-      text-align: center;
-      color: white;
-      text-shadow: 0 0 2rem white;
-      width: 25rem;
-      height: 15rem;
-      padding-top: 10rem;
+    .game-title {
+      a {
+        color: white;
+        text-shadow: 0 0 2rem white;
+      }
     }
   }
 }
