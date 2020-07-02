@@ -1,0 +1,22 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+<main class="">
+
+  <header class="">
+    <h1 class="title">
+      {{ title }}
+    </h1>
+
+{#     {{ if .Params.tags }}
+    {{ partial "tags.html" . }}
+    {{ end }}
+ #}
+  </header>
+
+  <article class="">
+    {{ content | safe }}
+  </article>
+
+</main>
+{% endblock %}

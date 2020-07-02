@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+---
+<main class="front-page h-card vcard">
+  <a href="/" class="site-logo">
+    <img src="/images/raven.png" alt="drhayes.io">
+  </a>
+  <h1 class="p-name fn">Hi, I'm David Hayes. 👋🏽</h1>
+  <a href="mailto:hi@drhayes.io" class="u-email email" rel="me">hi@drhayes.io</a>
+  <h3 class="">I do stuff with computers. I live in Austin, TX.</h3>
+
+  <div class="site-menu">
+  {% for item in menu %}
+  <a class="site-menu-item" href="{{ item.url }}">{{ item.name }}</a>
+  {% else %}
+  <li>Nuthin'</li>
+  {% endfor %}
+  </div>
+</main>

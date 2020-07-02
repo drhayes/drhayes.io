@@ -71,3 +71,4 @@ public
 resources
 
 *.sublime-workspace
+dist/
