@@ -3,7 +3,6 @@ title: Blaster
 tags:
   - blaster
 screenshot: /games/blaster/blaster-screenshot.png
-layout: article-list
 ---
 
 ![Neato screenshot of game](/games/blaster/blaster-screenshot.png "Screenshot of Blaster")

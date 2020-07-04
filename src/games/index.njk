@@ -1,0 +1,13 @@
+---
+title: Games
+layout: layouts/default.njk
+---
+<ol class="game-list">
+  {% for game in collections.games %}
+  <li class="game-list-item" style="background-image: url('{{ game.data.screenshot }}')">
+    <h2 class="game-title">
+      <a href="{{ game.url }}">{{ game.data.title }}</a>
+    </h2>
+  </li>
+  {% endfor %}
+</ol>

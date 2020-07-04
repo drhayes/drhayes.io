@@ -42,6 +42,12 @@ module.exports = eleventyConfig => {
     )
   );
 
+  // Games.
+  eleventyConfig.addCollection('games', collection => collection
+    .getFilteredByGlob('src/games/**/index.md')
+    .reverse()
+  );
+
   // Handle the images.
   // eleventyConfig.addPassthroughCopy('**/*.png');
 
