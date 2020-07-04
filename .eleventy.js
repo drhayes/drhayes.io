@@ -2,6 +2,7 @@ const sass = require('node-sass');
 const path = require('path');
 const fs = require('fs');
 const readingTime = require('eleventy-plugin-reading-time');
+const moment = require('moment');
 
 module.exports = eleventyConfig => {
   // Deep data merge!
@@ -31,6 +32,9 @@ module.exports = eleventyConfig => {
     }
     return 'drhayes.io';
   });
+
+  // Date format.
+  eleventyConfig.addFilter('dateformat', (date, format) => moment(date).format(format));
 
   // Blog posts.
   eleventyConfig.addCollection('blogPosts', collection => collection

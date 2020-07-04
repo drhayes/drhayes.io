@@ -4,39 +4,17 @@
 
 {% block content %}
 {% include "header.njk" %}
-<article class="">
+<main class="">
 
   <header class="">
-    {%- if date -%}
-      <div class="article-date">
-        <time datetime="{{ date }} {# .Date.Format "2006-01-02T15:04:05Z07:00" #}">
-          {{ date }}
-        </time>
-      </div>
-    {%- endif -%}
-
     <h1 class="title">
       {{ title }}
     </h1>
-
-{#     {{ if .Params.tags }}
-    {{ partial "tags.html" . }}
-    {{ end }}
- #}
   </header>
-
-  <aside class="">
-    {# {{- partial "menu-contextual.html" . -}} #}
-  </aside>
-
 
   <section class="article-content">
     {{ content | safe }}
   </section>
 
-  <section class="comments">
-  {# - partial "comments.html" . - #}
-  </section>
-
-</article>
+</main>
 {% endblock %}

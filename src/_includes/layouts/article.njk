@@ -1,0 +1,44 @@
+{% extends "layouts/base.njk" %}
+
+{% block title %}{{ title | titleify }}{% endblock %}
+
+{% block content %}
+{% include "header.njk" %}
+<article class="">
+
+  <header class="">
+    {%- if date -%}
+      <div class="article-date">
+        <time datetime="{{ date | dateformat('YYYY-MM-DDTHH:mm:ssZ') }}">
+          {{ date | dateformat('YYYY.MM.DD') }}
+        </time>
+      </div>
+    {%- endif -%}
+
+    <h1 class="title">{{ title }}</h1>
+
+    {%- if tags -%}
+      <ul class="tags dotted-list">
+        {%- for tag in tags -%}
+          <li class="tag">
+            <a href="/tags/{{ tag }}" class="">{{ tag }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </header>
+
+  {# <aside class="">related content goes here</aside> #}
+
+
+  <section class="article-content">
+    {{ content | safe }}
+  </section>
+
+  <section class="comments">
+    <div id="commento"></div>
+    <script defer src="https://cdn.commento.io/js/commento.js"></script>
+  </section>
+
+</article>
+{% endblock %}
