@@ -1,5 +1,6 @@
 ---
 title: Ha Ha Again, It's Hugo
+description: Just kidding, I'm using Hugo now.
 date: 2018-12-12T23:25:53-06:00
 tags:
   - static-site-generators

@@ -1,0 +1,15 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+<main class="">
+
+  <header class="">
+    <h1 class="title">
+      {{ title }}
+    </h1>
+  </header>
+
+  {{ content | safe }}
+
+</main>
+{% endblock %}

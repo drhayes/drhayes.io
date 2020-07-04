@@ -1,5 +1,6 @@
 ---
 title: Gemini Rising AI - Lua Scripting
+description: A short article about trying to script AI with straight lua code.
 date: 2019-03-22T11:10:26-05:00
 tags:
   - Gemini Rising

@@ -11,8 +11,6 @@ description: An exploration of behavior trees within Gemini Rising.
 
 This post is the second in a [series I'm writing about scripting the AI in my game, Gemini Rising][grai]. This one is about behavior trees.
 
-<!--more-->
-
 There aren't enough resources out there that dive deeply into interesting programming topics. It's easy to find "hello world" examples, but it's harder to find meaty essays that discuss pros and cons, tradeoffs taken, long-term consequences unforeseen. These posts are my attempt to fix that.
 
 ## Intro

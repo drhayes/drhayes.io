@@ -1,0 +1,29 @@
+---
+layout: layouts/list.njk
+title: Blog
+pagination:
+  data: collections.blogPosts
+  size: 10
+---
+<ol class="blog-posts-list">
+  {% for post in pagination.items %}
+  <li class="blog-post">
+    <article>
+      <h2>
+        <a href="{{ post.url }}" class="">{{ post.data.title }}</a>
+      </h2>
+      {% if post.data.description %}
+        <p>{{ post.data.description }}</p>
+      {% endif %}
+      <p class="reading-time">{{ post | readingTime }} minute read</p>
+    </article>
+  </li>
+  {% endfor %}
+</ol>
+
+{% if pagination.href.previous %}
+  <a href="{{ pagination.href.previous }}">Previous</a>
+{% endif %}
+{% if pagination.href.next %}
+<a href="{{ pagination.href.next }}">Next</a>
+{% endif %}

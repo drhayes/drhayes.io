@@ -10,9 +10,7 @@ tags:
 description: My exploration of goal-oriented action planning and why I eventually decided not to use it.
 ---
 
-This post is the (long overdue) third post in a series I'm writing about [scripting the AI in my game, Gemini Rising][grai]. This one is about goal-oriented action planning, or {{< abbr GOAP "goal-oriented action planning" >}}.
-
-<!--more-->
+This post is the (long overdue) third post in a series I'm writing about [scripting the AI in my game, Gemini Rising][grai]. This one is about goal-oriented action planning, or <abbr title="goal-oriented action planning">GOAP</abbr>.
 
 I'm often frustrated to find that the blog posts I read don't dig into enough details about the *why* of things, instead focusing on very basic *what*s. With these posts, I'm trying to change that. Let's dive in.
 

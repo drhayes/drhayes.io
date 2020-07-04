@@ -1,5 +1,6 @@
 ---
 title: Gemini Rising AI - Introduction
+description: The introduction to my series of posts about AI in my game Gemini Rising.
 date: 2019-03-21T16:10:51-05:00
 tags:
   - Gemini Rising
