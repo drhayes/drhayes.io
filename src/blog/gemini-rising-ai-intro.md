@@ -43,7 +43,7 @@ Here are the posts that are ready.
    3. [Goal-Oriented Action Planning][goap]
 
 
-[gr]: {{< ref "/games/gemini-rising" >}}
-[luascripting]: {{< ref "gemini-rising-ai-lua-scripting" >}}
-[bt]: {{< ref "gemini-rising-ai-behavior-trees" >}}
-[goap]: {{< ref "gemini-rising-ai-goap" >}}
+[gr]: /games/gemini-rising
+[luascripting]: gemini-rising-ai-lua-scripting
+[bt]: gemini-rising-ai-behavior-trees
+[goap]: gemini-rising-ai-goap

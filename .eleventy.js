@@ -3,8 +3,18 @@ const path = require('path');
 const fs = require('fs');
 const readingTime = require('eleventy-plugin-reading-time');
 const moment = require('moment');
+const markdownIt = require('markdown-it');
+const markdownItEmoji = require("markdown-it-emoji");
 
 module.exports = eleventyConfig => {
+  // Custom Markdown library.
+  const markdownLib = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+  }).use(markdownItEmoji);
+  eleventyConfig.setLibrary("md", markdownLib);
+
   // Deep data merge!
   eleventyConfig.setDataDeepMerge(true);
 
@@ -52,6 +62,15 @@ module.exports = eleventyConfig => {
     .reverse()
   );
 
+  eleventyConfig.addCollection('gamearticles', collection => collection
+    .getFilteredByGlob('src/games/**/*.md')
+    .filter(page => !page.inputPath.includes('index.md'))
+  );
+
+  eleventyConfig.addFilter('articlesfor', (articles, include) => articles
+    .filter(article => article.inputPath.includes(include))
+  );
+
   // Handle the images.
   // eleventyConfig.addPassthroughCopy('**/*.png');
 
@@ -59,6 +78,7 @@ module.exports = eleventyConfig => {
     dir: {
       input: 'src',
       output: 'dist',
-    }
+    },
+    markdownTemplateEngine: "njk",
   };
 };

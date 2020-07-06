@@ -17,6 +17,17 @@ Blaster uses [Phaser][] and a host of web-based technologies.
 
 Here is the [repository for the project][repo].
 
+## Articles
+
+<ol>
+{% for article in collections.gamearticles | articlesfor('blaster') %}
+  <li>
+    <a href="{{ article.url }}">{{ article.data.title }}</a>
+  </li>
+{% endfor %}
+</ol>
+
+
 [playblaster]: http://blaster.drhayes.io
 [phaser]: https://phaser.io/
 [repo]: https://github.com/drhayes/blaster

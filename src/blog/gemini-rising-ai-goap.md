@@ -16,11 +16,11 @@ I'm often frustrated to find that the blog posts I read don't dig into enough de
 
 ## Intro
 
-Before deciding on behavior trees for the AI of [Gemini Rising][gr], I flirted with using {{< abbr GOAP "goal-oriented action planning" >}}. Simply put, {{< abbr GOAP "goal-oriented action planning" >}} involves giving your actors goals and a collection of actions. The goal is represented as a desired world-state. The actions have metadata that shows how taking that action mutates the world-state. The actors then path-find through the space of sequences of actions to see if any sequence will help them reach their goals.
+Before deciding on behavior trees for the AI of [Gemini Rising][gr], I flirted with using <abbr title="goal-oriented action planning">GOAP</abbr>. Simply put, <abbr title="goal-oriented action planning">GOAP</abbr> involves giving your actors goals and a collection of actions. The goal is represented as a desired world-state. The actions have metadata that shows how taking that action mutates the world-state. The actors then path-find through the space of sequences of actions to see if any sequence will help them reach their goals.
 
-{{< abbr GOAP "goal-oriented action planning" >}} has been used in many video games, most notably perhaps in F.E.A.R. It's very interesting, surprisingly simple... and complete overkill for my project. I ended up removing it from Gemini Rising. However, the decisions that I made along the way of exploring GOAP helped me create an improved implementation of behavior trees, so I consider it worth the effort. Mostly.
+<abbr title="goal-oriented action planning">GOAP</abbr> has been used in many video games, most notably perhaps in F.E.A.R. It's very interesting, surprisingly simple... and complete overkill for my project. I ended up removing it from Gemini Rising. However, the decisions that I made along the way of exploring GOAP helped me create an improved implementation of behavior trees, so I consider it worth the effort. Mostly.
 
-As is my wont in these articles, I'm not going to go in-depth in defining what {{< abbr GOAP "goal-oriented action planning" >}} is. For that, I'd refer you to the [{{< abbr GOAP "goal-oriented action planning" >}} site itself][goap], as well as a [paper written by Jeff Orkin, the guy who originated the technique][orkin1]. Another good reference is [this gamedev tutsplus article about {{< abbr GOAP "goal-oriented action planning" >}}][gametuts] with some nice examples.
+As is my wont in these articles, I'm not going to go in-depth in defining what <abbr title="goal-oriented action planning">GOAP</abbr> is. For that, I'd refer you to the [<abbr title="goal-oriented action planning">GOAP</abbr> site itself][goap], as well as a [paper written by Jeff Orkin, the guy who originated the technique][orkin1]. Another good reference is [this gamedev tutsplus article about <abbr title="goal-oriented action planning">GOAP</abbr>][gametuts] with some nice examples.
 
 ## Goals
 
@@ -456,13 +456,13 @@ And, dammit, I'd spent a lot of time researching, designing, and implementing so
 
 The silver lining of this is that the AI subsystems became *a lot* smarter in the process. When I returned to my behavior trees I was pleasantly surprised at how much easier they were this time around. But that's a topic for another blog post.
 
-[grai]: {{< ref "/posts/gemini-rising-ai-intro/index.md" >}}
-[gr]: {{< ref "/games/gemini-rising" >}}
+[grai]: /2019/03/21/gemini-rising-ai-introduction/
+[gr]: /games/gemini-rising
 [goap]: http://alumni.media.mit.edu/~jorkin/goap.html
 [orkin1]: http://alumni.media.mit.edu/~jorkin/GOAP_draft_AIWisdom2_2003.pdf
 [gametuts]: https://gamedevelopment.tutsplus.com/tutorials/goal-oriented-action-planning-for-a-smarter-ai--cms-20793
 [thiefsenses]: https://www.gamasutra.com/view/feature/131297/building_an_ai_sensory_system_.php
-[armyofficerstest]: {{< ref "/parables/army-officers-test.md" >}}
+[armyofficerstest]: /parables/army-officers-test.md
 [aiforgames]: https://smile.amazon.com/AI-Games-Third-Ian-Millington/dp/1138483974/ref=sr_1_1?keywords=artificial+intelligence+for+games&qid=1572234715&sr=8-1
 [malcolm-video]: https://www.youtube.com/watch?v=4PLvdmifDSk
 [astar]: https://en.wikipedia.org/wiki/A*_search_algorithm

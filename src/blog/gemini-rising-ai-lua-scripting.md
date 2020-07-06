@@ -168,10 +168,10 @@ In hindsight, some of these were newbie Lua programmer mistakes. I also hadn't s
 
 The [next post][bts] will cover my initial adventure into behavior trees.
 
-[grai]: {{< ref "gemini-rising-ai-intro" >}}
+[grai]: gemini-rising-ai-intro
 [gr]: https://drhayes.io/games/gemini-rising
 [love2d]: https://love2d.org/
 [coroutines]: https://en.wikipedia.org/wiki/Coroutine
 [setfenv]: https://www.lua.org/pil/14.3.html
 [convoke]: https://github.com/airstruck/knife/blob/master/readme/convoke.md
-[bts]: {{<ref "gemini-rising-ai-behavior-trees" >}}
+[bts]: gemini-rising-ai-behavior-trees
