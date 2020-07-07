@@ -26,7 +26,7 @@ All that stuff I said in the last post is still true, though. A part of me worri
 
 Yet, also truthfully, I like messing around with this stuff. Coder's gonna code. And my personal site has to be frictionless and exactly the way I want it to work.
 
-![Ha Ha, The Internet](/funny/ha_ha_guy.jpg)
+![Ha Ha, The Internet](/img/ha_ha_guy.jpg)
 
 [thatcommit]: https://github.com/drhayes/drhayes.io/tree/23d27e32f6b8ca02b08651020c0e83e64478653d
 [tachyons]: https://tachyons.io/
