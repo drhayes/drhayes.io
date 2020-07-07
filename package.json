@@ -1,7 +1,7 @@
 {
   "name": "drhayes.io",
   "version": "1.0.0",
-  "description": "My personal webiste, built using [Hugo].",
+  "description": "My personal website, built using eleventy.",
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
