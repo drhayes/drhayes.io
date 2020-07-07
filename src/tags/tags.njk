@@ -1,0 +1,22 @@
+---
+layout: layouts/list.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+<ol class="tag-list">
+{% set taglist = collections[tag] %}
+{% for post in taglist | reverse %}
+  <li class="tag-item">
+    <h2>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </h2>
+    {% if post.data.description %}
+      <p>{{ post.data.description }}</p>
+    {% endif %}
+    <p class="reading-time">{{ post | readingTime }} read</p>
+  </li>
+{% endfor %}
+</ol>

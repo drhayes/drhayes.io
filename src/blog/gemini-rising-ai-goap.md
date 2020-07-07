@@ -2,9 +2,9 @@
 title: Gemini Rising AI -  Goal-Oriented Action Planning
 date: 2019-10-25T10:32:01-05:00
 tags:
-  - Gemini Rising
-  - AI
-  - Gemini Rising AI
+  - gemini-rising
+  - ai
+  - gemini-rising-ai
   - goap
   - pathfinding
 description: My exploration of goal-oriented action planning and why I eventually decided not to use it.

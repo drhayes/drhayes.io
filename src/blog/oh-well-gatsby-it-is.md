@@ -4,7 +4,6 @@ date: 2018-11-24
 tags:
   - gatsby
   - static-site-generators
-published: true
 ---
 
 I switched over to Gatsby because Ruby is kind of annoying and because I'm more of a JavaScript tinkerer than a Ruby "it just works leave it alone"-er.

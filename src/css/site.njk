@@ -1,0 +1,9 @@
+---
+permalink: /css/site.css
+---
+{% set css %}
+  {% include "css/site.scss" %}
+  {% include "../../node_modules/highlight.js/scss/dracula.scss" %}
+{% endset %}
+
+{{ css | sassify | safe }}

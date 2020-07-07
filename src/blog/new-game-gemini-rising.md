@@ -4,7 +4,6 @@ tags:
   - gemini-rising
   - löve
 date: 2018-09-13
-published: true
 ---
 
 The name of the _Big Game_ that I've been working on for forever is "[Gemini Rising][gr]".

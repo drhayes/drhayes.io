@@ -5,7 +5,6 @@ tags:
   - static-site-generators
   - nextjs
 date: 2018-12-06
-published: true
 ---
 
 Just when I thought I was done tinkering with my site I found [NextJS]. Oops.
