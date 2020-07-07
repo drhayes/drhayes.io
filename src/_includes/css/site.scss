@@ -112,6 +112,17 @@ article {
         float: left;
       }
     }
+
+    blockquote p:first-of-type {
+      &::first-letter {
+        font-size: inherit;
+        font-weight: inherit;
+        padding: inherit;
+        margin-right: inherit;
+        border: none;
+        float: none;
+      }
+    }
   }
 }
 

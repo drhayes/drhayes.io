@@ -1,9 +1,0 @@
-<ul class="tags dotted-list">
-    {{ range .Params.tags }}
-     <li class="tag">
-       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="">
-         {{- . -}}
-       </a>
-     </li>
-    {{ end }}
-  </ul>

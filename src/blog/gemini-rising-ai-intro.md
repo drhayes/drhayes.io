@@ -44,6 +44,6 @@ Here are the posts that are ready.
 
 
 [gr]: /games/gemini-rising
-[luascripting]: gemini-rising-ai-lua-scripting
-[bt]: gemini-rising-ai-behavior-trees
-[goap]: gemini-rising-ai-goap
+[luascripting]: /2019/03/22/gemini-rising-ai-lua-scripting/
+[bt]: /2019/03/22/gemini-rising-ai-behavior-trees/
+[goap]: /2019/10/25/gemini-rising-ai-goal-oriented-action-planning/
