@@ -38,6 +38,8 @@ module.exports = eleventyConfig => {
     'njk',
     'md',
     'png',
+    'jpg',
+    'jpeg',
   ]);
 
   // Handle the CSS.
@@ -83,7 +85,9 @@ module.exports = eleventyConfig => {
   );
 
   // Handle the images.
-  // eleventyConfig.addPassthroughCopy('**/*.png');
+  eleventyConfig.addPassthroughCopy({
+    static: '.',
+  });
 
   return {
     dir: {
