@@ -21,6 +21,7 @@
     "@11ty/eleventy": "0.11.0",
     "clean-css": "4.2.3",
     "eleventy-plugin-reading-time": "0.0.1",
+    "highlight.js": "10.1.1",
     "markdown-it": "11.0.0",
     "markdown-it-emoji": "1.4.0",
     "moment": "2.27.0",

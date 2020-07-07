@@ -4,7 +4,8 @@ const fs = require('fs');
 const readingTime = require('eleventy-plugin-reading-time');
 const moment = require('moment');
 const markdownIt = require('markdown-it');
-const markdownItEmoji = require("markdown-it-emoji");
+const markdownItEmoji = require('markdown-it-emoji');
+const hljs = require('highlight.js');
 
 module.exports = eleventyConfig => {
   // Custom Markdown library.
@@ -12,6 +13,17 @@ module.exports = eleventyConfig => {
     html: true,
     breaks: true,
     linkify: true,
+    typographer: true,
+    highlight: (str, lang) => {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          const code = hljs.highlight(lang, str).value;
+          return `<pre class="hljs"><code>${code}</code></pre>`;
+        } catch (e) {
+          console.error('Error highlighting code', e);
+        }
+      }
+    },
   }).use(markdownItEmoji);
   eleventyConfig.setLibrary("md", markdownLib);
 
@@ -29,11 +41,10 @@ module.exports = eleventyConfig => {
   ]);
 
   // Handle the CSS.
-  const sassResult = sass.renderSync({
-    data: fs.readFileSync('./src/_includes/css/site.scss').toString(),
-    includePaths: [],
+  eleventyConfig.addFilter('sassify', data => {
+    const result = sass.renderSync({ data });
+    return result.css.toString();
   });
-  eleventyConfig.addNunjucksShortcode('sitecss', () => sassResult.css.toString());
 
   // Custom filters.
   eleventyConfig.addFilter('titleify', value => {
