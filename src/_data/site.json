@@ -1,3 +1,10 @@
 {
-  "name": "drhayes.io"
+  "name": "drhayes.io",
+  "subtitle": "",
+  "host": "https://drhayes.io",
+  "author": {
+    "name": "David Hayes",
+    "email": "hi@drhayes.io"
+  },
+  "googleSiteVerification": "62OprotnkXjdlu5isXeGX010S3smwpIK4aHKez_WBJU"
 }

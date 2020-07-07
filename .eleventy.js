@@ -6,6 +6,7 @@ const moment = require('moment');
 const markdownIt = require('markdown-it');
 const markdownItEmoji = require('markdown-it-emoji');
 const hljs = require('highlight.js');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 module.exports = eleventyConfig => {
   // Custom Markdown library.
@@ -32,6 +33,7 @@ module.exports = eleventyConfig => {
 
   // Plugins.
   eleventyConfig.addPlugin(readingTime);
+  eleventyConfig.addPlugin(pluginRss);
 
   // What will eleventy copy to the output?
   eleventyConfig.setTemplateFormats([
