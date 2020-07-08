@@ -16,7 +16,7 @@ This site is generated in [Eleventy].
 * [Markdown] has the content.
 * [Eleventy] generates the site.
 * [GitHub] hosts the code and builds it when it changes.
-* [Firebase] hosts the site.
+* [Netlify] hosts the site.
 * [Cloudflare] makes it fast.
 
 ## Contact Me
@@ -32,6 +32,6 @@ In particular, you can email me at <hi@drhayes.io> or chat me at [@drhayes on Te
 [markdown]: https://daringfireball.net/projects/markdown/
 [eleventy]: https://www.11ty.dev
 [github]: https://github.com/
-[firebase]: https://firebase.google.com/
+[netlify]: https://www.netlify.com/
 [cloudflare]: https://www.cloudflare.com/
 [telegram]: https://t.me/drhayes
