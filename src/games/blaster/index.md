@@ -1,8 +1,9 @@
 ---
 title: Blaster
-tags:
-  - blaster
+tags: blaster
 screenshot: /games/blaster/blaster-screenshot.png
+description: A little JavaScript game about blasting geometric enemies.
+layout: layouts/page.njk
 ---
 
 ![Neato screenshot of game](/games/blaster/blaster-screenshot.png "Screenshot of Blaster")

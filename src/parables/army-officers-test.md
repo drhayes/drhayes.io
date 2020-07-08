@@ -6,8 +6,6 @@ description: You are a lieutenant in the army. Can you erect a flagpole?
 
 I find this a useful parable about leadership, among other things.
 
-<!--more-->
-
 ## Problem
 
 You are a lieutenant in the army. In front of you is a sergeant, two privates, fifty feet of rope, a twenty foot pole, and an American flag. In 30 seconds or less, erect a flagpole.

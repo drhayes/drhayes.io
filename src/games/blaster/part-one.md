@@ -1,9 +1,8 @@
 ---
 title: Part One, The Player
 date: 2015-09-27
-aliases:
-  - /games/blaster/articles/part-one
-toc: true
+tags: blaster
+description: In which I cover the first bit of significant development of the game.
 ---
 
 This is the first part of an extended write-up I'm doing about my [Phaser](http://phaser.io) game, Blaster. [Play Blaster here][playblaster].
