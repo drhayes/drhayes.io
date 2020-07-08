@@ -6,7 +6,12 @@ body {
   font-weight: 400;
   background: #fff;
   color: #111;
-  line-height: 1.6;
+  line-height: 1.75;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 a {
@@ -20,23 +25,18 @@ code {
   font-style: italic;
 }
 
-.hljs {
-  pre {
-    font-size: 80%;
-    overflow: auto;
-    padding: 0.5rem;
-
-    code {
-      padding: initial;
-      line-height: 1.5;
-    }
-  }
+pre {
+  overflow: auto;
+  line-height: 1.3;
 
   code {
-    background-color: initial;
-    font-size: 1rem;
-    font-style: initial;
   }
+}
+
+code {
+  background-color: initial;
+  font-size: 1rem;
+  font-style: initial;
 }
 
 .dotted-list {

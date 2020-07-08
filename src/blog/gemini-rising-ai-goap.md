@@ -462,7 +462,7 @@ The silver lining of this is that the AI subsystems became *a lot* smarter in th
 [orkin1]: http://alumni.media.mit.edu/~jorkin/GOAP_draft_AIWisdom2_2003.pdf
 [gametuts]: https://gamedevelopment.tutsplus.com/tutorials/goal-oriented-action-planning-for-a-smarter-ai--cms-20793
 [thiefsenses]: https://www.gamasutra.com/view/feature/131297/building_an_ai_sensory_system_.php
-[armyofficerstest]: /parables/army-officers-test.md
+[armyofficerstest]: /parables/army-officers-test/
 [aiforgames]: https://smile.amazon.com/AI-Games-Third-Ian-Millington/dp/1138483974/ref=sr_1_1?keywords=artificial+intelligence+for+games&qid=1572234715&sr=8-1
 [malcolm-video]: https://www.youtube.com/watch?v=4PLvdmifDSk
 [astar]: https://en.wikipedia.org/wiki/A*_search_algorithm
