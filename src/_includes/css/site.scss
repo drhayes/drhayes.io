@@ -345,6 +345,17 @@ article {
       padding-left: 1rem;
     }
   }
+
+  .webring {
+    ul {
+      display: flex;
+
+      li {
+        margin: 2rem;
+        list-style-type: none;
+      }
+    }
+  }
 }
 
 .tag-list {

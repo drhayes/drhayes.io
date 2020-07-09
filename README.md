@@ -1,5 +1,5 @@
 # drhayes.io
 
-My personal webiste, built using [Hugo].
+My personal webiste, built using [Eleventy].
 
-[hugo]: https://gohugo.io
+[eleventy]: https://11ty.dev
