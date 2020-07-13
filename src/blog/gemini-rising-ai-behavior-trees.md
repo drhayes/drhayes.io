@@ -4,6 +4,7 @@ date: 2019-03-22T11:12:57-05:00
 tags:
   - gemini-rising
   - ai
+  - game-ai
   - gemini-rising-ai
   - behavior-trees
 description: A survey of behavior trees within Gemini Rising.
@@ -12,6 +13,8 @@ description: A survey of behavior trees within Gemini Rising.
 This post is the second in a [series I'm writing about scripting the AI in my game, Gemini Rising][grai]. This one is about behavior trees.
 
 There aren't enough resources out there that dive deeply into interesting programming topics. It's easy to find "hello world" examples, but it's harder to find meaty essays that discuss pros and cons, tradeoffs taken, long-term consequences unforeseen. These posts are my attempt to fix that.
+
+UPDATED 2020-07-13: Added 'game-ai' tag.
 
 ## Intro
 

@@ -5,6 +5,7 @@ date: 2019-03-21T16:10:51-05:00
 tags:
   - gemini-rising
   - ai
+  - game-ai
   - gemini-rising-ai
 ---
 
@@ -12,9 +13,9 @@ When I went looking for articles about game AI that went beyond the most basic l
 
 I'd like to change that for future programmers like me looking for guidance.
 
-<!--more-->
-
 I'm going to write a series of posts about my experiences crafting the AI for my game, [Gemini Rising][gr]. Since I was learning as I go I'm sure there are going to be mistakes; I'd love to hear about them!
+
+UPDATED 2020-07-13: Added 'game-ai' tag.
 
 ## Overview
 

@@ -5,6 +5,7 @@ date: 2019-03-22T11:10:26-05:00
 tags:
   - gemini-rising
   - ai
+  - game-ai
   - gemini-rising-ai
   - setfenv
   - coroutines
@@ -12,7 +13,7 @@ tags:
 
 This post is the first in [a series I'm writing about scripting the AI in my game][grai], [Gemini Rising][gr]. This one covers scripting with `setfenv` and Lua coroutines.
 
-<!--more-->
+UPDATED 2020-07-13: Added 'game-ai' tag.
 
 ## Intro
 
