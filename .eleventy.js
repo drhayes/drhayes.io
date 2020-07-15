@@ -64,7 +64,6 @@ module.exports = eleventyConfig => {
   // Blog posts.
   eleventyConfig.addCollection('blogPosts', collection => collection
     .getAllSorted()
-    .reverse()
     .filter(item => item.url
       && !item.inputPath.includes('index')
       && item.inputPath.startsWith('./src/blog/')

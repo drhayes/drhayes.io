@@ -4,8 +4,11 @@ pagination:
   data: collections
   size: 1
   alias: tag
+  filter:
+    - all
+  addAllPagesToCollections: true
 permalink: /tags/{{ tag }}/
-tagPage: true
+changeFreq: weekly
 ---
 <ol class="tag-list">
 {% set taglist = collections[tag] %}

@@ -30,12 +30,8 @@
   <link rel="canonical" href="{{ site.host }}{{ page.url }}">
   {%- if description %}
   <meta name="description" content="{{ description }}">
-  {% endif -%}
-  {%- if tagPage %}
-  <meta name="robots" content="noindex, follow" />
-  {% else %}
+  {% endif %}
   <meta name="robots" content="index, follow" />
-  {% endif -%}
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.host }}/feed/index.xml">
 </head>
 <body class="">
