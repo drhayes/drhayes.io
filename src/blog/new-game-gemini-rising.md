@@ -10,8 +10,6 @@ The name of the _Big Game_ that I've been working on for forever is "[Gemini Ris
 
 [Here's the game's home page][gr].
 
-<!--more-->
-
 I will be documenting the process here on my site. Beyond blog posts with updates about my progress, I also plan on writing longer-form articles about problems I encountered and the solutions I've come up with to those problems. Hopefully, if other people have similar problems my solutions and failures along the way will help them.
 
 Here are some topics I've got planned:

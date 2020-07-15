@@ -6,7 +6,8 @@ const moment = require('moment');
 const markdownIt = require('markdown-it');
 const markdownItEmoji = require('markdown-it-emoji');
 const hljs = require('highlight.js');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+const truncateHtml = require('truncate-html');
 
 module.exports = eleventyConfig => {
   // Custom Markdown library.
@@ -60,6 +61,12 @@ module.exports = eleventyConfig => {
 
   // Date format.
   eleventyConfig.addFilter('dateformat', (date, format) => moment(date).format(format));
+
+  // HTML-safe truncation.
+  eleventyConfig.addFilter('truncateHtml', text => truncateHtml(text, 50, {
+    byWords: true,
+    reserveLastWord: true,
+  }));
 
   // Blog posts.
   eleventyConfig.addCollection('blogPosts', collection => collection
