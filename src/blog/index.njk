@@ -9,15 +9,31 @@ pagination:
 ---
 <ol class="blog-posts-list">
   {% for post in pagination.items %}
-  <li class="blog-post">
-    <article>
-      <h2>
-        <a href="{{ post.url }}" class="">{{ post.data.title }}</a>
-      </h2>
-      {% if post.data.description %}
-        <p>{{ post.data.description }}</p>
-      {% endif %}
-      <p class="reading-time">{{ post | readingTime }} read</p>
+  <li class="blog-post-item">
+    <article class="blog-post">
+      <div class="date-column">
+        <time datetime="{{ post.data.date | dateformat('YYYY-MM-DDTHH:mm:ssZ') }}">
+                  {{ post.data.date | dateformat('YYYY.MM.DD') }}
+                </time>
+      </div>
+      <div class="title-column">
+        <h2>
+          <a href="{{ post.url }}" class="">{{ post.data.title }}</a>
+        </h2>
+        {% if post.data.tags %}
+          <ul class="tags dotted-list">
+            {%- for tag in post.data.tags -%}
+              <li class="tag">
+                <a href="/tags/{{ tag }}" class="">{{ tag }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {% endif %}
+        {% if post.data.description %}
+          <p>{{ post.data.description }}</p>
+        {% endif %}
+        <p class="reading-time">{{ post | readingTime }} read</p>
+      </div>
     </article>
   </li>
   {% endfor %}

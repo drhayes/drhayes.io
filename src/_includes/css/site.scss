@@ -14,9 +14,10 @@ p {
   margin-bottom: 0;
 }
 
-a {
-  text-decoration: none;
-  color: darkslateblue;
+a, a:visited {
+  text-decoration: underline dotted;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  color: inherit;
 }
 
 code {
@@ -272,20 +273,39 @@ article {
 .blog-posts-list {
   padding-left: 0;
   list-style-type: none;
-}
 
-.blog-post {
-  margin-bottom: 2rem;
+  .blog-post-item {
+    margin-bottom: 3rem;
 
-  h2 {
-    margin: 0;
-    border: none;
+    .blog-post {
+      display: flex;
+      align-items: baseline;
+
+      .date-column {
+        margin-right: 3rem;
+
+        time {
+          opacity: .6;
+        }
+      }
+
+      .title-column {
+        h2 {
+          margin: 0;
+          border: none;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        .tags {
+          justify-content: flex-start;
+          margin: 0;
+        }
+      }
+    }
   }
-
-  p {
-    margin: 0;
-  }
-
 }
 
 .game-list {
