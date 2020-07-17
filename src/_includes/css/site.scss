@@ -361,16 +361,18 @@ article {
 
   .creative-commons-license {
     display: flex;
-    align-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 1rem;
 
-    a {
+    .license-link {
       margin-right: 1rem;
-      margin-bottom: 1rem;
+      text-decoration: none;
+
+      img {
+        vertical-align: baseline;
+      }
     }
 
-    p {
-      margin-top: 0;
-    }
   }
 
   .find-me {
