@@ -268,6 +268,15 @@ article {
       flex-direction: column;
     }
   }
+
+  .blog-posts-list {
+    .blog-post-item {
+      .blog-post {
+        flex-direction: column !important;
+      }
+    }
+  }
+
 }
 
 .blog-posts-list {
@@ -277,26 +286,33 @@ article {
   .blog-post-item {
     margin-bottom: 3rem;
 
+    article {
+      margin: 0;
+    }
+
     .blog-post {
       display: flex;
+      flex-direction: row;
       align-items: baseline;
 
-      .date-column {
-        margin-right: 3rem;
+      p {
+        margin: 0;
+      }
+
+      .date-part {
+        flex: 1;
 
         time {
           opacity: .6;
         }
       }
 
-      .title-column {
+      .content-part {
+        flex: 4;
+
         h2 {
           margin: 0;
           border: none;
-        }
-
-        p {
-          margin: 0;
         }
 
         .tags {

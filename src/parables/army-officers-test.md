@@ -1,6 +1,5 @@
 ---
 title: The Army Officer's Test
-date: 2019-10-25T10:32:01-05:00
 description: You are a lieutenant in the army. Can you erect a flagpole?
 ---
 

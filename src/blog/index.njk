@@ -11,12 +11,12 @@ pagination:
   {% for post in pagination.items %}
   <li class="blog-post-item">
     <article class="blog-post">
-      <div class="date-column">
+      <div class="date-part">
         <time datetime="{{ post.data.date | dateformat('YYYY-MM-DDTHH:mm:ssZ') }}">
-                  {{ post.data.date | dateformat('YYYY.MM.DD') }}
-                </time>
+          {{ post.data.date | dateformat('YYYY.MM.DD') }}
+        </time>
       </div>
-      <div class="title-column">
+      <div class="content-part">
         <h2>
           <a href="{{ post.url }}" class="">{{ post.data.title }}</a>
         </h2>
