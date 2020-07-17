@@ -28,6 +28,11 @@
     {%- endif -%}
   </header>
 
+    {% if draft %}
+    <aside class="draft-notification">
+      <a href="/drafts">Draft note alert!</a>
+    </aside>
+    {% endif %}
 
   <section class="article-content">
     {{ content | safe }}

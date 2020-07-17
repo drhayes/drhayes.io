@@ -403,7 +403,10 @@ article {
   margin-top: 2rem;
   max-height: 30rem;
   overflow: auto;
-  cursor: inherit;
+
+  summary {
+    cursor: pointer;
+  }
 
   ul,ol {
     display: flex;
@@ -433,4 +436,13 @@ article {
   p {
     margin-top: 1rem;
   }
+}
+
+.draft-notification {
+  font-size: 120%;
+  font-weight: bold;
+  padding: .5em;
+  background-color: dodgerblue;
+  color: white;
+  text-align: center;
 }

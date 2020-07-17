@@ -68,24 +68,28 @@ module.exports = eleventyConfig => {
     reserveLastWord: true,
   }));
 
-  // Games.
-  eleventyConfig.addCollection('games', collection => collection
+  // Collections.
+  eleventyConfig.addCollection('games', collectionApi => collectionApi
     .getFilteredByGlob('src/games/**/index.md')
     .reverse()
   );
 
-  eleventyConfig.addCollection('gamearticles', collection => collection
+  eleventyConfig.addCollection('gamearticles', collectionApi => collectionApi
     .getFilteredByGlob('src/games/**/*.md')
     .filter(page => !page.inputPath.includes('index.md'))
   );
+
+  eleventyConfig.addCollection('drafts', collectionApi => collectionApi
+    .getAll()
+    .filter(page => page.data.draft));
 
   eleventyConfig.addFilter('articlesfor', (articles, include) => articles
     .filter(article => article.inputPath.includes(include))
   );
 
   eleventyConfig.addFilter('linksHere', (pages, url) => {
-    const myUrl = `https://drhayes.io${url.substr(0, url.length - 1)}`;
     return pages
+      .filter(Boolean)
       // Tag pages don't count.
       .filter(page => !page.url.includes('/tag'))
       .filter(page => page.templateContent.includes(url.substr(0, url.length - 1)));
