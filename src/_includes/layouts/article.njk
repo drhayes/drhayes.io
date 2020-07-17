@@ -4,9 +4,9 @@
 
 {% block content %}
 {% include "header.njk" %}
-<article class="">
+<article class="single-blog-post">
 
-  <header class="">
+  <header class="blog-header">
     {%- if date -%}
       <div class="article-date">
         <time datetime="{{ date | dateformat('YYYY-MM-DDTHH:mm:ssZ') }}">
@@ -28,12 +28,21 @@
     {%- endif -%}
   </header>
 
-  {# <aside class="">related content goes here</aside> #}
-
 
   <section class="article-content">
     {{ content | safe }}
   </section>
+
+  <aside class="pages-that-link-here">
+    Pages that link here:
+    <ul>
+    {% for page in collections.all | linksHere(page.url) %}
+      <li>
+        {% include "page-summary.njk" %}
+      </li>
+    {% endfor %}
+    </ul>
+  </aside>
 
   <section class="comments">
     <div id="commento"></div>

@@ -354,8 +354,8 @@ Behavior trees rule. Behavior trees are my goto AI scripting solution for Gemini
 
 But in line with my general experience reading about stuff on the web, I wish I'd seen more recommendations about how to implement and use them effectively. Hopefully I've helped there somewhat.
 
-[grai]: /2019/03/21/gemini-rising-ai-introduction/
-[lua-scripting]: /2019/03/22/gemini-rising-ai-lua-scripting/
+[grai]: /blog/gemini-rising-ai-introduction/
+[lua-scripting]: /blog/gemini-rising-ai-lua-scripting/
 [lsm]: https://github.com/kyleconroy/lua-state-machine
 [statecharts]: https://statecharts.github.io
 [gppstate]: https://gameprogrammingpatterns.com/state.html

@@ -7,6 +7,16 @@ body {
   background: #fff;
   color: #111;
   line-height: 1.75;
+
+  article {
+    header {
+      margin-bottom: 0;
+    }
+
+    section {
+      margin-top: 0;
+    }
+  }
 }
 
 p {
@@ -86,26 +96,13 @@ article {
     margin-top: 4rem;
   }
 
-  aside {
-    float: right;
-    margin-left: 3rem;
-    margin-bottom: 3rem;
-
-    h3 {
-      margin-top: 0;
-    }
-
-    ul,ol {
-      padding: 0;
-      list-style-type: none;
-    }
-  }
-
   img {
     max-width: 100%;
   }
 
   .article-content {
+    margin-top: 0;
+
     p:first-of-type {
       &::first-letter {
         font-size: 300%;
@@ -236,13 +233,6 @@ article {
   }
 
   article {
-    aside {
-      float: none;
-      // margin: 1rem 0;
-      margin: 0;
-      margin-bottom: 3rem;
-    }
-
     .article-content {
       p:first-of-type {
         &:first-letter {
@@ -418,4 +408,39 @@ article {
   font-style: italic;
   font-size: 90%;
   opacity: .8;
+}
+
+.pages-that-link-here {
+  margin-top: 2rem;
+  max-height: 30rem;
+  overflow: auto;
+
+  ul,ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      width: 40%;
+      margin: 1rem;
+    }
+  }
+
+  .page-summary {
+    padding: .5rem;
+    background-color: #f0f0f0;
+  }
+}
+
+.page-summary {
+  h4 {
+    border-bottom: 0;
+    margin-top: 0;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
 }

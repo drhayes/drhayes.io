@@ -83,6 +83,17 @@ module.exports = eleventyConfig => {
     .filter(article => article.inputPath.includes(include))
   );
 
+  eleventyConfig.addFilter('linksHere', (pages, url) => {
+    const myUrl = `https://drhayes.io${url.substr(0, url.length - 1)}`;
+    console.log(myUrl);
+    const results = pages
+      // Tag pages don't count.
+      .filter(page => !page.url.includes('/tag'))
+      .filter(page => page.templateContent.includes(url.substr(0, url.length - 1)));
+    console.log(results.length);
+    return results;
+  });
+
   // Handle the images.
   eleventyConfig.addPassthroughCopy({
     static: '.',
