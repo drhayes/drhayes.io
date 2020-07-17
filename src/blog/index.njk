@@ -2,8 +2,9 @@
 layout: layouts/list.njk
 title: Blog
 permalink: /blog/index.html
+eleventyExcludeFromCollections: blogPost
 pagination:
-  data: collections.blogPosts
+  data: collections.blogPost
   size: 10
   reverse: true
 ---
@@ -26,9 +27,11 @@ pagination:
         {% if post.data.tags %}
           <ul class="tags dotted-list">
             {%- for tag in post.data.tags -%}
+              {% if tag != 'blogPost' %}
               <li class="tag">
                 <a href="/tags/{{ tag }}" class="">{{ tag }}</a>
               </li>
+              {% endif %}
             {%- endfor -%}
           </ul>
         {% endif %}

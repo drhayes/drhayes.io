@@ -68,15 +68,6 @@ module.exports = eleventyConfig => {
     reserveLastWord: true,
   }));
 
-  // Blog posts.
-  eleventyConfig.addCollection('blogPosts', collection => collection
-    .getAllSorted()
-    .filter(item => item.url
-      && !item.inputPath.includes('index')
-      && item.inputPath.startsWith('./src/blog/')
-    )
-  );
-
   // Games.
   eleventyConfig.addCollection('games', collection => collection
     .getFilteredByGlob('src/games/**/index.md')
