@@ -33,16 +33,19 @@
     {{ content | safe }}
   </section>
 
-  <aside class="pages-that-link-here">
-    Pages that link here:
+  {% set linkHeres = collections.all | linksHere(page.url) %}
+  {% if linkHeres.length %}
+  <details class="pages-that-link-here">
+    <summary>Pages that link here</summary>
     <ul>
-    {% for page in collections.all | linksHere(page.url) %}
+    {% for page in linkHeres %}
       <li>
         {% include "page-summary.njk" %}
       </li>
     {% endfor %}
     </ul>
-  </aside>
+  </details>
+  {% endif %}
 
   <section class="comments">
     <div id="commento"></div>
