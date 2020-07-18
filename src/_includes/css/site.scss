@@ -267,6 +267,14 @@ article {
     }
   }
 
+  .pages-that-link-here {
+    ol, ul {
+      li {
+        width: 100% !important;
+      }
+    }
+  }
+
 }
 
 .blog-posts-list {
@@ -442,8 +450,8 @@ article {
   font-size: 120%;
   font-weight: bold;
   padding: .5em;
-  background-color: dodgerblue;
-  color: white;
+  background-color: rgba(192, 232, 255, 1);
+  color: steelblue;
   text-align: center;
 
   a {
