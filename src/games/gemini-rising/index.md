@@ -2,8 +2,10 @@
 title: Gemini Rising
 tags:
   - gemini-rising
+  - projects
 toc: true
 screenshot: /games/gemini-rising/screenshot-2018-09-12.png
+description: A Metroidvania about crafting and sneaking.
 layout: layouts/page.njk
 ---
 

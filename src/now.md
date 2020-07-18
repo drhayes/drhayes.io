@@ -1,5 +1,6 @@
 ---
 title: Now
+description: What am I doing right now.
 layout: layouts/page.njk
 ---
 
@@ -8,6 +9,8 @@ What I'm doing right now.
 ## Text
 
 Writing more. Thinking about how to organize notes usefully. Almost getting sucked in by [doom emacs][doom].
+
+Check out my [Projects][] note.
 
 ## Digital Games
 
@@ -43,3 +46,4 @@ I'm doing a lot of JavaScript, Lua, and Terraform these days. Always trying to g
 [bluebeard]: https://www.magpiegames.com/bluebeards-bride/
 [sotdl]: https://schwalbentertainment.com/shadow-of-the-demon-lord/
 [doom]: https://github.com/hlissner/doom-emacs
+[projects]: /notes/projects

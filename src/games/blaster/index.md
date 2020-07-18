@@ -1,6 +1,8 @@
 ---
 title: Blaster
-tags: blaster
+tags:
+  - blaster
+  - projects
 screenshot: /games/blaster/blaster-screenshot.png
 description: A little JavaScript game about blasting geometric enemies.
 layout: layouts/page.njk
