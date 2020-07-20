@@ -1,5 +1,6 @@
 ---
 title: Captivated by Public Note Systems
+description: In which I barf forth the list of links that are burning up my brain and absolutely forcing me to re-design my personal site.
 date: 2020-07-19T23:00:00-05:00
 tags:
   - emacs
@@ -24,7 +25,7 @@ The first thing I did was create a ["now"][now] page for my site. What am I work
 
 Thanks to [Derek Sivers][siversnow] for the great idea. My now page is listed on his now site: https://nownownow.com/about.
 
-[So here's what I'm doing right now][now].
+[So here's what I'm doing right now][now]. I've also got [a note listing the projects I've got on my mind][projects].
 
 ## Next steps: public notes
 
@@ -61,3 +62,4 @@ I was charmed to find [Brendan Schlagel's personal canon][brendanschlagel] and I
 [brendanschlagel]: http://www.brendanschlagel.com/canon/
 [ianjones]: https://www.ianjones.us/
 [progressivesummarization]: https://www.ianjones.us/progressive-summarization-in-org-mode
+[projects]: /notes/projects

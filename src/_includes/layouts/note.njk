@@ -1,6 +1,6 @@
 {% extends "layouts/base.njk" %}
 
-{% set pageTitle = title || fileSlug %}
+{% set pageTitle = title or fileSlug %}
 {% block title %}{{ pageTitle | titleify }}{% endblock %}
 
 {% block content %}
