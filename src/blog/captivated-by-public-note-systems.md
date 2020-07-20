@@ -17,7 +17,7 @@ The worst of these tools create piles of notes that impossible to organize. Slig
 
 The most ambitious plain-text, analog note system I've ever seen is [zettelkasten][zk]. Essentially, you write notes on index cards and assiduously tag and index them, keeping them forever in a slip box. Notes can refer to other notes in an ingenious analog addressing system.
 
-But what kicked me fully down this particular rabbit hole was finding [Ian Jones' site][ianjones]. I stumbled on one of his articles about [progressive summarization in org mode][progressivesummarization] and basically found everything you see in this blog post. I think this is the last formal "blog post" that I'm going to write for this site.
+But what kicked me fully down this particular rabbit hole was finding [Ian Jones' site][ianjones]. I stumbled on one of his articles about [progressive summarization in org mode][progressivesummarization] and basically found everything you see in this blog post. ~~I think this is the last formal "blog post" that I'm going to write for this site.~~ Okay, this is clearly not true as there are going to be date-related posts. But it's pretty close; most of the updated content is going to be on the notes side.
 
 ## First steps to public plain text: now
 
