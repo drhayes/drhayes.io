@@ -39,7 +39,7 @@ I think [Tom Critchlow][TomCritchlow] has it right: this is a digital garden. Ev
 
 [Joel Hooks has a page that basically outlines my current thinking][joelhooks]. I think I'm going to transition my site away from a blog format and more towards a place where the knowledge I can offer is on display as I develop it.
 
-## Further in the futuer: A Personal Canon? An exocortex?
+## Further in the future: A Personal Canon? An exocortex?
 
 I was charmed to find [Brendan Schlagel's personal canon][brendanschlagel] and I'm thinking about my own.
 
