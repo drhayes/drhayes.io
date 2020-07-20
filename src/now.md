@@ -2,6 +2,7 @@
 title: Now
 description: What am I doing right now.
 layout: layouts/page.njk
+updated: 2020-07-19
 ---
 
 What I'm doing right now.
@@ -15,7 +16,7 @@ Check out my [Projects][] note.
 ## Digital Games
 
 * About to beat the final boss of [Lovers in a Dangerous Spacetime][liads].
-* Trying to get a [Breath of the Wild][botw] habit.
+* Trying to start a [Breath of the Wild][botw] habit.
 * Trying to figure out what our [Minecraft][] gaming is going to look like, going forward.
 
 ## Role-playing Games
@@ -34,6 +35,12 @@ Thinking and reading about teaching adults. How to effectively communicate ideas
 
 I'm doing a lot of JavaScript, Lua, and Terraform these days. Always trying to get better at shell scripting. Paraphrasing the inestimable Merlin Mann, when I get a bit of shell scripting right I feel like a chimp that just successfully landed a jet.
 
+## Music
+
+* [Carpenter Brut][carpenterbrut]
+* ACTORS - It Will Come To You
+* [KANGA - Eternal Daughter and Kanga][kanga]
+
 [liads]: http://www.loversinadangerousspacetime.com/
 [botw]: https://www.zelda.com/breath-of-the-wild/
 [minecraft]: https://minecraft.net
@@ -47,3 +54,5 @@ I'm doing a lot of JavaScript, Lua, and Terraform these days. Always trying to g
 [sotdl]: https://schwalbentertainment.com/shadow-of-the-demon-lord/
 [doom]: https://github.com/hlissner/doom-emacs
 [projects]: /notes/projects
+[kanga]: https://kanga.bandcamp.com/
+[carpenterbrut]: http://www.carpenterbrut.com/
