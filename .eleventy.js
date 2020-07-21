@@ -33,7 +33,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection('drafts', require('./lib/collections/drafts'));
   eleventyConfig.addCollection('notes', require('./lib/collections/notes'));
 
-  // Handle the images.
+  // Static stuff.
   eleventyConfig.addPassthroughCopy({ static: '.' });
   eleventyConfig.addPassthroughCopy('./src/img');
 
