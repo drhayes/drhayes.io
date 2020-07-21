@@ -1,7 +1,7 @@
 ---
 title: Now
 description: What am I doing right now.
-layout: layouts/page.njk
+layout: page.njk
 updated: 2020-07-19
 ---
 

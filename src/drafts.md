@@ -1,6 +1,6 @@
 ---
 title: Draft notes
-layout: layouts/article.njk
+layout: article.njk
 description: A short explanation of what a draft note is and directions leading you to where I write about it more.
 eleventyExcludeFromCollections: true
 ---

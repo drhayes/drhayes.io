@@ -1,8 +1,6 @@
 ---
 title: Artificial Intelligence
 date: 2019-03-21
-aliases:
-  - /games/gemini-rising/articles/ai
 ---
 
 I'm writing a [series of posts about the AI used in Gemini Rising's development][aiposts].

@@ -1,6 +1,6 @@
 ---
 title: Hi. I'm David. 👋🏽
-layout: layouts/page.njk
+layout: page.njk
 ---
 
 I do stuff with computers. I live in Austin, TX.

@@ -6,7 +6,7 @@ tags:
 toc: true
 screenshot: /img/gr-screenshot-2018-09-12.png
 description: A Metroidvania about crafting and sneaking.
-layout: layouts/page.njk
+layout: page.njk
 ---
 
 ![Neato screenshot of game]({{ screenshot }} "Screenshot as of 2018-09-12")
