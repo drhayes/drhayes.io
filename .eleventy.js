@@ -28,8 +28,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection('notes', require('./lib/collections/notes'));
 
   // Static stuff.
-  eleventyConfig.addPassthroughCopy({ static: '.' });
   eleventyConfig.addPassthroughCopy('./src/img');
+  eleventyConfig.addPassthroughCopy('./src/keybase.txt');
+  eleventyConfig.addPassthroughCopy('./src/twtxt.txt');
+  eleventyConfig.addPassthroughCopy('./src/favicon.ico');
 
   return {
     dir: {
