@@ -5,9 +5,9 @@
 
 {% block content %}
 {% include "header.njk" %}
-<article class="single-blog-post">
+<article class="">
 
-  <header class="blog-header">
+  <header class="">
     <h1 class="title">{{ title }}</h1>
 
     {%- if tags -%}
@@ -27,7 +27,7 @@
     </aside>
     {% endif %}
 
-  <section class="article-content">
+  <section class="">
     {{ content | safe }}
   </section>
 

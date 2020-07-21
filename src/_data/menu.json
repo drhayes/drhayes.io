@@ -1,5 +1,6 @@
 [
   { "name": "Now", "url": "/now" },
+  { "name": "Notes", "url": "/notes" },
   { "name": "Blog", "url": "/blog" },
   { "name": "Games", "url": "/games" },
   { "name": "About", "url": "/about" }

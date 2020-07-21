@@ -83,6 +83,12 @@ module.exports = eleventyConfig => {
     .getAll()
     .filter(page => page.data.draft));
 
+  eleventyConfig.addCollection('notes', collectionApi => collectionApi
+    .getAll()
+    .filter(page => page.inputPath.includes('notes/'))
+    .filter(page => !page.inputPath.includes('index.md')));
+
+  // Useful filters.
   eleventyConfig.addFilter('articlesfor', (articles, include) => articles
     .filter(article => article.inputPath.includes(include))
   );

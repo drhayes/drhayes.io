@@ -9,7 +9,7 @@ tags:
 
   * [Gemini Rising][gr]
     - On brief hiatus while I work on games that won't take me four more years to complete.
-    - Need to blog about that.
+    - Need to write about that hiatus.
   * Beehive.lua
     - https://github.com/drhayes/beehive.lua
     - Pulling the behavior tree implementation out of Gemini Rising and making it open source.
@@ -17,15 +17,8 @@ tags:
     - Include tests.
     - Include Makefile?
     - Include examples?
-  * Zeke
-    - https://github.com/drhayes/zeke
-    - A zettelkasten note plugin for Sublime Text 3.
-
-## 3d Printing
-
-  * Design nearly anything.
-    - Tinkercad?
-    - Fusion 360?
+  * Surrender
+    - A short game that is entirely a boss fight from an earlier game.
 
 
 [gr]: /games/gemini-rising

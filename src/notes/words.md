@@ -1,7 +1,9 @@
 ---
 title: Words
 ---
-Interesting words that I've found here and there and wanted to save somewhere. I was saving these in Notion and Airtable with an idea of accessing them programmatically in future projects.
+Interesting words that I've found here and there and wanted to save somewhere.
+
+## The Words
 
 __aposematism__
 The advertising by an animal to potential predators that it is not worth attacking or eating.
