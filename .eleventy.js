@@ -4,7 +4,7 @@ const readingTime = require('eleventy-plugin-reading-time');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.setLibrary('md', require('./lib/markdown'));
+  eleventyConfig.setLibrary('md', require('./lib/library/markdown'));
 
   // Deep data merge!
   eleventyConfig.setDataDeepMerge(true);
@@ -16,7 +16,7 @@ module.exports = (eleventyConfig) => {
   // Filters.
   eleventyConfig.addFilter('sassify', require('./lib/filters/sassify'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
-  eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateformat'));
+  eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
   eleventyConfig.addFilter(
     'truncateHtml',
     require('./lib/filters/truncateHtml'),
