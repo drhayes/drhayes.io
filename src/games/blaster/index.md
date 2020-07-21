@@ -3,12 +3,12 @@ title: Blaster
 tags:
   - blaster
   - projects
-screenshot: /games/blaster/blaster-screenshot.png
+screenshot: /img/blaster-screenshot.png
 description: A little JavaScript game about blasting geometric enemies.
 layout: layouts/page.njk
 ---
 
-![Neato screenshot of game](/games/blaster/blaster-screenshot.png "Screenshot of Blaster")
+![Neato screenshot of game]({{ screenshot }} "Screenshot of Blaster")
 
 [Play the game here][playblaster].
 

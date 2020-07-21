@@ -11,8 +11,8 @@
   <article class="">
     {% if updated %}
       <strong>Updated:</strong>
-      <time datetime="{{ updated | dateformat('YYYY-MM-DDTHH:mm:ssZ') }}">
-        {{ updated | dateformat('YYYY.MM.DD') }}
+      <time datetime="{{ updated | dateFormat('YYYY-MM-DDTHH:mm:ssZ') }}">
+        {{ updated | dateFormat('YYYY.MM.DD') }}
       </time>
     {% endif %}
 

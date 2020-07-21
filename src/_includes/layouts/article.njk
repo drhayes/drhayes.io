@@ -9,8 +9,8 @@
   <header class="blog-header">
     {%- if date -%}
       <div class="article-date">
-        <time datetime="{{ date | dateformat('YYYY-MM-DDTHH:mm:ssZ') }}">
-          {{ date | dateformat('YYYY.MM.DD') }}
+        <time datetime="{{ date | dateFormat('YYYY-MM-DDTHH:mm:ssZ') }}">
+          {{ date | dateFormat('YYYY.MM.DD') }}
         </time>
       </div>
     {%- endif -%}
