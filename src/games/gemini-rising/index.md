@@ -17,6 +17,8 @@ My goal is to make the entire game by myself: programming, graphics, sound, and 
 
 [Check out the "gemini-rising" tag for blog posts about it](/tags/gemini-rising).
 
+You can grab the game on itch.io:
+
 <iframe frameborder="0" src="https://itch.io/embed/393809" width="552" height="167"><a href="https://drhayes.itch.io/gemini-rising">Gemini Rising by drhayes</a></iframe>
 
 ## Video Dev Log
