@@ -1,5 +1,5 @@
 ---
-title: Game AI: Knowledge Representation Survey
+title: Game AI - Knowledge Representation Survey
 tags:
   - game-ai
   - gamedev
