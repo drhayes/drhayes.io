@@ -2,10 +2,16 @@
   command = "npm run build"
   publish = "dist"
 
+[context.production]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"
+
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "script-src 'self'; style-src 'self'; object-src 'self'; img-src 'self' *.amazonaws.com *.gravatar.com *.mapbox.com *.omdbapi.com i.ytimg.com i.vimeocdn.com raw.githubusercontent.com  webmention.io; child-src 'self'; frame-ancestors 'none'"
+    Content-Security-Policy = "script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'self'; img-src 'self' *.amazonaws.com *.gravatar.com *.mapbox.com *.omdbapi.com i.ytimg.com i.vimeocdn.com raw.githubusercontent.com  webmention.io; child-src 'self'; frame-ancestors 'none'"
     Referrer-Policy = "no-referrer, strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Content-Type-Options = "nosniff"
