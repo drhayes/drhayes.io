@@ -70,14 +70,37 @@ code {
   }
 }
 
-blockquote {
+.c-blockquote {
   margin-left: 0;
-  padding-left: 1rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
   border-left-style: solid;
-  border-width: 0.25rem;
-  border-color: steelblue;
-  background-color: #f0f0f0;
-  // color: #666;
+  border-width: 0.5rem;
+  border-color: #4682b4b8;
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    // padding-left: 1rem;
+    // border-left-style: solid;
+    // border-width: 0.25rem;
+    // border-color: steelblue;
+    // color: #666;
+  }
+
+  .c-blockquote__attribution {
+    font-style: italic;
+    text-align: right;
+
+    &:before {
+      content: '- ';
+    }
+  }
 }
 
 article {

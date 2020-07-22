@@ -8,6 +8,8 @@ tags:
   - gemini-rising-ai
   - behavior-trees
 description: A survey of behavior trees within Gemini Rising.
+updates:
+  - 2020-07-21 Fixed attribution and rendering in blockquote from PT documentation.
 ---
 
 This post is the second in a [series I'm writing about scripting the AI in my game, Gemini Rising][grai]. This one is about behavior trees.
@@ -118,8 +120,7 @@ Every flip of this behavior made me re-write the AIs for the two enemies I was u
 The advice that kicked me over the edge came from [Panda BT][panda], a good-looking behavior tree plugin for Unity. In its documentation was this advice:
 
 > Editing a behaviour tree is similar to writing a computer program: you don’t specify the transitions from an instruction to another, since the transition is implied by the syntax of the programming language. This **programming analogy** is the based idea that inspired the development of Panda Behaviour.
-
-(emphasis mine)
+> -- Panda BT Documentation
 
 A **programming analogy**. That kicked me out of my wishy-washy design headspace. I decided to imitate virtually every programming language I've ever used and iterate the statements in the order they were "written" until they were complete.
 
