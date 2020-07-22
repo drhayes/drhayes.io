@@ -1,5 +1,6 @@
 ---
 title: Mentoring
+draft: true
 ---
 
 Some thoughts on mentoring.

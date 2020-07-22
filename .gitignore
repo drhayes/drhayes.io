@@ -72,3 +72,4 @@ resources
 
 *.sublime-workspace
 dist/
+etc/

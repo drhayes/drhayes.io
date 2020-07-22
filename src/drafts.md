@@ -12,9 +12,11 @@ You probably ended up here because I marked one of the pages on my site as a "dr
 {% set drafts = collections.drafts %}
 {% if drafts.length > 0 %}
 ## Current Drafts
+<ul>
 {% for page in collections.drafts %}
-  * <a href="{{ page.url }}">{{ page.data.title }}</a>
+<li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
 {% endfor %}
+</ul>
 {% else %}
 No current drafts! I'm not being brave enough.
 {% endif %}
