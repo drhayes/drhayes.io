@@ -15,8 +15,9 @@ tags:
     - Pulling the behavior tree implementation out of Gemini Rising and making it open source.
     - Will learn about maintaining Lua packages, something I have no experience with.
     - Include tests.
-    - Include Makefile?
+    - Include Makefile.
     - Include examples?
+    - Released the first version.
   * Surrender
     - A short game that is entirely a boss fight from an earlier game.
 
