@@ -1,5 +1,6 @@
 ---
 title: Words
+updated: 2020-08-07
 ---
 Interesting words that I've found here and there and wanted to save somewhere.
 
@@ -31,6 +32,12 @@ Affected with darkness or dimness.
 
 __cenotaph__
 A tomblike monument to someone buried elsewhere, especially one commemorating people who died in a war.
+
+__conation__
+The aspect of mental processes or behavior directed toward action or change and including impulse, desire, volition, and striving.
+
+__drogulus__
+An entity whose presence is unverifiable, because it has no physical effects.
 
 __hiraeth__
 Welsh word that literally translates into English as 'longing', though in Welsh the concept of yearning for a place removed in space or time is far more powerful and evocative than in English.

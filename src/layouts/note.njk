@@ -19,6 +19,15 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+
+    {%- if updated -%}
+    <div class="updated-time">
+      Updated:
+      <time datetime="{{ updated | dateFormat('YYYY-MM-DDTHH:mm:ssZ') }}">
+        {{ updated | dateFormat('YYYY.MM.DD') }}
+      </time>
+    </div>
+    {%- endif -%}
   </header>
 
     {% if draft %}
