@@ -1,6 +1,6 @@
 ---
 title: Words
-updated: 2020-08-07
+updated: 2020-08-18
 ---
 Interesting words that I've found here and there and wanted to save somewhere.
 
@@ -20,6 +20,9 @@ Psychology A recalling to memory; recollection. In philosophy, It is the i
 
 __anecdoche__
 A conversation where no one is listening.
+
+__apperception__
+The process of understanding something perceived in terms of previous experience.
 
 __apricus__
 Exposed to sunlight.
