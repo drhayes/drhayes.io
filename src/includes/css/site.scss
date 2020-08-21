@@ -1,5 +1,10 @@
 $border-color: #ccc;
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   font-size: 18px;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, FreeMono, monospace;
