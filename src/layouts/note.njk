@@ -23,8 +23,8 @@
     {%- if updated -%}
     <div class="updated-time">
       Updated:
-      <time datetime="{{ updated | dateFormat('YYYY-MM-DDTHH:mm:ssZ') }}">
-        {{ updated | dateFormat('YYYY.MM.DD') }}
+      <time datetime="{{ updated | dateFormat(true) }}">
+        {{ updated | dateFormat }}
       </time>
     </div>
     {%- endif -%}
