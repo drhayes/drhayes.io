@@ -14,25 +14,26 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRss);
 
   // Filters.
+  eleventyConfig.addFilter('articlesfor', require('./lib/filters/articlesfor'));
+  eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
+  eleventyConfig.addFilter('debugPrint', require('./lib/filters/debugPrint'));
+  eleventyConfig.addFilter('linksHere', require('./lib/filters/linksHere'));
   eleventyConfig.addFilter('sassify', require('./lib/filters/sassify'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
-  eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
   eleventyConfig.addFilter('truncateHtml', require('./lib/filters/truncateHtml'));
-  eleventyConfig.addFilter('articlesfor', require('./lib/filters/articlesfor'));
-  eleventyConfig.addFilter('linksHere', require('./lib/filters/linksHere'));
 
   // Collections.
-  eleventyConfig.addCollection('games', require('./lib/collections/games'));
-  eleventyConfig.addCollection('gamearticles', require('./lib/collections/gameArticles'));
   eleventyConfig.addCollection('drafts', require('./lib/collections/drafts'));
+  eleventyConfig.addCollection('gamearticles', require('./lib/collections/gameArticles'));
+  eleventyConfig.addCollection('games', require('./lib/collections/games'));
   eleventyConfig.addCollection('notes', require('./lib/collections/notes'));
 
   // Static stuff.
-  eleventyConfig.addPassthroughCopy('./src/img');
-  eleventyConfig.addPassthroughCopy('./src/keybase.txt');
-  eleventyConfig.addPassthroughCopy('./src/key.txt');
-  eleventyConfig.addPassthroughCopy('./src/twtxt.txt');
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');
+  eleventyConfig.addPassthroughCopy('./src/img');
+  eleventyConfig.addPassthroughCopy('./src/key.txt');
+  eleventyConfig.addPassthroughCopy('./src/keybase.txt');
+  eleventyConfig.addPassthroughCopy('./src/twtxt.txt');
 
   return {
     dir: {

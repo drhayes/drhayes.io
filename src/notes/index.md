@@ -10,7 +10,9 @@ Check out my [draft notes][drafts] for what I'm actively working on right now.
 <ol>
 {% for note in collections.notes %}
   <li>
-    <a href="{{ note.url }}">{{ note.data.title }}</a>
+    <a href="{{ note.url }}">
+      {{ note.data.title }}
+    </a>
   </li>
 {% endfor %}
 </ol>
