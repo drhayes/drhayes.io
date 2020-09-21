@@ -2,7 +2,7 @@
 title: Now
 description: What am I doing right now.
 layout: page.njk
-updated: 2020-08-12
+updated: 2020-09-21
 ---
 
 What I'm doing right now.
@@ -15,19 +15,16 @@ Check out my [Projects][] note.
 
 ## Digital Games
 
-* Not making progress on any digital game things in any way right now.
-* About to beat the final boss of [Lovers in a Dangerous Spacetime][liads].
-* Trying to start a [Breath of the Wild][botw] habit.
+* Haven't been able to convince my family to beat that final boss of [Lovers in a Dangerous Spacetime][liads] yet. Our skills are rusting away!
 * Trying to figure out what our [Minecraft][] gaming is going to look like, going forward.
+* Playing a lot of [Carrion][] and it is a blast. Cannot recommend enough.
+* Starting to play [Shovel Knight][ShovelKnight] after reading the [Boss Fight Books book][shovel-knight-by-david-l-craddock]. Such a great game. Not NES hard... yet.
 
 ## Role-playing Games
 
-* [The Dracula Dossier][dracula] is very fun. I'm having a blast. I'm successfully not dead nor a vampire... yet.
-* Running a campaign using [Shadow of the Demon Lord][sotdl].
-* [GenCon] was lots of fun!
-* Excited about going to [GenCon], virtually!
-  - [Bluebeard's Bride][bluebeard] was a hefty experience. Why am I having these deep and kinda controversial conversations with Internet strangers suddenly? Great game, still thinking about it.
-  - I ended up *not* playing [Urban Shadows][urban], but instead played [the Root RPG][rootrpg]! I was excited to play... but the system didn't quite click with me. The people all were great and I had fun on that score, no doubt... but the system felt a little generic fantasy to me?
+* [The Dracula Dossier][dracula] is very fun. Still not dead, but I've been shot by goons a couple of times. That wasn't great.
+* Running a campaign using [Shadow of the Demon Lord][sotdl], maybe. Hard to schedule. And the I-roll-you-roll-I-roll of combat isn't super exciting for me.
+* Playing in a [Masks][] campaign with Internet strangers! A curated [Magpie][] game turned campaign, second game is tonight. I'm very excited.
 
 ## Teaching
 
@@ -44,6 +41,7 @@ Always.
 * [Carpenter Brut][carpenterbrut]
 * [ACTORS - It Will Come To You][actors]
 * [KANGA - Eternal Daughter and Kanga][kanga]
+* [Blanck Mass][BlanckMass]
 
 Occasionally.
 
@@ -51,19 +49,20 @@ Occasionally.
 * Dance with the Dead
 * Holy Fuck
 
-[liads]: http://www.loversinadangerousspacetime.com/
-[botw]: https://www.zelda.com/breath-of-the-wild/
-[minecraft]: https://minecraft.net
-[nba]: https://site.pelgranepress.com/index.php/nights-black-agents/
-[dracula]: https://site.pelgranepress.com/index.php/the-dracula-dossier/
-[quest]: https://www.adventure.game/
-[gencon]: https://www.gencon.com/
-[magpie]: https://www.magpiegames.com/
-[urban]: https://www.magpiegames.com/urban-shadows/
-[bluebeard]: https://www.magpiegames.com/bluebeards-bride/
-[rootrpg]: https://www.magpiegames.com/root-rpg/
-[sotdl]: https://schwalbentertainment.com/shadow-of-the-demon-lord/
 [projects]: /notes/projects
-[kanga]: https://kanga.bandcamp.com/
+[liads]: http://www.loversinadangerousspacetime.com/
+[minecraft]: https://minecraft.net
+[Carrion]: https://carrion.game/
+[ShovelKnight]: https://yachtclubgames.com/shovel-knight/
+[shovel-knight-by-david-l-craddock]: https://bossfightbooks.com/products/shovel-knight-by-david-l-craddock
+[dracula]: https://site.pelgranepress.com/index.php/the-dracula-dossier/
+[sotdl]: https://schwalbentertainment.com/shadow-of-the-demon-lord/
+[Masks]: https://www.magpiegames.com/masks/
+[magpie]: https://www.magpiegames.com/
 [carpenterbrut]: http://www.carpenterbrut.com/
 [actors]: https://www.actorstheband.com/
+[kanga]: https://kanga.bandcamp.com/
+[urban]: https://www.magpiegames.com/urban-shadows/
+[botw]: https://www.zelda.com/breath-of-the-wild/
+[nba]: https://site.pelgranepress.com/index.php/nights-black-agents/
+[BlanckMass]: https://www.blanckmass.com/
