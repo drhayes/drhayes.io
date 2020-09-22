@@ -5,7 +5,6 @@ tags:
   - fiction
   - masks
   - rpg
-draft: true
 ---
 
 *Thump thump thump*. Diego's hands drum a staccato beat on the Anu-Bus seat in front of him. He grins, remembering the cool drizzle of electricity down his arms, the thunderous explosion of contact, the happy solidity of simple violence. He hadn't ever just let go like that, not when it mattered, not with so many people depending on him. And it had worked! They'd won!
