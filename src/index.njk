@@ -2,8 +2,8 @@
 layout: base.njk
 ---
 <main class="front-page h-card vcard">
-  <a href="/" class="site-logo">
-    <img src="/img/raven.png" alt="drhayes.io">
+  <a href="/" class="site-logo" name="drhayes.io">
+    {% include "raven.svg" %}
   </a>
   <h1 class="p-name fn">Hi, I'm David Hayes. 👋🏽</h1>
   <a href="mailto:hi@drhayes.io{{ site.author.email }}" class="u-email email" rel="me">{{ site.author.email }}</a>

@@ -26,9 +26,14 @@ p {
 }
 
 a, a:visited {
-  text-decoration: underline dotted;
-  text-decoration-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-decoration: none;
   color: inherit;
+
+  &:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 }
 
 code {
@@ -69,6 +74,10 @@ code {
       }
     }
   }
+}
+
+.page-header {
+  // display: flex;
 }
 
 .c-blockquote {
@@ -155,12 +164,9 @@ article {
 }
 
 .site-logo {
-  display: block;
-  text-align: center;
-
-  img {
-    width: 10rem;
-    margin-bottom: 1rem;
+  svg {
+    width: 15rem;
+    fill: white;
   }
 }
 
@@ -169,11 +175,11 @@ article {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 .site-menu-item {
-  margin-left: 1rem;
   margin-right: 1rem;
 }
 
@@ -199,7 +205,7 @@ article {
 }
 
 .article-date {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   opacity: 0.75;
 
   time {
@@ -240,6 +246,10 @@ article {
   align-items: center;
   justify-content: center;
   height: 100vh;
+
+  .site-logo svg {
+    width: 30rem;
+  }
 }
 
 @media (max-width: 425px) {
@@ -259,10 +269,6 @@ article {
     .site-menu {
       flex-direction: row;
     }
-  }
-
-  .page-header {
-    display: flex;
   }
 
   .site-menu {
@@ -494,7 +500,7 @@ article {
   font-size: 120%;
   font-weight: bold;
   padding: .5em;
-  background-color: rgba(192, 232, 255, 1);
+  background-color: rgba(192, 232, 255, .1);
   color: steelblue;
   text-align: center;
 

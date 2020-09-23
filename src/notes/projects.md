@@ -3,7 +3,7 @@ title: Projects
 description: What ideas do I have for projects?
 tags:
   - projects
-date: 2020-08-15
+date: 2020-07-18
 updated: 2020-09-21
 ---
 
