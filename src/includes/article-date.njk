@@ -1,0 +1,14 @@
+{%- if date and updated -%}
+  <div class="article-date">
+    <time class="published-date dt-published" datetime="{{ date | dateFormat(true) }}">{{ date | dateFormat }}</time>
+    <time class="updated-date dt-updated" datetime="{{ updated | dateFormat(true) }}">{{ updated | dateFormat }}</time>
+  </div>
+{%- elif date -%}
+  <div class="article-date">
+    <time class="published-date dt-published" datetime="{{ date | dateFormat(true) }}">{{ date | dateFormat }}</time>
+  </div>
+{%- elif updated -%}
+  <div class="article-date">
+    <time class="updated-date dt-updated" datetime="{{ updated | dateFormat(true) }}">{{ updated | dateFormat }}</time>
+  </div>
+{%- endif -%}

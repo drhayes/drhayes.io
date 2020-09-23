@@ -2,6 +2,7 @@
 title: Captivated by Public Note Systems
 description: In which I barf forth the list of links that are burning up my brain and absolutely forcing me to re-design my personal site.
 date: 2020-07-19T23:00:00-05:00
+updated: 2020-09-23
 tags:
   - emacs
   - text

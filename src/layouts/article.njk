@@ -7,25 +7,9 @@
 <article class="single-blog-post">
 
   <header class="blog-header">
-    {%- if date -%}
-      <div class="article-date">
-        <time datetime="{{ date | dateFormat(true) }}">
-          {{ date | dateFormat }}
-        </time>
-      </div>
-    {%- endif -%}
-
     <h1 class="title">{{ title }}</h1>
-
-    {%- if tags -%}
-      <ul class="tags dotted-list">
-        {%- for tag in tags -%}
-          <li class="tag">
-            <a href="/tags/{{ tag }}" class="">{{ tag }}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
+    {% include "article-date.njk" %}
+    {% include "tags.njk" %}
   </header>
 
     {% if draft %}

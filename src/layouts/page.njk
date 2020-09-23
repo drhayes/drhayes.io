@@ -9,13 +9,7 @@
   </header>
 
   <article class="">
-    {% if updated %}
-      <strong>Updated:</strong>
-      <time datetime="{{ updated | dateFormat(true) }}">
-        {{ updated | dateFormat }}
-      </time>
-    {% endif %}
-
+    {% include "article-date.njk" %}
     {{ content | safe }}
   </article>
 

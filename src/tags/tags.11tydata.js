@@ -1,5 +1,5 @@
 module.exports = {
   eleventyComputed: {
-    title: data => `Pages tagged "${data.tag}"`,
+    title: data => `#${data.tag}`,
   },
 };
