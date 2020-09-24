@@ -269,6 +269,14 @@ article {
     .site-menu {
       flex-direction: row;
     }
+
+    .site-logo svg {
+      width: 20rem;
+    }
+  }
+
+  .page-header {
+    display: flex;
   }
 
   .site-menu {
