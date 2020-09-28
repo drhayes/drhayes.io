@@ -1,6 +1,6 @@
 ---
 title: I Hate Watching Videos to Learn Things
-updated: 2020-08-21
+updated: 2020-09-28
 ---
 
 I read pretty fast and I'm easily distracted, so watching your twenty minute video about a topic that could just as easily been written down in three paragraphs is pretty frustrating for me.
@@ -9,4 +9,4 @@ Is it because video production is easier than writing well? Uncharitably, I susp
 
 This is part of my belief in the [supremacy of text][sot].
 
-[sot]: /notes/supremacy-of-text
+[sot]: /notes/wisdom/supremacy-of-text
