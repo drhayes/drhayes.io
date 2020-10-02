@@ -2,7 +2,7 @@
 title: Now
 description: What am I doing right now.
 layout: page.njk
-updated: 2020-09-21
+updated: 2020-10-91
 ---
 
 What I'm doing right now.
@@ -38,9 +38,10 @@ I'm doing a lot of JavaScript, Lua, and Terraform these days. Always trying to g
 
 Always.
 
-* [Carpenter Brut][carpenterbrut]
+* [Carpenter Brut][carpenterbrut] - Basically everything
+* [Makeup and Vanity Set][mavs] - Basically everything
 * [ACTORS - It Will Come To You][actors]
-* [KANGA - Eternal Daughter and Kanga][kanga]
+* [KANGA - Eternal Daughter and Kanga][kanga] (but, also, basically everything)
 * [Blanck Mass][BlanckMass]
 
 Occasionally.
@@ -66,3 +67,4 @@ Occasionally.
 [botw]: https://www.zelda.com/breath-of-the-wild/
 [nba]: https://site.pelgranepress.com/index.php/nights-black-agents/
 [BlanckMass]: https://www.blanckmass.com/
+[mavs]: https://www.makeupandvanityset.com/
