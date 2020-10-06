@@ -13,6 +13,15 @@ Writing more. Thinking about how to organize notes usefully. Abandoning any pote
 
 Check out my [Projects][] note.
 
+## Gamedev
+
+* Was making a platformer game that I decided I don't want to work on anymore, so... I'm not going to. Time to try something different.
+* Thus [Generic Platformer][GenericPlatformer] was born!
+* Still thinking about next game project. Candidates:
+  - Match 3
+  - Typing game
+  - Top-down stealth thing maybe?
+
 ## Digital Games
 
 * Haven't been able to convince my family to beat that final boss of [Lovers in a Dangerous Spacetime][liads] yet. Our skills are rusting away!
@@ -73,3 +82,4 @@ Occasionally.
 [BlanckMass]: https://www.blanckmass.com/
 [mavs]: https://www.makeupandvanityset.com/
 [SistersOfMercy]: http://www.the-sisters-of-mercy.com/
+[GenericPlatformer]: /games/generic-platformer
