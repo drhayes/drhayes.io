@@ -8,6 +8,7 @@ toc: true
 screenshot: /img/generic-platformer-screenshot-2020-10-05.png
 description: A template project in Love.
 layout: page.njk
+date: 2020-10-06
 ---
 
 ![Neato screenshot of game]({{ screenshot }} "Screenshot as of 2018-09-12")

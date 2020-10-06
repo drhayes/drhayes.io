@@ -6,6 +6,7 @@ tags:
 toc: true
 screenshot: /img/gr-screenshot-2018-09-12.png
 description: A Metroidvania about crafting and sneaking.
+date: 2020-08-01
 layout: page.njk
 ---
 

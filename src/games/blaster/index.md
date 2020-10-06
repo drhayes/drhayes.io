@@ -6,6 +6,7 @@ tags:
 screenshot: /img/blaster-screenshot.png
 description: A little JavaScript game about blasting geometric enemies.
 layout: page.njk
+date: 2019-01-01
 ---
 
 ![Neato screenshot of game]({{ screenshot }} "Screenshot of Blaster")
