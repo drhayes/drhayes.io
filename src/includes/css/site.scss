@@ -27,7 +27,7 @@ p {
 
 a, a:visited {
   color: white;
-  text-decoration: none;
+  text-decoration: dotted underline $border-color;
   color: inherit;
 
   &:hover {
@@ -319,6 +319,7 @@ article {
       a {
         color: white;
         text-shadow: 0 0 2rem white;
+        text-decoration: none;
       }
     }
   }

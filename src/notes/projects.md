@@ -3,8 +3,9 @@ title: Projects
 description: What ideas do I have for projects?
 tags:
   - projects
+  - love
 date: 2020-07-18
-updated: 2020-09-21
+updated: 2020-10-06
 ---
 
 ## Code
@@ -14,11 +15,18 @@ updated: 2020-09-21
     - Need to write about that hiatus.
   * Beehive.lua
     - Released at https://github.com/drhayes/beehive.lua
-  * Surrender
+  * ~~Surrender~~
     - A short game that is entirely a boss fight from an earlier game.
-  * Squeaky.lua
-    - A love2d framework for making games.
+    - On hold for a bit.
+  * Squeak.lua
+    - A LÖVE framework for making games.
     - Still thinking about how to organize it and what to publish.
+  * [Generic Platformer][platformer]
+    - Example LÖVE codebase using proto-Squeak and proto-Squick.
+  * Squick.lua
+    - Keyboard-accessible UI framework.
+    - Name might change, just putting it out there to think about it a bit.
 
 
 [gr]: /games/gemini-rising
+[platformer]: https://github.com/drhayes/generic-platformer/

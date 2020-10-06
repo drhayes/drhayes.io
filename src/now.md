@@ -2,7 +2,7 @@
 title: Now
 description: What am I doing right now.
 layout: page.njk
-updated: 2020-10-91
+updated: 2020-10-06
 ---
 
 What I'm doing right now.
@@ -36,6 +36,11 @@ I'm doing a lot of JavaScript, Lua, and Terraform these days. Always trying to g
 
 ## Music
 
+Lately.
+
+* [Sisters of Mercy][SistersOfMercy] - Anodyne to that kind of day, week, month, season...
+* Hunter as a Horse
+
 Always.
 
 * [Carpenter Brut][carpenterbrut] - Basically everything
@@ -46,7 +51,6 @@ Always.
 
 Occasionally.
 
-* Hunter as a Horse
 * Dance with the Dead
 * Holy Fuck
 
@@ -68,3 +72,4 @@ Occasionally.
 [nba]: https://site.pelgranepress.com/index.php/nights-black-agents/
 [BlanckMass]: https://www.blanckmass.com/
 [mavs]: https://www.makeupandvanityset.com/
+[SistersOfMercy]: http://www.the-sisters-of-mercy.com/
