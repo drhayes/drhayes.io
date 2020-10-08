@@ -56,6 +56,16 @@ code {
   font-style: initial;
 }
 
+hr {
+  border: none;
+
+  &::after {
+    display: block;
+    content: '* * *';
+    text-align: center;
+  }
+}
+
 .hidden {
   display: none;
 }
