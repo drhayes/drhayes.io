@@ -3,9 +3,17 @@ layout: page.njk
 title: All The Notes
 ---
 
-Once I have some favorites here I will curate them and display the ones I'm either most proud of or the ones I'm working to develop. Until that time, I'm just going to list all the notes.
+## Guideposts
 
-Check out my [draft notes][drafts] for what I'm actively working on right now.
+The [Projects note][projects] stays updated with what I'm up to.
+
+Check out the [principle tag][principles] for a list of things I think that I think.
+
+The [Drafts note][drafts] list shows notes that are in an even less finished state than most of the notes I'm trying to keep here.
+
+There's also [the words list][words] and [the quotes list][quotes] notes to take a gander at.
+
+## All The Notes
 
 <ol>
 {% for note in collections.notes %}
@@ -18,3 +26,7 @@ Check out my [draft notes][drafts] for what I'm actively working on right now.
 </ol>
 
 [drafts]: /drafts
+[projects]: /notes/projects
+[words]: /notes/words
+[quotes]: /notes/quotes
+[principles]: /tags/principle
