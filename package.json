@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/drhayes/drhayes.io.git"
   },
-  "author": "",
+  "author": "David Hayes <hi@drhayes.io>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/drhayes/drhayes.io/issues"
