@@ -178,7 +178,7 @@ article {
 }
 
 .content {
-  max-width: 60rem;
+  max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -329,9 +329,9 @@ article {
     justify-content: center;
     align-items: center;
     background-size: cover;
-    margin: 0.5rem;
-    width: 25rem;
-    height: 25rem;
+    margin: 1ch;
+    width: 33ch;
+    height: 33ch;
 
     .game-title {
       border-bottom: none;
