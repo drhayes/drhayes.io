@@ -453,3 +453,17 @@ article {
 .comments {
   margin-top: 2rem;
 }
+
+.jokes {
+  padding-left: 0;
+  list-style-type: none;
+
+  .joke {
+    &:before {
+      display: block;
+      content: '* * *';
+      margin-top: 1rem;
+      opacity: .5;
+    }
+  }
+}

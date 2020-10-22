@@ -6,10 +6,12 @@
 
   <header class="">
     <h1 class="title">{{ title }}</h1>
+    {% include "article-date.njk" %}
+    {% include "tags.njk" %}
   </header>
 
   <article class="">
-    {% include "article-date.njk" %}
+    {# {% include "article-date.njk" %} #}
     {{ content | safe }}
   </article>
 
