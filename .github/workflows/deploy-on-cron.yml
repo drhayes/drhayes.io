@@ -1,7 +1,7 @@
 name: Cron Build
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '23 1 * * *'
 
 jobs:
   deploy:
