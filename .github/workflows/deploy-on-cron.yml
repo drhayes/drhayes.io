@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Curl the thing
         env:
-          NETLIFY_HOST: {{ secrets.NETLIFY_DEPLOY_HOOK }}
+          NETLIFY_HOST: ${{ secrets.NETLIFY_DEPLOY_HOOK }}
         run: |
           curl -X POST -d {} ${NETLIFY_HOST}
