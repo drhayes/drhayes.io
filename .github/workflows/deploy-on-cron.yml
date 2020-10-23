@@ -1,4 +1,3 @@
-
 name: Cron Build
 on:
   schedule:
@@ -6,7 +5,8 @@ on:
 
 jobs:
   deploy:
-    name: Deploy The Thing
+    runs-on: ubuntu-latest
     steps:
-      - run: |
-        curl -X POST -d {} {{ secrets.NETLIFY_DEPLOY_HOOK }}
+      - name: Curl the thing
+        run: |
+          curl -X POST -d {} {{ secrets.NETLIFY_DEPLOY_HOOK }}
