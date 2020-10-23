@@ -1,0 +1,12 @@
+
+name: Cron Build
+on:
+  schedule:
+    - cron: 0 * * * *
+
+jobs:
+  deploy:
+    name: Deploy The Thing
+    steps:
+      - run: |
+        curl -X POST -d {} {{ secrets.NETLIFY_DEPLOY_HOOK }}
