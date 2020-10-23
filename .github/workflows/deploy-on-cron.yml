@@ -8,5 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl the thing
+        env:
+          NETLIFY_HOST: {{ secrets.NETLIFY_DEPLOY_HOOK }}
         run: |
-          curl -X POST -d {} {{ secrets.NETLIFY_DEPLOY_HOOK }}
+          curl -X POST -d {} ${NETLIFY_HOST}
