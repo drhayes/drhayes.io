@@ -107,3 +107,7 @@
 [[redirects]]
   from = "/notes/supremacy-of-text/"
   to = "/notes/wisdom/supremacy-of-text/"
+
+[[redirects]]
+  from = "/jokes/"
+  to = "/notes/jokes/"
