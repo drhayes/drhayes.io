@@ -456,6 +456,14 @@ article {
 .pages-that-link-here {
   margin-top: 2rem;
 
+  h2 {
+    font-size: 90%;
+
+    &:before {
+      content: initial;
+    }
+  }
+
   summary {
     cursor: pointer;
   }
@@ -474,12 +482,21 @@ article {
   }
 
   .page-summary {
-    padding: .5rem;
-    border: 1px dotted #666;
+    font-size: 90%;
+    text-decoration: none;
 
-    h1,h2,h3,h4,h5 {
-      &:before {
-        content: '';
+    &:hover {
+      font-weight: inherit;
+    }
+
+    .content {
+      padding: .5rem;
+      border: 1px dotted #666;
+
+      h1,h2,h3,h4,h5 {
+        &:before {
+          content: initial;
+        }
       }
     }
   }

@@ -25,8 +25,8 @@
 
   {% set linkHeres = collections.all | linksHere(page.url) %}
   {% if linkHeres.length %}
-  <details class="pages-that-link-here">
-    <summary>Pages that link here</summary>
+  <section class="pages-that-link-here">
+    <h2>Pages that link here</h2>
     <ul>
     {% for page in linkHeres %}
       <li>
@@ -34,7 +34,7 @@
       </li>
     {% endfor %}
     </ul>
-  </details>
+  </section>
   {% endif %}
 
 </article>

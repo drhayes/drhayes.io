@@ -1,6 +1,8 @@
 ---
 title: Words Mean Things
 date: 2020-11-02
+tags:
+  - principle
 ---
 
 > Words mean things.

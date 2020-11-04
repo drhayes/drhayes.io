@@ -1,6 +1,8 @@
 ---
 title: Empathy and Humor
 date: 2020-10-12
+tags:
+  - principle
 ---
 
 > When speaking with people I generally seek to communicate with empathy and humor.
