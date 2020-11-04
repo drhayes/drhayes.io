@@ -8,9 +8,9 @@ html {
 body {
   font-size: 18px;
   font-family: "Monaco","Inconsolata", "Consolas", "Ubuntu Mono", "Liberation Mono", "Menlo", "FreeMono", monospace;
-  // font-family: monospace;
-  background: #333;
-  color: #f7f7ff;
+  text-rendering: optimizeLegibility;
+  // background: #333;
+  // color: #f7f7ff;
   line-height: 1.6;
 
   article {
@@ -132,6 +132,55 @@ article {
     margin-top: 2rem;
     margin-bottom: -.2rem;
     font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 150%;
+  }
+
+  h2 {
+    font-size: 120%;
+  }
+
+  h3 {
+    font-size: 110%;
+  }
+
+  h4, h5 {
+    font-size: 100%;
+  }
+
+  h2:before {
+    content: '##';
+    padding-right: .5em;
+    font-size: 80%;
+    vertical-align: baseline;
+    opacity: .5;
+  }
+
+  h3:before {
+    content: '###';
+    padding-right: .5em;
+    font-size: 80%;
+    vertical-align: baseline;
+    opacity: .5;
+  }
+
+  h4:before {
+    content: '#####';
+    padding-right: .5em;
+    font-size: 80%;
+    vertical-align: baseline;
+    opacity: .5;
+  }
+
+  h5:before {
+    content: '#####';
+    padding-right: .5em;
+    font-size: 80%;
+    vertical-align: baseline;
+    opacity: .5;
   }
 
   header {
@@ -182,7 +231,6 @@ article {
 .site-logo {
   svg {
     width: 15rem;
-    fill: white;
   }
 }
 
@@ -214,7 +262,11 @@ article {
 
     a {
       &:before {
-        content: '#';
+        content: ':';
+      }
+
+      &:after {
+        content: ':';
       }
     }
   }
@@ -400,8 +452,6 @@ article {
 
 .pages-that-link-here {
   margin-top: 2rem;
-  max-height: 30rem;
-  overflow: auto;
 
   summary {
     cursor: pointer;

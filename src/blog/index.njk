@@ -10,7 +10,7 @@ pagination:
 <ol class="blog-posts-list">
   {% for post in pagination.items %}
   <li class="blog-post-item">
-    <article class="blog-post">
+    <section class="blog-post">
       <div class="date-part">
         <time datetime="{{ post.data.date | dateFormat(true) }}">
           {{ post.data.date | dateFormat }}
@@ -36,7 +36,7 @@ pagination:
         {% endif %}
         <p class="reading-time">{{ post | readingTime }} read</p>
       </div>
-    </article>
+    </section>
   </li>
   {% endfor %}
 </ol>

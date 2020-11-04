@@ -1,5 +1,8 @@
 ---
 title: Social Media Is Hazardous Material
+tags:
+  - brains
+  - social-media
 date: 2020-11-02
 ---
 

@@ -25,6 +25,8 @@ updated: 2020-10-19
   * Squick.lua
     - Don't like that name.
     - Keyboard-accessible UI framework.
+  * Notes
+    - Trying to make an accessible (for me) note entry system so it's easier for me to dump my note thoughts out.
 
 
 [gr]: /games/gemini-rising
