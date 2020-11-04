@@ -24,14 +24,13 @@
     "clean-css": "4.2.3",
     "date-fns": "2.16.1",
     "eleventy-plugin-reading-time": "0.0.1",
-    "flatted": "3.0.5",
     "highlight.js": "10.1.1",
     "markdown-it": "11.0.0",
     "markdown-it-attribution": "0.1.1",
     "markdown-it-container": "3.0.0",
     "markdown-it-emoji": "1.4.0",
-    "object-path": ">=0.11.5",
     "node-sass": "4.14.1",
+    "object-path": ">=0.11.5",
     "truncate-html": "1.0.3"
   }
 }
