@@ -1,0 +1,10 @@
+---
+pagination:
+    data: notes
+    size: 1
+    alias: note
+permalink: "notes/{{ note.title | slug }}/"
+layout: note.njk
+---
+
+{{ note.title }}
