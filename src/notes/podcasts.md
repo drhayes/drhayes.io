@@ -1,6 +1,7 @@
 ---
 title: Podcasts
 date: 2020-11-06
+updated: 2020-11-11
 ---
 
 The podcasts I can't stop listening to:
@@ -23,6 +24,10 @@ And, I mean, I really liked their game Crashlands (though it took me an embarass
 
 A crazy, not-edited-at-all-that-I-can-tell Cthulhuian romp of an actual-play podcast run with a modified [Delta Green][deltagreen] ruleset. They're weirdly hilarious and smart.
 
+## [Red Moon Roleplaying][redmoon]
+
+Horror! Creepiness! My best source for [KULT][kdl] actual plays. The GMs, players, and guests are usually fully bought-in to playing the horror vibe and don't mess around.
+
 
 [crowes]: http://www.soundslikecrowes.com/
 [savageworlds]: https://www.peginc.com/product-category/savage-worlds/
@@ -33,3 +38,5 @@ A crazy, not-edited-at-all-that-I-can-tell Cthulhuian romp of an actual-play pod
 [lastgameimakebeforeidie]: https://www.youtube.com/watch?v=LQHtOg46eOw
 [ptbp]: https://podcasts.apple.com/us/podcast/pretending-to-be-people/id1443447819
 [deltagreen]: http://www.delta-green.com/
+[redmoon]: https://www.redmoonroleplaying.com/
+[kdl]: https://kultdivinitylost.com/
