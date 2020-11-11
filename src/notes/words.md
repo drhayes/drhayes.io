@@ -84,6 +84,9 @@ Reddish in hue, tinged in red.
 __sonder__
 The realization that each random passerby is living a life as vivid and complex as your own.
 
+__torschlusspanik__
+The fear that time is running out to act, often regarding a life goal or opportunity.
+
 __vellichor__
 The strange wistfulness of used book stores.
 
