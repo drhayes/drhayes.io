@@ -771,3 +771,8 @@ A person is walking down the street and hears a bunch of people in a fenced in y
 
 Someone from the other side pokes him in the eye and they all start shouting "20! 20! 20!"
 
+***
+
+What happens when you boil a funny bone?
+
+It turns into a laughing stock.
