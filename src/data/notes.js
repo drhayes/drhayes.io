@@ -1,5 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
+const markdown = require('../../lib/library/markdown');
 
 const EXCEPTIONS = [
   '.git',
@@ -32,26 +33,56 @@ async function crawlDir(baseDir, dir) {
   return results;
 }
 
-async function processNote(rawNote) {
+function parseNoteDate(dateString) {
+  return dateString;
+  const match = dateString.match(/(\d\d\d\d)-(\d\d)-(\d\d)/);
+  return new Date(match[1], match[2], match[3]);
+}
+
+// Given an object that looks like { path, contents } will return a note object
+// or null if the given object was invalid.
+function processNote(rawNote) {
+  const note = {};
   // First line is the title, minus any leading '#' character.
-  // Next, look for words that start with @. Those are tags.
+  const contents = rawNote.split('\n');
+  const titleLine = contents.shift().trim();
+  note.title = titleLine.replace(/^#\s+/, '');
+  // Next, look for words (maybe with dashes!) that start with @ delimited by spaces.
+  // Those are tags. They are case-insensitive.
+  const tagLine = contents.shift().trim();
+  note.tags = tagLine
+    .toLowerCase()
+    .split(' ')
+    .map(tag => tag.replace('@', ''));
   // Then zero or more of (in any order):
   // * ":created:" followed by a space followed by a YYYY-MM-DD date.
   // * ":updated:" followed by a space followed by a YYYY-MM-DD date.
   // * ":description:" followed by text until a new line.
+  let nextLine = contents.shift().trim();
+  while (nextLine.length > 0) {
+    if (nextLine.startsWith(':created:')) {
+      note.created = parseNoteDate(nextLine.replace(':created:', '').trim());
+    } else if (nextLine.startsWith(':updated:')) {
+      note.updated = parseNoteDate(nextLine.replace(':updated:', '').trim());
+    } else if (nextLine.startsWith(':description:')) {
+      note.description = nextLine.replace(':description:', '').trim();
+    }
+    nextLine = contents.shift().trim();
+  }
   // Then a blank line.
   // Anything else is content that should be processed as markdown.
-  return null;
-  return {
-    title: Date.now().toString(),
-  }
+  note.contents = markdown.render(contents.join('\n'));
+  return note;
 }
 
 module.exports = async function() {
   const notesBasePath = path.join(__dirname, '../../notes');
-  const rawNotes = await crawlDir(notesBasePath)
-  const notes = await Promise.all(rawNotes.map(processNote));
-  const filteredNotes = notes.filter(Boolean);
-  console.log(filteredNotes);
-  return filteredNotes;
+  const noteFiles = await crawlDir(notesBasePath);
+  return noteFiles
+    // Parse the raw note contents.
+    .map(({ path, contents }) => ({ path, noteData: processNote(contents) }))
+    // Filter out any invalid ones.
+    .filter(note => note.noteData)
+    // Change to a form eleventy likes.
+    .map(note => note.noteData);
 };

@@ -1,10 +1,15 @@
 ---
 pagination:
-    data: notes
-    size: 1
-    alias: note
+  data: notes
+  size: 1
+  alias: note
 permalink: "notes/{{ note.title | slug }}/"
-layout: note.njk
+templateEngineOverride: njk,md
+layout: default.njk
 ---
 
-{{ note.title }}
+# {{ note.title }}
+
+***
+
+{{ note.contents | safe }}
