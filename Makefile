@@ -1,5 +1,5 @@
 .PHONY=deploy
-deploy: dist
+build: dist
 
 .PHONY=clean
 clean:
