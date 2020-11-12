@@ -7,7 +7,7 @@ clean:
 	rm -rf dist
 	rm -rf src/notes
 
-dist: node_modules src/notes
+dist: src/notes
 	npm run build
 
 src/notes:
@@ -15,6 +15,3 @@ src/notes:
 	cp scaffolding/notes.json src/notes
 	cp scaffolding/notes-index.md src/notes/index.md
 	exec bin/processNotes.js notes src/notes
-
-node_modules:
-	npm install
