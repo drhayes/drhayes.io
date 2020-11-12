@@ -10,10 +10,7 @@ clean:
 dist: node_modules src/notes
 	npm run build
 
-notes:
-	git clone git@github.com:drhayes/notes.git
-
-src/notes: notes
+src/notes:
 	mkdir -p src/notes
 	cp scaffolding/notes.json src/notes
 	cp scaffolding/notes-index.md src/notes/index.md
