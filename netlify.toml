@@ -1,9 +1,9 @@
 [build]
-  command = "npm run build"
+  command = "make"
   publish = "dist"
 
 [context.production]
-  command = "npm run build"
+  command = "make"
 
 [context.branch-deploy]
   command = "make"
