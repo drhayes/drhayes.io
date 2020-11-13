@@ -2,9 +2,9 @@
 permalink: /css/site.css
 ---
 {% set css %}
-  {% include "css/site.scss" %}
-  {% include "css/mobile.scss" %}
-  {% include "../../node_modules/highlight.js/scss/dracula.scss" %}
+  {% include "css/site.less" %}
+  {% include "css/mobile.less" %}
+  {% include "../../node_modules/highlight.js/styles/dracula.css" %}
 {% endset %}
 
-{{ css | sassify | safe }}
+{{ css | lessify | safe }}

@@ -18,7 +18,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
   eleventyConfig.addFilter('debugPrint', require('./lib/filters/debugPrint'));
   eleventyConfig.addFilter('linksHere', require('./lib/filters/linksHere'));
-  eleventyConfig.addFilter('sassify', require('./lib/filters/sassify'));
+  eleventyConfig.addNunjucksAsyncFilter('lessify', require('./lib/filters/lessify'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
   eleventyConfig.addFilter('truncateHtml', require('./lib/filters/truncateHtml'));
 
