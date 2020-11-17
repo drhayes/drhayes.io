@@ -2,7 +2,7 @@
 title: Now
 description: What am I doing right now.
 layout: page.njk
-updated: 2020-10-19
+updated: 2020-11-17
 ---
 
 What I'm doing right now.
@@ -15,8 +15,7 @@ Check out my [Projects][] note.
 
 ## Gamedev
 
-* [Squeak][] is alive!
-* Thinking about the name for the UI project...
+* Thinking about the name for the UI project... Some play on the UI thing, of course. Squiggle?
 * Still thinking about next game project. Candidates:
   - Typing game
     + Wizards shooting spaceships to save the Earth!
@@ -25,31 +24,29 @@ Check out my [Projects][] note.
 
 ## Digital Games
 
-* Beat [Carrion][]. It was great. Just play it.
-* Haven't been able to convince my family to beat that final boss of [Lovers in a Dangerous Spacetime][liads] yet. Our skills are rusting away!
-* Trying to figure out what our [Minecraft][] gaming is going to look like, going forward.
-* Starting to play [Shovel Knight][ShovelKnight] after reading the [Boss Fight Books book][shovel-knight-by-david-l-craddock]. Such a great game. Not NES hard... yet.
+* I'm basically playing no video games right now. Ugh.
 
 ## Role-playing Games
 
-* [The Dracula Dossier][dracula] is very fun. Still not dead, but I've been shot by goons a couple of times. That wasn't great.
-* Running a campaign using [Shadow of the Demon Lord][sotdl], maybe. Hard to schedule. And the I-roll-you-roll-I-roll of combat isn't super exciting for me.
-* Playing in a [Masks][] campaign with Internet strangers! A curated [Magpie][] game turned campaign. It's going great!
+* [The Dracula Dossier][dracula] is very fun. We're in Europe. Close to Drac I think. Scary.
+* I think my [Shadow of the Demon Lord][sotdl] is dead. I don't blame the system, I blame me.
+* Playing in a [Masks][] campaign with Internet strangers! A curated [Magpie][] game turned campaign. It's going great! Talk to me about the between-game vignettes.
 
 ## Teaching
 
-Thinking and reading about teaching adults. How to effectively communicate ideas and meet students where they're looking. What does my teaching language look like?
+Need to write more about what how my teaching is going.
 
 ## Programming
 
-I'm doing a lot of JavaScript, Lua, and Terraform these days. Always trying to get better at shell scripting. Paraphrasing the inestimable Merlin Mann, when I get a bit of shell scripting right I feel like a chimp that just successfully landed a jet.
+Mostly Terraform at work. Mostly JavaScript at home as I poke at my personal site and a notes system. Lua for anything gamedev-y, but I'm eyeing Rust.
 
 ## Music
 
 Lately.
 
-* [Sisters of Mercy][SistersOfMercy] - Anodyne to that kind of day, week, month, season...
-* Hunter as a Horse
+* Com Truise.
+* Angel Olsen.
+* Daniel Deluxe.
 
 Always.
 
@@ -63,6 +60,7 @@ Occasionally.
 
 * Dance with the Dead
 * Holy Fuck
+* Perturbator
 
 
 
