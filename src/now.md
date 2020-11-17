@@ -29,7 +29,7 @@ Check out my [Projects][] note.
 ## Role-playing Games
 
 * [The Dracula Dossier][dracula] is very fun. We're in Europe. Close to Drac I think. Scary.
-* I think my [Shadow of the Demon Lord][sotdl] is dead. I don't blame the system, I blame me.
+* I think my [Shadow of the Demon Lord][sotdl] game is dead. I don't blame the system, I blame me.
 * Playing in a [Masks][] campaign with Internet strangers! A curated [Magpie][] game turned campaign. It's going great! Talk to me about the between-game vignettes.
 
 ## Teaching
