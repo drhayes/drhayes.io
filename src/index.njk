@@ -1,21 +1,25 @@
 ---
 layout: base.njk
 ---
-<main class="front-page h-card vcard">
-  <a href="/" class="site-logo" name="drhayes.io">
-    {% include "raven.svg" %}
-  </a>
-  <h1 class="p-name fn">Hi, I'm David Hayes. 👋🏽</h1>
-  <a href="mailto:hi@drhayes.io{{ site.author.email }}" class="u-email email" rel="me">{{ site.author.email }}</a>
-  <h3 class="">I do stuff with computers. I live in Austin, TX.</h3>
+<main class="h-screen flex flex-col items-center justify-center h-card vcard">
+  <div class="w-80 mx-auto">
+    <a href="/" name="drhayes.io">
+      {% include "raven.svg" %}
+    </a>
+  </div>
+  <h1 class="text-2xl font-bold m-3 p-name fn">Hi, I'm David Hayes. 👋🏽</h1>
+  <a href="mailto:{{ site.author.email }}" class="m-3 u-email email" rel="me">{{ site.author.email }}</a>
+  <h3 class="m-3">I do stuff with computers. I live in Austin, TX.</h3>
 
-  <div class="site-menu">
+  <ul class="w-full m-3 flex justify-evenly align-start">
     {% for item in menu %}
-      <a class="site-menu-item" href="{{ item.url }}">{{ item.name }}</a>
+      <li>
+        <a class="mr-1" href="{{ item.url }}">{{ item.name }}</a>
+      </li>
     {% else %}
       <p>Nuthin'</p>
     {% endfor %}
-  </div>
+  </ul>
 </main>
 
 <footer class="hidden">

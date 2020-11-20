@@ -1,11 +1,13 @@
-<nav class="page-header">
-  <a href="/" class="site-logo" name="drhayes.io home page">
-    {% include "raven.svg" %}
-  </a>
+<nav class="mb-8 flex">
+  <div class="">
+    <a href="/" name="drhayes.io home page">
+      {% include "raven.svg" %}
+    </a>
+  </div>
 
-  <ul class="site-menu">
+  <ul class="flex flex-col justify-evenly items-end w-full">
     {% for item in menu %}
-    <li class="site-menu-item">
+    <li class="mr-4">
       <a class="" href="{{ item.url }}">{{ item.name }}</a>
     </li>
     {% else %}

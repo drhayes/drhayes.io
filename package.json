@@ -21,6 +21,7 @@
     "@11ty/eleventy": "0.11.0",
     "@11ty/eleventy-plugin-rss": "1.0.7",
     "airtable": "0.10.0",
+    "autoprefixer": "10.0.2",
     "clean-css": "4.2.3",
     "date-fns": "2.16.1",
     "eleventy-plugin-reading-time": "0.0.1",
@@ -31,6 +32,8 @@
     "markdown-it-container": "3.0.0",
     "markdown-it-emoji": "1.4.0",
     "object-path": ">=0.11.5",
+    "postcss": "8.1.8",
+    "tailwindcss": "2.0.1",
     "truncate-html": "1.0.3"
   }
 }

@@ -1,11 +1,15 @@
 .PHONY=deploy
-build: dist
+build: dist dist/css/site.css
 
 .PHONY=clean
 clean:
 	rm -rf notes
 	rm -rf dist
 	rm -rf src/notes
+
+dist/css/site.css: css/site.css tailwind.config.js
+	./node_modules/.bin/tailwindcss build $< -o $@
+#   NODE_ENV=production ./node_modules/.bin/tailwindcss build $< -o $@
 
 dist: src/notes
 	npm run build
