@@ -102,7 +102,7 @@ function formatEleventyNote(note, notesBySlug) {
     const [reference, noteId, linkText] = match;
     console.log(reference, noteId, linkText);
     const noteRef = notesBySlug[noteId];
-    note.contents = note.contents.replace(reference, `[${ (noteRef && noteRef.title ) || linkText}](/notes/${noteId})`);
+    note.contents = note.contents.replace(reference, `[${ linkText || (noteRef && noteRef.title )}](/notes/${noteId})`);
   }
   // Return the template we should write to disk.
   return `---

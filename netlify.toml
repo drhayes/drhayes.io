@@ -2,12 +2,6 @@
   command = "make build"
   publish = "dist"
 
-[context.production]
-  command = "make build"
-
-[context.branch-deploy]
-  command = "make build"
-
 [[headers]]
   for = "/*"
   [headers.values]
