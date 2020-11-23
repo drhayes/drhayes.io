@@ -4,10 +4,14 @@ const readingTime = require('eleventy-plugin-reading-time');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 module.exports = (eleventyConfig) => {
+  // Markdown stuff.
   eleventyConfig.setLibrary('md', require('./lib/library/markdown'));
 
   // Deep data merge!
   eleventyConfig.setDataDeepMerge(true);
+
+  // Don't use .gitignore for ignoring things.
+  eleventyConfig.setUseGitIgnore(false);
 
   // Plugins.
   eleventyConfig.addPlugin(readingTime);
