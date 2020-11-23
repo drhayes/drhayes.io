@@ -27,17 +27,16 @@ This site is generated in [Eleventy].
 
 * [Here is the site's git repository.][site]
 * [Sublime Text 3][sublime] is where the typing happens.
-* [Visual Studio Code][vsc] is also where the typing happens.
 * [vim] is where yet more typing happens.
 * [Markdown] has the content.
 * [Eleventy] generates the site.
 * [GitHub] hosts the code.
 * [Netlify] hosts the site.
 * [Cloudflare] makes it fast.
+* [Tailwind] does the styling.
 
 [site]: https://github.com/drhayes/drhayes.io
 [sublime]: https://www.sublimetext.com/3
-[vsc]: https://code.visualstudio.com/
 [vim]: https://www.vim.org/
 [markdown]: https://daringfireball.net/projects/markdown/
 [eleventy]: https://www.11ty.dev
@@ -46,3 +45,4 @@ This site is generated in [Eleventy].
 [cloudflare]: https://www.cloudflare.com/
 [telegram]: https://t.me/drhayes
 [keybasechat]: https://keybase.io/drhayes/chat
+[tailwind]: https://tailwindcss.com

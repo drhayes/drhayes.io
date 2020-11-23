@@ -84,5 +84,11 @@
     margin-top: 1rem;
   }
 
+  .game-title a {
+    color: white !important;
+    text-shadow: 0 0 2rem white;
+    text-decoration: none
+  }
+
 }
 

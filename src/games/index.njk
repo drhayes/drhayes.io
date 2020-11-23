@@ -2,11 +2,11 @@
 title: Games
 layout: default.njk
 ---
-<ol class="game-list">
+<ol class="flex flex-wrap">
   {% for game in collections.games %}
-  <li class="game-list-item" style="background-image: url('{{ game.data.screenshot }}')">
-    <h2 class="game-title">
-      <a href="{{ game.url }}">{{ game.data.title }}</a>
+  <li class="flex justify-center content-center m-8 p-20 w-full flex-1 bg-cover" style="background-image: url('{{ game.data.screenshot }}')">
+    <h2 class="text-2xl game-title">
+      <a href="{{ game.url }}" class="normal-case">{{ game.data.title }}</a>
     </h2>
   </li>
   {% endfor %}
