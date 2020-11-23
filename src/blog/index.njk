@@ -7,34 +7,34 @@ pagination:
   size: 10
   reverse: true
 ---
-<ol class="blog-posts-list">
+<ol>
   {% for post in pagination.items %}
-  <li class="blog-post-item">
-    <section class="blog-post">
-      <div class="date-part">
+  <li class="mb-12">
+    <section class="flex flex-col items-baseline">
+      <div class="opacity-60">
         <time datetime="{{ post.data.date | dateFormat(true) }}">
           {{ post.data.date | dateFormat }}
         </time>
       </div>
-      <div class="content-part">
-        <h2>
+      <div class="">
+        <h2 class="m-0 text-3xl normal-case leading-relaxed">
           <a href="{{ post.url }}" class="">{{ post.data.title }}</a>
         </h2>
         {% if post.data.description %}
-          <p>{{ post.data.description }}</p>
+          <p class="leading-relaxed">{{ post.data.description }}</p>
         {% endif %}
         {% if post.data.tags %}
-          <ul class="tags dotted-list">
+          <ul class="flex flex-start flex-wrap opacity-60">
             {%- for tag in post.data.tags -%}
               {% if tag != 'blogPost' %}
-              <li class="tag">
-                <a href="/tags/{{ tag }}" class="">{{ tag }}</a>
+              <li class="leading-loose">
+                <a href="/tags/{{ tag }}" class="mr-8">:{{ tag }}:</a>
               </li>
               {% endif %}
             {%- endfor -%}
           </ul>
         {% endif %}
-        <p class="reading-time">{{ post | readingTime }} read</p>
+        <p class="opacity-80 italic leading-loose">{{ post | readingTime }} read</p>
       </div>
     </section>
   </li>
