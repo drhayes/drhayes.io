@@ -35,15 +35,28 @@ async function crawlDir(baseDir, dir) {
 }
 
 function parseNoteDate(dateString) {
-  return dateString;
-  const match = dateString.match(/(\d\d\d\d)-(\d\d)-(\d\d)/);
-  return new Date(match[1], match[2], match[3]);
+  const [, year, rawMonth, rawDay] = dateString.match(/(\d\d\d\d)(?:-(\d\d?)(?:-(\d\d?))?)?/);
+  const month = rawMonth ? rawMonth.padStart(2, '0') : '01';
+  const day = rawDay ? rawDay.padStart(2, '0') : '01';
+  return `${year}-${month}-${day}`;
 }
+
+const processingRules = {
+  author: (note, line) => note.author = line,
+  created: (note, line) => note.created = parseNoteDate(line),
+  description: (note, line) => note.description = line,
+  draft: (note, line) => note.draft = true,
+  subtitle: (note, line) => note.subtitle = line,
+  updated: (note, line) => note.updated = parseNoteDate(line),
+};
 
 // Given an object that looks like { path, contents } will return a note object
 // or null if the given object was invalid.
-function parseNote(rawNote) {
-  const note = {};
+function parseNote(notePath, rawNote) {
+  const note = {
+    path: notePath,
+    slug: notePath.replace(/\.md$/i, ''),
+  };
   // First line is the title, minus any leading '#' character.
   const contents = rawNote.split('\n');
   const titleLine = contents.shift().trim();
@@ -65,24 +78,24 @@ function parseNote(rawNote) {
   // * ":description:" followed by text until a new line.
   // * ":draft:" followed by nothing.
   while (nextLine.length > 0) {
-    if (nextLine.startsWith(':created:')) {
-      note.created = parseNoteDate(nextLine.replace(':created:', '').trim());
-    } else if (nextLine.startsWith(':updated:')) {
-      note.updated = parseNoteDate(nextLine.replace(':updated:', '').trim());
-    } else if (nextLine.startsWith(':description:')) {
-      note.description = nextLine.replace(':description:', '').trim();
-    } else if (nextLine.startsWith(':draft:')) {
-      note.draft = true;
+    [, tag, value] = nextLine.match(/^\s*:(\w+):\s*(.*)$/);
+    const rule = processingRules[tag];
+    if (rule) {
+      rule(note, value.trim());
+    } else {
+      console.error(`Unknown rule: ${nextLine}`);
     }
     nextLine = contents.shift().trim();
   }
   // Then a blank line.
   // Anything else is content that should be left as markdown contents.
   note.contents = contents.join('\n');
+  console.log(`Parsed "${note.title}." from ${note.slug}`);
   return note;
 }
 
-function formatEleventyNote(note) {
+function formatEleventyNote(note, notesBySlug) {
+  // Format the front-matter suitable for an eleventy template.
   const frontmatter = [
     `title: ${note.title}`,
     note.tags ? `tags: [${note.tags.join(', ')}]` : false,
@@ -90,13 +103,23 @@ function formatEleventyNote(note) {
     note.updated ? `updated: ${note.updated}` : false,
     note.description ? `description: ${note.description}` : false,
     note.draft ? `draft: true` : false,
+    note.author ? `author: ${note.author}` : false,
+    note.subtitle ? `subtitle: ${note.subtitle}` : false,
   ].filter(Boolean);
+  // Substitute any links in the text for Markdown-flavored links.
+  const matches = note.contents.matchAll(/\[\[(.+)\]\s*(.*)\]/gi);
+  for (const match of matches) {
+    const [reference, noteId, linkText] = match;
+    console.log(reference, noteId, linkText);
+    const noteRef = notesBySlug[noteId];
+    note.contents = note.contents.replace(reference, `[${ linkText || (noteRef && noteRef.title )}](/notes/${noteId})`);
+  }
+  // Return the template we should write to disk.
   return `---
 ${frontmatter.join('\n')}
 ---
 
-${note.contents}
-`.trim()
+${note.contents}`.trim()
 }
 
 async function main(rawNotesDir, templateNotesDir) {
@@ -104,32 +127,34 @@ async function main(rawNotesDir, templateNotesDir) {
     const scanDir = path.resolve(process.cwd(), rawNotesDir);
     console.log(`Scanning ${scanDir}`);
     const noteFiles = await crawlDir(scanDir);
-    return noteFiles
+    const parsedNotes = noteFiles
       // Parse the raw note contents.
-      .map(({ path, contents }) => ({ path, ... parseNote(contents) }))
+      .map(({ path, contents }) => parseNote(path, contents))
       // Filter out any invalid ones.
-      .filter(note => note.title)
-      // Write as templates to disk.
-      .map(async note => {
-        try {
-          const noteContent = formatEleventyNote(note);
-          const fullNotePath = path.resolve(templateNotesDir, note.path);
-          const noteDir = path.dirname(fullNotePath);
-          // Ensure directory exists.
-          try {
-            await fs.mkdir(noteDir);
-          }
-          catch (e) {
-            // Ignore if it failed, it's probably because the dir exists already.
-          }
-          // Write out a template that looks like an eleventy note template.
-          await fs.writeFile(fullNotePath, noteContent, 'utf8')
-        }
-        catch (e) {
-          // Log and move on.
-          console.error(`Error generating ${note.path}`, e)
-        }
-      });
+      .filter(note => note.title);
+
+    const notesBySlug = parsedNotes.reduce((results, note) => {
+      results[note.slug] = note;
+      return results;
+    }, {});
+
+    for (note of parsedNotes) {
+      try {
+        const noteContent = formatEleventyNote(note, notesBySlug);
+        const fullNotePath = path.resolve(templateNotesDir, note.path);
+        const noteDir = path.dirname(fullNotePath);
+        // Ensure directory exists.
+          await fs.mkdir(noteDir, {
+            recursive: true
+          });
+        // Write out a template that looks like an eleventy note template.
+        await fs.writeFile(fullNotePath, noteContent, 'utf8')
+      }
+      catch (e) {
+        // Log and move on.
+        console.error(`Error generating ${note.path}`, e)
+      }
+    }
   }
   catch (e) {
     console.error(e);

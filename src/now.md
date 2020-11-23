@@ -9,7 +9,9 @@ What I'm doing right now.
 
 ## Text
 
-Getting into habit of updating site with notes and things. Thinking about microblogging.
+Getting into habit of updating site with notes and things.
+
+Doing a decent job of updating Now and [Projects][]. Not doing as good a job at tending to my notes. Trying to carefully read [How to Take Smart Notes][smartnotes]
 
 Check out my [Projects][] note.
 
@@ -85,3 +87,4 @@ Occasionally.
 [botw]: https://www.zelda.com/breath-of-the-wild/
 [urban]: https://www.magpiegames.com/urban-shadows/
 [GenericPlatformer]: /games/generic-platformer
+[smartnotes]: /notes/bibliography/how-to-take-smart-notes/

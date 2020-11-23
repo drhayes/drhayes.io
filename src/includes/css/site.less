@@ -24,9 +24,8 @@ p {
 }
 
 a, a:visited {
-  color: white;
   text-decoration: dotted underline #ccc;
-  color: inherit;
+  color: darkblue;
 
   &:hover {
     font-weight: bold;
@@ -306,6 +305,23 @@ article {
     position: absolute;
     bottom: 3px;
     border-bottom: 3px dotted #ccc;
+  }
+}
+
+.subtitle {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.author-line {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 1rem;
+
+  address {
+    display: inline;
   }
 }
 
