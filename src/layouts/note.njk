@@ -5,7 +5,7 @@
 
 {% block content %}
 {% include "header.njk" %}
-<article class="">
+<main class="">
 
   <header class="">
     <h1 class="title">
@@ -28,17 +28,17 @@
     </aside>
     {% endif %}
 
-  <section class="">
+  <article class="">
     {{ content | safe }}
-  </section>
+  </article>
 
   {% set linkHeres = collections.all | linksHere(page.url) %}
   {% if linkHeres.length %}
-  <section class="pages-that-link-here">
+  <section class="my-8">
     <h2>Pages that link here</h2>
-    <ul>
+    <ul class="flex flex-col">
     {% for page in linkHeres %}
-      <li>
+      <li class="flex=1 border border-solid border-gray-200 m-4 p-2">
         {% include "page-summary.njk" %}
       </li>
     {% endfor %}
@@ -46,6 +46,6 @@
   </section>
   {% endif %}
 
-</article>
+</main>
 {% include "footer.njk" %}
 {% endblock %}
