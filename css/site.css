@@ -4,11 +4,28 @@
 
 @layer base {
   a, a:visited {
+    color: darkblue;
     text-decoration: 1px dotted underline #ccc;
   }
 
   a:hover {
     @apply font-bold;
     text-decoration: underline;
+  }
+
+  .dotted-border {
+    position: relative;
+    border-bottom: 3px dotted #ccc;
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
+
+  .dotted-border:after {
+    display: block;
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: 3px;
+    border-bottom: 3px dotted #ccc;
   }
 }
