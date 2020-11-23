@@ -1,13 +1,5 @@
 module.exports = {
-  purge: {
-    mode: 'all',
-    preserveHtmlElements: false,
-    content: [
-      './src/**/*.njk',
-      './src/**/*.md',
-      './src/**/*.html',
-    ],
-  },
+  purge: false,
   // purge: [
   //   './src/**/*.njk',
   //   './src/**/*.md',
