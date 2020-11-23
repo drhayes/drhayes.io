@@ -37,6 +37,7 @@
     "markdown-it-emoji": "1.4.0",
     "object-path": ">=0.11.5",
     "postcss-cli": "8.3.0",
+    "postcss-import": "13.0.0",
     "tailwindcss": "2.0.1",
     "truncate-html": "1.0.3"
   }

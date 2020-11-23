@@ -18,13 +18,17 @@ const purgecssPlugin = purgecss({
     './src/**/*.njk',
   ],
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-  safelist: ['blockquote', 'c-blockquote', 'c-blockquote__attribution'],
+  safelist: {
+    standard: [/blockquote/,],
+    greedy: [/hljs/],
+  },
 });
 
 module.exports = {
   plugins: [
+    require('postcss-import'),
     require('tailwindcss'),
-    isProduction ?  cssnanoPlugin : null,
+    isProduction ? cssnanoPlugin : null,
     isProduction ? purgecssPlugin : null,
   ]
 }
