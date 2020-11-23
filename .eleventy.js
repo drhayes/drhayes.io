@@ -9,6 +9,9 @@ module.exports = (eleventyConfig) => {
   // Deep data merge!
   eleventyConfig.setDataDeepMerge(true);
 
+  // Don't use .gitignore for ignoring things.
+  eleventyConfig.setUseGitIgnore(false);
+
   // Plugins.
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(pluginRss);
