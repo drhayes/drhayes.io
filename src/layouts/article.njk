@@ -4,10 +4,10 @@
 
 {% block content %}
 {% include "header.njk" %}
-<article class="single-blog-post">
+<main>
 
-  <header class="blog-header">
-    <h1 class="title">{{ title }}</h1>
+  <header>
+    <h1 class="relative text-3xl font-bold pb-4 mb-4 dotted-border leading-relaxed">{{ title }}</h1>
     {% include "article-date.njk" %}
     {% include "tags.njk" %}
   </header>
@@ -18,9 +18,9 @@
     </aside>
     {% endif %}
 
-  <section class="article-content">
+  <article class="article-content">
     {{ content | safe }}
-  </section>
+  </article>
 
   {% set linkHeres = collections.all | linksHere(page.url) %}
   {% if linkHeres.length %}
@@ -41,6 +41,6 @@
     <script defer src="https://cdn.commento.io/js/commento.js"></script>
   </section>
 
-</article>
+</main>
 {% include "footer.njk" %}
 {% endblock %}

@@ -1,11 +1,11 @@
 <nav class="mb-8 flex">
-  <div class="">
+  <div class="flex-1">
     <a href="/" name="drhayes.io home page">
       {% include "raven.svg" %}
     </a>
   </div>
 
-  <ul class="flex flex-col justify-evenly items-end w-full">
+  <ul class="flex-1 flex flex-col justify-evenly items-end w-full">
     {% for item in menu %}
     <li class="mr-4">
       <a class="" href="{{ item.url }}">{{ item.name }}</a>
