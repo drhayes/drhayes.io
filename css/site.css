@@ -84,6 +84,61 @@
     margin-top: 1rem;
   }
 
+  .article-content {
+    margin-top: 0;
+  }
+
+  .article-content p:first-of-type:first-letter {
+      font-size: 300%;
+      font-weight: bold;
+      padding: .5rem .9rem;
+      margin-right: .5rem;
+      border: 1px dotted #ccc;
+      float: left;
+    }
+
+    .article-content blockquote p:first-of-type:first-letter {
+      font-size: inherit;
+      font-weight: inherit;
+      padding: inherit;
+      margin-right: inherit;
+      border: none;
+      float: none;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      font-style: italic;
+      border-style: none;
+      border-left-style: solid;
+      border-width: 0.5rem;
+      border-color: #4682b4b8;
+    }
+
+    .c-blockquote {
+      margin-left: 0;
+    }
+
+    .c-blockquote blockquote {
+      margin: 0;
+    }
+
+    .c-blockquote blockquote p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .c-blockquote .c-blockquote__attribution {
+      font-size: 1em;
+      text-align: right;
+    }
+
+    .c-blockquote .c-blockquote__attribution:before {
+      content: '— ';
+    }
+
+
   .game-title a {
     color: white !important;
     text-shadow: 0 0 2rem white;

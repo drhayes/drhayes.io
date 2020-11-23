@@ -10,8 +10,8 @@ pagination:
 <ol>
   {% for post in pagination.items %}
   <li class="mb-12">
-    <section class="flex flex-col items-baseline">
-      <div class="opacity-60">
+    <section class="flex flex-col items-baseline md:flex-row">
+      <div class="opacity-60 mr-8">
         <time datetime="{{ post.data.date | dateFormat(true) }}">
           {{ post.data.date | dateFormat }}
         </time>

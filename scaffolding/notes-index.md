@@ -17,7 +17,7 @@ The [drafts note list][drafts] shows notes that are in an even less finished sta
 
 ## All The Notes
 
-<ol>
+<ol class="list-decimal mt-4 ml-12">
 {% for note in collections.notes %}
   <li>
     <a href="{{ note.url }}">
