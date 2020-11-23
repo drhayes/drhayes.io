@@ -4,10 +4,8 @@
 {% include "header.njk" %}
 <main class="">
 
-  <header class="">
-    <h1 class="relative text-3xl font-bold pb-8 mb-8 dotted-border">
-      {{ title }}
-    </h1>
+  <header class="m-4">
+    {% include "title-element.njk" %}
   </header>
 
   {{ content | safe }}

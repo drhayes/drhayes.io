@@ -23,8 +23,8 @@
   <meta name="robots" content="index, follow" />
   <link rel="alternate" type="application/rss+xml" href="{{ site.host }}/feed.xml">
 </head>
-<body class="font-mono text-lg m-2 leading-relaxed">
-  <div class="container md:mx-auto">
+<body class="font-mono text-xl m-2 leading-normal">
+  <div class="md:mx-auto max-w-prose">
     {% block content %}
       {{ content | safe }}
     {% endblock %}

@@ -2,19 +2,23 @@
 layout: base.njk
 ---
 <main class="h-screen flex flex-col items-center justify-center h-card vcard">
-  <div class="w-80 mx-auto">
+
+  <div class="w-80 mx-auto md:w-1/3 md:my-8">
     <a href="/" name="drhayes.io">
       {% include "raven.svg" %}
     </a>
   </div>
-  <h1 class="text-2xl font-bold m-3 p-name fn">Hi, I'm David Hayes. 👋🏽</h1>
-  <a href="mailto:{{ site.author.email }}" class="m-3 u-email email" rel="me">{{ site.author.email }}</a>
-  <h3 class="m-3">I do stuff with computers. I live in Austin, TX.</h3>
 
-  <ul class="w-full m-3 flex justify-evenly align-start">
+  <h1 class="text-2xl font-bold m-3 md:text-4xl md:my-4 p-name fn">Hi, I'm David Hayes. 👋🏽</h1>
+
+  <a href="mailto:{{ site.author.email }}" class="m-3 md:text-xl md:my-4 u-email email" rel="me">{{ site.author.email }}</a>
+
+  <h3 class="m-3 normal-case md:text-2xl md:my-4">I do stuff with computers. I live in Austin, TX.</h3>
+
+  <ul class="w-full m-3 flex justify-evenly align-start md:w-auto md:my-4">
     {% for item in menu %}
       <li>
-        <a class="mr-1" href="{{ item.url }}">{{ item.name }}</a>
+        <a class="mr-4 md:text-xl" href="{{ item.url }}">{{ item.name }}</a>
       </li>
     {% else %}
       <p>Nuthin'</p>

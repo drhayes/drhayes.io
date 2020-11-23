@@ -1,0 +1,9 @@
+<h1 class="relative text-3xl font-bold pb-4 mb-4 dotted-border leading-relaxed md:text-4xl">
+  {{ title }}
+  {% if subtitle %}
+  <small class="subtitle">{{ subtitle }}</small>
+  {% endif %}
+  {% if author %}
+    <span class="author-line">by <address class="author">{{ author }}</address><span>
+  {% endif %}
+</h1>
