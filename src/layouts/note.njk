@@ -8,10 +8,19 @@
 <article class="">
 
   <header class="">
-    <h1 class="title">{{ title }}</h1>
+    <h1 class="title">
+      {{ title }}
+    {% if subtitle %}
+    <small class="subtitle">{{ subtitle }}</small>
+    {% endif %}
+    {% if author %}
+      <span class="author-line">by <address class="author">{{ author }}</address><span>
+    {% endif %}
+    </h1>
     {% include "article-date.njk" %}
     {% include "tags.njk" %}
   </header>
+
 
     {% if draft %}
     <aside class="draft-notification">

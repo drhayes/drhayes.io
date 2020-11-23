@@ -35,10 +35,20 @@ async function crawlDir(baseDir, dir) {
 }
 
 function parseNoteDate(dateString) {
-  return dateString;
-  const match = dateString.match(/(\d\d\d\d)-(\d\d)-(\d\d)/);
-  return new Date(match[1], match[2], match[3]);
+  const [, year, rawMonth, rawDay] = dateString.match(/(\d\d\d\d)(?:-(\d\d?)(?:-(\d\d?))?)?/);
+  const month = rawMonth ? rawMonth.padStart(2, '0') : '01';
+  const day = rawDay ? rawDay.padStart(2, '0') : '01';
+  return `${year}-${month}-${day}`;
 }
+
+const processingRules = {
+  author: (note, line) => note.author = line,
+  created: (note, line) => note.created = parseNoteDate(line),
+  description: (note, line) => note.description = line,
+  draft: (note, line) => note.draft = true,
+  subtitle: (note, line) => note.subtitle = line,
+  updated: (note, line) => note.updated = parseNoteDate(line),
+};
 
 // Given an object that looks like { path, contents } will return a note object
 // or null if the given object was invalid.
@@ -68,14 +78,12 @@ function parseNote(notePath, rawNote) {
   // * ":description:" followed by text until a new line.
   // * ":draft:" followed by nothing.
   while (nextLine.length > 0) {
-    if (nextLine.startsWith(':created:')) {
-      note.created = parseNoteDate(nextLine.replace(':created:', '').trim());
-    } else if (nextLine.startsWith(':updated:')) {
-      note.updated = parseNoteDate(nextLine.replace(':updated:', '').trim());
-    } else if (nextLine.startsWith(':description:')) {
-      note.description = nextLine.replace(':description:', '').trim();
-    } else if (nextLine.startsWith(':draft:')) {
-      note.draft = true;
+    [, tag, value] = nextLine.match(/^\s*:(\w+):\s*(.*)$/);
+    const rule = processingRules[tag];
+    if (rule) {
+      rule(note, value.trim());
+    } else {
+      console.error(`Unknown rule: ${nextLine}`);
     }
     nextLine = contents.shift().trim();
   }
@@ -95,6 +103,8 @@ function formatEleventyNote(note, notesBySlug) {
     note.updated ? `updated: ${note.updated}` : false,
     note.description ? `description: ${note.description}` : false,
     note.draft ? `draft: true` : false,
+    note.author ? `author: ${note.author}` : false,
+    note.subtitle ? `subtitle: ${note.subtitle}` : false,
   ].filter(Boolean);
   // Substitute any links in the text for Markdown-flavored links.
   const matches = note.contents.matchAll(/\[\[(.+)\]\s*(.*)\]/gi);
