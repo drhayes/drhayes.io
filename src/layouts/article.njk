@@ -24,16 +24,16 @@
 
   {% set linkHeres = collections.all | linksHere(page.url) %}
   {% if linkHeres.length %}
-  <details class="pages-that-link-here">
-    <summary>Pages that link here</summary>
-    <ul>
+  <section class="my-8">
+    <p>Pages that link here</p>
+    <ul class="flex">
     {% for page in linkHeres %}
-      <li>
+      <li class="flex-1 border border-solid border-gray-200 m-4 p-2">
         {% include "page-summary.njk" %}
       </li>
     {% endfor %}
     </ul>
-  </details>
+  </section>
   {% endif %}
 
   <section class="comments">
