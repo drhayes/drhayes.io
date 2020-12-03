@@ -4,13 +4,13 @@ eleventyExcludeFromCollections: true
 ---
 {%- set posts = collections.blogPost -%}
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmnls="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.name }}</title>
   <subtitle>{{ site.subtitle }}</subtitle>
   <link href="{{ site.host }}/feed.xml" rel="self" />
   <link href="{{ site.host }}" />
   <updated>{{ posts | rssLastUpdatedDate }}</updated>
-  <id>{{ site.host }}</id>
+  <id>{{ site.host }}/</id>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
