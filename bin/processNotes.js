@@ -112,7 +112,9 @@ function formatEleventyNote(note, notesBySlug) {
     const [reference, noteId, linkText] = match;
     console.log(reference, noteId, linkText);
     const noteRef = notesBySlug[noteId];
-    note.contents = note.contents.replace(reference, `[${ linkText || (noteRef && noteRef.title )}](/notes/${noteId})`);
+    if (noteRef) {
+      note.contents = note.contents.replace(reference, `[${ linkText || (noteRef && noteRef.title )}](/notes/${noteId})`);
+    }
   }
   // Return the template we should write to disk.
   return `---
@@ -161,12 +163,19 @@ async function main(rawNotesDir, templateNotesDir) {
   }
 };
 
-// Validate our two params.
-if (process.argv.length < 4) {
-  console.error('Should be two params: <raw notes dir> and <template notes dir>');
-  process.exit(1);
+if (require.main === module) {
+  // Validate our two params.
+  if (process.argv.length < 4) {
+    console.error('Should be two params: <raw notes dir> and <template notes dir>');
+    process.exit(1);
+  }
+
+  [ , , rawNotesDir, templateNotesDir ] = process.argv;
+
+  main(rawNotesDir, templateNotesDir);
+} else {
+  module.exports = {
+    parseNote,
+    formatEleventyNote,
+  };
 }
-
-[ , , rawNotesDir, templateNotesDir ] = process.argv;
-
-main(rawNotesDir, templateNotesDir);

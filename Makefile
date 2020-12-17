@@ -10,7 +10,7 @@ clean:
 dist: src/notes
 	npm run build
 
-dist/css/site.css:
+dist/css/site.css: css/site.css
 	npm run build:css
 
 src/notes:
