@@ -7,7 +7,8 @@
     "build:css": "postcss css/site.css -o dist/css/site.css",
     "build:content": "eleventy",
     "build": "npm run build:content && npm run build:css",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -40,5 +41,8 @@
     "postcss-import": "13.0.0",
     "tailwindcss": "2.0.1",
     "truncate-html": "1.0.3"
+  },
+  "devDependencies": {
+    "ava": "3.14.0"
   }
 }
