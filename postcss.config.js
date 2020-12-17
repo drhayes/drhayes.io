@@ -19,7 +19,7 @@ const purgecssPlugin = purgecss({
   ],
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
   safelist: {
-    standard: [/blockquote/,],
+    standard: [/blockquote/, /hr/],
     greedy: [/hljs/],
   },
 });
