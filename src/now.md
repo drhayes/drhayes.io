@@ -38,7 +38,10 @@ Need to write more about what how my teaching is going.
 
 ## Programming
 
-Mostly Terraform at work. Mostly JavaScript at home as I poke at my personal site and a notes system. Lua for anything gamedev-y, but I'm eyeing Rust.
+Mostly Terraform at work. Mostly JavaScript at home as I poke at my personal site and a notes
+system. Lua for anything gamedev-y, but I'm eyeing Rust.
+
+Thinking about pulling Tailwind out of my site, since I want to do more custom things with the CSS.
 
 ## Music
 
