@@ -2,14 +2,14 @@
 title: Now
 description: What am I doing right now.
 layout: page.njk
-updated: 2020-11-17
+updated: 2021-1-22
 ---
 
 What I'm doing right now.
 
 ## Text
 
-Getting into habit of updating site with notes and things.
+Trying to stay in the habit of updating my site on the regular.
 
 Doing a decent job of updating Now and [Projects][]. Not doing as good a job at tending to my notes. Trying to carefully read [How to Take Smart Notes][smartnotes]
 
@@ -17,12 +17,10 @@ Check out my [Projects][] note.
 
 ## Gamedev
 
-* Thinking about the name for the UI project... Some play on the UI thing, of course. Squiggle?
-* Still thinking about next game project. Candidates:
-  - Typing game
-    + Wizards shooting spaceships to save the Earth!
-  - Match 3
-  - Top-down stealth thing maybe?
+* Haven't been thinking about digital gamedev at all. It's been nice, actually.
+* Been reading and re-reading [Cortex][cortex] and wanting, mightily, to make a game.
+  * Maybe a solo game!
+  * Don't just make yet another sci-fi/fantasy game.
 
 ## Digital Games
 
@@ -30,8 +28,8 @@ Check out my [Projects][] note.
 
 ## Role-playing Games
 
-* [The Dracula Dossier][dracula] is very fun. We're in Europe. Close to Drac I think. Scary.
-* I think my [Shadow of the Demon Lord][sotdl] game is dead. I don't blame the system, I blame me.
+* [The Dracula Dossier][dracula] is very fun. We're back in England, but with lower heat. Except
+  we're circling on of the HQs of an organization that wants us dead, trying to break in.
 * Playing in a [Masks][] campaign with Internet strangers! A curated [Magpie][] game turned campaign. It's going great! Talk to me about the between-game vignettes.
 
 ## Teaching
@@ -88,3 +86,4 @@ Occasionally.
 [urban]: https://www.magpiegames.com/urban-shadows/
 [GenericPlatformer]: /games/generic-platformer
 [smartnotes]: /notes/bibliography/how-to-take-smart-notes/
+[cortex]: https://www.cortexrpg.com/
