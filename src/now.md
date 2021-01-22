@@ -41,7 +41,7 @@ Need to write more about what how my teaching is going.
 Mostly Terraform at work. Mostly JavaScript at home as I poke at my personal site and a notes
 system. Lua for anything gamedev-y, but I'm eyeing Rust.
 
-Thinking about pulling Tailwind out of my site, since I want to do more custom things with the CSS.
+Thinking about pulling [Tailwind][tailwind] out of my site, since I want to do more custom things with the CSS.
 
 ## Music
 
@@ -90,3 +90,4 @@ Occasionally.
 [GenericPlatformer]: /games/generic-platformer
 [smartnotes]: /notes/bibliography/how-to-take-smart-notes/
 [cortex]: https://www.cortexrpg.com/
+[tailwind]: https://tailwindcss.com/
