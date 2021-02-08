@@ -6,8 +6,7 @@
   "scripts": {
     "build:css": "postcss css/site.css -o dist/css/site.css",
     "build:content": "eleventy",
-    "build:notes": "mkdir -p src/notes && cp scaffolding/notes.json src/notes && cp scaffolding/notes-index.md src/notes/index.md && bin/processNotes.js notes src/notes",
-    "build": "npm run build:notes && npm run build:content && npm run build:css",
+    "build": "npm run build:content && npm run build:css",
     "start": "eleventy --serve",
     "test": "ava"
   },
