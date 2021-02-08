@@ -2,7 +2,7 @@
 title: Now
 description: What am I doing right now.
 layout: page.njk
-updated: 2021-01-22
+updated: 2021-02-08
 ---
 
 What I'm doing right now.
