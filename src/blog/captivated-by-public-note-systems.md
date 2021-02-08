@@ -63,4 +63,4 @@ I was charmed to find [Brendan Schlagel's personal canon][brendanschlagel] and I
 [brendanschlagel]: http://www.brendanschlagel.com/canon/
 [ianjones]: https://www.ianjones.us/
 [progressivesummarization]: https://www.ianjones.us/progressive-summarization-in-org-mode
-[projects]: /notes/projects
+[projects]: https://notes.drhayes.io/notes/projects
