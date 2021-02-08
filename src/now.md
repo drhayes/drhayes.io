@@ -20,6 +20,7 @@ Check out my [Projects][] note.
 * Haven't been thinking about digital gamedev at all. It's been nice, actually.
 * Been reading and re-reading [Cortex][cortex] and wanting, mightily, to make a game.
   * Maybe a solo game!
+  * [Notes on a solo RPG][notesolorpg]
   * Don't just make yet another sci-fi/fantasy game.
 
 ## Digital Games
@@ -91,3 +92,4 @@ Occasionally.
 [cortex]: https://www.cortexrpg.com/
 [tailwind]: https://tailwindcss.com/
 [smartnotes]: https://notes.drhayes.io/notes/bibliography/how-to-take-smart-notes/
+[notesolorpg]: https://notes.drhayes.io/notes/solo-rpg
