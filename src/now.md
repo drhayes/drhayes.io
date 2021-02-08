@@ -39,8 +39,9 @@ Need to write more about what how my teaching is going.
 
 ## Programming
 
-Mostly Terraform at work. Mostly JavaScript at home as I poke at my personal site and a notes
-system. Lua for anything gamedev-y, but I'm eyeing Rust.
+[Work continues on the digital garden][drhayesdigitalgarden].
+
+Mostly Terraform at work. Mostly JavaScript at home. Lua for anything gamedev-y, but I'm eyeing Rust.
 
 Thinking about pulling [Tailwind][tailwind] out of my site, since I want to do more custom things with the CSS.
 
@@ -93,3 +94,4 @@ Occasionally.
 [tailwind]: https://tailwindcss.com/
 [smartnotes]: https://notes.drhayes.io/notes/bibliography/how-to-take-smart-notes/
 [notesolorpg]: https://notes.drhayes.io/notes/solo-rpg
+[drhayesdigitalgarden]: https://notes.drhayes.io/
