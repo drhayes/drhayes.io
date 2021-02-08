@@ -66,7 +66,7 @@ Occasionally.
 
 
 
-[projects]: /notes/projects
+[projects]: https://notes.drhayes.io/notes/projects
 [Squeak]: https://github.com/drhayes/squeak.lua/
 [Carrion]: https://carrion.game/
 [liads]: http://www.loversinadangerousspacetime.com/
@@ -87,4 +87,4 @@ Occasionally.
 [botw]: https://www.zelda.com/breath-of-the-wild/
 [urban]: https://www.magpiegames.com/urban-shadows/
 [GenericPlatformer]: /games/generic-platformer
-[smartnotes]: /notes/bibliography/how-to-take-smart-notes/
+[smartnotes]: https://notes.drhayes.io/notes/bibliography/how-to-take-smart-notes/
