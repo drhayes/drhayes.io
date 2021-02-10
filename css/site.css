@@ -92,7 +92,7 @@
   .article-content p:first-of-type:first-letter {
     font-size: 300%;
     font-weight: bold;
-    padding: .5rem .9rem;
+    padding: .6rem .9rem;
     margin-right: .5rem;
     border: 1px dotted #ccc;
     float: left;

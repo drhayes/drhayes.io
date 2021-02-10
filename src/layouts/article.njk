@@ -12,34 +12,9 @@
     {% include "tags.njk" %}
   </header>
 
-    {% if draft %}
-    <aside class="draft-notification">
-      <a href="/drafts">Draft note alert!</a>
-    </aside>
-    {% endif %}
-
   <article class="article-content text-justify">
     {{ content | safe }}
   </article>
-
-  {% set linkHeres = collections.all | linksHere(page.url) %}
-  {% if linkHeres.length %}
-  <section class="my-8">
-    <p>Pages that link here</p>
-    <ul class="flex flex-col">
-    {% for page in linkHeres %}
-      <li class="flex-1 border border-solid border-gray-200 m-4 p-2">
-        {% include "page-summary.njk" %}
-      </li>
-    {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
-  <section class="my-8">
-    <div id="commento"></div>
-    <script defer src="https://cdn.commento.io/js/commento.js"></script>
-  </section>
 
 </main>
 {% include "footer.njk" %}
