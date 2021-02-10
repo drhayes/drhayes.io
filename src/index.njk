@@ -24,6 +24,14 @@ layout: base.njk
       <p>Nuthin'</p>
     {% endfor %}
   </ul>
+
+  <ul>
+    {% for post in pinboard %}
+      <li>
+        <a href="{{ post.href }}">{{ post.description }}</a> {{ post.tags }}
+      </li>
+    {% endfor %}
+  </ul>
 </main>
 
 <footer class="hidden">
