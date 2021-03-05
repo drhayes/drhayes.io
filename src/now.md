@@ -2,7 +2,7 @@
 title: Now
 description: What am I doing right now.
 layout: page.njk
-updated: 2021-02-08
+updated: 2021-03-04
 ---
 
 What I'm doing right now.
@@ -14,6 +14,8 @@ Trying to stay in the habit of updating my site on the regular.
 Doing a decent job of updating Now and [Projects][]. Not doing as good a job at tending to my notes. Trying to carefully read [How to Take Smart Notes][smartnotes]
 
 Check out my [Projects][] note.
+
+Working on a tumbley-loggy thing over at [wisps][]. Mostly linkspam. Maybe some editorializing. Who knows.
 
 ## Gamedev
 
@@ -35,7 +37,7 @@ Check out my [Projects][] note.
 
 ## Teaching
 
-Need to write more about what how my teaching is going.
+**STILL** need to write more about what how my teaching is going.
 
 ## Programming
 
@@ -47,11 +49,12 @@ Thinking about pulling [Tailwind][tailwind] out of my site, since I want to do m
 
 ## Music
 
+ON REPEAT: [MAYDAY by TheFatRat featuring Laura Brehm][mayday]
+
 Lately.
 
-* Com Truise.
-* Angel Olsen.
-* Daniel Deluxe.
+* TheFatRat.
+* Charlotte Gainsbourg.
 
 Always.
 
@@ -66,8 +69,6 @@ Occasionally.
 * Dance with the Dead
 * Holy Fuck
 * Perturbator
-
-
 
 [projects]: https://notes.drhayes.io/notes/projects
 [Squeak]: https://github.com/drhayes/squeak.lua/
@@ -95,3 +96,5 @@ Occasionally.
 [smartnotes]: https://notes.drhayes.io/notes/bibliography/how-to-take-smart-notes/
 [notesolorpg]: https://notes.drhayes.io/notes/solo-rpg
 [drhayesdigitalgarden]: https://notes.drhayes.io/
+[wisps]: https://wisps.drhayes.io
+[mayday]: https://lnk.to/thefatratmayday
