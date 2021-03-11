@@ -81,8 +81,18 @@
     list-style-type: disc;
   }
 
-  article > ul {
+  article ol {
+    margin-left: 2rem;
+    list-style-type: decimal;
+  }
+
+  article > ul, article > ol {
     margin-top: 1rem;
+  }
+
+  article > pre {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .article-content {
