@@ -84,8 +84,7 @@ This code worked, but felt very hacky to me. The most common value in the `World
 Actions encompass two concepts:
 
   1. A precondition that must be true to take this action.
-  2. A resultant world state that is true once this action is complete,
-  called the effect.
+  2. A resultant world state that is true once this action is complete, called the effect.
 
 To move from the precondition to the resultant state, the entity must take this action... if it can. Sometimes the state of the world prevents an entity from taking a particular action. The planner verifies this by matching the precondition against the current world state using the `WorldState:matches` method from before.
 
