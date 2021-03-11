@@ -28,7 +28,7 @@ pagination:
             {%- for tag in post.data.tags -%}
               {% if tag != 'blogPost' %}
               <li class="leading-loose">
-                <a href="/tags/{{ tag }}" class="mr-8">:{{ tag }}:</a>
+                <a href="/tags/{{ tag }}" class="mr-8">#{{ tag }}</a>
               </li>
               {% endif %}
             {%- endfor -%}
