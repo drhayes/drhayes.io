@@ -2,10 +2,11 @@ const path = require('path');
 const fs = require('fs');
 const readingTime = require('eleventy-plugin-reading-time');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
+const markdown = require('./lib/library/markdown');
 
 module.exports = (eleventyConfig) => {
   // Markdown stuff.
-  eleventyConfig.setLibrary('md', require('./lib/library/markdown'));
+  eleventyConfig.setLibrary('md', markdown());
 
   // Deep data merge!
   eleventyConfig.setDataDeepMerge(true);
