@@ -127,25 +127,12 @@
     border-color: #4682b4b8;
   }
 
-  .c-blockquote {
-    margin-left: 0;
-  }
-
-  .c-blockquote blockquote {
-    margin: 0;
-  }
-
-  .c-blockquote blockquote p {
-    margin: 0;
-    padding: 0;
-  }
-
-  .c-blockquote .c-blockquote__attribution {
-    font-size: 1em;
+  figure figcaption {
     text-align: right;
+    font-style: italic;
   }
 
-  .c-blockquote .c-blockquote__attribution:before {
+  figure figcaption:before {
     content: '— ';
   }
 
