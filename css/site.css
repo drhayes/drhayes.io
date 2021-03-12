@@ -11,7 +11,6 @@
   }
 
   a:hover {
-    @apply font-bold;
     text-decoration: underline;
   }
 
@@ -32,43 +31,23 @@
   }
 
   article h1,h2,h3,h4,h5 {
-    margin-top: 2rem;
-    font-weight: bold;
+    margin-top: 3rem;
   }
 
   article h1 {
-    font-size: 150%;
+    font-size: 200%;
   }
 
   article h2 {
-    font-size: 120%;
+    font-size: 150%;
   }
 
   article h3 {
+    font-size: 125%;
+  }
+
+  article h4 {
     font-size: 110%;
-  }
-
-  article h2:before, h3:before, h4:before, h5:before {
-    padding-right: .5em;
-    font-size: 80%;
-    vertical-align: baseline;
-    opacity: .5;
-  }
-
-  article h2:before {
-    content: '##';
-  }
-
-  article h3:before {
-    content: '###';
-  }
-
-  article h4:before {
-    content: '####';
-  }
-
-  article h5:before {
-    content: '######';
   }
 
   article p {
@@ -120,6 +99,8 @@
   blockquote {
     margin-left: 0;
     padding-left: 1rem;
+    font-size: 120%;
+    line-height: 1.6;
     font-style: italic;
     border-style: none;
     border-left-style: solid;
