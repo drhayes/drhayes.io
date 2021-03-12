@@ -4,6 +4,10 @@ const Cache = require('@11ty/eleventy-cache-assets');
 
 module.exports = async function fetchPinboardPosts() {
   const pinboardToken = process.env.PINBOARD_API_TOKEN;
+  if (!pinboardToken) {
+    // If it's not there, bail.
+    return [];
+  }
   const recentPosts = await Cache(`https://api.pinboard.in/v1/posts/recent?auth_token=${pinboardToken}&format=json`, {
     duration: '1h',
     type: 'json',
