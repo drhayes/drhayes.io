@@ -20,6 +20,7 @@ Here are some likely haunts:
 * <a href="https://keybase.io/drhayes" rel="me">Keybase</a>
 * <a href="https://drhayes.tumblr.com" rel="me">Tumblr</a>
 * <a href="https://www.goodreads.com/drhayes" rel="me">Goodreads</a>
+* <a href="https://soundcloud.com/drhayes" rel="me">Soundcloud</a>
 
 ## Colophon
 
