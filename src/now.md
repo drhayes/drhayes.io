@@ -2,7 +2,7 @@
 title: Now
 description: What am I doing right now.
 layout: page.njk
-updated: 2021-03-04
+updated: 2021-04-14
 ---
 
 What I'm doing right now.
@@ -11,11 +11,10 @@ What I'm doing right now.
 
 Trying to stay in the habit of updating my site on the regular.
 
-Doing a decent job of updating Now and [Projects][]. Not doing as good a job at tending to my notes. Trying to carefully read [How to Take Smart Notes][smartnotes]
-
 Check out my [Projects][] note.
 
-Working on a tumbley-loggy thing over at [wisps][]. Mostly linkspam. Maybe some editorializing. Who knows.
+Working on a tumbley-loggy thing over at [wisps][]. Tags and editorializing work. But I still want
+to add pictures and music and things.
 
 ## Gamedev
 
@@ -31,19 +30,22 @@ Working on a tumbley-loggy thing over at [wisps][]. Mostly linkspam. Maybe some 
 
 ## Role-playing Games
 
-* [The Dracula Dossier][dracula] is very fun. We're back in England, but with lower heat. Except
-  we're circling on of the HQs of an organization that wants us dead, trying to break in.
 * Playing in a [Masks][] campaign with Internet strangers! A curated [Magpie][] game turned campaign. It's going great! Talk to me about the between-game vignettes.
+* About to start a [Beam Saber][beamsaber] game while one of the Dracula Dossier group goes on
+  maternity leave! There's not enough Forged in the Dark in my life.
 
 ## Teaching
 
-**STILL** need to write more about what how my teaching is going.
+Do I just accept that I'm not going to write about teaching in an organized way and just make
+[notes][drhayesdigitalgarden] about it? Might be the way to go.
 
 ## Programming
 
-[Work continues on the digital garden][drhayesdigitalgarden].
+[Work continues on the digital garden][drhayesdigitalgarden]. I've left the code alone for a while
+now, it's working for me. Been thinking about adding tag pages, also been thinking about adding some
+kind of crude search engine.
 
-Mostly Terraform at work. Mostly JavaScript at home. Lua for anything gamedev-y, but I'm eyeing Rust.
+Switched teams at work to a more data-ish, ML-ish team. It's nice to not be a cost center again.
 
 Thinking about pulling [Tailwind][tailwind] out of my site, since I want to do more custom things with the CSS.
 
@@ -54,7 +56,9 @@ ON REPEAT: [MAYDAY by TheFatRat featuring Laura Brehm][mayday]
 Lately.
 
 * TheFatRat.
-* Charlotte Gainsbourg.
+* Boom Kitty. (Boom Slayer is ridic awesome, and the Geometry Dash level to match)
+* Daniel Deluxe.
+* John Carpenter.
 
 Always.
 
@@ -72,25 +76,14 @@ Occasionally.
 
 [projects]: https://notes.drhayes.io/notes/projects
 [Squeak]: https://github.com/drhayes/squeak.lua/
-[Carrion]: https://carrion.game/
-[liads]: http://www.loversinadangerousspacetime.com/
-[minecraft]: https://minecraft.net
-[ShovelKnight]: https://yachtclubgames.com/shovel-knight/
-[shovel-knight-by-david-l-craddock]: https://bossfightbooks.com/products/shovel-knight-by-david-l-craddock
 [dracula]: https://site.pelgranepress.com/index.php/the-dracula-dossier/
-[sotdl]: https://schwalbentertainment.com/shadow-of-the-demon-lord/
 [Masks]: https://www.magpiegames.com/masks/
 [magpie]: https://www.magpiegames.com/
-[SistersOfMercy]: http://www.the-sisters-of-mercy.com/
 [carpenterbrut]: http://www.carpenterbrut.com/
 [mavs]: https://www.makeupandvanityset.com/
 [actors]: https://www.actorstheband.com/
 [kanga]: https://kanga.bandcamp.com/
 [BlanckMass]: https://www.blanckmass.com/
-[nba]: https://site.pelgranepress.com/index.php/nights-black-agents/
-[botw]: https://www.zelda.com/breath-of-the-wild/
-[urban]: https://www.magpiegames.com/urban-shadows/
-[GenericPlatformer]: /games/generic-platformer
 [cortex]: https://www.cortexrpg.com/
 [tailwind]: https://tailwindcss.com/
 [smartnotes]: https://notes.drhayes.io/notes/bibliography/how-to-take-smart-notes/
@@ -98,3 +91,4 @@ Occasionally.
 [drhayesdigitalgarden]: https://notes.drhayes.io/
 [wisps]: https://wisps.drhayes.io
 [mayday]: https://lnk.to/thefatratmayday
+[beamsaber]: https://austin-ramsay.itch.io/beamsaber
