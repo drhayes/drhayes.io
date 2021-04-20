@@ -1,6 +1,6 @@
-export default function Raven() {
+export default function Raven({ className }) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 700">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 700" className={className}>
       <defs />
       <switch>
         <g>

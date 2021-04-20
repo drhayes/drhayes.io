@@ -1,4 +1,5 @@
-import styles from './site-menu.module.css';
+import styles from './siteMenu.module.css';
+import Link from 'next/link';
 
 export default function SiteMenu({ className }) {
   const menu = [
@@ -10,11 +11,17 @@ export default function SiteMenu({ className }) {
     { name: 'About', url: '/about' },
   ];
 
-  const menuElems = menu.map(({ name, url }) => (
-    <li className={styles.item}>
-      <a href={url}>{name}</a>
+  const menuElems = menu.map(({ name, url }, i) => (
+    <li className={styles.item} key={i}>
+      <Link href={url}>
+        <a>{name}</a>
+      </Link>
     </li>
   ));
 
-  return <ol className={`${styles.menu} ${className}`}>{menuElems}</ol>;
+  return (
+    <nav>
+      <ol className={` ${className} ${styles.menu}`}>{menuElems}</ol>
+    </nav>
+  );
 }

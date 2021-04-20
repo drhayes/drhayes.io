@@ -1,7 +1,8 @@
 import BaseLayout from '../components/baseLayout';
+import Link from 'next/link';
 import Raven from '../components/raven';
 import styles from './index.module.css';
-import SiteMenu from '../components/site-menu';
+import SiteMenu from '../components/siteMenu';
 
 export default function Home() {
   return (
