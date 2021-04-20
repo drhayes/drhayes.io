@@ -24,3 +24,7 @@
   bottom: 3px;
   border-bottom: 3px dotted #ccc;
 }
+
+.content {
+  margin-top: 1rem;
+}

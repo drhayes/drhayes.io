@@ -1,6 +1,14 @@
 import NextHead from 'next/head';
 
-export default function Head({ title, description, canonical }) {
+export default function Head({
+  title,
+  description,
+  canonical,
+}: {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}) {
   let titleElem = <title>drhayes.io</title>;
   if (title) {
     titleElem = <title>{title} - drhayes.io</title>;

@@ -3,10 +3,7 @@ import Head from './head';
 export default function BaseLayout({ title = 'drhayes.io', description = '', children }) {
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <description>{description}</description>
-      </Head>
+      <Head title={title} description={description} />
       <div>{children}</div>
     </>
   );

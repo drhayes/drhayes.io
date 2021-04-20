@@ -9,14 +9,18 @@ export default function Now({ code, frontmatter }) {
   const Component = getMDXComponent(code);
 
   return (
-    <PageLayout title="Hello there" updated={new Date()}>
+    <PageLayout title={frontmatter.title} updated={new Date()}>
       <Component />
     </PageLayout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { code, frontmatter } = await bundleMDX('**what now?**');
+  const { code, frontmatter } = await bundleMDX(`---
+title: What now power ranger
+---
+
+**what now?**`);
 
   return {
     props: {

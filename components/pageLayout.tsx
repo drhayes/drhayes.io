@@ -10,14 +10,14 @@ export default function PageLayout({ title, updated, children }) {
   }
 
   return (
-    <BaseLayout>
+    <BaseLayout title={title}>
       <main className={styles.container}>
         <PageHeader />
         <header className={styles.titleContainer}>
           <h1 className={`${styles.title} ${styles.dottedBorder}`}>{title}</h1>
           {updatedElem}
         </header>
-        <article>{children}</article>
+        <article className={styles.content}>{children}</article>
       </main>
     </BaseLayout>
   );
