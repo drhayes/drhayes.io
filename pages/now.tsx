@@ -1,26 +1,28 @@
 import React from 'react';
-import { NextPage } from 'next';
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import PageLayout from '../lib/components/pageLayout';
-import { bundleMDX } from 'mdx-bundler';
 import { getMDXComponent } from 'mdx-bundler/client';
+import { getPage } from '../lib/pages';
+import styles from './now.module.css';
 
 export default function Now({ code, frontmatter }) {
   const Component = getMDXComponent(code);
+  if (frontmatter.updated) {
+    frontmatter.updated = new Date(frontmatter.updated);
+  }
+  if (frontmatter.created) {
+    frontmatter.created = new Date(frontmatter.created);
+  }
 
   return (
-    <PageLayout title={frontmatter.title} updated={new Date()}>
+    <PageLayout title={frontmatter.title} updated={frontmatter.updated} articleStyles={styles.article}>
       <Component />
     </PageLayout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { code, frontmatter } = await bundleMDX(`---
-title: What now power ranger
----
-
-**what now?**`);
+  const { code, frontmatter } = await getPage('now.mdx');
 
   return {
     props: {

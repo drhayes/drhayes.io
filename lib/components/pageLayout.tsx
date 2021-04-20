@@ -3,7 +3,17 @@ import PageHeader from './pageHeader';
 import styles from './pageLayout.module.css';
 import UpdatedDate from '../components/updatedDate';
 
-export default function PageLayout({ title, updated, children }) {
+export default function PageLayout({
+  title,
+  updated,
+  children,
+  articleStyles,
+}: {
+  title?: string;
+  updated?: string;
+  children?: any;
+  articleStyles?: string;
+}) {
   let updatedElem = null;
   if (updated) {
     updatedElem = <UpdatedDate date={updated} />;
@@ -17,7 +27,7 @@ export default function PageLayout({ title, updated, children }) {
           <h1 className={`${styles.title} ${styles.dottedBorder}`}>{title}</h1>
           {updatedElem}
         </header>
-        <article className={styles.content}>{children}</article>
+        <article className={`${articleStyles} ${styles.content}`}>{children}</article>
       </main>
     </BaseLayout>
   );
