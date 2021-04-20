@@ -1,7 +1,7 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
-import PageLayout from '../components/pageLayout';
+import PageLayout from '../lib/components/pageLayout';
 import { bundleMDX } from 'mdx-bundler';
 import { getMDXComponent } from 'mdx-bundler/client';
 
