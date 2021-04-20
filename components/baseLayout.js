@@ -1,6 +1,6 @@
 import Head from './head';
 
-export default function Layout({ title = 'drhayes.io', description = '', children }) {
+export default function BaseLayout({ title = 'drhayes.io', description = '', children }) {
   return (
     <>
       <Head>

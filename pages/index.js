@@ -1,12 +1,11 @@
-import Head from 'next/head';
-import Layout from '../components/layout';
+import BaseLayout from '../components/baseLayout';
 import Raven from '../components/raven';
 import styles from './index.module.css';
 import SiteMenu from '../components/site-menu';
 
 export default function Home() {
   return (
-    <Layout>
+    <BaseLayout>
       <div className={styles.center}>
         <main className={styles.main}>
           <a href="/" title="drhayes.io" className={styles.logo}>
@@ -49,6 +48,6 @@ export default function Home() {
           </li>
         </ul>
       </footer>
-    </Layout>
+    </BaseLayout>
   );
 }
