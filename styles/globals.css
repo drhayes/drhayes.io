@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* ol,
+ul {
+  margin-left: 1.5em;
+} */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: ui-monospace, Menlo, Monaco, 'Inconsolata', 'Consolas', 'Cascadia Code', 'Ubuntu Monospace',
+    'Source Code Pro', 'FreeMono', monospace;
+}
+
+a,
+a:visited {
+  color: darkblue;
+  text-decoration: 1px dotted underline #ccc;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}

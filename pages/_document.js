@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <link
             rel="alternate"
             type="application/rss+xml"
-            title="RSS feed for all the notes"
+            title="RSS feed for all the blog things"
             href="https://drhayes.io/api/feed"
           />
         </Head>
