@@ -1,21 +1,10 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
-import PageLayout from '../lib/components/pageLayout';
-import { getMDXComponent } from 'mdx-bundler/client';
 import { getPage } from '../lib/pages';
-import styles from './now.module.css';
+import MarkdownPage from '../lib/components/markdownPage';
 
 export default function Now({ page }) {
-  const { code, frontmatter } = page;
-  const Component = getMDXComponent(code);
-
-  return (
-    <PageLayout title={frontmatter.title} updated={frontmatter.updated} articleStyles={styles.article}>
-      <article className={styles.article}>
-        <Component />
-      </article>
-    </PageLayout>
-  );
+  return <MarkdownPage page={page} />;
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
