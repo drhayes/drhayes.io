@@ -1,7 +1,7 @@
 import BaseLayout from './baseLayout';
 import PageHeader from './pageHeader';
 import styles from './pageLayout.module.css';
-import UpdatedDate from '../components/updatedDate';
+import FormattedDate from '../components/formattedDate';
 
 export default function PageLayout({
   title,
@@ -16,7 +16,7 @@ export default function PageLayout({
 }) {
   let updatedElem = null;
   if (updated) {
-    updatedElem = <UpdatedDate date={updated} />;
+    updatedElem = <FormattedDate date={updated} prefix="(Updated " suffix=")" />;
   }
 
   return (

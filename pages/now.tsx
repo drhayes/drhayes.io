@@ -5,14 +5,9 @@ import { getMDXComponent } from 'mdx-bundler/client';
 import { getPage } from '../lib/pages';
 import styles from './now.module.css';
 
-export default function Now({ code, frontmatter }) {
+export default function Now({ page }) {
+  const { code, frontmatter } = page;
   const Component = getMDXComponent(code);
-  if (frontmatter.updated) {
-    frontmatter.updated = new Date(frontmatter.updated);
-  }
-  if (frontmatter.created) {
-    frontmatter.created = new Date(frontmatter.created);
-  }
 
   return (
     <PageLayout title={frontmatter.title} updated={frontmatter.updated} articleStyles={styles.article}>
@@ -24,19 +19,10 @@ export default function Now({ code, frontmatter }) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { code, frontmatter } = await getPage('now.mdx');
-  // Fix those date objects.
-  if (frontmatter.updated) {
-    frontmatter.updated = frontmatter.updated.toISOString();
-  }
-  if (frontmatter.created) {
-    frontmatter.created = frontmatter.created.toISOString();
-  }
-
+  const page = await getPage('now.mdx');
   return {
     props: {
-      code,
-      frontmatter,
+      page: page.toJSON(),
     },
   };
 };

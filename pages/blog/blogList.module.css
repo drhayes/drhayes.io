@@ -1,0 +1,15 @@
+.list {
+  list-style-type: none;
+}
+.item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
+.date {
+  margin-right: 2rem;
+}
+
+.summary {
+}
