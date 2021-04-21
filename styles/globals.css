@@ -1,17 +1,20 @@
 :root {
-  --container-width: 80ch;
-  --font-size: 14px;
+  --container-width: 70ch;
+  --font-size: 18px;
+  --line-height: 1.5;
+  --paragraph-vertical-margin: 0.5rem;
 }
 
 html {
   box-sizing: border-box;
   font-size: var(--font-size);
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 
 @media screen and (min-width: 640px) {
   html {
-    font-size: 17px;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
   }
 }
 

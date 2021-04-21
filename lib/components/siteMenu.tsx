@@ -20,8 +20,8 @@ export default function SiteMenu({ className }) {
   ));
 
   return (
-    <nav>
-      <ol className={` ${className} ${styles.menu}`}>{menuElems}</ol>
+    <nav className={className}>
+      <ol className={styles.menu}>{menuElems}</ol>
     </nav>
   );
 }

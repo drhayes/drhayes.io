@@ -27,7 +27,7 @@ export default function PageLayout({
           <h1 className={`${styles.title} ${styles.dottedBorder}`}>{title}</h1>
           {updatedElem}
         </header>
-        <article className={`${articleStyles} ${styles.content}`}>{children}</article>
+        {children}
       </main>
     </BaseLayout>
   );

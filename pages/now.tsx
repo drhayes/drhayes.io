@@ -16,13 +16,22 @@ export default function Now({ code, frontmatter }) {
 
   return (
     <PageLayout title={frontmatter.title} updated={frontmatter.updated} articleStyles={styles.article}>
-      <Component />
+      <article className={styles.article}>
+        <Component />
+      </article>
     </PageLayout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { code, frontmatter } = await getPage('now.mdx');
+  // Fix those date objects.
+  if (frontmatter.updated) {
+    frontmatter.updated = frontmatter.updated.toISOString();
+  }
+  if (frontmatter.created) {
+    frontmatter.created = frontmatter.created.toISOString();
+  }
 
   return {
     props: {
