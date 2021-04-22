@@ -4,12 +4,12 @@ import styles from './gameShowcase.module.css';
 
 export default function GameShowcase({ game }: { game: GameInfo }) {
   return (
-    <section className={styles.container} style={{ backgroundImage: `url('${game.screenshotPath}` }}>
-      <h1 className={styles.title}>
-        <Link href={game.slug}>
-          <a>{game.name}</a>
-        </Link>
-      </h1>
-    </section>
+    <Link href={game.slug}>
+      <a className={styles.container}>
+        <section className={styles.innerContainer} style={{ backgroundImage: `url('${game.screenshotPath}` }}>
+          <h1 className={styles.title}>{game.name}</h1>
+        </section>
+      </a>
+    </Link>
   );
 }

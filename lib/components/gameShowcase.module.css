@@ -1,11 +1,17 @@
 .container {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.innerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 30%;
   height: 100%;
-  border: 1px solid steelblue;
   background-size: cover;
+  color: ghostwhite;
+  text-decoration: none;
 }
 
 .title {
@@ -13,9 +19,4 @@
   font-weight: bold;
   text-align: center;
   text-shadow: 0 0 2rem white;
-}
-
-.title a {
-  color: ghostwhite;
-  text-decoration: none;
 }
