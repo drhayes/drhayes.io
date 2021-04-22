@@ -50,6 +50,9 @@ export class SitePage {
 }
 
 export async function getPage(slug: string): Promise<SitePage> {
+  if (!slug.endsWith('.mdx')) {
+    slug = `${slug}.mdx`;
+  }
   const pagePath = path.join(pagesDirectory, slug);
   const contents = await fs.readFile(pagePath);
   const { code, frontmatter } = await bundleMDX(contents.toString('utf-8'));
@@ -77,7 +80,7 @@ export async function getAllPages(): Promise<SitePage[]> {
   const pages = [];
   for await (const fullpath of walkDir(pagesDirectory)) {
     const slug = fullpath.replace(pagesDirectory, '');
-    // If this thing isn't an Markdown file, don't parse anything.
+    // If this thing isn't a Markdown file, don't parse anything.
     if (slug.endsWith('.mdx')) {
       try {
         const page = await getPage(slug);
