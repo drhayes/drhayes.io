@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-right: -1rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  flex: 1 auto;
+  min-width: 40%;
+  width: 10rem;
+  height: 10rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}

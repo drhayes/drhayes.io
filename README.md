@@ -1,5 +1,5 @@
 # drhayes.io
 
-My personal webiste, built using [Eleventy].
+My personal webiste, built using [NextJS].
 
-[eleventy]: https://11ty.dev
+[nextjs]: https://nextjs.org/

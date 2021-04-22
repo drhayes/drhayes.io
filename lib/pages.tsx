@@ -12,6 +12,7 @@ export type PageFrontmatter = {
   tags?: string[];
   [key: string]: any;
 };
+
 export class SitePage {
   slug: string;
   code: string;
@@ -20,6 +21,7 @@ export class SitePage {
   constructor(slug: string, code: string, frontmatter: any) {
     this.slug = slug.replace(/\.mdx$/, '');
     this.code = code;
+    // This might be duplicative for no good reason.
     // Frontmatter requires some special handling.
     const checkedFrontmatter: PageFrontmatter = {
       title: frontmatter.title,
@@ -28,6 +30,10 @@ export class SitePage {
       description: frontmatter.description,
       tags: frontmatter.tags,
     };
+    // Now put the rest of that stuff in there.
+    Object.keys(frontmatter).forEach((key) => {
+      checkedFrontmatter[key] = frontmatter[key];
+    });
     this.frontmatter = checkedFrontmatter;
   }
 
@@ -114,4 +120,24 @@ export function pageSorter(a: SitePage, b: SitePage) {
   } else {
     return 0;
   }
+}
+
+export type GameInfo = {
+  name: string;
+  screenshotPath: string;
+  slug: string;
+  description: string;
+};
+
+export async function getGames(): Promise<GameInfo[]> {
+  const allPages: SitePage[] = await getAllPages();
+  // Find the things that look like games. They have "game" set to "true" in their frontmatter. Have
+  // to scan all the pages for that, I guess.
+  const gamePages: SitePage[] = allPages.filter((page) => page.frontmatter.game);
+  return gamePages.map((gamePage) => ({
+    name: gamePage.frontmatter.title,
+    slug: gamePage.slug,
+    screenshotPath: gamePage.frontmatter.screenshot,
+    description: gamePage.frontmatter.description,
+  }));
 }

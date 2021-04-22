@@ -8,7 +8,8 @@ export default function Now({ page }) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = `${params.slug.join('/')}.mdx`;
+  const slugArray = params.slug as string[];
+  const slug = `${slugArray.join('/')}.mdx`;
   const page = await getPage(slug as string);
   return {
     props: {
