@@ -3,7 +3,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { getPage, getAllPages } from '../lib/pages';
 import MarkdownPage from '../lib/components/markdownPage';
 
-export default function Now({ page }) {
+export default function AnyOlPage({ page }) {
   return <MarkdownPage page={page} />;
 }
 

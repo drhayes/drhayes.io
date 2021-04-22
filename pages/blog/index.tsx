@@ -1,7 +1,6 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
 import PageLayout from '../../lib/components/pageLayout';
-import { getMDXComponent } from 'mdx-bundler/client';
 import { getAllBlogPages, SitePage, pageSorter } from '../../lib/pages';
 import styles from './blogList.module.css';
 import PageListItem from '../../lib/components/pageListItem';

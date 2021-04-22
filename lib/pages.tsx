@@ -1,6 +1,9 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { bundleMDX } from 'mdx-bundler';
+import components from './mdxComponents';
+import renderToString from 'next-mdx-remote/render-to-string';
+import { MdxRemote } from 'next-mdx-remote/types';
+import matter from 'gray-matter';
 
 const pagesDirectory = path.join(process.cwd(), 'src');
 
@@ -15,12 +18,12 @@ export type PageFrontmatter = {
 
 export class SitePage {
   slug: string;
-  code: string;
+  mdxSource: MdxRemote.Source;
   frontmatter: PageFrontmatter;
 
-  constructor(slug: string, code: string, frontmatter: any) {
+  constructor(slug: string, mdxSource: MdxRemote.Source, frontmatter: any) {
     this.slug = slug.replace(/\.mdx$/, '');
-    this.code = code;
+    this.mdxSource = mdxSource;
     // This might be duplicative for no good reason.
     // Frontmatter requires some special handling.
     const checkedFrontmatter: PageFrontmatter = {
@@ -38,8 +41,9 @@ export class SitePage {
   }
 
   toJSON(): any {
-    const { slug, code, frontmatter } = this;
+    const { slug, mdxSource, frontmatter } = this;
     const serializedFrontmatter = {};
+    // Whatever you do, don't send any Dates.
     Object.keys(frontmatter).forEach((key) => {
       const value = frontmatter[key];
       if (value) {
@@ -49,7 +53,7 @@ export class SitePage {
 
     return {
       slug,
-      code,
+      mdxSource,
       frontmatter: serializedFrontmatter,
     };
   }
@@ -60,9 +64,13 @@ export async function getPage(slug: string): Promise<SitePage> {
     slug = `${slug}.mdx`;
   }
   const pagePath = path.join(pagesDirectory, slug);
-  const contents = await fs.readFile(pagePath);
-  const { code, frontmatter } = await bundleMDX(contents.toString('utf-8'));
-  return new SitePage(slug, code, frontmatter as PageFrontmatter);
+  const fileContents = await fs.readFile(pagePath);
+  // Generate the frontmatter.
+  const { content, data } = matter(fileContents);
+  // Generate the page source.
+  const mdxSource = await renderToString(content, { components });
+
+  return new SitePage(slug, mdxSource, data as PageFrontmatter);
 }
 
 export async function* walkDir(dir: string) {
@@ -136,7 +144,7 @@ export async function getGames(): Promise<GameInfo[]> {
   const gamePages: SitePage[] = allPages.filter((page) => page.frontmatter.game);
   return gamePages.map((gamePage) => ({
     name: gamePage.frontmatter.title,
-    slug: gamePage.slug,
+    slug: gamePage.slug.replace(/index$/i, ''),
     screenshotPath: gamePage.frontmatter.screenshot,
     description: gamePage.frontmatter.description,
   }));

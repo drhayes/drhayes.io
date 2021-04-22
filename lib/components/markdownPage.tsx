@@ -1,17 +1,16 @@
 import React from 'react';
 import PageLayout from './pageLayout';
-import { getMDXComponent } from 'mdx-bundler/client';
+import hydrate from 'next-mdx-remote/hydrate';
 import styles from './markdownPage.module.css';
+import components from '../mdxComponents';
 
-export default function Now({ page }) {
-  const { code, frontmatter } = page;
-  const Component = getMDXComponent(code);
+export default function MarkdownPage({ page }) {
+  const { mdxSource, frontmatter } = page;
+  const content = hydrate(mdxSource, { components });
 
   return (
-    <PageLayout title={frontmatter.title} updated={frontmatter.updated} articleStyles={styles.article}>
-      <article className={styles.article}>
-        <Component />
-      </article>
+    <PageLayout title={frontmatter.title} updated={frontmatter.updated}>
+      <article className={styles.article}>{content}</article>
     </PageLayout>
   );
 }
