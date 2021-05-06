@@ -35,21 +35,24 @@ export default class SitePage {
     this.frontmatter = checkedFrontmatter;
   }
 
+  serializeFrontmatter(): any {
+    const serializedFrontmatter = {};
+    // Whatever you do, don't send any Dates.
+    Object.keys(this.frontmatter).forEach((key) => {
+      const value = this.frontmatter[key];
+      if (value) {
+        serializedFrontmatter[key] = value.toISOString ? value.toISOString() : value;
+      }
+    });
+    return serializedFrontmatter;
+  }
+
   async render(): Promise<any> {
     const { slug, content, frontmatter } = this;
 
     // Generate the page source.
     const mdxSource = await renderToString(content, { components });
-
-    const serializedFrontmatter = {};
-    // Whatever you do, don't send any Dates.
-    Object.keys(frontmatter).forEach((key) => {
-      const value = frontmatter[key];
-      if (value) {
-        serializedFrontmatter[key] = value.toISOString ? value.toISOString() : value;
-      }
-    });
-
+    const serializedFrontmatter = this.serializeFrontmatter();
     return {
       slug,
       mdxSource,

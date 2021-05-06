@@ -1,7 +1,8 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
 import PageLayout from '../../lib/components/pageLayout';
-import { getAllBlogPages, SitePage, pageSorter } from '../../lib/pages';
+import { getAllBlogPages, pageSorter } from '../../lib/pages';
+import SitePage from '../../lib/sitePage';
 import styles from './blogList.module.css';
 import PageListItem from '../../lib/components/pageListItem';
 import FormattedDate from '../../lib/components/formattedDate';
@@ -28,7 +29,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
   blogPages.sort(pageSorter);
   return {
     props: {
-      blogPages: blogPages.map((blogPage) => blogPage.toJSON()),
+      blogPages: blogPages.map((blogPage) => {
+        const pageJson = {
+          frontmatter: blogPage.serializeFrontmatter(),
+          slug: blogPage.slug,
+        };
+        return pageJson;
+      }),
     },
   };
 };
