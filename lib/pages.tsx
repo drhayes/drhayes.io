@@ -68,7 +68,10 @@ export async function getPage(slug: string): Promise<SitePage> {
   // Generate the frontmatter.
   const { content, data } = matter(fileContents);
   // Generate the page source.
+  console.log('slug', slug);
+  console.time('renderToString');
   const mdxSource = await renderToString(content, { components });
+  console.timeEnd('renderToString');
 
   return new SitePage(slug, mdxSource, data as PageFrontmatter);
 }

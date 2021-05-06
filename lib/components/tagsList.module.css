@@ -3,13 +3,12 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   list-style-type: none;
-  opacity: 60%;
 }
 
 .item {
   margin-right: 2rem;
 }
 
-.item::before {
+.link::before {
   content: '#';
 }

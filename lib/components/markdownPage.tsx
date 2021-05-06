@@ -9,7 +9,12 @@ export default function MarkdownPage({ page }) {
   const content = hydrate(mdxSource, { components });
 
   return (
-    <PageLayout title={frontmatter.title} updated={frontmatter.updated}>
+    <PageLayout
+      title={frontmatter.title}
+      updated={frontmatter.updated}
+      created={frontmatter.date}
+      tags={frontmatter.tags}
+    >
       <article className={styles.article}>{content}</article>
     </PageLayout>
   );

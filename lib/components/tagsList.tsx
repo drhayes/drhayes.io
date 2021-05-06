@@ -1,7 +1,7 @@
 import styles from './tagsList.module.css';
 import Link from 'next/link';
 
-export default function TagsList({ tags, className }) {
+export default function TagsList({ tags, className }: { tags: string[]; className?: string }) {
   if (!tags) {
     return null;
   }
@@ -9,10 +9,14 @@ export default function TagsList({ tags, className }) {
     return (
       <li className={styles.item} key={i}>
         <Link href={`/tags/${tag}`}>
-          <a>{tag}</a>
+          <a className={styles.link}>{tag}</a>
         </Link>
       </li>
     );
   });
-  return <ul className={`${className} ${styles.list}`}>{tagElems}</ul>;
+  let listOfClasses = styles.list;
+  if (className) {
+    listOfClasses = `${className} ${styles.list}`;
+  }
+  return <ul className={listOfClasses}>{tagElems}</ul>;
 }
