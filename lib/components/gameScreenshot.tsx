@@ -1,3 +1,5 @@
-export default function GameScreenshot() {
-  return <h1>SCREENSHOT</h1>;
+import Image from './image';
+
+export default function GameScreenshot({ imageUrl }: { imageUrl: string }) {
+  return <Image url={imageUrl} />;
 }
