@@ -10,9 +10,10 @@ export default function GameIndex({ page }) {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { game } = params;
   const page = await getPage(`/games/${game}/index`);
+  const renderedPage = await page.render();
   return {
     props: {
-      page: page.toJSON(),
+      page: renderedPage,
     },
   };
 };

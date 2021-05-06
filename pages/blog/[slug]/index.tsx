@@ -10,9 +10,10 @@ export default function AnyOlPage({ page }) {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params;
   const page = await getPage(`/blog/${slug}`);
+  const renderedPage = await page.render();
   return {
     props: {
-      page: page.toJSON(),
+      page: renderedPage,
     },
   };
 };
