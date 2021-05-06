@@ -4,7 +4,7 @@ export default function BaseLayout({ title = 'drhayes.io', description = '', chi
   return (
     <>
       <Head title={title} description={description} />
-      <div>{children}</div>
+      {children}
     </>
   );
 }

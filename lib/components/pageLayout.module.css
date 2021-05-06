@@ -1,3 +1,10 @@
+.fullPageHeight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 .container {
   max-width: var(--container-width);
   margin-left: auto;

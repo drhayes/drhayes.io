@@ -36,33 +36,36 @@ export default function PageLayout({
 
   return (
     <BaseLayout title={title}>
-      <main className={styles.container}>
-        <PageHeader />
-        <header className={styles.titleContainer}>
-          <h1 className={`${styles.title} ${styles.dottedBorder}`}>{title}</h1>
-          {createdElem}
-          {updatedElem}
-          {tagsElem}
-        </header>
-        {children}
-      </main>
-      <footer className={styles.footer}>
-        <div className={styles.inner}>
-          <p className={styles.copyright}>
-            All content on this site is licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>{' '}
-            by David R. Hayes unless otherwise noted.
-          </p>
-          <p className={styles.webring}>
-            <a href="https://hotlinewebring.club/drhayes/previous" className={styles.previous}>
-              Previous
-            </a>
-            <a href="https://hotlinewebring.club/">Hotline Webring!</a>
-            <a href="https://hotlinewebring.club/drhayes/next" className={styles.next}>
-              Next
-            </a>
-          </p>
-        </div>
-      </footer>
+      <div className={styles.fullPageHeight}>
+        <main className={styles.container}>
+          <PageHeader />
+          <header className={styles.titleContainer}>
+            <h1 className={`${styles.title} ${styles.dottedBorder}`}>{title}</h1>
+            {createdElem}
+            {updatedElem}
+            {tagsElem}
+          </header>
+          {children}
+        </main>
+        <footer className={styles.footer}>
+          <div className={styles.inner}>
+            <p className={styles.copyright}>
+              All content on this site is licensed{' '}
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> by David R. Hayes unless otherwise
+              noted.
+            </p>
+            <p className={styles.webring}>
+              <a href="https://hotlinewebring.club/drhayes/previous" className={styles.previous}>
+                Previous
+              </a>
+              <a href="https://hotlinewebring.club/">Hotline Webring!</a>
+              <a href="https://hotlinewebring.club/drhayes/next" className={styles.next}>
+                Next
+              </a>
+            </p>
+          </div>
+        </footer>
+      </div>
     </BaseLayout>
   );
 }
