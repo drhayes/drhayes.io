@@ -23,6 +23,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const allPages = await getAllPages();
   const allSlugs = allPages.map(({ slug }) => {
     const modifiedSlug = slug.replace(/^\//, '');
+    if (modifiedSlug.endsWith('index')) {
+      // console.log(modifiedSlug);
+    }
     const slugArray = modifiedSlug.split('/');
     return {
       params: {
