@@ -1,13 +1,14 @@
 ---
 title: Part One, The Player
 date: 2015-09-27
-tags: blaster
+tags:
+  - blaster
 description: In which I cover the first bit of significant development of the game.
 ---
 
 This is the first part of an extended write-up I'm doing about my [Phaser](http://phaser.io) game, Blaster. [Play Blaster here][playblaster].
 
-First things first: I need a player. [I'm on commit 43f966 here][sha1].  It is also tagged as [part1][].
+First things first: I need a player. [I'm on commit 43f966 here][sha1]. It is also tagged as [part1][].
 
 ## What Works Right Now
 
@@ -17,18 +18,18 @@ There is a player sprite, a blue square. The blue square can be moved around the
 
 Here are the tools I'm using to make this thing come to life:
 
-  * [Atom][] is my text editor.
-  * [Pyxel Edit][pyxel] is my image editor.
-  * [cfxr][] as the sound generator.
-  * [oceanaudio][] as the sound editor.
+- [Atom][] is my text editor.
+- [Pyxel Edit][pyxel] is my image editor.
+- [cfxr][] as the sound generator.
+- [oceanaudio][] as the sound editor.
 
 This is around 18 commits into the life of the repository and I've skipped a boatload of setup stuff. I was using [webpack][], now I've switched to [browserify][]. As you can see from the [package.json][pjson] at this commit here is the stack:
 
-  * [Phaser][], the JS game engine I'm using to build it.
-  * [browserify][] to bundle up the JavaScript into a single file.
-  * [babelify][] to provide ES2015 goodness.
-  * [brfs][] to inline text files in my JS bundle (great for shader source!).
-  * [wzrd][] as the development server to bundle my stuff on the fly.
+- [Phaser][], the JS game engine I'm using to build it.
+- [browserify][] to bundle up the JavaScript into a single file.
+- [babelify][] to provide ES2015 goodness.
+- [brfs][] to inline text files in my JS bundle (great for shader source!).
+- [wzrd][] as the development server to bundle my stuff on the fly.
 
 I love using `npm` scripts instead of gulp or grunt or what-have-you. The scripts already have `node_modules` on the path and have the full power of shell-scripting at their disposal. When I run `npm start` this runs: `wzrd src/game.js:game.js -p 8080 -- -d`. That gives me a server running locally at port 8080 that will provide a debug bundle of my JS; that means I get [source maps][sourcemaps] and, believe me, you want source maps.
 
@@ -98,5 +99,5 @@ Shooting! Explosions! And the start of a series of mistakes that won't come back
 [atom]: https://atom.io
 [pyxel]: http://pyxeledit.com/
 [sourcemaps]: http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
-[enableBehaviors]: https://github.com/drhayes/blaster/blob/43f96688225dc80839acc2e507cc5b8d841d1149/src/behaviors/enableBehaviors.js
+[enablebehaviors]: https://github.com/drhayes/blaster/blob/43f96688225dc80839acc2e507cc5b8d841d1149/src/behaviors/enableBehaviors.js
 [playermove]: https://github.com/drhayes/blaster/blob/43f96688225dc80839acc2e507cc5b8d841d1149/src/behaviors/playerMove.js

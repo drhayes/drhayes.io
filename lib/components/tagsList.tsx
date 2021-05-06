@@ -5,6 +5,7 @@ export default function TagsList({ tags, className }: { tags: string[]; classNam
   if (!tags) {
     return null;
   }
+  console.log(tags);
   const tagElems = tags.map((tag, i) => {
     return (
       <li className={styles.item} key={i}>
