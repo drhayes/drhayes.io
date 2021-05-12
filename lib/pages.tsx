@@ -58,22 +58,6 @@ export async function getAllBlogPages(): Promise<SitePage[]> {
   return blogPages;
 }
 
-/**
- * Can be used as the comparator in a Array.sort call to sort in descending date order.
- * @param a
- * @param b
- * @returns
- */
-export function pageSorter(a: SitePage, b: SitePage) {
-  if (a.frontmatter.date > b.frontmatter.date) {
-    return -1;
-  } else if (a.frontmatter.date < b.frontmatter.date) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
-
 export type GameInfo = {
   name: string;
   screenshotPath: string;
@@ -92,4 +76,24 @@ export async function getGames(): Promise<GameInfo[]> {
     screenshotPath: gamePage.frontmatter.screenshot,
     description: gamePage.frontmatter.description,
   }));
+}
+
+export async function getTagMap(): Promise<Map<string, SitePage[]>> {
+  const allPages: SitePage[] = await getAllPages();
+  const tagMap = new Map<string, SitePage[]>();
+  for (const page of allPages) {
+    const tags = page.frontmatter.tags;
+    if (!tags) {
+      continue;
+    }
+    for (const tag of tags) {
+      let pageList = tagMap.get(tag);
+      if (!pageList) {
+        pageList = [];
+        tagMap.set(tag, pageList);
+      }
+      pageList.push(page);
+    }
+  }
+  return tagMap;
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
 import PageLayout from '../../lib/components/pageLayout';
-import { getAllBlogPages, pageSorter } from '../../lib/pages';
+import { getAllBlogPages } from '../../lib/pages';
+import pageSorter from '../../lib/pageSorter';
 import SitePage from '../../lib/sitePage';
 import styles from './blogList.module.css';
 import PageListItem from '../../lib/components/pageListItem';
