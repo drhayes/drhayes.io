@@ -1,7 +1,9 @@
 :root {
   --container-width: 70ch;
+  --container-margin: auto;
+  --container-padding: 0;
   --font-size: 18px;
-  --line-height: 1.5;
+  --line-height: 1.6;
   --paragraph-vertical-margin: 0.5rem;
 }
 
@@ -11,10 +13,23 @@ html {
   line-height: var(--line-height);
 }
 
-@media screen and (min-width: 640px) {
-  html {
-    font-size: var(--font-size);
-    line-height: var(--line-height);
+@media screen and (max-width: 640px) {
+  :root {
+    --container-padding: 0.2rem;
+    --font-size: 14px;
+    --line-height: 1.5;
+    --paragraph-vertical-margin: 1rem;
+  }
+
+  h1 {
+    font-size: 175%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    --container-width: 50ch;
+    --container-margin: 1rem;
   }
 }
 
@@ -36,13 +51,7 @@ ol,
 ul {
   margin: 0;
   padding: 0;
-  font-weight: normal;
 }
-
-/* ol,
-ul {
-  margin-left: 1.5em;
-} */
 
 img {
   max-width: 100%;

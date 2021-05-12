@@ -16,3 +16,28 @@
 .menu ol li {
   margin-right: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .container > * {
+    flex: 1;
+  }
+
+  .logo {
+    width: 80%;
+  }
+
+  .menu ol {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  .menu ol li {
+    margin-right: 0;
+  }
+}
