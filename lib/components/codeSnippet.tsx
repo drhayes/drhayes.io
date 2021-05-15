@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const CodeContainer = styled.pre`
   text-align: left;
-  padding: 0.5rem;
+  padding: 1rem;
+  padding-left: 1.2rem;
   overflow: auto;
 `;
 
