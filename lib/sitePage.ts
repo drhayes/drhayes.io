@@ -51,7 +51,7 @@ export default class SitePage {
     const { slug, content, frontmatter } = this;
 
     // Generate the page source.
-    const mdxSource = await serialize(content, { scope: frontmatter });
+    const mdxSource = await serialize(content); //, { scope: frontmatter });
     const serializedFrontmatter = this.serializeFrontmatter();
     return {
       slug,

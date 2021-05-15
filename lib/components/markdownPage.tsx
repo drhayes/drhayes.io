@@ -14,7 +14,9 @@ export default function MarkdownPage({ page }) {
       created={frontmatter.date}
       tags={frontmatter.tags}
     >
-      <MDXRemote {...mdxSource} components={components} className={styles.article} />
+      <article className={styles.article}>
+        <MDXRemote {...mdxSource} components={components} />
+      </article>
     </PageLayout>
   );
 }
