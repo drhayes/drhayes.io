@@ -1,12 +1,11 @@
 import React from 'react';
 import PageLayout from './pageLayout';
-import hydrate from 'next-mdx-remote/hydrate';
+import { MDXRemote } from 'next-mdx-remote';
 import styles from './markdownPage.module.css';
 import components from '../mdxComponents';
 
 export default function MarkdownPage({ page }) {
   const { mdxSource, frontmatter } = page;
-  const content = hydrate(mdxSource, { components });
 
   return (
     <PageLayout
@@ -15,7 +14,7 @@ export default function MarkdownPage({ page }) {
       created={frontmatter.date}
       tags={frontmatter.tags}
     >
-      <article className={styles.article}>{content}</article>
+      <MDXRemote {...mdxSource} components={components} className={styles.article} />
     </PageLayout>
   );
 }

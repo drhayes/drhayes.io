@@ -1,3 +1,5 @@
+import SitePage from './sitePage';
+
 /**
  * Can be used as the comparator in a Array.sort call to sort in descending date order.
  * @param a
@@ -5,11 +7,5 @@
  * @returns
  */
 export default function pageSorter(a: SitePage, b: SitePage) {
-  if (a.frontmatter.date > b.frontmatter.date) {
-    return -1;
-  } else if (a.frontmatter.date < b.frontmatter.date) {
-    return 1;
-  } else {
-    return 0;
-  }
+  return b.frontmatter.date.valueOf() - a.frontmatter.date.valueOf();
 }

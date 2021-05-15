@@ -1,4 +1,4 @@
-import renderToString from 'next-mdx-remote/render-to-string';
+import { serialize } from 'next-mdx-remote/serialize';
 import components from './mdxComponents';
 
 export type PageFrontmatter = {
@@ -51,7 +51,7 @@ export default class SitePage {
     const { slug, content, frontmatter } = this;
 
     // Generate the page source.
-    const mdxSource = await renderToString(content, { components });
+    const mdxSource = await serialize(content, { scope: frontmatter });
     const serializedFrontmatter = this.serializeFrontmatter();
     return {
       slug,
