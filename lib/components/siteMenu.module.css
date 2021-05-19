@@ -11,3 +11,12 @@
 .item {
   margin-right: 1rem;
 }
+
+@media screen and (max-width: 640px) {
+  .item {
+    justify-content: space-evenly;
+    margin-right: 0.2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}

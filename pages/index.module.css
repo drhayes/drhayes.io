@@ -26,6 +26,7 @@
   grid-row: 3;
   grid-column: 4 / span 2;
   font-size: 100%;
+  font-weight: normal;
 }
 
 .siteMenu {
@@ -40,4 +41,27 @@
 
 .myname {
   font-size: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .logo {
+    grid-column: 2 / span 3;
+  }
+
+  .hellothere {
+    grid-row: 4;
+    grid-column: 2 / span 3;
+    text-align: center;
+  }
+
+  .dostuff {
+    grid-row: 5;
+    grid-column: 2 / span 3;
+    text-align: center;
+  }
+
+  .siteMenu {
+    grid-row: 6;
+    grid-column: 1 / span 5;
+  }
 }
