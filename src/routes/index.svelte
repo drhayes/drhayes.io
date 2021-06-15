@@ -23,10 +23,6 @@
     width: 30ch;
   }
 
-  .right {
-    /* flex: 1; */
-  }
-
   h1 {
     font-size: 300%;
     font-weight: bold;
