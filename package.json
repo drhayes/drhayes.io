@@ -1,53 +1,29 @@
 {
-  "name": "drhayes.io",
-  "version": "1.0.0",
-  "description": "My personal website, built using eleventy.",
-  "main": "index.js",
+  "name": "~TODO~",
+  "version": "0.0.1",
   "scripts": {
-    "build:css": "postcss css/site.css -o dist/css/site.css",
-    "build:content": "eleventy",
-    "build": "npm run build:content && npm run build:css",
-    "start": "eleventy --serve",
-    "test": "ava"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/drhayes/drhayes.io.git"
-  },
-  "author": "David Hayes <hi@drhayes.io>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/drhayes/drhayes.io/issues"
-  },
-  "homepage": "https://github.com/drhayes/drhayes.io#readme",
-  "dependencies": {
-    "@11ty/eleventy": "0.11.0",
-    "@11ty/eleventy-cache-assets": "2.1.0",
-    "@11ty/eleventy-plugin-rss": "1.0.7",
-    "@fullhuman/postcss-purgecss": "3.0.0",
-    "airtable": "0.10.0",
-    "autoprefixer": "10.0.2",
-    "clean-css": "4.2.3",
-    "cssnano": "4.1.10",
-    "date-fns": "2.16.1",
-    "eleventy-plugin-reading-time": "0.0.1",
-    "highlight.js": "10.4.1",
-    "less": "3.12.2",
-    "object-path": ">=0.11.5",
-    "postcss-cli": "8.3.0",
-    "postcss-import": "13.0.0",
-    "pug": "3.0.1",
-    "rehype-raw": "5.1.0",
-    "rehype-stringify": "8.0.0",
-    "remark": "13.0.0",
-    "remark-gfm": "1.0.0",
-    "remark-highlight.js": "6.0.0",
-    "remark-rehype": "8.0.0",
-    "tailwindcss": "2.0.1",
-    "truncate-html": "1.0.3",
-    "unist-util-visit": "2.0.3"
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "ava": "3.14.0"
-  }
+    "@sveltejs/kit": "next",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-svelte3": "^3.2.0",
+    "prettier": "~2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "svelte": "^3.34.0",
+    "svelte-check": "^2.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "tslib": "^2.0.0",
+    "typescript": "^4.0.0"
+  },
+  "type": "module"
 }

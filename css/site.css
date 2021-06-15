@@ -1,160 +1,168 @@
-@import "../node_modules/highlight.js/styles/dracula.css";
+@import url('./reset.css');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.5;
+}
 
-@layer base {
-  a, a:visited {
-    color: darkblue;
-    text-decoration: 1px dotted underline #ccc;
-  }
+a,
+a:visited {
+  color: darkblue;
+  text-decoration: 1px dotted underline #ccc;
+}
 
-  a:hover {
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  .dotted-border {
-    position: relative;
-    border-bottom: 3px dotted #ccc;
-    margin-top: 0;
-    margin-bottom: .5em;
-  }
+.dotted-border {
+  position: relative;
+  border-bottom: 3px dotted #ccc;
+  margin-top: 0;
+  margin-bottom: .5em;
+}
 
-  .dotted-border:after {
-    display: block;
-    content: '';
-    width: 100%;
+.dotted-border:after {
+  display: block;
+  content: '';
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+  border-bottom: 3px dotted #ccc;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5 {
+  position: relative;
+  margin-top: 3rem;
+}
+
+  article h2:before,
+  article h3:before,
+  article h4:before {
     position: absolute;
-    bottom: 3px;
-    border-bottom: 3px dotted #ccc;
-  }
-
-  article h1,h2,h3,h4,h5 {
-    position: relative;
-    margin-top: 3rem;
-  }
-
-   article h2:before, h3:before, h4:before {
-     position: absolute;
-     font-size: 100%;
-     opacity: .5;
-     right: 101%;
-   }
-
-   article h2:before {
-     content: '##';
-   }
-
-   article h3:before {
-     content: '###';
-   }
-
-   article h4:before {
-     content: '####';
-   }
-
-  article h1 {
-    font-size: 200%;
-  }
-
-  article h2 {
-    font-size: 150%;
-  }
-
-  article h3 {
-    font-size: 125%;
-  }
-
-  article h4 {
-    font-size: 110%;
-  }
-
-  article p {
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-
-  article ul {
-    margin-left: 2rem;
-    list-style-type: disc;
-  }
-
-  article ol {
-    margin-left: 2rem;
-    list-style-type: decimal;
-  }
-
-  article > ul, article > ol {
-    margin-top: 1rem;
-  }
-
-  article > pre {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .article-content {
-    margin-top: 0;
-  }
-
-  .article-content p:first-of-type:first-letter {
-    font-size: 300%;
-    font-weight: bold;
-    padding: .6rem .9rem;
-    margin-right: .5rem;
-    border: 1px dotted #ccc;
-    float: left;
-  }
-
-  .article-content blockquote p:first-of-type:first-letter {
-    font-size: inherit;
-    font-weight: inherit;
-    padding: inherit;
-    margin-right: inherit;
-    border: none;
-    float: none;
-  }
-
-  blockquote {
-    margin-left: 0;
-    padding-left: 1rem;
-    font-size: 120%;
-    line-height: 1.6;
-    font-style: italic;
-    border-style: none;
-    border-left-style: solid;
-    border-width: 0.5rem;
-    border-color: #4682b4b8;
-  }
-
-  figure figcaption {
-    text-align: right;
-    font-style: italic;
-  }
-
-  figure figcaption:before {
-    content: '— ';
-  }
-
-  .game-title a {
-    color: white !important;
-    text-shadow: 0 0 2rem white;
-    text-decoration: none
-  }
-
-  hr {
-    border: 0;
-    height: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  hr:after {
-    display: block;
-    content: '***';
-    text-align: center;
+    font-size: 100%;
     opacity: .5;
+    right: 101%;
   }
+
+  article h2:before {
+    content: '##';
+  }
+
+  article h3:before {
+    content: '###';
+  }
+
+  article h4:before {
+    content: '####';
+  }
+
+article h1 {
+  font-size: 200%;
+}
+
+article h2 {
+  font-size: 150%;
+}
+
+article h3 {
+  font-size: 125%;
+}
+
+article h4 {
+  font-size: 110%;
+}
+
+article p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+article ul {
+  margin-left: 2rem;
+  list-style-type: disc;
+}
+
+article ol {
+  margin-left: 2rem;
+  list-style-type: decimal;
+}
+
+article>ul,
+article>ol {
+  margin-top: 1rem;
+}
+
+article>pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article-content {
+  margin-top: 0;
+}
+
+.article-content p:first-of-type:first-letter {
+  font-size: 300%;
+  font-weight: bold;
+  padding: .6rem .9rem;
+  margin-right: .5rem;
+  border: 1px dotted #ccc;
+  float: left;
+}
+
+.article-content blockquote p:first-of-type:first-letter {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: inherit;
+  margin-right: inherit;
+  border: none;
+  float: none;
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  font-size: 120%;
+  line-height: 1.6;
+  font-style: italic;
+  border-style: none;
+  border-left-style: solid;
+  border-width: 0.5rem;
+  border-color: #4682b4b8;
+}
+
+figure figcaption {
+  text-align: right;
+  font-style: italic;
+}
+
+figure figcaption:before {
+  content: '— ';
+}
+
+.game-title a {
+  color: white !important;
+  text-shadow: 0 0 2rem white;
+  text-decoration: none
+}
+
+hr {
+  border: 0;
+  height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+hr:after {
+  display: block;
+  content: '***';
+  text-align: center;
+  opacity: .5;
 }
 

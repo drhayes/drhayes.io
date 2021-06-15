@@ -1,6 +1,4 @@
-node_modules/
-*.sublime-workspace
-dist/
-src/notes
-src/notes.json
-.cache/
+.DS_Store
+node_modules
+/.svelte-kit
+/package
