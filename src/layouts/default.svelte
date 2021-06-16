@@ -20,10 +20,10 @@
 </style>
 
 <script lang="typescript">
-  import RavenLogo from '$lib/ravenLogo.svelte';
-  import SiteMenu from '$lib/siteMenu.svelte';
-  import ArticleTitle from '$lib/articleTitle.svelte';
-  import ArticleDate from '$lib/articleDate.svelte';
+  import RavenLogo from '$lib/components/ravenLogo.svelte';
+  import SiteMenu from '$lib/components/siteMenu.svelte';
+  import ArticleTitle from '$lib/components/articleTitle.svelte';
+  import ArticleDate from '$lib/components/articleDate.svelte';
 
   export let title;
   export let description;
