@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     width: 60rem;
+    max-width: 100%;
     height: 100vh;
     margin-left: auto;
     margin-right: auto;

@@ -1,7 +1,7 @@
 @import url('./reset.css');
 
 :root {
-  --content-width: 80ch;
+  --content-width: 65ch;
 }
 
 body {
@@ -62,55 +62,33 @@ article h4 {
 }
 
 article p {
-  margin-top: .5rem;
+  margin-top: 1em;
   margin-bottom: 0;
 }
 
 article ul {
-  margin-left: 1rem;
+  margin-left: 1em;
   list-style-type: disc;
 }
 
 article ol {
-  margin-left: 1rem;
+  margin-left: 1em;
   list-style-type: decimal;
 }
 
 article>ul,
 article>ol {
-  margin-top: 1rem;
+  margin-top: 1em;
 }
 
 article>pre {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.article-content {
-  margin-top: 0;
-}
-
-.article-content p:first-of-type:first-letter {
-  font-size: 300%;
-  font-weight: bold;
-  padding: .6rem .9rem;
-  margin-right: .5rem;
-  border: 1px dotted #ccc;
-  float: left;
-}
-
-.article-content blockquote p:first-of-type:first-letter {
-  font-size: inherit;
-  font-weight: inherit;
-  padding: inherit;
-  margin-right: inherit;
-  border: none;
-  float: none;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 blockquote {
   margin-left: 0;
-  padding-left: 1rem;
+  padding-left: 1em;
   font-size: 120%;
   line-height: 1.6;
   font-style: italic;
@@ -148,4 +126,3 @@ hr:after {
   text-align: center;
   opacity: .5;
 }
-

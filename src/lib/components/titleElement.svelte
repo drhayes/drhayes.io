@@ -8,9 +8,10 @@
     border-bottom: 3px dotted #ccc;
     margin-top: 0;
     margin-bottom: .5em;
+    padding-bottom: .2em;
     font-size: 200%;
     font-weight: bold;
-    line-height: 2;
+    line-height: 1.4;
   }
 
   h1:after {

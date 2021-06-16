@@ -17,5 +17,5 @@
 </style>
 
 <time datetime="{iso}">
-  (Updated {human})
+  <slot name="prefix"></slot>{human}<slot name="suffix"></slot>
 </time>

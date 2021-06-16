@@ -1,46 +1,86 @@
+<script context="module" lang="typescript">
+  export async function load({ fetch }) {
+    const posts = await fetch('/blog.json').then(res => res.json());
+
+    return {
+      props: {
+        posts,
+      }
+    };
+  }
+</script>
+
+<script lang="typescript">
+  import DefaultLayout from '../../layouts/default.svelte';
+  import FormattedDate from '$lib/components/formattedDate.svelte';
+  import TagsList from '$lib/components/tagsList.svelte';
+  export let posts;
+</script>
+
 <style>
-  main {
-    width: var(--content-width);
-    margin-left: auto;
-    margin-right: auto;
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    --first-column-width: 20%;
   }
 
-  .site-link {
-    display: inline-block;
-    width: 30%;
-  }
-
-  nav {
-    margin-bottom: 1rem;
-  }
-
-  header {
+  li {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
+  }
+
+  li > * {
+    margin-bottom: 0.2em;
+  }
+
+  .date {
+    order: 1;
+    width: var(--first-column-width);
+    vertical-align: text-bottom;
+    line-height: 2;
+  }
+
+  .title {
+    font-size: 1.5em;
+    line-height: 1.2;
+    order: 2;
+    width: calc(100% - var(--first-column-width));
+    margin-top: 0;
+  }
+
+  .description {
+    margin-top: 0;
+    order: 3;
+    margin-left: var(--first-column-width);
+  }
+
+  .tags {
+    order: 4;
+    margin-left: var(--first-column-width);
   }
 </style>
 
-<script lang="typescript">
-  import RavenLogo from '$lib/components/ravenLogo.svelte';
-  import SiteMenu from '$lib/components/siteMenu.svelte';
-  import TitleElement from '$lib/components/titleElement.svelte';
-</script>
-
-<svelte:head>
-  <title>Blog · drhayes.io</title>
-  <meta name="description" content="Blog stuff, yo.">
-</svelte:head>
-
-<main>
-  <header>
-    <nav>
-      <a href="/" class="site-link">
-        <RavenLogo />
-      </a>
-      <SiteMenu />
-    </nav>
-    <TitleElement title="Blog" />
-  </header>
+<DefaultLayout title="Blog">
   <ol>
-    <li>Blog post here</li>
+    {#each posts as post}
+      <li>
+        <h1 class="title">
+          <a href="/blog/{post.slug}">{post.title}</a>
+        </h1>
+        <div class="date">
+          <FormattedDate dateString={post.date} />
+        </div>
+        {#if post.description}
+          <p class="description">{post.description}</p>
+        {/if}
+        <div class="tags">
+          <TagsList tags={post.tags} />
+        </div>
+      </li>
+    {/each}
   </ol>
-</main>
+</DefaultLayout>
+
