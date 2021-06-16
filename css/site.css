@@ -1,5 +1,9 @@
 @import url('./reset.css');
 
+:root {
+  --content-width: 80ch;
+}
+
 body {
   font-family: monospace;
   font-size: 18px;
@@ -24,29 +28,25 @@ article h5 {
   margin-top: 2rem;
 }
 
-  article h2:before,
-  article h3:before,
-  article h4:before {
-    position: absolute;
-    font-size: 100%;
-    opacity: .5;
-    right: 101%;
-  }
+article h2:before,
+article h3:before,
+article h4:before {
+  position: absolute;
+  font-size: 100%;
+  opacity: .5;
+  right: 101%;
+}
 
-  article h2:before {
-    content: '##';
-  }
+article h2:before {
+  content: '##';
+}
 
-  article h3:before {
-    content: '###';
-  }
+article h3:before {
+  content: '###';
+}
 
-  article h4:before {
-    content: '####';
-  }
-
-article h1 {
-  font-size: 200%;
+article h4:before {
+  content: '####';
 }
 
 article h2 {

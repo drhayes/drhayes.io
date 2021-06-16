@@ -8,6 +8,7 @@
     border-bottom: 3px dotted #ccc;
     margin-top: 0;
     margin-bottom: .5em;
+    font-size: 200%;
     font-weight: bold;
     line-height: 2;
   }

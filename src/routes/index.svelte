@@ -1,10 +1,10 @@
 <script>
-  import RavenLogo from '$lib/ravenLogo.svelte';
-  import SiteMenu from '$lib/siteMenu.svelte';
+  import RavenLogo from '$lib/components/ravenLogo.svelte';
+  import SiteMenu from '$lib/components/siteMenu.svelte';
 </script>
 
 <style>
-  .verticalCenter {
+  .vertical-center {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,7 @@
     margin-right: auto;
   }
 
-  .horizontalCenter {
+  .horizontal-center {
     display: flex;
   }
 
@@ -26,15 +26,20 @@
   h1 {
     font-size: 300%;
     font-weight: bold;
+    line-height: 1.75;
   }
 
   h2 {
     font-size: 150%;
   }
+
+  .site-menu {
+    margin-top: 2rem;
+  }
 </style>
 
-<section class="verticalCenter">
-  <div class="horizontalCenter">
+<section class="vertical-center">
+  <div class="horizontal-center">
     <div class="left">
       <RavenLogo />
     </div>
@@ -45,7 +50,7 @@
       <h2>I do stuff with computers.</h2>
     </div>
   </div>
-  <div class="horizontalCenter">
+  <div class="horizontal-center site-menu">
     <SiteMenu />
   </div>
 </section>

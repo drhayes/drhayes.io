@@ -1,5 +1,5 @@
 <style>
-  article {
+  main {
     width: var(--content-width);
     margin-left: auto;
     margin-right: auto;
@@ -23,19 +23,14 @@
   import RavenLogo from '$lib/components/ravenLogo.svelte';
   import SiteMenu from '$lib/components/siteMenu.svelte';
   import TitleElement from '$lib/components/titleElement.svelte';
-  import ArticleDate from '$lib/components/articleDate.svelte';
-
-  export let title;
-  export let description;
-  export let updated;
 </script>
 
 <svelte:head>
-  <title>{title} · drhayes.io</title>
-  <meta name="description" content="{description}">
+  <title>Blog · drhayes.io</title>
+  <meta name="description" content="Blog stuff, yo.">
 </svelte:head>
 
-<article>
+<main>
   <header>
     <nav>
       <a href="/" class="site-link">
@@ -43,8 +38,9 @@
       </a>
       <SiteMenu />
     </nav>
-    <TitleElement title={title} />
-    <ArticleDate updated={updated} />
+    <TitleElement title="Blog" />
   </header>
-  <slot></slot>
-</article>
+  <ol>
+    <li>Blog post here</li>
+  </ol>
+</main>
