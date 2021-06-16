@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import { format, parseISO, parse } from 'date-fns';
+  import { format, parse } from 'date-fns';
   export let dateString;
   // The date strings come back in GMT, which is not where I'm writing any of this of course. So strike off the
   // fake timezone information that was tacked on by the frontmatter parser and format for realz.

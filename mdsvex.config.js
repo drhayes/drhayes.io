@@ -23,6 +23,7 @@ const config = {
   layout: {
     _: defaultLayoutPath,
     blog: blogLayoutPath,
+    tags: defaultLayoutPath,
   },
 };
 
