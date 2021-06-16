@@ -12,9 +12,11 @@
 <style>
   ol {
     display: flex;
+    margin: 0;
   }
 
   li {
+    list-style-type: none;
     margin-right: 1rem;
   }
 </style>

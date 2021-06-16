@@ -1,11 +1,14 @@
 ---
 title: Now
 description: What am I doing right now.
-layout: page.njk
 updated: 2021-06-14
 ---
 
 What I'm doing right now.
+
+## Web stuff
+
+Playing around with Svelte.
 
 ## Text
 

@@ -2,7 +2,7 @@
 
 body {
   font-family: monospace;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -15,30 +15,13 @@ a:visited {
 a:hover {
   text-decoration: underline;
 }
-
-.dotted-border {
-  position: relative;
-  border-bottom: 3px dotted #ccc;
-  margin-top: 0;
-  margin-bottom: .5em;
-}
-
-.dotted-border:after {
-  display: block;
-  content: '';
-  width: 100%;
-  position: absolute;
-  bottom: 3px;
-  border-bottom: 3px dotted #ccc;
-}
-
 article h1,
 article h2,
 article h3,
 article h4,
 article h5 {
   position: relative;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
   article h2:before,
@@ -79,17 +62,17 @@ article h4 {
 }
 
 article p {
-  margin-top: 1rem;
+  margin-top: .5rem;
   margin-bottom: 0;
 }
 
 article ul {
-  margin-left: 2rem;
+  margin-left: 1rem;
   list-style-type: disc;
 }
 
 article ol {
-  margin-left: 2rem;
+  margin-left: 1rem;
   list-style-type: decimal;
 }
 
