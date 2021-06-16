@@ -1,7 +1,7 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2021-06-14
+updated: 2021-06-15
 ---
 
 What I'm doing right now.

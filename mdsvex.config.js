@@ -4,14 +4,17 @@ import remarkAbbr from 'remark-abbr';
 const defaultLayoutPath = './src/layouts/default.svelte';
 
 const config = {
-  extensions: [".svelte.md", ".md", ".svx"],
+  extensions: ['.svelte.md', '.md', '.svx'],
   smartypants: {
-    // dashes: "oldschool",
+    quotes: true,
+    ellipses: true,
+    backticks: false,
+    dashes: 'oldschool',
   },
   remarkPlugins: [
     [remarkGithub, {
       // Use your own repository
-      repository: "https://github.com/drhayes/drhayes.io",
+      repository: 'https://github.com/drhayes/drhayes.io',
     }],
     remarkAbbr,
   ],
