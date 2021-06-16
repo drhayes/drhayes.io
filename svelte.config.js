@@ -1,7 +1,7 @@
 import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
 import mdsvexConfig from './mdsvex.config.js';
-import adapter from '@sveltejs/adapter-static';
+import vercel from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,9 +14,7 @@ const config = {
   ],
 
   kit: {
-    adapter: adapter({
-      pages: 'build',
-    }),
+    adapter: vercel(),
     files: {
       assets: 'static',
     },
