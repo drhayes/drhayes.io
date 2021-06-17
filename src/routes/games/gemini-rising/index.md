@@ -35,3 +35,5 @@ Here's a list of videos I've made of the game's progress so far. My game was cod
 
 ## Articles
 
+1. [Technology](/games/gemini-rising/technology)
+2. [AI](/games/gemini-rising/ai)

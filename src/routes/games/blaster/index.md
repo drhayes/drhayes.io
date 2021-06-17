@@ -27,6 +27,11 @@ Here is the [repository for the project][repo].
 
 ## Articles
 
+1. [Introduction](/games/blaster/intro)
+1. [Part One, The Player](/games/blaster/part-one)
+1. [Part Two, Shooting and Explosions](/games/blaster/part-two)
+1. [Part Three, Enemies and AI](/games/blaster/part-three)
+
 
 
 [playblaster]: http://blaster.drhayes.io
