@@ -29,6 +29,6 @@ export async function get({ query }) {
   publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
 
   return {
-    body: publishedPosts.slice(0, limit)
+    body: publishedPosts,
   };
 }

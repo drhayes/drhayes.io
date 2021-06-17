@@ -7,7 +7,6 @@ tags:
 toc: true
 screenshot: /img/generic-platformer-screenshot-2020-10-05.png
 description: A template project in Love.
-layout: page.njk
 date: 2020-10-06
 ---
 

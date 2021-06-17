@@ -17,6 +17,7 @@
 <svelte:head>
   <link rel="alternate" type="application/rss+xml" href="https://{host}/feed.xml">
   <link rel="canonical" href="https://{host}{path}">
+  <base href="///{host}/">
 </svelte:head>
 
 <slot></slot>

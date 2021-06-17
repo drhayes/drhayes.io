@@ -5,7 +5,6 @@ tags:
   - projects
 screenshot: /img/blaster-screenshot.png
 description: A little JavaScript game about blasting geometric enemies.
-layout: page.njk
 date: 2019-01-01
 ---
 
@@ -23,13 +22,6 @@ Here is the [repository for the project][repo].
 
 ## Articles
 
-<ol>
-{% for article in collections.gamearticles | articlesfor('blaster') %}
-  <li>
-    <a href="{{ article.url }}">{{ article.data.title }}</a>
-  </li>
-{% endfor %}
-</ol>
 
 
 [playblaster]: http://blaster.drhayes.io

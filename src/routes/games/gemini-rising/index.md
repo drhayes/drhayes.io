@@ -7,7 +7,6 @@ toc: true
 screenshot: /img/gr-screenshot-2018-09-12.png
 description: A Metroidvania about crafting and sneaking.
 date: 2020-08-01
-layout: page.njk
 ---
 
 ![Neato screenshot of game]({{ screenshot }} "Screenshot as of 2018-09-12")
@@ -30,10 +29,3 @@ Here's a list of videos I've made of the game's progress so far. My game was cod
 
 ## Articles
 
-<ol>
-{% for article in collections.gamearticles | articlesfor('gemini-rising') %}
-  <li>
-    <a href="{{ article.url }}">{{ article.data.title }}</a>
-  </li>
-{% endfor %}
-</ol>
