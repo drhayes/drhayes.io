@@ -1,7 +1,8 @@
 ---
 title: Introduction
 date: 2015-09-27
-tags: blaster
+tags:
+  - blaster
 description: In which I write about why I started creating Blaster.
 ---
 

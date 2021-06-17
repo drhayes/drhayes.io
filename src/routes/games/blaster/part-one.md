@@ -1,7 +1,8 @@
 ---
 title: Part One, The Player
 date: 2015-09-27
-tags: blaster
+tags:
+  - blaster
 description: In which I cover the first bit of significant development of the game.
 ---
 

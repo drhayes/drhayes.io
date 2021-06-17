@@ -1,4 +1,5 @@
 import type { EndpointOutput } from '@sveltejs/kit';
+import { dateSortAscending } from '../../lib/metadataUtil';
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get(): Promise<EndpointOutput> {
@@ -16,7 +17,7 @@ export async function get(): Promise<EndpointOutput> {
   }
 
   const games = await Promise.all(gamePromises);
-  games.sort((a, b) => (new Date(a.date) < new Date(b.date) ? -1 : 1));
+  games.sort(dateSortAscending);
 
   return {
     body: games

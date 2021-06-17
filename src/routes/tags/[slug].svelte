@@ -1,14 +1,34 @@
+
 <script context="module" lang="typescript">
-  export async function load({ fetch, page: { params } }) {
-    const posts = await fetch('/blog.json').then(res => res.json());
-    const { slug } = params;
-    const postsByTag = posts.filter(post => post.tags?.includes(slug));
+  import type { Metadata } from '$lib/metadataUtil';
+  export async function load({ page: { params } }) {
+    const pageFiles = import.meta.glob('/src/routes/**/*.md');
+    const metadataPromises = [];
+    for (const [slug, resolver] of Object.entries(pageFiles)) {
+      metadataPromises.push(resolver().then(({ metadata }) => ({
+        slug,
+        ...metadata,
+      })));
+    }
+    const metadata = await Promise.all(metadataPromises);
+    const { slug: tag } = params as Metadata;
+    const metadataByTag = metadata
+      .filter(metadata => metadata.tags?.includes(tag))
+      .map(metadata => {
+        metadata.slug = metadata.slug
+          .replace('/src/routes', '')
+          .replace('/index.md', '')
+          .replace('.md', '');
+        return metadata;
+      });
+
+    console.log(metadataByTag);
 
     return {
       props: {
-        title: `#${slug}`,
-        tag: slug,
-        postsByTag,
+        title: `#${tag}`,
+        tag,
+        metadataByTag,
       }
     };
   }
@@ -16,9 +36,14 @@
 
 <script lang="typescript">
   import DefaultLayout from '../../layouts/default.svelte';
+  import ArticleDate from '$lib/components/articleDate.svelte';
   import TagsList from '$lib/components/tagsList.svelte';
+  import { dateSortDescending } from '$lib/metadataUtil';
+
   export let tag;
-  export let postsByTag;
+  export let metadataByTag: Metadata[];
+
+  metadataByTag.sort(dateSortDescending);
 </script>
 
 <style>
@@ -43,15 +68,16 @@
 
 <DefaultLayout title="#{tag}">
   <ol>
-    {#each postsByTag as post}
+    {#each metadataByTag as metadata}
       <li>
         <h1>
-          <a href="/blog/{post.slug}">{post.title}</a>
+          <a href={metadata.slug}>{metadata.title}</a>
         </h1>
-        {#if post.description}
-          <p class="description">{post.description}</p>
+        <ArticleDate created={metadata.date} updated={metadata.updated} />
+        {#if metadata.description}
+          <p class="description">{metadata.description}</p>
         {/if}
-        <TagsList tags={post.tags} />
+        <TagsList tags={metadata.tags} />
       </li>
     {/each}
   </ol>

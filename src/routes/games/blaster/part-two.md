@@ -1,7 +1,8 @@
 ---
 title: Part Two, Shooting and Explosions
 date: 2015-10-05
-tags: blaster
+tags:
+  - blaster
 description: In which I implement shooting and explosions.
 ---
 

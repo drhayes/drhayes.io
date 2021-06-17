@@ -1,14 +1,14 @@
 export default async function allTags(): Promise<string[]> {
-  const postFiles = import.meta.glob('/src/routes/blog/*.md');
-  const postPromises = Object.values(postFiles).map(page => page());
-  const posts = await Promise.all(postPromises);
-  const tagsSet: Set<string> = posts.reduce((all: Set<string>, post) => {
-    const { metadata: { tags } } = post;
+  const pageFiles = import.meta.glob('/src/routes/**/*.md');
+  const pagePromises = Object.values(pageFiles).map(page => page());
+  const pages = await Promise.all([...pagePromises]);
+  const tagsSet = new Set();
+  for (const page of pages) {
+    const { metadata: { tags } } = page;
     if (tags) {
-      tags.forEach(tag => all.add(tag));
+      tags.forEach(tag => tagsSet.add(tag));
     }
-    return all;
-  }, new Set<string>());
+  }
 
-  return [...tagsSet];
+  return [...tagsSet].sort();
 }

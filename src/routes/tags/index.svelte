@@ -1,16 +1,9 @@
 <script context="module" lang="typescript">
   export async function load({ fetch }) {
-    const posts = await fetch('/blog.json').then(res => res.json());
-    const tags = posts.reduce((all, post) => {
-      if (post.tags) {
-        post.tags.forEach(tag => all.add(tag));
-      }
-      return all;
-    }, new Set());
-
+    const tags = await fetch('/tags.json').then(res => res.json());
     return {
       props: {
-        tags: [...tags].sort(),
+        tags: tags.sort(),
       }
     };
   }
@@ -28,11 +21,13 @@
     list-style-type: none;
   }
 
-  li {
+  p {
+    margin-bottom: 1em;
   }
 </style>
 
 <DefaultLayout title="Tags">
+  <p>Because you really wanted to see all the tags...</p>
   <ol>
     {#each tags as tag}
       <li>
