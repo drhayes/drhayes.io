@@ -10,7 +10,12 @@ description: A template project in Love.
 date: 2020-10-06
 ---
 
-![Neato screenshot of game]({{ screenshot }} "Screenshot as of 2018-09-12")
+<script lang="typescript">
+  import GameScreenshot from '$lib/components/gameScreenshot.svelte';
+</script>
+
+<GameScreenshot imageUrl={screenshot} caption="The player stymied by a long drop; will they make
+it?" alt="2d pixel art of a blue figure standing on a rocky outcropping inside of a cave system." />
 
 Behold the Generic Platformer!
 

@@ -9,7 +9,13 @@ description: A Metroidvania about crafting and sneaking.
 date: 2020-08-01
 ---
 
-![Neato screenshot of game]({{ screenshot }} "Screenshot as of 2018-09-12")
+<script lang="typescript">
+  import GameScreenshot from '$lib/components/gameScreenshot.svelte';
+</script>
+
+<GameScreenshot imageUrl={screenshot} caption="The player trying to figure out how to sneak by the
+Sentry undetected." alt="2d pixel art of a blue figure standing on a metal platform while a small
+red robot flies underneath, scanning for intruders." />
 
 Gemini Rising is a Metroidvania with crafting elements and procedural generation that I'm working on. It is out now for pre-alpha testing!
 

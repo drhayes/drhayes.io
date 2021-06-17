@@ -14,7 +14,6 @@
   import DefaultLayout from '../../layouts/default.svelte';
   import GameTile from '$lib/components/gameTile.svelte';
   export let games;
-  console.log(games);
 </script>
 
 <DefaultLayout title="Games">

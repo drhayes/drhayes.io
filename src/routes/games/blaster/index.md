@@ -8,7 +8,12 @@ description: A little JavaScript game about blasting geometric enemies.
 date: 2019-01-01
 ---
 
-![Neato screenshot of game]({{ screenshot }} "Screenshot of Blaster")
+<script lang="typescript">
+  import GameScreenshot from '$lib/components/gameScreenshot.svelte';
+</script>
+
+<GameScreenshot imageUrl={screenshot} caption="Destroying some Guards in Blaster." alt="A blue
+square is shooting upwards at a red square, making it explode in yellow sparks." />
 
 [Play the game here][playblaster].
 

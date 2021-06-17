@@ -98,21 +98,6 @@ blockquote {
   border-color: #4682b4b8;
 }
 
-figure figcaption {
-  text-align: right;
-  font-style: italic;
-}
-
-figure figcaption:before {
-  content: '— ';
-}
-
-.game-title a {
-  color: white !important;
-  text-shadow: 0 0 2rem white;
-  text-decoration: none
-}
-
 hr {
   border: 0;
   height: 2rem;
