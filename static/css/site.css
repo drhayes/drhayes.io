@@ -1,4 +1,5 @@
 @import url('./reset.css');
+@import url('./prism-dracula.css');
 
 :root {
   --content-width: 65ch;
