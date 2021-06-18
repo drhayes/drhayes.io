@@ -25,13 +25,13 @@ My goal is to make the entire game by myself: programming, graphics, sound, and 
 
 You can grab the game on itch.io:
 
-<iframe frameborder="0" src="https://itch.io/embed/393809" width="552" height="167"><a href="https://drhayes.itch.io/gemini-rising">Gemini Rising by drhayes</a></iframe>
+<iframe title="Gemini Rising on itch.io" frameborder="0" src="https://itch.io/embed/393809" width="552" height="167"><a href="https://drhayes.itch.io/gemini-rising">Gemini Rising by drhayes</a></iframe>
 
 ## Video Dev Log
 
 Here's a list of videos I've made of the game's progress so far. My game was codenamed "Basement" before I came up with its current title.
 
-<iframe style="position:static;width:100%;height:600px" src="https://www.youtube.com/embed/videoseries?list=PLQuDSztE3xlPBszv48dtN3TFsKUP9s_mO" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe title="Gemini Rising playlist on youtube.com" style="position:static;width:100%;height:600px" src="https://www.youtube.com/embed/videoseries?list=PLQuDSztE3xlPBszv48dtN3TFsKUP9s_mO" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Articles
 
