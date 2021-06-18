@@ -1,6 +1,8 @@
 
 <script context="module" lang="typescript">
   import type { Metadata } from '$lib/metadataUtil';
+  import { dateSortDescending } from '$lib/metadataUtil';
+
   export async function load({ page: { params } }) {
     const pageFiles = import.meta.glob('/src/routes/**/*.md');
     const metadataPromises = [];
@@ -22,7 +24,7 @@
         return metadata;
       });
 
-    console.log(metadataByTag);
+    metadataByTag.sort(dateSortDescending);
 
     return {
       props: {
@@ -38,12 +40,9 @@
   import DefaultLayout from '../../layouts/default.svelte';
   import ArticleDate from '$lib/components/articleDate.svelte';
   import TagsList from '$lib/components/tagsList.svelte';
-  import { dateSortDescending } from '$lib/metadataUtil';
 
   export let tag;
   export let metadataByTag: Metadata[];
-
-  metadataByTag.sort(dateSortDescending);
 </script>
 
 <style>
