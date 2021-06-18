@@ -1,18 +1,10 @@
 
 <script context="module" lang="typescript">
   import type { Metadata } from '$lib/metadataUtil';
-  import { dateSortDescending } from '$lib/metadataUtil';
+  import allPages from '$lib/allPages';
 
   export async function load({ page: { params } }) {
-    const pageFiles = import.meta.glob('/src/routes/**/*.md');
-    const metadataPromises = [];
-    for (const [slug, resolver] of Object.entries(pageFiles)) {
-      metadataPromises.push(resolver().then(({ metadata }) => ({
-        slug,
-        ...metadata,
-      })));
-    }
-    const metadata = await Promise.all(metadataPromises);
+    const metadata = await allPages();
     const { slug: tag } = params as Metadata;
     const metadataByTag = metadata
       .filter(metadata => metadata.tags?.includes(tag))
@@ -23,8 +15,6 @@
           .replace('.md', '');
         return metadata;
       });
-
-    metadataByTag.sort(dateSortDescending);
 
     return {
       props: {

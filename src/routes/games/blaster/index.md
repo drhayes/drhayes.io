@@ -5,7 +5,8 @@ tags:
   - projects
 screenshot: /img/blaster-screenshot.png
 description: A little JavaScript game about blasting geometric enemies.
-date: 2019-01-01
+date: 2015-09-26
+updated: 2019-01-01
 ---
 
 <script lang="typescript">
