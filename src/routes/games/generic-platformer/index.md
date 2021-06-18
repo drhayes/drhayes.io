@@ -3,11 +3,12 @@ title: Generic Platformer
 tags:
   - generic-platformer
   - projects
-  - love
+  - löve
 toc: true
 screenshot: /img/generic-platformer-screenshot-2020-10-05.png
-description: A template project in Love.
+description: A template project in Löve.
 date: 2020-10-06
+updated: 2021-06-18
 ---
 
 <script lang="typescript">

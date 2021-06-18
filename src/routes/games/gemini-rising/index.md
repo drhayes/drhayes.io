@@ -3,10 +3,12 @@ title: Gemini Rising
 tags:
   - gemini-rising
   - projects
+  - löve
 toc: true
 screenshot: /img/gr-screenshot-2018-09-12.png
-description: A Metroidvania about crafting and sneaking.
+description: A Metroidvania about crafting and sneaking written in Löve.
 date: 2020-08-01
+updated: 2021-06-18
 ---
 
 <script lang="typescript">
