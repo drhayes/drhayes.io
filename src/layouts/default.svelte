@@ -24,6 +24,7 @@
   import SiteMenu from '$lib/components/siteMenu.svelte';
   import TitleElement from '$lib/components/titleElement.svelte';
   import ArticleDate from '$lib/components/articleDate.svelte';
+  import SiteFooter from '$lib/components/siteFooter.svelte';
 
   export let title;
   export let description;
@@ -51,3 +52,4 @@
     <slot></slot>
   </article>
 </main>
+<SiteFooter />
