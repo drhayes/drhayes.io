@@ -19,7 +19,7 @@
   }
 
   a {
-    color: white;
+    color: var(--text-content-color);
     text-shadow: 0 0 10px #000;
     text-decoration: none;
   }

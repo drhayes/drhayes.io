@@ -23,11 +23,12 @@
   }
 
   article :global(p:first-of-type:first-letter) {
+    font-family: monospace;
     font-size: 300%;
     font-weight: bold;
     padding: .6rem .9rem;
     margin-right: .5rem;
-    border: 1px dotted #ccc;
+    border: 1px dotted var(--light-border-color);
     float: left;
   }
 
@@ -38,6 +39,21 @@
     margin-right: inherit;
     border: none;
     float: none;
+  }
+
+  :global(article>figure) :global(blockquote+figcaption) {
+    background-color: var(--blockquote-backgroud-color);
+    font-size: 120%;
+    font-style: italic;
+    border-style: none;
+    border-left-style: solid;
+    border-width: 0.5rem;
+    border-color: var(--blockquote-border-color);
+    text-align: right;
+  }
+
+  :global(article>figure) :global(blockquote+figcaption::before) {
+    content: '– ';
   }
 </style>
 
