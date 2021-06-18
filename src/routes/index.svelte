@@ -39,6 +39,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>Hi there! - drhayes.io</title>
+</svelte:head>
+
 <section class="vertical-center">
   <div class="horizontal-center">
     <div class="left">
