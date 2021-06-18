@@ -1,5 +1,5 @@
-import remarkGithub from 'remark-github';
 import remarkAbbr from 'remark-abbr';
+import remarkGithubFlavoredMarkdown from 'remark-gfm';
 
 const defaultLayoutPath = './src/layouts/default.svelte';
 const blogLayoutPath = './src/layouts/blog.svelte';
@@ -14,10 +14,7 @@ const config = {
     dashes: 'oldschool',
   },
   remarkPlugins: [
-    [remarkGithub, {
-      // Use your own repository
-      repository: 'https://github.com/drhayes/drhayes.io',
-    }],
+    remarkGithubFlavoredMarkdown,
     remarkAbbr,
   ],
   rehypePlugins: [],
