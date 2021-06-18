@@ -11,7 +11,7 @@
   Helvetica,
   sans-serif;
   --heading-font: monospace;
-  --light-border-color: rgba(255, 255, 255, .3);
+  --light-border-color: rgba(255, 255, 255, .2);
   --blockquote-border-color: #4682b4b8;
   --blockquote-backgroud-color: #223;
 }
