@@ -1,6 +1,6 @@
-const visit = require('unist-util-visit');
+import visit from 'unist-util-visit';
 
-function transformer(tree, file) {
+function transformer(tree) {
   visit(tree, 'blockquote', visitor);
 
   // Trying to change this:
@@ -11,7 +11,7 @@ function transformer(tree, file) {
   //   <blockquote>It is the unofficial force—the Baker Street irregulars.</blockquote>
   //   <figcaption>Sherlock Holmes, Sign of Four</figcaption>
   // </figure>
-  function visitor(node, index, parent) {
+  function visitor(node, _, parent) {
     // Avoid recursive hell.
     if (parent && parent.type === 'figure') {
       return;
@@ -30,10 +30,15 @@ function transformer(tree, file) {
       console.log('early exit', lastText && lastText.type);
       return;
     }
-    // Does it have a "\n--" in it?
-    // Look for type:text nodes with a string that looks like "\n--" in them.
+    // Does it have a "\n–" in it?
+    // Look for type:text nodes with a string that looks like "\n–" in them.
     // These are attributions.
-    const [quoteBit, attributionBit] = lastText.value.split('\n--');
+    // Look out kids, that's an endash: – not a hyphen: -.
+    const [quoteBit, attributionBit] = lastText.value.split('\n–');
+    if (!attributionBit) {
+      console.log('no attribution in this blockquote', quoteBit);
+      return;
+    }
     lastText.value = quoteBit;
 
     const newFigcaption = {
@@ -69,7 +74,7 @@ function attributionPlugin() {
   return transformer;
 }
 
-module.exports = attributionPlugin;
+export default attributionPlugin;
 /**
  * {
   "type": "blockquote",

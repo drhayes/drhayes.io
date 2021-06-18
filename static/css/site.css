@@ -99,6 +99,20 @@ blockquote {
   border-color: #4682b4b8;
 }
 
+article>figure figcaption {
+  font-size: 120%;
+  font-style: italic;
+  border-style: none;
+  border-left-style: solid;
+  border-width: 0.5rem;
+  border-color: #4682b4b8;
+  text-align: right;
+}
+
+article>figure figcaption::before {
+  content: '– ';
+}
+
 hr {
   border: 0;
   height: 2rem;

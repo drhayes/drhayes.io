@@ -1,5 +1,6 @@
 import remarkAbbr from 'remark-abbr';
 import remarkGithubFlavoredMarkdown from 'remark-gfm';
+import remarkAttribution from './src/lib/remarkAttribution.js';
 
 const defaultLayoutPath = './src/layouts/default.svelte';
 const blogLayoutPath = './src/layouts/blog.svelte';
@@ -14,6 +15,7 @@ const config = {
     dashes: 'oldschool',
   },
   remarkPlugins: [
+    remarkAttribution,
     remarkGithubFlavoredMarkdown,
     remarkAbbr,
   ],
