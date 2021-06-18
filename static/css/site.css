@@ -6,9 +6,17 @@
   --text-content-color: #fff;
   --background-color: #111;
   --heading-color: rgb(250, 250, 116);
-  --link-color: rgb(96, 165, 221);
-  --body-font: "Helvetica Neue",
-  Helvetica,
+  --link-color-normal: rgba(250, 250, 116, .5);
+  --link-color-hover: rgba(250, 250, 116, 1);
+  /* --link-color-hover: rgb(96, 165, 221); */
+  --body-font: -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Oxygen-Sans,
+  Ubuntu,
+  Cantarell,
+  "Helvetica Neue",
   sans-serif;
   --heading-font: monospace;
   --light-border-color: rgba(255, 255, 255, .2);
@@ -26,12 +34,14 @@ body {
 
 a,
 a:visited {
-  color: var(--link-color);
-  text-decoration: 1px dotted underline var(--light-border-color);
+  color: var(--text-content-color);
+  text-decoration: dotted underline;
+  text-decoration-color: var(--link-color-normal);
 }
 
 a:hover {
   text-decoration: underline;
+  text-decoration-color: var(--link-color-hover);
 }
 article h1,
 article h2,
