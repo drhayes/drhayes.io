@@ -18,6 +18,12 @@ const config = {
     files: {
       assets: 'static',
     },
+    prerender: {
+      crawl: true,
+      enabled: true,
+      force: true,
+      pages: ['*'],
+    },
   }
 };
 
