@@ -55,6 +55,12 @@
   :global(article>figure) :global(blockquote+figcaption::before) {
     content: '– ';
   }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 </style>
 
 <script lang="typescript">
@@ -88,8 +94,10 @@
       <SiteMenu />
     </nav>
     <TitleElement title={title} />
-    <ArticleDate created={date} updated={updated} />
-    <TagsList tags={tags} />
+    <section>
+      <ArticleDate created={date} updated={updated} />
+      <TagsList tags={tags} />
+    </section>
   </header>
   <article>
     <slot></slot>

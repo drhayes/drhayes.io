@@ -28,46 +28,12 @@
 
 <script lang="typescript">
   import DefaultLayout from '../../layouts/default.svelte';
-  import ArticleDate from '$lib/components/articleDate.svelte';
-  import TagsList from '$lib/components/tagsList.svelte';
+  import PostList from '$lib/components/postList.svelte';
 
   export let tag;
   export let metadataByTag: Metadata[];
 </script>
 
-<style>
-  ol {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  li {
-    margin-bottom: 2rem;
-  }
-
-  h1 {
-    font-size: 150%;
-  }
-
-  p {
-    margin: 0;
-  }
-</style>
-
 <DefaultLayout title="#{tag}">
-  <ol>
-    {#each metadataByTag as metadata}
-      <li>
-        <h1>
-          <a href={metadata.slug}>{metadata.title}</a>
-        </h1>
-        <ArticleDate created={metadata.date} updated={metadata.updated} />
-        {#if metadata.description}
-          <p class="description">{metadata.description}</p>
-        {/if}
-        <TagsList tags={metadata.tags} />
-      </li>
-    {/each}
-  </ol>
+  <PostList posts={metadataByTag} />
 </DefaultLayout>

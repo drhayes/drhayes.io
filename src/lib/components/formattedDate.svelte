@@ -12,7 +12,9 @@
 
 <style>
   time {
-    opacity: 0.6;
+    display: inline-block;
+    font-family: var(--heading-font);
+    color: var(--subtext-content-color);
   }
 </style>
 

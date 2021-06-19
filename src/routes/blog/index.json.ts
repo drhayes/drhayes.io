@@ -16,7 +16,7 @@ export async function get({ query }) {
   for (const [path, resolver] of Object.entries(modules)) {
     const slug = slugFromPath(path);
     const promise = resolver().then((post) => ({
-      slug,
+      slug: `blog/${slug}`,
       ...post.metadata
     }));
 
