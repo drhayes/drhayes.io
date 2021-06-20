@@ -10,7 +10,6 @@
   li {
     display: flex;
     flex-wrap: wrap;
-    /* margin-bottom: 2rem; */
   }
 
   li > * {
