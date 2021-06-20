@@ -1,17 +1,4 @@
 <style>
-  ul {
-    display: inline;
-    font-family: var(--heading-font);
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    display: inline;
-    margin-right: 1em;
-  }
-
   a, a:visited {
     display: inline-block;
     margin-right: 0.3em;
