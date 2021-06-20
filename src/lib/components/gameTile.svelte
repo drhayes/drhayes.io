@@ -5,9 +5,14 @@
 </script>
 
 <style>
+  a {
+    color: var(--text-content-color);
+    text-shadow: 0 0 10px #000;
+    text-decoration: none;
+  }
+
   section {
     padding: 5rem;
-    margin: 0.5rem;
     background-size: cover;
   }
 
@@ -16,12 +21,6 @@
     padding: 0;
     margin: 0;
     text-align: center;
-  }
-
-  a {
-    color: var(--text-content-color);
-    text-shadow: 0 0 10px #000;
-    text-decoration: none;
   }
 </style>
 
