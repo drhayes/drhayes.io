@@ -5,7 +5,7 @@
 <style>
   h1 {
     position: relative;
-    border-bottom: 3px dotted #ccc;
+    border-bottom: 3px dotted var(--subtext-content-color);
     margin-top: 0;
     margin-bottom: .5em;
     padding-bottom: .2em;
@@ -20,7 +20,7 @@
     width: 100%;
     position: absolute;
     bottom: 3px;
-    border-bottom: 3px dotted #ccc;
+    border-bottom: 3px dotted var(--subtext-content-color);
   }
 </style>
 
