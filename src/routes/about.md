@@ -41,7 +41,6 @@ This site is generated in [SvelteKit].
 * [SvelteKit] generates the site.
 * [GitHub] hosts the code.
 * [Netlify] hosts the site.
-* [Cloudflare] makes it fast.
 
 [site]: https://github.com/drhayes/drhayes.io
 [sublime]: https://www.sublimetext.com/3
@@ -49,7 +48,6 @@ This site is generated in [SvelteKit].
 [markdown]: https://daringfireball.net/projects/markdown/
 [github]: https://github.com/
 [netlify]: https://www.netlify.com/
-[cloudflare]: https://www.cloudflare.com/
 [telegram]: https://t.me/drhayes
 [keybasechat]: https://keybase.io/drhayes/chat
 [vsc]: https://code.visualstudio.com
