@@ -15,7 +15,7 @@
     "@sveltejs/kit": "next",
     "@types/node": "15.12.4",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
-    "@typescript-eslint/parser": "^4.19.0",
+    "@typescript-eslint/parser": "^4.28.0",
     "date-fns": "2.22.1",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.1.0",
