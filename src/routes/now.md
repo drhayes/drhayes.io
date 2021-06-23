@@ -10,6 +10,10 @@ What I'm doing right now.
 
 Playing around with Svelte.
 
+1. did
+2. this
+3. work?
+
 ## Text
 
 Trying to stay in the habit of updating my site on the regular. Not doing great on that front.

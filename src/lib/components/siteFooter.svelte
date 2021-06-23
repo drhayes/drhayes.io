@@ -6,9 +6,8 @@
   }
 
   section {
-    width: var(--content-width);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 5px 0 5px;
+    padding: 0;
   }
 
   .webring {
@@ -19,7 +18,7 @@
 
   .cc {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 2em;
     font-size: 80%;
@@ -27,6 +26,18 @@
 
   .cc > * {
     margin-right: 1rem;
+  }
+
+  @media screen and (min-width: 720px) {
+    section {
+      width: var(--content-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cc {
+      justify-content: space-around;
+    }
   }
 </style>
 

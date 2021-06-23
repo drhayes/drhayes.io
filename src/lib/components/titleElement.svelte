@@ -9,7 +9,7 @@
     margin-top: 0;
     margin-bottom: .5em;
     padding-bottom: .2em;
-    font-size: 200%;
+    font-size: 175%;
     font-weight: bold;
     line-height: 1.4;
   }
@@ -21,6 +21,12 @@
     position: absolute;
     bottom: 3px;
     border-bottom: 3px dotted var(--subtext-content-color);
+  }
+
+  @media screen and (min-width: 720px) {
+    h1 {
+      font-size: 200%;
+    }
   }
 </style>
 

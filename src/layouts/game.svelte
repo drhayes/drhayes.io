@@ -1,21 +1,42 @@
 <style>
   main {
-    width: var(--content-width);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 5px 0 5px;
+    padding: 0;
   }
 
   .site-link {
     display: inline-block;
-    width: 30%;
+    width: 50%;
   }
 
   nav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   header {
     margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 720px) {
+    main {
+      width: var(--content-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    nav {
+      display: block;
+      text-align-last: left;
+      margin-top: 0;
+    }
+
+    .site-link {
+      width: 30%;
+    }
   }
 </style>
 

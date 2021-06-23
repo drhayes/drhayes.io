@@ -11,19 +11,30 @@
 
 <style>
   ol {
-    display: flex;
     margin: 0;
   }
 
   li {
+    margin: 0;
+    margin-bottom: .5rem;
     list-style-type: none;
-    margin-right: 1rem;
+  }
+
+  @media screen and (min-width: 720px) {
+    ol {
+      display: flex;
+    }
+
+    li {
+      margin: 0;
+      margin-right: 1rem;
+    }
   }
 </style>
 
 <ol>
   {#each menuItems as item}
-    <li>
+    <li class:tierTwo="{item.tierTwo}">
       <a href="{item.url}">{item.name}</a>
     </li>
   {/each}

@@ -12,15 +12,25 @@
   }
 
   section {
-    padding: 5rem;
+    padding: 2rem 5rem 2rem 5rem;
     background-size: cover;
   }
 
   h1 {
-    font-size: 200%;
+    font-size: 175%;
     padding: 0;
     margin: 0;
     text-align: center;
+  }
+
+  @media screen and (min-width: 720px) {
+    section {
+      padding: 5rem;
+    }
+
+    h1 {
+      font-size: 200%;
+    }
   }
 </style>
 

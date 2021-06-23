@@ -9,33 +9,51 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60rem;
+    /* width: 100%; */
     max-width: 100%;
     height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .horizontal-center {
     display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
-  .left {
-    width: 30ch;
+  .logo {
+    width: 240px;
+    overflow: hidden;
   }
 
   h1 {
-    font-size: 300%;
+    font-size: 150%;
     font-weight: bold;
     line-height: 1.75;
   }
 
-  h2 {
-    font-size: 150%;
-  }
-
   .site-menu {
     margin-top: 2rem;
+  }
+
+  @media screen and (min-width: 720px) {
+    .vertical-center {
+      width: 60rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .horizontal-center {
+      flex-direction: row;
+      text-align: initial;
+    }
+
+    h1 {
+      font-size: 300%;
+    }
+
+    h2 {
+      font-size: 150%;
+    }
   }
 </style>
 
@@ -45,10 +63,10 @@
 
 <section class="vertical-center">
   <div class="horizontal-center">
-    <div class="left">
+    <div class="logo">
       <RavenLogo />
     </div>
-    <div class="right">
+    <div class="greeting-text">
       <h1>Hi. 👋🏽</h1>
       <h2>My name is David Hayes.</h2>
       <h2><a href="mailto:hi@drhayes.io">hi@drhayes.io</a></h2>

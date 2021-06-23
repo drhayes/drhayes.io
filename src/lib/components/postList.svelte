@@ -12,6 +12,10 @@
     flex-wrap: wrap;
   }
 
+  li::before {
+    content: '';
+  }
+
   li > * {
     margin-bottom: 0.3em;
   }
