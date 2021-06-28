@@ -25,6 +25,7 @@ export async function get({ host }) {
     .map(page => page
       .replace('/src/routes', `https://${host}`)
       .replace('/index.svelte', '')
+      .replace('/index.md', '')
       .replace('.svelte', '')
       .replace('.md', ''));
 
