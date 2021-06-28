@@ -1,18 +1,16 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2021-06-15
+updated: 2021-06-28
 ---
 
 What I'm doing right now.
 
 ## Web stuff
 
-Playing around with Svelte.
-
-1. did
-2. this
-3. work?
+Around the middle of June I started converting this site to use SvelteKit instead of 11ty. It was a
+real pleasure to develop in, rendered quickly, and might be my favorite toolkit now. NextJS comes
+next, I think. Svelte is awesome. React, slightly less so I think. Still working on that one.
 
 ## Text
 
