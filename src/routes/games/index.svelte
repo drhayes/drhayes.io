@@ -27,6 +27,10 @@
     border: 1px dotted var(--light-border-color);
     margin-bottom: 1rem;
   }
+
+  li::before {
+    content: '';
+  }
 </style>
 
 <DefaultLayout title="Games">
