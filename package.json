@@ -28,7 +28,7 @@
     "remark-abbr": "^1.4.1",
     "remark-gfm": "1.0.0",
     "rss": "1.2.2",
-    "svelte": "^3.34.0",
+    "svelte": "^3.38.3",
     "svelte-check": "^2.2.0",
     "svelte-preprocess": "^4.0.0",
     "tslib": "^2.0.0",
