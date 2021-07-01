@@ -15,11 +15,13 @@
 </script>
 
 <style>
-  .pins {
+  ul {
+    margin: 0;
+    padding: 0;
   }
 
-  li {
-    /* margin-bottom: 1em; */
+  li::before {
+    content: '';
   }
 
   .link {
