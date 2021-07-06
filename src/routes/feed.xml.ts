@@ -17,9 +17,12 @@ export async function get({ host }) {
   });
 
   pages.forEach(page => {
+    const pagePath = page.slug
+      .replace('.md', '')
+      .replace('/src/routes/', '/');
     feed.item({
       title: page.title,
-      url: `https://drhayes.io${page.slug}`,
+      url: `https://drhayes.io${pagePath}`,
       date: whichDate(page),
       description: page.description,
       author: 'David Hayes <hi@drhayes.io>',
