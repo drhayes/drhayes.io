@@ -173,6 +173,10 @@ article>pre {
   margin-bottom: 1em;
 }
 
+article iframe {
+  margin-top: 2rem;
+}
+
 blockquote {
   margin-left: 0;
   padding-left: 1em;

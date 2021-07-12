@@ -1,7 +1,7 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2021-06-28
+updated: 2021-07-12
 ---
 
 What I'm doing right now.
@@ -14,8 +14,6 @@ next, I think. Svelte is awesome. React, slightly less so I think. Still working
 
 ## Text
 
-Trying to stay in the habit of updating my site on the regular. Not doing great on that front.
-
 Check out my [Projects][] note.
 
 Working on a tumbley-loggy thing over at [wisps][]. Tags and editorializing work. But I still want
@@ -25,6 +23,10 @@ Doing most of my note work in a private [Roam Research][roam] graph these days. 
 correlate that with my notes site. Maybe my notes site is more of a public writing thing than a
 private research thing? But doesn't that miss the point? Or maybe me developing my writing in public
 is good enough?
+
+## Video Games
+
+Working on [Hyperblaster][]! A super simple space shooter to prove that I can finish a game.
 
 ## Role-playing Games
 
@@ -38,10 +40,7 @@ is good enough?
 now, it's working for me. Been thinking about adding tag pages, also been thinking about adding some
 kind of crude search engine.
 
-Doing lots of interesting (but probably basic) database stuff at work these days.
-
-Thinking about going [NextJS][nextjs] for the personal site. MDX seems just too cool. Or maybe it
-should be Svelte? Argh.
+Messing about in [Svelte][].
 
 ## Music
 
@@ -57,8 +56,8 @@ Lately.
 
 Always.
 
-* [Carpenter Brut][carpenterbrut] - Basically everything
-* [Makeup and Vanity Set][mavs] - Basically everything
+* [Carpenter Brut][carpenterbrut]
+* [Makeup and Vanity Set][mavs]
 * [ACTORS - It Will Come To You][actors]
 * [KANGA - Eternal Daughter and Kanga][kanga] (but, also, basically everything)
 * [Blanck Mass][BlanckMass]
@@ -83,3 +82,5 @@ Occasionally.
 [beamsaber]: https://austin-ramsay.itch.io/beamsaber
 [roam]: https://roamresearch.com
 [nextjs]: https://nextjs.org
+[svelte]: https://svelte.dev
+[hyperblaster]: /games/hyperblaster
