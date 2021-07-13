@@ -21,6 +21,10 @@
     list-style-type: none;
   }
 
+  ol li::before {
+    content: '';
+  }
+
   p {
     margin-bottom: 1em;
   }
