@@ -1,16 +1,14 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2021-07-12
+updated: 2021-07-14
 ---
 
 What I'm doing right now.
 
 ## Web stuff
 
-Around the middle of June I started converting this site to use SvelteKit instead of 11ty. It was a
-real pleasure to develop in, rendered quickly, and might be my favorite toolkit now. NextJS comes
-next, I think. Svelte is awesome. React, slightly less so I think. Still working on that one.
+Site fully converted to SvelteKit. And It Is Good.
 
 ## Text
 
@@ -26,7 +24,8 @@ is good enough?
 
 ## Video Games
 
-Working on [Hyperblaster][]! A super simple space shooter to prove that I can finish a game.
+Working on [Hyperblaster][]! A super simple space shooter to prove that I can finish a game. My son
+is doing the art. I'm also using it as a test tube for interesting CI experiments.
 
 ## Role-playing Games
 
@@ -68,6 +67,10 @@ Occasionally.
 * Holy Fuck
 * Perturbator
 
+## What's this again?
+
+This is a [Now][nowpage] page. You should have one too.
+
 [projects]: https://notes.drhayes.io/notes/projects
 [Masks]: https://www.magpiegames.com/masks/
 [magpie]: https://www.magpiegames.com/
@@ -84,3 +87,4 @@ Occasionally.
 [nextjs]: https://nextjs.org
 [svelte]: https://svelte.dev
 [hyperblaster]: /games/hyperblaster
+[nowpage]: https://nownownow.com/about
