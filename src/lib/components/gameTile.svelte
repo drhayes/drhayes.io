@@ -1,11 +1,11 @@
 <script lang="typescript">
-  import userPreferences from '$stores/userPreferences';
+  import prefersDark from '$stores/prefersDark';
 
   export let title;
   export let screenshotUrl;
   export let slug;
 
-  $: headingColor = $userPreferences.isDarkMode ? 'var(--heading-color)' : 'white';
+  $: headingColor = $prefersDark ? 'var(--heading-color)' : 'white';
 </script>
 
 <style>
