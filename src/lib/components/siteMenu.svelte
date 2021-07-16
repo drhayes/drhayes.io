@@ -1,4 +1,5 @@
 <script>
+  import DarkModeToggle from '$lib/components/darkModeToggle.svelte';
   const menuItems = [
     { "name": "Now", "url": "/now" },
     { "name": "Lately", "url": "/lately" },
@@ -39,3 +40,5 @@
     </li>
   {/each}
 </ol>
+
+<DarkModeToggle />

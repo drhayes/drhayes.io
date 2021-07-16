@@ -2,6 +2,7 @@ import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
 import mdsvexConfig from './mdsvex.config.js';
 import netlify from '@sveltejs/adapter-netlify';
+import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -23,6 +24,13 @@ const config = {
       enabled: true,
       force: true,
       pages: ['*'],
+    },
+    vite: {
+      resolve: {
+        alias: {
+          $stores: path.resolve('./src/stores'),
+        },
+      },
     },
   }
 };

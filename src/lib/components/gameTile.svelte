@@ -1,7 +1,11 @@
 <script lang="typescript">
+  import userPreferences from '$stores/userPreferences';
+
   export let title;
   export let screenshotUrl;
   export let slug;
+
+  $: headingColor = $userPreferences.isDarkMode ? 'var(--heading-color)' : 'white';
 </script>
 
 <style>
@@ -21,6 +25,7 @@
     padding: 0;
     margin: 0;
     text-align: center;
+    text-shadow: 0 0 5px rgba(255, 255, 255, .6);
   }
 
   @media screen and (min-width: 720px) {
@@ -36,6 +41,6 @@
 
 <a href="/games/{slug}">
   <section style="background-image: url({screenshotUrl})">
-    <h1>{title}</h1>
+    <h1 style="color: {headingColor}">{title}</h1>
   </section>
 </a>
