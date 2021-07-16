@@ -1,4 +1,5 @@
 <script>
+  import ThemeCssVars from '$lib/components/themeCssVars.svelte';
   import RavenLogo from '$lib/components/ravenLogo.svelte';
   import SiteMenu from '$lib/components/siteMenu.svelte';
 </script>
@@ -61,6 +62,7 @@
   <title>Hi there! - drhayes.io</title>
 </svelte:head>
 
+<ThemeCssVars />
 <section class="vertical-center">
   <div class="horizontal-center">
     <div class="logo">
