@@ -32,7 +32,9 @@
     display: flex;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 1rem;
     list-style-type: none;
+    opacity: 0.6;
   }
 
   .tag {
