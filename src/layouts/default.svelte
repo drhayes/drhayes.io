@@ -41,6 +41,7 @@
 </style>
 
 <script lang="typescript">
+  import ThemeCssVars from '$lib/components/themeCssVars.svelte';
   import RavenLogo from '$lib/components/ravenLogo.svelte';
   import SiteMenu from '$lib/components/siteMenu.svelte';
   import TitleElement from '$lib/components/titleElement.svelte';
@@ -58,6 +59,7 @@
   <meta name="description" content="{description}">
 </svelte:head>
 
+<ThemeCssVars />
 <main>
   <header>
     <nav>

@@ -3,13 +3,6 @@
 
 :root {
   --content-width: 65ch;
-  --text-content-color: rgba(255, 255, 255, 1);
-  --subtext-content-color: rgba(255, 255, 255, 0.6);
-  --background-color: #111;
-  --heading-color: rgb(250, 250, 116);
-  --link-color-normal: rgba(250, 250, 116, 1);
-  --link-color-hover: rgba(250, 250, 116, 1);
-  /* --link-color-hover: rgb(96, 165, 221); it's steelblue-ish */
   --body-font: -apple-system,
   BlinkMacSystemFont,
   "Segoe UI",
@@ -20,12 +13,41 @@
   "Helvetica Neue",
   sans-serif;
   --heading-font: monospace;
+}
+
+html.dark {
+  --text-content-color: rgb(255, 255, 255);
+  --text-contrast-color: rgb(0, 0, 0);
+  --subtext-content-color: rgba(255, 255, 255, 0.6);
+  --background-color: #111;
+  --heading-color: rgb(250, 250, 116);
+  --link-color-normal: rgba(250, 250, 116, 1);
+  --link-color-hover: rgba(250, 250, 116, 1);
   --light-border-color: rgba(255, 255, 255, .2);
   --blockquote-border-color: #4682b4b8;
-  --blockquote-backgroud-color: #223;
+  --blockquote-background-color: #223;
+}
+
+html.light {
+  --text-content-color: rgb(16, 16, 16);
+  --text-contrast-color: rgb(255, 255, 255);
+  --subtext-content-color: rgba(0, 0, 0, 0.8);
+  --background-color: rgb(255, 255, 255);
+  --heading-color: rgb(132, 0, 0);
+  --link-color-normal: rgba(96, 165, 221, 1);
+  --link-color-hover: rgba(96, 165, 221, 1);
+  --light-border-color: rgba(255, 255, 255, .2);
+  --blockquote-border-color: #4682b4b8;
+  --blockquote-background-color: #f9f9ff;
+}
+
+::selection {
+  color: var(--text-contrast-color);
+  background-color: var(--heading-color);
 }
 
 body {
+  visibility: var(--styles-loaded);
   font-family: var(--body-font);
   font-size: 18px;
   line-height: 1.25;
@@ -180,7 +202,7 @@ article iframe {
 blockquote {
   margin-left: 0;
   padding-left: 1em;
-  background-color: var(--blockquote-backgroud-color);
+  background-color: var(--blockquote-background-color);
   font-size: 120%;
   line-height: 1.6;
   font-style: italic;

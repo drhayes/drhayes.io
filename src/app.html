@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +20,16 @@
   %svelte.head%
 </head>
 <body>
+  <script>
+    const storageVal = localStorage.getItem('prefersDark');
+    const osPref = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDark = typeof storageVal === 'string' ? (storageVal === 'true') : osPref;
+    const classList = document.querySelector('html').classList;
+    if (prefersDark) {
+      classList.remove('light');
+      classList.add('dark');
+    }
+  </script>
   %svelte.body%
 </body>
 </html>

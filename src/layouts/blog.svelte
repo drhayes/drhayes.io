@@ -44,8 +44,9 @@
     float: none;
   }
 
-  :global(article>figure) :global(blockquote+figcaption) {
-    background-color: var(--blockquote-backgroud-color);
+  :global(figure) :global(blockquote+figcaption) {
+    padding: 1rem;
+    background-color: var(--blockquote-background-color);
     font-size: 120%;
     font-style: italic;
     border-style: none;
@@ -55,7 +56,7 @@
     text-align: right;
   }
 
-  :global(article>figure) :global(blockquote+figcaption::before) {
+  :global(figure) :global(blockquote+figcaption::before) {
     content: '– ';
   }
 
@@ -85,6 +86,7 @@
 </style>
 
 <script lang="typescript">
+  import ThemeCssVars from '$lib/components/themeCssVars.svelte';
   import RavenLogo from '$lib/components/ravenLogo.svelte';
   import SiteMenu from '$lib/components/siteMenu.svelte';
   import TitleElement from '$lib/components/titleElement.svelte';
@@ -106,6 +108,7 @@
   {/if}
 </svelte:head>
 
+<ThemeCssVars />
 <main>
   <header>
     <nav>

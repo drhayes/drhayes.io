@@ -1,4 +1,5 @@
 <script>
+  import DarkModeToggle from '$lib/components/darkModeToggle.svelte';
   const menuItems = [
     { "name": "Now", "url": "/now" },
     { "name": "Lately", "url": "/lately" },
@@ -29,13 +30,25 @@
       margin: 0;
       margin-right: 1rem;
     }
+
+    .theme-toggle {
+      display: flex;
+      flex: 2;
+      flex-direction: row;
+      justify-content: flex-end;
+      opacity: 0.6;
+    }
+
   }
 </style>
 
 <ol>
   {#each menuItems as item}
-    <li class:tierTwo="{item.tierTwo}">
+    <li>
       <a href="{item.url}">{item.name}</a>
     </li>
   {/each}
+  <li class="theme-toggle">
+    <DarkModeToggle />
+  </li>
 </ol>
