@@ -55,17 +55,17 @@ body {
   color: var(--text-content-color);
   padding: 0;
   margin: 0;
+}
+
+@media screen and (min-width: 720px) {
+  :root {
+    --link-color-normal: rgba(250, 250, 116, .5);
   }
 
-  @media screen and (min-width: 720px) {
-    :root {
-      --link-color-normal: rgba(250, 250, 116, .5);
-    }
-
-    body {
-      font-size: 18px;
-      line-height: 1.5;
-    }
+  body {
+    font-size: 18px;
+    line-height: 1.5;
+  }
 }
 
 a,
@@ -79,6 +79,11 @@ a:hover {
   text-decoration: underline;
   text-decoration-color: var(--link-color-hover);
 }
+
+p {
+  text-align: justify;
+}
+
 article h1,
 article h2,
 article h3,
@@ -89,12 +94,12 @@ article h5 {
   position: relative;
   margin-top: 1rem;
   color: var(--heading-color);
-  }
+}
 
-  h1 {
-    font-family: var(--heading-font);
-    font-weight: bold;
-    color: var(--heading-color);
+h1 {
+  font-family: var(--heading-font);
+  font-weight: bold;
+  color: var(--heading-color);
 }
 
 @media screen and (min-width: 720px) {
@@ -155,15 +160,13 @@ article ol {
   margin-left: 1em;
   list-style-type: none;
   counter-reset: li;
-  }
-
-  article ul li,
-  article ol li {
-    margin-bottom: 0.5rem;
 }
 
-article>ul,
-article>ol {
+article ul li, article ol li {
+  margin-bottom: 0.5rem;
+}
+
+article>ul, article>ol {
   margin-top: 1em;
 }
 
@@ -190,7 +193,7 @@ article ol li::before {
   color: var(--heading-color);
 }
 
-article>pre {
+article > pre {
   margin-top: 1em;
   margin-bottom: 1em;
 }
