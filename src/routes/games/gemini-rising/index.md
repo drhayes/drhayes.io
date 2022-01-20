@@ -8,7 +8,7 @@ toc: true
 screenshot: /img/gr-screenshot-2018-09-12.png
 description: A Metroidvania about crafting and sneaking written in Löve.
 date: 2020-08-01
-updated: 2021-06-18
+updated: 2022-01-20
 ---
 
 <script lang="typescript">
@@ -19,7 +19,7 @@ updated: 2021-06-18
 Sentry undetected." alt="2d pixel art of a blue figure standing on a metal platform while a small
 red robot flies underneath, scanning for intruders." />
 
-Gemini Rising is a Metroidvania with crafting elements and procedural generation that I'm working on. It is out now for pre-alpha testing!
+Gemini Rising is a puzzle platformer about angry robots and hacking that I'm working on. It is out now for pre-alpha testing!
 
 My goal is to make the entire game by myself: programming, graphics, sound, and music.
 
@@ -32,6 +32,8 @@ You can grab the game on itch.io:
 ## Video Dev Log
 
 Here's a list of videos I've made of the game's progress so far. My game was codenamed "Basement" before I came up with its current title.
+
+I've also recently taken a hard right turn regarding the scope of the game. More on that soon.
 
 <iframe title="Gemini Rising playlist on youtube.com" style="position:static;width:100%;height:600px" src="https://www.youtube.com/embed/videoseries?list=PLQuDSztE3xlPBszv48dtN3TFsKUP9s_mO" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -1,6 +1,7 @@
 ---
 title: Technology
 date: 2018-09-13
+updated: 2022-01-20
 aliases:
   - /games/gemini-rising/articles/technology
 ---
@@ -13,28 +14,26 @@ I always want to know what tools were used to make the games that I play, so I t
 
 * [Löve][love2d]
 * Multiple Lua libraries:
-  * [lume][]
-  * [classic][]
-  * [bump][]
-  * [flux][]
-  * [hump][]
   * [anim8][]
-  * [lua-state-machine][]
-  * [cargo]
-  * [Concord][]
-  * [TESound][]
   * [baton][]
-* [Sublime Text 3][sublime]
-* [Visual Studio Code][vsc]
-* [vim][]
+  * [batteries][]
+  * [classic][]
+  * [flux][]
+  * [lily][]
+  * [lume][]
+  * [ripple][]
+  * [serpent][]
+  * [squeak][]
+* [Neovim][]
 * [Aseprite][]
 * [cfxr][]
 * [Ocean Audio][ocean]
 * [Renoise][]
 * [Massive][]
 * [chipspeech][]
-* [Tiled][]
-
+* [LDtk][]
+* [GitHub Actions][ghactions]
+* [Butler][]
 
 ## The Reasoning
 
@@ -52,18 +51,9 @@ My toolchain consists of Git, a `Makefile`, and the outputs of lots of those pro
 [love2d]: https://love2d.org
 [lume]: https://github.com/rxi/lume
 [classic]: https://github.com/rxi/classic
-[bump]: https://github.com/kikito/bump.lua
 [flux]: https://github.com/rxi/flux
-[hump]: https://hump.readthedocs.io/en/latest/
 [anim8]: https://github.com/kikito/anim8
-[lua-state-machine]: https://github.com/kyleconroy/lua-state-machine
-[cargo]: https://github.com/bjornbytes/cargo
-[Concord]: https://github.com/Tjakka5/Concord
-[tesound]: https://love2d.org/wiki/TEsound
 [baton]: https://github.com/tesselode/baton
-[sublime]: https://www.sublimetext.com/3
-[vsc]: https://code.visualstudio.com/
-[vim]: https://www.vim.org/
 [aseprite]: https://www.aseprite.org/
 [cfxr]: https://github.com/nevyn/cfxr
 [ocean]: https://www.ocenaudio.com/en/whatis
@@ -71,4 +61,13 @@ My toolchain consists of Git, a `Makefile`, and the outputs of lots of those pro
 [massive]: https://www.native-instruments.com/en/products/komplete/synths/massive/
 [chipspeech]: https://www.plogue.com/products/chipspeech.html
 [tiled]: https://www.mapeditor.org/
+[LDtk]: https://ldtk.io
 [ecs]: https://en.wikipedia.org/wiki/Entity%E2%80%93component%E2%80%93system
+[batteries]: https://github.com/1bardesign/batteries
+[lily]: https://github.com/MikuAuahDark/lily
+[ripple]: https://github.com/tesselode/ripple
+[serpent]: https://github.com/pkulchenko/serpent
+[squeak]: https://github.com/drhayes/squeak.lua
+[Neovim]: https://neovim.io
+[ghactions]: https://github.com/features/actions
+[Butler]: https://itch.io/docs/butler/
