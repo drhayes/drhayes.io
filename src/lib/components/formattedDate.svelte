@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import { format, parse } from 'date-fns';
   export let dateString;
   // The date strings come back in GMT, which is not where I'm writing any of this of course. So strike off the

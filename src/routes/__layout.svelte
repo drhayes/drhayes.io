@@ -1,4 +1,4 @@
-<script context="module" lang="typescript">
+<script context="module" lang="ts">
   export async function load({ page: { host, path } }) {
     return {
       props: {
@@ -9,7 +9,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   export let host;
   export let path;
 </script>

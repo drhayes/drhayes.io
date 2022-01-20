@@ -10,7 +10,7 @@ description: A simple space-shooter.
 date: 2021-07-12
 ---
 
-<script lang="typescript">
+<script lang="ts">
   import GameScreenshot from '$lib/components/gameScreenshot.svelte';
 </script>
 
@@ -26,4 +26,4 @@ fight, everything.
 The continuous integration process is up and running, which is why you can download alpha builds
 from Itch, once there are any.
 
-<iframe frameborder="0" src="https://itch.io/embed/1118450?dark=true" width="552" height="167"><a href="https://drhayes.itch.io/hyperblaster">Hyperblaster by drhayes</a></iframe>
+<iframe title="Hyperblaster on Itch" frameborder="0" src="https://itch.io/embed/1118450?dark=true" width="552" height="167"><a href="https://drhayes.itch.io/hyperblaster">Hyperblaster by drhayes</a></iframe>

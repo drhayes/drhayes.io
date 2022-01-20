@@ -20,7 +20,7 @@
   }
 </style>
 
-<script lang="typescript">
+<script lang="ts">
   export let tags;
 </script>
 

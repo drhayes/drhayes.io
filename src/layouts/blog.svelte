@@ -85,7 +85,7 @@
   }
 </style>
 
-<script lang="typescript">
+<script lang="ts">
   import ThemeCssVars from '$lib/components/themeCssVars.svelte';
   import RavenLogo from '$lib/components/ravenLogo.svelte';
   import SiteMenu from '$lib/components/siteMenu.svelte';

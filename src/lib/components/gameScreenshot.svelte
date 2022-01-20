@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   export let imageUrl;
   export let caption;
   export let alt;

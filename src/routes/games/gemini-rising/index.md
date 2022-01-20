@@ -11,7 +11,7 @@ date: 2020-08-01
 updated: 2022-01-20
 ---
 
-<script lang="typescript">
+<script lang="ts">
   import GameScreenshot from '$lib/components/gameScreenshot.svelte';
 </script>
 

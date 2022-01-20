@@ -31,7 +31,7 @@
   }
 </style>
 
-<script lang="typescript">
+<script lang="ts">
   import FormattedDate from '$lib/components/formattedDate.svelte';
   export let posts;
 </script>

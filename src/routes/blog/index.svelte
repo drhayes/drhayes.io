@@ -1,4 +1,4 @@
-<script context="module" lang="typescript">
+<script context="module" lang="ts">
   export async function load({ fetch }) {
     const posts = await fetch('/blog.json').then(res => res.json());
 
@@ -10,7 +10,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   import DefaultLayout from '../../layouts/default.svelte';
   import PostList from '$lib/components/postList.svelte';
   export let posts;

@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import FormattedDate from './formattedDate.svelte';
   export let created;
   export let updated;

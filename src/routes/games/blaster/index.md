@@ -9,7 +9,7 @@ date: 2015-09-26
 updated: 2019-01-01
 ---
 
-<script lang="typescript">
+<script lang="ts">
   import GameScreenshot from '$lib/components/gameScreenshot.svelte';
 </script>
 

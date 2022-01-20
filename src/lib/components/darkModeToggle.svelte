@@ -7,7 +7,7 @@
   }
 </style>
 
-<script lang="typescript">
+<script lang="ts">
   import SunIcon from './icons/sun.svelte';
   import MoonIcon from './icons/moon.svelte';
   import prefersDark from '$stores/prefersDark';

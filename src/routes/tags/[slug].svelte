@@ -1,11 +1,11 @@
 
-<script context="module" lang="typescript">
-  import type { Metadata } from '$lib/metadataUtil';
+<script context="module" lang="ts">
+  import { Metadata } from '$lib/metadataUtil';
   import allPages from '$lib/allPages';
 
   export async function load({ page: { params } }) {
     const metadata = await allPages();
-    const { slug: tag } = params as Metadata;
+    const { slug: tag } = params;
     const metadataByTag = metadata
       .filter(metadata => metadata.tags?.includes(tag))
       .map(metadata => {
@@ -26,7 +26,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   import DefaultLayout from '../../layouts/default.svelte';
   import PostList from '$lib/components/postList.svelte';
 

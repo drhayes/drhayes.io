@@ -1,4 +1,4 @@
-<script context="module" lang="typescript">
+<script context="module" lang="ts">
   export async function load({ fetch }) {
     const tags = await fetch('/tags.json').then(res => res.json());
     return {
@@ -9,7 +9,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   import DefaultLayout from '../../layouts/default.svelte';
   export let tags;
 </script>
