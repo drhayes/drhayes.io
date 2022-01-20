@@ -5,9 +5,6 @@
 [build.environment]
   AWS_LAMBDA_JS_RUNTIME = "nodejs14.x"
 
-[functions]
-  node_bundler = "esbuild"
-
 [[headers]]
   for = "/*"
   [headers.values]
