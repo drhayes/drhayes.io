@@ -22,8 +22,8 @@ const config = {
     prerender: {
       crawl: true,
       enabled: true,
-      force: true,
-      pages: ['*'],
+      entries: ['*'],
+      onError: 'continue',
     },
     vite: {
       resolve: {
