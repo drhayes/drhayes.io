@@ -5,19 +5,19 @@ tags:
   - projects
   - löve
 toc: true
-screenshot: /img/gr-screenshot-2018-09-12.png
-description: A Metroidvania about crafting and sneaking written in Löve.
+screenshot: /img/gr-screenshot-2022-01-18.png
+description: A puzzle platformer about hacking angry robots.
 date: 2020-08-01
-updated: 2022-01-20
+updated: 2022-01-22
 ---
 
 <script lang="ts">
   import GameScreenshot from '$lib/components/gameScreenshot.svelte';
 </script>
 
-<GameScreenshot imageUrl={screenshot} caption="The player trying to figure out how to sneak by the
-Sentry undetected." alt="2d pixel art of a blue figure standing on a metal platform while a small
-red robot flies underneath, scanning for intruders." />
+<GameScreenshot imageUrl={screenshot}
+  caption="The player contemplating whether or not to move to the next room, away from the checkpoint."
+  alt="2d pixel art of a small white robot in a dark, blue underground space with metal platforms." />
 
 Gemini Rising is a puzzle platformer about angry robots and hacking that I'm working on. It is out now for pre-alpha testing!
 

@@ -3,7 +3,7 @@
   import { Metadata } from '$lib/metadataUtil';
   import allPages from '$lib/allPages';
 
-  export async function load({ page: { params } }) {
+  export async function load({ params }) {
     const metadata = await allPages();
     const { slug: tag } = params;
     const metadataByTag = metadata

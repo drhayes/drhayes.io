@@ -1,23 +1,22 @@
 <script context="module" lang="ts">
-  export async function load({ page: { host, path } }) {
+  export async function load({ url: { hostname, pathname }, }) {
     return {
       props: {
-        host,
-        path,
+        hostname,
+        pathname,
       }
     };
   }
 </script>
 
 <script lang="ts">
-  export let host;
-  export let path;
+  export let hostname: string;
+  export let pathname: string;
 </script>
 
 <svelte:head>
-  <link rel="alternate" type="application/rss+xml" href="https://{host}/feed.xml">
-  <link rel="canonical" href="https://{host}{path}">
-  <base href="///{host}/">
+  <link rel="alternate" type="application/rss+xml" href="https://{hostname}/feed.xml">
+  <link rel="canonical" href="https://{hostname}{pathname}">
 </svelte:head>
 
 <slot></slot>
