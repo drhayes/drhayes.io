@@ -73,3 +73,4 @@ This is a [Now][nowpage] page. You should have one too.
 [svelte]: https://svelte.dev
 [hyperblaster]: /games/hyperblaster
 [nowpage]: https://nownownow.com/about
+[gr]: https://drhayes.io/games/gemini-rising
