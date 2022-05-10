@@ -1,7 +1,7 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2022-01-20
+updated: 2022-05-10
 ---
 
 What I'm doing right now.
@@ -10,21 +10,22 @@ What I'm doing right now.
 
 Check out my [Projects][] note.
 
-All of my note-taking these days is in [Tiddlywiki](https://tiddlywiki.com) which has been amazingly flexible in accomodating whatever workflow I throw at it. It's such an interesting development environment! Each note could potentially become a part of the UI or some behavior used in other notes! The Composition aspects appeal to me. Definitely a convivial tool.
+Still doing lots of note work in [Tiddlywiki](https://tiddlywiki.com). Trying to figure out if there's anything in there I want to export (there is!) and how to do it safely. I've been doing a daily journal practice in there with some intensely personal stuff that I don't want to leak to the Internet at large. Definitely taking some cues from [Soren's zettelkasten](https://zettelkasten.sorenbjornstad.com) on this one.
+
 
 ## Video Games
 
 Back to working on [Gemini Rising][gr]. I restarted the project after a year-long hiatus and some scope slashing.
 
+I recently took another small break to do a [game jam](https://itch.io/jam/love2d-jam-2022). I came in 17th! [Here's the page for Aftershock, my game jam game.](https://drhayes.itch.io/aftershock)
+
 ## Role-playing Games
 
-* Playing in a [Masks][] campaign with Internet strangers! A curated [Magpie][] game turned campaign. It's going great! Talk to me about the between-game vignettes.
+* The [Masks][] campaign has wrapped up season one with a big blast finale. We're starting a new campaign using the [City of Mist](https://cityofmist.co) system, which I adore.
 
 ## Programming
 
-[Work continues on the digital garden][drhayesdigitalgarden]. I've left the code alone for a while
-now, it's working for me. Been thinking about adding tag pages, also been thinking about adding some
-kind of crude search engine.
+My derpy chat bot has been getting some love. I'm considering simplifying my personal site even more, getting rid of the Svelte underpinnings and going more native HTML and JS with some Markdown translators.
 
 ## Music
 
