@@ -28,7 +28,7 @@
     "rehype-slug": "^4.0.1",
     "remark": "14.0.2",
     "remark-abbr": "^1.4.1",
-    "remark-gfm": "1.0.0",
+    "remark-gfm": "3.0.1",
     "rss": "1.2.2",
     "svelte": "^3.38.3",
     "svelte-check": "^2.2.3",
