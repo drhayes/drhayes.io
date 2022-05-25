@@ -3,7 +3,7 @@
 
 :root {
   --content-width: 65ch;
-  --body-font: "Lucida Console", Monaco, monospace;
+  --body-font: "Inconsolata", "Lucida Console", Monaco, monospace;
   --heading-font: monospace;
 }
 
