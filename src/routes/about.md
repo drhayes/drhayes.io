@@ -22,7 +22,7 @@ In particular, you can email me at <hi@drhayes.io> or [chat me at my Keybase cha
 
 Here are some likely haunts:
 
-* <MeLink href="https://wizard.estate/drhayes">drhayes@wizard.estate</MeLink>
+* <MeLink href="https://wizard.estate/@drhayes">drhayes@wizard.estate</MeLink>
 * <MeLink href="https://github.com/drhayes">github.com/drhayes</MeLink>
 * <MeLink href="https://keybase.io/drhayes">Keybase</MeLink>
 * <MeLink href="https://drhayes.tumblr.com">Tumblr</MeLink>

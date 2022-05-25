@@ -3,15 +3,7 @@
 
 :root {
   --content-width: 65ch;
-  --body-font: -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  Roboto,
-  Oxygen-Sans,
-  Ubuntu,
-  Cantarell,
-  "Helvetica Neue",
-  sans-serif;
+  --body-font: "Lucida Console", Monaco, monospace;
   --heading-font: monospace;
 }
 
@@ -49,8 +41,8 @@ html.light {
 body {
   visibility: var(--styles-loaded);
   font-family: var(--body-font);
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: 16px;
+  line-height: 1.75;
   background-color: var(--background-color);
   color: var(--text-content-color);
   padding: 0;
@@ -63,8 +55,8 @@ body {
   }
 
   body {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16;
+    line-height: 1.75;
   }
 }
 
