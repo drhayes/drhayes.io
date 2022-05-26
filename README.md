@@ -1,5 +1,8 @@
 # drhayes.io
 
-My personal webiste, built using [SvelteKit].
+My personal website.
 
-[sveltekit]: https://kit.svelte.dev
+Run `npm start` to develop locally.
+
+Run `npm run build` to build for production.
+
