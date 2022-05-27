@@ -22,6 +22,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('debugPrint', require('./lib/filters/debugPrint'));
   // eleventyConfig.addNunjucksAsyncFilter('lessify', require('./lib/filters/lessify'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
+  eleventyConfig.addNunjucksShortcode('meLink', require('./lib/shortcodes/meLink'));
 
   // Collections.
   eleventyConfig.addCollection('drafts', require('./lib/collections/drafts'));
@@ -34,6 +35,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('./src/key.txt');
   eleventyConfig.addPassthroughCopy('./src/keybase.txt');
   eleventyConfig.addPassthroughCopy('./src/twtxt.txt');
+  eleventyConfig.addPassthroughCopy('./css/**/*');
 
   return {
     dir: {

@@ -1,6 +1,5 @@
 [
   { "name": "Now", "url": "/now" },
-  { "name": "Lately", "url": "/lately" },
   { "name": "Notes", "url": "https://notes.drhayes.io" },
   { "name": "Blog", "url": "/blog" },
   { "name": "Games", "url": "/games" },

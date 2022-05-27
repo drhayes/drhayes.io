@@ -6,13 +6,11 @@
 {% include "header.njk" %}
 <main class="">
 
-  <header class="my-4">
-    {% include "title-element.njk" %}
-  </header>
+  {% include "title-element.njk" %}
 
-  <section class="article-content">
+  <article class="article-content">
     {{ content | safe }}
-  </section>
+  </article>
 
 </main>
 {% include "footer.njk" %}

@@ -2,22 +2,25 @@
 @import url('./prism-dracula.css');
 
 :root {
-  --content-width: 65ch;
-  --body-font: "Inconsolata", "Lucida Console", Monaco, monospace;
+  --body-font: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
   --heading-font: monospace;
 }
 
+
+/* These are Nord colors: https://www.nordtheme.com/docs/colors-and-palettes */
 html.dark {
-  --text-content-color: rgb(255, 255, 255);
-  --text-contrast-color: rgb(0, 0, 0);
-  --subtext-content-color: rgba(255, 255, 255, 0.6);
-  --background-color: #111;
-  --heading-color: rgb(250, 250, 116);
-  --link-color-normal: rgba(250, 250, 116, 1);
-  --link-color-hover: rgba(250, 250, 116, 1);
-  --light-border-color: rgba(255, 255, 255, .2);
+  --text-content-color: #eceff4;
+  --text-contrast-color: #4c566a;
+  --subtext-content-color: #5e81ac;
+  --background-color: #2e3440;
+  --background-support-color: #3b4252;
+  --heading-color: #81a1c1;
+  --heading-support-color: #4c566a;
+  --link-color-normal: #8fbcbb;
+  --link-color-hover: #88c0d0;
+  --light-border-color: #434c5e;
   --blockquote-border-color: #4682b4b8;
-  --blockquote-background-color: #223;
+  --blockquote-background-color: #3b4252;
 }
 
 html.light {
@@ -41,23 +44,12 @@ html.light {
 body {
   visibility: var(--styles-loaded);
   font-family: var(--body-font);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.75;
   background-color: var(--background-color);
   color: var(--text-content-color);
   padding: 0;
   margin: 0;
-}
-
-@media screen and (min-width: 720px) {
-  :root {
-    --link-color-normal: rgba(250, 250, 116, .5);
-  }
-
-  body {
-    font-size: 16px;
-    line-height: 1.75;
-  }
 }
 
 a,
@@ -76,15 +68,21 @@ p {
   text-align: justify;
 }
 
+article {
+  max-width: min(680px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 article h1,
 article h2,
 article h3,
 article h4,
 article h5 {
-  font-family: var(--heading-font);
-  font-weight: bold;
   position: relative;
   margin-top: 1rem;
+  font-family: var(--heading-font);
+  font-weight: bold;
   color: var(--heading-color);
 }
 
@@ -108,8 +106,8 @@ h1 {
   article h3:before,
   article h4:before {
     position: absolute;
+    color: var(--heading-support-color);
     font-size: 100%;
-    opacity: .5;
     right: 101%;
   }
 
@@ -220,3 +218,44 @@ hr:after {
   text-align: center;
   opacity: .5;
 }
+
+nav {
+  /* display: flex; */
+  background-color: var(--background-support-color);
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+nav .menu {
+  display: flex;
+  max-width: min(680px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav .menu li {
+  margin-right: 1em;
+}
+
+nav .menu li .home-link {
+  margin-right: 3em;
+  font-weight: bold;
+}
+
+header h1 {
+  max-width: min(680px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 200%;
+}
+
+header .times {
+  max-width: min(680px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--subtext-content-color);
+}
+
