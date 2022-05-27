@@ -3,12 +3,15 @@
   "version": "0.0.42",
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve --port 8081"
   },
-  "type": "module",
   "dependencies": {
     "@11ty/eleventy": "1.0.1",
     "@11ty/eleventy-plugin-rss": "1.1.2",
-    "date-fns": "2.28.0"
+    "date-fns": "2.28.0",
+    "eleventy-plugin-reading-time": "0.0.1",
+    "highlight.js": "11.5.1",
+    "markdown-it": "13.0.1",
+    "markdown-it-emoji": "2.0.2"
   }
 }
