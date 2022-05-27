@@ -1,0 +1,19 @@
+{% extends "./base.njk" %}
+
+{% block title %}{{ title | titleify }}{% endblock %}
+
+{% block content %}
+{% include "header.njk" %}
+<main class="">
+
+  <header class="my-4">
+    {% include "title-element.njk" %}
+  </header>
+
+  <section class="article-content">
+    {{ content | safe }}
+  </section>
+
+</main>
+{% include "footer.njk" %}
+{% endblock %}

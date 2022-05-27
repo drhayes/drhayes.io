@@ -3,11 +3,8 @@ title: Hi. I'm David. 👋🏽
 description: What I'm all about, yo.
 date: 2020-01-01
 updated: 2021-06-15
+layout: default.njk
 ---
-
-<script>
-  import MeLink from '$lib/components/meLink.svelte';
-</script>
 
 I do stuff with computers. I live in Austin, TX.
 
@@ -31,24 +28,20 @@ Here are some likely haunts:
 
 ## Colophon
 
-This site is generated in [SvelteKit].
+This site is generated in [Eleventy].
 
 * [Here is the site's git repository.][site]
-* [Sublime Text 3][sublime] is where the typing happens.
-* [vim] is where yet more typing happens.
-* [Visual Studio Code][vsc] is where *yet more* typing happens.
+* [neovim] is where the typing happens.
 * [Markdown] has the content.
-* [SvelteKit] generates the site.
 * [GitHub] hosts the code.
 * [Netlify] hosts the site.
 
 [site]: https://github.com/drhayes/drhayes.io
-[sublime]: https://www.sublimetext.com/3
 [vim]: https://www.vim.org/
 [markdown]: https://daringfireball.net/projects/markdown/
 [github]: https://github.com/
 [netlify]: https://www.netlify.com/
 [telegram]: https://t.me/drhayes
 [keybasechat]: https://keybase.io/drhayes/chat
-[vsc]: https://code.visualstudio.com
-[sveltekit]: https://kit.svelte.dev
+[eleventy]: https://www.11ty.dev/
+[neovim]: https://neovim.io/

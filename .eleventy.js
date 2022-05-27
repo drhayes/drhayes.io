@@ -29,6 +29,7 @@ module.exports = (eleventyConfig) => {
 
   // Static stuff.
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');
+  eleventyConfig.addPassthroughCopy('./src/favicon.png');
   eleventyConfig.addPassthroughCopy('./src/img');
   eleventyConfig.addPassthroughCopy('./src/key.txt');
   eleventyConfig.addPassthroughCopy('./src/keybase.txt');
