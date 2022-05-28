@@ -1,9 +1,11 @@
 <header>
 <h1>{{ title }}</h1>
 <div class="times">
-  <time datetime="{{ date | dateFormat(true) }}">{{ date | dateFormat }}</time>
+  {% if date %}
+    <time datetime="{{ date | dateFormat(true) }}">{{ date | dateFormat }}</time>
+  {% endif %}
   {% if updated %}
-  <time datetime="{{ updated | dateFormat(true) }}">(Updated: {{ updated | dateFormat }})</time>
+    <time datetime="{{ updated | dateFormat(true) }}">(Updated: {{ updated | dateFormat }})</time>
   {% endif %}
 </div>
 </header>
