@@ -6,6 +6,10 @@ updated: 2021-06-15
 layout: default.njk
 ---
 
+<div class="about-logo">
+  {% include "raven.svg" %}
+</div>
+
 I do stuff with computers. I live in Austin, TX.
 
 I'm particularly interested in everything game (board and digital and role-playing), plain text formats, productivity, and knowledge-management.
