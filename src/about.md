@@ -14,17 +14,16 @@ I'm particularly interested in everything game (board and digital and role-playi
 
 I can be found pretty much everywhere fine Internets are made as `drhayes` or some variation.
 
-In particular, you can email me at <hi@drhayes.io> or [chat me at my Keybase chat][keybasechat] or
-[at my Telegram address you weirdo][telegram].
+In particular, you can email me at <hi@drhayes.io> or [chat me at my Keybase chat][keybasechat] or [at my Telegram address you weirdo][telegram].
 
 Here are some likely haunts:
 
-* <MeLink href="https://wizard.estate/@drhayes">drhayes@wizard.estate</MeLink>
-* <MeLink href="https://github.com/drhayes">github.com/drhayes</MeLink>
-* <MeLink href="https://keybase.io/drhayes">Keybase</MeLink>
-* <MeLink href="https://drhayes.tumblr.com">Tumblr</MeLink>
-* <MeLink href="https://www.goodreads.com/drhayes">Goodreads</MeLink>
-* <MeLink href="https://soundcloud.com/drhayes">Soundcloud</MeLink>
+* {% meLink 'https://wizard.estate/@drhayes', 'drhayes@wizard.estate' %}
+* {% meLink 'https://github.com/drhayes', 'github.com/drhayes' %}
+* {% meLink 'https://keybase.io/drhayes', 'Keybase' %}
+* {% meLink 'https://drhayes.tumblr.com', 'Tumblr' %}
+* {% meLink 'https://www.goodreads.com/drhayes', 'Goodread' %}
+* {% meLink 'https://soundcloud.com/drhayes', 'Soundcloud' %}
 
 ## Colophon
 
