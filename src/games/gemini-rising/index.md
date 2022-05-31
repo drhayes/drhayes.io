@@ -11,13 +11,7 @@ date: 2020-08-01
 updated: 2022-01-22
 ---
 
-<script lang="ts">
-  import GameScreenshot from '$lib/components/gameScreenshot.svelte';
-</script>
-
-<GameScreenshot imageUrl={screenshot}
-  caption="The player contemplating whether or not to move to the next room, away from the checkpoint."
-  alt="2d pixel art of a small white robot in a dark, blue underground space with metal platforms." />
+{% gameScreenshot screenshot,"The player contemplating whether or not to move to the next room, away from the checkpoint.", "2d pixel art of a small white robot in a dark, blue underground space with metal platforms." %}
 
 Gemini Rising is a puzzle platformer about angry robots and hacking that I'm working on. It is out now for pre-alpha testing!
 

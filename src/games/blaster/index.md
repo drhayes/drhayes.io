@@ -9,12 +9,7 @@ date: 2015-09-26
 updated: 2019-01-01
 ---
 
-<script lang="ts">
-  import GameScreenshot from '$lib/components/gameScreenshot.svelte';
-</script>
-
-<GameScreenshot imageUrl={screenshot} caption="Destroying some Guards in Blaster." alt="A blue
-square is shooting upwards at a red square, making it explode in yellow sparks." />
+{% gameScreenshot screenshot, "Destroying some Guards in Blaster.",  "A blue square is shooting upwards at a red square, making it explode in yellow sparks." %}
 
 [Play the game here][playblaster].
 

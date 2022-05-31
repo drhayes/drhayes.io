@@ -11,12 +11,7 @@ date: 2020-10-06
 updated: 2021-06-18
 ---
 
-<script lang="ts">
-  import GameScreenshot from '$lib/components/gameScreenshot.svelte';
-</script>
-
-<GameScreenshot imageUrl={screenshot} caption="The player stymied by a long drop; will they make
-it?" alt="2d pixel art of a blue figure standing on a rocky outcropping inside of a cave system." />
+{% gameScreenshot screenshot, "The player stymied by a long drop; will they make it?", "2d pixel art of a blue figure standing on a rocky outcropping inside of a cave system." %}
 
 Behold the Generic Platformer!
 

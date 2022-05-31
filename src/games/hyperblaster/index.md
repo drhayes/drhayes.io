@@ -10,12 +10,7 @@ description: A simple space-shooter.
 date: 2021-07-12
 ---
 
-<script lang="ts">
-  import GameScreenshot from '$lib/components/gameScreenshot.svelte';
-</script>
-
-<GameScreenshot imageUrl={screenshot} caption="A starfield with temporary assets. That's it, so far." alt="2d pixel art of
-a starfield of white pixels with a blue rectangle at the bottom." />
+{% gameScreenshot screenshot, "A starfield with temporary assets. That's it, so far.", "2d pixel art of a starfield of white pixels with a blue rectangle at the bottom." %}
 
 There's not much here, yet. I'm waiting on art from my artist-in-residence. Child labor laws prevent
 me from working him too hard.
