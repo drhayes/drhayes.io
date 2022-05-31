@@ -1,5 +1,5 @@
 @import url('./reset.css');
-@import url('./prism-dracula.css');
+@import url('./tokyo-night-dark.css');
 
 @font-face {
   font-family: "Cousine";
@@ -195,8 +195,10 @@ article ol li::before {
 }
 
 article > pre {
+  overflow: auto;
   margin-top: 1em;
   margin-bottom: 1em;
+  padding: 1em;
 }
 
 article iframe {
