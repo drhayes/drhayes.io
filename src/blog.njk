@@ -1,0 +1,22 @@
+---
+title: Blog
+layout: base.njk
+---
+
+{% include "header.njk" %}
+
+<main class="">
+  {% include "title-element.njk" %}
+
+  <ol class="blog-links">
+    {%- for blog in collections.blog | reverse -%}
+      <li class="line">
+        <time class="date">{{ blog.data.date | dateFormat }}</time>
+        <a href="{{ blog.url }}" class="link">{{ blog.data.title }}</a>
+      </li>
+    {%- endfor -%}
+  </ol>
+</main>
+
+{% include "footer.njk" %}
+

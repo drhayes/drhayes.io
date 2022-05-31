@@ -357,3 +357,20 @@ svg {
   width: 25%;
   opacity: 0.1;
 }
+
+.blog-links {
+  max-width: min(680px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-links .line {
+  display: flex;
+}
+
+.blog-links .line .date {
+  display: block;
+  margin-right: 3rem;
+}
+
+.blog-links .line .title {}
