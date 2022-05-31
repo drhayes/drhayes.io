@@ -1,3 +1,4 @@
 {
-  "tags": ["blog"]
+  "tags": ["blog"],
+  "layout": "default.njk"
 }
