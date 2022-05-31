@@ -22,6 +22,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('debugPrint', require('./lib/filters/debugPrint'));
   // eleventyConfig.addNunjucksAsyncFilter('lessify', require('./lib/filters/lessify'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
+
+  // Shortcodes.
+  eleventyConfig.addNunjucksShortcode('gameScreenshot', require('./lib/shortcodes/gameScreenshot'));
   eleventyConfig.addNunjucksShortcode('meLink', require('./lib/shortcodes/meLink'));
 
   // Collections.

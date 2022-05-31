@@ -1,0 +1,15 @@
+---
+title: Games
+---
+
+<ul class="games-list">
+  {% for game in collections.games %}
+    <li class="game-item">
+      <a href="{{ game.url }}">
+        <section style="background-image: url({{ game.data.screenshot }})" class="game-screenshot">
+          <h1>{{ game.data.title }}</h1>
+        </section>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

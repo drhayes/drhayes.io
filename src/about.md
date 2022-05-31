@@ -3,7 +3,6 @@ title: Hi. I'm David. 👋🏽
 description: What I'm all about, yo.
 date: 2020-01-01
 updated: 2021-06-15
-layout: default.njk
 ---
 
 <div class="about-logo">

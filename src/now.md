@@ -2,7 +2,6 @@
 title: Now
 description: What am I doing right now.
 updated: 2022-05-22
-layout: default.njk
 ---
 
 What I'm doing right now.

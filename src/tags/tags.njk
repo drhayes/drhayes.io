@@ -1,0 +1,37 @@
+---
+layout: base.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - blog
+  addAllPagesToCollections: true
+permalink: /tags/{{ tag | slug }}/
+eleventyComputed:
+  title: Things tagged "{{ tag }}"
+changeFreq: weekly
+---
+{% include "header.njk" %}
+<main class="">
+
+  {% include "title-element.njk" %}
+
+  <article class="article-content">
+    <ol class="tag-list">
+      {% set taglist = collections[tag] %}
+      {% for post in taglist | reverse %}
+        <li class="tag-item">
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          {% if post.data.description %}
+            <p class="description">{{ post.data.description }}</p>
+          {% endif %}
+          <p class="reading-time">{{ post | readingTime }} read</p>
+        </li>
+      {% endfor %}
+    </ol>
+  </article>
+
+</main>
+{% include "footer.njk" %}
