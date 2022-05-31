@@ -37,6 +37,7 @@ This site is generated in [Eleventy].
 * [Markdown] has the content.
 * [GitHub] hosts the code.
 * [Netlify] hosts the site.
+* The color palette is mostly [Nord].
 
 [site]: https://github.com/drhayes/drhayes.io
 [vim]: https://www.vim.org/
@@ -47,3 +48,4 @@ This site is generated in [Eleventy].
 [keybasechat]: https://keybase.io/drhayes/chat
 [eleventy]: https://www.11ty.dev/
 [neovim]: https://neovim.io/
+[nord]: https://www.nordtheme.com/docs/colors-and-palettes
