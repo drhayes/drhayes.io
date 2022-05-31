@@ -36,6 +36,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('./src/keybase.txt');
   eleventyConfig.addPassthroughCopy('./src/twtxt.txt');
   eleventyConfig.addPassthroughCopy('./css/**/*');
+  eleventyConfig.addPassthroughCopy('./fonts/**/*');
 
   // What are watching for changes?
   eleventyConfig.addWatchTarget('./css/**/*');

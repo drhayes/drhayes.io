@@ -1,9 +1,17 @@
 @import url('./reset.css');
 @import url('./prism-dracula.css');
 
+@font-face {
+  font-family: "Cousine";
+  src: url("/fonts/Cousine-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
 :root {
-  --body-font: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-  --heading-font: monospace;
+  --body-font: "Cousine", monospace;
+  --heading-font: "Cousine", monospace;
 }
 
 /* These are Nord colors: https://www.nordtheme.com/docs/colors-and-palettes */
@@ -18,7 +26,7 @@ html.dark {
   --link-color-normal: #8fbcbb;
   --link-color-hover: #88c0d0;
   --light-border-color: #434c5e;
-  --blockquote-border-color: #4682b4b8;
+  --blockquote-border-color: #a3be8c;
   --blockquote-background-color: #3b4252;
 }
 
@@ -128,11 +136,11 @@ article h2 {
 }
 
 article h3 {
-  font-size: 125%;
+  font-size: 120%;
 }
 
 article h4 {
-  font-size: 110%;
+  font-size: 108%;
 }
 
 article p {
@@ -215,7 +223,7 @@ hr:after {
   display: block;
   content: '***';
   text-align: center;
-  opacity: .5;
+  color: var(--text-contrast-color);
 }
 
 nav {
@@ -244,17 +252,48 @@ nav .menu li .home-link {
 }
 
 header h1 {
+  position: relative;
   max-width: min(680px, 100%);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0.5em;
   font-size: 200%;
+  border-bottom: 3px dotted var(--text-contrast-color);
+}
+
+header h1:after {
+  display: block;
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+  border-bottom: 3px dotted var(--text-contrast-color);
+}
+
+header .subtitle-stuff {
+  display: flex;
+  max-width: min(680px, 100%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header .times {
-  max-width: min(680px, 100%);
-  margin-left: auto;
-  margin-right: auto;
   color: var(--subtext-content-color);
+  margin-right: 2rem;
+}
+
+header .tags {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--subtext-content-color);
+}
+
+header .tags li {
+  margin-right: 1em;
+}
+
+header .tags li::before {
+  content: '#';
 }
 
 footer {
@@ -373,4 +412,20 @@ svg {
   margin-right: 3rem;
 }
 
-.blog-links .line .title {}
+.article-content p:first-of-type:first-letter {
+  font-size: 300%;
+  font-weight: bold;
+  padding: .6rem .9rem;
+  margin-right: .5rem;
+  border: 1px dotted var(--light-border-color);
+  float: left;
+}
+
+.article-content blockquote p:first-of-type:first-letter {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: inherit;
+  margin-right: inherit;
+  border: none;
+  float: none;
+}
