@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "build"
+  publish = "dist"
 
 [functions]
   node_bundler = "esbuild"
@@ -45,3 +45,7 @@
   [headers.values]
     Content-Type = "application/manifest+json; charset=utf-8"
 
+[[headers]]
+  for = "/*.ttf"
+  [headers.values]
+    Content-Type = "application/x-font-ttf"
