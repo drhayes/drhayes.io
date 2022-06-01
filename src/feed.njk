@@ -1,40 +1,28 @@
-import { Metadata, whichDate } from '$lib/metadataUtil';
-
-import allPages from '../lib/allPages';
-import RSS from 'rss';
-
-export async function get({ host }) {
-  const pages: Metadata[] = await allPages();
-
-  const feed = new RSS({
-    title: 'drhayes.io',
-    description: 'All the pages from drhayes.io',
-    site_url: 'https://drhayes.io',
-    feed_url: 'https://drhayes.io/feed.xml',
-    image_url: 'https://drhayes.io/img/raven.png',
-    copyright: 'This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License by David R. Hayes.',
-    pubDate: new Date().toISOString(),
-  });
-
-  pages.forEach(page => {
-    const pagePath = page.slug
-      .replace('.md', '')
-      .replace('/src/routes/', '/');
-    feed.item({
-      title: page.title,
-      url: `https://drhayes.io${pagePath}`,
-      date: whichDate(page),
-      description: page.description,
-      author: 'David Hayes <hi@drhayes.io>',
-      categories: page.tags || [],
-    });
-  });
-
-  return {
-    headers: {
-      'Cache-Control': 'public, max-age=0, must-revalidate',
-      'Content-Type': 'application/xml'
-    },
-    body: feed.xml({ indent: true }),
-  };
-}
+---
+permalink: feed.xml
+layout: ''
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.subtitle }}</subtitle>
+  <link href="{{ site.host }}/feed.xml" rel="self"/>
+  <link href="{{ site.host }}"/>
+  <updated>{{ collections.all | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ site.host }}</id>
+  <author>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
+  </author>
+  {%- for post in collections.all | reverse -%}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor -%}
+</feed>

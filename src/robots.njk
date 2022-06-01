@@ -1,13 +1,9 @@
-export async function get({ host }) {
-
-  return {
-    headers: {
-      'Cache-Control': 'public, max-age=0, must-revalidate',
-      'Content-Type': 'text/plain; charset=UTF-8'
-    },
-    body: `Sitemap: https://${host}/sitemap.xml
-
+---
+permalink: /robots.txt
+layout: ''
+eleventyExcludeFromCollections: true
+---
 User-agent: *
-Disallow:`,
-  };
-}
+Allow: /
+
+Sitemap: {{ site.host }}/sitemap.xml
