@@ -404,17 +404,17 @@ svg {
   opacity: 0.1;
 }
 
-.blog-links {
+.post-links {
   max-width: min(680px, 100%);
   margin-left: auto;
   margin-right: auto;
 }
 
-.blog-links .line {
+.post-links .line {
   display: flex;
 }
 
-.blog-links .line .date {
+.post-links .line .date {
   display: block;
   margin-right: 3rem;
 }

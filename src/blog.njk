@@ -7,15 +7,8 @@ layout: base.njk
 
 <main class="">
   {% include "title-element.njk" %}
-
-  <ol class="blog-links">
-    {%- for blog in collections.blog | reverse -%}
-      <li class="line">
-        <time class="date">{{ blog.data.date | dateFormat }}</time>
-        <a href="{{ blog.url }}" class="link">{{ blog.data.title }}</a>
-      </li>
-    {%- endfor -%}
-  </ol>
+  {% set postList = collections.blog | reverse %}
+  {% include "post-list.njk" %}
 </main>
 
 {% include "footer.njk" %}

@@ -15,23 +15,9 @@ changefreq: weekly
 ---
 {% include "header.njk" %}
 <main class="">
-
   {% include "title-element.njk" %}
-
-  <article class="article-content">
-    <ol class="tag-list">
-      {% set taglist = collections[tag] %}
-      {% for post in taglist | reverse %}
-        <li class="tag-item">
-          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-          {% if post.data.description %}
-            <p class="description">{{ post.data.description }}</p>
-          {% endif %}
-          <p class="reading-time">{{ post | readingTime }} read</p>
-        </li>
-      {% endfor %}
-    </ol>
-  </article>
-
+  {% set taglist = collections[tag] %}
+  {% set postList = taglist | reverse %}
+  {% include "post-list.njk" %}
 </main>
 {% include "footer.njk" %}
