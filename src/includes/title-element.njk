@@ -1,6 +1,4 @@
 <header>
-<h1>{{ title }}</h1>
-<div class="subtitle-stuff">
   <div class="times">
     {% if date %}
       <time datetime="{{ date | dateFormat(true) }}">{{ date | dateFormat }}</time>
@@ -9,12 +7,12 @@
       <time datetime="{{ updated | dateFormat(true) }}">(Updated: {{ updated | dateFormat }})</time>
     {% endif %}
   </div>
+  <h1>{{ title }}</h1>
   <div class="tags-container">
     <ul class="tags">
-      {% for tag in tags %}
+      {% for tag in tags | tagFilter %}
         <li><a href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
       {% endfor %}
     </ul>
   </div>
-</div>
 </header>

@@ -17,10 +17,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRss);
 
   // Filters.
-  eleventyConfig.addFilter('articlesfor', require('./lib/filters/articlesfor'));
   eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
   eleventyConfig.addFilter('debugPrint', require('./lib/filters/debugPrint'));
-  // eleventyConfig.addNunjucksAsyncFilter('lessify', require('./lib/filters/lessify'));
+  eleventyConfig.addFilter('tagFilter', require('./lib/filters/tagFilter'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
 
   // Shortcodes.
@@ -28,7 +27,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addNunjucksShortcode('meLink', require('./lib/shortcodes/meLink'));
 
   // Collections.
-  eleventyConfig.addCollection('drafts', require('./lib/collections/drafts'));
   eleventyConfig.addCollection('games', require('./lib/collections/games'));
 
   // Static stuff.
