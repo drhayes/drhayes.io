@@ -1,16 +1,20 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2022-05-22
+updated: 2022-06-01
 ---
 
 What I'm doing right now.
+
+## Fun Stuff
+
+I'm jumping out of a plane for my birthday, but not on my birthday. I'm excited and nervous.
 
 ## Text
 
 Still doing lots of note work in [Tiddlywiki](https://tiddlywiki.com). Trying to figure out if there's anything in there I want to export (there is!) and how to do it safely. I've been doing a daily journal practice in there with some intensely personal stuff that I don't want to leak to the Internet at large. Definitely taking some cues from [Soren's zettelkasten](https://zettelkasten.sorenbjornstad.com) on this one.
 
-Revamping my personal site, bringing it back to [11ty](https://11ty.dev). I want something that is more static, less widget-y.
+Revamping my personal site, bringing it back to [11ty](https://11ty.dev). I want something that is more static, less widget-y. This is super relevant because I got a 500 from my personal site yesterday because it was relying on some server-side rendering that I didn't actually want. Yucko.
 
 
 ## Video Games
