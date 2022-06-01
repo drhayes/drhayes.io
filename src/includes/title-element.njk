@@ -12,7 +12,7 @@
   <div class="tags-container">
     <ul class="tags">
       {% for tag in tags | tagFilter %}
-        <li><a href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
+        <li><a href="/tags/{{ tag | slugify }}" class="tag">{{ tag }}</a></li>
       {% endfor %}
     </ul>
   </div>

@@ -1,17 +1,9 @@
 @import url('./reset.css');
 @import url('./tokyo-night-dark.css');
 
-@font-face {
-  font-family: "Cousine";
-  src: url("/fonts/Cousine-Regular.ttf");
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-}
-
 :root {
-  --body-font: "Cousine", monospace;
-  --heading-font: "Cousine", monospace;
+  --body-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --heading-font: monospace;
 }
 
 /* These are Nord colors: https://www.nordtheme.com/docs/colors-and-palettes */
@@ -21,7 +13,7 @@ html.dark {
   --subtext-content-color: #5e81ac;
   --background-color: #2e3440;
   --background-support-color: #3b4252;
-  --heading-color: #81a1c1;
+  --heading-color: #88c0d0;
   --heading-support-color: #4c566a;
   --link-color-normal: #8fbcbb;
   --link-color-hover: #88c0d0;
@@ -52,7 +44,7 @@ body {
   visibility: var(--styles-loaded);
   font-family: var(--body-font);
   font-size: 18px;
-  line-height: 1.75;
+  line-height: 1.6;
   background-color: var(--background-color);
   color: var(--text-content-color);
   padding: 0;
@@ -91,7 +83,7 @@ article h3,
 article h4,
 article h5 {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 1em;
   font-family: var(--heading-font);
   font-weight: bold;
   color: var(--heading-color);
@@ -104,14 +96,6 @@ h1 {
 }
 
 @media screen and (min-width: 720px) {
-
-  article h1,
-  article h2,
-  article h3,
-  article h4,
-  article h5 {
-    margin-top: 2rem;
-  }
 
   article h2:before,
   article h3:before,
@@ -262,7 +246,7 @@ header h1 {
   max-width: min(860px, 100%);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
   font-size: 200%;
   border-bottom: 3px dotted var(--text-contrast-color);
 }
@@ -281,7 +265,7 @@ header .times {
   max-width: min(860px, 100%);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 
 header .tags {
@@ -290,7 +274,7 @@ header .tags {
   max-width: min(860px, 100%);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5em;
   color: var(--subtext-content-color);
 }
 
@@ -489,6 +473,11 @@ article .tag-list .tag-item::before {
   text-shadow: 0 1px 15px rgba(0, 0, 0, 1);
 }
 
+.article-content .game-screenshot {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 .game-screenshot img {
   width: 100%;
 }
@@ -497,4 +486,12 @@ article .tag-list .tag-item::before {
   width: 100%;
   font-size: 80%;
   text-align: center;
+}
+
+a.tag {
+  color: var(--subtext-content-color);
+}
+
+a.tag:hover {
+  color: var(--link-color-hover);
 }
