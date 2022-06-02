@@ -2,7 +2,7 @@
   {%- for post in postList -%}
     <li class="line">
       <a href="{{ post.url }}" class="link">{{ post.data.title }}</a>
-      <span class="on">&nbsp;on&nbsp;</span>
+      <span class="on">on</span>
       <time class="date">{{ post.data.date | dateFormat }}</time>
     </li>
   {%- endfor -%}
