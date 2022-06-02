@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: default.njk
 pagination:
   data: collections
   size: 1
@@ -13,11 +13,8 @@ eleventyComputed:
   title: Things tagged "{{ tag }}"
 changefreq: weekly
 ---
-{% include "header.njk" %}
-<main class="">
-  {% include "title-element.njk" %}
-  {% set taglist = collections[tag] %}
-  {% set postList = taglist | reverse %}
+{% set taglist = collections[tag] %}
+{% set postList = taglist | reverse %}
+<main class="tagged-things">
   {% include "post-list.njk" %}
 </main>
-{% include "footer.njk" %}

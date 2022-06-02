@@ -371,6 +371,15 @@ svg {
   display: block;
   margin-right: 3rem;
   color: var(--subtext-content-color);
+  order: 0;
+}
+
+.post-links .line .link {
+  order: 1;
+}
+
+.post-links .line .on {
+  display: none;
 }
 
 .article-content p:first-of-type:first-letter {
@@ -475,6 +484,10 @@ a.tag:hover {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.tagged-things ol li:before, .tagged-things ul li:before {
+  display: none;
 }
 
 @media screen and (min-width: 720px) {

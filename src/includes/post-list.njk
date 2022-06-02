@@ -1,8 +1,9 @@
 <ol class="post-links">
   {%- for post in postList -%}
     <li class="line">
-      <time class="date">{{ post.data.date | dateFormat }}</time>
       <a href="{{ post.url }}" class="link">{{ post.data.title }}</a>
+      <span class="on">&nbsp;on&nbsp;</span>
+      <time class="date">{{ post.data.date | dateFormat }}</time>
     </li>
   {%- endfor -%}
 </ol>
