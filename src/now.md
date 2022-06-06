@@ -36,14 +36,12 @@ My derpy chat bot has been getting some love. I'm considering simplifying my per
 
 ## Music
 
-ON REPEAT: [MAYDAY by TheFatRat featuring Laura Brehm][mayday]
+ON REPEAT: Abacab, by Genesis
 
 Lately.
 
-* TheFatRat.
-* Daniel Deluxe.
-* John Carpenter.
-* Instrumental Gunship. Not sure how I feel about Gunship.
+* My Life With The Thrill Kill Kult
+* Mind.in.a.box
 * Rez soundtrack, just so bangin'.
 
 Always.
@@ -75,7 +73,6 @@ This is a [Now][nowpage] page. You should have one too.
 [BlanckMass]: https://www.blanckmass.com/
 [drhayesdigitalgarden]: https://notes.drhayes.io/
 [wisps]: https://wisps.drhayes.io
-[mayday]: https://lnk.to/thefatratmayday
 [beamsaber]: https://austin-ramsay.itch.io/beamsaber
 [roam]: https://roamresearch.com
 [nextjs]: https://nextjs.org
