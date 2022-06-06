@@ -566,3 +566,11 @@ a.tag:hover {
     opacity: 0.1;
   }
 }
+
+.content {
+  max-width: min(860px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
