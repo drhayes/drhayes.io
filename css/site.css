@@ -21,6 +21,8 @@ html.dark {
   --blockquote-border-color: #a3be8c;
   --blockquote-background-color: #3b4252;
   --inline-code-color: #ebcb8b;
+  --draft-badge-color: #2e3440;
+  --draft-badge-background: #88c0d0;
 }
 
 html.light {
@@ -494,6 +496,43 @@ a.tag:hover {
   display: none;
 }
 
+
+.principles-list {
+  margin-left: 1em;
+}
+
+.principles-list dt {
+  font-weight: bold;
+}
+
+.principles-list dd {
+  margin-left: 1em;
+  margin-bottom: 2em;
+}
+
+.content {
+  max-width: min(860px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.draft {
+  border-radius: .5em;
+  margin-left: .5em;
+  margin-right: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  text-transform: uppercase;
+  font-size: 80%;
+  color: var(--draft-badge-color);
+  background: var(--draft-badge-background);
+  order: 3;
+  align-self: center;
+}
+
 @media screen and (min-width: 720px) {
 
   article {
@@ -569,12 +608,10 @@ a.tag:hover {
     width: 25%;
     opacity: 0.1;
   }
+
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-.content {
-  max-width: min(860px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}

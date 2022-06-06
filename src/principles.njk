@@ -1,0 +1,20 @@
+---
+title: Principles
+---
+
+<p class="content">
+  Some ideas I consider important.
+</p>
+
+<hr>
+
+<dl class="principles-list">
+  {%- for principle in collections.principle | sort %}
+    <dt>
+    <a id="{{ principle.data.title | slugify }}">{{ principle.data.title }}</a>
+    </dt>
+    <dd>
+      {{ principle.data.summary }}
+    </dd>
+  {% endfor %}
+</dl>

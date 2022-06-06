@@ -4,6 +4,9 @@
       <a href="{{ post.url }}" class="link">{{ post.data.title }}</a>
       <span class="on">on</span>
       <time class="date">{{ post.data.date | dateFormat }}</time>
+      {% if post.data.draft %}
+        <span class="draft">draft</span>
+      {% endif %}
     </li>
   {%- endfor -%}
 </ol>

@@ -1,0 +1,25 @@
+---
+title: Articles
+permalink: /articles/
+layout: base.njk
+---
+
+{% include "header.njk" %}
+
+<main class="">
+  {% include "title-element.njk" %}
+
+  <p class="content">
+    A bit of an experiment, these are things that I'm writing that are basically never truly complete and published. They're out here, reflecting my thinking, but never truly <em>done</em>.
+  </p>
+
+  <p class="content">
+    Anything marked <span class="draft">draft</span> is especially fresh out of the oven and still in flux.
+  </p>
+
+  {% set postList = collections.article %}
+  {% include "post-list.njk" %}
+</main>
+
+{% include "footer.njk" %}
+
