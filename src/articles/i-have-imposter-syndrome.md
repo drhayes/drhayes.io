@@ -21,15 +21,15 @@ It hasn't happened yet. But, y'know, maybe that's only because I'm really good a
 
 "But you seem successful," you might say. "You're a programmer with a job he enjoys and a family that he loves and good friends who laugh not-unkindly at him," you continue. "Seems pretty good to me."
 
-But, see, the evidence doesn't matter. No amount of evidence can convince my brain that I probably don't get to keep these things, that maybe they're only around because of some false idea I'm really good at presenting.
+But, see, the evidence doesn't matter. No amount of evidence can convince my brain that I probably don't get to keep these things, that maybe they're only around because of some false face I'm really good at presenting.
 
 Seriously, I know I'm not that good at presenting false faces. But I don't... *know* it know it, if you know what I mean.
 
 ## Lies
 
-Your brain is very good at keeping you alive, but sometimes it gets stuck in weird states. While it's scanning around, looking for threats, it can sometimes peek into the future a bit and provide some predictions. Maybe those predictions come true, maybe they didn't -- but you're probably alive today because of those predictions.
+Your brain is very good at keeping you alive, but sometimes it gets stuck in weird states. While it's scanning around, looking for threats, it can sometimes peek into the future a bit and provide some predictions. Maybe those predictions come true, maybe they don't -- but you're probably alive today because of those predictions.
 
-Of course, the thing congratulating itself on those predictions is the brain, so *caveat brain-haver*.
+Of course, the thing congratulating itself on those predictions is the brain, so *caveat brainiac*.
 
 That positive reinforcement loop of "oh-shit-danger-change-behavior-whew-still-alive" is powerful and hard to escape from and not to be underestimated.
 
@@ -49,7 +49,7 @@ I'm telling you this because you might have it, too. You, too, might have a voic
 
 If evidence doesn't matter then stop trying to use evidence to get rid of it. It won't help. Your brain is too good discounting the evidence to keep you safe.
 
-Opinions from friends or respected coworkers won't matter either. "They're probably just being nice to you anyway," the voice will whisper. "They don't know the *real* you," it'll say.
+Opinions from friends or respected coworkers won't matter either. "They're probably just being nice to you," the voice will whisper. "They don't know the *real* you," it'll say.
 
 I'm not telling you not to listen to the voice, either. Not listening is a good way to make it yell louder and show up in strange places and start making demands.
 

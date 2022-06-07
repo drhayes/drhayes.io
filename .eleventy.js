@@ -50,7 +50,7 @@ module.exports = (eleventyConfig) => {
       layouts: 'layouts',
       data: 'data',
     },
-    templateFormats: ['njk', 'md'],
+    templateFormats: ['njk', 'md', 'js'],
     markdownTemplateEngine: 'njk',
   };
 };
