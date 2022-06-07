@@ -27,7 +27,7 @@ class Feed {
       feed.item({
         title: thing.title,
         description: thing.templateContent,
-        url: thing.url,
+        url: `${site.host}/${thing.url}`,
         date: thing.data.updated || thing.data.date,
       });
     }
