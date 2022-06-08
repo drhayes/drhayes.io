@@ -6,6 +6,9 @@
     {% if updated %}
       <time datetime="{{ updated | dateFormat(true) }}">(Updated: {{ updated | dateFormat }})</time>
     {% endif %}
+    {% if draft %}
+      <span class="draft">draft</span>
+    {% endif %}
   </div>
   <h1>{{ title }}</h1>
   {% if tags %}
