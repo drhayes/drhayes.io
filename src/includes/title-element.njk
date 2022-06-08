@@ -7,7 +7,7 @@
       <time datetime="{{ updated | dateFormat(true) }}">(Updated: {{ updated | dateFormat }})</time>
     {% endif %}
     {% if draft %}
-      <span class="draft">draft</span>
+      {% include "draft-badge.njk" %}
     {% endif %}
   </div>
   <h1>{{ title }}</h1>

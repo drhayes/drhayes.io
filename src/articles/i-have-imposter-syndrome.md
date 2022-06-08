@@ -3,7 +3,6 @@ title: I have imposter syndrome
 date: 2022-06-06
 draft: true
 tags:
-  - article
   - imposter-syndrome
   - mental-health
   - mentoring

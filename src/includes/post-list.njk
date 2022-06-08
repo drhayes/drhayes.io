@@ -5,7 +5,7 @@
       <span class="on">on</span>
       <time class="date">{{ post.data.date | dateFormat }}</time>
       {% if post.data.draft %}
-        <span class="draft">draft</span>
+        {% include "draft-badge.njk" %}
       {% endif %}
     </li>
   {%- endfor -%}
