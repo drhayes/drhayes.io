@@ -23,12 +23,14 @@ class Feed {
 
     const allThings = collections.all;
 
+    // Add all the things to the feed.
     for (const thing of allThings) {
+      const { title, updated, date } = thing.data;
       feed.item({
-        title: thing.title,
+        title: title,
         description: thing.templateContent,
         url: `${site.host}/${thing.url}`,
-        date: thing.data.updated || thing.data.date,
+        date: updated || date,
       });
     }
 
