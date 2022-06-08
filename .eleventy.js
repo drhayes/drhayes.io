@@ -19,6 +19,7 @@ module.exports = (eleventyConfig) => {
   // Filters.
   eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
   eleventyConfig.addFilter('debugPrint', require('./lib/filters/debugPrint'));
+  eleventyConfig.addFilter('isBigLetterPage', require('./lib/filters/isBigLetterPage.js'));
   eleventyConfig.addFilter('tagFilter', require('./lib/filters/tagFilter'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
 

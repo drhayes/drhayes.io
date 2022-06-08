@@ -388,7 +388,7 @@ svg {
   display: none;
 }
 
-.article-content p:first-of-type:first-letter {
+.big-letter p:first-of-type:first-letter {
   font-size: 300%;
   font-weight: bold;
   padding: .6rem .9rem;
@@ -397,7 +397,7 @@ svg {
   float: left;
 }
 
-.article-content blockquote p:first-of-type:first-letter {
+.big-letter blockquote p:first-of-type:first-letter {
   font-size: inherit;
   font-weight: inherit;
   padding: inherit;
@@ -423,7 +423,7 @@ article .tag-list .tag-item::before {
   color: var(--subtext-content-color);
 }
 
-.article-content .tag-item p:first-of-type:first-letter {
+.big-letter .tag-item p:first-of-type:first-letter {
   font-size: inherit;
   font-weight: inherit;
   padding: inherit;

@@ -1,17 +1,17 @@
-{% extends "./base.njk" %}
+{% extends './base.njk' %}
 
 {% block title %}{{ title | titleify }}{% endblock %}
 
 {% block content %}
-{% include "header.njk" %}
-<main class="">
+{% include 'header.njk' %}
+<main class=''>
 
-  {% include "title-element.njk" %}
+  {% include 'title-element.njk' %}
 
-  <article class="article-content">
+  <article class='article-content {% if tags | isBigLetterPage -%}big-letter{%- endif -%}'>
     {{ content | safe }}
   </article>
 
 </main>
-{% include "footer.njk" %}
+{% include 'footer.njk' %}
 {% endblock %}
