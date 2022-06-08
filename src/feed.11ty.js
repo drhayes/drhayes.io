@@ -1,4 +1,5 @@
 const RSS = require('rss');
+const { URL } = require('url');
 
 class Feed {
   data() {
@@ -15,21 +16,25 @@ class Feed {
       title: site.name,
       description: site.subtitle,
       generator: eleventy.generator,
-      feed_url: `${site.host}/feed.xml`,
+      feed_url: new URL('/feed.xml', site.host).toString(),
       site_url: site.host,
-      image_url: `${site.host}/img/raven.png`,
+      image_url: new URL('/img/raven.png', site.host).toString(),
       copyright: site.copyright,
     });
 
     const allThings = collections.all;
 
-    // Add all the things to the feed.
+    // Add (almost) all the things to the feed.
     for (const thing of allThings) {
+      if (!thing.data.permalink) {
+        continue;
+      }
+
       const { title, updated, date } = thing.data;
       feed.item({
         title: title,
         description: thing.templateContent,
-        url: `${site.host}/${thing.url}`,
+        url: new URL(thing.url, site.host).toString(),
         date: updated || date,
       });
     }
