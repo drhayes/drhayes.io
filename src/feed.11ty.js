@@ -1,7 +1,8 @@
-const RSS = require('rss');
+const { Feed } = require('feed');
 const { URL } = require('url');
+const { getNewestCollectionItemDate } = require("@11ty/eleventy-plugin-rss");
 
-class Feed {
+class MyFeed {
   data() {
     return {
       permalink: '/feed.xml',
@@ -12,17 +13,30 @@ class Feed {
 
   render(data) {
     const { eleventy, collections, site } = data;
-    const feed = new RSS({
-      title: site.name,
-      description: site.subtitle,
-      generator: eleventy.generator,
-      feed_url: new URL('/feed.xml', site.host).toString(),
-      site_url: site.host,
-      image_url: new URL('/img/raven.png', site.host).toString(),
-      copyright: site.copyright,
-    });
+
+    function urlize(path) {
+      return new URL(path, site.host).toString();
+    }
 
     const allThings = collections.all;
+
+    const feed = new Feed({
+      title: site.name,
+      description: site.subtitle,
+      id: site.host,
+      link: site.host,
+      language: 'en',
+      image: urlize('/img/raven.png'),
+      favicon: urlize('/favicon.ico'),
+      copyright: site.copyright,
+      updated: getNewestCollectionItemDate(allThings),
+      generator: eleventy.generator,
+      feedLinks: {
+        atom: urlize('/feed.xml'),
+      },
+      author: site.author,
+    });
+
 
     // Add (almost) all the things to the feed.
     for (const thing of allThings) {
@@ -30,17 +44,20 @@ class Feed {
         continue;
       }
 
-      const { title, updated, date } = thing.data;
-      feed.item({
+      const { title, updated  } = thing.data;
+      feed.addItem({
         title: title,
-        description: thing.templateContent,
-        url: new URL(thing.url, site.host).toString(),
-        date: updated || date,
+        id: urlize(thing.url),
+        link: urlize(thing.url),
+        description: thing.description,
+        content: thing.templateContent,
+        url: urlize(thing.url),
+        date: updated || thing.date,
       });
     }
 
-    return feed.xml({ indent:true });
+    return feed.atom1();
   }
 }
 
-module.exports = Feed;
+module.exports = MyFeed;

@@ -10,9 +10,9 @@
     "@11ty/eleventy-plugin-rss": "1.1.2",
     "date-fns": "2.28.0",
     "eleventy-plugin-reading-time": "0.0.1",
+    "feed": "4.2.2",
     "highlight.js": "11.5.1",
     "markdown-it": "13.0.1",
-    "markdown-it-emoji": "2.0.2",
-    "rss": "1.2.2"
+    "markdown-it-emoji": "2.0.2"
   }
 }
