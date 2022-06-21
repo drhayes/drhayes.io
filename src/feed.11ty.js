@@ -45,7 +45,6 @@ class MyFeed {
       }
 
       const { title, updated  } = thing.data;
-      console.log(updated, updated || thing.date);
       feed.addItem({
         title: title,
         id: urlize(thing.url),
