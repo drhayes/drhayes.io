@@ -9,11 +9,12 @@ pagination:
     - article
     - blog
     - stub
-  addAllPagesToCollections: true
+  addAllPagesToCollections: false
 permalink: /tags/{{ tag | slugify }}/
 eleventyComputed:
   title: Things tagged "{{ tag }}"
 changefreq: weekly
+eleventyExcludeFromCollections: true
 ---
 {% set taglist = collections[tag] %}
 {% set postList = taglist | reverse %}

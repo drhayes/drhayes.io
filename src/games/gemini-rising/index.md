@@ -4,7 +4,6 @@ tags:
   - gemini-rising
   - projects
   - löve
-toc: true
 screenshot: /img/gr-screenshot-2022-01-18.png
 description: A puzzle platformer about hacking angry robots.
 date: 2020-08-01
