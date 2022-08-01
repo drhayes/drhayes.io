@@ -1,6 +1,6 @@
 ---
 title: Words mean things
-summary: When someone speaks, listen to how they frame their speech.
+summary: When someone speaks, listen to what they are saying and how they're saying it.
 date: 2022-02-14
 updated: 2022-07-31
 ---

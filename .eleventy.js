@@ -29,6 +29,7 @@ module.exports = (eleventyConfig) => {
 
   // Collections.
   eleventyConfig.addCollection('games', require('./lib/collections/games'));
+  eleventyConfig.addCollection('principles', require('./lib/collections/principles'));
 
   // Static stuff.
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');
