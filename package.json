@@ -6,7 +6,7 @@
     "start": "eleventy --serve --port 8081"
   },
   "dependencies": {
-    "@11ty/eleventy": "1.0.1",
+    "@11ty/eleventy": "1.0.2",
     "@11ty/eleventy-plugin-rss": "1.1.2",
     "date-fns": "2.28.0",
     "eleventy-plugin-reading-time": "0.0.1",
