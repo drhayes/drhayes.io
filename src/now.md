@@ -22,6 +22,8 @@ The [Masks][] campaign is back for season two. Things are bigger and more compli
 
 Experimenting with Go and [Charm][]. Is it possible to love a startup because of their TUI libraries? I'm living proof.
 
+Playing with a [LunarVim](https://www.lunarvim.org/) config for my preferred editor. It's very nice, mostly takes the pain out of neovim config.
+
 ## Music
 
 ON REPEAT: "Hard Times" by Paramore.
