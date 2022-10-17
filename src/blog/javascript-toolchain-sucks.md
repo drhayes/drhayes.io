@@ -9,7 +9,7 @@ tags:
 draft: true
 ---
 
-Programming in server-side, [NodeJS](https://nodejs.org/en/) JavaScript is so frustrating for me at the moment. I love JS the language, but the tooling around it is fairly awful at the moment.
+Programming in server-side, [NodeJS](https://nodejs.org/en/) JavaScript is so frustrating for me at the moment. I love JS the language, but the tooling around it is fairly awful.
 
 There's this whole galaxy of configuration files that float along with every project: `package.json` and `package-lock.json` for modules, `.prettierrc` and `.prettierignore` for formatting, `.nvmrc` for which node version you're using, a `.husky` directory with some git hooks, `.eslintrc` and `.eslintignore` for linting the code, maybe a `tsconfig.json` for doing [TypeScript](https://www.typescriptlang.org/) stuff, `.npmrc` for using custom node package registries...
 
