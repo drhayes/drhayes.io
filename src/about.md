@@ -29,7 +29,7 @@ Here are some likely haunts:
 
 * {% meLink 'https://github.com/drhayes', 'github.com/drhayes' %}
 * {% meLink 'https://pinboard.in/u:drhayes', 'Pinboard' %}
-* {% meLink 'https://wizard.estate/@drhayes', 'drhayes@wizard.estate' %}
+* {% meLink 'https://indieweb.social/@drhayes', '@drhayes@indieweb.social' %}
 * {% meLink 'https://social.lol/@drhayes', 'drhayes@social.lol' %}
 * {% meLink 'https://soundcloud.com/drhayes', 'Soundcloud' %}
 * {% meLink 'https://keybase.io/drhayes', 'Keybase' %}
