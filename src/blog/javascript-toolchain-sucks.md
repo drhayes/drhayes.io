@@ -1,12 +1,12 @@
 ---
 title: The JavaScript Toolchain Sucks
 date: 2022-10-15
+updated: 2022-11-17
 description: The bewildering array of server-side JS config is terrible.
 tags:
   - programming
   - javascript
   - usability
-draft: true
 ---
 
 Programming in server-side, [NodeJS](https://nodejs.org/en/) JavaScript is so frustrating for me at the moment. I love JS the language, but the tooling around it is fairly awful.
@@ -19,4 +19,4 @@ And, yes, I know there are probably good reasons for this. And, yes, I understan
 
 But I can't help wondering if there's a usability failure here. Extensive configurability surfaces (like preferences dialogs with a gajillion tabs) are sometimes a sign of ceded design responsibilities. They're also sometimes a sign of bad engineering workarounds and cans kicked down the road.
 
-Not to pick on TypeScript here too much (they're all guilty), have you seen `tsconfig.json`'s property [`disableSizeLimit`](https://www.typescriptlang.org/tsconfig#disableSizeLimit)? It's categorized under "Editor Support". Why is the compiler config worried about bloating the memory of editors? *Which* editor is it worried about here? I'm pretty sure this was added because of something going on with Visual Studio Code. And Code is a useful editor, and I'm glad we're keeping it working. But, again, the compiler *might* have an option turned on to help that editor... sometimes?
+Not to pick on TypeScript here too much (they're all guilty), but have you seen `tsconfig.json`'s property [`disableSizeLimit`](https://www.typescriptlang.org/tsconfig#disableSizeLimit)? It's categorized under "Editor Support". Why is the compiler config worried about bloating the memory of editors? *Which* editor is it worried about here? I'm pretty sure this was added because of something going on with Visual Studio Code. And Code is a useful editor, and I'm glad we're keeping it working. But, again, the compiler *might* have an option turned on to help that editor... sometimes?

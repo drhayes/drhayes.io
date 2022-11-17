@@ -339,7 +339,7 @@ svg {
 }
 
 .front-page h1 {
-  color: white;
+  color: var(--text-content-color);
   font-size: 150%;
   font-weight: bold;
   line-height: 1.75;
@@ -359,6 +359,14 @@ svg {
   padding: 0 1rem;
 }
 
+.absolute-bottom {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.dim-a-lot a {
+  color: var(--heading-color);
+}
 
 .post-links {
   max-width: min(860px, 100%);

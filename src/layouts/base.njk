@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" class="dark">
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,9 +24,11 @@
   {% endif %}
   <link rel="alternate" type="application/rss+xml" href="{{ site.host }}/feed.xml">
 </head>
+
 <body class="">
   {% block content %}
-    {{ content | safe }}
+  {{ content | safe }}
   {% endblock %}
 </body>
+
 </html>
