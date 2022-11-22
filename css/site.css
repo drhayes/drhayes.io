@@ -361,6 +361,7 @@ svg {
 
 .absolute-bottom {
   position: absolute;
+  background-color: transparent;
   bottom: 1rem;
 }
 
