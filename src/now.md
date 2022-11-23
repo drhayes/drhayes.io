@@ -1,32 +1,32 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2022-10-15
+updated: 2022-11-23
 ---
 
 What I'm doing right now.
 
 ## Fun Stuff
 
-Getting Halloween decorations up. Our house has been decorated since the end of September, but we're re-working our giant spider and she's taking a bit longer than we'd thought.
+It's finally getting and staying cold around these parts. Getting ready to do the Thanksgiving thing. We have a lot to be thankful for, more than I think we can truly appreciate.
 
 ## Text
 
-Still doing lots of note work in [Tiddlywiki](https://tiddlywiki.com). Trying to figure out if there's anything in there I want to export (there is!) and how to do it safely. I've been doing a daily journal practice in there with some intensely personal stuff that I don't want to leak to the Internet at large. Definitely taking some cues from [Soren's zettelkasten](https://zettelkasten.sorenbjornstad.com) on this one.
+Ugh, I keep looking at [Obsidian](https://obsidian.md/) and poking around in it. I don't like that it's an Electron app, but something about the standard(-ish) Markdown appeals a lot. I miss the structured nature of [Tiddlywiki](https://tiddlywiki.com/), though. I keep feeling like the jury is still out, but I also wonder if my brain hasn't decided already and it's taking the rest of my conscious mind a while to catch up.
 
 ## Role-playing Games
 
-The [Masks][] campaign is back for season two. Things are bigger and more complicated. So many feelings.
+We're heading back to City of Mists!
 
 ## Programming
 
 Experimenting with Go and [Charm][]. Is it possible to love a startup because of their TUI libraries? I'm living proof.
 
-Playing with a [LunarVim](https://www.lunarvim.org/) config for my preferred editor. It's very nice, mostly takes the pain out of neovim config.
+Still liking [LunarVim](https://www.lunarvim.org) a lot.
 
 ## Music
 
-ON REPEAT: "Hard Times" by Paramore.
+ON REPEAT: "Hard Times" by Paramore and "So Just Hang On, Beautiful One" by Au4.
 
 Lately.
 
@@ -53,7 +53,6 @@ Occasionally.
 
 This is a [Now][nowpage] page. You should have one too.
 
-[Masks]: https://www.magpiegames.com/masks/
 [carpenterbrut]: http://www.carpenterbrut.com/
 [mavs]: https://www.makeupandvanityset.com/
 [actors]: https://www.actorstheband.com/
