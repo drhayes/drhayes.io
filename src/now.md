@@ -10,9 +10,15 @@ What I'm doing right now.
 
 It's finally getting and staying cold around these parts. Getting ready to do the Thanksgiving thing. We have a lot to be thankful for, more than I think we can truly appreciate.
 
+## Socials
+
+I can now be found as [@drhayes@indieweb.social](https://indieweb.social/@drhayes). I keep getting attracted to other instances (looking at you <https://hachyderm.io>), but sticking with this one for now.
+
 ## Text
 
 Ugh, I keep looking at [Obsidian](https://obsidian.md/) and poking around in it. I don't like that it's an Electron app, but something about the standard(-ish) Markdown appeals a lot. I miss the structured nature of [Tiddlywiki](https://tiddlywiki.com/), though. I keep feeling like the jury is still out, but I also wonder if my brain hasn't decided already and it's taking the rest of my conscious mind a while to catch up.
+
+Thinking about upgrading some [11ty](https://www.11ty.dev/) stuff on the ol' website.
 
 ## Role-playing Games
 
