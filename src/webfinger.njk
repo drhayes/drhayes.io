@@ -1,0 +1,28 @@
+---
+permalink: .well-known/webfinger
+layout: ''
+eleventyExcludeFromCollections: true
+---
+{
+  "subject": "acct:drhayes@indieweb.social",
+  "aliases": [
+    "https://indieweb.social/@drhayes",
+    "https://indieweb.social/users/drhayes"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://indieweb.social/@drhayes"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://indieweb.social/users/drhayes"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://indieweb.social/authorize_interaction?uri={uri}"
+    }
+  ]
+}

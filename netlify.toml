@@ -49,3 +49,8 @@
   for = "/*.ttf"
   [headers.values]
     Content-Type = "application/x-font-ttf"
+
+[[headers]]
+  for = "/.well-known/webfinger"
+  [headers.values]
+    Content-Type = "application/jrd+json; charset=utf-8"
