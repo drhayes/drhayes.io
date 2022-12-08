@@ -1,24 +1,26 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2022-11-23
+updated: 2022-12-08
 ---
 
 What I'm doing right now.
 
 ## Fun Stuff
 
-It's finally getting and staying cold around these parts. Getting ready to do the Thanksgiving thing. We have a lot to be thankful for, more than I think we can truly appreciate.
+Whoops, spoke too soon -- it's warm again for a bit. That's the Central Texas fall, though -- sometimes warm, sometimes chilly, usually blustery, sometimes rainy. We're gearing up for Christmas and, so far, succeeding in not going all out.
 
 ## Socials
 
 I can now be found as [@drhayes@indieweb.social](https://indieweb.social/@drhayes). I keep getting attracted to other instances (looking at you <https://hachyderm.io>), but sticking with this one for now.
 
+The other instance I keep looking at is <https://social.lol>. The good news is that I added a [webfinger](https://webfinger.net/) resource to my website, so if you search for `@drhayes@drhayes.io` it'll resolve to my current account. That should make transitioning, should I decide to do it in the future, a breeze.
+
 ## Text
 
-Ugh, I keep looking at [Obsidian](https://obsidian.md/) and poking around in it. I don't like that it's an Electron app, but something about the standard(-ish) Markdown appeals a lot. I miss the structured nature of [Tiddlywiki](https://tiddlywiki.com/), though. I keep feeling like the jury is still out, but I also wonder if my brain hasn't decided already and it's taking the rest of my conscious mind a while to catch up.
+I'm finally free of my [Obsidian](https://obsidian.md) obsession! I woke up a couple of days ago, mentally shook myself like a dog shaking water out of its fur, and gratefully went back to TiddlyWiki. If you're also a TiddlyWiki user and can afford it, consider supporting them via [the TiddlyWiki Open Collective](https://opencollective.com/tiddlywiki).
 
-Thinking about upgrading some [11ty](https://www.11ty.dev/) stuff on the ol' website.
+Still thinking about upgrading some [11ty](https://www.11ty.dev/) stuff on the ol' website, especially around webmentions.
 
 ## Role-playing Games
 
