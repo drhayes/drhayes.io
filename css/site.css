@@ -28,14 +28,17 @@ html.dark {
 html.light {
   --text-content-color: rgb(16, 16, 16);
   --text-contrast-color: rgb(255, 255, 255);
-  --subtext-content-color: rgba(0, 0, 0, 0.8);
+  --subtext-content-color: rgb(0 0 0 / 80%);
   --background-color: rgb(255, 255, 255);
   --heading-color: rgb(132, 0, 0);
-  --link-color-normal: rgba(96, 165, 221, 1);
-  --link-color-hover: rgba(96, 165, 221, 1);
-  --light-border-color: rgba(255, 255, 255, .2);
+  --link-color-normal: rgb(96, 165, 221);
+  --link-color-hover: rgb(96, 165, 221);
+  --light-border-color: rgb(255 255 255 / 20%);
   --blockquote-border-color: #4682b4b8;
   --blockquote-background-color: #f9f9ff;
+  --inline-code-color: #ebcb8b;
+  --draft-badge-color: #2e3440;
+  --draft-badge-background: #88c0d0;
 }
 
 ::selection {
@@ -125,29 +128,28 @@ article p {
 
 article ul {
   margin-left: 1em;
-  list-style-type: none;
+  list-style-type: initial;
 }
 
 article ol {
   margin-left: 1em;
-  list-style-type: none;
+  list-style-type: initial;
   counter-reset: li;
 }
 
 article ul li, article ol li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+  line-height: 1.6;
 }
 
 article>ul, article>ol {
   margin-top: 1em;
 }
 
-article ul li::before {
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-  content: '•';
+article ul li::marker {
   color: var(--heading-color);
+  line-height: 1;
 }
 
 article ol li {
@@ -291,7 +293,7 @@ footer {
   background-color: var(--background-support-color);
   padding: 2rem 0;
   margin-top: 3rem;
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -5px 10px rgb(0 0 0 / 10%);
 }
 
 footer .webring {
@@ -443,10 +445,7 @@ article .tag-list .tag-item::before {
 
 .games-list {
   margin: 0;
-}
-
-.games-list .game-item:before {
-  display: none;
+  list-style-type: none;
 }
 
 .games-list .game-item .game-screenshot {
@@ -463,13 +462,13 @@ article .tag-list .tag-item::before {
 }
 
 .games-list .game-item h1 {
-  color: #ebcb8b;
+  color: var(--inline-code-color);
   font-weight: bold;
   font-size: 175%;
   padding: 0;
   margin: 0;
   text-align: center;
-  text-shadow: 0 1px 15px rgba(0, 0, 0, 1);
+  text-shadow: 0 0 15px rgb(0 0 0 / 100%)
 }
 
 .article-content .game-screenshot {
