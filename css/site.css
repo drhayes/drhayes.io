@@ -6,8 +6,27 @@
   --heading-font: monospace;
 }
 
+/* These are Cobalt2 colors: https://wesbos.com/cobalt2-theme-sublime-text-2 */
+html.cobalt2 {
+  --text-content-color: #ffffff;
+  --text-contrast-color: #e1efff;
+  --subtext-content-color: #80ff82;
+  --background-color: #193549;
+  --background-support-color: #1d425d;
+  --heading-color: #edef7d;
+  --heading-support-color: #edba00;
+  --link-color-normal: #2eff00;
+  --link-color-hover: #5fe461;
+  --light-border-color: #1d425d;
+  --blockquote-border-color: #3ad900;
+  --blockquote-background-color: #1f4662;
+  --inline-code-color: #9df39f;
+  --draft-badge-color: #333333;
+  --draft-badge-background: #b8ffd9;
+}
+
 /* These are Nord colors: https://www.nordtheme.com/docs/colors-and-palettes */
-html.dark {
+html.nord {
   --text-content-color: #eceff4;
   --text-contrast-color: #4c566a;
   --subtext-content-color: #5e81ac;
@@ -532,8 +551,7 @@ a.tag:hover {
   border-radius: .5em;
   margin-left: .5em;
   margin-right: .5em;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding: .2em .5em;
   text-transform: uppercase;
   font-size: 80%;
   color: var(--draft-badge-color);
