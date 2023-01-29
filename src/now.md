@@ -1,26 +1,28 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2022-12-08
+updated: 2023-01-29
 ---
 
 What I'm doing right now.
 
-## Fun Stuff
+## Texas Winter
 
-Whoops, spoke too soon -- it's warm again for a bit. That's the Central Texas fall, though -- sometimes warm, sometimes chilly, usually blustery, sometimes rainy. We're gearing up for Christmas and, so far, succeeding in not going all out.
+Now it alternates between kind of cold and kind of wet. Not unpleasantly, mind, but distractingly.
 
 ## Socials
 
-I can now be found as [@drhayes@indieweb.social](https://indieweb.social/@drhayes). I keep getting attracted to other instances (looking at you <https://hachyderm.io>), but sticking with this one for now.
+I can now be found as [@drhayes@indieweb.social](https://indieweb.social/@drhayes). I'm also thinking about moving to <https://social.lol>, but we'll see.
 
-The other instance I keep looking at is <https://social.lol>. The good news is that I added a [webfinger](https://webfinger.net/) resource to my website, so if you search for `@drhayes@drhayes.io` it'll resolve to my current account. That should make transitioning, should I decide to do it in the future, a breeze.
+I forgot about that little squirt of dopamine one gets when people dig the things you post. That's not great and something I actually want to avoid. Maybe I should turn notifications off for my preferred client.
+
+Speaking of my preferred client, that would be https://elk.zone. Tres cool.
+
+You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm trying to be good about what I'm logging, but no guarantees.
 
 ## Text
 
-I'm finally free of my [Obsidian](https://obsidian.md) obsession! I woke up a couple of days ago, mentally shook myself like a dog shaking water out of its fur, and gratefully went back to TiddlyWiki. If you're also a TiddlyWiki user and can afford it, consider supporting them via [the TiddlyWiki Open Collective](https://opencollective.com/tiddlywiki).
-
-Still thinking about upgrading some [11ty](https://www.11ty.dev/) stuff on the ol' website, especially around webmentions.
+Upgraded the website to the latest 11ty beta, looks like things are okay around here. Thinking about a redesign, getting me out of the corporate straight-and-narrow look.
 
 ## Role-playing Games
 
@@ -28,19 +30,17 @@ We're heading back to City of Mists!
 
 ## Programming
 
-Experimenting with Go and [Charm][]. Is it possible to love a startup because of their TUI libraries? I'm living proof.
+But what about Rust, though?
 
-Still liking [LunarVim](https://www.lunarvim.org) a lot.
+Swapped my config to something more custom, all built off [lazy.nvim](https://github.com/folke/lazy.nvim).
 
 ## Music
 
-ON REPEAT: "Hard Times" by Paramore and "So Just Hang On, Beautiful One" by Au4.
+ON REPEAT: "So Just Hang On, Beautiful One" by Au4 and "Light Cycles" by ShockOne.
 
 Lately.
 
-* Paramore
-* Hunter As a Horse
-* The Beta Machine
+* On a Makeup and Vanity Set kick.
 
 Always.
 
@@ -48,13 +48,6 @@ Always.
 * [Makeup and Vanity Set][mavs]
 * [ACTORS - It Will Come To You][actors]
 * [KANGA - Eternal Daughter and Kanga][kanga] (but, also, basically everything)
-* [Blanck Mass][BlanckMass]
-
-Occasionally.
-
-* Dance with the Dead
-* Holy Fuck
-* Perturbator
 
 
 ## What's this again?
@@ -65,6 +58,4 @@ This is a [Now][nowpage] page. You should have one too.
 [mavs]: https://www.makeupandvanityset.com/
 [actors]: https://www.actorstheband.com/
 [kanga]: https://kanga.bandcamp.com/
-[BlanckMass]: https://www.blanckmass.com/
 [nowpage]: https://nownownow.com/about
-[charm]: https://charm.sh
