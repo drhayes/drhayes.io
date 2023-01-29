@@ -2,6 +2,7 @@
   "name": "drhayes.io",
   "subtitle": "The personal site of David Hayes.",
   "host": "https://drhayes.io",
+  "domain": "drhayes.io",
   "author": {
     "name": "David Hayes",
     "email": "hi@drhayes.io",

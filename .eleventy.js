@@ -3,6 +3,12 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const markdown = require('./lib/library/markdown');
 
 module.exports = (eleventyConfig) => {
+  // Server options.
+  eleventyConfig.setServerOptions({
+    liveReload: true,
+    port: 8081,
+  });
+
   // Markdown stuff.
   eleventyConfig.setLibrary('md', markdown());
 

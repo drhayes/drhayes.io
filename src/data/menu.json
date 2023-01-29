@@ -1,7 +1,6 @@
 [
   { "name": "Now", "url": "/now" },
-  { "name": "Articles", "url": "/articles" },
-  { "name": "Blog", "url": "/blog" },
+  { "name": "Writing", "url": "/writing" },
   { "name": "Games", "url": "/games" },
   { "name": "About", "url": "/about" }
 ]

@@ -375,6 +375,7 @@ svg {
   max-width: min(860px, 100%);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -541,6 +542,10 @@ a.tag:hover {
   align-self: center;
 }
 
+.sub-title {
+  font-size: 125%;
+}
+
 @media screen and (min-width: 720px) {
 
   article {
@@ -606,7 +611,7 @@ a.tag:hover {
   }
 
   .post-links .line {
-    margin-bottom: inherit;
+    margin-bottom: initial;
   }
 
   .about-logo {
