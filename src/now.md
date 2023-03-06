@@ -1,20 +1,14 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2023-01-29
+updated: 2023-03-06
 ---
 
 What I'm doing right now.
 
-## Texas Winter
-
-Now it alternates between kind of cold and kind of wet. Not unpleasantly, mind, but distractingly.
-
 ## Socials
 
 I can now be found as [@drhayes@indieweb.social](https://indieweb.social/@drhayes). I'm also thinking about moving to <https://social.lol>, but we'll see.
-
-I forgot about that little squirt of dopamine one gets when people dig the things you post. That's not great and something I actually want to avoid. Maybe I should turn notifications off for my preferred client.
 
 Speaking of my preferred client, that would be https://elk.zone. Tres cool.
 
@@ -22,11 +16,13 @@ You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm tr
 
 ## Text
 
-Upgraded the website to the latest 11ty beta, looks like things are okay around here. Thinking about a redesign, getting me out of the corporate straight-and-narrow look.
+Still thinking about a site design, haven't gotten around to it.
+
+I was poking around [Zach Leatherman's own homepage](https://github.com/zachleat/zachleat.com) as a way of finding out 11ty features that I might not be aware of. I found the [eleventy-plugin-syntaxhighlight](https://github.com/11ty/eleventy-plugin-syntaxhighlight) project which is *very* interesting. I'm using highlight.js on the server as part of the markdown render right now, but in general I tend to prefer prismjs, which this uses. Hmm!
 
 ## Role-playing Games
 
-We're heading back to City of Mists!
+We're playing Capers, a hack of Masks that emphasizes teenage villains!
 
 ## Programming
 
