@@ -6,7 +6,7 @@
 /* These are Cobalt2 colors: https://wesbos.com/cobalt2-theme-sublime-text-2 */
 html.cobalt2 {
   --text-content-color: #ffffff;
-  --text-contrast-color: #e1efff;
+  --text-contrast-color: #999999;
   --subtext-content-color: #80ff82;
   --background-color: #193549;
   --background-support-color: #1d425d;
