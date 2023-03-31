@@ -8,7 +8,7 @@ module.exports = (eleventyConfig) => {
   // Server options.
   eleventyConfig.setServerOptions({
     liveReload: true,
-    port: 8081,
+    port: 3000,
   });
 
   // Markdown stuff.
