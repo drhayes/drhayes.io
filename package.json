@@ -8,11 +8,13 @@
   "dependencies": {
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-plugin-rss": "1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
     "date-fns": "2.29.3",
     "eleventy-plugin-reading-time": "0.0.1",
+    "eslint": "8.37.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-prettier": "4.2.1",
     "feed": "4.2.2",
-    "highlight.js": "11.7.0",
-    "markdown-it": "13.0.1",
-    "markdown-it-emoji": "2.0.2"
+    "node-fetch": "2.6.9"
   }
 }

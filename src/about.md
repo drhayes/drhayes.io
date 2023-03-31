@@ -27,25 +27,25 @@ In particular, you can email me at <hi@drhayes.io> or [chat me at my Keybase cha
 
 Here are some likely haunts:
 
-* {% meLink 'https://github.com/drhayes', 'github.com/drhayes' %}
-* {% meLink 'https://pinboard.in/u:drhayes', 'Pinboard' %}
-* {% meLink 'https://indieweb.social/@drhayes', '@drhayes@indieweb.social' %}
-* {% meLink 'https://social.lol/@drhayes', 'drhayes@social.lol' %}
-* {% meLink 'https://soundcloud.com/drhayes', 'Soundcloud' %}
-* {% meLink 'https://keybase.io/drhayes', 'Keybase' %}
-* {% meLink 'https://drhayes.tumblr.com', 'Tumblr' %}
-* {% meLink 'https://www.goodreads.com/drhayes', 'Goodreads' %}
+- {% meLink 'https://github.com/drhayes', 'github.com/drhayes' %}
+- {% meLink 'https://pinboard.in/u:drhayes', 'Pinboard' %}
+- {% meLink 'https://indieweb.social/@drhayes', '@drhayes@indieweb.social' %}
+- {% meLink 'https://social.lol/@drhayes', 'drhayes@social.lol' %}
+- {% meLink 'https://soundcloud.com/drhayes', 'Soundcloud' %}
+- {% meLink 'https://keybase.io/drhayes', 'Keybase' %}
+- {% meLink 'https://drhayes.tumblr.com', 'Tumblr' %}
+- {% meLink 'https://www.goodreads.com/drhayes', 'Goodreads' %}
 
 ## Colophon
 
 This site is generated in [Eleventy].
 
-* [Here is the site's git repository.][site]
-* [neovim] is where the typing happens.
-* [Markdown] has the content.
-* [GitHub] hosts the code.
-* [Netlify] hosts the site.
-* The color palette is mostly [Nord].
+- [Here is the site's git repository.][site]
+- [neovim] is where the typing happens.
+- [Markdown] has the content.
+- [GitHub] hosts the code.
+- [Netlify] hosts the site.
+- The color palette is mostly [cobalt2].
 
 [site]: https://github.com/drhayes/drhayes.io
 [vim]: https://www.vim.org/
@@ -56,4 +56,4 @@ This site is generated in [Eleventy].
 [keybasechat]: https://keybase.io/drhayes/chat
 [eleventy]: https://www.11ty.dev/
 [neovim]: https://neovim.io/
-[nord]: https://www.nordtheme.com/docs/colors-and-palettes
+[cobalt2]: https://wesbos.com/cobalt2-theme-sublime-text-2

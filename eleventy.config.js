@@ -1,6 +1,7 @@
 const readingTime = require('eleventy-plugin-reading-time');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const markdown = require('./lib/library/markdown');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+// const markdown = require('./lib/library/markdown');
 
 module.exports = (eleventyConfig) => {
   // Server options.
@@ -10,7 +11,7 @@ module.exports = (eleventyConfig) => {
   });
 
   // Markdown stuff.
-  eleventyConfig.setLibrary('md', markdown());
+  // eleventyConfig.setLibrary('md', markdown());
 
   // Deep data merge!
   eleventyConfig.setDataDeepMerge(true);
@@ -21,21 +22,34 @@ module.exports = (eleventyConfig) => {
   // Plugins.
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // Filters.
   eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
   eleventyConfig.addFilter('debugPrint', require('./lib/filters/debugPrint'));
-  eleventyConfig.addFilter('isBigLetterPage', require('./lib/filters/isBigLetterPage.js'));
+  eleventyConfig.addFilter(
+    'isBigLetterPage',
+    require('./lib/filters/isBigLetterPage.js')
+  );
   eleventyConfig.addFilter('tagFilter', require('./lib/filters/tagFilter'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
 
   // Shortcodes.
-  eleventyConfig.addNunjucksShortcode('gameScreenshot', require('./lib/shortcodes/gameScreenshot'));
-  eleventyConfig.addNunjucksShortcode('meLink', require('./lib/shortcodes/meLink'));
+  eleventyConfig.addNunjucksShortcode(
+    'gameScreenshot',
+    require('./lib/shortcodes/gameScreenshot')
+  );
+  eleventyConfig.addNunjucksShortcode(
+    'meLink',
+    require('./lib/shortcodes/meLink')
+  );
 
   // Collections.
   eleventyConfig.addCollection('games', require('./lib/collections/games'));
-  eleventyConfig.addCollection('principles', require('./lib/collections/principles'));
+  eleventyConfig.addCollection(
+    'principles',
+    require('./lib/collections/principles')
+  );
 
   // Static stuff.
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');

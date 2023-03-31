@@ -1,8 +1,150 @@
-pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
-  Theme: Tokyo-night-Dark
-  origin: https://github.com/enkia/tokyo-night-vscode-theme
-  Description: Original highlight.js style
-  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
-  License: see project LICENSE
-  Touched: 2022
-*/.hljs-comment,.hljs-meta{color:#565f89}.hljs-deletion,.hljs-doctag,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-tag,.hljs-template-tag,.hljs-variable.language_{color:#f7768e}.hljs-link,.hljs-literal,.hljs-number,.hljs-params,.hljs-template-variable,.hljs-type,.hljs-variable{color:#ff9e64}.hljs-attribute,.hljs-built_in{color:#e0af68}.hljs-keyword,.hljs-property,.hljs-subst,.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#7dcfff}.hljs-selector-tag{color:#73daca}.hljs-addition,.hljs-bullet,.hljs-quote,.hljs-string,.hljs-symbol{color:#9ece6a}.hljs-code,.hljs-formula,.hljs-section{color:#7aa2f7}.hljs-attr,.hljs-char.escape_,.hljs-keyword,.hljs-name,.hljs-operator{color:#bb9af7}.hljs-punctuation{color:#c0caf5}.hljs{background:#1a1b26;color:#9aa5ce}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+/*
+  * Based on Plugin: Tokyo Night Dark VSCode theme
+  * Reference: https://github.com/enkia/tokyo-night-vscode-theme
+  * Plugin URI: http://wp.tutsplus.com/tutorials/plugins/adding-a-syntax-highlighter-shortcode-using-prism-js
+  * Description: Highlight your code snippets with an easy to use shortcode based on Tokyonight
+  * Version: 1.0.0
+  * Author: Enkia
+  * Author URI: https://github.com/enkia
+  * adapter: Vanderscycle
+  * Adapter URI:  https://github.com/Vanderscycle
+  */
+
+/* =====   ===== */
+@import url(https://fonts.google.com/specimen/JetBrains+Mono?query=jet#standard-styles);
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #fff;
+  text-shadow: 0 1px 1px #000;
+  font-family: "JetBrains Mono", Menlo, Monaco, "Courier New", monospace;
+  direction: ltr;
+  text-align: left;
+  word-spacing: normal;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: 1.4;
+  background: none;
+  border: 0;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"] code {
+  float: left;
+  padding: 0 15px 0 0;
+}
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+  background: #1a1b26;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 15px;
+  margin: 1em 0;
+  overflow: auto;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 5px 10px;
+  line-height: 1;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #565f89;
+}
+
+.token.selector,
+.token.operator,
+.token.punctuation {
+  color: #7dcfff;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.tag,
+.token.boolean {
+  color: #ffd893;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.hex,
+.token.string {
+  color: #9ece6a;
+}
+
+.token.property,
+.token.entity,
+.token.url,
+.token.attr-name,
+.token.keyword {
+  color: #7dcfff;
+}
+
+.token.regex {
+  color: #b4f9f8;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.function,
+.token.constant {
+  color: #7aa2f7;
+}
+
+.token.variable {
+  color: #c0caf5;
+}
+
+.token.number {
+  color: #ff9e64;
+}
+
+.token.important,
+.token.deliminator {
+  color: #e45734;
+}
+
+/* Line highlight plugin */
+.line-highlight.line-highlight {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.line-highlight.line-highlight:before,
+.line-highlight.line-highlight[data-end]:after {
+  top: 0.3em;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #a9b1d6;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* for line numbers */
+/* span instead of span:before for a two-toned border */
+.line-numbers .line-numbers-rows > span {
+  border-right: 3px #d9d336 solid;
+}
