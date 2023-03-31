@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "ELEVENTY_ENV=development eleventy --serve"
   },
   "dependencies": {
     "@11ty/eleventy": "2.0.1",
@@ -17,7 +17,6 @@
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
     "feed": "4.2.2",
-    "node-fetch": "2.6.9",
-    "sass": "1.60.0"
+    "node-fetch": "2.6.9"
   }
 }

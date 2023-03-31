@@ -3,6 +3,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const webmentionsConfig = require('./lib/webmentions.js');
 const pluginWebmentions = require('@chrisburnell/eleventy-cache-webmentions');
+const pluginSass = require('eleventy-sass');
 
 module.exports = (eleventyConfig) => {
   // Server options.
@@ -25,6 +26,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginWebmentions, webmentionsConfig);
+  eleventyConfig.addPlugin(pluginSass);
 
   // Filters.
   eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
@@ -60,7 +62,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('./src/key.txt');
   eleventyConfig.addPassthroughCopy('./src/keybase.txt');
   eleventyConfig.addPassthroughCopy('./src/twtxt.txt');
-  eleventyConfig.addPassthroughCopy('./css/**/*');
   eleventyConfig.addPassthroughCopy('./fonts/**/*');
 
   // What are watching for changes?
