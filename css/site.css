@@ -64,14 +64,14 @@ html.light {
 }
 
 body {
+  padding: 0;
+  margin: 0;
   visibility: var(--styles-loaded);
   font-family: var(--body-font);
   font-size: 18px;
   line-height: 1.6;
   background-color: var(--background-color);
   color: var(--text-content-color);
-  padding: 0;
-  margin: 0;
 }
 
 strong {
@@ -241,7 +241,6 @@ nav {
 
 nav .menu {
   display: flex;
-  flex-direction: column;
   max-width: min(860px, 100%);
   margin-left: auto;
   margin-right: auto;
@@ -266,8 +265,8 @@ header h1 {
   max-width: min(860px, 100%);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0.2em;
-  font-size: 150%;
+  margin-bottom: 0.5em;
+  font-size: 200%;
   border-bottom: 3px dotted var(--text-contrast-color);
 }
 
@@ -423,7 +422,7 @@ svg {
 
 .post-links .line {
   display: flex;
-  margin-bottom: 1em;
+  margin-bottom: 0.2em;
 }
 
 .post-links .line .date {
@@ -624,15 +623,6 @@ a.tag:hover {
 
   nav {
     padding: 1rem 0;
-  }
-
-  nav .menu {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  header h1 {
-    font-size: 200%;
   }
 
   html .front-page > .horizontal-center:first-child {

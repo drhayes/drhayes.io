@@ -1,10 +1,8 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2023-03-06
+updated: 2023-03-31
 ---
-
-What I'm doing right now.
 
 ## Socials
 
@@ -16,9 +14,9 @@ You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm tr
 
 ## Text
 
-Still thinking about a site design, haven't gotten around to it.
+Still thinking about a site redesign, haven't gotten around to it.
 
-I was poking around [Zach Leatherman's own homepage](https://github.com/zachleat/zachleat.com) as a way of finding out 11ty features that I might not be aware of. I found the [eleventy-plugin-syntaxhighlight](https://github.com/11ty/eleventy-plugin-syntaxhighlight) project which is _very_ interesting. I'm using highlight.js on the server as part of the markdown render right now, but in general I tend to prefer prismjs, which this uses. Hmm!
+I found the [eleventy-plugin-syntaxhighlight](https://github.com/11ty/eleventy-plugin-syntaxhighlight) project courtesy of [zachleat](https://zachleat.com) and recently converted my site to use that. Just after I finished that I found [Torchlight](https://torchlight.dev/), which seems kinda cool but I'm not sure I need it or want to get some highlight-as-a-service thing going.
 
 ## Role-playing Games
 
