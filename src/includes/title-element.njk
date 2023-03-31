@@ -1,23 +1,32 @@
 <header>
   <div class="times">
     {% if date %}
-      <time datetime="{{ date | dateFormat(true) }}">{{ date | dateFormat }}</time>
+      <time datetime="{{ date | dateFormat(true) }}" class="dt-published">{{ date | dateFormat }}</time>
     {% endif %}
     {% if updated %}
-      <time datetime="{{ updated | dateFormat(true) }}">(Updated: {{ updated | dateFormat }})</time>
+      <time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">(Updated: {{ updated | dateFormat }})</time>
     {% endif %}
     {% if draft %}
       {% include "draft-badge.njk" %}
     {% endif %}
   </div>
-  <h1>{{ title }}</h1>
+
+  <h1 class="p-name">{{ title }}</h1>
+
   {% if tags %}
   <div class="tags-container">
     <ul class="tags">
       {% for tag in tags | tagFilter %}
-        <li><a href="/tags/{{ tag | slugify }}" class="tag">{{ tag }}</a></li>
+        <li><a href="/tags/{{ tag | slugify }}" class="tag p-category" rel="category tag">{{ tag }}</a></li>
       {% endfor %}
     </ul>
   </div>
   {% endif %}
+
+  {% if description %}
+  <p class="summary p-summary">
+    {{ description }}
+  </p>
+  {% endif %}
+
 </header>

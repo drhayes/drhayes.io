@@ -4,11 +4,11 @@
 
 {% block content %}
 {% include 'header.njk' %}
-<main class=''>
+<main class='h-entry'>
 
   {% include 'title-element.njk' %}
 
-  <article class='article-content {% if tags | isBigLetterPage -%}big-letter{%- endif -%}'>
+  <article class='article-content {% if tags | isBigLetterPage -%}big-letter{%- endif -%} e-content'>
     {{ content | safe }}
   </article>
 
