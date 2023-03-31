@@ -1,7 +1,8 @@
 const readingTime = require('eleventy-plugin-reading-time');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-// const markdown = require('./lib/library/markdown');
+const webmentionsConfig = require('./lib/webmentions.js');
+const pluginWebmentions = require('@chrisburnell/eleventy-cache-webmentions');
 
 module.exports = (eleventyConfig) => {
   // Server options.
@@ -23,6 +24,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(pluginWebmentions, webmentionsConfig);
 
   // Filters.
   eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
