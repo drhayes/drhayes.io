@@ -2,6 +2,9 @@
 title: Neovim, Mason, and LSPs oh my!
 date: 2023-03-22
 description: A tale of crashing LSPs and exploding logs.
+tags:
+  - editors
+  - neovim
 ---
 
 There's this one project at work that I was having trouble editing in Neovim... and by trouble, I mean I was getting repeated and near-constant notifications that my language servers were crashing once they attached to the buffer I was editing.
@@ -31,13 +34,13 @@ None of the projects involved had issues mentioning this problem.
 
 With the benefit of hindsight, I can lay out all the actors in this little stage-play:
 
-* [Neovim](https://neovim.io/), my editor.
-* `asdf` managing my many node versions.
-* `Mason` managing my LSPs.
-* `typescript-language-server` (among others).
-* [zbirenbaum's excellent lua-only Copilot plugin](https://github.com/zbirenbaum/copilot.lua).
+- [Neovim](https://neovim.io/), my editor.
+- `asdf` managing my many node versions.
+- `Mason` managing my LSPs.
+- `typescript-language-server` (among others).
+- [zbirenbaum's excellent lua-only Copilot plugin](https://github.com/zbirenbaum/copilot.lua).
 
-Now, I'm sure `:checkhealth` was screaming at me but the *multiple* times I ran it I could find nothing. But I bet, somewhere in there, Mason was trying to tell me that its minimum node version is 14. Not 12. And it's not alone, tons of these tools require newer versions of node.
+Now, I'm sure `:checkhealth` was screaming at me but the _multiple_ times I ran it I could find nothing. But I bet, somewhere in there, Mason was trying to tell me that its minimum node version is 14. Not 12. And it's not alone, tons of these tools require newer versions of node.
 
 Aha!
 
@@ -57,6 +60,6 @@ end
 
 [Here's that code in the context of my larger neovim config.](https://github.com/drhayes/neovim-config/blob/40b0c04b65af8f63d45e32a8cf837dc44e396e93/init.lua#L1-L7)
 
-I'm running fish, so I did a quick `set -Ux NEOVIM_NODE_VERSION 19.18.1` and *voila*! Everything worked.
+I'm running fish, so I did a quick `set -Ux NEOVIM_NODE_VERSION 19.18.1` and _voila_! Everything worked.
 
 Hopefully I've stuffed this with enough keywords that some other poor soul finds this.
