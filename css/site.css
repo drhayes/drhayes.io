@@ -280,6 +280,10 @@ header h1:after {
   border-bottom: 3px dotted var(--text-contrast-color);
 }
 
+header h1 a {
+  text-decoration: none;
+}
+
 header .times {
   color: var(--subtext-content-color);
   max-width: min(860px, 100%);

@@ -8,7 +8,7 @@
 
   {% include 'title-element.njk' %}
 
-  <article class='article-content {% if tags | isBigLetterPage -%}big-letter{%- endif -%} e-content'>
+  <article class="article-content {% if tags | isBigLetterPage -%}big-letter{%- endif %} e-content">
     {{ content | safe }}
   </article>
 

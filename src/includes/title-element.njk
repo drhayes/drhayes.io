@@ -11,7 +11,15 @@
     {% endif %}
   </div>
 
-  <h1 class="p-name">{{ title }}</h1>
+  <h1 class="p-name">
+    {% if page.url %}
+      <a href="{{ page.url }}" class="u-url">
+    {% endif %}
+      {{ title }}
+    {% if page.url %}
+      </a>
+    {% endif %}
+  </h1>
 
   {% if tags %}
   <div class="tags-container">
