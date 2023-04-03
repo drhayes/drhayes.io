@@ -64,8 +64,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('./src/twtxt.txt');
   eleventyConfig.addPassthroughCopy('./fonts/**/*');
 
-  // What are watching for changes?
-  eleventyConfig.addWatchTarget('./css/**/*');
+  // What are we watching for changes?
+  eleventyConfig.addWatchTarget('./src/css/**/*');
 
   return {
     dir: {

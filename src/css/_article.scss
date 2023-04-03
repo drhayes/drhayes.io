@@ -1,0 +1,102 @@
+article {
+  max-width: min(860px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5 {
+  position: relative;
+  margin-top: 1em;
+  font-family: var(--heading-font);
+  font-weight: bold;
+  color: var(--heading-color);
+  clear: both;
+}
+
+article h2 {
+  font-size: 140%;
+}
+
+article h3 {
+  font-size: 120%;
+}
+
+article h4 {
+  font-size: 108%;
+}
+
+article p {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+article ul {
+  margin-left: 1em;
+  list-style-type: initial;
+}
+
+article ol {
+  margin-left: 1em;
+  list-style-type: initial;
+  counter-reset: li;
+}
+
+article ul li,
+article ol li {
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+  line-height: 1.6;
+}
+
+article > ul,
+article > ol {
+  margin-top: 1em;
+}
+
+article ul li::marker {
+  color: var(--heading-color);
+  line-height: 1;
+}
+
+article ol li {
+  counter-increment: li;
+}
+
+article ol li::before {
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  content: counter(li);
+  text-align: right;
+  direction: rtl;
+  color: var(--heading-color);
+}
+
+article > pre {
+  overflow: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+article iframe {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 720px) {
+  article {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  article .tag-list .tag-item::before {
+    display: none;
+  }
+}

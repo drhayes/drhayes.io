@@ -1,0 +1,63 @@
+:root {
+  --body-font: 'Source Code Pro', monospace;
+  --heading-font: 'Rubik', sans-serif;
+}
+
+/* These are Cobalt2 colors: https://wesbos.com/cobalt2-theme-sublime-text-2 */
+html.cobalt2 {
+  --text-content-color: #ffffff;
+  --text-contrast-color: #999999;
+  --subtext-content-color: #80ff82;
+  --background-color: #193549;
+  --background-support-color: #1d425d;
+  --heading-color: #edef7d;
+  --heading-support-color: #edba00;
+  --link-color-normal: #2eff00;
+  --link-color-hover: #5fe461;
+  --light-border-color: #1d425d;
+  --blockquote-border-color: #3ad900;
+  --blockquote-background-color: #1f4662;
+  --inline-code-color: #9df39f;
+  --draft-badge-color: #333333;
+  --draft-badge-background: #b8ffd9;
+}
+
+/* These are Nord colors: https://www.nordtheme.com/docs/colors-and-palettes */
+html.nord {
+  --text-content-color: #eceff4;
+  --text-contrast-color: #4c566a;
+  --subtext-content-color: #5e81ac;
+  --background-color: #2e3440;
+  --background-support-color: #3b4252;
+  --heading-color: #88c0d0;
+  --heading-support-color: #4c566a;
+  --link-color-normal: #8fbcbb;
+  --link-color-hover: #88c0d0;
+  --light-border-color: #434c5e;
+  --blockquote-border-color: #a3be8c;
+  --blockquote-background-color: #3b4252;
+  --inline-code-color: #ebcb8b;
+  --draft-badge-color: #2e3440;
+  --draft-badge-background: #88c0d0;
+}
+
+html.light {
+  --text-content-color: rgb(16, 16, 16);
+  --text-contrast-color: rgb(255, 255, 255);
+  --subtext-content-color: rgb(0 0 0 / 80%);
+  --background-color: rgb(255, 255, 255);
+  --heading-color: rgb(132, 0, 0);
+  --link-color-normal: rgb(96, 165, 221);
+  --link-color-hover: rgb(96, 165, 221);
+  --light-border-color: rgb(255 255 255 / 20%);
+  --blockquote-border-color: #4682b4b8;
+  --blockquote-background-color: #f9f9ff;
+  --inline-code-color: #ebcb8b;
+  --draft-badge-color: #2e3440;
+  --draft-badge-background: #88c0d0;
+}
+
+::selection {
+  color: var(--text-contrast-color);
+  background-color: var(--heading-color);
+}
