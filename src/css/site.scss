@@ -6,6 +6,7 @@
 @use '_base';
 @use '_article';
 @use '_nav';
+@use '_front-page';
 
 header {
   padding-left: 0.5rem;
@@ -99,10 +100,6 @@ svg {
   fill: var(--text-content-color);
 }
 
-.front-page > .horizontal-center:first-child {
-  margin-top: 8rem;
-}
-
 .vertical-center {
   display: flex;
   flex-direction: column;
@@ -118,32 +115,6 @@ svg {
   align-items: center;
 }
 
-.front-page .logo {
-  width: 240px;
-  overflow: hidden;
-}
-
-.front-page h1 {
-  color: var(--text-content-color);
-  font-size: 150%;
-  font-weight: bold;
-  line-height: 1.75;
-}
-
-.front-page h2 {
-  color: var(--text-content-color);
-}
-
-.front-page .site-menu {
-  display: flex;
-  flex-direction: row;
-  margin-top: 2rem;
-}
-
-.front-page .site-menu li {
-  padding: 0 1rem;
-}
-
 .absolute-bottom {
   /* margin-top: auto; */
   position: absolute;
@@ -155,12 +126,6 @@ svg {
 
 .dim-a-lot a {
   color: var(--heading-color);
-}
-
-.front-page footer ul {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
 }
 
 .post-links {
@@ -335,14 +300,6 @@ a.tag:hover {
 }
 
 @media screen and (min-width: 720px) {
-  .front-page h1 {
-    font-size: 300%;
-  }
-
-  .front-page h2 {
-    font-size: 150%;
-  }
-
   html .front-page > .horizontal-center:first-child {
     margin-top: 8rem;
   }

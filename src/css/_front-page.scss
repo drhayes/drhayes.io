@@ -1,0 +1,49 @@
+.front-page {
+  & > .horizontal-center:first-child {
+    margin-top: 8rem;
+  }
+
+  .logo {
+    width: 240px;
+    overflow: hidden;
+  }
+
+  h1 {
+    color: var(--text-content-color);
+    font-size: 150%;
+    font-weight: bold;
+    line-height: 1.75;
+  }
+
+  h2 {
+    color: var(--text-content-color);
+  }
+
+  .site-menu {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+
+    li {
+      padding: 0 1rem;
+    }
+  }
+
+  footer {
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1em;
+    }
+  }
+
+  @include for-phone-only {
+    h1 {
+      font-size: 300%;
+    }
+
+    h2 {
+      font-size: 150%;
+    }
+  }
+}
