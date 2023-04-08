@@ -7,76 +7,61 @@
 @use '_nav';
 @use '_front-page';
 
-header {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
+// header h1:after {
+//   display: block;
+//   content: '';
+//   width: 100%;
+//   position: absolute;
+//   bottom: 3px;
+//   border-bottom: 3px dotted var(--text-contrast-color);
+// }
 
-header h1 {
-  position: relative;
-  max-width: min(860px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5em;
-  font-size: 200%;
-  border-bottom: 3px dotted var(--text-contrast-color);
-}
+// header h1 a {
+//   text-decoration: none;
+// }
 
-header h1:after {
-  display: block;
-  content: '';
-  width: 100%;
-  position: absolute;
-  bottom: 3px;
-  border-bottom: 3px dotted var(--text-contrast-color);
-}
+// header .times {
+//   color: var(--subtext-content-color);
+//   max-width: min(860px, 100%);
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: 1em;
+//   font-size: 80%;
+// }
 
-header h1 a {
-  text-decoration: none;
-}
+// header .tags {
+//   display: flex;
+//   flex-wrap: wrap;
+//   max-width: min(860px, 100%);
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: 1.5em;
+//   color: var(--subtext-content-color);
+// }
 
-header .times {
-  color: var(--subtext-content-color);
-  max-width: min(860px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
-  font-size: 80%;
-}
+// header .tags li {
+//   margin-right: 1em;
+// }
 
-header .tags {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: min(860px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em;
-  color: var(--subtext-content-color);
-}
+// header .tags li::before {
+//   content: '#';
+// }
 
-header .tags li {
-  margin-right: 1em;
-}
+// header .summary {
+//   max-width: min(860px, 100%);
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding: 0 0 0 1em;
+//   font-family: var(--heading-font);
+//   font-size: 125%;
+//   font-style: italic;
+// }
 
-header .tags li::before {
-  content: '#';
-}
-
-header .summary {
-  max-width: min(860px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 0 0 1em;
-  font-family: var(--heading-font);
-  font-size: 125%;
-  font-style: italic;
-}
-
-footer {
-  background-color: var(--background-support-color);
-  padding: 2rem 0;
-  margin-top: 3rem;
-}
+// footer {
+//   background-color: var(--background-support-color);
+//   padding: 2rem 0;
+//   margin-top: 3rem;
+// }
 
 footer .webring {
   display: flex;
