@@ -11,7 +11,7 @@ nav {
 
   .menu {
     display: flex;
-    max-width: min(860px, 100%);
+    max-width: min(72rem, 100%);
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -24,9 +24,13 @@ nav {
         text-decoration: none;
       }
 
-      .home-link {
-        margin-right: 3em;
-        font-size: 200%;
+      &.site-link {
+        flex: 1 0 auto;
+        margin-right: 3rem;
+
+        .home-link {
+          font-size: 200%;
+        }
       }
     }
   }

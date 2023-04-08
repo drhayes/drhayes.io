@@ -80,10 +80,6 @@ footer .cc {
   font-size: 80%;
 }
 
-svg {
-  fill: var(--text-content-color);
-}
-
 .vertical-center {
   display: flex;
   flex-direction: column;
@@ -165,49 +161,6 @@ svg {
   margin-right: inherit;
   border: none;
   float: none;
-}
-
-.games-list {
-  margin: 0;
-  list-style-type: none;
-}
-
-.games-list .game-item .game-screenshot {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 16rem;
-  background-size: cover;
-  background-position: center;
-}
-
-.games-list .game-item a {
-  text-decoration: none;
-}
-
-.games-list .game-item h1 {
-  color: var(--inline-code-color);
-  font-weight: bold;
-  font-size: 175%;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  text-shadow: 0 0 15px rgb(0 0 0 / 100%);
-}
-
-.article-content .game-screenshot {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.game-screenshot img {
-  width: 100%;
-}
-
-.game-screenshot figcaption {
-  width: 100%;
-  font-size: 80%;
-  text-align: center;
 }
 
 a.tag {
