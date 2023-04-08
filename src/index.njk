@@ -3,30 +3,30 @@ title: Hi there!
 layout: base.njk
 ---
 
-<style>
-</style>
+<main class="front-page">
 
-<section class="front-page vertical-center">
-  <div class="horizontal-center h-card">
+  {% include 'header.njk' %}
+
+  <header class="h-card">
+    <h1>
+      <span class="greeting">Hi there.</span>
+      <span class="wave">👋🏽</span>
+    </h1>
+    <h2>My name is <a href="https://drhayes.io" class="p-name u-url u-uid" rel="me">David Hayes</a>.</h2>
+    <h2>I get called <span class="p-nickname">drhayes</span> a lot.</h2>
+    <h2><a href="mailto:hi@drhayes.io" class="u-email">hi@drhayes.io</a></h2>
     <div class="logo">
       {% include "raven.svg" %}
     </div>
-    <div class="greeting-text">
-      <h1>Hi. 👋🏽</h1>
-      <h2>My name is <a href="https://drhayes.io" class="p-name u-url u-uid" rel="me">David Hayes</a>.</h2>
-      <h2><a href="mailto:hi@drhayes.io" class="u-email">hi@drhayes.io</a></h2>
-      <h2>I do stuff with computers.</h2>
-    </div>
-  </div>
-  <div class="horizontal-center">
-    <ul class="site-menu">
-      {% for item in menu %}
-        <li>
-          <a href="{{ item.url }}">{{ item.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+  </header>
+
+  <section>
+    <p>I do stuff with computers.</p>
+    <p>I focus on user experience, mentoring, and generally trying to figure out how things work so I can better explain them to other people.</p>
+    <p>Like a helpful know-it-all.</p>
+    <p>P.S. I'm not a doctor, I only play one on the Internet.</p>
+  </section>
+
   <footer class="absolute-bottom dim-a-lot horizontal-center">
     <ul>
       <li>
@@ -40,4 +40,5 @@ layout: base.njk
       </li>
     </ul>
   </footer>
-</section>
+
+</main>

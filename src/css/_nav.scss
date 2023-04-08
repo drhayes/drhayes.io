@@ -1,3 +1,5 @@
+@use '_breakpoints';
+
 nav {
   background-color: var(--background-support-color);
   padding: 1rem 0.5rem;
@@ -5,32 +7,31 @@ nav {
   font-family: var(--heading-font);
   font-weight: bold;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-}
+  letter-spacing: -0.05em;
 
-nav .menu {
-  display: flex;
-  max-width: min(860px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-}
+  .menu {
+    display: flex;
+    max-width: min(860px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
 
-nav .menu li {
-  margin-right: 1em;
-}
+    li {
+      margin-right: 1em;
 
-nav .menu li a {
-  font-weight: bold;
-  text-decoration: none;
-}
+      a {
+        font-weight: bold;
+        text-decoration: none;
+      }
 
-nav .menu li .home-link {
-  margin-right: 3em;
-  font-size: 200%;
-}
+      .home-link {
+        margin-right: 3em;
+        font-size: 200%;
+      }
+    }
+  }
 
-@media screen and (min-width: 720px) {
-  nav {
-    padding: 1rem 0;
+  @include breakpoints.for-tablet-portrait-up {
+    padding: 1rem;
   }
 }

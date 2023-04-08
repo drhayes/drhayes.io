@@ -1,5 +1,4 @@
 @use '_reset';
-@use '_breakpoints';
 @use '_tokyo-night-dark';
 @use '_fonts';
 @use '_theme';
@@ -107,21 +106,6 @@ svg {
   justify-content: stretch;
   max-width: 100%;
   height: 100vh;
-}
-
-.horizontal-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.absolute-bottom {
-  /* margin-top: auto; */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 75%;
 }
 
 .dim-a-lot a {
@@ -302,10 +286,6 @@ a.tag:hover {
 @media screen and (min-width: 720px) {
   html .front-page > .horizontal-center:first-child {
     margin-top: 8rem;
-  }
-
-  .absolute-bottom {
-    font-size: inherit;
   }
 
   .post-links {

@@ -46,7 +46,7 @@ html.light {
   --text-contrast-color: rgb(255, 255, 255);
   --subtext-content-color: rgb(0 0 0 / 80%);
   --background-color: rgb(255, 255, 255);
-  --heading-color: rgb(132, 0, 0);
+  --heading-color: var(--text-content-color);
   --link-color-normal: rgb(96, 165, 221);
   --link-color-hover: rgb(96, 165, 221);
   --light-border-color: rgb(255 255 255 / 20%);
