@@ -1,11 +1,19 @@
 @font-face {
   font-family: 'Source Code Pro';
-  src: url('/fonts/source-code-pro/SourceCodePro-VariableFont_wght.ttf');
+  src: url('/fonts/source-code-pro/SourceCodePro-Medium.otf.woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('/fonts/rubik/Rubik-VariableFont_wght.ttf');
+  src: url('/fonts/rubik/Rubik-Regular.woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-Bold.woff2');
+  font-weight: bold;
   font-display: swap;
 }
