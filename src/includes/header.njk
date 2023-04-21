@@ -12,7 +12,7 @@
       <summary>{% include "hamburger.svg" %}</summary>
       <ul>
         {% for item in menu %}
-        <li class="hamburger">
+        <li>
           <a href="{{ item.url }}">{{ item.name }}</a>
         </li>
         {% endfor %}
