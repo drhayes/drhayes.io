@@ -1,12 +1,22 @@
 <nav class="header">
-  <ul class="menu">
-    <li class="site-link">
-      <a href="/" class="home-link">drhayes.io</a>
-    </li>
+  <a href="/" class="home-link">drhayes.io</a>
+  <ul class="menu open-face">
     {% for item in menu %}
       <li>
         <a href="{{ item.url }}">{{ item.name }}</a>
       </li>
     {% endfor %}
   </ul>
+  <div class="hamburger">
+    <details>
+      <summary>{% include "hamburger.svg" %}</summary>
+      <ul>
+        {% for item in menu %}
+        <li class="hamburger">
+          <a href="{{ item.url }}">{{ item.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+  </div>
 </nav>

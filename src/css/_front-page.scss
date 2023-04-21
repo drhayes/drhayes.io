@@ -23,7 +23,7 @@
     h1 {
       margin: 0;
       letter-spacing: -0.05em;
-      font-size: min(18vw, 8rem);
+      font-size: min(16vw, 8rem);
 
       .greeting {
         @include rainbow-text;
@@ -72,6 +72,7 @@
 
     p {
       margin-bottom: 1em;
+      text-align: center;
     }
   }
 
