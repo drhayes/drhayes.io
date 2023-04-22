@@ -7,7 +7,7 @@
   font-family: var(--heading-font);
   font-weight: bold;
   letter-spacing: -0.05em;
-  padding: 0 1em;
+  padding: 0.2em 1em;
 
   .home-link {
     font-size: 1.5rem;
@@ -19,33 +19,34 @@
   }
 
   .hamburger {
-    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+  }
 
-    details {
-      summary {
-        width: 100%;
-        font-size: 2rem;
-        text-align: right;
+  ul.hamburger-menu {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
+    padding: 0.5em;
+    min-width: 10ch;
 
-        &::marker {
-          display: none;
-          content: '';
-        }
-      }
+    &.is-open {
+      display: block;
+      background-color: var(--background-support-color);
+      border: 1px solid var(--light-border-color);
+      border-radius: 0.5em;
+    }
 
-      ul {
-        padding: 0.5em;
-
-        li {
-          margin-bottom: 0.2em;
-          text-align: right;
-        }
-      }
+    li {
+      margin-bottom: 0.2em;
     }
   }
 
   @include breakpoints.for-tablet-portrait-up {
-    padding: 1rem 0;
+    padding: 1rem;
 
     .open-face {
       display: block;
@@ -61,6 +62,7 @@
       gap: 1em;
       font-weight: bold;
       text-decoration: none;
+      align-items: center;
     }
   }
 }

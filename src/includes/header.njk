@@ -7,16 +7,12 @@
       </li>
     {% endfor %}
   </ul>
-  <div class="hamburger">
-    <details>
-      <summary>{% include "hamburger.svg" %}</summary>
-      <ul>
-        {% for item in menu %}
-        <li>
-          <a href="{{ item.url }}">{{ item.name }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </details>
-  </div>
+  <button class="hamburger">{% include "hamburger.svg" %}</button>
+  <ul class="hamburger-menu">
+    {% for item in menu %}
+    <li>
+      <a href="{{ item.url }}">{{ item.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </nav>
