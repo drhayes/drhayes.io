@@ -25,7 +25,7 @@ I can be found pretty much everywhere fine Internets are made as `drhayes` or so
 
 In particular, you can email me at <hi@drhayes.io> or [chat me at my Keybase chat][keybasechat] or [at my Telegram address you weirdo][telegram].
 
-You could also use my [public inbox](https://lists.sr.ht/~drhayes/public-inbox) or email me at <~drhayes/public-inbox@lists.sr.ht> to get a post started.
+You could also use my [public inbox](https://lists.sr.ht/~drhayes/public-inbox) or email me at <~drhayes/public-inbox@lists.sr.ht> to get a post started. It's this idea that I found via [Eric Bower](https://bower.sh/) that I thought I'd try out.
 
 Here are some likely haunts:
 
