@@ -8,7 +8,7 @@
   "dependencies": {
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-plugin-rss": "1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
     "@chrisburnell/eleventy-cache-webmentions": "1.1.5",
     "date-fns": "2.30.0",
     "eleventy-plugin-reading-time": "0.0.1",
