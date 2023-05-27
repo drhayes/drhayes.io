@@ -1,0 +1,33 @@
+aside {
+  position: relative;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid var(--light-border-color);
+  border-radius: 0.5em;
+  background-color: var(--background-color);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+
+  &::before {
+    position: absolute;
+    content: '<aside>';
+    top: -0.8em;
+    left: 1em;
+    font-size: 0.8rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--light-border-color);
+  }
+
+  &::after {
+    position: absolute;
+    content: '</aside>';
+    bottom: -0.8em;
+    right: 1em;
+    font-size: 0.8rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--light-border-color);
+  }
+}

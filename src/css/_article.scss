@@ -97,6 +97,7 @@
   ul {
     margin-left: calc(2em - 2px);
     list-style-type: initial;
+    counter-reset: li;
   }
 
   ol {
