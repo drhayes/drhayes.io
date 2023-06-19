@@ -12,7 +12,7 @@
     "@chrisburnell/eleventy-cache-webmentions": "1.1.5",
     "date-fns": "2.30.0",
     "eleventy-plugin-reading-time": "0.0.1",
-    "eslint": "8.40.0",
+    "eslint": "8.43.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
     "feed": "4.2.2"
