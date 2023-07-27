@@ -30,13 +30,12 @@ You could also use my [public inbox](https://lists.sr.ht/~drhayes/public-inbox) 
 Here are some likely haunts:
 
 - {% meLink 'https://github.com/drhayes', 'github.com/drhayes' %}
-- {% meLink 'https://pinboard.in/u:drhayes', 'Pinboard' %}
-- {% meLink 'https://indieweb.social/@drhayes', '@drhayes@indieweb.social' %}
 - {% meLink 'https://social.lol/@drhayes', 'drhayes@social.lol' %}
+- {% meLink 'https://bookwyrm.social/user/drhayes', 'Bookwyrm.social' %}
+- {% meLink 'https://pinboard.in/u:drhayes', 'Pinboard' %}
 - {% meLink 'https://soundcloud.com/drhayes', 'Soundcloud' %}
 - {% meLink 'https://keybase.io/drhayes', 'Keybase' %}
 - {% meLink 'https://drhayes.tumblr.com', 'Tumblr' %}
-- {% meLink 'https://www.goodreads.com/drhayes', 'Goodreads' %}
 
 ## Colophon
 
@@ -50,7 +49,6 @@ This site is generated in [Eleventy].
 - The color palette is mostly [cobalt2].
 
 [site]: https://github.com/drhayes/drhayes.io
-[vim]: https://www.vim.org/
 [markdown]: https://daringfireball.net/projects/markdown/
 [github]: https://github.com/
 [netlify]: https://www.netlify.com/

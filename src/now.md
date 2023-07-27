@@ -1,26 +1,26 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2023-03-31
+updated: 2023-07-27
 ---
 
 ## Socials
 
-I can now be found as [@drhayes@indieweb.social](https://indieweb.social/@drhayes). I'm also thinking about moving to <https://social.lol>, but we'll see.
+I can now be found as [@drhayes@social.lol](https://social.lol/@drhayes).
 
-Speaking of my preferred client, that would be <https://elk.zone>. Tres cool.
+Speaking of my preferred client, that would be <https://elk.zone>. Tres cool. But considering going straight Masto on the web, not sure...
 
 You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm trying to be good about what I'm logging, but no guarantees.
 
 ## Text
 
-Still thinking about a site redesign, haven't gotten around to it.
+Actively working on the site redesign, it just keeps getting deprioritized for dumb things like vacations and spending time with friends. _gOsH_.
 
 I found the [eleventy-plugin-syntaxhighlight](https://github.com/11ty/eleventy-plugin-syntaxhighlight) project courtesy of [zachleat](https://zachleat.com) and recently converted my site to use that. Just after I finished that I found [Torchlight](https://torchlight.dev/), which seems kinda cool but I'm not sure I need it or want to get some highlight-as-a-service thing going.
 
 ## Role-playing Games
 
-We're playing Capers, a hack of Masks that emphasizes teenage villains!
+Back for what is our final season of Masks with these characters!
 
 ## Programming
 
