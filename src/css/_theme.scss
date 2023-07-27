@@ -1,6 +1,6 @@
 :root {
   --body-font: 'Source Code Pro', monospace;
-  --heading-font: 'Rubik', sans-serif;
+  --heading-font: 'Space Grotesk', sans-serif;
 }
 
 /* These are Cobalt2 colors: https://wesbos.com/cobalt2-theme-sublime-text-2 */
@@ -43,7 +43,8 @@ html.nord {
 
 html.light {
   --text-content-color: rgb(16, 16, 16);
-  --text-contrast-color: rgb(255, 255, 255);
+  --text-contrast-color: rgb(128 128 128 / 1);
+  --text-selection-color: rgb(255, 255, 255);
   --subtext-content-color: rgb(0 0 0 / 80%);
   --background-color: rgb(255, 255, 255);
   --background-support-color: rgb(248 248 248 / 1);
@@ -59,6 +60,6 @@ html.light {
 }
 
 ::selection {
-  color: var(--text-contrast-color);
+  color: var(--text-selection-color);
   background-color: var(--heading-color);
 }

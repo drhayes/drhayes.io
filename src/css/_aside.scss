@@ -10,7 +10,6 @@ aside {
     margin-bottom: 0;
   }
 
-
   &::before {
     position: absolute;
     content: '<aside>';
@@ -19,6 +18,7 @@ aside {
     font-size: 0.8rem;
     background-color: var(--background-color);
     border: 1px solid var(--light-border-color);
+    color: var(--text-contrast-color);
   }
 
   &::after {
@@ -29,5 +29,6 @@ aside {
     font-size: 0.8rem;
     background-color: var(--background-color);
     border: 1px solid var(--light-border-color);
+    color: var(--text-contrast-color);
   }
 }

@@ -2,6 +2,7 @@
   max-width: min(72rem, 100%);
   margin-left: auto;
   margin-right: auto;
+  font-variant-numeric: oldstyle-nums;
 
   header {
     max-width: min(72rem, 100%);
@@ -35,7 +36,6 @@
   h4,
   h5 {
     font-family: var(--heading-font);
-    font-weight: bold;
     color: var(--heading-color);
     letter-spacing: -0.05em;
   }
