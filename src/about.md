@@ -11,9 +11,11 @@ updated: 2022-06-08
 
 I do stuff with computers. I live in Austin, TX.
 
-I'm a dad. I've always loved short, clever jokes, but now I have an excuse for my tastes.
+I'm a dad.
 
-I'm particularly interested in everything game (board and digital and role-playing), plain text formats, productivity, and knowledge-management.
+I love jokes, especially dad jokes. But that was before I was a dad and it's only gotten worse since.
+
+I love everything game (board and digital and role-playing), plain text formats, productivity, and knowledge management.
 
 I'm a musician. I've played the piano since I was very young, and I very much like making music with things that look like [trackers](https://en.wikipedia.org/wiki/Music_tracker).
 

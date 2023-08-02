@@ -3,7 +3,8 @@ body {
   margin: 0;
   visibility: var(--styles-loaded);
   font-family: var(--body-font);
-  line-height: 1.7;
+  font-size: var(--step-0);
+  line-height: 1.6;
   background-color: var(--background-color);
   color: var(--text-content-color);
 }
@@ -29,11 +30,12 @@ a:hover {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-s);
 }
 
 h1 {
   font-family: var(--heading-font);
+  font-size: var(--step-4);
   font-weight: bold;
   color: var(--heading-color);
 }
@@ -42,7 +44,7 @@ blockquote {
   margin-left: 0;
   padding-left: 1em;
   background-color: var(--blockquote-background-color);
-  font-size: 120%;
+  font-size: var(--step-1);
   line-height: 1.6;
   font-style: italic;
   border-style: none;
@@ -53,9 +55,9 @@ blockquote {
 
 hr {
   border: 0;
-  height: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  height: var(--space-m);
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-m);
 }
 
 hr:after {

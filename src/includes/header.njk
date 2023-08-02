@@ -1,18 +1,10 @@
 <nav class="header">
   <a href="/" class="home-link">drhayes.io</a>
-  <ul class="menu open-face">
+  <ul class="menu">
     {% for item in menu %}
       <li>
         <a href="{{ item.url }}">{{ item.name }}</a>
       </li>
-    {% endfor %}
-  </ul>
-  <button class="hamburger">{% include "hamburger.svg" %}</button>
-  <ul class="hamburger-menu">
-    {% for item in menu %}
-    <li>
-      <a href="{{ item.url }}">{{ item.name }}</a>
-    </li>
     {% endfor %}
   </ul>
 </nav>

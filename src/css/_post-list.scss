@@ -1,0 +1,26 @@
+.post-list {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-l);
+
+  .line {
+    display: flex;
+    margin-bottom: var(--space-3xs);
+
+    .date {
+      display: block;
+      margin-right: var(--space-xl);
+      color: var(--subtext-content-color);
+      order: 0;
+    }
+
+    .link {
+      order: 1;
+    }
+
+    .on {
+      display: none;
+    }
+  }
+}

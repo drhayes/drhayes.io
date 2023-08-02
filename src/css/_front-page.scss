@@ -1,5 +1,3 @@
-@use '_breakpoints';
-
 @mixin rainbow-text {
   background-image: linear-gradient(
     100deg,
@@ -12,12 +10,12 @@
 }
 
 .front-page {
-  max-width: 72rem;
+  max-width: var(--grid-max-width);
   margin-left: auto;
   margin-right: auto;
 
   header {
-    padding: 1rem;
+    padding: var(--space-m);
     text-align: center;
 
     h1 {
@@ -38,6 +36,10 @@
       }
     }
 
+    h2 {
+      font-size: var(--step-3);
+    }
+
     .p-nickname {
       font-family: var(--heading-font);
       font-weight: bold;
@@ -48,11 +50,11 @@
 
   .logo {
     width: 50%;
-    margin: 1rem auto 0;
+    margin: var(--space-m) auto 0;
   }
 
   footer {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-l);
 
     &.horizontal-center {
       display: flex;
@@ -63,35 +65,15 @@
 
     ul {
       display: flex;
-      gap: 2em;
+      gap: var(--space-xl);
     }
   }
 
   section {
-    padding: 1rem;
+    padding: var(--space-xl);
 
     p {
-      margin-bottom: 1em;
-      text-align: center;
-    }
-  }
-
-  @include breakpoints.for-tablet-portrait-up {
-    header {
-      h1 {
-        font-size: 800%;
-      }
-    }
-
-    h2 {
-      font-size: 200%;
-    }
-
-    .logo {
-      max-width: 35%;
-    }
-
-    section p {
+      margin-bottom: var(--space-m);
       text-align: center;
     }
   }

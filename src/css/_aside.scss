@@ -1,7 +1,7 @@
 aside {
   position: relative;
-  padding: 1em;
-  margin-bottom: 1em;
+  padding: var(--space-m);
+  margin-bottom: var(--space-m);
   border: 1px solid var(--light-border-color);
   border-radius: 0.5em;
   background-color: var(--background-color);
@@ -14,10 +14,11 @@ aside {
     position: absolute;
     content: '<aside>';
     top: -0.8em;
-    left: 1em;
-    font-size: 0.8rem;
+    left: var(--space-m);
+    font-size: var(--step--1);
     background-color: var(--background-color);
     border: 1px solid var(--light-border-color);
+    border-radius: 0.5em;
     color: var(--text-contrast-color);
   }
 
@@ -25,10 +26,40 @@ aside {
     position: absolute;
     content: '</aside>';
     bottom: -0.8em;
-    right: 1em;
-    font-size: 0.8rem;
+    right: var(--space-m);
+    font-size: var(--step--1);
     background-color: var(--background-color);
     border: 1px solid var(--light-border-color);
+    border-radius: 0.5em;
     color: var(--text-contrast-color);
+  }
+
+  h1 {
+    font-size: var(--step-3);
+  }
+
+  &.warning {
+    background-color: var(--warning-background-color);
+    color: var(--warning-color);
+    border-color: var(--warning-border-color);
+
+    &::before,
+    &::after {
+      background-color: var(--warning-background-color);
+      color: var(--warning-color);
+      border-color: var(--warning-border-color);
+    }
+
+    &::before {
+      content: '<warning>';
+    }
+
+    &::after {
+      content: '</warning>';
+    }
+
+    h1 {
+      color: var(--warning-color);
+    }
   }
 }

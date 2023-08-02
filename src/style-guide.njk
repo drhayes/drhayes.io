@@ -9,21 +9,60 @@ layout: base.njk
     <h1>H1 in an article header</h1>
   </header>
 
-  <section class="article-content big-letter">
+  <h2>Tags</h2>
+  <div class="tags-container">
+    <ul class="tags">
+      <li><a class="tag" href="#tag1">Tag 1</a></li>
+      <li><a class="tag" href="#tag2">Tag 2</a></li>
+      <li><a class="tag" href="#tag3">Tag 3</a></li>
+      <li><a class="tag" href="#tag3">Somewhat longer tag</a></li>
+    </ul>
+  </div>
 
+  <section class="article-content big-letter">
+    <p>So begins the article content. It is really long and hopefully wraps, but just in case... Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. De carne cerebro lumbering animata cervello corpora quaeritis. Summus thalamus brains sit​​, morbo basal ganglia vel maleficia? De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve, imo evil braaiinns stalking monstra hypothalamus adventus resi hippocampus dentevil vultus brain comedat cerebella pitiutary gland viventium. Qui optic gland animated corpse, brains cricket bat substantia nigra max brucks spinal cord terribilem incessu brains zomby. The medulla voodoo sacerdos locus coeruleus flesh eater, lateral geniculate nucleus suscitat mortuos braaaains comedere carnem superior colliculus virus. Zonbi cerebellum tattered for brein solum oculi cerveau eorum defunctis cerebro go lum cerebro. Nescio brains an Undead cervello zombies. Sicut thalamus malus putrid brains voodoo horror. Nigh basal ganglia tofth eliv ingdead.
     <p>So begins the article content. It is really long and hopefully wraps, but just in case... Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. De carne cerebro lumbering animata cervello corpora quaeritis. Summus thalamus brains sit​​, morbo basal ganglia vel maleficia? De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve, imo evil braaiinns stalking monstra hypothalamus adventus resi hippocampus dentevil vultus brain comedat cerebella pitiutary gland viventium. Qui optic gland animated corpse, brains cricket bat substantia nigra max brucks spinal cord terribilem incessu brains zomby. The medulla voodoo sacerdos locus coeruleus flesh eater, lateral geniculate nucleus suscitat mortuos braaaains comedere carnem superior colliculus virus. Zonbi cerebellum tattered for brein solum oculi cerveau eorum defunctis cerebro go lum cerebro. Nescio brains an Undead cervello zombies. Sicut thalamus malus putrid brains voodoo horror. Nigh basal ganglia tofth eliv ingdead.
 
+    <h2>Asides</h2>
     <aside>
       <h1>What the heck is this?</h1>
       <p>In redesigning my site I thought it'd be useful to gather all the styles and specimens across my site in a single place so I can see how they all work together.</p>
       <p>Sticking another paragraph in here to demonstrate some spacing stuff.</p>
     </aside>
 
+    <aside class="warning">
+      <h1>This is a warning!</h1>
+      <p>Look out! This could happen to you!</p>
+    </aside>
+
+    <h2>Inline styles</h2>
+    <p>
+      What about inline styles?
+      Here is some <strong>bold</strong>?
+      What about <em>italics</em>?
+      What about <code>inline code</code>?
+    </p>
+
+    <h3>Badges</h3>
+    <p>
+      There's only the one for now: <span class="badge draft">draft</span>
+    </p>
+
+    <h2>Headings (H2)</h2>
     <h2>This is an H2</h2>
     <h2 class="sub-title">This is an H2 Sub Title</h2>
+    <h3>This is an H3</h3>
+    <h4>This is an H4</h4>
+    <h5>This is an H5</h5>
 
     <p>An HR:</p>
     <hr>
+
+    <h2>Blockquote</h2>
+    <blockquote>
+      <p>This here blockquote is mine. There are other blockquotes, but none quite like this one. And if this is enough content, then I will stop.</p>
+      <footer>David Hayes, <cite>The Style Guide</cite></footer>
+    </blockquote>
 
     <h2>Lists</h2>
     <ul>
@@ -39,6 +78,29 @@ layout: base.njk
     </ol>
 
     <p>More text goes here.</p>
+    <p>More text goes here.</p>
+
+    <h2>Code</h2>
+
+    <pre class="language-lua"><code class="language-lua"><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span>
+      <span class="token keyword">local</span> index <span class="token operator">=</span> <span class="token number">1</span>
+      <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>entity<span class="token punctuation">,</span> dt<span class="token punctuation">)</span>
+        <span class="token keyword">while</span> index <span class="token operator">&lt;=</span> <span class="token operator">#</span>children <span class="token keyword">do</span>
+          <span class="token keyword">local</span> current <span class="token operator">=</span> children<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+          <span class="token keyword">local</span> result <span class="token operator">=</span> <span class="token function">current</span><span class="token punctuation">(</span>entity<span class="token punctuation">,</span> dt<span class="token punctuation">)</span>
+          <span class="token keyword">if</span> result <span class="token operator">==</span> <span class="token string">'failure'</span> <span class="token keyword">then</span>
+            index <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">return</span> <span class="token string">'failure'</span>
+          <span class="token keyword">end</span>
+          <span class="token keyword">if</span> result <span class="token operator">==</span> <span class="token string">'running'</span> <span class="token keyword">then</span>
+            <span class="token keyword">return</span> <span class="token string">'running'</span>
+          <span class="token keyword">end</span>
+          index <span class="token operator">=</span> index <span class="token operator">+</span> <span class="token number">1</span>
+        <span class="token keyword">end</span>
+        index <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> <span class="token string">'success'</span>
+      <span class="token keyword">end</span>
+    <span class="token keyword">end</span></code></pre>
 
     <h2>Games list</h2>
     <ul class="games-list">

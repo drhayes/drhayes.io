@@ -5,22 +5,22 @@ layout: base.njk
 
 {% include "header.njk" %}
 
-<main class="">
+<main class="article">
   {% include "title-element.njk" %}
 
-  <p class="content">
+  <p>
     A bit of an experiment, these are things that I'm writing that are basically never truly complete and published. They're out here, reflecting my thinking, but never truly <em>done</em>.
   </p>
 
-  <p class="content">
+  <p>
     Anything marked {% include "draft-badge.njk" %} is especially fresh out of the oven and still in flux.
   </p>
 
-  <h2 class="sub-title content">Blog</h2>
+  <h2>Blog</h2>
   {% set postList = collections.blog | reverse %}
   {% include "post-list.njk" %}
 
-  <h2 class="sub-title content">Articles</h2>
+  <h2>Articles</h2>
   {% set postList = collections.article %}
   {% include "post-list.njk" %}
 </main>

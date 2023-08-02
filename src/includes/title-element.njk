@@ -1,4 +1,14 @@
 <header>
+  <h1 class="p-name">
+    {% if page.url %}
+      <a href="{{ page.url }}" class="u-url">
+    {% endif %}
+      {{ title }}
+    {% if page.url %}
+      </a>
+    {% endif %}
+  </h1>
+
   <div class="times">
     {% if date %}
       <time datetime="{{ date | dateFormat(true) }}" class="dt-published">{{ date | dateFormat }}</time>
@@ -10,16 +20,6 @@
       {% include "draft-badge.njk" %}
     {% endif %}
   </div>
-
-  <h1 class="p-name">
-    {% if page.url %}
-      <a href="{{ page.url }}" class="u-url">
-    {% endif %}
-      {{ title }}
-    {% if page.url %}
-      </a>
-    {% endif %}
-  </h1>
 
   {% if tags %}
   <div class="tags-container">

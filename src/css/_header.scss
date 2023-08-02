@@ -1,68 +1,22 @@
-@use '_breakpoints';
-
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: var(--grid-max-width);
+  margin-left: auto;
+  margin-right: auto;
   font-family: var(--heading-font);
   font-weight: bold;
   letter-spacing: -0.05em;
-  padding: 0.2em 1em;
+  padding: var(--space-3xs) 0;
 
   .home-link {
-    font-size: 1.5rem;
+    font-size: var(--step-1);
     text-decoration: none;
   }
 
-  .open-face {
-    display: none;
-  }
-
-  .hamburger {
-    border: none;
-    background-color: transparent;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-
-  ul.hamburger-menu {
-    display: none;
-    position: absolute;
-    right: 1rem;
-    top: 2.5rem;
-    padding: 0.5em;
-    min-width: 10ch;
-
-    &.is-open {
-      display: block;
-      background-color: var(--background-support-color);
-      border: 1px solid var(--light-border-color);
-      border-radius: 0.5em;
-    }
-
-    li {
-      margin-bottom: 0.2em;
-    }
-  }
-
-  @include breakpoints.for-tablet-portrait-up {
-    padding: 1rem;
-
-    .open-face {
-      display: block;
-    }
-
-    .hamburger {
-      display: none;
-    }
-
-    .open-face {
-      display: flex;
-      flex-direction: row;
-      gap: 1em;
-      font-weight: bold;
-      text-decoration: none;
-      align-items: center;
-    }
+  .menu {
+    display: flex;
+    gap: var(--space-s);
   }
 }

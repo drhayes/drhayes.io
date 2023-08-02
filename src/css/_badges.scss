@@ -1,0 +1,14 @@
+.badge {
+  font-size: var(--step--1);
+  text-transform: uppercase;
+}
+
+.date + .badge {
+  margin-left: var(--space-s);
+  order: 3;
+  align-self: center;
+}
+
+.draft {
+  color: cornflowerblue;
+}

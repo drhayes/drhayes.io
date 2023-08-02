@@ -16,7 +16,7 @@ This post is the second in a [series I'm writing about scripting the AI in my ga
 
 There aren't enough resources out there that dive deeply into interesting programming topics. It's easy to find "hello world" examples, but it's harder to find meaty essays that discuss pros and cons, tradeoffs taken, long-term consequences unforeseen. These posts are my attempt to fix that.
 
-UPDATED 2020-07-13: Added 'game-ai' tag.
+_UPDATED_ 2020-07-13: Added 'game-ai' tag.
 
 ## Intro
 
@@ -47,9 +47,9 @@ This all violates one of my goals for the AI of my game: **Be easy for me**. Too
 
 That said, I did find some valuable resources along the way:
 
-* [kylecontrol/lua-state-machine][lsm] I had used the JavaScript version of this library before and I liked it a lot. This translation into lua was just great. I'm still using this for my animations.
-* [Statecharts][] Having a visual editor for a state machine would be neat, and they are hierarchical. Alas, I discovered this one once I was already sold on behavior trees. Maybe next time!
-* [Game Programming Patterns: State][gppstate] This book is a fantastic reference that every hobbyist game programmer should buy.
+- [kylecontrol/lua-state-machine][lsm] I had used the JavaScript version of this library before and I liked it a lot. This translation into lua was just great. I'm still using this for my animations.
+- [Statecharts][] Having a visual editor for a state machine would be neat, and they are hierarchical. Alas, I discovered this one once I was already sold on behavior trees. Maybe next time!
+- [Game Programming Patterns: State][gppstate] This book is a fantastic reference that every hobbyist game programmer should buy.
 
 ## Behavior Trees
 
@@ -81,7 +81,7 @@ The literature I've found is surprisingly unclear on the subject. Some sources i
 
 ### Restarting
 
-If the tree nodes that have children restart on every tick, then it's easy for the tree to respond instantly to outside stimulus. I can place the behaviors that have higher priority *before* lower priority children in `sequence` and `selector` nodes and be assured that they will be evaluated as often as possible.
+If the tree nodes that have children restart on every tick, then it's easy for the tree to respond instantly to outside stimulus. I can place the behaviors that have higher priority _before_ lower priority children in `sequence` and `selector` nodes and be assured that they will be evaluated as often as possible.
 
 Imagine a tree like this:
 
@@ -97,7 +97,7 @@ return sequence({
 
 Each one of those functions returns a behavior tree node; in this implementation, a function.
 
-When guards attack the player, they fire three shots in a row and wait a little bit before firing again. This timing node became *super* complex because of this re-entrant behavior that I'd coded into the iterating nodes. Did that wait increment all the time, even if the node didn't get ticked this update? Did it remember the last timestamp instead?
+When guards attack the player, they fire three shots in a row and wait a little bit before firing again. This timing node became _super_ complex because of this re-entrant behavior that I'd coded into the iterating nodes. Did that wait increment all the time, even if the node didn't get ticked this update? Did it remember the last timestamp instead?
 
 Guards would ignore noises as they tracked their targets and were too easy to fool. If I swapped the order of those nodes, now they would ignore their targets if anything made noise nearby. Neither one was correct, but fixing it involved a lot of conditional nodes polluting the lower branches of the tree.
 
@@ -107,7 +107,7 @@ To fix this, I thought I should move to a (gasp) OOP solution for my nodes. By [
 
 There was a case I hadn't considered in all of this: `parallel` nodes. A `parallel` node could have two children side-by-side, and one could be `failed` while the other was `running`. This would cause the `parallel` node to return `failed` and would interrupt the `running` node. Thus, there was still restarting in there.
 
-If I didn't restart the node but tracked the node that was running, then *surely* I needed `enter` and `exit` semantics on all my nodes, to make sure that the node restarted if it didn't get "picked" on the next tick.
+If I didn't restart the node but tracked the node that was running, then _surely_ I needed `enter` and `exit` semantics on all my nodes, to make sure that the node restarted if it didn't get "picked" on the next tick.
 
 Suddenly, instead of a clean, functional solution I was surrounded by bloated objects. Most of them had empty `enter` and `exit` routines, but I still had to dutifully `enter` and `exit` nodes in my `sequence`, `selector`, and `parallel` nodes. Yuck.
 
@@ -330,7 +330,7 @@ The `selector` node defined at the root of the tree shows what behaviors this se
 4. If it knows about any recent noise, it'll set that as a target.
 5. If nothing else is going on then it will fly its horizontal patrol route.
 
-The `SensesSystem` automatically targets the player if they are seen. This is part of that "lean on the language of the systems" thing I was writing about earlier. In this case, I don't have to write an AI routine to remember to target the player because *I always want my enemies targetting the player*. That's just the default. I'm not writing a general-purpose `SensesSystem`, I'm writing Gemini Rising's `SensesSystem` and that's the definition of how enemies work in this game.
+The `SensesSystem` automatically targets the player if they are seen. This is part of that "lean on the language of the systems" thing I was writing about earlier. In this case, I don't have to write an AI routine to remember to target the player because _I always want my enemies targetting the player_. That's just the default. I'm not writing a general-purpose `SensesSystem`, I'm writing Gemini Rising's `SensesSystem` and that's the definition of how enemies work in this game.
 
 This script also matches my requirements. It has **at-a-glance readability**, it is **predictable** as a function of player behavior, and it's actually pretty **fun** trying to dodge a pack of these things as they try to bomb you when you're playing.
 
@@ -338,14 +338,14 @@ This script also matches my requirements. It has **at-a-glance readability**, it
 
 Here are the behavior tree links that helped me the most:
 
-* [Behavior trees for AI: How they work by Chris Simpson](http://www.gamasutra.com/blogs/ChrisSimpson/20140717/221339/Behavior_trees_for_AI_How_they_work.php)
-* [Panda BT's documentation](http://www.pandabehaviour.com/?page_id=23)
-* [Difference between Decision Trees & Behavior Trees for Game AI](https://gamedev.stackexchange.com/questions/51693/difference-between-decision-trees-behavior-trees-for-game-ai)
-* [Behavior Trees :: Actions That Take Longer Than One Tick](https://gamedev.stackexchange.com/questions/51738/behavior-trees-actions-that-take-longer-than-one-tick)
-* [Introduction to Behavior Trees - #AltDevBlog](http://jahej.com/alt/2011_02_24_introduction-to-behavior-trees.html)
-* [Advanced Behavior Tree Structures](http://leamonde.net/posts/11232015.html)
+- [Behavior trees for AI: How they work by Chris Simpson](http://www.gamasutra.com/blogs/ChrisSimpson/20140717/221339/Behavior_trees_for_AI_How_they_work.php)
+- [Panda BT's documentation](http://www.pandabehaviour.com/?page_id=23)
+- [Difference between Decision Trees & Behavior Trees for Game AI](https://gamedev.stackexchange.com/questions/51693/difference-between-decision-trees-behavior-trees-for-game-ai)
+- [Behavior Trees :: Actions That Take Longer Than One Tick](https://gamedev.stackexchange.com/questions/51738/behavior-trees-actions-that-take-longer-than-one-tick)
+- [Introduction to Behavior Trees - #AltDevBlog](http://jahej.com/alt/2011_02_24_introduction-to-behavior-trees.html)
+- [Advanced Behavior Tree Structures](http://leamonde.net/posts/11232015.html)
 
-Note that the "Actions That Take Longer Than One Tick" confused the hell out of me, because the accepted answer seems to offer contradictory advice: you should both go straight back to the running node *and* you should still evaluate higher priority nodes first. This was the original source of the "`selector` restarts but `sequence` does not" fiasco. That really sucked.
+Note that the "Actions That Take Longer Than One Tick" confused the hell out of me, because the accepted answer seems to offer contradictory advice: you should both go straight back to the running node _and_ you should still evaluate higher priority nodes first. This was the original source of the "`selector` restarts but `sequence` does not" fiasco. That really sucked.
 
 Now I believe that the author was assuming that the root node was something like a `parallel` node. A `parallel` would still evaluate the "higher-priority" nodes.
 
