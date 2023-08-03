@@ -10,11 +10,14 @@
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
     "@chrisburnell/eleventy-cache-webmentions": "1.1.5",
+    "@grimlink/eleventy-plugin-sass": "1.0.3",
     "date-fns": "2.30.0",
     "eleventy-plugin-reading-time": "0.0.1",
     "eslint": "8.40.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
-    "feed": "4.2.2"
+    "feed": "4.2.2",
+    "node-fetch": "2.6.9",
+    "sass": "1.60.0"
   }
 }
