@@ -81,7 +81,6 @@ layout: base.njk
     <p>More text goes here.</p>
 
     <h2>Code</h2>
-
     <pre class="language-lua"><code class="language-lua"><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span>
       <span class="token keyword">local</span> index <span class="token operator">=</span> <span class="token number">1</span>
       <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>entity<span class="token punctuation">,</span> dt<span class="token punctuation">)</span>
@@ -101,6 +100,10 @@ layout: base.njk
         <span class="token keyword">return</span> <span class="token string">'success'</span>
       <span class="token keyword">end</span>
     <span class="token keyword">end</span></code></pre>
+
+    <h2>Post list</h2>
+    {% set postList = collections.blog.slice(0, 6) %}
+    {% include "post-list.njk" %}
 
     <h2>Games list</h2>
     <ul class="games-list">
