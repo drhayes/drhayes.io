@@ -8,21 +8,25 @@ layout: base.njk
 <main class="article">
   {% include "title-element.njk" %}
 
-  <p>
-    A bit of an experiment, these are things that I'm writing that are basically never truly complete and published. They're out here, reflecting my thinking, but never truly <em>done</em>.
-  </p>
+  <section class="article-content">
 
-  <p>
-    Anything marked {% include "draft-badge.njk" %} is especially fresh out of the oven and still in flux.
-  </p>
+    <p>
+      A bit of an experiment, these are things that I'm writing that are basically never truly complete and published. They're out here, reflecting my thinking, but never truly <em>done</em>.
+    </p>
 
-  <h2>Blog</h2>
-  {% set postList = collections.blog | reverse %}
-  {% include "post-list.njk" %}
+    <p>
+      Anything marked {% include "draft-badge.njk" %} is especially fresh out of the oven and still in flux.
+    </p>
 
-  <h2>Articles</h2>
-  {% set postList = collections.article %}
-  {% include "post-list.njk" %}
+    <h2>Blog</h2>
+    {% set postList = collections.blog | reverse %}
+    {% include "post-list.njk" %}
+
+    <h2>Articles</h2>
+    {% set postList = collections.article %}
+    {% include "post-list.njk" %}
+
+  </section>
 </main>
 
 {% include "footer.njk" %}

@@ -1,4 +1,14 @@
 <header>
+  {% if tags %}
+  <div class="tags-container">
+    <ul class="tags">
+      {% for tag in tags | tagFilter %}
+        <li><a href="/tags/{{ tag | slugify }}" class="tag p-category" rel="category tag">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
   <h1 class="p-name">
     {% if page.url %}
       <a href="{{ page.url }}" class="u-url">
@@ -20,16 +30,6 @@
       {% include "draft-badge.njk" %}
     {% endif %}
   </div>
-
-  {% if tags %}
-  <div class="tags-container">
-    <ul class="tags">
-      {% for tag in tags | tagFilter %}
-        <li><a href="/tags/{{ tag | slugify }}" class="tag p-category" rel="category tag">{{ tag }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
 
   {% if description %}
   <p class="summary p-summary">

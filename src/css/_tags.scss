@@ -5,20 +5,25 @@
     margin-bottom: var(--space-m);
     gap: var(--space-2xs);
     list-style-type: none;
+    font-size: var(--step--1);
 
     .tag {
       border: 1px solid var(--tag-border-color);
       border-radius: 0.4em;
       padding: var(--space-3xs);
       background-color: var(--tag-background-color);
-      background-image: linear-gradient(
-        rgb(255 255 255 / 0.2),
-        rgb(0 0 0 / 0.2)
-      );
+      // background-image: linear-gradient(
+      //   rgb(255 255 255 / 0.2),
+      //   rgb(0 0 0 / 0.2)
+      // );
       color: var(--tag-color);
+      transition: 250ms;
 
       &:hover {
-        color: var(--tag-color);
+        background-color: var(--tag-background-color-hover);
+        color: var(--tag-color-hover);
+        border-color: var(--tag-border-color-hover);
+        padding-inline: var(--space-xs);
       }
     }
   }

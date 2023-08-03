@@ -1,11 +1,11 @@
 .article {
-  max-width: var(--grid-max-width);
+  max-width: var(--content-width);
   margin-left: auto;
   margin-right: auto;
   font-variant-numeric: oldstyle-nums;
 
   header {
-    max-width: var(--grid-max-width);
+    max-width: var(--content-width);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: var(--space-m);
@@ -29,8 +29,7 @@
   ul,
   blockquote,
   pre {
-    margin-top: var(--space-s);
-    margin-bottom: 0;
+    margin-bottom: var(--space-s);
   }
 
   h1,
@@ -40,6 +39,7 @@
   h5 {
     font-family: var(--heading-font);
     color: var(--heading-color);
+    font-weight: bold;
     letter-spacing: -0.05em;
   }
 
@@ -118,11 +118,6 @@
     margin-left: calc(2em - 2px);
     list-style-type: decimal;
     counter-reset: li;
-  }
-
-  ul li + li,
-  ol li + li {
-    margin-top: var(--space-s);
   }
 
   ul li::marker {
