@@ -29,7 +29,7 @@ a:hover {
 }
 
 p {
-  margin-top: 1em;
+  margin-block-end: 1em;
 }
 
 h1,
@@ -41,7 +41,7 @@ h5 {
   font-weight: bold;
   color: var(--heading-color);
   letter-spacing: -0.05em;
-  margin-top: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 h1 {
@@ -49,7 +49,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 h3 {

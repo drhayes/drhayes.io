@@ -36,10 +36,10 @@
     }
 
     h2 {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--heading-contrast-font);
       font-size: 3rem;
       font-weight: normal;
-      margin-top: 0;
+      margin-block-start: 0;
     }
 
     .p-nickname {
