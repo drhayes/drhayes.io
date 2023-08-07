@@ -1,10 +1,9 @@
 .badge {
-  font-size: var(--step--1);
   text-transform: uppercase;
 }
 
 .date + .badge {
-  margin-left: var(--space-s);
+  margin-left: 1em;
   order: 3;
   align-self: center;
 }

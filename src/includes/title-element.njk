@@ -19,22 +19,24 @@
     {% endif %}
   </h1>
 
+  {% if description %}
+  <p class="summary p-summary">
+    {{ description }}
+  </p>
+  {% endif %}
+
   <div class="times">
     {% if date %}
       <time datetime="{{ date | dateFormat(true) }}" class="dt-published">{{ date | dateFormat }}</time>
-    {% endif %}
-    {% if updated %}
-      <time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">(Updated: {{ updated | dateFormat }})</time>
+    {%- endif -%}
+    {%- if date and updated -%}, {%- endif -%}
+    {%- if updated -%}
+      <time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">updated: {{ updated | dateFormat }}</time>
     {% endif %}
     {% if draft %}
       {% include "draft-badge.njk" %}
     {% endif %}
   </div>
 
-  {% if description %}
-  <p class="summary p-summary">
-    {{ description }}
-  </p>
-  {% endif %}
 
 </header>

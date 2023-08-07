@@ -15,7 +15,6 @@
   margin-right: auto;
 
   header {
-    padding: var(--space-m);
     text-align: center;
 
     h1 {
@@ -37,7 +36,10 @@
     }
 
     h2 {
-      font-size: var(--step-3);
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: normal;
+      margin-top: 0;
     }
 
     .p-nickname {
@@ -50,11 +52,11 @@
 
   .logo {
     width: 50%;
-    margin: var(--space-m) auto 0;
+    margin: 1em auto 0;
   }
 
   footer {
-    margin-bottom: var(--space-l);
+    margin-bottom: 2em;
 
     &.horizontal-center {
       display: flex;
@@ -65,15 +67,15 @@
 
     ul {
       display: flex;
-      gap: var(--space-xl);
+      gap: 2em;
     }
   }
 
   section {
-    padding: var(--space-xl);
+    padding: 1em;
 
     p {
-      margin-bottom: var(--space-m);
+      margin-bottom: 2em;
       text-align: center;
     }
   }

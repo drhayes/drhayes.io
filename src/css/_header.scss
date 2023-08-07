@@ -5,20 +5,20 @@
   max-width: var(--content-width);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: var(--space-l);
+  margin-bottom: 2em;
   font-family: var(--heading-font);
   font-weight: bold;
   letter-spacing: -0.05em;
-  padding: var(--space-3xs) 0;
+  padding: 0.5em 0;
 
   .home-link {
-    font-size: var(--step-1);
+    font-size: 1rem;
     text-decoration: none;
   }
 
   .menu {
     display: flex;
-    gap: var(--space-s);
+    gap: 0.5em;
 
     a {
       text-decoration: none;

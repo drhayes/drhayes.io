@@ -1,13 +1,13 @@
 @use '_reset';
 @use '_tokyo-night-dark';
-@use '_fonts';
 @use '_theme';
+@use '_fonts';
 @use '_base';
 @use '_article';
 @use '_front-page';
 @use '_header';
 @use '_aside';
-@use '_big-letter';
+// @use '_big-letter';
 @use '_tags';
 @use '_post-list';
 @use '_title-element';
@@ -16,11 +16,11 @@
 footer .webring {
   display: flex;
   justify-content: center;
-  margin-bottom: var(--space-l);
+  margin-bottom: 2em;
 }
 
 footer .webring a {
-  padding: var(--space-m);
+  padding: 2em;
 }
 
 footer .cc {
@@ -41,7 +41,7 @@ footer .cc {
   }
 
   dd {
-    margin-left: var(--space-m);
-    margin-bottom: var(--space-m);
+    margin-left: 1em;
+    margin-bottom: 2em;
   }
 }

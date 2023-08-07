@@ -2,75 +2,28 @@
   max-width: var(--content-width);
   margin-left: auto;
   margin-right: auto;
-  font-variant-numeric: oldstyle-nums;
 
   header {
-    max-width: var(--content-width);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: var(--space-m);
-
     h1 {
-      font-size: var(--step-5);
+      font-size: 2rem;
+
+      a {
+        text-decoration: none;
+      }
     }
   }
 }
 
 .article-content {
-  margin: 0 auto var(--space-m) auto;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  p,
-  ol,
-  ul,
-  blockquote,
-  pre {
-    margin-bottom: var(--space-s);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: var(--heading-font);
-    color: var(--heading-color);
-    font-weight: bold;
-    letter-spacing: -0.05em;
-  }
-
-  h2 {
-    font-size: var(--step-3);
-  }
-
-  h3 {
-    font-size: var(--step-2);
-  }
-
-  h4 {
-    font-size: var(--step-1);
-  }
-
-  h5 {
-    font-size: var(--step-0);
-  }
+  margin: 0 auto 2em auto;
 
   .game-screenshot {
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
-
     img {
       width: 100%;
     }
 
     figcaption {
       width: 100%;
-      font-size: var(--step--1);
-      text-align: center;
     }
   }
 
@@ -95,15 +48,15 @@
       h1 {
         color: var(--game-title-color);
         font-weight: bold;
-        font-size: var(--step-3);
-        padding: var(--space-2xs) var(--space-s);
+        font-size: 2rem;
+        padding: 0.2em 0.5em;
         margin: 0;
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
         border-radius: 1em;
         background-color: rgb(0 0 0 / 0.6);
-        box-shadow: 0 0 var(--space-2xs) rgb(255 255 255 / 0.3);
+        box-shadow: 0 0 0.2em rgb(255 255 255 / 0.3);
       }
     }
   }
@@ -126,14 +79,11 @@
 
   & > pre {
     overflow: auto;
-    margin-top: var(--space-m);
-    margin-bottom: var(--space-m);
-    // margin-left: calc(-1 * var(--space-m));
-    // margin-right: calc(-1 * var(--space-m));
-    padding: var(--space-m);
+    margin-top: 1em;
+    padding: 1em;
   }
 }
 
 article iframe {
-  margin-top: var(--space-l);
+  margin-top: 2em;
 }
