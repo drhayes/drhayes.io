@@ -28,6 +28,7 @@
   h2 {
     counter-increment: headings;
     margin-block-end: 0;
+    font-size: 1.5rem;
 
     &::before {
       content: counters(headings, '.', headings-style);
