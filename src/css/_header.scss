@@ -3,22 +3,21 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: var(--content-width);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2em;
+  margin-inline: auto;
+  margin-block-end: 1em;
   font-family: var(--heading-font);
   font-weight: bold;
   letter-spacing: -0.05em;
   padding: 0.5em 0;
+  font-size: 1.25rem;
 
   .home-link {
-    font-size: 1rem;
     text-decoration: none;
   }
 
   .menu {
     display: flex;
-    gap: 0.5em;
+    gap: 0.8em;
 
     a {
       text-decoration: none;
