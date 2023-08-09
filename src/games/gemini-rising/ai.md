@@ -1,5 +1,6 @@
 ---
 title: Artificial Intelligence
+description: The (super short) list of AI articles I wrote for Gemini Rising.
 date: 2019-03-21
 ---
 

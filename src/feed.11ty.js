@@ -1,6 +1,6 @@
 const { Feed } = require('feed');
 const { URL } = require('url');
-const { getNewestCollectionItemDate } = require("@11ty/eleventy-plugin-rss");
+const { getNewestCollectionItemDate } = require('@11ty/eleventy-plugin-rss');
 
 class MyFeed {
   data() {
@@ -19,6 +19,12 @@ class MyFeed {
     }
 
     const allThings = collections.all;
+    // Put more recent things first.
+    allThings.sort((a, b) => {
+      const aDate = a.data.updated || a.date;
+      const bDate = b.data.updated || b.date;
+      return bDate - aDate;
+    });
 
     const feed = new Feed({
       title: site.name,
@@ -37,26 +43,32 @@ class MyFeed {
       author: site.author,
     });
 
-
     // Add (almost) all the things to the feed.
     for (const thing of allThings) {
       if (!thing.url) {
         continue;
       }
 
-      const { title, updated  } = thing.data;
+      const { title, updated, description } = thing.data;
       feed.addItem({
-        title: title,
+        title,
         id: urlize(thing.url),
         link: urlize(thing.url),
-        description: thing.description,
+        description,
         content: thing.templateContent,
         url: urlize(thing.url),
         date: updated || thing.date,
       });
     }
 
-    return feed.atom1();
+    const theFeed = feed.atom1();
+    const lines = theFeed.split('\n');
+    lines.splice(
+      1,
+      0,
+      '<?xml-stylesheet type="text/xsl" href="/feedStyle.xsl"?>'
+    );
+    return lines.join('\n');
   }
 }
 

@@ -1,6 +1,7 @@
 ---
 title: Technology
 date: 2018-09-13
+description: The tech I'm using in Gemini Rising.
 updated: 2022-01-20
 aliases:
   - /games/gemini-rising/articles/technology
@@ -12,28 +13,28 @@ I always want to know what tools were used to make the games that I play, so I t
 
 ## The List
 
-* [Löve][love2d]
-* Multiple Lua libraries:
-  * [anim8][]
-  * [baton][]
-  * [batteries][]
-  * [classic][]
-  * [flux][]
-  * [lily][]
-  * [lume][]
-  * [ripple][]
-  * [serpent][]
-  * [squeak][]
-* [Neovim][]
-* [Aseprite][]
-* [cfxr][]
-* [Ocean Audio][ocean]
-* [Renoise][]
-* [Massive][]
-* [chipspeech][]
-* [LDtk][]
-* [GitHub Actions][ghactions]
-* [Butler][]
+- [Löve][love2d]
+- Multiple Lua libraries:
+  - [anim8][]
+  - [baton][]
+  - [batteries][]
+  - [classic][]
+  - [flux][]
+  - [lily][]
+  - [lume][]
+  - [ripple][]
+  - [serpent][]
+  - [squeak][]
+- [Neovim][]
+- [Aseprite][]
+- [cfxr][]
+- [Ocean Audio][ocean]
+- [Renoise][]
+- [Massive][]
+- [chipspeech][]
+- [LDtk][]
+- [GitHub Actions][ghactions]
+- [Butler][]
 
 ## The Reasoning
 
@@ -46,7 +47,6 @@ Then I fell in [Löve][love2d].
 [Löve][love2d] is a fantastic 2d framework built on top of OpenGL and the SDL that will happily support as much complexity as you need with a very pleasant interface. It's what I recommend to people when they tell me they want to make games and learn to program at the same time. [Löve][love2d] makes use of the Lua language, which is great to work in -- especially if you love dynamic languages, which I do.
 
 My toolchain consists of Git, a `Makefile`, and the outputs of lots of those programs I listed before.
-
 
 [love2d]: https://love2d.org
 [lume]: https://github.com/rxi/lume

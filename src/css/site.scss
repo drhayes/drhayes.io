@@ -7,11 +7,11 @@
 @use '_front-page';
 @use '_header';
 @use '_aside';
-// @use '_big-letter';
 @use '_tags';
 @use '_post-list';
 @use '_title-element';
 @use '_badges';
+@use '_feed';
 
 footer .webring {
   display: flex;

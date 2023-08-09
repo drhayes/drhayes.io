@@ -1,0 +1,63 @@
+.feed-body {
+  width: 60rem;
+  margin-inline: auto;
+  line-height: 1.4;
+
+  aside {
+    background-color: antiquewhite;
+
+    &::before,
+    &::after {
+      content: '';
+    }
+
+    h1 {
+      font-size: 1rem;
+    }
+  }
+
+  header {
+    margin-block: 2rem;
+
+    h1 {
+      margin-block-end: 0.2em;
+      line-height: 1;
+    }
+
+    h2 {
+      margin-block: 0.2em;
+      font-size: 1.2rem;
+    }
+  }
+
+  main {
+    h1 {
+      font-size: 2rem;
+    }
+
+    article {
+      margin-block-end: 1em;
+
+      h2 {
+        margin-block: 0.2em;
+        font-size: 1.5rem;
+        font-weight: normal;
+
+        a {
+          text-decoration: none;
+          color: steelblue;
+        }
+      }
+
+      .summary {
+        margin-block-end: 0.2em;
+        font-style: normal;
+      }
+
+      .published {
+        margin-block-end: 0.5em;
+        font-size: 80%;
+      }
+    }
+  }
+}

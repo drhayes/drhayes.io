@@ -53,6 +53,8 @@
     list-style-type: none;
 
     .game-item {
+      margin-block-end: 2em;
+
       .game-screenshot {
         display: flex;
         flex-direction: column;
