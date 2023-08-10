@@ -9,6 +9,8 @@ updated: 2022-06-08
   {% include "raven.svg" %}
 </div>
 
+My pronouns are he/him.
+
 I do stuff with computers. I live in Austin, TX.
 
 I'm a dad.
