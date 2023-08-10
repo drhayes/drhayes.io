@@ -1,18 +1,28 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2023-08-03
+updated: 2023-08-10
 ---
+
+## Overall
+
+Focused on my site, trying to brush up on the latest tech -- especially on the CSS side, with logical properties and more modern color representations. It's a work in progress.
+
+We're gearing up for the new school year.
+
+I'm focused on how I can be a more effective mentor as well.
 
 ## Socials
 
-I can now be found as [@drhayes@social.lol](https://social.lol/@drhayes).
+I can now be found at [@drhayes@social.lol](https://social.lol/@drhayes).
 
-You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm trying to be good about what I'm logging, but no guarantees.
+You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm trying to be good about what I'm logging, but no guarantees there.
 
 ## Text
 
 Finished the site redesign, at least for now. It looks a little bare but I'm going to leave it like this for a while, see what I think.
+
+[My Atom feed looks pretty, too!](/feed.xml)
 
 ## Role-playing Games
 
