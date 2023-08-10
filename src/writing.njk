@@ -20,7 +20,7 @@ layout: base.njk
     </p>
 
     <h2>Essays and Things</h2>
-    {% set postList = collections.writing %}
+    {% set postList = collections.writing | reverse %}
     {% include "post-list.njk" %}
 
     <h2>Blog</h2>

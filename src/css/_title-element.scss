@@ -9,3 +9,10 @@
   margin-block-start: -0.5em;
   margin-block-end: 0;
 }
+
+.draft-notification {
+  border-top: 1px solid var(--draft-badge-color);
+  border-bottom: 1px solid var(--draft-badge-color);
+  color: var(--draft-badge-color);
+  text-align: center;
+}

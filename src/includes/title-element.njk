@@ -33,10 +33,10 @@
     {%- if updated -%}
       <time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">updated: {{ updated | dateFormat }}</time>
     {% endif %}
-    {% if draft %}
-      {% include "draft-badge.njk" %}
-    {% endif %}
   </div>
+  {% if draft %}
+  <p class="draft-notification">This one isn't fully baked yet!</p>
+  {% endif %}
 
 
 </header>

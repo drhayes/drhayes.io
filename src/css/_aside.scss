@@ -35,7 +35,7 @@ aside {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--text-contrast-color);
   }
 
@@ -61,6 +61,31 @@ aside {
 
     h1 {
       color: var(--warning-color);
+    }
+  }
+
+  &.joke {
+    background-color: var(--joke-background-color);
+    color: var(--joke-color);
+    border-color: var(--joke-border-color);
+
+    &::before,
+    &::after {
+      background-color: var(--joke-background-color);
+      color: var(--joke-color);
+      border-color: var(--joke-border-color);
+    }
+
+    &::before {
+      content: '<😆😂🤣>';
+    }
+
+    &::after {
+      content: '</😆😂🤣>';
+    }
+
+    h1 {
+      color: var(--joke-color);
     }
   }
 }
