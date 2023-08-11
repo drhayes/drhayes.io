@@ -59,6 +59,7 @@ module.exports = (eleventyConfig) => {
     'principles',
     require('./lib/collections/principles')
   );
+  eleventyConfig.addCollection('writing', require('./lib/collections/writing'));
 
   // Static stuff.
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');

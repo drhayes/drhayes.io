@@ -1,3 +1,4 @@
 {
-  "tags": ["writing"]
+  "tags": ["writing"],
+  "generateCustomOpengraphImage": true
 }

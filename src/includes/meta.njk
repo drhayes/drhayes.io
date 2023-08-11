@@ -10,7 +10,7 @@
 {%- endif %}
 {%- endset %}
 {%- set ogImageName %}
-{%- if isBlog %}
+{%- if generateCustomOpengraphImage %}
   og-images/{{ title | slugify }}
   {%- else %}img/og-image{%- endif %}
 {%- endset %}
