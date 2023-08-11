@@ -3,15 +3,12 @@ permalink: /robots.txt
 layout: ''
 eleventyExcludeFromCollections: true
 ---
-User-agent: GPTBot
+
+{% for badRobot in site.badRobots %}
+User-agent: {{ badRobot }}
 Disallow: /
 
-User-agent: Googlebot
-Disallow: /
-
-User-agent: Googlebot-Image
-Disallow: /
-
+{% endfor -%}
 User-agent: *
 Allow: /
 
