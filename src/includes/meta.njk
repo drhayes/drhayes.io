@@ -14,7 +14,7 @@
   og-images/{{ title | slugify }}
   {%- else %}img/og-image{%- endif %}
 {%- endset %}
-  <meta name="generator" content="Eleventy"/>
+  <meta name="generator" content="{{ eleventy.generator }}"/>
   <meta name="description" content="{{ excerpt | trim }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="{{ title }}{{ ' - ' + site.name if not isHome }}{{ site.name if isHome }}"/>

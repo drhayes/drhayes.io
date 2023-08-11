@@ -4,6 +4,8 @@ description: What am I doing right now.
 updated: 2023-08-10
 ---
 
+{% omgStatus latestStatus %}
+
 ## Overall
 
 Focused on my site, trying to brush up on the latest tech -- especially on the CSS side, with logical properties and more modern color representations. It's a work in progress.

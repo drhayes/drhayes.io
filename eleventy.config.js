@@ -52,6 +52,10 @@ module.exports = (eleventyConfig) => {
     'meLink',
     require('./lib/shortcodes/meLink')
   );
+  eleventyConfig.addNunjucksShortcode(
+    'omgStatus',
+    require('./lib/shortcodes/omgStatus')
+  );
 
   // Collections.
   eleventyConfig.addCollection('games', require('./lib/collections/games'));
