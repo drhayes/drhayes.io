@@ -17,11 +17,15 @@ I'm a dad.
 
 I love jokes, especially dad jokes. But that was before I was a dad and it's only gotten worse since.
 
-I love everything game (board and digital and role-playing), plain text formats, productivity, and knowledge management.
+I love everything game (board and digital and role-playing)
+
+I dig on plain text formats, productivity, and knowledge management.
 
 I'm a musician. I've played the piano since I was very young, and I very much like making music with things that look like [trackers](https://en.wikipedia.org/wiki/Music_tracker).
 
 I like keyboards that make too much noise, especially ergodox keyboards.
+
+I like to think I'm a mentor, but I'm still learning how to do that myself from people who are really good at it.
 
 ## Contact Me
 
@@ -43,9 +47,9 @@ Here are some likely haunts:
 
 ## Colophon
 
-This site is generated in [Eleventy].
+This site is generated in [Eleventy], which rules.
 
-- [Here is the site's git repository.][site]
+- [Here is the site's git repository.](https://github.com/drhayes/drhayes.io)
 - [neovim] is where the typing happens.
 - [Markdown] has the content.
 - [GitHub] hosts the code.
@@ -53,12 +57,15 @@ This site is generated in [Eleventy].
 
 ### Credits
 
+I _adore_ seeing how other people solve similar issues to mine. I think we all get smarter when we share solutions.
+
 Some 11ty organization ideas came from:
 
-- [Sophie Koonin](https://localghost.dev/)
+- [Zach Leatherman](https://www.zachleat.com/): <https://github.com/zachleat/zachleat.com>
+  - I mean, the guy wrote 11ty so he has some ideas about how to use it.
+- [Sophie Koonin](https://localghost.dev/): <https://localghost.dev/>
   - meta tags, excerpts, OpenGraph image generation
 
-[site]: https://github.com/drhayes/drhayes.io
 [markdown]: https://daringfireball.net/projects/markdown/
 [github]: https://github.com/
 [netlify]: https://www.netlify.com/
@@ -66,4 +73,3 @@ Some 11ty organization ideas came from:
 [keybasechat]: https://keybase.io/drhayes/chat
 [eleventy]: https://www.11ty.dev/
 [neovim]: https://neovim.io/
-[cobalt2]: https://wesbos.com/cobalt2-theme-sublime-text-2
