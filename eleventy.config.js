@@ -4,6 +4,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const webmentionsConfig = require('./lib/webmentions.js');
 const pluginWebmentions = require('@chrisburnell/eleventy-cache-webmentions');
 const pluginSass = require('eleventy-sass');
+const { ogImageGenerate } = require('./lib/events/ogImageGenerate');
 
 module.exports = (eleventyConfig) => {
   // Server options.
@@ -11,6 +12,9 @@ module.exports = (eleventyConfig) => {
     liveReload: true,
     port: 3000,
   });
+
+  // Events.
+  eleventyConfig.on('eleventy.after', ogImageGenerate);
 
   // Markdown stuff.
   // eleventyConfig.setLibrary('md', markdown());
@@ -37,6 +41,7 @@ module.exports = (eleventyConfig) => {
   );
   eleventyConfig.addFilter('tagFilter', require('./lib/filters/tagFilter'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
+  eleventyConfig.addFilter('splitlines', require('./lib/filters/splitlines'));
 
   // Shortcodes.
   eleventyConfig.addNunjucksShortcode(
@@ -63,6 +68,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('./src/keybase.txt');
   eleventyConfig.addPassthroughCopy('./src/twtxt.txt');
   eleventyConfig.addPassthroughCopy('./fonts/**/*');
+
+  // Front matter.
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: '<!--more-->',
+  });
 
   // What are we watching for changes?
   eleventyConfig.addWatchTarget('./src/css/**/*');

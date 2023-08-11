@@ -5,6 +5,7 @@ tags:
   - projects
   - löve
 screenshot: /img/gr-screenshot-2022-01-18.png
+screenshotDescription: A small, white, pixel-art robot (that has two antennae that make it look a bit like a small rabbit) sits on a metal substructure sticking out of a pixel-art wall. It looks like it's about to do crimes against other robots.
 description: A puzzle platformer about hacking angry robots.
 date: 2020-08-01
 updated: 2022-01-22

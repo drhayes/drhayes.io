@@ -1,0 +1,49 @@
+.article-content {
+  .games-list {
+    margin: 0;
+    list-style-type: none;
+
+    .game-item {
+      margin-block-end: 2em;
+
+      figure.game-screenshot {
+        position: relative;
+        margin: 0;
+        height: 16rem;
+
+        img {
+          position: absolute;
+          inset-block-start: 0;
+          inset-inline-start: 0;
+          height: 16rem;
+          object-fit: cover;
+        }
+
+        figcaption {
+          position: absolute;
+          inset-block-start: calc(16rem / 2 - 3rem / 2);
+          font-family: var(--heading-font);
+          letter-spacing: -0.05em;
+          font-size: 3rem;
+          color: var(--game-title-color);
+          text-shadow: 0 0 4px var(--game-title-shadow);
+          font-weight: bold;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .game-screenshot {
+    img {
+      width: 100%;
+    }
+
+    figcaption {
+      width: 100%;
+    }
+  }
+}

@@ -50,11 +50,19 @@ class MyFeed {
       }
 
       const { title, updated, description } = thing.data;
+      let excerpt = thing.page.excerpt?.trim();
+      if (!excerpt) {
+        excerpt = thing.excerpt;
+      }
+      if (!excerpt) {
+        excerpt = description;
+      }
+
       feed.addItem({
-        title,
+        title: title || site.name,
         id: urlize(thing.url),
         link: urlize(thing.url),
-        description,
+        description: excerpt,
         content: thing.templateContent,
         url: urlize(thing.url),
         date: updated || thing.date,

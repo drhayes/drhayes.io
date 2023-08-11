@@ -4,6 +4,7 @@ tags:
   - projects
   - löve
 screenshot: /img/aftershock-screenshot.png
+screenshotDescription: A small city of pixel-art buildings is shaking apart in an earthquake while some small, squat houses sit off to the right, untouched by the damage... so far.
 description: My entry for the Love Jam 2022.
 date: 2022-03-04
 updated: 2022-05-31

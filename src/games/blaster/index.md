@@ -4,6 +4,7 @@ tags:
   - blaster
   - projects
 screenshot: /img/blaster-screenshot.png
+screenshotDescription: Ominous red geometric shapes battle a blue geometric square upon a white starfield. The text "Wave 2, Get Ready!" is visible in the center. One of the red shapes is exploding in a bunch of yellow particle effects.
 description: A little JavaScript game about blasting geometric enemies.
 date: 2015-09-26
 updated: 2019-01-01
@@ -27,8 +28,6 @@ Here is the [repository for the project][repo].
 1. [Part One, The Player](/games/blaster/part-one)
 1. [Part Two, Shooting and Explosions](/games/blaster/part-two)
 1. [Part Three, Enemies and AI](/games/blaster/part-three)
-
-
 
 [playblaster]: http://blaster.drhayes.io
 [phaser]: https://phaser.io/

@@ -50,7 +50,13 @@ This site is generated in [Eleventy].
 - [Markdown] has the content.
 - [GitHub] hosts the code.
 - [Netlify] hosts the site.
-- The color palette is mostly [cobalt2].
+
+### Credits
+
+Some 11ty organization ideas came from:
+
+- [Sophie Koonin](https://localghost.dev/)
+  - meta tags, excerpts, OpenGraph image generation
 
 [site]: https://github.com/drhayes/drhayes.io
 [markdown]: https://daringfireball.net/projects/markdown/

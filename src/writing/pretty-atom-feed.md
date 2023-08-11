@@ -1,12 +1,15 @@
 ---
 title: A pretty Atom feed
-description: I wanted my Atom feed to look prettier and had to dust off some old skills to get it done.
 date: 2023-08-10
 draft: true
 tags:
   - atom
   - 11ty
 ---
+
+I wanted my Atom feed to look prettier. In the process, I had to dust off some old skills to get it done.
+
+<!--more-->
 
 I've been reskinning my site and trying to simplify things here and there. Out of the blue I decided that I wanted my atom feed to look nice, too. How come only the HTML gets to have any fun?
 

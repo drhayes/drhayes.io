@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "scripts": {
     "build": "eleventy",
-    "start": "ELEVENTY_ENV=development eleventy --serve"
+    "start": "BASE_URL=http://localhost:3000 NODE_ENV=development ELEVENTY_ENV=development eleventy --serve"
   },
   "dependencies": {
     "@11ty/eleventy": "2.0.1",
+    "@11ty/eleventy-img": "3.1.0",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
     "@chrisburnell/eleventy-cache-webmentions": "1.1.5",

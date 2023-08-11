@@ -38,51 +38,6 @@
     }
   }
 
-  .game-screenshot {
-    img {
-      width: 100%;
-    }
-
-    figcaption {
-      width: 100%;
-    }
-  }
-
-  .games-list {
-    margin: 0;
-    list-style-type: none;
-
-    .game-item {
-      margin-block-end: 2em;
-
-      .game-screenshot {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 16rem;
-        background-size: cover;
-        background-position: center;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      h1 {
-        color: var(--game-title-color);
-        font-weight: bold;
-        padding: 0.2em 0.5em;
-        margin: 0;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 1em;
-        background-color: rgb(0 0 0 / 0.6);
-        box-shadow: 0 0 0.2em rgb(255 255 255 / 0.3);
-      }
-    }
-  }
-
   ul {
     margin-left: calc(2em - 2px);
     list-style-type: initial;
