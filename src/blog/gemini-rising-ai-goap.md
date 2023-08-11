@@ -1,6 +1,7 @@
 ---
 title: Gemini Rising AI -  Goal-Oriented Action Planning
 date: 2019-10-25T10:32:01-05:00
+toc: true
 tags:
   - gemini-rising
   - ai
@@ -8,13 +9,14 @@ tags:
   - gemini-rising-ai
   - goap
   - pathfinding
-description: My exploration of goal-oriented action planning and why I eventually decided not to
-    use it.
+description:
+  My exploration of goal-oriented action planning and why I eventually decided not to
+  use it.
 ---
 
 This post is the (long overdue) third post in a series I'm writing about [scripting the AI in my game, Gemini Rising][grai]. This one is about goal-oriented action planning, or <abbr title="goal-oriented action planning">GOAP</abbr>.
 
-I'm often frustrated to find that the blog posts I read don't dig into enough details about the *why* of things, instead focusing on very basic *what*s. With these posts, I'm trying to change that. Let's dive in.
+I'm often frustrated to find that the blog posts I read don't dig into enough details about the _why_ of things, instead focusing on very basic *what*s. With these posts, I'm trying to change that. Let's dive in.
 
 UPDATED 2020-07-13: Added 'game-ai' tag.
 
@@ -84,8 +86,8 @@ This code worked, but felt very hacky to me. The most common value in the `World
 
 Actions encompass two concepts:
 
-  1. A precondition that must be true to take this action.
-  2. A resultant world state that is true once this action is complete, called the effect.
+1. A precondition that must be true to take this action.
+2. A resultant world state that is true once this action is complete, called the effect.
 
 To move from the precondition to the resultant state, the entity must take this action... if it can. Sometimes the state of the world prevents an entity from taking a particular action. The planner verifies this by matching the precondition against the current world state using the `WorldState:matches` method from before.
 
@@ -97,7 +99,7 @@ Each of the actions the entity can take make a path to a goal.
 
 ## Pathfinding? Really?
 
-One of the more interesting things about GOAP is its use of [A*][astar] that is not directly related to spatial pathfinding. If you think of the space of actions the entity can take as paving stones on the way to a goal this seems like a natural idea. When I first encountered it I was gobsmacked -- what an elegant solution.
+One of the more interesting things about GOAP is its use of [A\*][astar] that is not directly related to spatial pathfinding. If you think of the space of actions the entity can take as paving stones on the way to a goal this seems like a natural idea. When I first encountered it I was gobsmacked -- what an elegant solution.
 
 Each action is given a cost. This cost is paid by the entity for performing this action. The entity will likely find multiple sequences of actions that result in it completing its highest-priority goal. The planner picks the sequence with the lowest cost as the "best" course of action.
 
@@ -183,7 +185,7 @@ function AISystem:get(entity, key, withinSpan)
 end
 ```
 
-It's commented, so I won't repeat any of that info here. I *will* say that whether a memory is "transient" ended up not mattering. Normalizing the age helped with debugging and made it possible to have "urgent" goals, like "This just happened so increase my alarm state!". `withinSpan` mostly complicated things without much benefit. But the basic code is good: if I've got this memory, return it.
+It's commented, so I won't repeat any of that info here. I _will_ say that whether a memory is "transient" ended up not mattering. Normalizing the age helped with debugging and made it possible to have "urgent" goals, like "This just happened so increase my alarm state!". `withinSpan` mostly complicated things without much benefit. But the basic code is good: if I've got this memory, return it.
 
 I've moved on from GOAP (spoiler alert!), but this code is still in my game. Having a memory makes so many other AI decisions possible and much, much easier. I'm kind of sorry it took me so long to get here.
 
@@ -239,9 +241,9 @@ Enter nav meshes. Rather than constantly sending out rays to figure out where th
 
 I ended up with two navmeshes, one for the things that walk on platforms and another for things that fly through the air. This solved lots of ancillary problems as well:
 
-* How do things that walk on platforms know if they can jump to a nearby platform? The platforming navmesh can have vertices between edges that are navigable by jump.
-* How do I make things that fly avoid platform edges? Simply don't place flight navmesh nodes too close to platforms. They literally won't be able to path near the platform edge.
-* Eventually, I plan on making enemies that can teleport via stationary bases from one area of the map to another. In a completely physics-based pathfinding scenario it'd be hard to configure teleporting through a base as a valid route. In a navmesh world, the stationary base becomes a vertex that gets pathed through. Easy.
+- How do things that walk on platforms know if they can jump to a nearby platform? The platforming navmesh can have vertices between edges that are navigable by jump.
+- How do I make things that fly avoid platform edges? Simply don't place flight navmesh nodes too close to platforms. They literally won't be able to path near the platform edge.
+- Eventually, I plan on making enemies that can teleport via stationary bases from one area of the map to another. In a completely physics-based pathfinding scenario it'd be hard to configure teleporting through a base as a valid route. In a navmesh world, the stationary base becomes a vertex that gets pathed through. Easy.
 
 So, I did that. But having a destination isn't quite enough -- how do you get there? I mean, once the pathfinder has figured out what points you need to hit in the navmesh to get to your destination... what actually happens?
 
@@ -306,12 +308,12 @@ Now that the systems were in place to support my actions, I made a small palette
 
 Here's a small sample:
 
-* `bombPlayer`
-* `flyCircuit`
-* `gotoHome`
-* `playSound`
-* `shootPlayer`
-* `wanderOnPlatform`
+- `bombPlayer`
+- `flyCircuit`
+- `gotoHome`
+- `playSound`
+- `shootPlayer`
+- `wanderOnPlatform`
 
 `wanderOnPlatform` is a nice barometer of how good my AI solution is treating me. Here's a snippet of the important bits:
 
@@ -358,7 +360,7 @@ end
 
 There's the navmesh. There's the `effect`, which is the change to the world state for the entity after this action has been successfully run; that helps the planner figure out if it should use this action or not. Once it runs its job is complete; the steering system takes over as the entity wanders back and forth on the platform.
 
-Without the physics code intertwined here, and without having to worry about "jumping" out because the entity was just shot, this code is *very* simple. I was pretty happy.
+Without the physics code intertwined here, and without having to worry about "jumping" out because the entity was just shot, this code is _very_ simple. I was pretty happy.
 
 ## Debugging
 
@@ -419,7 +421,7 @@ If I pressed <kbd>F2</kbd> then I would get a dump of the state of every entity'
 
 ## Complications
 
-It didn't all work immediately. I found bugs and complications in my implementation that I didn't see anyone else write about. I don't know if that's because they're obvious, they're bugs I wrote because I don't understand what I'm doing, or what. *¿porque no los dos?*
+It didn't all work immediately. I found bugs and complications in my implementation that I didn't see anyone else write about. I don't know if that's because they're obvious, they're bugs I wrote because I don't understand what I'm doing, or what. _¿porque no los dos?_
 
 ### Timeouts
 
@@ -439,7 +441,7 @@ Imagine an entity that doesn't know to attack anything until an alarm in the lev
 
 ## Results
 
-The enemies in my game became a lot smarter. Like, *way* smarter. **Too smart**.
+The enemies in my game became a lot smarter. Like, _way_ smarter. **Too smart**.
 
 Whoops.
 
@@ -453,11 +455,11 @@ I think there's room in this world for games with really smart enemies, guards t
 
 But that's not the game I want to make.
 
-And, dammit, I'd spent a lot of time researching, designing, and implementing something that I was now about to rip out completely because *it didn't serve my game*. That's probably the worst part of all this, my wasted time and effort. Hopefully the lesson will stick this time.
+And, dammit, I'd spent a lot of time researching, designing, and implementing something that I was now about to rip out completely because _it didn't serve my game_. That's probably the worst part of all this, my wasted time and effort. Hopefully the lesson will stick this time.
 
 ### Silver Lining
 
-The silver lining of this is that the AI subsystems became *a lot* smarter in the process. When I returned to my behavior trees I was pleasantly surprised at how much easier they were this time around. But that's a topic for another blog post.
+The silver lining of this is that the AI subsystems became _a lot_ smarter in the process. When I returned to my behavior trees I was pleasantly surprised at how much easier they were this time around. But that's a topic for another blog post.
 
 [grai]: /blog/gemini-rising-ai-intro/
 [gr]: /games/gemini-rising

@@ -1,6 +1,7 @@
 ---
 title: Gemini Rising AI - Behavior Trees
 date: 2019-03-22T11:12:57-05:00
+toc: true
 tags:
   - gemini-rising
   - ai

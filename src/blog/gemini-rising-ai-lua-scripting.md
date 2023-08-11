@@ -2,6 +2,7 @@
 title: Gemini Rising AI - Lua Scripting
 description: A short article about trying to script AI with straight lua code.
 date: 2019-03-22T11:10:26-05:00
+toc: true
 tags:
   - gemini-rising
   - ai
@@ -21,7 +22,7 @@ When I started this game I'd never programmed seriously in Lua before. I'd purch
 
 Until I fell in [Löve][love2d].
 
-So I set about hoovering up as much Lua content as I could. I was excited to dig into what seemed from the outside to be *the* gamedev scripting language.
+So I set about hoovering up as much Lua content as I could. I was excited to dig into what seemed from the outside to be _the_ gamedev scripting language.
 
 The first decision I made regarding my game AI was what technology to use. I decided that I would use a scripting language. The first language I considered was...well, Lua. Since I was already using a scripting language I didn't see the point in introducing another complexity into my hobby project.
 
@@ -55,7 +56,7 @@ The basic idea is that the game AI will look relatively straightforward, lots of
 
 The scripts would be loaded from disk and passed to the `Brain.create` function. More on that janky-looking `loadString(string.dump(f))` business below.
 
-I thought to myself, *How great this'll be! I can write the game AI as normal Lua programs without having to muck around with all those weird data structures that are in state machines and stuff.*
+I thought to myself, _How great this'll be! I can write the game AI as normal Lua programs without having to muck around with all those weird data structures that are in state machines and stuff._
 
 Here's what that looked like in practice:
 
@@ -97,7 +98,7 @@ end
 
 Turns out it doesn't go so well.
 
-Looking at this code now makes me cringe. There are so many lessons to be learned here that I hadn't learned yet. I was so busy trying to get the animations and pathing to work that I wasn't handling cases like *Did I just get shot and need to play my hurt animation?* and *Am I actually dead?*.
+Looking at this code now makes me cringe. There are so many lessons to be learned here that I hadn't learned yet. I was so busy trying to get the animations and pathing to work that I wasn't handling cases like _Did I just get shot and need to play my hurt animation?_ and _Am I actually dead?_.
 
 I thought what I wanted was imperative, synchronous-looking code for my AI routines. I thought writing the AI for this game would be simpler that way. But it's not; I don't think an imperative solution to my event-based problem was going to work.
 
@@ -113,7 +114,7 @@ By interleaving all those game system decisions with the entity-level decisions,
 if sprite.y < player.y and distance < 200 then
 ```
 
-Every other line in that script obscures the true *behavior* of this entity's brain: if the player is below me and less than 200 distance away, swoop down and get them.
+Every other line in that script obscures the true _behavior_ of this entity's brain: if the player is below me and less than 200 distance away, swoop down and get them.
 
 But those are just stylistic problems. I haven't gotten to the big bug yet.
 
@@ -155,7 +156,7 @@ Note to any programmers out there: if the solution to your problem is to dump th
 
 When I touched on the possible code duplication in the last section, one could argue that the common behaviors for any particular `Brain` could be refactored out into a common script that was then included in every `Brain` that needed it. But, with `setfenv`, how would I do that? I'd have to pass the "common" scripts into the environment that I was passing into my script. That "common" script area now becomes a kind of kitchen sink of code that applies to several different `Brain`s, an organizational mess -- all to solve a problem I'm imposing on myself because I was fascinated with isolating the scripts' environments. Not a good move.
 
-If I were truly interested in making my game use a plugin architecture then I would revisit these issues. `setfenv` is not to blame here; *I* am, for cursing the limitations of a tool that solves a problem that I created myself. Once I unpacked all of that, I abandoned this approach.
+If I were truly interested in making my game use a plugin architecture then I would revisit these issues. `setfenv` is not to blame here; _I_ am, for cursing the limitations of a tool that solves a problem that I created myself. Once I unpacked all of that, I abandoned this approach.
 
 ## Finale
 
