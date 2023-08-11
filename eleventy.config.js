@@ -5,6 +5,12 @@ const webmentionsConfig = require('./lib/webmentions.js');
 const pluginWebmentions = require('@chrisburnell/eleventy-cache-webmentions');
 const pluginSass = require('eleventy-sass');
 const { ogImageGenerate } = require('./lib/events/ogImageGenerate');
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
+const markdownItAttrs = require('markdown-it-attrs');
+const embeds = require('eleventy-plugin-embed-everything');
+const pluginTOC = require('eleventy-plugin-toc');
+const mdfigcaption = require('markdown-it-image-figures');
 
 module.exports = (eleventyConfig) => {
   // Server options.
@@ -16,8 +22,20 @@ module.exports = (eleventyConfig) => {
   // Events.
   eleventyConfig.on('eleventy.after', ogImageGenerate);
 
-  // Markdown stuff.
-  // eleventyConfig.setLibrary('md', markdown());
+  // Set up markdown.
+  const md = markdownIt({
+    html: true,
+    linkify: true,
+    typographer: true,
+  })
+    .disable('code')
+    .use(mdfigcaption, { figcaption: true, lazy: true, async: true })
+    .use(markdownItAttrs)
+    .use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.headerLink(),
+      level: 2,
+    });
+  eleventyConfig.setLibrary('md', md);
 
   // Deep data merge!
   eleventyConfig.setDataDeepMerge(true);
@@ -31,8 +49,34 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginWebmentions, webmentionsConfig);
   eleventyConfig.addPlugin(pluginSass);
+  eleventyConfig.addPlugin(embeds);
+  eleventyConfig.addPlugin(pluginTOC, {
+    tags: ['h2', 'h3'],
+    wrapper: '',
+    ul: true,
+  });
 
   // Filters.
+  eleventyConfig.addFilter('md', (value, o = {}) => {
+    if (typeof value !== 'string') {
+      if (value instanceof String) {
+        value = value + '';
+      } else {
+        return value;
+      }
+    }
+
+    let ret = md.render(value, o);
+
+    return ret;
+  });
+  eleventyConfig.addFilter('mdInline', (value, o = {}) => {
+    if (typeof value !== 'string') {
+      return value;
+    }
+
+    return md.renderInline(value, o);
+  });
   eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
   eleventyConfig.addFilter('debugPrint', require('./lib/filters/debugPrint'));
   eleventyConfig.addFilter(

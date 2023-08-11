@@ -8,6 +8,8 @@
 
   {% include 'title-element.njk' %}
 
+  {% include 'toc.njk' %}
+
   <article class="article-content {% if tags | isBigLetterPage -%}big-letter{%- endif %} e-content">
     {{ content | safe }}
   </article>
@@ -23,5 +25,6 @@
   </article>
 
 </main>
+
 {% include 'footer.njk' %}
 {% endblock %}

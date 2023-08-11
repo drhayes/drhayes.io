@@ -2,6 +2,7 @@
 title: I have imposter syndrome
 description: What is imposter syndrome? Do you have it? Can you get over it?
 date: 2022-06-06
+toc: true
 tags:
   - imposter-syndrome
   - mental-health

@@ -1,4 +1,4 @@
-@use '_reset';
+// @use '_reset';
 @use '_tokyo-night-dark';
 @use '_theme';
 @use '_fonts';
@@ -14,6 +14,7 @@
 @use '_feed';
 @use '_games';
 @use '_omgStatus';
+@use '_toc';
 
 footer .webring {
   display: flex;

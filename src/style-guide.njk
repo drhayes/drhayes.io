@@ -26,7 +26,7 @@ eleventyExcludeFromCollections: true
 
     <h2>Asides</h2>
     <aside>
-      <h1>What the heck is this?</h1>
+      <h4>What the heck is this?</h4>
       <p>In redesigning my site I thought it'd be useful to gather all the styles and specimens across my site in a single place so I can see how they all work together.</p>
       <p>Sticking another paragraph in here to demonstrate some spacing stuff.</p>
     </aside>
@@ -34,8 +34,18 @@ eleventyExcludeFromCollections: true
     <p>What if some text goes here? Is there enough space?</p>
 
     <aside class="warning">
-      <h1>This is a warning!</h1>
+      <h4>This is a warning!</h4>
       <p>Look out! This could happen to you!</p>
+    </aside>
+
+    <aside class="joke">
+      <h4>This one is funny.</h4>
+      <p>Oh wait, no it's not.</p>
+    </aside>
+
+    <aside class="draft">
+      <h4>This one is a draft</h4>
+      <p>And here is some text explaining that.</p>
     </aside>
 
     <h2>Inline styles</h2>
@@ -127,6 +137,13 @@ eleventyExcludeFromCollections: true
     </ul>
 
     <h2>Images and Screenshots</h2>
+
+    <h3>No figcaption</h3>
+    <figure>
+      <img src="/img/raven.png">
+    </figure>
+
+    <h3>With figcaption</h3>
     <figure>
       <img src="/img/ha_ha_guy.jpg" alt="An old-timey pilgrim-looking guy laughing in a kind of sinister way with the text 'Ha! Ha! I'm using the internet!!!1' arranged around him.">
       <figcaption>Look, this guy is using the internet.</figcaption>

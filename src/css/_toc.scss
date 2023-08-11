@@ -1,0 +1,13 @@
+#toc {
+  &::before {
+    content: '<toc>';
+  }
+
+  &::after {
+    content: '</toc>';
+  }
+
+  ul {
+    margin-block: 0;
+  }
+}

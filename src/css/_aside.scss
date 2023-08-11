@@ -1,10 +1,18 @@
 aside {
+  --aside-background-color: var(--background-color);
+  --aside-header-color: var(--text-contrast-color);
+  --aside-text-color: var(--text-content-color);
+  --aside-border-color: var(--light-border-color);
+  --aside-text: 'aside';
+
   position: relative;
-  padding: 1em;
-  margin-block: 1.75em;
-  border: 1px solid var(--light-border-color);
+  padding: 1em 1.5em;
+  margin-block-start: 1.75em;
+  margin-block-end: 1em;
+  border: 1px solid var(--aside-border-color);
   border-radius: 0.5em;
-  background-color: var(--background-color);
+  background-color: var(--aside-background-color);
+  color: var(--aside-text-color);
 
   p:last-child {
     margin-bottom: 0;
@@ -12,80 +20,57 @@ aside {
 
   &::before {
     position: absolute;
-    content: '<aside>';
+    content: '<' var(--aside-text) '>';
     inset-block-start: -1em;
     inset-inline-start: 1em;
     font-size: 0.8rem;
-    background-color: var(--background-color);
-    border: 1px solid var(--light-border-color);
+    background-color: var(--aside-background-color);
+    border: 1px solid var(--aside-border-color);
     border-radius: 0.5em;
-    color: var(--text-contrast-color);
+    padding: 0.1em 0.2em;
+    color: var(--aside-text-color);
   }
 
   &::after {
     position: absolute;
-    content: '</aside>';
+    content: '</' var(--aside-text) '>';
     inset-block-end: -0.8em;
     inset-inline-end: 1em;
     font-size: 0.8rem;
-    background-color: var(--background-color);
-    border: 1px solid var(--light-border-color);
+    background-color: var(--aside-background-color);
+    border: 1px solid var(--aside-border-color);
     border-radius: 0.5em;
-    color: var(--text-contrast-color);
+    padding: 0.1em 0.2em;
+    color: var(--aside-text-color);
   }
 
-  h1 {
+  h4 {
     font-size: 1.5rem;
-    color: var(--text-contrast-color);
+    margin-block: 0;
+    color: var(--aside-header-color);
   }
 
   &.warning {
-    background-color: var(--warning-background-color);
-    color: var(--warning-color);
-    border-color: var(--warning-border-color);
-
-    &::before,
-    &::after {
-      background-color: var(--warning-background-color);
-      color: var(--warning-color);
-      border-color: var(--warning-border-color);
-    }
-
-    &::before {
-      content: '<warning>';
-    }
-
-    &::after {
-      content: '</warning>';
-    }
-
-    h1 {
-      color: var(--warning-color);
-    }
+    --aside-background-color: var(--warning-background-color);
+    --aside-header-color: var(--warning-color);
+    --aside-text-color: var(--warning-color);
+    --aside-border-color: var(--warning-border-color);
+    --aside-text: 'warning';
   }
 
   &.joke {
-    background-color: var(--joke-background-color);
-    color: var(--joke-color);
-    border-color: var(--joke-border-color);
+    --aside-background-color: var(--joke-background-color);
+    --aside-header-color: var(--joke-color);
+    --aside-text-color: var(--joke-color);
+    --aside-border-color: var(--joke-border-color);
+    --aside-text: '😆😂🤣';
+  }
 
-    &::before,
-    &::after {
-      background-color: var(--joke-background-color);
-      color: var(--joke-color);
-      border-color: var(--joke-border-color);
-    }
-
-    &::before {
-      content: '<😆😂🤣>';
-    }
-
-    &::after {
-      content: '</😆😂🤣>';
-    }
-
-    h1 {
-      color: var(--joke-color);
-    }
+  &.draft {
+    --aside-background-color: var(--draft-background-color);
+    --aside-header-color: var(--draft-color);
+    --aside-text-color: var(--draft-color);
+    --aside-border-color: var(--draft-border-color);
+    --aside-text: 'draft';
   }
 }

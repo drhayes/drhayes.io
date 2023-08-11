@@ -18,6 +18,8 @@
   .menu {
     display: flex;
     gap: 0.8em;
+    list-style-type: none;
+    margin: 0;
 
     a {
       text-decoration: none;

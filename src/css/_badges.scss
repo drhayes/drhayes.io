@@ -1,14 +1,15 @@
 .badge {
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: -0.05em;
+
+  &.draft {
+    color: var(--draft-badge-color);
+  }
 }
 
 .date + .badge {
   margin-inline-start: 1em;
   order: 3;
   align-self: center;
-}
-
-.draft {
-  color: cornflowerblue;
 }
