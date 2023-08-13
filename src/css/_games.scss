@@ -7,27 +7,29 @@
       margin-block-end: 2em;
 
       figure.game-screenshot {
-        position: relative;
+        display: grid;
         margin: 0;
         height: 16rem;
 
         img {
-          position: absolute;
-          inset-block-start: 0;
-          inset-inline-start: 0;
+          grid-column: 1;
+          grid-row: 1;
           height: 16rem;
           object-fit: cover;
         }
 
         figcaption {
-          position: absolute;
-          inset-block-start: calc(16rem / 2 - 3rem / 2);
+          grid-column: 1;
+          grid-row: 1;
+          z-index: 1;
+          align-self: center;
           font-family: var(--heading-font);
           letter-spacing: -0.05em;
           font-size: 3rem;
           color: var(--game-title-color);
           text-shadow: 0 0 4px var(--game-title-shadow);
           font-weight: bold;
+          text-align: center;
         }
       }
 
