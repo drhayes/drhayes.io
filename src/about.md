@@ -54,6 +54,7 @@ This site is generated in [Eleventy], which rules.
 - [Markdown] has the content.
 - [GitHub] hosts the code.
 - [Netlify] hosts the site.
+- [Feather](https://feathericons.com/) supplied my feed icon.
 
 ### Credits
 

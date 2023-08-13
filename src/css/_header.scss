@@ -12,7 +12,7 @@
   font-size: 1.25rem;
 
   .home-link {
-    text-decoration: none;
+    background: none;
   }
 
   .menu {
@@ -22,8 +22,8 @@
     margin: 0;
 
     a {
-      text-decoration: none;
       font-weight: bold;
+      background: none;
     }
   }
 }

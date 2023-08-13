@@ -25,15 +25,13 @@ function cspPolicy(configData) {
     media: 'self',
     object: 'self',
     script: ['self'],
-    ['script-src']: ['self', configData.global.baseUrl],
     style: ['self', 'data:', 'inline'],
     worker: 'self',
-    ['frame-ancestors']: ``,
   };
 
   if (configData.global.isDev) {
     csp.default = ['self', configData.global.baseUrl];
-    csp['script-src'].push('unsafe-inline');
+    csp.script.push('unsafe-inline');
   }
 
   const cspPolicyLine = Object.keys(csp)
@@ -45,7 +43,7 @@ function cspPolicy(configData) {
       }
       value = value
         .map((v) => {
-          if (v == 'self' || v == 'none') {
+          if (v == 'self' || v == 'none' || v == 'unsafe-inline') {
             return `'${v}'`;
           }
           return v;

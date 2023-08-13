@@ -12,13 +12,13 @@ class MyFeed {
   }
 
   render(data) {
-    const { eleventy, collections, site } = data;
+    const { eleventy, collections, site, global } = data;
 
     function urlize(path) {
-      return new URL(path, site.host).toString();
+      return new URL(path, global.baseUrl).toString();
     }
 
-    const allThings = collections.all;
+    const allThings = collections.allTheWriting;
     // Put more recent things first.
     allThings.sort((a, b) => {
       const aDate = a.data.updated || a.date;
@@ -29,8 +29,8 @@ class MyFeed {
     const feed = new Feed({
       title: site.name,
       description: site.subtitle,
-      id: site.host,
-      link: site.host,
+      id: global.baseUrl,
+      link: global.baseUrl,
       language: 'en',
       image: urlize('/img/raven.png'),
       favicon: urlize('/favicon.ico'),
