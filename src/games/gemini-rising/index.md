@@ -29,7 +29,7 @@ Here's a list of videos I've made of the game's progress so far. My game was cod
 
 I've also recently taken a hard right turn regarding the scope of the game. More on that soon.
 
-<iframe title="Gemini Rising playlist on youtube.com" style="position:static;width:100%;height:600px" src="https://www.youtube.com/embed/videoseries?list=PLQuDSztE3xlPBszv48dtN3TFsKUP9s_mO" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe title="Gemini Rising playlist on youtube.com" src="https://www.youtube.com/embed/videoseries?list=PLQuDSztE3xlPBszv48dtN3TFsKUP9s_mO" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
 
 ## Articles
 

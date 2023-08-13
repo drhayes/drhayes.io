@@ -4,7 +4,6 @@ tags:
   - hyperblaster
   - projects
   - löve
-toc: true
 screenshot: /img/hyperblaster-screenshot-2021-07-12.png
 screenshotDescription: A white starfield with no other details. An unfinished game.
 description: A simple space-shooter.

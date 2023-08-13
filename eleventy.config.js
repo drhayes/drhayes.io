@@ -19,6 +19,12 @@ module.exports = (eleventyConfig) => {
     port: 3000,
   });
 
+  // Data.
+  eleventyConfig.addGlobalData('global', {
+    baseUrl: process.env.BASE_URL || 'https://drhayes.io',
+    isDev: process.env.NODE_ENV !== 'production',
+  });
+
   // Events.
   eleventyConfig.on('eleventy.after', ogImageGenerate);
 

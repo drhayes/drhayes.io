@@ -1,9 +1,10 @@
 body {
+  font-size: 18px;
   padding: 1rem;
   margin: 0;
   visibility: var(--styles-loaded);
   font-family: var(--body-font);
-  line-height: 1.75;
+  line-height: 1.6;
   background-color: var(--background-color);
   color: var(--text-content-color);
 }
