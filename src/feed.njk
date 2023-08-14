@@ -9,8 +9,8 @@ rfc: 'https://datatracker.ietf.org/doc/html/rfc4287'
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ global.baseUrl }}">
   <title>{{ site.name }}</title>
   <subtitle>{{ site.subtitle }}</subtitle>
-  <link href="{{ permalink | absoluteUrl(global.baseUrl) }}" rel="self"/>
-  <link href="{{ global.baseUrl }}"/>
+  <link href="{{ permalink | absoluteUrl(global.baseUrl) }}" rel="self" />
+  <link href="{{ global.baseUrl }}" rel="alternate" />
   <updated>{{ collections.allTheWriting | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ global.baseUrl }}</id>
   <generator uri="https://www.11ty.dev/" version="{{ eleventy.version }}">{{ eleventy.generator }}</generator>
