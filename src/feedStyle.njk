@@ -44,6 +44,7 @@ eleventyExcludeFromCollections: true
         <main>
           <h1>Recent Stuff</h1>
           <xsl:for-each select="//atom:entry">
+            <xsl:sort select="atom:updated" order="descending" />
             <article>
               <h2>
                 <a>
