@@ -29,7 +29,7 @@
     {% if date %}
       <time datetime="{{ date | dateFormat(true) }}" class="dt-published">{{ date | dateFormat }}</time>
     {%- endif -%}
-    {%- if date and updated -%}, {%- endif -%}
+    {%- if date and updated -%}, {% endif -%}
     {%- if updated -%}
       <time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">updated: {{ updated | dateFormat }}</time>
     {% endif %}
