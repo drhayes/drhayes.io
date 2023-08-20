@@ -92,6 +92,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('tagFilter', require('./lib/filters/tagFilter'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
   eleventyConfig.addFilter('splitlines', require('./lib/filters/splitlines'));
+  eleventyConfig.addFilter('twDate', require('./lib/filters/twDate'));
 
   // Shortcodes.
   eleventyConfig.addNunjucksShortcode(
