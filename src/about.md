@@ -64,13 +64,14 @@ Some 11ty organization ideas came from:
 
 - [Zach Leatherman](https://www.zachleat.com/): <https://github.com/zachleat/zachleat.com>
   - I mean, the guy wrote 11ty so he has some ideas about how to use it.
-- [Sophie Koonin](https://localghost.dev/): <https://localghost.dev/>
+- [Sophie Koonin](https://localghost.dev/): <https://github.com/sophiekoonin/localghost/>
   - meta tags, excerpts, OpenGraph image generation
   - Good Markdown plugin suggestions:
     - markdown-it-image-figures
-- [Lea Verou](https://lea.verou.me)
+- [Lea Verou](https://lea.verou.me): <https://github.com/LeaVerou/lea.verou.me>
   - Lots of good Markdown plugin stuff that I suddenly, desperately needed
-  - for teaching me CSS in general, really
+  - I love how her site blanks out tags that are only used once.
+  - for teaching me CSS in general, really, over a bunch of my career
 
 [markdown]: https://daringfireball.net/projects/markdown/
 [github]: https://github.com/

@@ -1,16 +1,14 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2023-08-10
+updated: 2023-08-21
 ---
 
 {% omgStatus latestStatus %}
 
 ## Overall
 
-Focused on my site, trying to brush up on the latest tech -- especially on the CSS side, with logical properties and more modern color representations. It's a work in progress.
-
-We're gearing up for the new school year.
+Endless tweaking of my personal site. Lots of CSS changes here and there, lots of changes to what gets generated (don't generate pages for tags used in a single place), trying to focus on the developer experience of working on my site and making that better.
 
 I'm focused on how I can be a more effective mentor as well.
 
@@ -22,19 +20,19 @@ You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm tr
 
 ## Text
 
-Finished the site redesign, at least for now. It looks a little bare but I'm going to leave it like this for a while, see what I think.
-
 [My Atom feed looks pretty, too!](/feed.xml)
+
+I published [my principles](/principles/).
 
 ## Role-playing Games
 
-Back for what is our final season of Masks with these characters!
+Back for what is our final season of Masks with these characters! I haz a sad.
+
+Reading up on Apocalypse Keys.
 
 ## Programming
 
-But what about Rust, though?
-
-Swapped my nvim config to something more custom, all built off [lazy.nvim](https://github.com/folke/lazy.nvim).
+These days most of the programming I'm doing is either related to this site or my game.
 
 ## Music
 
