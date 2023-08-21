@@ -1,0 +1,17 @@
+{% if tags %}
+{% set tags = tags | onlyRealTags %}
+<div class="tags-container">
+  <ul class="tags">
+    {% for tag in tags %}
+    <li>
+      {% if collections.writingByTag.get(tag).length > 1 %}
+      <a href="/tags/{{ tag | slugify }}" class="tag p-category" rel="category tag">{{ tag }}</a>
+      {% else %}
+      <span class="tag orphan-tag p-category" title="This tag is only in use here!">{{ tag }}</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+

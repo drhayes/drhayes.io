@@ -10,10 +10,13 @@
       border: 1px solid var(--tag-border-color);
       border-radius: 0.4em;
       padding: 0.2em;
+      transition: 250ms;
+    }
+
+    .tag[href] {
       background-color: var(--tag-background-color);
       background-image: none;
       color: var(--tag-color);
-      transition: 250ms;
 
       &:hover {
         background-color: var(--tag-background-color-hover);
@@ -21,6 +24,11 @@
         border-color: var(--tag-border-color-hover);
         padding-inline: 0.5em;
       }
+    }
+
+    .orphan-tag {
+      color: var(--text-contrast-color);
+      border-color: var(--light-border-color);
     }
   }
 }

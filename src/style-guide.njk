@@ -93,6 +93,17 @@ eleventyExcludeFromCollections: true
     <p>More text goes here.</p>
     <p>More text goes here.</p>
 
+    <dl>
+      <dt>Term 1</dt>
+      <dd>Definition 1</dd>
+      <dd>Definition 2</dd>
+      <dt>Term 2</dt>
+      <dd>Definition 1</dd>
+      <dt>Term 3</dt>
+      <dd>Definition 1</dd>
+      <dd>Definition 2</dd>
+    </dl>
+
     <h2>Code</h2>
     <pre class="language-lua"><code class="language-lua"><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span>
       <span class="token keyword">local</span> index <span class="token operator">=</span> <span class="token number">1</span>
@@ -117,6 +128,9 @@ eleventyExcludeFromCollections: true
     <h2>Post list</h2>
     {% set postList = collections.blog.slice(0, 6) %}
     {% include "post-list.njk" %}
+
+    <h2>OMG Status</h2>
+    {% omgStatus latestStatus %}
 
     <h2>Games list</h2>
     <ul class="games-list">

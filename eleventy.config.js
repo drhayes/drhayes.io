@@ -11,6 +11,7 @@ const markdownItAttrs = require('markdown-it-attrs');
 const embeds = require('eleventy-plugin-embed-everything');
 const pluginTOC = require('eleventy-plugin-toc');
 const mdfigcaption = require('markdown-it-image-figures');
+const tagFilters = require('./lib/filters/tagFilters');
 
 module.exports = (eleventyConfig) => {
   // Server options.
@@ -89,7 +90,6 @@ module.exports = (eleventyConfig) => {
     'isBigLetterPage',
     require('./lib/filters/isBigLetterPage.js')
   );
-  eleventyConfig.addFilter('tagFilter', require('./lib/filters/tagFilter'));
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
   eleventyConfig.addFilter('splitlines', require('./lib/filters/splitlines'));
   eleventyConfig.addFilter('twDate', require('./lib/filters/twDate'));
@@ -98,6 +98,9 @@ module.exports = (eleventyConfig) => {
     require('./lib/filters/isValidIsoDate')
   );
   eleventyConfig.addFilter('dateSort', require('./lib/filters/dateSort'));
+  for (const filterName in tagFilters) {
+    eleventyConfig.addFilter(filterName, tagFilters[filterName]);
+  }
 
   // Shortcodes.
   eleventyConfig.addNunjucksShortcode(
@@ -118,6 +121,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection(
     'allTheWriting',
     require('./lib/collections/allTheWriting')
+  );
+  eleventyConfig.addCollection(
+    'writingByTag',
+    require('./lib/collections/writingByTag')
   );
 
   // Static stuff.

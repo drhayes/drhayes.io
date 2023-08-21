@@ -1,13 +1,5 @@
 <header>
-  {% if tags %}
-  <div class="tags-container">
-    <ul class="tags">
-      {% for tag in tags | tagFilter %}
-        <li><a href="/tags/{{ tag | slugify }}" class="tag p-category" rel="category tag">{{ tag }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
+  {% include "tags.njk" %}
 
   <h1 class="p-name">
     {% if page.url %}
