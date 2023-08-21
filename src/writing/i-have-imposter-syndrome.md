@@ -74,5 +74,5 @@ I have not beat my imposter syndrome, but I see it, I'm watching for it, I know 
 I know this doesn't sound like enough, but it works.
 
 [imposter-syndrome]: https://en.wikipedia.org/wiki/Impostor_syndrome
-[mistakes]: /principles/#its-okay-to-make-mistakes
-[candc]: /principles/#compassion-and-curiosity
+[mistakes]: /principles/it-s-okay-to-make-mistakes/
+[candc]: /principles/compassion-and-curiosity/

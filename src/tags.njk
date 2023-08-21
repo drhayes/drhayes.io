@@ -8,7 +8,6 @@ pagination:
     - all
     - article
     - blog
-    - stub
     - writing
   addAllPagesToCollections: false
 permalink: /tags/{{ tag | slugify }}/
@@ -18,7 +17,7 @@ changefreq: weekly
 eleventyExcludeFromCollections: true
 ---
 {% set taglist = collections[tag] %}
-{% set postList = taglist | reverse %}
+{% set postList = taglist | dateSort | reverse %}
 <main class="tagged-things">
   {% include "post-list.njk" %}
 </main>

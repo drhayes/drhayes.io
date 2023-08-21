@@ -7,13 +7,10 @@
     "es6": true,
     "node": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["eslint:recommended"],
   "rules": {
     "no-console": "off",
     "no-unused-expressions": "off",
-    "prettier/prettier": "error"
+    "quotes": ["error", "single"]
   }
 }

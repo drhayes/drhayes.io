@@ -26,11 +26,11 @@
   {% endif %}
 
   <div class="times">
-    {% if date %}
+    {% if date | isValidIsoDate %}
       <time datetime="{{ date | dateFormat(true) }}" class="dt-published">{{ date | dateFormat }}</time>
     {%- endif -%}
-    {%- if date and updated -%}, {% endif -%}
-    {%- if updated -%}
+    {%- if date | isValidIsoDate and updated | isValidIsoDate %}, {% endif -%}
+    {%- if updated | isValidIsoDate -%}
       <time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">updated: {{ updated | dateFormat }}</time>
     {% endif %}
   </div>

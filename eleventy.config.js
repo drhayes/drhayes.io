@@ -93,6 +93,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('titleify', require('./lib/filters/titleify'));
   eleventyConfig.addFilter('splitlines', require('./lib/filters/splitlines'));
   eleventyConfig.addFilter('twDate', require('./lib/filters/twDate'));
+  eleventyConfig.addFilter(
+    'isValidIsoDate',
+    require('./lib/filters/isValidIsoDate')
+  );
+  eleventyConfig.addFilter('dateSort', require('./lib/filters/dateSort'));
 
   // Shortcodes.
   eleventyConfig.addNunjucksShortcode(
@@ -110,10 +115,6 @@ module.exports = (eleventyConfig) => {
 
   // Collections.
   eleventyConfig.addCollection('games', require('./lib/collections/games'));
-  eleventyConfig.addCollection(
-    'principles',
-    require('./lib/collections/principles')
-  );
   eleventyConfig.addCollection(
     'allTheWriting',
     require('./lib/collections/allTheWriting')

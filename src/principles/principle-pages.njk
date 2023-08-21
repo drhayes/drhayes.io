@@ -1,0 +1,15 @@
+---
+pagination:
+  data: principles
+  size: 1
+  alias: principle
+  addAllPagesToCollections: true
+permalink: 'principles/{{ principle.title | slugify }}/'
+layout: 'default.njk'
+tags:
+  - principle
+eleventyExcludeFromCollections: false
+---
+
+{{ principle.text | safe }}
+

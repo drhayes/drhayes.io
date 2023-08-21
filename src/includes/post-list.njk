@@ -1,9 +1,13 @@
 <ol class="post-list">
-  {%- for post in postList -%}
+  {%- for post in postList | sort -%}
     <li class="line">
       <a href="{{ post.url }}" class="link">{{ post.data.title }}</a>
       <span class="on">on</span>
+      {%- if post.data.updated | isValidIsoDate %}
+      <time class="date">{{ post.data.updated | dateFormat }}</time>
+      {%- elif post.data.date | isValidIsoDate %}
       <time class="date">{{ post.data.date | dateFormat }}</time>
+      {% endif -%}
       {% if post.data.draft %}
         {% include "draft-badge.njk" %}
       {% endif %}
