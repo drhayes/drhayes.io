@@ -1,21 +1,26 @@
----
-layout: default.njk
-pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - all
-    - article
-    - blog
-    - writing
-    - writingByTag
-  addAllPagesToCollections: false
-permalink: /tags/{{ tag | slugify }}/
-eleventyComputed:
-  title: "#{{ tag }}"
-changefreq: weekly
-eleventyExcludeFromCollections: true
+---js
+{
+  layout: 'default.njk',
+  pagination: {
+    data: 'collections',
+    size: 1,
+    alias: 'tag',
+    before: function(paginationData, fullData) {
+      return paginationData.filter(tag => {
+        return tag !== 'all' &&
+          this.isRealTag(tag) &&
+          fullData.collections[tag].length > 1;
+      });
+    },
+    addAllPagesToCollections: false
+},
+  permalink: '/tags/{{ tag | slugify }}/',
+  eleventyComputed: {
+    title: "#{{ tag }}",
+  },
+  changefreq: 'weekly',
+  eleventyExcludeFromCollections: true,
+}
 ---
 {% set taglist = collections[tag] %}
 {% set postList = taglist | dateSort | reverse %}
