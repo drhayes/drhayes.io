@@ -5,16 +5,20 @@
     margin-block-end: 1em;
     gap: 0.5em;
     list-style-type: none;
+    padding-inline-start: 0;
 
     .tag {
       border: 1px solid var(--tag-border-color);
       border-radius: 0.4em;
       padding: 0.2em;
-      transition: 250ms;
+
+      &:before {
+        content: '#';
+      }
     }
 
     .tag[href] {
-      background-color: var(--tag-background-color);
+      // background-color: var(--tag-background-color);
       background-image: none;
       color: var(--tag-color);
 
@@ -22,7 +26,6 @@
         background-color: var(--tag-background-color-hover);
         color: var(--tag-color-hover);
         border-color: var(--tag-border-color-hover);
-        padding-inline: 0.5em;
       }
     }
 
