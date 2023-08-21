@@ -100,8 +100,10 @@ hr:after {
 }
 
 p > code {
+  padding: 0.2em;
   font-family: var(--code-font);
   color: var(--inline-code-color);
+  background-color: var(--inline-code-background-color);
 }
 
 pre {
