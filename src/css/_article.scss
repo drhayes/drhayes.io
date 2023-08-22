@@ -12,6 +12,14 @@
       }
     }
   }
+
+  a:hover {
+    &::after {
+      content: ' #';
+      font-size: 0.75em;
+      color: var(--text-contrast-color);
+    }
+  }
 }
 
 .article-content {
