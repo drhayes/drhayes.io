@@ -6,13 +6,18 @@ aside {
   --aside-text: 'aside';
 
   position: relative;
-  padding: 1em 1.5em;
-  margin-block-start: 1.75em;
-  margin-block-end: 1em;
-  border: 1px solid var(--aside-border-color);
+  border-color: var(--aside-border-color);
   border-radius: 0.5em;
   background-color: var(--aside-background-color);
   color: var(--aside-text-color);
+
+  &.box {
+    margin-block: 2rem;
+  }
+
+  h2:first-of-type {
+    margin-block: 0;
+  }
 
   p:first-of-type {
     margin-block-start: 0.5em;
@@ -22,27 +27,29 @@ aside {
     margin-block-end: 0;
   }
 
-  &::before {
+  &.box::before {
     position: absolute;
     content: '<' var(--aside-text) '>';
     inset-block-start: -1em;
     inset-inline-start: 1em;
     font-size: 0.9rem;
     background-color: var(--aside-background-color);
-    border: 1px solid var(--aside-border-color);
+    border: var(--border-thin) solid;
+    border-color: var(--aside-border-color);
     border-radius: 0.5em;
     padding: 0.1em 0.2em;
     color: var(--aside-text-color);
   }
 
-  &::after {
+  &.box::after {
     position: absolute;
     content: '</' var(--aside-text) '>';
     inset-block-end: -0.8em;
     inset-inline-end: 1em;
     font-size: 0.9rem;
     background-color: var(--aside-background-color);
-    border: 1px solid var(--aside-border-color);
+    border: var(--border-thin) solid;
+    border-color: var(--aside-border-color);
     border-radius: 0.5em;
     padding: 0.1em 0.2em;
     color: var(--aside-text-color);
@@ -50,7 +57,6 @@ aside {
 
   h4 {
     font-size: 1.5rem;
-    margin-block: 0;
     color: var(--aside-header-color);
   }
 

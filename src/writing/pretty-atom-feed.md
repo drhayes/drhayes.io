@@ -1,7 +1,6 @@
 ---
 title: A pretty Atom feed
 date: 2023-08-10
-draft: true
 tags:
   - atom
   - 11ty

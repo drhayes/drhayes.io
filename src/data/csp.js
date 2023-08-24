@@ -25,7 +25,7 @@ function cspPolicy(configData) {
     media: 'self',
     object: 'self',
     script: ['self'],
-    style: ['self', 'data:', 'inline'],
+    style: ['self', 'data:', 'unsafe-inline'],
     worker: 'self',
   };
 

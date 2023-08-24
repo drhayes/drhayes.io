@@ -1,18 +1,15 @@
-.times {
-  font-size: 0.9rem;
-  color: var(--text-contrast-color);
-  margin-block-end: 1em;
+.post-metadata {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: first baseline;
+
+  & > * {
+    margin-block: 0;
+    flex-basis: 50%;
+  }
 }
 
 .summary {
   font-style: italic;
-  margin-block-start: -0.5em;
-  margin-block-end: 0;
-}
-
-.draft-notification {
-  border-top: 1px solid var(--draft-badge-color);
-  border-bottom: 1px solid var(--draft-badge-color);
-  color: var(--draft-badge-color);
-  text-align: center;
 }

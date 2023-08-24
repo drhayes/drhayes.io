@@ -1,10 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-size: 18px;
+  font-size: calc(16px + 0.3vw);
   padding: 1rem;
   margin: 0;
-  visibility: var(--styles-loaded);
   font-family: var(--body-font);
-  line-height: 1.75;
+  line-height: 1.5;
+  letter-spacing: -0.05em;
   background-color: var(--background-color);
   color: var(--text-content-color);
 }
@@ -32,10 +36,6 @@ a:visited {
   background-repeat: no-repeat;
   background-size: 100% 0.14em;
   background-position: 0 95%;
-}
-
-p {
-  margin-block: 1em;
 }
 
 h1,
@@ -88,8 +88,7 @@ blockquote {
 hr {
   border: 0;
   height: 1.5rem;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block: 2em !important;
 }
 
 hr:after {
@@ -107,7 +106,7 @@ p > code {
 }
 
 pre {
-  font-family: monospace;
+  font-family: var(--code-font);
 }
 
 svg {
@@ -126,4 +125,64 @@ ul {
 
 .header-anchor {
   text-decoration: none;
+}
+
+.center {
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--space, 1.5rem);
+}
+
+.box {
+  padding: 2rem;
+  border: var(--border-thin) solid;
+}
+
+:not(aside).box {
+  background-color: var(--color-light);
+}
+
+.box * {
+  color: inherit;
+}
+
+.box.invert {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, 1rem);
+}
+
+.with-sidebar > :first-child {
+  flex-grow: 1;
+}
+
+.with-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
+.inline-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style-type: none;
 }

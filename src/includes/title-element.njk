@@ -1,5 +1,4 @@
-<header>
-  {% include "tags.njk" %}
+<header class="stack">
 
   <h1 class="p-name">
     {% if page.url %}
@@ -11,23 +10,26 @@
     {% endif %}
   </h1>
 
+  <div class="post-metadata">
+    <div>
+      {% if date | isValidIsoDate %}
+      <time datetime="{{ date | dateFormat(true) }}" class="dt-published">{{ date | dateFormat }}</time>{%- endif -%}
+            {%- if updated | isValidIsoDate -%}
+      <span>{%- if date | isValidIsoDate and updated | isValidIsoDate -%}, {% endif -%}
+updated: <time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">{{ updated | dateFormat }}</time></span>
+      {% endif %}
+    </div>
+    {% include "tags.njk" %}
+  </div>
+
   {% if description %}
   <p class="summary p-summary">
     {{ description }}
   </p>
   {% endif %}
 
-  <div class="times">
-    {% if date | isValidIsoDate %}
-      <time datetime="{{ date | dateFormat(true) }}" class="dt-published">{{ date | dateFormat }}</time>
-    {%- endif -%}
-    {%- if date | isValidIsoDate and updated | isValidIsoDate %}, {% endif -%}
-    {%- if updated | isValidIsoDate -%}
-      <time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">updated: {{ updated | dateFormat }}</time>
-    {% endif %}
-  </div>
   {% if draft %}
-  <aside class="draft">
+  <aside class="box stack draft">
     <h4>This is a draft</h4>
     <p>This one isn't fully baked yet!</p>
   </aside>
