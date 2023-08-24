@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {%- include "meta.njk" -%}
-  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <title>{{ title | titleify }}</title>
 </head>
 
 <body>

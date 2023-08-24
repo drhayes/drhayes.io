@@ -3,12 +3,12 @@ title: Games
 eleventyExcludeFromCollections: true
 ---
 
-<ul class="games-list">
+<ul class="stack list-style-type:none" style="padding-inline-start:0">
   {% for game in collections.games %}
-    <li class="game-item">
+    <li>
       <a href="{{ game.url }}">
-        <figure class="game-screenshot">
-        <img src="{{ game.data.screenshot }}" alt="{{ game.data.screenshotDescription }}">
+        <figure class="stack game-card">
+          <img src="{{ game.data.screenshot }}" alt="{{ game.data.screenshotDescription }}">
           <figcaption>{{ game.data.title }}</figcaption>
         </figure>
       </a>

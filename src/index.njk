@@ -4,36 +4,44 @@ description: It's my front page.
 layout: base.njk
 ---
 
-<main class="front-page">
+<main class="stack center intrinsic front-page">
 
-  {% include 'header.njk' %}
+  <h1>
+    <span class="blue-gradient">Hi there.</span>
+    <span>👋🏽</span>
+  </h1>
+  <h2>My name is <a href="https://drhayes.io" class="p-name u-url u-uid" rel="me">David Hayes</a>.</h2>
+  <h2>I get called <span class="blue-gradient p-nickname">drhayes</span> a lot.</h2>
+  <h2>
+    <a href="mailto:hi@drhayes.io">hi@drhayes.io</a>
+  </h2>
+  <div class="logo-box">
+    {% include "raven.svg" %}
+  </div>
 
-  <header class="h-card">
-    <h1>
-      <span class="greeting">Hi there.</span>
-      <span class="wave">👋🏽</span>
-    </h1>
-    <h2>My name is <a href="https://drhayes.io" class="p-name u-url u-uid" rel="me">David Hayes</a>.</h2>
-    <h2>I get called <span class="p-nickname">drhayes</span> a lot.</h2>
-    <h2><a href="mailto:hi@drhayes.io" class="u-email">hi@drhayes.io</a></h2>
-    <div class="logo">
-      {% include "raven.svg" %}
-    </div>
-  </header>
-
-  <footer class="absolute-bottom horizontal-center">
+  <section class="stack">
+    <p>While you're here, check out...</p>
     <ul>
-      <li>
-        <a rel="me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
-      </li>
-      <li>
-        <a rel="me" href="https://github.com/drhayes">GitHub</a>
-      </li>
-      <li>
-        <a rel="me" href="https://proven.lol/f3518f">Proof</a>
-      </li>
+      <li>...<a href="/writing">my writing</a></li>
+      <li>... or <a href="/games">my games</a></li>
     </ul>
-    {% include "webring.njk" %}
-  </footer>
+    <p>... or just <a href="/now">see what I'm doing now</a>.</p>
+  </section>
 
 </main>
+
+<footer class="stack margin-top:s4">
+  <ul class="inline-list center">
+    <li>
+      <a rel="me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
+    </li>
+    <li>
+      <a rel="me" href="https://github.com/drhayes">GitHub</a>
+    </li>
+    <li>
+      <a rel="me" href="https://proven.lol/f3518f">Proof</a>
+    </li>
+  </ul>
+  {% include "webring.njk" %}
+</footer>
+

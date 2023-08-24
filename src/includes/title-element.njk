@@ -10,20 +10,35 @@
     {% endif %}
   </h1>
 
+  {% if date | isValidIsoDate or updated | isValidIsoDate or tags %}
   <div class="post-metadata">
     <div>
       {% if date | isValidIsoDate %}
       <time datetime="{{ date | dateFormat(true) }}" class="dt-published">{{ date | dateFormat }}</time>{%- endif -%}
-            {%- if updated | isValidIsoDate -%}
-      <span>{%- if date | isValidIsoDate and updated | isValidIsoDate -%}, {% endif -%}
-updated: <time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">{{ updated | dateFormat }}</time></span>
+      {%- if updated | isValidIsoDate -%}
+      {%- if date | isValidIsoDate and updated | isValidIsoDate -%}, {% endif %}
+      <span>updated:&nbsp;<time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">{{ updated | dateFormat }}</time></span>
       {% endif %}
     </div>
-    {% include "tags.njk" %}
+    {% if tags %}
+    {% set tags = tags | onlyRealTags %}
+    <ul class="inline-list tags" style="--space:var(--s0);">
+      {% for tag in tags %}
+      <li>
+        {% if collections.writingByTag.get(tag).length > 1 %}
+        <a href="/tags/{{ tag | slugify }}" class="tag p-category" rel="category tag">{{ tag }}</a>
+        {% else %}
+        <span class="tag orphan-tag p-category" title="This tag is only in use here!">{{ tag }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </div>
+  {% endif %}
 
   {% if description %}
-  <p class="summary p-summary">
+  <p class="font-style:italic font-size:s1 p-summary">
     {{ description }}
   </p>
   {% endif %}

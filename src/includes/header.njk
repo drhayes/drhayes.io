@@ -1,9 +1,11 @@
-<nav class="header">
-  <a href="/" class="home-link">drhayes.io</a>
-  <ul class="menu">
+<nav class="center">
+  <ul class="cluster heading-font inline-list font-size:s1 lowercase">
+    <li>
+      <a href="/" class="no-link-decoration">drhayes.io</a>
+    </li>
     {% for item in menu %}
       <li>
-        <a href="{{ item.url }}">{{ item.name }}</a>
+        <a href="{{ item.url }}" class="no-link-decoration">{{ item.name }}</a>
       </li>
     {% endfor %}
   </ul>
