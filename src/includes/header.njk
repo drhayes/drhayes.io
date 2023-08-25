@@ -1,11 +1,11 @@
 <nav class="center">
-  <ul class="cluster heading-font inline-list font-size:s1 lowercase">
+  <ul class="cluster heading-font inline-list font-size:s1 lowercase no-link-decoration">
     <li>
-      <a href="/" class="no-link-decoration">drhayes.io</a>
+      <a href="/">drhayes.io</a>
     </li>
     {% for item in menu %}
       <li>
-        <a href="{{ item.url }}" class="no-link-decoration">{{ item.name }}</a>
+        <a href="{{ item.url }}"{%- if page.url == item.url %} aria-current="page"{%- endif -%}>{{ item.name }}</a>
       </li>
     {% endfor %}
   </ul>

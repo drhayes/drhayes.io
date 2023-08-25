@@ -38,6 +38,17 @@ a:visited {
   background-repeat: no-repeat;
   background-size: 100% 0.14em;
   background-position: 0 95%;
+
+  &[aria-current^='page'] {
+    &:before {
+      content: '<';
+      font-size: 0.75em;
+    }
+    &:after {
+      content: '>';
+      font-size: 0.75em;
+    }
+  }
 }
 
 h1,

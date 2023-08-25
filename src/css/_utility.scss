@@ -31,6 +31,10 @@
 
 .no-link-decoration {
   background-image: none;
+
+  & * {
+    background-image: none;
+  }
 }
 
 .lowercase {
