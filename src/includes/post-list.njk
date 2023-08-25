@@ -1,17 +1,20 @@
-<ol class="post-list">
+<ol class="list-style-type:none" style="padding-inline-start:0;">
   {%- for post in postList | sort -%}
-    <li class="line">
-      <a href="{{ post.url }}" class="link">{{ post.data.title }}</a>
-      <span class="on">on</span>
+  <li class="two-line">
+    <div>
       {%- if post.data.updated | isValidIsoDate %}
       <time class="date">{{ post.data.updated | dateFormat }}</time>
       {%- elif post.data.date | isValidIsoDate %}
       <time class="date">{{ post.data.date | dateFormat }}</time>
       {% endif -%}
+    </div>
+    <div>
+      <a href="{{ post.url }}" class="link">{{ post.data.title }}</a>
       {% if post.data.draft %}
-        {% include "draft-badge.njk" %}
+      {% include "draft-badge.njk" %}
       {% endif %}
-    </li>
+    </div>
+  </li>
   {%- endfor -%}
 </ol>
 

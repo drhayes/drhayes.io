@@ -1,17 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(16px + 0.1vw);
+}
+
 body {
-  font-size: 18px;
-  padding: 1rem;
+  padding: var(--s0);
   margin: 0;
-  visibility: var(--styles-loaded);
   font-family: var(--body-font);
-  line-height: 1.75;
-  background-color: var(--background-color);
-  color: var(--text-content-color);
+  line-height: var(--line-height);
+  letter-spacing: -0.05em;
+  font-variant-numeric: oldstyle-nums;
 }
 
 a,
 a:visited {
-  color: var(--text-content-color);
+  color: inherit;
   text-decoration: none;
   background-image: linear-gradient(
     90deg,
@@ -32,10 +38,17 @@ a:visited {
   background-repeat: no-repeat;
   background-size: 100% 0.14em;
   background-position: 0 95%;
-}
 
-p {
-  margin-block: 1em;
+  &[aria-current^='page'] {
+    &:before {
+      content: '<';
+      font-size: 0.75em;
+    }
+    &:after {
+      content: '>';
+      font-size: 0.75em;
+    }
+  }
 }
 
 h1,
@@ -45,8 +58,8 @@ h4,
 h5 {
   font-family: var(--heading-font);
   font-weight: bold;
-  color: var(--heading-color);
   letter-spacing: -0.05em;
+  line-height: var(--line-height-small);
 
   a {
     background: none;
@@ -54,76 +67,138 @@ h5 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: var(--s4);
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: var(--s3);
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: var(--s2);
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: var(--s1);
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: var(--s0);
+}
+
+p {
+  margin-block: 0;
 }
 
 blockquote {
   margin-inline-start: 0;
-  padding-inline-start: 1em;
-  background-color: var(--blockquote-background-color);
-  font-size: 1.2rem;
+  padding-inline-start: var(--s0);
+  font-size: var(--s1);
   font-style: italic;
-  border-style: none;
-  border-left-style: solid;
-  border-width: 0.5rem;
-  border-color: var(--blockquote-border-color);
+  border-inline-start-style: solid;
+  border-width: var(--s-2);
+  border-color: var(--color-blue);
 }
 
 hr {
   border: 0;
-  height: 1.5rem;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  height: var(--s2);
 }
 
 hr:after {
   display: block;
   content: '꧁ఌ꧂';
   text-align: center;
-  color: var(--heading-color);
+  color: initial;
 }
 
 p > code {
-  padding: 0.2em;
+  padding: var(--s-4);
   font-family: var(--code-font);
-  color: var(--inline-code-color);
-  background-color: var(--inline-code-background-color);
+  background-color: var(--color-lightish);
 }
 
 pre {
-  font-family: monospace;
+  font-family: var(--code-font);
 }
 
-svg {
-  fill: var(--text-content-color);
-}
-
-figure {
-  margin: 1em 0;
+figcaption {
   text-align: center;
+  font-size: var(--s-1);
 }
 
 ol,
 ul {
-  padding-inline-start: 0.5em;
+  padding-inline-start: var(--s0);
 }
 
-.header-anchor {
-  text-decoration: none;
+figure {
+  margin-inline: 0;
+}
+
+img {
+  width: 100%;
+}
+
+aside {
+  --aside-background-color: var(--color-light);
+  --aside-header-color: var(--color-dark);
+  --aside-text-color: var(--color-dark);
+  --aside-border-color: var(--color-dark);
+  --aside-text: 'aside';
+
+  position: relative;
+  border-color: var(--aside-border-color);
+  border-radius: 0.5em;
+  background-color: var(--aside-background-color);
+  color: var(--aside-text-color);
+
+  &.box {
+    margin-block: var(--s2);
+  }
+
+  h2:first-of-type {
+    margin-block: 0;
+  }
+
+  p:first-of-type {
+    margin-block-start: var(--s-1);
+  }
+
+  p:last-child {
+    margin-block-end: 0;
+  }
+
+  &.box::before {
+    position: absolute;
+    content: '<' var(--aside-text) '>';
+    inset-block-start: -1em;
+    inset-inline-start: 1em;
+    font-size: 0.9rem;
+    background-color: var(--aside-background-color);
+    border: var(--border-thin) solid;
+    border-color: var(--aside-border-color);
+    border-radius: 0.5em;
+    padding: var(--s-5) var(--s-4);
+    color: var(--aside-text-color);
+  }
+
+  &.box::after {
+    position: absolute;
+    content: '</' var(--aside-text) '>';
+    inset-block-end: -1em;
+    inset-inline-end: 1em;
+    font-size: 0.9rem;
+    background-color: var(--aside-background-color);
+    border: var(--border-thin) solid;
+    border-color: var(--aside-border-color);
+    border-radius: 0.5em;
+    padding: var(--s-5) var(--s-4);
+    color: var(--aside-text-color);
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    color: var(--aside-header-color);
+  }
 }

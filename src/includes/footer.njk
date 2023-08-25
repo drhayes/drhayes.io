@@ -1,18 +1,22 @@
-<footer class="page-footer">
-  <section class="meta">
+<footer class="stack center margin-block-start:s5">
+  <div class="align-self:center">
     <a href="{{ global.baseUrl + '/feed.xml' | url }}" class="feed">
       {% include "rss.svg" %}
       Feed
     </a>
-  </section>
-  <section class="cc">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-      <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" width="88px" height="31px">
-    </a>
+  </div>
+  <div class="with-sidebar">
+    <div class="align-self:center">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="A Creative Commons Attribution-ShareAlike badge" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" width="88px" height="31px">
+      </a>
+    </div>
     <p>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
     </p>
-  </section>
-  {% include "webring.njk" %}
+  </div>
+  <div class="align-self:center">
+    {% include "webring.njk" %}
+  </div>
 </footer>
 

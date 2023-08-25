@@ -4,24 +4,31 @@ description: It's my front page.
 layout: base.njk
 ---
 
-<main class="front-page">
+<main class="stack center intrinsic front-page" style="--space: 1rem;";>
 
-  {% include 'header.njk' %}
+  {% include "raven.svg" %}
 
-  <header class="h-card">
-    <h1>
-      <span class="greeting">Hi there.</span>
-      <span class="wave">👋🏽</span>
-    </h1>
-    <h2>My name is <a href="https://drhayes.io" class="p-name u-url u-uid" rel="me">David Hayes</a>.</h2>
-    <h2>I get called <span class="p-nickname">drhayes</span> a lot.</h2>
-    <h2><a href="mailto:hi@drhayes.io" class="u-email">hi@drhayes.io</a></h2>
-    <div class="logo">
-      {% include "raven.svg" %}
-    </div>
-  </header>
+  <h1>
+    <span class="blue-gradient">Hi there.</span>
+    <span>👋🏽</span>
+  </h1>
+  <h2>My name is <a href="https://drhayes.io" class="p-name u-url u-uid" rel="me">David Hayes</a>.</h2>
+  <h2>I get called <span class="blue-gradient p-nickname">drhayes</span> a lot.</h2>
+  <h2>
+    <a href="mailto:hi@drhayes.io">hi@drhayes.io</a>
+  </h2>
 
-  <footer class="absolute-bottom horizontal-center">
+  <section>
+    <p class="heading-contrast-font font-size:s1">While you're here, why not check out...</p>
+    <ul>
+      <li>...<a href="/writing">my writing</a></li>
+      <li>... or <a href="/games">my games</a></li>
+    </ul>
+    <p>... or just <a href="/now">see what I'm doing now</a>.</p>
+  </section>
+
+  <footer class="stack margin-block-start:s5">
+    <h2>Me Elsewhere</h2>
     <ul>
       <li>
         <a rel="me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
@@ -37,3 +44,4 @@ layout: base.njk
   </footer>
 
 </main>
+

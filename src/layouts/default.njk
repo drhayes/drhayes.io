@@ -1,16 +1,14 @@
 {% extends './base.njk' %}
 
-{% block title %}{{ title | titleify }}{% endblock %}
-
 {% block content %}
 {% include 'header.njk' %}
-<main class='article h-entry'>
+<main class='center stack h-entry'>
 
   {% include 'title-element.njk' %}
 
   {% include 'toc.njk' %}
 
-  <article class="article-content {% if tags | isBigLetterPage -%}big-letter{%- endif %} e-content">
+  <article class="article-content stack {% if tags | isBigLetterPage -%}big-letter{%- endif %} e-content">
     {{ content | safe }}
   </article>
 

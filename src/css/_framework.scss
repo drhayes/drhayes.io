@@ -1,0 +1,80 @@
+.center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+  padding-inline-start: var(--s1);
+  padding-inline-end: var(--s1);
+
+  &.intrinsic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &.tight {
+    --space: var(--s-1);
+  }
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--space, var(--s1));
+}
+
+.box {
+  padding: 2rem;
+  border-width: var(--border-thin);
+  border-style: solid;
+}
+
+:not(aside).box {
+  background-color: var(--color-light);
+}
+
+.box * {
+  color: inherit;
+}
+
+.box.invert {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, var(--s0));
+}
+
+.with-sidebar > :first-child {
+  flex-grow: 1;
+}
+
+.with-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, var(--s0));
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.two-line {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space, var(--s3));
+}

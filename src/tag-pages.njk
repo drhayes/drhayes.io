@@ -24,6 +24,6 @@
 ---
 {% set taglist = collections[tag] %}
 {% set postList = taglist | dateSort | reverse %}
-<main class="tagged-things">
+<main class="stack">
   {% include "post-list.njk" %}
 </main>

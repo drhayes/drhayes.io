@@ -1,7 +1,6 @@
 ---
 title: A pretty Atom feed
 date: 2023-08-10
-draft: true
 tags:
   - atom
   - 11ty
@@ -31,7 +30,7 @@ I used to do a lot of work in web services in the early 2000s. It was a heady ti
 
 But none of that happened.
 
-<aside class="joke">
+<aside class="box stack joke">
   <h4>My One SOAP Joke</h4>
   <p>SOAP used to be an acronym that stood for "Simple Object Access Protocol".</p>
   <p>It was quite literally none of those things.</p>
