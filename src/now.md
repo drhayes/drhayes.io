@@ -1,40 +1,36 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2023-08-21
+updated: 2023-08-25
 ---
 
 {% omgStatus latestStatus %}
 
 ## Overall
 
-Endless tweaking of my personal site. Lots of CSS changes here and there, lots of changes to what gets generated (don't generate pages for tags used in a single place), trying to focus on the developer experience of working on my site and making that better.
+Suffering in the Texas heat wave. Elevating my understanding of design and CSS.
 
-I'm focused on how I can be a more effective mentor as well.
+## 📢 Socials
 
-## Socials
+I can be found at [@drhayes@social.lol](https://social.lol/@drhayes).
 
-I can now be found at [@drhayes@social.lol](https://social.lol/@drhayes).
+You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm trying to be good about what I'm logging.
 
-You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm trying to be good about what I'm logging, but no guarantees there.
+## ✏️ Text
 
-## Text
+Thinking about relaxing and writing more for the site rather than getting caught up making things perfect.
 
-[My Atom feed looks pretty, too!](/feed.xml)
-
-I published [my principles](/principles/).
-
-## Role-playing Games
+## 🎲 Role-playing Games
 
 Back for what is our final season of Masks with these characters! I haz a sad.
 
-Reading up on Apocalypse Keys.
+Reading up on Apocalypse Keys and Vaesen.
 
-## Programming
+## 🖥️ Programming
 
 These days most of the programming I'm doing is either related to this site or my game.
 
-## Music
+## 🎶 Music
 
 ON REPEAT: "Temple of Love (1992)" by Sisters of Mercy
 
