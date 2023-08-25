@@ -51,6 +51,7 @@
   justify-content: space-between;
   align-items: first baseline;
   gap: var(--s3);
+  margin-block-start: var(--s-4);
 
   & > * {
     margin-block: 0;
