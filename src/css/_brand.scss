@@ -124,3 +124,10 @@ aside {
     text-shadow: 0 0 4px var(--color-dark);
   }
 }
+
+.about-logo {
+  position: absolute;
+  width: 30rem;
+  opacity: 0.05;
+  pointer-events: none;
+}

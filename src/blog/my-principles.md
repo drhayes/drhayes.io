@@ -1,7 +1,6 @@
 ---
 title: My principles
 date: 2023-08-21
-draft: true
 tags:
   - text
   - digital-gardens

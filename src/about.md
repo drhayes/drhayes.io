@@ -9,13 +9,9 @@ updated: 2023-08-11
   {% include "raven.svg" %}
 </div>
 
-My pronouns are he/him.
+My pronouns are he/him. I do stuff with computers. I live in Austin, TX.
 
-I do stuff with computers. I live in Austin, TX.
-
-I'm a dad.
-
-I love jokes, especially dad jokes. But that was before I was a dad and it's only gotten worse since.
+I'm a dad. I love jokes, especially dad jokes. But that was before I was a dad and it's only gotten worse since.
 
 I love everything game (board and digital and role-playing)
 
@@ -71,7 +67,7 @@ Some 11ty organization ideas came from:
 - [Lea Verou](https://lea.verou.me): <https://github.com/LeaVerou/lea.verou.me>
   - Lots of good Markdown plugin stuff that I suddenly, desperately needed
   - I love how her site blanks out tags that are only used once.
-  - for teaching me CSS in general, really, over a bunch of my career
+  - also, for teaching me CSS in general, really
 
 [markdown]: https://daringfireball.net/projects/markdown/
 [github]: https://github.com/
