@@ -4,7 +4,9 @@ description: It's my front page.
 layout: base.njk
 ---
 
-<main class="stack center intrinsic front-page">
+<main class="stack center intrinsic front-page" style="--space: 1rem;";>
+
+  {% include "raven.svg" %}
 
   <h1>
     <span class="blue-gradient">Hi there.</span>
@@ -15,12 +17,9 @@ layout: base.njk
   <h2>
     <a href="mailto:hi@drhayes.io">hi@drhayes.io</a>
   </h2>
-  <div class="logo-box">
-    {% include "raven.svg" %}
-  </div>
 
-  <section class="stack">
-    <p>While you're here, check out...</p>
+  <section>
+    <p class="heading-contrast-font font-size:s1">While you're here, why not check out...</p>
     <ul>
       <li>...<a href="/writing">my writing</a></li>
       <li>... or <a href="/games">my games</a></li>
@@ -28,20 +27,21 @@ layout: base.njk
     <p>... or just <a href="/now">see what I'm doing now</a>.</p>
   </section>
 
-</main>
+  <footer class="stack margin-block-start:s5">
+    <h2>Me Elsewhere</h2>
+    <ul>
+      <li>
+        <a rel="me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
+      </li>
+      <li>
+        <a rel="me" href="https://github.com/drhayes">GitHub</a>
+      </li>
+      <li>
+        <a rel="me" href="https://proven.lol/f3518f">Proof</a>
+      </li>
+    </ul>
+    {% include "webring.njk" %}
+  </footer>
 
-<footer class="stack margin-top:s4">
-  <ul class="inline-list center">
-    <li>
-      <a rel="me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
-    </li>
-    <li>
-      <a rel="me" href="https://github.com/drhayes">GitHub</a>
-    </li>
-    <li>
-      <a rel="me" href="https://proven.lol/f3518f">Proof</a>
-    </li>
-  </ul>
-  {% include "webring.njk" %}
-</footer>
+</main>
 

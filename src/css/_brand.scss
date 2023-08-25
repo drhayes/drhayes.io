@@ -1,6 +1,4 @@
 :root {
-  // --blockquote-border-color: #4682b4b8;
-  // --blockquote-background-color: #f9f9ff;
   --warning-background-color: hsl(0 80% 95%);
   --warning-color: var(--color-red);
   --warning-border-color: hsl(0 50% 80%);
@@ -80,23 +78,20 @@ aside {
   -webkit-fill-color: transparent;
 }
 
-.logo-box {
-  svg {
-    width: 30rem;
-  }
-}
-
 .front-page {
+  svg {
+    width: 20rem;
+  }
+
   h1 {
+    font-family: var(--heading-contrast-font);
     font-size: calc(var(--s5) * var(--ratio) * var(--ratio));
+    text-align: center;
   }
 
   h2 {
-    font-family: var(--heading-contrast-font);
-    font-weight: normal;
-
     span {
-      font-family: var(--heading-font);
+      font-family: var(--heading-contrast-font);
       font-weight: bold;
     }
 
@@ -119,7 +114,7 @@ aside {
     grid-column: 1;
     grid-row: 1;
     align-self: center;
-    font-family: var(--heading-font);
+    font-family: var(--heading-contrast-font);
     font-weight: bold;
     letter-spacing: -0.05em;
     font-size: var(--s4);
