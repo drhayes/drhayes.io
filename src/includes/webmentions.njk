@@ -1,0 +1,46 @@
+{% if webmentions %}
+{% set mentions = webmentions | webmentionsByUrl %}
+<article class="stack webmentions">
+  {% if mentions.likes | length %}
+  <h2>Likes</h2>
+  {% for like in mentions.likes %}
+    {% if like.author.url %}
+    <a href="{{ like.author.url }}" rel="noopener" class="no-link-decoration">
+    {% endif %}
+      <img src="{{ like.author.photo}}" alt="{{ like.author.name }}" title="{{ like.author.name }}">
+    {% if like.author.url %}
+    </a>
+    {% endif %}
+  {% endfor %}
+  {% endif %}
+
+  {% if mentions.reposts | length %}
+  <h2>Reposts</h2>
+  <div class="cluster">
+  {% for repost in mentions.reposts %}
+    {% if repost.author.url %}
+    <a href="{{ repost.author.url }}" rel="noopener" class="no-link-decoration">
+    {% endif %}
+      <img src="{{ repost.author.photo}}" alt="{{ repost.author.name }}" title="{{ repost.author.name }}">
+    {% if repost.author.url %}
+    </a>
+    {% endif %}
+  {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if mentions.replies | length %}
+  <h2>Comments</h2>
+  {% for repost in mentions.replies %}
+    {% if repost.author.url %}
+    <a href="{{ repost.author.url }}" rel="noopener" class="no-link-decoration">
+    {% endif %}
+      <img src="{{ repost.author.photo}}" alt="{{ repost.author.name }}" title="{{ repost.author.name }}">
+    {% if repost.author.url %}
+    </a>
+    {% endif %}
+  {% endfor %}
+  {% endif %}
+</article>
+{% endif %}
+

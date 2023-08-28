@@ -1,8 +1,6 @@
 const readingTime = require('eleventy-plugin-reading-time');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const webmentionsConfig = require('./lib/webmentions.js');
-const pluginWebmentions = require('@chrisburnell/eleventy-cache-webmentions');
 const pluginSass = require('eleventy-sass');
 const { ogImageGenerate } = require('./lib/events/ogImageGenerate');
 const markdownIt = require('markdown-it');
@@ -54,7 +52,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(pluginWebmentions, webmentionsConfig);
   eleventyConfig.addPlugin(pluginSass);
   eleventyConfig.addPlugin(embeds);
   eleventyConfig.addPlugin(pluginTOC, {
@@ -101,6 +98,10 @@ module.exports = (eleventyConfig) => {
   for (const filterName in tagFilters) {
     eleventyConfig.addFilter(filterName, tagFilters[filterName]);
   }
+  eleventyConfig.addFilter(
+    'webmentionsByUrl',
+    require('./lib/filters/webmentionsByUrl')
+  );
 
   // Shortcodes.
   eleventyConfig.addNunjucksShortcode(
@@ -126,6 +127,7 @@ module.exports = (eleventyConfig) => {
     'writingByTag',
     require('./lib/collections/writingByTag')
   );
+  eleventyConfig.addCollection('aliases', require('./lib/collections/aliases'));
 
   // Static stuff.
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');

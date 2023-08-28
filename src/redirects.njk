@@ -6,5 +6,5 @@ eleventyExcludeFromCollections: true
 /articles /writing/
 /articles/i-have-imposter-syndrome/  /writing/i-have-imposter-syndrome/
 
-{% for oldSlug, newSlug in thingsMoved %}{{oldSlug}} {{newSlug}} 301
+{% for oldSlug, newSlug in collections.aliases %}{{oldSlug}} {{newSlug}} 301
 {% endfor %}

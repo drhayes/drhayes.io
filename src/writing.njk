@@ -2,6 +2,8 @@
 title: Writing
 description: The collection of everything I've published on the site.
 layout: base.njk
+aliases:
+  - /blog
 ---
 
 {% include "header.njk" %}
@@ -28,6 +30,9 @@ layout: base.njk
     {% include "post-list.njk" %}
 
   </section>
+
+  {% include 'webmentions.njk' %}
+
 </main>
 
 {% include "footer.njk" %}

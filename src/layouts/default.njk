@@ -12,15 +12,7 @@
     {{ content | safe }}
   </article>
 
-  <article class="webmentions">
-    <ol>
-    {% for webmention in webmentions %}
-      <li>
-        {{ webmention.author.name }} sent this page a {{ webmention.activity.type }}
-      </li>
-    {% endfor %}
-    </ol>
-  </article>
+  {% include 'webmentions.njk' %}
 
 </main>
 
