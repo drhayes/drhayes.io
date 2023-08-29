@@ -59,7 +59,6 @@ h5 {
   font-family: var(--heading-font);
   font-weight: bold;
   letter-spacing: -0.05em;
-  line-height: var(--line-height-small);
 
   a {
     background: none;
@@ -68,6 +67,7 @@ h5 {
 
 h1 {
   font-size: var(--s4);
+  line-height: var(--line-height-small);
 }
 
 h2 {

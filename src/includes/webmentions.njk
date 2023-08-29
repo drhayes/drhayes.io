@@ -1,5 +1,6 @@
 {% if webmentions %}
 {% set mentions = webmentions | webmentionsByUrl %}
+{% if mentions.likes | length or mentions.reposts | length or mentions.replies | length %}
 <article class="stack webmentions">
   {% if mentions.likes | length %}
   <h2>Likes</h2>
@@ -42,5 +43,6 @@
   {% endfor %}
   {% endif %}
 </article>
+{% endif %}
 {% endif %}
 
