@@ -1,5 +1,5 @@
 ---
-title: Its okay to make mistakes
+title: It's okay to make mistakes
 date: 2023-08-20T17:16:44.129Z
 description: It is literally impossible to learn anything without making a mistake and correcting it. So go ahead and make mistakes!
 ---

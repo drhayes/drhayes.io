@@ -102,6 +102,7 @@ module.exports = (eleventyConfig) => {
     'webmentionsByUrl',
     require('./lib/filters/webmentionsByUrl')
   );
+  eleventyConfig.addFilter('titleSort', require('./lib/filters/titleSort'));
 
   // Shortcodes.
   eleventyConfig.addNunjucksShortcode(

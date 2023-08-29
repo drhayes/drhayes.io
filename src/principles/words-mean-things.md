@@ -1,7 +1,7 @@
 ---
 title: Words mean things
 date: 2023-07-26T14:07:50.036Z
-description: The words we choose matter and carry weight
+description: The words we choose matter and carry weight.
 ---
 
 When someone speaks, listen to what they are saying and how they're saying it. Believe them.

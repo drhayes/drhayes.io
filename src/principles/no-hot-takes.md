@@ -1,7 +1,7 @@
 ---
 title: No hot takes
 date: 2023-07-27T14:23:31.551Z
-description: Strive for whats right instead of just finding what's funny or popular.
+description: Strive for what's right instead of just finding what's funny or popular.
 ---
 
 As much as possible, eschew pithy statements on complex topics (but stretch thy vocab, obviously).

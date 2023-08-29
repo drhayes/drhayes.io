@@ -1,7 +1,7 @@
 ---
 title: Practice self-compassion
 date: 2023-07-26T14:12:43.367Z
-description: Remember to treat yourself compassionately as well; youre often your harshest critic.
+description: Remember to treat yourself compassionately as well; you're often your harshest critic.
 ---
 
 Life is hard. Give yourself a break.

@@ -1,16 +1,16 @@
 ---
 title: Principles
 description: Some ideas I consider important enough to write down.
-tags:
+override:tags:
   - writing
 date: 2023-08-21
 ---
 
 <dl class="stack">
-  {%- for principle in collections.principles %}
+  {%- for principle in collections.principle | titleSort %}
     <dt>
-      <a href="/principles/{{principle.title | slugify }}" id="{{ principle.title | slugify }}">{{ principle.title }}</a>
+      <a href="{{principle.page.url}}" id="{{ principle.data.title | slugify }}">{{ principle.data.title }}</a>
     </dt>
-    <dd style="margin-block-start:0;">{{ principle.description }}</dd>
+    <dd style="margin-block-start:0;">{{ principle.data.description }}</dd>
   {%- endfor %}
 </dl>

@@ -1,7 +1,7 @@
 ---
 title: Put on your oxygen mask first.
 date: 2023-07-27T14:23:52.063Z
-description: What good am I to others if I dont take care of myself, first?
+description: What good am I to others if I don't take care of myself, first?
 ---
 
 If I'm not taking care of myself first then I'm no good to Julian.
