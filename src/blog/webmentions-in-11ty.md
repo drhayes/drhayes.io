@@ -8,6 +8,7 @@ tags:
   - text
   - webmentions
 eleventyExcludeFromCollections: true
+unlisted: true
 ---
 
 There comes a time in every [Eleventy](https://www.11ty.dev/) blog's life where the author must write a post about implementing webmentions. Here is mine.
@@ -56,15 +57,15 @@ module.exports = async function () {
 };
 ```
 
-{% infoAside "Wait, what's a global data file?" %}
+{% aside "Wait, what's a global data file?" %}
 
 Eleventy has this thing called [the data cascade](https://www.11ty.dev/docs/data-cascade/). Eleventy gathers data from multiple sources before sending it to your template when it renders.
 
 Here's a link to their documentation about global data files: <https://www.11ty.dev/docs/data-global/>
 
-{% endinfoAside %}
+{% endaside %}
 
-I'm using the `@11ty/eleventy-fetch` package so my builds don't yank on the webmentions.io API too much during development; it caches responses. The `WEBMENTION_IO_TOKEN` is an environment variable that I have set in my local development so I can see webmentions in dev. It's also set as an environment variable in [Netlify](https://www.netlify.com/) when it builds my site.
+I'm using the `@11ty/eleventy-fetch` package so my builds don't yank on the webmention.io API too much during development; it caches responses. The `WEBMENTION_IO_TOKEN` is an environment variable that I have set in my local development so I can see webmentions in dev. It's also set as an environment variable in [Netlify](https://www.netlify.com/) when it builds my site.
 
 So now all my templates have a `webmentions` variable available with data for the whole site. That's okay, but if I'm within the context of a single page I want to only show webmentions for that page.
 
@@ -165,7 +166,7 @@ I received this by testing my implementation using [Webmention Rocks!](https://w
 Seeing this structure raised so many questions for me:
 
 - I've got an array of objects that have `type: "entry"`. Are there other types? (I don't think so)
-- Similarly, `author` is of `type` `"card"`. Are there other types there? (I don't think so)
+- Similarly, `author` is of `type: "card"`. Are there other types there? (I don't think so)
 - The `wm-property` is named `mention-of`. That is the name of a property whose value (for this webmention) is: `"https://drhayes.io/writing/pretty-atom-feed/"`. Can that be different from `wm-target`? That'd be weird, what would that mean?
 - What are valid values for `wm-property`? Are those specified anywhere? So far in others' code I've seen:
   - `in-reply-to`
@@ -177,14 +178,47 @@ I couldn't find answers to those questions in [the webmentions spec](https://www
 
 Turns out I should've been looking at the [README for the webmention.io project](https://github.com/aaronpk/webmention.io#api), duh! In addition to the properties I've seen it also includes `bookmark-of` (ooh!) and `rsvp` (ooooooh!). So that's neato.
 
+I'm calling the service with a token but it looks like I don't need one in some cases. For instance: <https://webmention.io/api/mentions.jf2?target[]=https://drhayes.io/writing/pretty-atom-feed/> will return the webmentions for that particular URL only. If I were working client-side that might be perfect -- no exposed token that way. And [it looks like you can receive data for multiple pages that way](https://github.com/aaronpk/webmention.io#find-links-to-multiple-pages), so that's something to keep in your back pocket.
+
+For more answers about the `type` fields, I turned to <http://microformats.org/wiki/jf2>. It seems like the `type` params are the suffixes of the various microformat objects. [The jf2 spec backs me up on that one](https://jf2.spec.indieweb.org/#reservedproperties). Hooray for reading comprehension!
+
+I am _super glad_ that Aaron Parecki is, apparently, running this for the good of the community. Since Netlify has edge functions, though, I wonder if I could get something running to handle my own webmentions just in case.
+
 ## Caching
+
+One thing I noticed in a couple of implementations is they would cache the results returned from webmention.io.
+
+- [Here's Sia Karamalegos with a code snippet.](https://sia.codes/posts/webmentions-eleventy-in-depth/#step-3%3A-fetch-webmentions-during-the-eleventy-build)
+- [Here's Robb Knight's API doing it.](https://github.com/rknightuk/api/blob/e79de4d38faec461092fab88a4cc2e32a7d29345/services/webmentions.js)
+- [Here's Sophie Koonin's site doing it.](https://github.com/sophiekoonin/localghost/blob/37b4fcb59e4b13032888fd84268837a8c68e28cd/src/_data/webmentions.js)
+
+I'm interested! Especially if webmention.io ever goes down, then **poof** go all my webmentions. When developing locally I'm entirely dependent on [11ty/eleventy-fetch](https://github.com/11ty/eleventy-fetch) caching things on my computer while I'm messing around with my site; that's good enough for the short term. But I'm at a loss, longer term.
+
+Netlify builds my site, so I could cache them up there I guess? I found a couple of utilities to handle something like that for me:
 
 - https://www.npmjs.com/package/@netlify/cache-utils
 - https://www.npmjs.com/package/netlify-plugin-cache
 
+...but that's not really what I'm thinking of -- I don't want them available for the _next build_, I want them available _for the life of the site_. And I _think_ I'm okay with Eleventy's fetch cache disappearing from build to build. At least I am until I notice all my webmentions are gone, I guess.
+
+But webmention.io has been around a very long time, so it's probably okay to kick that can further down the road. Maybe something like pulling the webmentions, writing them to disk, and re-checking them into the git repo so the site can rebuild without the site being live. Future project, maybe.
+
 ## Sending
 
-- https://github.com/CodeFoodPixels/netlify-plugin-webmentions
-  - Found because of https://lukeb.co.uk/blog/2021/03/15/no-comment-adding-webmentions-to-my-site/
-  - Probably not needed because of brid.gy, right?
-    - https://brid.gy/about#publish
+My site is now listening for webmentions and will display any that it gets in [a timely fashion](https://github.com/drhayes/drhayes.io/blob/005ae457014cfd48b95784127581f8feaf22e6c3/.github/workflows/deploy-on-cron.yml) thanks to GitHub workflows and [a `23 */2 * * *` cron expression](https://crontab.guru/#23_*/2_*_*_*).
+
+I'd really like it if my site could _send_ or _publish_ webmentions as well: every time I link to another page it'd be great if the other person knew I was giving them credit for the work they've done.
+
+The inimitable [Remy Sharp](https://remysharp.com/) has done it again and created **yet another** incredibly useful tool, [webmention.app](https://www.webmention.app/).
+
+{% aside "A note on webmention.app" %}
+When I first visited the site I kept getting a 404 and thought it was gone. It turns out that navigating to "https://webmention.app" will get you a 404. Navigating to <https://www.webmention.app/> will get you the app. Note the **`www`**!
+
+Although, occasionally, [Vercel does knock his sites off the web](https://remysharp.com/2023/01/30/on-vercel-if-some-of-my-sites-are-down) so it could legit be down.
+{% endaside %}
+
+Lots of sites recommend using webmention.app and calling it a day. But I like to ice skate uphill, so I dug in a bit and found [CodeFoodPixels/netlify-plugin-webmentions](https://github.com/CodeFoodPixels/netlify-plugin-webmentions)! It actually uses `@remy/webmention` as a library (the same code that powers webmention.app) but runs "locally" in the build at Netlify. Nice! By default it searches the most recent post based on the feed for your site.
+
+But, apparently, [brid.gy will also do publishing?](https://brid.gy/about#publish) All I'd need to do there is [send brid.gy a webmention](https://brid.gy/about#webmentions) (we must go deeper) and they'd scan my post looking for mention-able things. But how would I know which posts to tell brid.gy about?
+
+While both of these would work they're not quite satisfying. What if I change something _other_ than the most recent post
