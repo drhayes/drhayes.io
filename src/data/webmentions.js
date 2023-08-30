@@ -1,5 +1,5 @@
 // Lifted almost entirely from: https://github.com/cdransf/coryd.dev/blob/2c64737f1fd97514f791178e59d07ad861370fbe/src/_data/webmentions.js
-// Any changes are bugs are mine!
+// Any changes or bugs are mine!
 const EleventyFetch = require('@11ty/eleventy-fetch');
 
 module.exports = async function () {
