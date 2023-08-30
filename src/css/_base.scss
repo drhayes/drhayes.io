@@ -112,7 +112,8 @@ hr:after {
   color: initial;
 }
 
-p > code {
+p > code,
+li > code {
   padding: var(--s-4);
   font-family: var(--code-font);
   background-color: var(--color-lightish);

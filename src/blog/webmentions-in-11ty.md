@@ -7,6 +7,7 @@ tags:
   - 11ty
   - text
   - webmentions
+eleventyExcludeFromCollections: true
 ---
 
 There comes a time in every [Eleventy](https://www.11ty.dev/) blog's life where the author must write a post about implementing webmentions. Here is mine.
@@ -172,6 +173,18 @@ Seeing this structure raised so many questions for me:
   - `mention-of`
   - `repost-of`
 
-I couldn't find answers to those questions in [the webmentions spec](https://www.w3.org/TR/webmention/) because that's mostly about sending, not receiving. I mean, it _has_ [a section about receiving webmentions](https://www.w3.org/TR/webmention/#receiving-webmentions) but that doesn't seem super related to what webmention.io is sending me.
+I couldn't find answers to those questions in [the webmentions spec](https://www.w3.org/TR/webmention/) but that seems to mostly be about sending, not receiving. I mean, it _has_ [a section about receiving webmentions](https://www.w3.org/TR/webmention/#receiving-webmentions) but that doesn't seem super related to what webmention.io is sending me.
 
-Turns out I should've been looking at the [README for the webmention.io project](https://github.com/aaronpk/webmention.io#api)! In addition to the properties I've seen it also includes `bookmark-of` (ooh!) and `rsvp` (ooooooh!).
+Turns out I should've been looking at the [README for the webmention.io project](https://github.com/aaronpk/webmention.io#api), duh! In addition to the properties I've seen it also includes `bookmark-of` (ooh!) and `rsvp` (ooooooh!). So that's neato.
+
+## Caching
+
+- https://www.npmjs.com/package/@netlify/cache-utils
+- https://www.npmjs.com/package/netlify-plugin-cache
+
+## Sending
+
+- https://github.com/CodeFoodPixels/netlify-plugin-webmentions
+  - Found because of https://lukeb.co.uk/blog/2021/03/15/no-comment-adding-webmentions-to-my-site/
+  - Probably not needed because of brid.gy, right?
+    - https://brid.gy/about#publish
