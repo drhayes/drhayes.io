@@ -4,6 +4,8 @@ date: 2023-08-10
 tags:
   - atom
   - 11ty
+aliases:
+  - /writing/pretty-atom-feed/
 ---
 
 I wanted my Atom feed to look prettier. I re-discovered some old skills of mine in the process.

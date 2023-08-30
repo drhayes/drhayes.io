@@ -1,12 +1,12 @@
 :root {
   --body-font: 'Berkeley Mono', 'Courier', 'Helvetica', sans-serif;
-  --heading-font: 'Inter', 'Helvetica Neue', 'Helvetica', sans-serif;
+  --heading-font: 'Inter Bold', 'Helvetica Neue', 'Helvetica', sans-serif;
   --heading-contrast-font: 'Inter Bold', 'Helvetica Neue', 'Helvetica',
     sans-serif;
   --code-font: 'Berkeley Mono', monospace;
   --measure: 65ch;
 
-  --ratio: 1.25;
+  --ratio: 1.33;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
   --s-3: calc(var(--s-2) / var(--ratio));

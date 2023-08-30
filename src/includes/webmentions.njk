@@ -1,5 +1,5 @@
 {% if webmentions %}
-{% set mentions = webmentions | webmentionsByUrl %}
+{% set mentions = webmentions | webmentionsByUrl(aliases) %}
 {% if mentions.likes | length or mentions.reposts | length or mentions.replies | length %}
 <article class="stack webmentions">
   {% if mentions.likes | length %}
