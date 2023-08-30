@@ -212,7 +212,7 @@ I'd really like it if my site could _send_ or _publish_ webmentions as well: eve
 The inimitable [Remy Sharp](https://remysharp.com/) has done it again and created **yet another** incredibly useful tool, [webmention.app](https://www.webmention.app/).
 
 {% aside "A note on webmention.app" %}
-When I first visited the site I kept getting a 404 and thought it was gone. It turns out that navigating to "https://webmention.app" will get you a 404. Navigating to <https://www.webmention.app/> will get you the app. Note the **`www`**!
+When I first visited the site I kept getting a 404 and thought it was gone. It turns out that navigating to "https://webmention.app" will get you a 404. Navigating to <https://www.webmention.app/> will get you the app. Note the **`www`**! Naked domains are a killer, I guess.
 
 Although, occasionally, [Vercel does knock his sites off the web](https://remysharp.com/2023/01/30/on-vercel-if-some-of-my-sites-are-down) so it could legit be down.
 {% endaside %}
@@ -221,4 +221,6 @@ Lots of sites recommend using webmention.app and calling it a day. But I like to
 
 But, apparently, [brid.gy will also do publishing?](https://brid.gy/about#publish) All I'd need to do there is [send brid.gy a webmention](https://brid.gy/about#webmentions) (we must go deeper) and they'd scan my post looking for mention-able things. But how would I know which posts to tell brid.gy about?
 
-While both of these would work they're not quite satisfying. What if I change something _other_ than the most recent post
+While both of these would work they're not quite satisfying. What if I change something _other_ than the most recent post on my site? I _try_ to keep my `updated` frontmatter... well, _updated_. Is that good enough? [Maybe it's not perfect, but that's okay.](/principles/perfect-is-the-enemy-of-good/)
+
+But... I _also_ don't want to send webmentions for things every time I build my site if I've already sent webmentions. I am _forever_ tinkering with my site. I'd hate to keep blasting out webmentions for a blog post because I'm tweaking colors. I'm much less sure of how to do that if I don't save the last updated date somewhere.

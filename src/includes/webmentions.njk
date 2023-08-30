@@ -2,15 +2,15 @@
 {% set mentions = webmentions | webmentionsByUrl(aliases) %}
 {% if mentions.likes | length or mentions.reposts | length or mentions.replies | length %}
 {% macro singleMention(mention) %}
-    {% if mention.author.url %}
-    <a href="{{ mention.author.url }}" rel="noopener" class="no-link-decoration u-url">
-    {% endif %}
-      <span class="p-author h-card">
-        <img src="{{ mention.author.photo}}" alt="{{ mention.author.name }}" title="{{ mention.author.name }}" loading="lazy">
-      </span>
-    {% if mention.author.url %}
-    </a>
-    {% endif %}
+  {% if mention.author.url %}
+  <a href="{{ mention.author.url }}" rel="noopener" class="no-link-decoration u-url">
+  {% endif %}
+    <span class="p-author h-card">
+      <img src="{{ mention.author.photo}}" alt="{{ mention.author.name }}" title="{{ mention.author.name }}" loading="lazy">
+    </span>
+  {% if mention.author.url %}
+  </a>
+  {% endif %}
 {% endmacro %}
 <article class="stack webmentions">
   {% if mentions.likes | length %}
