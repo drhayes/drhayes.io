@@ -1,46 +1,49 @@
 {% if webmentions %}
 {% set mentions = webmentions | webmentionsByUrl(aliases) %}
 {% if mentions.likes | length or mentions.reposts | length or mentions.replies | length %}
+{% macro singleMention(mention) %}
+    {% if mention.author.url %}
+    <a href="{{ mention.author.url }}" rel="noopener" class="no-link-decoration u-url">
+    {% endif %}
+      <span class="p-author h-card">
+        <img src="{{ mention.author.photo}}" alt="{{ mention.author.name }}" title="{{ mention.author.name }}" loading="lazy">
+      </span>
+    {% if mention.author.url %}
+    </a>
+    {% endif %}
+{% endmacro %}
 <article class="stack webmentions">
   {% if mentions.likes | length %}
   <h2>Likes</h2>
+  <ul class="cluster">
   {% for like in mentions.likes %}
-    {% if like.author.url %}
-    <a href="{{ like.author.url }}" rel="noopener" class="no-link-decoration">
-    {% endif %}
-      <img src="{{ like.author.photo}}" alt="{{ like.author.name }}" title="{{ like.author.name }}">
-    {% if like.author.url %}
-    </a>
-    {% endif %}
+    <li class="p-like h-cite">
+      {{ singleMention(like) }}
+    </li>
   {% endfor %}
+  </ul>
   {% endif %}
 
   {% if mentions.reposts | length %}
   <h2>Reposts</h2>
-  <div class="cluster">
+  <ul class="cluster">
   {% for repost in mentions.reposts %}
-    {% if repost.author.url %}
-    <a href="{{ repost.author.url }}" rel="noopener" class="no-link-decoration">
-    {% endif %}
-      <img src="{{ repost.author.photo}}" alt="{{ repost.author.name }}" title="{{ repost.author.name }}">
-    {% if repost.author.url %}
-    </a>
-    {% endif %}
+    <li class="p-repost h-cite">
+      {{ singleMention(repost) }}
+    </li>
   {% endfor %}
-  </div>
+  </ul>
   {% endif %}
 
   {% if mentions.replies | length %}
   <h2>Comments</h2>
+  <ul class="cluster">
   {% for repost in mentions.replies %}
-    {% if repost.author.url %}
-    <a href="{{ repost.author.url }}" rel="noopener" class="no-link-decoration">
-    {% endif %}
-      <img src="{{ repost.author.photo}}" alt="{{ repost.author.name }}" title="{{ repost.author.name }}">
-    {% if repost.author.url %}
-    </a>
-    {% endif %}
+    <li class="p-comment h-cite">
+      {{ singleMention(repost) }}
+    </li>
   {% endfor %}
+  </ul>
   {% endif %}
 </article>
 {% endif %}
