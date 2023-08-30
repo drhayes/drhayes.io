@@ -105,18 +105,16 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('titleSort', require('./lib/filters/titleSort'));
 
   // Shortcodes.
-  eleventyConfig.addNunjucksShortcode(
+  eleventyConfig.addShortcode(
     'gameScreenshot',
     require('./lib/shortcodes/gameScreenshot')
   );
-  eleventyConfig.addNunjucksShortcode(
-    'meLink',
-    require('./lib/shortcodes/meLink')
-  );
-  eleventyConfig.addNunjucksShortcode(
+  eleventyConfig.addShortcode('meLink', require('./lib/shortcodes/meLink'));
+  eleventyConfig.addShortcode(
     'omgStatus',
     require('./lib/shortcodes/omgStatus')
   );
+  eleventyConfig.addPairedShortcode('aside', require('./lib/shortcodes/aside'));
 
   // Collections.
   eleventyConfig.addCollection('games', require('./lib/collections/games'));
