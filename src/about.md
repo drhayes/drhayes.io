@@ -68,6 +68,7 @@ Some 11ty organization ideas came from:
   - Lots of good Markdown plugin stuff that I suddenly, desperately needed
   - I love how her site blanks out tags that are only used once.
   - also, for teaching me CSS in general, really
+- `<aside>` boxes shamelessly copied from [css-irl.info](https://css-irl.info/disentangling-frameworks/)
 
 [markdown]: https://daringfireball.net/projects/markdown/
 [github]: https://github.com/
