@@ -7,8 +7,6 @@ tags:
   - 11ty
   - text
   - webmentions
-eleventyExcludeFromCollections: true
-unlisted: true
 toc: true
 ---
 
