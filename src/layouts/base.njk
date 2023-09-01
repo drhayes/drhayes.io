@@ -13,6 +13,9 @@
   {% endblock %}
   <script async src="/js/main.js"></script>
   <a href="https://brid.gy/publish/mastodon"></a>
+  {% if page.url %}
+  <a href="{{ page.url }}" class="u-url" style="display:none;"></a>
+  {% endif %}
 </body>
 
 </html>
