@@ -2,11 +2,10 @@
 
   <h1 class="p-name">
     {{ title }}
+    {% if page.url %}
+    <a href="{{ page.url }}" class="u-url"></a>
+    {% endif %}
   </h1>
-
-  {% if page.url %}
-  <a href="{{ page.url }}" class="u-url"></a>
-  {% endif %}
 
   {% if date | isValidIsoDate or updated | isValidIsoDate or tags %}
   <div class="post-metadata">
