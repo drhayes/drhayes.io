@@ -119,8 +119,8 @@ li > code {
   background-color: var(--color-lightish);
 }
 
-pre:has(> code),
-.stack pre:has(> code) {
+pre,
+.stack pre {
   margin-block-start: var(--s2);
   box-shadow: 0 0 var(--s0) var(--color-dark-40);
 }
