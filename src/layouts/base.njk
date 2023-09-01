@@ -12,9 +12,9 @@
   {{ content | safe }}
   {% endblock %}
   <script async src="/js/main.js"></script>
-  <a href="https://brid.gy/publish/mastodon"></a>
+  <a href="https://brid.gy/publish/mastodon" class="hidden">brid.gy please publish my stuff</a>
   {% if page.url %}
-  <a href="{{ page.url }}" class="u-url" style="display:none;"></a>
+    <a href="{{ page.url }}" class="hidden u-url">{{ page.url }}</a>
   {% endif %}
 </body>
 
