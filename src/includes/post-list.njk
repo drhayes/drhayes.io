@@ -1,15 +1,15 @@
-<ol class="list-style-type:none" style="padding-inline-start:0;">
+<ol class="list-style-type:none h-feed" style="padding-inline-start:0;">
   {%- for post in postList | sort -%}
-  <li class="two-line">
+  <li class="two-line h-entry">
     <div>
       {%- if post.data.updated | isValidIsoDate %}
-      <time class="date">{{ post.data.updated | dateFormat }}</time>
+      <time class="date dt-updated">{{ post.data.updated | dateFormat }}</time>
       {%- elif post.data.date | isValidIsoDate %}
-      <time class="date">{{ post.data.date | dateFormat }}</time>
+      <time class="date dt-published">{{ post.data.date | dateFormat }}</time>
       {% endif -%}
     </div>
     <div>
-      <a href="{{ post.url }}" class="link">{{ post.data.title }}</a>
+      <a href="{{ post.url }}" class="u-url p-name">{{ post.data.title }}</a>
       {% if post.data.draft %}
       {% include "draft-badge.njk" %}
       {% endif %}

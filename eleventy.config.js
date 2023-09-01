@@ -105,6 +105,12 @@ module.exports = (eleventyConfig) => {
     require('./lib/filters/webmentionsByUrl')
   );
   eleventyConfig.addFilter('titleSort', require('./lib/filters/titleSort'));
+  eleventyConfig.addFilter('first', function (list, num = 5) {
+    return list.slice(0, num);
+  });
+  eleventyConfig.addFilter('last', function (list, num = 5) {
+    return list.slice(list.length - num);
+  });
 
   // Shortcodes.
   eleventyConfig.addShortcode(

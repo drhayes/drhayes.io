@@ -4,44 +4,51 @@ description: It's my front page.
 layout: base.njk
 ---
 
-<main class="stack center intrinsic front-page" style="--space: 1rem;";>
+<main class="stack front-page" style="--space: 1rem;";>
 
-  {% include "raven.svg" %}
+  <div class="with-sidebar">
+    <div class="align-self:center">
+      {% include "raven.svg" %}
+    </div>
 
-  <h1>
-    <span class="blue-gradient">Hi there.</span>
-    <span>👋🏽</span>
-  </h1>
-  <h2>My name is <a href="https://drhayes.io" class="p-name u-url u-uid" rel="me">David Hayes</a>.</h2>
-  <h2>I get called <span class="blue-gradient p-nickname">drhayes</span> a lot.</h2>
-  <h2>
-    <a href="mailto:hi@drhayes.io">hi@drhayes.io</a>
-  </h2>
+    <div class="stack">
+      <h1>
+        <span class="blue-gradient">Hi there.</span>
+        <span>👋🏽</span>
+      </h1>
 
-  <section>
-    <p class="heading-contrast-font font-size:s1">While you're here, why not check out...</p>
-    <ul>
-      <li>...<a href="/writing">my writing</a></li>
-      <li>... or <a href="/games">my games</a></li>
-    </ul>
-    <p>... or just <a href="/now">see what I'm doing now</a>.</p>
-  </section>
+      <h2>My name is <a href="https://drhayes.io" class="p-name u-url u-uid" rel="me">David Hayes</a>.</h2>
 
-  <footer class="stack margin-block-start:s5">
-    <h2>Me Elsewhere</h2>
-    <ul>
-      <li>
-        <a rel="me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
-      </li>
-      <li>
-        <a rel="me" href="https://github.com/drhayes">GitHub</a>
-      </li>
-      <li>
-        <a rel="me" href="https://proven.lol/f3518f">Proof</a>
-      </li>
-    </ul>
-    {% include "webring.njk" %}
-  </footer>
+      <p>I get called <span class="heading-font font-size:s1 blue-gradient p-nickname">drhayes</span> a lot.</p>
+
+      <p>It's going to continue to be super plain around here for a bit while I straighten out my site.</p>
+
+      <p><a href="mailto:hi@drhayes.io">hi@drhayes.io</a></p>
+
+      <h2 class="p-name">Recent Writing</h2>
+      <ol class="list-style-type:none">
+        {%- for post in collections.allTheWriting | dateSort | reverse | first -%}
+        <li class="h-entry">
+          <a href="{{ post.url }}" class="u-url p-name">{{ post.data.title }}</a>
+        </li>
+        {% endfor %}
+      </ol>
+
+      <h2>Me Elsewhere</h2>
+      <ul class="list-style-type:none">
+        <li>
+          <a rel="noopener me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
+        </li>
+        <li>
+          <a rel="noopener me" href="https://github.com/drhayes">GitHub</a>
+        </li>
+        <li>
+          <a rel="noopener me" href="https://proven.lol/f3518f">Proof</a>
+        </li>
+      </ul>
+      {% include "webring.njk" %}
+    </div>
+  </div>
 
 </main>
 
