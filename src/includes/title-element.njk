@@ -1,14 +1,12 @@
 <header class="stack">
 
   <h1 class="p-name">
-    {% if page.url %}
-      <a href="{{ page.url }}" class="u-url">
-    {% endif %}
-      {{ title }}
-    {% if page.url %}
-      </a>
-    {% endif %}
+    {{ title }}
   </h1>
+
+  {% if page.url %}
+  <a href="{{ page.url }}" class="u-url"></a>
+  {% endif %}
 
   {% if date | isValidIsoDate or updated | isValidIsoDate or tags %}
   <div class="post-metadata">
