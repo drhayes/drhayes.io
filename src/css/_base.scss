@@ -114,14 +114,14 @@ hr:after {
 
 p > code,
 li > code {
-  padding: var(--s-4);
+  padding: var(--s-5);
   font-family: var(--code-font);
   background-color: var(--color-lightish);
 }
 
 pre,
 .stack pre {
-  margin-block-start: var(--s2);
+  margin-block: var(--s2);
   box-shadow: 0 0 var(--s0) var(--color-dark-40);
 }
 
@@ -157,7 +157,7 @@ aside {
   color: var(--aside-text-color);
 
   &.box {
-    margin-block: var(--s2);
+    margin-block: var(--s3);
   }
 
   h2:first-of-type {

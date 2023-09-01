@@ -27,7 +27,7 @@
 }
 
 .stack > * + * {
-  margin-block-start: var(--space, var(--s1));
+  margin-block-start: var(--space, var(--s0));
 }
 
 .box {

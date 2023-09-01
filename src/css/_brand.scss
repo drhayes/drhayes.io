@@ -17,6 +17,10 @@
 }
 
 aside {
+  &#toc {
+    --aside-text: 'toc';
+  }
+
   &.warning {
     --aside-background-color: var(--warning-background-color);
     --aside-header-color: var(--warning-color);

@@ -1,7 +1,6 @@
   {% if toc %}
-  <aside id="toc" class="box stack">
-    <h2>Table of Contents</h2>
+  {% aside "Table of Contents" %}
     {{ content | toc | safe }}
-  </aside>
+  {% endaside %}
   {% endif %}
 
