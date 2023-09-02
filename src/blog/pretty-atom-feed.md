@@ -6,6 +6,8 @@ tags:
   - 11ty
 aliases:
   - /writing/pretty-atom-feed/
+posse:
+  - https://social.lol/@drhayes/110979931753527743
 ---
 
 I wanted my Atom feed to look prettier. I re-discovered some old skills of mine in the process.
