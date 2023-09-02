@@ -26,6 +26,10 @@ aside {
     --aside-text: 'toc';
   }
 
+  &#posse {
+    --aside-text: 'posse';
+  }
+
   &.warning {
     --aside-background-color: var(--warning-background-color);
     --aside-header-color: var(--warning-color);

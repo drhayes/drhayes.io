@@ -12,6 +12,16 @@
     {{ content | safe }}
   </article>
 
+  {% if posse | length %}
+  {% aside "Syndicated Elsewhere" %}
+    <ul>
+    {% for thing in posse %}
+      <li><a href="{{ thing }}" class="u-syndication">{{ thing }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endaside %}
+  {% endif %}
+
   {% include 'webmentions.njk' %}
 
 </main>
