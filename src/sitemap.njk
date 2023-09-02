@@ -11,8 +11,8 @@ eleventyExcludeFromCollections: true
         <loc>{{ page.url }}</loc>
         {%- if page.data.updated | isValidIsoDate %}
         <lastmod>{{ page.data.updated.toISOString() }}</lastmod>
-        {%- elif page.data.date | isValidIsoDate %}
-        <lastmod>{{ page.data.date.toISOString() }}</lastmod>
+        {%- elif page.date | isValidIsoDate %}
+        <lastmod>{{ page.date.toISOString() }}</lastmod>
         {% endif %}
         {%- if page.data.changefreq %}
         <changefreq>{{ page.data.changefreq }}</changefreq>

@@ -9,10 +9,10 @@
   <div class="post-metadata">
     <div>
       {% if date | isValidIsoDate %}
-      <time datetime="{{ date | dateFormat(true) }}" class="dt-published">{{ date | dateFormat }}</time>{%- endif -%}
+      <time datetime="{{ date | datetime }}" class="dt-published">{{ date | dateformat }}</time>{%- endif -%}
       {%- if updated | isValidIsoDate -%}
       {%- if date | isValidIsoDate and updated | isValidIsoDate -%}, {% endif %}
-      <span>updated:&nbsp;<time datetime="{{ updated | dateFormat(true) }}" class="dt-updated">{{ updated | dateFormat }}</time></span>
+      <span>updated:&nbsp;<time datetime="{{ updated | datetime }}" class="dt-updated">{{ updated | dateformat }}</time></span>
       {% endif %}
     </div>
     {% if tags %}

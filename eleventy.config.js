@@ -83,7 +83,7 @@ module.exports = (eleventyConfig) => {
 
     return md.renderInline(value, o);
   });
-  eleventyConfig.addFilter('dateFormat', require('./lib/filters/dateFormat'));
+  eleventyConfig.addFilter('dateformat', require('./lib/filters/dateformat'));
   eleventyConfig.addFilter('debugPrint', require('./lib/filters/debugPrint'));
   eleventyConfig.addFilter(
     'isBigLetterPage',
@@ -111,6 +111,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('last', function (list, num = 5) {
     return list.slice(list.length - num);
   });
+  eleventyConfig.addFilter('datetime', require('./lib/filters/datetime'));
 
   // Shortcodes.
   eleventyConfig.addShortcode(

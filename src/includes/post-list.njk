@@ -3,9 +3,9 @@
   <li class="two-line h-entry">
     <div>
       {%- if post.data.updated | isValidIsoDate %}
-      <time class="date dt-updated">{{ post.data.updated | dateFormat }}</time>
-      {%- elif post.data.date | isValidIsoDate %}
-      <time class="date dt-published">{{ post.data.date | dateFormat }}</time>
+      <time datetime="{{ post.data.updated | datetime }}" class="dt-updated">{{ post.data.updated | dateformat }}</time>
+      {%- elif post.date | isValidIsoDate %}
+      <time datetime="{{ post.date | datetime }}" class="dt-published">{{ post.date | dateformat }}</time>
       {% endif -%}
     </div>
     <div>
