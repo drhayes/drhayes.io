@@ -112,6 +112,7 @@ module.exports = (eleventyConfig) => {
     return list.slice(list.length - num);
   });
   eleventyConfig.addFilter('datetime', require('./lib/filters/datetime'));
+  eleventyConfig.addFilter('timeformat', require('./lib/filters/timeformat'));
 
   // Shortcodes.
   eleventyConfig.addShortcode(

@@ -37,10 +37,29 @@
 
   {% if mentions.replies | length %}
   <h2>Comments</h2>
-  <ul class="cluster inline-list">
-  {% for repost in mentions.replies %}
-    <li class="p-comment h-cite">
-      {{ singleMention(repost) }}
+  <ul class="stack inline-list">
+  {% for reply in mentions.replies %}
+    <li class="box">
+      <article class="stack u-comment h-cite">
+        <div class="cluster" style="justify-content:space-between;">
+          <div class="with-sidebar e-author h-card">
+            <img src="{{ reply.author.photo }}" alt="Author photo of {{ reply.author.name }}" loading="lazy" class="u-photo">
+            <div>
+              <a href="{{ reply.author.url }}" rel="noopener noreferrer" class="u-author">
+                <p class="p-name">{{ reply.author.name }}</p>
+              </a>
+            </div>
+          </div>
+          <small>
+            <a href="{{ reply.url }}" rel="noopener noreferrer" class="u-url">
+              <time datetime="{{ reply.published | datetime }}" class="dt-published">{{ reply.published | dateformat }} at {{ reply.published | timeformat }}</time>
+            </a>
+          </small>
+        </div>
+        <div class="e-content">
+          {{ reply.content | safe }}
+        </div>
+      </article>
     </li>
   {% endfor %}
   </ul>

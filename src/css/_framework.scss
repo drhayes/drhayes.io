@@ -31,7 +31,7 @@
 }
 
 .box {
-  padding: 2rem;
+  padding: var(--s1);
   border-width: var(--border-thin);
   border-style: solid;
 }

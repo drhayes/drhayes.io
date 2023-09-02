@@ -177,7 +177,7 @@ aside {
     content: '<' var(--aside-text) '>';
     inset-block-start: -1em;
     inset-inline-start: 1em;
-    font-size: 0.9rem;
+    font-size: var(--s-1);
     background-color: var(--aside-background-color);
     border: var(--border-thin) solid;
     border-color: var(--aside-border-color);
@@ -191,7 +191,7 @@ aside {
     content: '</' var(--aside-text) '>';
     inset-block-end: -1em;
     inset-inline-end: 1em;
-    font-size: 0.9rem;
+    font-size: var(--s-1);
     background-color: var(--aside-background-color);
     border: var(--border-thin) solid;
     border-color: var(--aside-border-color);

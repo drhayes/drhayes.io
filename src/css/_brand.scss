@@ -137,13 +137,9 @@ aside {
 }
 
 .webmentions {
-  h2 {
-    font-size: var(--s1);
-    border-width: var(--border-thin);
-    border-block-end: solid var(--color-lightish);
-  }
-
   img {
-    width: var(--s4);
+    width: var(--s3);
+    clip-path: circle(50%);
+    shape-outside: circle(50%);
   }
 }
