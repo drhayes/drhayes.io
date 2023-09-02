@@ -281,4 +281,6 @@ For the future:
 - Figure out how to save existing webmentions.
 - Figure out how to automatically send webmentions for anything that has changed.
 
+And speaking of webmentions... <a href="https://social.lol/@drhayes/110992124191804133" class="u-syndication">here's my social.lol post about this page</a>. Have at it!
+
 [^1]: [Have you seen how pretty it looks?](/blog/pretty-atom-feed/)
