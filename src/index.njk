@@ -2,6 +2,9 @@
 title: Hi there - drhayes.io
 description: It's my front page.
 layout: base.njk
+eleventyImport:
+  collections:
+    - allTheWriting
 ---
 
 <main class="stack front-page" style="--space: 1rem;";>
@@ -26,7 +29,7 @@ layout: base.njk
       <p><a href="mailto:hi@drhayes.io">hi@drhayes.io</a></p>
 
       <h2 class="p-name">Recent Writing</h2>
-      <ol class="list-style-type:none">
+      <ol>
         {%- for post in collections.allTheWriting | dateSort | reverse | first -%}
         <li class="h-entry">
           <a href="{{ post.url }}" class="u-url p-name">{{ post.data.title }}</a>
@@ -35,7 +38,7 @@ layout: base.njk
       </ol>
 
       <h2>Me Elsewhere</h2>
-      <ul class="list-style-type:none">
+      <ul>
         <li>
           <a rel="noopener me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
         </li>
