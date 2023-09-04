@@ -1,12 +1,15 @@
 <header class="stack">
+  {% if title %}
   <h1 class="p-name p-bridgy-mastodon-content">
     {{ title }}
   </h1>
+  {% endif %}
 
   <span class="hidden h-card p-author">{{ site.author.name }}</span>
 
   {% if date | isValidIsoDate or updated | isValidIsoDate or tags %}
   <div class="post-metadata">
+    {% if date or updated %}
     <div>
       {% if date | isValidIsoDate %}
       <time datetime="{{ date | datetime }}" class="dt-published">{{ date | dateformat }}</time>{%- endif -%}
@@ -15,6 +18,7 @@
       <span>updated:&nbsp;<time datetime="{{ updated | datetime }}" class="dt-updated">{{ updated | dateformat }}</time></span>
       {% endif %}
     </div>
+    {% endif %}
     {% if tags %}
     {% set tags = tags | onlyRealTags %}
     <ul class="inline-list tags" style="--space:var(--s0);">
