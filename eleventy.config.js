@@ -141,6 +141,7 @@ module.exports = (eleventyConfig) => {
     require('./lib/collections/writingByTag')
   );
   eleventyConfig.addCollection('aliases', require('./lib/collections/aliases'));
+  eleventyConfig.addCollection('notes', require('./lib/collections/notes'));
 
   // Static stuff.
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');

@@ -44,8 +44,7 @@ eleventyImport:
         <ol>
           {%- for note in collections.notes | dateSort | reverse | first -%}
           <li class="h-entry">
-            {%- set title = note.data.title or note.url -%}
-            <a href="{{ note.url }}" class="u-url p-name">{{ title }}</a>
+            <a href="{{ note.url }}" class="u-url p-name">{{ note.url }}</a>
           </li>
           {% endfor %}
         </ol>
