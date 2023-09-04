@@ -9,17 +9,19 @@
   {% include 'toc.njk' %}
 
   <article class="stack e-content">
+    {%- if inReplyTo -%}<h2>I said...</h2>{%- endif -%}
     {{ content | safe }}
   </article>
 
   {% if posse | length %}
-  {% aside "Syndicated Elsewhere" %}
+  <article class="stack margin-block-start:s5">
+    <h2>Syndicated Elsewhere</h2>
     <ul>
     {% for thing in posse %}
       <li><a href="{{ thing }}" class="u-syndication">{{ thing }}</a></li>
     {% endfor %}
     </ul>
-  {% endaside %}
+  </article>
   {% endif %}
 
   {% include 'webmentions.njk' %}

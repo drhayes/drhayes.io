@@ -36,6 +36,34 @@
   </div>
   {% endif %}
 
+  {% if inReplyTo %}
+    {% set post = inReplyTo | getPost %}
+    {% set account = post.attributedTo | getAccount %}
+    <h2>In reply to...</h2>
+    <article class="box stack u-comment h-cite">
+      <div class="cluster" style="justify-content:space-between;">
+        <div class="with-sidebar e-author h-card">
+          <div>
+            <img src="{{ account.icon.url }}" alt="{{ account.name }}" loading="lazy" class="u-photo" width="48" height="48">
+          </div>
+          <div>
+            <a href="{{ account.url }}" rel="noopener noreferrer" class="u-author">
+              <p class="p-name">{{ account.name }}</p>
+            </a>
+          </div>
+        </div>
+        <small>
+          <a href="{{ post.url }}" rel="noopener noreferrer" class="u-in-reply-to">
+            <time datetime="{{ post.published | datetime }}" class="dt-published">{{ post.published | dateformat }} at {{ post.published | timeformat }}</time>
+          </a>
+        </small>
+      </div>
+      <div class="e-content">
+        {{ post.content | safe }}
+      </div>
+    </article>
+  {% endif %}
+
   {% if description %}
   <p class="font-style:italic font-size:s1 p-summary">
     {{ description }}

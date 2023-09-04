@@ -113,6 +113,11 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addFilter('datetime', require('./lib/filters/datetime'));
   eleventyConfig.addFilter('timeformat', require('./lib/filters/timeformat'));
+  eleventyConfig.addAsyncFilter('getPost', require('./lib/filters/getPost'));
+  eleventyConfig.addAsyncFilter(
+    'getAccount',
+    require('./lib/filters/getAccount')
+  );
 
   // Shortcodes.
   eleventyConfig.addShortcode(
@@ -125,10 +130,6 @@ module.exports = (eleventyConfig) => {
     require('./lib/shortcodes/omgStatus')
   );
   eleventyConfig.addPairedShortcode('aside', require('./lib/shortcodes/aside'));
-  eleventyConfig.addShortcode(
-    'inreplyto',
-    require('./lib/shortcodes/inreplyto')
-  );
 
   // Collections.
   eleventyConfig.addCollection('games', require('./lib/collections/games'));
