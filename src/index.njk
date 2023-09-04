@@ -28,14 +28,28 @@ eleventyImport:
 
       <p><a href="mailto:hi@drhayes.io">hi@drhayes.io</a></p>
 
-      <h2 class="p-name">Recent Writing</h2>
-      <ol>
-        {%- for post in collections.allTheWriting | dateSort | reverse | first -%}
-        <li class="h-entry">
-          <a href="{{ post.url }}" class="u-url p-name">{{ post.data.title }}</a>
-        </li>
-        {% endfor %}
-      </ol>
+      <div class="stack h-feed">
+        <h2 class="p-name">Recent Writing</h2>
+        <ol>
+          {%- for post in collections.allTheWriting | dateSort | reverse | first -%}
+          <li class="h-entry">
+            <a href="{{ post.url }}" class="u-url p-name">{{ post.data.title }}</a>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+
+      <div class="stack h-feed">
+        <h2 class="p-name">Recent Notes</h2>
+        <ol>
+          {%- for note in collections.notes | dateSort | reverse | first -%}
+          <li class="h-entry">
+            {%- set title = note.data.title or note.url -%}
+            <a href="{{ note.url }}" class="u-url p-name">{{ title }}</a>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
 
       <h2>Me Elsewhere</h2>
       <ul>
