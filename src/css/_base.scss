@@ -76,22 +76,27 @@ h5 {
 h1 {
   font-size: var(--s5);
   line-height: var(--line-height-small);
+  hyphens: auto;
 }
 
 h2 {
   font-size: var(--s4);
+  hyphens: auto;
 }
 
 h3 {
   font-size: var(--s3);
+  hyphens: auto;
 }
 
 h4 {
   font-size: var(--s2);
+  hyphens: auto;
 }
 
 h5 {
   font-size: var(--s1);
+  hyphens: auto;
 }
 
 p {
