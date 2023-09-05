@@ -20,7 +20,7 @@ function cspPolicy(configData) {
       'youtube.com',
       'www.youtube.com',
     ],
-    img: ['*', 'data:', 'media.social.lol', 'webmention.io'],
+    img: ['*', 'data:'],
     manifest: 'self',
     media: 'self',
     object: 'self',
