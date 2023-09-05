@@ -138,7 +138,17 @@ aside {
 
 .webmentions {
   img {
-    width: var(--s3);
+    width: var(--s4);
+    height: var(--s4);
+    clip-path: circle(50%);
+    shape-outside: circle(50%);
+  }
+}
+
+.reply {
+  img {
+    width: var(--s4);
+    height: var(--s4);
     clip-path: circle(50%);
     shape-outside: circle(50%);
   }
