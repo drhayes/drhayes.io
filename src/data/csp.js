@@ -11,7 +11,7 @@ const defaultGoesFirst = (a, b) => {
 function cspPolicy(configData) {
   const csp = {
     default: 'none',
-    child: ['self', 'itch.io', 'www.youtube-nocookie.com'],
+    child: ['self', 'itch.io', 'www.youtube.com', 'www.youtube-nocookie.com'],
     font: 'self',
     frame: [
       'itch.io',
