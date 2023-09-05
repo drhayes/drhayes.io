@@ -75,7 +75,6 @@ aside {
     font-family: var(--body-font);
     font-size: var(--s0);
     font-weight: normal;
-    letter-spacing: -0.05em;
   }
 }
 
@@ -107,6 +106,7 @@ aside {
 
 .game-card {
   display: grid;
+  --outline-thickness: 0.04em;
 
   img {
     grid-column: 1;
@@ -118,14 +118,19 @@ aside {
     grid-column: 1;
     grid-row: 1;
     align-self: center;
-    font-family: var(--heading-contrast-font);
+    font-family: var(--heading-font);
     font-weight: bold;
-    letter-spacing: -0.05em;
     font-size: var(--s4);
     max-inline-size: calc(100% - 1rem);
     max-block-size: calc(100% - 1rem);
-    color: var(--color-white);
-    text-shadow: 0 0 4px var(--color-dark);
+    color: var(--color-black);
+    text-shadow: calc(var(--outline-thickness) * -1)
+        calc(var(--outline-thickness) * -1) var(--color-blue),
+      var(--outline-thickness) calc(var(--outline-thickness) * -1)
+        var(--color-blue),
+      var(--outline-thickness) var(--outline-thickness) var(--color-blue),
+      calc(var(--outline-thickness) * -1) var(--outline-thickness)
+        var(--color-blue);
   }
 }
 

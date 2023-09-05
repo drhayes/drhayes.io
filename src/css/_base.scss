@@ -19,8 +19,8 @@ body {
   font-family: var(--body-font);
   font-size: var(--s0);
   line-height: var(--line-height);
-  letter-spacing: -0.05em;
   font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
 }
 
 a,
@@ -221,4 +221,30 @@ aside {
 
 strong {
   text-shadow: 0 0 4px var(--color-dark-20);
+}
+
+body > nav {
+  font-family: var(--heading-font);
+  font-size: var(--s1);
+  text-transform: lowercase;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space, var(--s0));
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    padding-inline-start: 0;
+
+    li:first-child {
+      font-size: var(--s2);
+      font-weight: bold;
+      flex-grow: 1;
+    }
+  }
+}
+
+.h-feed > .h-entry > :first-child {
+  flex-basis: 10rem;
 }

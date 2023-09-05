@@ -72,9 +72,3 @@
   justify-content: flex-start;
   align-items: center;
 }
-
-.two-line {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: var(--space, var(--s3));
-}

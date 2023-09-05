@@ -1,11 +1,5 @@
 .heading-font {
   font-family: var(--heading-font);
-  letter-spacing: -0.05em;
-}
-
-.heading-contrast-font {
-  font-family: var(--heading-contrast-font);
-  letter-spacing: -0.05em;
 }
 
 .inline-list {
@@ -25,8 +19,7 @@
 }
 
 .font-weight\:normal {
-  // font-weight: normal;
-  font-family: var(--heading-contrast-font);
+  font-weight: normal;
 }
 
 .no-link-decoration {
@@ -98,9 +91,10 @@
 }
 
 .badge {
+  font-family: var(--heading-font);
   font-weight: bold;
+  font-size: var(--s-1);
   text-transform: uppercase;
-  letter-spacing: -0.05em;
   background-color: var(--color-light);
 
   &.draft {

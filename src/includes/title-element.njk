@@ -42,13 +42,13 @@
     <h2>In reply to...</h2>
     <article class="box stack u-comment h-cite reply">
       <div class="cluster" style="justify-content:space-between;">
-        <div class="with-sidebar e-author h-card">
+        <div class="with-sidebar e-author h-card" style="--space: var(--s-2);">
           <div>
             <img src="{{ account.icon.url }}" alt="{{ account.name }}" loading="lazy" class="u-photo" width="48" height="48">
           </div>
           <div>
             <a href="{{ account.url }}" rel="noopener noreferrer" class="u-author">
-              <p class="p-name">{{ account.name }}</p>
+              <span class="p-name">{{ account.name }}</span>
             </a>
           </div>
         </div>
