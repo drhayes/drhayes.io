@@ -224,20 +224,18 @@ strong {
 }
 
 body > nav {
-  font-family: var(--heading-font);
-  font-size: var(--s1);
-  text-transform: lowercase;
-
   ul {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space, var(--s0));
     justify-content: flex-start;
     align-items: center;
+    text-transform: lowercase;
     list-style-type: none;
     padding-inline-start: 0;
 
     li:first-child {
+      font-family: var(--heading-font);
       font-size: var(--s2);
       font-weight: bold;
       flex-grow: 1;
