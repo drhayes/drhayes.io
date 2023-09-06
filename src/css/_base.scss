@@ -173,10 +173,6 @@ aside {
     margin-block: var(--s2);
   }
 
-  h2:first-of-type {
-    margin-block: 0;
-  }
-
   p:first-of-type {
     margin-block-start: var(--s-1);
   }
@@ -213,8 +209,8 @@ aside {
     color: var(--aside-text-color);
   }
 
-  h4 {
-    font-size: 1.5rem;
+  h4:first-of-type {
+    margin-block: 0;
     color: var(--aside-header-color);
   }
 }
