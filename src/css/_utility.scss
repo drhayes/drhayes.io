@@ -18,14 +18,6 @@
   font-size: var(--s3);
 }
 
-.font-size\:s5 {
-  font-size: var(--s5);
-}
-
-.font-weight\:normal {
-  font-weight: normal;
-}
-
 .no-link-decoration {
   background-image: none;
 
@@ -34,11 +26,8 @@
   }
 }
 
-.lowercase {
-  text-transform: lowercase;
-}
-
-.font-style\:italic {
+.p-summary {
+  font-size: var(--s1);
   font-style: italic;
 }
 
