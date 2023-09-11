@@ -2,7 +2,6 @@
 title: Webmentions in Eleventy
 description: There comes a time in every Eleventy blog's life where the author must write a post about implementing webmentions. Here is mine.
 date: 2023-09-01
-draft: true
 tags:
   - 11ty
   - text
