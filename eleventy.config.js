@@ -145,6 +145,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection('notes', require('./lib/collections/notes'));
 
   // Static stuff.
+  eleventyConfig.addPassthroughCopy('./src/.well-known/security.txt');
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
   eleventyConfig.addPassthroughCopy('./src/img');

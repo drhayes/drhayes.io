@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:security@drhayes.io
+Expires: 2025-01-01T05:59:00.000Z
+Encryption: https://drhayes.io/key.txt
+Preferred-Languages: en
+Canonical: https://drhayes.io/.well-known/security.txt
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE6dUjOAJHZVolkgxkDvj0224F+X4FAmT/j70ACgkQDvj0224F
++X6poQ//YJpE95gqTSyR/vuHKc5+bGuTjG7h07CYOurFMVaAYOq2FdzOn9E9XT1+
+Crn+qkzrjnSZdSz+7Q0fS4/ceLO87dyaTPRnE2ciIZuQHPmXIqRoscUwvTiEH6yc
++xN8ebFP6tFV+33k4qs4QDy8Al9DEFiTEVaAmQu0U662aqe8vgByt8JMFptUeShV
+fKx6AMxGHY0qIgeG8sN7ugxJVD02S3mj3JRh/ty8q2dwIWfHBF7iRNDEsR68OFr9
+W9B2IaekJ+lS3++ACKZ6hb85ts//F2W+kYFgp3IkNNrgjk8Rat7G1dXuIyKMF2m/
+fpqoknbZINgQbkzIFmxzF3URKHkyFiHEoeWQtcslYqBZl9WT39AXUkuf+LlMS/T4
+pbgIEteaKvvjn/9TIitOMqdePYVooyRiaS1zgvgB26JiK5umK/oGBQ1g8YS2vDLL
+/m06Y3YtnE0ADhJBDu+wl9w3Ydtx97yG0XGXYhTKH4V3gc3+A5wmiBqQ68lVIN9U
+V5qLfCpk5QTfROsr6JGyc02uvZ/pG2bOtKqntSS+et1u9XBG9XgDkr2K0o8ecOUa
+EzNzS1TwIloXsLH4uLtP2VVbgAwg8pJetwfVbeV75tW8wNh+Jup4S1+No1umM870
+BIG0sfHehIaqUnuutCqJl3vWV94CquPpgeNyhTf2AHRQ50UOPpY=
+=PNYL
+-----END PGP SIGNATURE-----
