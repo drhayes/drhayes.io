@@ -67,6 +67,7 @@ None of the links here are meant to be affiliate links. If any end up being affi
 - Or maybe [Codeberg](https://codeberg.org/). Who knows.
 - I visit [crontab.guru](https://crontab.guru/) if I'm ever unsure of a crontab expression.
 - [RegExr](https://regexr.com/) helps me with complex regular expressions.
+- [Desmos](https://www.desmos.com/calculator) is my favorite graphing calculator.
 
 ## Odds and Ends
 
