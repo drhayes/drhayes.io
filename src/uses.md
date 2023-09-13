@@ -1,5 +1,5 @@
 ---
-title: Uses
+title: What I Use
 description: The stuff I use to get what I need to do done.
 date: 2023-09-13
 ---
@@ -20,6 +20,11 @@ None of the links here are meant to be affiliate links. If any end up being affi
   - Before that I used [Inconsolata](https://www.levien.com/type/myfonts/inconsolata.html). I might switch back, who knows.
 - [kitty](https://sw.kovidgoyal.net/kitty/) is my terminal of choice.
   - I'm starting to wonder if I should start using [tmux](https://github.com/tmux/tmux) instead, since so many of the kitty features I like are in tmux as well as some others I might find handy.
+- My shell of choice is [fish](https://fishshell.com/). I greatly enjoy the highlighting, the interactivity, and the sensible scripting.
+  - Most of my customizations are in [my drfish repo](https://github.com/drhayes/drfish).
+  - I _feel_ like [ghclone](https://github.com/drhayes/drfish/blob/70668defbb44b39495eea28dc4b31acc935bcb0c/functions/ghclone.fish) is my most useful function.
+  - I sure use the heck out of my `cd*` functions, though.
+  - Check out my incomplete attempt to make a [system setup script](https://github.com/drhayes/drfish/blob/70668defbb44b39495eea28dc4b31acc935bcb0c/functions/drenv-setup.fish)!
 
 ## Desktop
 
@@ -41,6 +46,7 @@ None of the links here are meant to be affiliate links. If any end up being affi
 
 ### Software
 
+- My SCM tool of choice is [git](https://git-scm.com/).
 - I'm using Linux, some kind of horrible hybrid of Pop!\_OS. At least, it started life as Pop!\_OS and then I grafted a bunch of stuff on it.
 - I'm using [i3](https://i3wm.org/) as my window manager.
   - It's really spooky how literally every problem I've ever had could be solved by [looking in the User's Guide first](https://i3wm.org/docs/userguide.html).
@@ -49,6 +55,7 @@ None of the links here are meant to be affiliate links. If any end up being affi
   - Espanso and kitty and Neovim don't always get along, especially with backslashes.
 - I'm running [Firefox](https://www.mozilla.org/en-US/firefox/new/) as my browser.
   - I'm investigating using [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/), though. Neat!
+- I block ads with [uBlock Origin](https://ublockorigin.com/) and [Privacy Badger](https://privacybadger.org/).
 
 ## Online Resources
 
@@ -56,3 +63,9 @@ None of the links here are meant to be affiliate links. If any end up being affi
 - [DevDocs](https://devdocs.io/) is basically always open in my browser.
   - [Here is my most recent DevDocs config](https://gist.github.com/drhayes/d43ab8be15629985c9ee17748fc852ab).
 - I very much love [pinboard.in](https://pinboard.in/u:drhayes) and use it to keep stuff in the ol' exocortex.
+- I'm contemplating using [sourcehut](https://sr.ht/) more for stuff. GitHub seems to be, inexplicably, turning itself into a social network?
+- Or maybe [Codeberg](https://codeberg.org/). Who knows.
+
+## Odds and Ends
+
+- I'm an avid user of the [asdf package manager](https://asdf-vm.com/). Every repo I touch tends to have a `.tool-versions` file at its root.
