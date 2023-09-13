@@ -7,7 +7,7 @@ date: 2023-09-13
 Inspired by [Wes Bos' /uses page](https://wesbos.com/uses) and [the whole host of other /uses pages out there](https://uses.tech/) I present: the things I use!
 
 {% aside "No affiliate links!" %}
-None of the links here are meant to be affiliate links. If any end up being affiliate links that is a mistake on my part and I'd love to hear about it.
+None of the links here are meant to be affiliate links. If any end up being affiliate links that is a mistake on my part and I'd love to [hear about it](mailto:hi@drhayes.io).
 {% endaside %}
 
 ## Editor and Terminal
@@ -65,6 +65,8 @@ None of the links here are meant to be affiliate links. If any end up being affi
 - I very much love [pinboard.in](https://pinboard.in/u:drhayes) and use it to keep stuff in the ol' exocortex.
 - I'm contemplating using [sourcehut](https://sr.ht/) more for stuff. GitHub seems to be, inexplicably, turning itself into a social network?
 - Or maybe [Codeberg](https://codeberg.org/). Who knows.
+- I visit [crontab.guru](https://crontab.guru/) if I'm ever unsure of a crontab expression.
+- [RegExr](https://regexr.com/) helps me with complex regular expressions.
 
 ## Odds and Ends
 
