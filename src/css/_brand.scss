@@ -143,8 +143,8 @@ aside {
 
 .webmentions {
   img {
-    width: var(--s4);
-    height: var(--s4);
+    max-width: var(--s4);
+    max-height: var(--s4);
     clip-path: circle(50%);
     shape-outside: circle(50%);
   }
