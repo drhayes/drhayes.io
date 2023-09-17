@@ -73,7 +73,7 @@ Here's a link to their documentation about global data files: <https://www.11ty.
 
 I'm using the `@11ty/eleventy-fetch` package so my builds don't yank on the webmention.io API too much during development; it caches responses. The `WEBMENTION_IO_TOKEN` is an environment variable that I have set in my local development so I can see webmentions in dev. It's also set as an environment variable in [Netlify](https://www.netlify.com/) when it builds my site. I received my own token after [signing in to Webmention.io](https://webmention.io/).
 
-So now all my templates have a `webmentions` variable available with data for the whole site. That's okay, but if I'm within the context of a single page I want to only show webmentions for only that page.
+So now all my templates have a `webmentions` variable available with data for the whole site. That's okay, but if I'm within the context of a single page I want to show webmentions for only that page.
 
 ### What is webmention.io sending us?
 
