@@ -41,7 +41,7 @@
     {% set account = post.attributedTo | getAccount %}
     {% if post and account %}
     <h2>↩️ In reply to...</h2>
-    <a href="{{ post.url }}" class="u-in-repy-to"></a>
+    <a href="{{ post.url }}" class="u-in-reply-to"></a>
     <article class="box stack u-comment h-cite reply">
       <div class="cluster" style="justify-content:space-between;">
         <div class="cluster e-author h-card" style="--space: var(--s-2);">
