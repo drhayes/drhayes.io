@@ -41,10 +41,19 @@ eleventyImport:
 
       <div class="stack h-feed">
         <h2 class="p-name">Recent Notes</h2>
-        <ol>
+        <ol class="stack list-style-type:none">
           {%- for note in collections.notes | dateSort | reverse | first -%}
           <li class="h-entry">
-            <a href="{{ note.url }}" class="u-url p-name">{{ note.url }}</a>
+            <time datetime="{{ note.date | datetime }}" class="dt-published">
+              <a href="{{ note.url }}" class="u-url">
+                {{note.date | dateformat }}
+              </a>
+            </time>
+            {% if note.data.page.excerpt %}
+            <p>{{ note.data.page.excerpt }}</p>
+            {% else %}
+            <p>{{ note.content | safe }}</p>
+            {% endif %}
           </li>
           {% endfor %}
         </ol>
