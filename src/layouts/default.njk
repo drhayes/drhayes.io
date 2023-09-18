@@ -8,8 +8,8 @@
 
   {% include 'toc.njk' %}
 
+  {%- if inReplyTo -%}<h2>I said...</h2>{%- endif -%}
   <article class="stack e-content">
-    {%- if inReplyTo -%}<h2>I said...</h2>{%- endif -%}
     {{ content | safe }}
   </article>
 
