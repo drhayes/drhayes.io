@@ -40,7 +40,7 @@
     {% set post = inReplyTo | getPost %}
     {% set account = post.attributedTo | getAccount %}
     <h2>In reply to...</h2>
-    <article class="box stack u-comment h-cite reply">
+    <article class="box stack u-comment u-in-repy-to h-cite reply">
       <div class="cluster" style="justify-content:space-between;">
         <div class="cluster e-author h-card" style="--space: var(--s-2);">
           <div>
@@ -53,7 +53,7 @@
           </div>
         </div>
         <small>
-          <a href="{{ post.url }}" rel="noopener noreferrer" class="u-in-reply-to">
+          <a href="{{ post.url }}" rel="noopener noreferrer" class="u-url">
             <time datetime="{{ post.published | datetime }}" class="dt-published">{{ post.published | dateformat }} at {{ post.published | timeformat }}</time>
           </a>
         </small>
