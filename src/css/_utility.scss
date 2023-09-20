@@ -27,22 +27,12 @@
 }
 
 .p-summary {
-  font-size: var(--s1);
   font-style: italic;
 }
 
 .post-metadata {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: first baseline;
-  gap: var(--s3);
   margin-block-start: var(--s-4);
-
-  & > * {
-    margin-block: 0;
-    flex-basis: 50%;
-  }
+  // color: var(--color-gray-50);
 }
 
 .tags {

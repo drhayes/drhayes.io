@@ -7,31 +7,15 @@
 
   <span class="hidden h-card p-author">{{ site.author.name }}</span>
 
-  {% if date | isValidIsoDate or updated | isValidIsoDate or tags %}
+  {% if date | isValidIsoDate or updated | isValidIsoDate %}
   <div class="post-metadata">
     {% if date or updated %}
-    <div>
       {% if date | isValidIsoDate %}
       <time datetime="{{ date | datetime }}" class="dt-published">{{ date | dateformat }}</time>{%- endif -%}
       {%- if updated | isValidIsoDate -%}
       {%- if date | isValidIsoDate and updated | isValidIsoDate -%}, {% endif %}
       <span>updated:&nbsp;<time datetime="{{ updated | datetime }}" class="dt-updated">{{ updated | dateformat }}</time></span>
       {% endif %}
-    </div>
-    {% endif %}
-    {% if tags %}
-    {% set tags = tags | onlyRealTags %}
-    <ul class="inline-list tags" style="--space:var(--s0);">
-      {% for tag in tags %}
-      <li>
-        {% if collections.writingByTag.get(tag).length > 1 %}
-        <a href="/tags/{{ tag | slugify }}" class="tag p-category" rel="category tag">{{ tag }}</a>
-        {% else %}
-        <span class="tag orphan-tag p-category" title="This tag is only in use here!">{{ tag }}</span>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
     {% endif %}
   </div>
   {% endif %}

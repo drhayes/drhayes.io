@@ -11,6 +11,20 @@
   {%- if inReplyTo -%}<h2>I said...</h2>{%- endif -%}
   <article class="stack e-content">
     {{ content | safe }}
+    {% if tags %}
+    {% set tags = tags | onlyRealTags %}
+    <ul class="inline-list tags" style="--space:var(--s0);">
+      {% for tag in tags %}
+      <li>
+        {% if collections.writingByTag.get(tag).length > 1 %}
+        <a href="/tags/{{ tag | slugify }}" class="tag p-category" rel="category tag">{{ tag }}</a>
+        {% else %}
+        <span class="tag orphan-tag p-category" title="This tag is only in use here!">{{ tag }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </article>
 
   {% if posse | length %}
