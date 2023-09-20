@@ -1,5 +1,13 @@
 @font-face {
   font-family: Inconsolata;
-  src: url('/fonts/inconsolata/Inconsolata-Regular.woff2') format('woff2');
+  src: local('Inconsolata'),
+    url('/fonts/inconsolata/Inconsolata-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inconsolata Bold';
+  src: local('Inconsolata Bold'),
+    url('/fonts/inconsolata/Inconsolata-Bold.woff2') format('woff2');
   font-display: swap;
 }
