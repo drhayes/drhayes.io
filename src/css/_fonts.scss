@@ -1,19 +1,5 @@
 @font-face {
-  font-family: 'Berkeley Mono';
-  src: url('/fonts/berkeley-mono/BerkeleyMono-Regular.woff') format('woff'),
-    url('/fonts/berkeley-mono/BerkeleyMono-Regular.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/inter/Inter-Regular.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter Bold';
-  src: url('/fonts/inter/Inter-Bold.woff2') format('woff2');
-  font-weight: bold;
+  font-family: Inconsolata;
+  src: url('/fonts/inconsolata/Inconsolata-Regular.woff2') format('woff2');
   font-display: swap;
 }

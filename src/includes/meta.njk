@@ -37,6 +37,10 @@
   <link rel="alternate" href="{{ global.baseUrl + '/feed.xml' | url }}" type="application/atom+xml" title="{{ site.name }} · all writing"/>
   <link rel="alternate" href="{{ global.baseUrl + '/feed.json' | url }}" type="application/json" title="{{ site.name }} · all writing"/>
 
+  <!-- fonts and styles -->
+  <link rel="preload" href="/fonts/inconsolata/Inconsolata-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
+
   <!-- misc -->
   <link rel="pgpkey" href="/key.txt">
   <meta name="theme-color" content="#ffffff">
@@ -50,5 +54,4 @@
   <link href="https://github.com/drhayes" rel="me">
   <link href="https://social.lol/@drhayes" rel="me">
   <link rel="canonical" href="{{ global.baseUrl }}{{ page.url }}">
-  <link rel="stylesheet" href="/css/site.css">
   <link rel="author" href="{{ global.baseUrl }}/humans.txt">
