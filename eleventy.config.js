@@ -3,14 +3,10 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginSass = require('eleventy-sass');
 const { ogImageGenerate } = require('./lib/events/ogImageGenerate');
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const markdownItAttrs = require('markdown-it-attrs');
-const markdownItFootnotes = require('markdown-it-footnote');
 const embeds = require('eleventy-plugin-embed-everything');
 const pluginTOC = require('eleventy-plugin-toc');
-const mdfigcaption = require('markdown-it-image-figures');
 const tagFilters = require('./lib/filters/tagFilters');
+const md = require('./lib/markdown');
 
 module.exports = (eleventyConfig) => {
   // Server options.
@@ -29,19 +25,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.on('eleventy.after', ogImageGenerate);
 
   // Set up markdown.
-  const md = markdownIt({
-    html: true,
-    linkify: true,
-    typographer: true,
-  })
-    .disable('code')
-    .use(mdfigcaption, { figcaption: true, lazy: true, async: true })
-    .use(markdownItAttrs)
-    .use(markdownItFootnotes)
-    .use(markdownItAnchor, {
-      permalink: markdownItAnchor.permalink.headerLink(),
-      level: 2,
-    });
   eleventyConfig.setLibrary('md', md);
 
   // Deep data merge!
