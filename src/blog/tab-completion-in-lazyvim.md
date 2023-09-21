@@ -5,6 +5,8 @@ date: 2023-09-21
 tags:
   - editors
   - neovim
+posse:
+  - https://social.lol/@drhayes/111105533411941120
 ---
 
 tl;dr: [Here is the section of my neovim config where I got nvim-cmp to complete on Tab instead of Enter](https://github.com/drhayes/neovim-config/blob/28c7586f2321bc80a16fb8186c10303e2415e8f9/lua/plugins/editor.lua#L52-L97).
