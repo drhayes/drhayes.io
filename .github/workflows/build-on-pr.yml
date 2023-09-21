@@ -19,4 +19,4 @@ jobs:
       - name: Build the site
         run: npm run build
         env:
-          WEBMENTION_IO_TOKEN: ${{ vars.WEBMENTION_IO_TOKEN }}
+          WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
