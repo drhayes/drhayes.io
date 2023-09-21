@@ -1,0 +1,29 @@
+{% extends './base.njk' %}
+
+{% block content %}
+{% include 'header.njk' %}
+<main class="center h-entry">
+  <h1>Quote</h1>
+  <article class="stack box e-content">
+    <blockquote class="p-quote">
+      {{ title }}
+      {% if source or sourceUrl %}
+      <p>
+        <cite class="h-cite">
+          {% if sourceUrl %}<a href="{{ sourceUrl }}" class="p-name u-url">{% endif %}
+          {% if sourceUrl and not source %}{{ sourceUrl }}{% endif %}
+          {% if source and sourceUrl %}{{ source }}{% endif %}
+          {% if sourceUrl %}</a>{% endif %}
+          {% if source and not sourceUrl %}
+          <span class="p-name">{{ source }}</span>
+          {% endif %}
+        </cite>
+      </p>
+      {% endif %}
+    </blockquote>
+    {% include 'tags.njk' %}
+  </article>
+  {% include 'webmentions.njk' %}
+</main>
+{% include 'footer.njk' %}
+{% endblock %}
