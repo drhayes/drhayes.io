@@ -107,6 +107,10 @@ aside {
   }
 }
 
+a:has(.game-card) {
+  text-decoration: none;
+}
+
 .game-card {
   display: grid;
   --outline-thickness: 0.04em;
@@ -126,9 +130,11 @@ aside {
     font-size: var(--s4);
     max-inline-size: calc(100% - 1rem);
     max-block-size: calc(100% - 1rem);
-    color: var(--color-black);
-    text-shadow: calc(var(--outline-thickness) * -1)
-        calc(var(--outline-thickness) * -1) var(--color-blue),
+    margin: 0;
+    color: var(--color-dark);
+    text-shadow:
+      calc(var(--outline-thickness) * -1) calc(var(--outline-thickness) * -1)
+        var(--color-blue),
       var(--outline-thickness) calc(var(--outline-thickness) * -1)
         var(--color-blue),
       var(--outline-thickness) var(--outline-thickness) var(--color-blue),

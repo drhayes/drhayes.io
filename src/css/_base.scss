@@ -182,7 +182,8 @@ aside {
     position: absolute;
     content: '<' var(--aside-text) '>';
     inset-block-start: -1.5em;
-    inset-inline-start: 1em;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
     font-size: var(--s-2);
     background-color: var(--aside-background-color);
     border: var(--border-thin) solid;
@@ -196,7 +197,8 @@ aside {
     position: absolute;
     content: '</' var(--aside-text) '>';
     inset-block-end: -1.5em;
-    inset-inline-end: 1em;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
     font-size: var(--s-2);
     background-color: var(--aside-background-color);
     border: var(--border-thin) solid;
