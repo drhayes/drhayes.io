@@ -1,0 +1,23 @@
+### Special workflow so dependabot has access to secrets.
+### https://github.com/dependabot/dependabot-core/issues/3253#issuecomment-852541544
+name: 'Dependabot Workflow'
+
+on: pull_request_target
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install the libraries
+        run: npm install
+
+      - name: Build the site
+        run: npm run build
+        env:
+          WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
