@@ -1,8 +1,8 @@
-name: "Build on PR"
+name: 'Build on PR'
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Install the libraries
-      run: npm install
+      - name: Install the libraries
+        run: npm install
 
-    - name: Build the site
-      run: npm run build
+      - name: Build the site
+        run: npm run build
+        env:
+          WEBMENTION_IO_TOKEN: ${{ vars.WEBMENTION_IO_TOKEN }}
