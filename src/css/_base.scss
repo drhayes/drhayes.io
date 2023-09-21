@@ -181,30 +181,30 @@ aside {
   &.box::before {
     position: absolute;
     content: '<' var(--aside-text) '>';
-    inset-block-start: -1.5em;
+    inset-block-start: 0;
     inset-inline-start: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
     font-size: var(--s-2);
     background-color: var(--aside-background-color);
     border: var(--border-thin) solid;
     border-color: var(--aside-border-color);
     border-radius: 0.5em;
-    padding: var(--s-5) var(--s-4);
+    padding: var(--space-3xs) var(--space-2xs);
     color: var(--aside-text-color);
   }
 
   &.box::after {
     position: absolute;
     content: '</' var(--aside-text) '>';
-    inset-block-end: -1.5em;
+    inset-block-end: 0;
     inset-inline-start: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(50%);
     font-size: var(--s-2);
     background-color: var(--aside-background-color);
     border: var(--border-thin) solid;
     border-color: var(--aside-border-color);
     border-radius: 0.5em;
-    padding: var(--s-5) var(--s-4);
+    padding: var(--space-3xs) var(--space-2xs);
     color: var(--aside-text-color);
   }
 
