@@ -125,6 +125,10 @@ a > code {
   color: var(--color-blue);
 }
 
+kbd {
+  font: var(--code-font);
+}
+
 pre,
 .stack pre {
   margin-block: var(--s2);

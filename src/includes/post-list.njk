@@ -1,6 +1,6 @@
 <ol class="list-style-type:none h-feed" style="padding-inline-start:0;">
   {%- for post in postList | sort -%}
-  <li class="cluster h-entry">
+  <li class="with-sidebar h-entry">
     <div>
       {%- if post.data.updated | isValidIsoDate %}
       <time datetime="{{ post.data.updated | datetime }}" class="dt-updated">{{ post.data.updated | dateformat }}</time>

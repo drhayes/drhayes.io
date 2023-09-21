@@ -126,6 +126,9 @@ module.exports = (eleventyConfig) => {
   );
   eleventyConfig.addCollection('aliases', require('./lib/collections/aliases'));
   eleventyConfig.addCollection('notes', require('./lib/collections/notes'));
+  eleventyConfig.addCollection('blog', (api) =>
+    api.getFilteredByGlob('src/blog/**/*.md')
+  );
 
   // Static stuff.
   eleventyConfig.addPassthroughCopy('./src/.well-known/security.txt');
