@@ -14,16 +14,7 @@
     {% include 'tags.njk' %}
   </article>
 
-  {% if posse | length %}
-  <article class="stack margin-block-start:s5">
-    <h2>Syndicated Elsewhere</h2>
-    <ul>
-    {% for thing in posse %}
-      <li><a href="{{ thing }}" class="u-syndication">{{ thing }}</a></li>
-    {% endfor %}
-    </ul>
-  </article>
-  {% endif %}
+  {% include 'posse.njk' %}
 
   {% include 'webmentions.njk' %}
 

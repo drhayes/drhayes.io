@@ -6,4 +6,6 @@ tags:
   - problem-solving
 source: Make It Never Come Back
 sourceUrl: https://www.codesimplicity.com/post/make-it-never-come-back/
+posse:
+  - https://social.lol/@drhayes/111103991806997929
 ---
