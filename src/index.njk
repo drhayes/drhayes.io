@@ -22,16 +22,16 @@ eleventyImport:
 
       <h2>My name is <a href="https://drhayes.io" class="p-name u-url u-uid" rel="me">David Hayes</a>.</h2>
 
-      <p>I get called <span class="heading-font font-size:s1 blue-gradient p-nickname">drhayes</span> a lot.</p>
+      <p>I get called <span class="heading-font font-size:s1 blue-gradient tight-kern p-nickname">drhayes</span> a lot.</p>
 
       <p>It's going to continue to be super plain around here for a bit while I straighten out my site.</p>
 
       <p><a href="mailto:hi@drhayes.io">hi@drhayes.io</a></p>
 
       <div class="stack h-feed">
-        <h2 class="p-name">Recent Writing</h2>
-        <ol>
-          {%- for post in collections.allTheWriting | dateSort | reverse | first -%}
+        <h2 class="p-name">Recent Blogs</h2>
+        <ol class="list-style-type:none">
+          {%- for post in collections.blog | dateSort | reverse | first -%}
           <li class="h-entry">
             <a href="{{ post.url }}" class="u-url p-name">{{ post.data.title }}</a>
           </li>
