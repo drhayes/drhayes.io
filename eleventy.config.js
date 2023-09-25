@@ -7,6 +7,7 @@ const embeds = require('eleventy-plugin-embed-everything');
 const pluginTOC = require('eleventy-plugin-toc');
 const tagFilters = require('./lib/filters/tagFilters');
 const md = require('./lib/markdown');
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 
 module.exports = (eleventyConfig) => {
   // Server options.
@@ -44,6 +45,7 @@ module.exports = (eleventyConfig) => {
     wrapper: '',
     ul: true,
   });
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // Filters.
   eleventyConfig.addFilter('md', (value, o = {}) => {

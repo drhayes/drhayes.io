@@ -2,6 +2,9 @@
 title: Now
 description: What am I doing right now.
 updated: 2023-08-25
+eleventyNavigation:
+  key: Now
+  order: 2
 ---
 
 {% omgStatus latestStatus %}

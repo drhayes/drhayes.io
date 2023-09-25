@@ -3,6 +3,9 @@ title: Hi. I'm David. 👋🏽
 description: What I'm all about, yo.
 priority: 1.0
 updated: 2023-08-11
+eleventyNavigation:
+  key: About
+  order: 5
 ---
 
 <div class="about-logo">

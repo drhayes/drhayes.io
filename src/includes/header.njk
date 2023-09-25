@@ -1,12 +1,10 @@
 <nav class="center" aria-labelledby="site-link">
+  {% set navPages = collections.all | eleventyNavigation %}
   <ul>
+    {%- for navPage in navPages -%}
     <li>
-      <a href="/" id="site-link">drhayes.io</a>
+      <a href="{{ navPage.url }}">{{ navPage.title }}</a>
     </li>
-    {% for item in menu %}
-      <li>
-        <a href="{{ item.url }}"{%- if page.url == item.url %} aria-current="page"{%- endif -%}>{{ item.name }}</a>
-      </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 </nav>
