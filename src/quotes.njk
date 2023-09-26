@@ -1,0 +1,19 @@
+---
+title: Quotes
+eleventyImport:
+  collections:
+    - quotes
+---
+
+<p>Some sayings I've found meaningful.</p>
+
+<hr>
+
+<ul class="stack list-style-type:none" style="padding-inline-start:0">
+  {% for quote in collections.quotes %}
+    <li>
+      <a href="{{ quote.url }}">{{ quote.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
