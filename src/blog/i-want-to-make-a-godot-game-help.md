@@ -1,5 +1,5 @@
 ---
-title: I watched this sweet tutorial on Godot and now I want to make a Godot game halp
+title: I watched this sweet tutorial on Godot and now I want to make a Godot game -- halp!
 date: 2023-09-30
 description: I never thought a visual editor would work for me but this tutorial made me want to try again.
 tags:
