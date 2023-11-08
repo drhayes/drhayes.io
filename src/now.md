@@ -1,7 +1,7 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2023-08-25
+updated: 2023-11-08
 eleventyNavigation:
   key: Now
   order: 2
@@ -11,17 +11,7 @@ eleventyNavigation:
 
 ## Overall
 
-Suffering in the Texas heat wave. Elevating my understanding of design and CSS.
-
-## 📢 Socials
-
-I can be found at [@drhayes@social.lol](https://social.lol/@drhayes).
-
-You can also find me on [Bookwyrm](https://bookwyrm.social/user/drhayes). I'm trying to be good about what I'm logging.
-
-## ✏️ Text
-
-Thinking about relaxing and writing more for the site rather than getting caught up making things perfect.
+It's looking like it's going to be a beautiful Texas fall! Getting chilly and windy, with pleasant evenings.
 
 ## 🎲 Role-playing Games
 
@@ -31,22 +21,20 @@ Reading up on Apocalypse Keys and Vaesen.
 
 ## 🖥️ Programming
 
-These days most of the programming I'm doing is either related to this site or my game.
+When I wasn't looking the open-source game engine [Godot](https://godotengine.org/) got really cool! So I'm messing around with that in my spare time.
+
+An enthusiastic member of the [anti-JavaScript JavaScript club](https://anti-javascript-javascript.club/).
 
 ## 🎶 Music
 
-ON REPEAT: "Temple of Love (1992)" by Sisters of Mercy
-
-Lately.
-
-- On a Makeup and Vanity Set kick.
+ON REPEAT: "Headlights" by Ashbury Heights.
 
 Always.
 
 - [Carpenter Brut][carpenterbrut]
 - [Makeup and Vanity Set][mavs]
 - [ACTORS - It Will Come To You][actors]
-- [KANGA - Eternal Daughter and Kanga][kanga] (but, also, basically everything)
+- [KANGA - Under Glass][kanga] (but, also, basically everything)
 
 ## What's this again?
 
