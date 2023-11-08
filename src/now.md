@@ -35,6 +35,11 @@ Always.
 - [Makeup and Vanity Set][mavs]
 - [ACTORS - It Will Come To You][actors]
 - [KANGA - Under Glass][kanga] (but, also, basically everything)
+- [Hunter as a Horse - The Lost Tapes EP](https://hunterasahorse.bandcamp.com/album/walk-with-fire) - So witchy! So good!
+
+## 🤬 Favorite Swear
+
+[Mother puss bucket!](https://www.youtube.com/watch?v=In4aDZf-_JI)
 
 ## What's this again?
 
