@@ -1,7 +1,7 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2023-11-08
+updated: 2023-11-27
 eleventyNavigation:
   key: Now
   order: 2
@@ -11,7 +11,7 @@ eleventyNavigation:
 
 ## Overall
 
-It's looking like it's going to be a beautiful Texas fall! Getting chilly and windy, with pleasant evenings.
+❄️ It's getting super chilly in Texas now! Dipping around freezing some nights.
 
 ## 🎲 Role-playing Games
 
@@ -19,11 +19,13 @@ Back for what is our final season of Masks with these characters! I haz a sad.
 
 Reading up on Apocalypse Keys and Vaesen.
 
+Playing around with [Homebrew World](https://spoutinglore.blogspot.com/2018/07/homebrew-world.html), thinking about running a game for my son.
+
 ## 🖥️ Programming
 
-When I wasn't looking the open-source game engine [Godot](https://godotengine.org/) got really cool! So I'm messing around with that in my spare time.
+When I wasn't looking the open-source game engine [Godot](https://godotengine.org/) got really cool! So I'm messing around with that in my spare time. I dig the whole/part component model, the language is just fine for what I'm doing, and I'm mostly only interested in 2d stuff anyway. Thinking about moving away from pixel art, at least a little bit, and Godot seems like a fine way to do it.
 
-An enthusiastic member of the [anti-JavaScript JavaScript club](https://anti-javascript-javascript.club/).
+An enthusiastic member of the [anti-JavaScript JavaScript club](https://anti-javascript-javascript.club/). My [anti-JavaScript JavaScript shirt](https://www.bonfire.com/anti-javascript-javascript-club/) got here and it's great!
 
 ## 🎶 Music
 
