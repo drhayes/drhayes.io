@@ -41,7 +41,10 @@ Always.
 
 ## 🤬 Favorite Swear
 
-[Mother puss bucket!](https://www.youtube.com/watch?v=In4aDZf-_JI)
+Mother puss bucket!
+
+https://www.youtube.com/watch?v=In4aDZf-_JI
+
 
 ## What's this again?
 
