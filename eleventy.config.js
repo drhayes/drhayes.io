@@ -140,6 +140,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('./src/keybase.txt');
   eleventyConfig.addPassthroughCopy('./src/twtxt.txt');
   eleventyConfig.addPassthroughCopy('./fonts/**/*');
+  eleventyConfig.addPassthroughCopy('./src/opmls/**/*');
 
   // Front matter.
   eleventyConfig.setFrontMatterParsingOptions({
