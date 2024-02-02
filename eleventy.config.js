@@ -130,6 +130,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection('notes', require('./lib/collections/notes'));
   eleventyConfig.addCollection('blog', require('./lib/collections/blog'));
   eleventyConfig.addCollection('quotes', require('./lib/collections/quotes'));
+  eleventyConfig.addCollection('books', require('./lib/collections/books'));
 
   // Static stuff.
   eleventyConfig.addPassthroughCopy('./src/.well-known/security.txt');

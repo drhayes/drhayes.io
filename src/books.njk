@@ -1,0 +1,15 @@
+---
+title: Books
+eleventyImport:
+  collections:
+    - books
+---
+
+<ul class="stack list-style-type:none" style="padding-inline-start:0">
+  {% for book in collections.books %}
+    <li>
+      {{ book.data.title }}
+      {{ book.data.authors }}
+    </li>
+  {% endfor %}
+</ul>

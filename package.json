@@ -2,8 +2,10 @@
   "name": "drhayes.io",
   "version": "0.1.0",
   "scripts": {
+    "add-book": "node scripts/add-book.js",
     "build": "eleventy",
-    "start": "BASE_URL=http://localhost:3000 NODE_ENV=development ELEVENTY_ENV=development eleventy --serve"
+    "start": "BASE_URL=http://localhost:3000 NODE_ENV=development ELEVENTY_ENV=development eleventy --serve",
+    "test": "mocha --recursive"
   },
   "dependencies": {
     "@11ty/eleventy": "2.0.1",
@@ -12,6 +14,7 @@
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
+    "@sindresorhus/slugify": "2.2.1",
     "date-fns": "3.3.1",
     "eleventy-plugin-embed-everything": "1.18.2",
     "eleventy-plugin-reading-time": "0.0.1",
@@ -25,6 +28,11 @@
     "markdown-it-attrs": "4.1.6",
     "markdown-it-footnote": "3.0.3",
     "markdown-it-image-figures": "2.1.1",
+    "node-isbn": "1.6.1",
     "sanitize-html": "2.11.0"
+  },
+  "devDependencies": {
+    "mocha": "10.2.0",
+    "sinon": "17.0.1"
   }
 }
