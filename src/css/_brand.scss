@@ -10,11 +10,9 @@
   --draft-border-color: hsl(210 90% 80%);
   --omg-status-label-background-color: hsl(210 90% 90%);
   --omg-status-border-color: hsl(210 90% 75%);
-  --blue-gradient: linear-gradient(
-    100deg,
-    hsl(240, 70%, 50%),
-    hsl(200, 100%, 50%)
-  );
+  --blue-gradient: linear-gradient(100deg,
+      hsl(240, 70%, 50%),
+      hsl(200, 100%, 50%));
 }
 
 .draft {
@@ -131,15 +129,12 @@ a:has(.game-card) {
     max-inline-size: calc(100% - 1rem);
     max-block-size: calc(100% - 1rem);
     margin: 0;
-    color: var(--color-dark);
+    color: var(--color-lightish);
     text-shadow:
-      calc(var(--outline-thickness) * -1) calc(var(--outline-thickness) * -1)
-        var(--color-blue),
-      var(--outline-thickness) calc(var(--outline-thickness) * -1)
-        var(--color-blue),
+      calc(var(--outline-thickness) * -1) calc(var(--outline-thickness) * -1) var(--color-blue),
+      var(--outline-thickness) calc(var(--outline-thickness) * -1) var(--color-blue),
       var(--outline-thickness) var(--outline-thickness) var(--color-blue),
-      calc(var(--outline-thickness) * -1) var(--outline-thickness)
-        var(--color-blue);
+      calc(var(--outline-thickness) * -1) var(--outline-thickness) var(--color-blue);
   }
 }
 
