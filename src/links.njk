@@ -1,0 +1,29 @@
+---
+title: Links
+description: Links to pages that I find interesting.
+layout: base.njk
+aliases:
+  - /links
+eleventyNavigation:
+  key: Links
+  order: 5
+---
+
+{% include "header.njk" %}
+
+<main class="center stack h-entry">
+  {% include "title-element.njk" %}
+
+  <section class="stack">
+
+    {% set postList = collections.links | reverse %}
+    {% include "post-list.njk" %}
+
+  </section>
+
+  {% include 'webmentions.njk' %}
+
+</main>
+
+{% include "footer.njk" %}
+
