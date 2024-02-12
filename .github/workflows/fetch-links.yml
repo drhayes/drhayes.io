@@ -1,0 +1,36 @@
+name: Fetch links!
+on:
+  schedule:
+    - cron: "36 1 */1 * *"
+
+  workflow_dispatch:
+
+jobs:
+  fetchem:
+    name: Fetch those links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.2.0"
+
+      - name: Install the libraries
+        run: npm install
+
+      - name: Run the get-links script
+        run: npm run get-links
+
+      - name: Update repo
+        run: |
+          git config user.email 'actions@users.noreply.github.com'
+          git config user.name 'Links auto-updater'
+          git config push.default simple
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "Adding some links: ${timestamp}" || exit 0
+          git push
