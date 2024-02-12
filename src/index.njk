@@ -63,6 +63,22 @@ eleventyNavigation:
         </ol>
       </div>
 
+      <div class="stack h-feed">
+        <h2 class="p-name">Recent Links</h2>
+        <ol class="stack list-style-type:none">
+          {%- for link in collections.links | dateSort | reverse | first -%}
+          <li class="h-entry">
+            <a href="{{ link.url }}" class="u-url p-name">{{ link.data.title }}</a>
+            {% if link.data.page.excerpt %}
+            <p>{{ link.data.page.excerpt }}</p>
+            {% else %}
+            <p>{{ link.content | safe }}</p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+
       <h2>Me Elsewhere</h2>
       <ul>
         <li>
