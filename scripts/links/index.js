@@ -12,10 +12,10 @@ function createPinboard(pinboardApiToken) {
   return pinboard;
 }
 
-async function writeLinks(pinboardLinks, fsPromises) {
+async function writeLinks(linksDir, pinboardLinks, fsPromises) {
   const processedLinks = pinboardLinks.map(processPinboardLink);
   for (const link of processedLinks) {
-    await maybeWriteLinkFile('content/links', link, fsPromises);
+    await maybeWriteLinkFile(linksDir, link, fsPromises);
   }
 }
 

@@ -6,6 +6,7 @@ const {
   writeLinks,
 } = require('./links');
 const fsPromises = require('fs').promises;
+const path = require('path');
 
 const pinboardApiToken = process.env.PINBOARD_API_TOKEN;
 
@@ -16,9 +17,10 @@ if (!pinboardApiToken) {
 
 async function main() {
   console.log('Getting links...');
+  const linksDir = path.join(__dirname, '..', 'src', 'links');
   const pinboard = createPinboard(pinboardApiToken);
-  const recentPinboardLinks = await getLastSevenDays(pinboard);
-  await writeLinks(recentPinboardLinks, fsPromises);
+  const recentPinboardLinks = await getLastSevenDays(pinboard, new Date());
+  await writeLinks(linksDir, recentPinboardLinks, fsPromises);
   console.log('Done!');
 }
 

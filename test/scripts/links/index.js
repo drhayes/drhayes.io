@@ -35,7 +35,7 @@ describe('Links', () => {
           tags: 'javascript react'
         },
       ];
-      await writeLinks(processedLinks, mockFsPromises);
+      await writeLinks('/', processedLinks, mockFsPromises);
       sinon.assert.calledOnce(mockFsPromises.mkdir);
       sinon.assert.calledOnce(mockFsPromises.writeFile);
     });
