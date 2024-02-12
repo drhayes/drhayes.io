@@ -1,5 +1,7 @@
 const Pinboard = require('node-pinboard').default;
 const util = require('util');
+const slugify = require('@sindresorhus/slugify');
+const dateFns = require('date-fns');
 
 function createPinboard(pinboardApiToken) {
   const pinboard = new Pinboard(pinboardApiToken);
@@ -17,8 +19,10 @@ async function getLinks(pinboardApiToken) {
 function processPinboardLink(pinboardLink) {
   const date = new Date(pinboardLink.time);
   return {
+    date: dateFns.format(date, 'yyyy-MM-dd'),
     month: date.getMonth() + 1,
     note: pinboardLink.extended,
+    slug: slugify(pinboardLink.description),
     tags: pinboardLink.tags.split(' '),
     title: pinboardLink.description,
     url: pinboardLink.href,

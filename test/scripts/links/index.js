@@ -106,6 +106,7 @@ describe('Links', () => {
 
     it('parses the date', () => {
       const result = processPinboardLink(testLink);
+      assert.equal(result.date, '2024-02-09');
       assert.equal(result.year, 2024);
       assert.equal(result.month, 2);
     });
@@ -124,6 +125,11 @@ describe('Links', () => {
       const result = processPinboardLink(testLink);
       assert.equal(result.title, testLink.description);
       assert.equal(result.note, testLink.extended);
+    });
+
+    it('generates a slug', () => {
+      const result = processPinboardLink(testLink);
+      assert.equal(result.slug, 'it-feels-like-react-is-getting-a-bit-of-a-kicking-recently-piccalilli');
     });
   });
 });
