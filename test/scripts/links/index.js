@@ -1,6 +1,7 @@
 const {
   getLastSevenDays,
-  getLinks,
+  // getLinks,
+  processPinboardLink,
 } = require('../../../scripts/links');
 const sinon = require('sinon');
 const assert = require('assert');
@@ -12,8 +13,8 @@ describe('Links', () => {
     sandbox.restore();
   });
 
-  describe('getLinks', () => {
-  });
+  // describe('getLinks', () => {
+  // });
 
   describe('getLastSevenDays', () => {
     let mockResponse;
@@ -87,6 +88,42 @@ describe('Links', () => {
           throw e;
         }
       }
+    });
+  });
+
+  describe('processPinboardLink', ()  => {
+    const testLink = {
+      href: 'https://piccalil.li/blog/react-is-getting-a-bit-of-a-kicking-recently/',
+      description: 'It feels like React is getting a bit of a kicking recently - Piccalilli',
+      extended: 'I do feel like React is overused and shouldn\'t be the first tool people reach for in the toolbox, but this post is rather more nuanced than some of the others that I\'ve seen making the rounds.',
+      meta: '870efbdfb4f9d3276bc8eea7d5ccaa5b',
+      hash: '86822d81166b877beb41a24d1400c966',
+      time: '2024-02-09T17:41:46Z',
+      shared: 'yes',
+      toread: 'no',
+      tags: 'javascript react'
+    };
+
+    it('parses the date', () => {
+      const result = processPinboardLink(testLink);
+      assert.equal(result.year, 2024);
+      assert.equal(result.month, 2);
+    });
+
+    it('changes the tags into an array', () => {
+      const result = processPinboardLink(testLink);
+      assert.deepStrictEqual(result.tags, ['javascript', 'react']);
+    });
+
+    it('changes the href into url', () => {
+      const result = processPinboardLink(testLink);
+      assert.deepStrictEqual(result.url, testLink.href);
+    });
+
+    it('changes the description to title and the extended to note', () => {
+      const result = processPinboardLink(testLink);
+      assert.equal(result.title, testLink.description);
+      assert.equal(result.note, testLink.extended);
     });
   });
 });

@@ -14,6 +14,18 @@ async function getLinks(pinboardApiToken) {
   console.log(recentThings);
 }
 
+function processPinboardLink(pinboardLink) {
+  const date = new Date(pinboardLink.time);
+  return {
+    month: date.getMonth() + 1,
+    note: pinboardLink.extended,
+    tags: pinboardLink.tags.split(' '),
+    title: pinboardLink.description,
+    url: pinboardLink.href,
+    year: date.getFullYear(),
+  };
+}
+
 async function getLastSevenDays(pinboard, today) {
   const sevenDaysAgo = new Date(today);
   sevenDaysAgo.setDate(today.getDate() - 7);
@@ -31,4 +43,5 @@ async function getLastSevenDays(pinboard, today) {
 module.exports = {
   getLastSevenDays,
   getLinks,
+  processPinboardLink,
 };
