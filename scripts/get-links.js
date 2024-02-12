@@ -1,6 +1,11 @@
 #! /usr/bin/env node
 
-const { getLinks } = require('./links');
+const {
+  createPinboard,
+  getLastSevenDays,
+  writeLinks,
+} = require('./links');
+const fsPromises = require('fs').promises;
 
 const pinboardApiToken = process.env.PINBOARD_API_TOKEN;
 
@@ -11,7 +16,9 @@ if (!pinboardApiToken) {
 
 async function main() {
   console.log('Getting links...');
-  await getLinks(pinboardApiToken);
+  const pinboard = createPinboard(pinboardApiToken);
+  const recentPinboardLinks = await getLastSevenDays(pinboard);
+  await writeLinks(recentPinboardLinks, fsPromises);
   console.log('Done!');
 }
 
