@@ -221,7 +221,7 @@ describe('Links', () => {
       const post = createLinkPost(processedLink);
       assert.equal(post,
 `---
-title: "Some Title"
+title: "🔗 Some Title"
 description: "Some description would be nice but is optional"
 date: 2024-02-09
 tags:
@@ -238,7 +238,7 @@ Some extended text that appears as a note field in the object.`);
       const post = createLinkPost(processedLink);
       assert.equal(post,
 `---
-title: "Some Title"
+title: "🔗 Some Title"
 date: 2024-02-09
 tags:
   - tag1

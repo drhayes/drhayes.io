@@ -1,5 +1,5 @@
 ---
-title: "(Almost) Every infrastructure decision I endorse or regret after 4 years running infrastructure at a startup · Jack's home on the web"
+title: "🔗 (Almost) Every infrastructure decision I endorse or regret after 4 years running infrastructure at a startup · Jack's home on the web"
 date: 2024-02-12
 tags:
   - aws

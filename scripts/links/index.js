@@ -33,7 +33,7 @@ function processPinboardLink(pinboardLink) {
 }
 
 function createLinkPost(processedLink) {
-  const post = ['---', `title: "${processedLink.title}"`];
+  const post = ['---', `title: "🔗 ${processedLink.title}"`];
   if (processedLink.description) {
     post.push(`description: "${processedLink.description}"`);
   }

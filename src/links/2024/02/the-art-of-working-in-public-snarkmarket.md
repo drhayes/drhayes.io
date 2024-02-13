@@ -1,5 +1,5 @@
 ---
-title: "The art of working in public / Snarkmarket"
+title: "🔗 The art of working in public / Snarkmarket"
 date: 2024-02-12
 tags:
   - writing

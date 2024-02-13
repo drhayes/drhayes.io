@@ -68,7 +68,7 @@ eleventyNavigation:
         <ol class="stack list-style-type:none">
           {%- for link in collections.links | dateSort | reverse | first -%}
           <li class="h-entry">
-            <a href="{{ link.url }}" class="u-url p-name">🔗 {{ link.data.title }}</a>
+            <a href="{{ link.url }}" class="u-url p-name">{{ link.data.title }}</a>
           </li>
           {% endfor %}
         </ol>
