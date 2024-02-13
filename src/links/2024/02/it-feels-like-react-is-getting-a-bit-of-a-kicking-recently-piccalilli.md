@@ -1,6 +1,9 @@
 ---
 title: "It feels like React is getting a bit of a kicking recently - Piccalilli"
 date: 2024-02-09
+tags:
+  - javascript
+  - react
 url: https://piccalil.li/blog/react-is-getting-a-bit-of-a-kicking-recently/
 ---
 
