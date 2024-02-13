@@ -34,17 +34,19 @@ function processPinboardLink(pinboardLink) {
 }
 
 function createLinkPost(processedLink) {
-  let optionalDescription = '';
+  const post = ['---', `title: "${processedLink.title}"`];
   if (processedLink.description) {
-    optionalDescription = `description: "${processedLink.description}"\n`;
+    post.push(`description: "${processedLink.description}"`);
   }
-  return stripIndents`---
-    title: "${processedLink.title}"
-    ${optionalDescription}date: ${processedLink.date}
-    url: ${processedLink.url}
-    ---
-
-    ${processedLink.note}`;
+  post.push(`date: ${processedLink.date}`);
+  if (processedLink.tags) {
+    post.push('tags:');
+    for (const tag of processedLink.tags) {
+      post.push(`  - ${tag}`);
+    }
+  }
+  post.push(`url: ${processedLink.url}`, '---', '', processedLink.note);
+  return post.join('\n');
 }
 
 function formatLinkDir(baseDir, processedLink) {

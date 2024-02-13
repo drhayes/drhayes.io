@@ -224,6 +224,9 @@ describe('Links', () => {
 title: "Some Title"
 description: "Some description would be nice but is optional"
 date: 2024-02-09
+tags:
+  - tag1
+  - tag2
 url: https://drhayes.io/test/thing
 ---
 
@@ -237,6 +240,9 @@ Some extended text that appears as a note field in the object.`);
 `---
 title: "Some Title"
 date: 2024-02-09
+tags:
+  - tag1
+  - tag2
 url: https://drhayes.io/test/thing
 ---
 
