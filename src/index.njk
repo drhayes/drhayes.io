@@ -33,7 +33,9 @@ eleventyNavigation:
       <p><a href="mailto:hi@drhayes.io">hi@drhayes.io</a></p>
 
       <div class="stack h-feed">
-        <h2 class="p-name">Recent Blogs</h2>
+        <h2 class="p-name">
+          <a href="/writing">Recent Blogs</a>
+        </h2>
         <ol class="list-style-type:none">
           {%- for post in collections.blog | dateSort | reverse | first -%}
           <li class="h-entry">
@@ -64,7 +66,9 @@ eleventyNavigation:
       </div>
 
       <div class="stack h-feed">
-        <h2 class="p-name">Recent Links</h2>
+        <h2 class="p-name">
+          <a href="/links">Recent Links</a>
+        </h2>
         <ol class="stack list-style-type:none">
           {%- for link in collections.links | dateSort | reverse | first -%}
           <li class="h-entry">
