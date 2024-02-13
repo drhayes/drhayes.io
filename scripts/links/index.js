@@ -2,7 +2,6 @@ const Pinboard = require('node-pinboard').default;
 const util = require('util');
 const slugify = require('@sindresorhus/slugify');
 const dateFns = require('date-fns');
-const { stripIndents } = require('common-tags');
 const path = require('path');
 
 function createPinboard(pinboardApiToken) {
