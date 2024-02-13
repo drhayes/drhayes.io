@@ -1,4 +1,7 @@
 <header class="stack">
+  {% if url %}
+    {% set title = '🔗 ' ~ title %}
+  {% endif %}
   {% if title %}
   <h1 class="p-name p-bridgy-mastodon-content">
     {{ title }}
