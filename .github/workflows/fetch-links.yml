@@ -10,6 +10,9 @@ jobs:
     name: Fetch those links
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,11 +31,4 @@ jobs:
         run: npm run get-links
 
       - name: Update repo
-        run: |
-          git config user.email 'actions@users.noreply.github.com'
-          git config user.name 'Links auto-updater'
-          git config push.default simple
-          git add -A
-          timestamp=$(date -u)
-          git commit -m "Adding some links: ${timestamp}" || exit 0
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
