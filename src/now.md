@@ -1,7 +1,7 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2023-11-27
+updated: 2024-02-15
 eleventyNavigation:
   key: Now
   order: 2
@@ -11,21 +11,15 @@ eleventyNavigation:
 
 ## Overall
 
-❄️ It's getting super chilly in Texas now! Dipping around freezing some nights.
+Texas in February is a weird month. I bet we've got one last freeze in us coming up, which I'm not looking forward to given how [previous ice storms](https://www.statesman.com/story/news/2022/01/04/246-texans-died-february-freeze-and-power-loss-officials-say/9080688002/) have gone for us.
 
 ## 🎲 Role-playing Games
 
-Back for what is our final season of Masks with these characters! I haz a sad.
-
-Reading up on Apocalypse Keys and Vaesen.
-
-Playing around with [Homebrew World](https://spoutinglore.blogspot.com/2018/07/homebrew-world.html), thinking about running a game for my son.
+Still Mask-ing it up. Still thinking about Vaesen and, possibly, running [Pasion de las Pasiones](https://magpiegames.com/pages/pasion).
 
 ## 🖥️ Programming
 
-When I wasn't looking the open-source game engine [Godot](https://godotengine.org/) got really cool! So I'm messing around with that in my spare time. I dig the whole/part component model, the language is just fine for what I'm doing, and I'm mostly only interested in 2d stuff anyway. Thinking about moving away from pixel art, at least a little bit, and Godot seems like a fine way to do it.
-
-An enthusiastic member of the [anti-JavaScript JavaScript club](https://anti-javascript-javascript.club/). My [anti-JavaScript JavaScript shirt](https://www.bonfire.com/anti-javascript-javascript-club/) got here and it's great!
+Still an enthusiastic member of the [anti-JavaScript JavaScript club](https://anti-javascript-javascript.club/). My [anti-JavaScript JavaScript shirt](https://www.bonfire.com/anti-javascript-javascript-club/) got here and it's great!
 
 ## 🎶 Music
 
@@ -38,13 +32,6 @@ Always.
 - [ACTORS - It Will Come To You][actors]
 - [KANGA - Under Glass][kanga] (but, also, basically everything)
 - [Hunter as a Horse - The Lost Tapes EP](https://hunterasahorse.bandcamp.com/album/walk-with-fire) - So witchy! So good!
-
-## 🤬 Favorite Swear
-
-Mother puss bucket!
-
-https://www.youtube.com/watch?v=In4aDZf-_JI
-
 
 ## What's this again?
 

@@ -5,7 +5,7 @@ priority: 1.0
 updated: 2023-08-11
 eleventyNavigation:
   key: About
-  order: 6
+  order: 10
 ---
 
 <div class="about-logo">
