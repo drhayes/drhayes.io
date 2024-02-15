@@ -1,4 +1,6 @@
-{
+const isDev = require('./isDev');
+
+const siteData = {
   "name": "drhayes.io",
   "subtitle": "The personal site of David Hayes.",
   "host": "https://drhayes.io",
@@ -21,4 +23,10 @@
     "redditbot",
     "yandex"
   ]
+};
+
+if (isDev) {
+  siteData.host = "http://localhost:3000";
 }
+
+module.exports = siteData;

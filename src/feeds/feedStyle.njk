@@ -31,10 +31,7 @@ eleventyExcludeFromCollections: true
         <header class="stack">
           <h1><span class="blue-gradient"><xsl:value-of select="/atom:feed/atom:title"/></span> feed</h1>
           <p>
-            <a>
-              <xsl:attribute name="href"><xsl:value-of select="/atom:feed/atom:link/@href" /></xsl:attribute>
-              Visit site 👉🏾
-            </a>
+            <a href="{{ site.host }}">Visit site 👉</a>
           </p>
           <p>
             Because why shouldn't my atom feed look nice?

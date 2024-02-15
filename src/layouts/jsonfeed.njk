@@ -1,0 +1,44 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "{{ site.name }}",
+  "home_page_url": "{{ site.host }}",
+  "authors": [
+    {
+      "name": "{{ site.author.name }}",
+      "url": "{{ site.author.link }}",
+      "avatar": "{{ site.author.avatar }}"
+    }
+  ],
+  "language": "en-US",
+  "feed_url": "{{ permalink | absoluteUrl(global.baseUrl) }}",
+  "items": [
+  {% for post in collections[feed] %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(global.baseUrl) -%}
+  {% if not post.data.unlisted -%}
+    {
+      "id": "{{ absolutePostUrl }}",
+      {% if post.page.excerpt -%}
+      "content_text": "{{ post.page.excerpt | trim }}",
+      {%- elif post.data.description -%}
+      "content_text": "{{ post.data.description | trim }}",
+      {%- endif %}
+      "url": "{{ absolutePostUrl }}",
+      {%- if post.data.tags | length %}
+      "tags": [
+      {%- for tag in post.data.tags %}
+      "{{ tag }}"
+      {%- if not(loop.last) -%}, {%- endif -%}
+      {%- endfor %}
+      ],
+      {%- endif %}
+      {%- if post.data.updated %}
+      "date_modified": "{{ post.data.updated | dateToRfc3339 }}",
+      {% endif -%}
+      "date_published": "{{ post.date | dateToRfc3339 }}"
+    }
+    {%- if not(loop.last) -%}, {%- endif -%}
+  {% endif %}
+  {% endfor %}
+  ]
+}
+
