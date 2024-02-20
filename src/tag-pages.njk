@@ -8,8 +8,7 @@
     before: function(paginationData, fullData) {
       return paginationData.filter(tag => {
         return tag !== 'all' &&
-          this.isRealTag(tag) &&
-          fullData.collections[tag].length > 1;
+          this.isRealTag(tag);
       });
     },
     addAllPagesToCollections: false
