@@ -1,0 +1,35 @@
+name: Maybe send webmentions
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sendem:
+    name: Maybe send webmentions
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.2.0"
+
+      - name: Install the libraries
+        run: npm install
+
+      - name: Build the site
+        run: npm run build
+        env:
+          WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
+
+      - name: Update repo
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Creating link posts
