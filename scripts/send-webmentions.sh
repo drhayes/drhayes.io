@@ -33,4 +33,4 @@ fi
 # Update the file with the latest commit hash
 echo $LATEST_COMMIT > ./last_webmentions_commit
 
-npm send-webmentions
+npm run send-webmentions
