@@ -12,7 +12,7 @@
   "language": "en-US",
   "feed_url": "{{ permalink | absoluteUrl(global.baseUrl) }}",
   "items": [
-  {% for post in collections[feed] %}
+  {% for post in collections[feed] | dateSort | reverse %}
   {%- set absolutePostUrl = post.url | absoluteUrl(global.baseUrl) -%}
   {% if not post.data.unlisted -%}
     {

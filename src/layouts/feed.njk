@@ -18,7 +18,7 @@
     <uri>{{ site.author.link }}</uri>
     <email>{{ site.author.email }}</email>
   </author>
-  {% for post in collections[feed] %}
+  {% for post in collections[feed] | dateSort | reverse %}
   {%- set absolutePostUrl = post.url | absoluteUrl(global.baseUrl) -%}
   {% if not post.data.unlisted -%}
   <entry>
