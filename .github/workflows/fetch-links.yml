@@ -34,3 +34,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Creating link posts
+
+      - name: Build and maybe send webmentions
+        run: npm run build
