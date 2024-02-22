@@ -44,7 +44,9 @@ function createLinkPost(processedLink) {
       post.push(`  - ${tag}`);
     }
   }
-  post.push(`url: ${processedLink.url}`, '---', '', processedLink.note);
+  post.push(`url: ${processedLink.url}`, '---', '');
+  post.push(processedLink.note, '');
+  post.push(`Check it out: ${processedLink.url}`);
   return post.join('\n');
 }
 

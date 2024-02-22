@@ -230,7 +230,9 @@ tags:
 url: https://drhayes.io/test/thing
 ---
 
-Some extended text that appears as a note field in the object.`);
+Some extended text that appears as a note field in the object.
+
+Check it out: https://drhayes.io/test/thing`);
     });
 
     it('description is optional', () => {
@@ -246,7 +248,9 @@ tags:
 url: https://drhayes.io/test/thing
 ---
 
-Some extended text that appears as a note field in the object.`);
+Some extended text that appears as a note field in the object.
+
+Check it out: https://drhayes.io/test/thing`);
     });
   });
 
