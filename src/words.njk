@@ -13,7 +13,7 @@ description: A collection of interesting words that I like and want to remember.
 
 <dl>
   {% for word in collections.words %}
-  <dt>
+  <dt id="{{ word.data.title }}">
     {{ word.data.title }}
   </dt>
   <dd>
