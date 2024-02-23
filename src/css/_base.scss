@@ -43,6 +43,7 @@ a:visited {
       content: '<';
       font-size: 0.75em;
     }
+
     &:after {
       content: '>';
       font-size: 0.75em;
@@ -117,9 +118,9 @@ hr:after {
   color: initial;
 }
 
-p > code,
-li > code,
-a > code {
+p>code,
+li>code,
+a>code {
   font: var(--code-font);
   font-weight: bold;
   color: var(--color-blue);
@@ -218,7 +219,7 @@ strong {
   text-shadow: 0 0 4px var(--color-dark-20);
 }
 
-body > nav {
+body>nav {
   margin-block-end: var(--s4);
 
   ul {
@@ -246,5 +247,15 @@ article {
 blockquote cite {
   &:before {
     content: '— ';
+  }
+}
+
+dl {
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-block-end: var(--space-s);
   }
 }

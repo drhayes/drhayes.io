@@ -36,7 +36,12 @@
     {%- elif post.data.description -%}
     <summary>{{ post.data.description | trim }}</summary>
     {%- endif %}
-    <content xml:lang="{{ site.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | trim }}</content>
+    <content xml:lang="{{ site.language }}" type="html">
+      {%- if post.data.definition -%}
+      {{ post.data.definition | md | trim }}
+      {%- endif -%}
+      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | trim }}
+    </content>
     <rights type="text">{{ site.copyright }}</rights>
   </entry>
   {% endif -%}

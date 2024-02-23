@@ -12,3 +12,4 @@ I publish a variety of feeds so you can filter what you're interested in from th
 * [Everything.](/feed.xml) Every piece of writing that gets published to the site is in this feed. The firehose. The minutiae.
 * [The blog.](/blog.xml) Only those pieces of time-based writing that go in the blog.
 * [The links.](/links.xml) Every time I post a link that I think is interesting it will also show up here.
+* [The words.](/words.xml) A collection of words I think are interesting.

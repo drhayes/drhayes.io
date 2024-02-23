@@ -1,0 +1,23 @@
+---
+title: Interesting Words
+eleventyImport:
+  collections:
+    - words
+date: 2024-02-22
+description: A collection of interesting words that I like and want to remember.
+---
+
+<p>Every once in a while I find an interesting word. I look it up and write it down.</p>
+
+<h2>The Words</h2>
+
+<dl>
+  {% for word in collections.words %}
+  <dt>
+    {{ word.data.title }}
+  </dt>
+  <dd>
+    {{ word.data.definition | md | safe }}
+  </dd>
+  {% endfor %}
+</dl>
