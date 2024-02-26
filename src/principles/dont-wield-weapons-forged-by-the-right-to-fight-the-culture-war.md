@@ -1,5 +1,5 @@
 ---
-title: Dont wield weapons forged by the right to fight the culture war'
+title: Dont wield weapons forged by the right to fight the culture war
 date: 2023-07-27T14:20:25.762Z
 description: I refuse to use soundbites and catch-phrases created by right-wing pundits in my discourse.
 ---
