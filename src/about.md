@@ -30,7 +30,7 @@ I like to think I'm a mentor, but I'm still learning how to do that myself from 
 
 I can be found pretty much everywhere fine Internets are made as `drhayes` or some variation.
 
-In particular, you can email me at <hi@drhayes.io> or [chat me at my Keybase chat][keybasechat] or [at my Telegram address you weirdo][telegram].
+In particular, you can email me at <hi@drhayes.io> or [at my Telegram address, you weirdo][telegram].
 
 You could also use my [public inbox](https://lists.sr.ht/~drhayes/public-inbox) or email me at <~drhayes/public-inbox@lists.sr.ht> to get a post started. It's this idea that I found via [Eric Bower](https://bower.sh/) that I thought I'd try out.
 
@@ -41,7 +41,6 @@ Here are some likely haunts:
 - {% meLink 'https://bookwyrm.social/user/drhayes', 'Bookwyrm.social' %}
 - {% meLink 'https://pinboard.in/u:drhayes', 'Pinboard' %}
 - {% meLink 'https://soundcloud.com/drhayes', 'Soundcloud' %}
-- {% meLink 'https://keybase.io/drhayes', 'Keybase' %}
 - {% meLink 'https://drhayes.tumblr.com', 'Tumblr' %}
 
 ## Colophon
@@ -77,6 +76,5 @@ Some 11ty organization ideas came from:
 [github]: https://github.com/
 [netlify]: https://www.netlify.com/
 [telegram]: https://t.me/drhayes
-[keybasechat]: https://keybase.io/drhayes/chat
 [eleventy]: https://www.11ty.dev/
 [neovim]: https://neovim.io/
