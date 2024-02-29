@@ -10,7 +10,7 @@ It feels dangerous to hope for things. I think optimism takes courage in the fac
 
 ...But I do think it pays to be grateful, to take a bit of time, to look around and name the things you're grateful about. Even to yourself in a small, silent moment on a random Thursday. Despite never being able to get the hang of Thursdays, I mean.
 
-I know it's corny and sappy and saccharine. But, y'know, remember to help grow the world we want to live in while fighting against everything trying to take it away, or else what are you fighting for?
+I know it's corny and sappy and saccharine and naive. But, y'know, remember to help grow the world we want to live in while fighting against everything trying to take it away, or else what are you fighting for?
 
 So if you're thinking about it, or you notice, or you take a breath and it suddenly seems like the world is holding its breath with you...
 
