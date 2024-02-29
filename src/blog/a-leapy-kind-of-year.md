@@ -2,6 +2,8 @@
 title: A leapy kind of year
 description: I'm hoping for a more upward kind of motion from 2024.
 date: 2024-02-29
+posse:
+  - https://social.lol/@drhayes/112017164945741771
 ---
 
 It feels dangerous to hope for things. I think optimism takes courage in the face of the many, many things to be pessimistic about. I'm not advocating for turning a blind eye to genocide, or throwing all our masks away, or pretending like fascism isn't the growing, ever-present threat that it actually is...
