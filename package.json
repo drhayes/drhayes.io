@@ -32,7 +32,7 @@
     "markdown-it-footnote": "3.0.3",
     "markdown-it-image-figures": "2.1.1",
     "node-pinboard": "2.0.1",
-    "sanitize-html": "2.11.0"
+    "sanitize-html": "2.12.1"
   },
   "devDependencies": {
     "mocha": "10.3.0",
