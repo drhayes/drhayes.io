@@ -3,13 +3,13 @@ permalink: /robots.txt
 layout: ''
 eleventyExcludeFromCollections: true
 ---
+Sitemap: {{ global.baseUrl }}/sitemap.xml
 
-{% for badRobot in site.badRobots %}
+User-agent: *
+Disallow:
+
+{% for badRobot in badRobots %}
 User-agent: {{ badRobot }}
 Disallow: /
-
 {% endfor -%}
-User-agent: *
-Allow: /
 
-Sitemap: {{ global.baseUrl }}/sitemap.xml
