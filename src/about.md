@@ -70,6 +70,7 @@ Some 11ty organization ideas came from:
   - I love how her site blanks out tags that are only used once.
   - also, for teaching me CSS in general, really
 - `<aside>` boxes shamelessly copied from [css-irl.info](https://css-irl.info/disentangling-frameworks/)
+- Font stacks from <https://modernfontstacks.com/>
 
 [markdown]: https://daringfireball.net/projects/markdown/
 [github]: https://github.com/
