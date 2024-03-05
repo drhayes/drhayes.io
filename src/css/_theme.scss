@@ -1,7 +1,7 @@
 :root {
-  --body-font: 'Inconsolata', monospace;
-  --heading-font: 'Inconsolata Bold', monospace;
-  --code-font: var(--body-font);
+  --body-font: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  --heading-font: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --code-font: 'Inconsolata', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   --measure: 65ch;
 
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.25,5,5,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -56,6 +56,45 @@
   --color-white: hsl(0 0% 98%);
   --color-blue: hsl(210 50% 50%);
   --color-red: hsl(0 100% 50%);
+
+  --color-link: var(--color-blue);
+  --color-code: var(--color-blue);
+  --bg-color-code: var(--color-lightish);
+  --color-bq: var(--color-blue);
+  --color-code-block-shadow: var(--color-dark-40);
+  --color-strong: var(--color-dark-20);
+  --color-time: var(--color-gray-50);
+  --color-box-bg-color: var(--color-light);
+  --color-box-invert: var(--color-light);
+  --color-box-invert-bg-color: var(--color-dark);
+  --color-tag: var(--color-blue);
+  --color-tag-hover: var(--color-dark);
+  --color-tag-orphan: var(--color-gray-60);
+  --color-badge-bg-color: var(--color-light);
+  --color-badge-draft: var(--color-blue);
+  --color-game-text-outline: var(--color-blue);
+
+  --aside-background-color: var(--color-light);
+  --aside-header-color: var(--color-dark);
+  --aside-text-color: var(--color-dark);
+  --aside-border-color: var(--color-gray-60);
+
+  --warning-background-color: hsl(0 80% 95%);
+  --warning-color: var(--color-red);
+  --warning-border-color: hsl(0 50% 80%);
+  --joke-background-color: hsl(92.9, 100%, 93.9%);
+  --joke-color: hsl(139.5, 82.2%, 35.3%);
+  --joke-border-color: hsl(139.5, 60%, 80%);
+  --draft-background-color: hsl(210 80% 97%);
+  --draft-color: hsl(210 60% 50%);
+  --draft-color-text: var(--color-blue);
+  --draft-border-color: hsl(210 90% 80%);
+  --omg-status-label-background-color: hsl(210 90% 90%);
+  --omg-status-border-color: hsl(210 90% 75%);
+  --blue-gradient: linear-gradient(100deg,
+      hsl(240, 70%, 50%),
+      hsl(200, 100%, 50%));
+  --color-game-caption: var(--color-lightish);
 
   font-size: var(--s0);
 }

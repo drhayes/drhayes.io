@@ -1,22 +1,5 @@
-:root {
-  --warning-background-color: hsl(0 80% 95%);
-  --warning-color: var(--color-red);
-  --warning-border-color: hsl(0 50% 80%);
-  --joke-background-color: hsl(92.9, 100%, 93.9%);
-  --joke-color: hsl(139.5, 82.2%, 35.3%);
-  --joke-border-color: hsl(139.5, 60%, 80%);
-  --draft-background-color: hsl(210 80% 97%);
-  --draft-color: hsl(210 60% 50%);
-  --draft-border-color: hsl(210 90% 80%);
-  --omg-status-label-background-color: hsl(210 90% 90%);
-  --omg-status-border-color: hsl(210 90% 75%);
-  --blue-gradient: linear-gradient(100deg,
-      hsl(240, 70%, 50%),
-      hsl(200, 100%, 50%));
-}
-
 .draft {
-  color: var(--color-blue);
+  color: var(--draft-color-text);
 }
 
 aside {
@@ -129,12 +112,12 @@ a:has(.game-card) {
     max-inline-size: calc(100% - 1rem);
     max-block-size: calc(100% - 1rem);
     margin: 0;
-    color: var(--color-lightish);
+    color: var(--color-game-caption);
     text-shadow:
-      calc(var(--outline-thickness) * -1) calc(var(--outline-thickness) * -1) var(--color-blue),
-      var(--outline-thickness) calc(var(--outline-thickness) * -1) var(--color-blue),
-      var(--outline-thickness) var(--outline-thickness) var(--color-blue),
-      calc(var(--outline-thickness) * -1) var(--outline-thickness) var(--color-blue);
+      calc(var(--outline-thickness) * -1) calc(var(--outline-thickness) * -1) var(--color-game-text-outline),
+      var(--outline-thickness) calc(var(--outline-thickness) * -1) var(--color-game-text-outline),
+      var(--outline-thickness) var(--outline-thickness) var(--color-game-text-outline),
+      calc(var(--outline-thickness) * -1) var(--outline-thickness) var(--color-game-text-outline);
   }
 }
 

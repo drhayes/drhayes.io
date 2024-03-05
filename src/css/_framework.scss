@@ -22,11 +22,11 @@
   }
 }
 
-.stack > * {
+.stack>* {
   margin-block: 0;
 }
 
-.stack > * + * {
+.stack>*+* {
   margin-block-start: var(--space, var(--s0));
 }
 
@@ -37,7 +37,7 @@
 }
 
 :not(aside).box {
-  background-color: var(--color-light);
+  background-color: var(--color-box-bg-color);
 }
 
 .box * {
@@ -45,8 +45,8 @@
 }
 
 .box.invert {
-  color: var(--color-light);
-  background-color: var(--color-dark);
+  color: var(--color-box-invert);
+  background-color: var(--color-box-invert-bg-color);
 }
 
 .with-sidebar {
@@ -55,11 +55,11 @@
   gap: var(--space, var(--s0));
 }
 
-.with-sidebar > :first-child {
+.with-sidebar> :first-child {
   flex-grow: 1;
 }
 
-.with-sidebar > :last-child {
+.with-sidebar> :last-child {
   flex-basis: 0;
   flex-grow: 999;
   min-inline-size: 50%;

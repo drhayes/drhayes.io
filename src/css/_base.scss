@@ -25,7 +25,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--s0);
   line-height: var(--line-height);
-  font-variant-numeric: oldstyle-nums;
+  font-variant-numeric: oldstyle-nums proportional-nums;
   text-rendering: optimizeLegibility;
 }
 
@@ -33,7 +33,7 @@ a,
 a:visited {
   color: currentColor;
   text-decoration: underline;
-  text-decoration-color: var(--color-blue);
+  text-decoration-color: var(--color-link);
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2ex;
@@ -103,7 +103,7 @@ blockquote {
   font-style: italic;
   border-inline-start-style: solid;
   border-width: var(--s-2);
-  border-color: var(--color-blue);
+  border-color: var(--color-bq);
 }
 
 hr {
@@ -123,7 +123,8 @@ li>code,
 a>code {
   font: var(--code-font);
   font-weight: bold;
-  color: var(--color-blue);
+  color: var(--color-code);
+  background-color: var(--bg-color-code);
 }
 
 kbd {
@@ -133,7 +134,7 @@ kbd {
 pre,
 .stack pre {
   margin-block: var(--s2);
-  box-shadow: 0 0 var(--s0) var(--color-dark-40);
+  box-shadow: 0 0 var(--s0) var(--color-code-block-shadow);
 }
 
 figcaption {
@@ -155,10 +156,6 @@ img {
 }
 
 aside {
-  --aside-background-color: var(--color-light);
-  --aside-header-color: var(--color-dark);
-  --aside-text-color: var(--color-dark);
-  --aside-border-color: var(--color-gray-60);
   --aside-text: 'aside';
 
   position: relative;
@@ -216,7 +213,7 @@ aside {
 }
 
 strong {
-  text-shadow: 0 0 4px var(--color-dark-20);
+  text-shadow: 0 0 4px var(--color-strong);
 }
 
 body>nav {
@@ -235,7 +232,7 @@ body>nav {
 }
 
 time {
-  color: var(--color-gray-50);
+  color: var(--color-time);
 }
 
 article {
