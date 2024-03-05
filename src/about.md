@@ -41,7 +41,6 @@ Here are some likely haunts:
 - {% meLink 'https://bookwyrm.social/user/drhayes', 'Bookwyrm.social' %}
 - {% meLink 'https://pinboard.in/u:drhayes', 'Pinboard' %}
 - {% meLink 'https://soundcloud.com/drhayes', 'Soundcloud' %}
-- {% meLink 'https://drhayes.tumblr.com', 'Tumblr' %}
 
 ## Colophon
 
