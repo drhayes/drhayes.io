@@ -2,6 +2,8 @@
 title: Updated robots.txt for March 4th, 2024
 date: 2024-03-04
 description: Keeping that robots.txt to keep out good-faith crawlers
+tags:
+  - meta
 ---
 
 I know it doesn't prevent some unprincipled company from scraping my site; indeed, I almost wouldn't want it to since that would break the web. But I *can* opt-out of the scraping by bots I know about and dislike, which is what I've done here.
