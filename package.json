@@ -29,6 +29,7 @@
     "markdown-it": "14.0.0",
     "markdown-it-anchor": "8.6.7",
     "markdown-it-attrs": "4.1.6",
+    "markdown-it-container": "4.0.0",
     "markdown-it-footnote": "3.0.3",
     "markdown-it-image-figures": "2.1.1",
     "node-pinboard": "2.0.1",

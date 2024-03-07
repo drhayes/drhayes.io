@@ -63,13 +63,11 @@ module.exports = async function () {
 };
 ```
 
-{% aside "Wait, what's a global data file?" %}
-
+::: aside Wait, what's a global data file?
 Eleventy has this thing called [the data cascade](https://www.11ty.dev/docs/data-cascade/). Eleventy gathers data from multiple sources before sending it to your template when it renders.
 
 Here's a link to their documentation about global data files: <https://www.11ty.dev/docs/data-global/>
-
-{% endaside %}
+:::
 
 I'm using the `@11ty/eleventy-fetch` package so my builds don't yank on the webmention.io API too much during development; it caches responses. The `WEBMENTION_IO_TOKEN` is an environment variable that I have set in my local development so I can see webmentions in dev. It's also set as an environment variable in [Netlify](https://www.netlify.com/) when it builds my site. I received my own token after [signing in to Webmention.io](https://webmention.io/).
 
@@ -253,11 +251,11 @@ I'd really like it if my site could _send_ or _publish_ webmentions as well: eve
 
 Speaking of giants in webdev: the inimitable [Remy Sharp](https://remysharp.com/) has done it again and created **yet another** incredibly useful tool, [webmention.app](https://www.webmention.app/).
 
-{% aside "A note on webmention.app" %}
+::: aside A note on webmention.app
 When I first visited the site I kept getting a 404 and thought it was gone. It turns out that navigating to "https://webmention.app" will get you a 404. Navigating to <https://www.webmention.app/> will get you the app. Note the **`www`**! Naked domains are a killer, I guess.
 
 Although, occasionally, [Vercel does knock his sites off the web](https://remysharp.com/2023/01/30/on-vercel-if-some-of-my-sites-are-down) so if you see an error it could legit be down.
-{% endaside %}
+:::
 
 Lots of sites recommend using webmention.app and calling it a day. But I like to [ice skate uphill](https://tenor.com/view/blade-ice-skating-motherfuckers-uphill-wesley-snipes-gif-5841140), so I dug in a bit and found [CodeFoodPixels/netlify-plugin-webmentions](https://github.com/CodeFoodPixels/netlify-plugin-webmentions)! It uses `@remy/webmention` as a library (the same code that powers webmention.app) but runs "locally" in the build at Netlify. That appeals! By default it searches the most recent post based on the feed for your site.
 

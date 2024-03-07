@@ -114,7 +114,6 @@ module.exports = (eleventyConfig) => {
     'omgStatus',
     require('./lib/shortcodes/omgStatus')
   );
-  eleventyConfig.addPairedShortcode('aside', require('./lib/shortcodes/aside'));
 
   // Collections.
   eleventyConfig.addCollection('myWriting', require('./lib/collections/myWriting'));

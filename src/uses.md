@@ -6,9 +6,9 @@ date: 2024-03-07
 
 Inspired by [Wes Bos' /uses page](https://wesbos.com/uses) and [the whole host of other /uses pages out there](https://uses.tech/) I present: the things I use!
 
-{% aside "No affiliate links!" %}
+::: aside No affiliate links!
 None of the links here are meant to be affiliate links. If any end up being affiliate links that is a mistake on my part and I'd love to [hear about it](mailto:hi@drhayes.io).
-{% endaside %}
+:::
 
 ## Editor and Terminal
 

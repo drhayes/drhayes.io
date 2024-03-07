@@ -121,7 +121,7 @@ hr:after {
 p>code,
 li>code,
 a>code {
-  font: var(--code-font);
+  font-family: var(--code-font);
   font-weight: bold;
   color: var(--color-code);
   background-color: var(--bg-color-code);
@@ -168,12 +168,8 @@ aside {
     margin-block: var(--s2);
   }
 
-  p:first-of-type {
+  h4+p:first-of-type {
     margin-block-start: var(--s-1);
-  }
-
-  p:last-child {
-    margin-block-end: 0;
   }
 
   &.box::before {
@@ -255,4 +251,8 @@ dl {
   dd {
     margin-block-end: var(--space-s);
   }
+}
+
+:target {
+  background-color: var(--color-target-bg-color);
 }

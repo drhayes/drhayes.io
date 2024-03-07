@@ -4,7 +4,6 @@ tags:
   - generic-platformer
   - projects
   - löve
-toc: true
 screenshot: /img/generic-platformer-screenshot-2020-10-05.png
 screenshotDescription: A generic, blue, pixel-art platformer character stands upon stony cave tile.
 description: A template project in Löve.
