@@ -1,7 +1,7 @@
 ---
 title: What I Use
 description: The stuff I use to get what I need to do done.
-date: 2023-09-13
+date: 2024-03-07
 ---
 
 Inspired by [Wes Bos' /uses page](https://wesbos.com/uses) and [the whole host of other /uses pages out there](https://uses.tech/) I present: the things I use!
@@ -31,8 +31,9 @@ None of the links here are meant to be affiliate links. If any end up being affi
 ### Hardware and Desk
 
 - My desktop machine is a [System76 Thelio](https://system76.com/desktops/thelio).
-- I'm using a [Ergodox EZ](https://ergodox-ez.com/) keyboard.
-  - I'm switching to a [Moonlander](https://www.zsa.io/moonlander/) very soon, just waiting on shipment.
+- I'm using a [Moonlander](https://www.zsa.io/moonlander/).
+  - Not just for the clicky sounds, but also arm health reasons.
+  - Here's [the latest version of my layout](https://configure.zsa.io/moonlander/layouts/G5jqR/latest/0).
 - Currently mousing with the [Kensington Expert Mouse Wireless Trackball](https://www.kensington.com/p/products/ergonomic-desk-accessories/ergonomic-input-devices/expert-mouse-wireless-trackball-1/).
   - I've used nearly every kind of trackball and non-mouse mouse in my quest for a pain-free computer experience. Happy to provide opinions if asked!
 - My monitor is a LG 32UD99-W 32-Inch 4K UHD IPS Monitor. Only one monitor right now, the window manager makes multiple workspaces easy. Big enough that I enjoy the resolutions when I want them, but not so large that it blocks my window.
