@@ -36,6 +36,9 @@ None of the links here are meant to be affiliate links. If any end up being affi
   - Here's [the latest version of my layout](https://configure.zsa.io/moonlander/layouts/G5jqR/latest/0).
 - Currently mousing with the [Kensington Expert Mouse Wireless Trackball](https://www.kensington.com/p/products/ergonomic-desk-accessories/ergonomic-input-devices/expert-mouse-wireless-trackball-1/).
   - I've used nearly every kind of trackball and non-mouse mouse in my quest for a pain-free computer experience. Happy to provide opinions if asked!
+- I occasionally use a ["welspo Wireless USB Handheld Finger Trackball Mouse with Laser Pointer"](https://www.amazon.com/Wireless-Handheld-Finger-Trackball-Pointer/dp/B0057KL2AU) (whoosh, that's a mouthful).
+  - If I'm just browsing around I can hold this little thing with one hand and move around wherever. It also comes with its own cat toy, which is great.
+  - Apparently only sold on Amazon, probably some kind of toxic dropship thing, who knows.
 - My monitor is a LG 32UD99-W 32-Inch 4K UHD IPS Monitor. Only one monitor right now, the window manager makes multiple workspaces easy. Big enough that I enjoy the resolutions when I want them, but not so large that it blocks my window.
 - I've got a [Yeti Blue](https://www.logitechg.com/en-us/products/streaming-gear/yeti-premium-usb-microphone.988-000100.html) as my mic.
 - I use a Logitech HD Pro Webcam C920x. I believe the most updated version is the "C920s".
