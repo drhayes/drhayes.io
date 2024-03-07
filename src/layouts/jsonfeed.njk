@@ -2,13 +2,11 @@
   "version": "https://jsonfeed.org/version/1.1",
   "title": "{{ site.name }}",
   "home_page_url": "{{ site.host }}",
-  "authors": [
-    {
-      "name": "{{ site.author.name }}",
-      "url": "{{ site.author.link }}",
-      "avatar": "{{ site.author.avatar }}"
-    }
-  ],
+  "author": {
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.author.link }}",
+    "avatar": "{{ site.author.avatar }}"
+  },
   "language": "en-US",
   "feed_url": "{{ permalink | absoluteUrl(global.baseUrl) }}",
   "items": [
@@ -17,6 +15,9 @@
   {% if not post.data.unlisted -%}
     {
       "id": "{{ absolutePostUrl }}",
+      {% if post.data.title -%}
+      "title": "{{ post.data.title }}",
+      {%- endif -%}
       {% if post.page.excerpt -%}
       "content_text": "{{ post.page.excerpt | trim }}",
       {%- elif post.data.description -%}
