@@ -4,6 +4,8 @@ description: Some helpful git resources that modernize everyone's "favorite" dis
 date: 2024-03-08
 tags:
   - git
+posse:
+  - https://social.lol/@drhayes/112061829284124128
 ---
 
 Seriously, does anybody *love* `git`?
