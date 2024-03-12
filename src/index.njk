@@ -11,7 +11,7 @@ eleventyNavigation:
   order: 1
 ---
 
-<main class="stack front-page" style="--space: 1rem;";>
+<main class="stack front-page" style="--space: 1rem;">
 
   <div class="with-sidebar">
     <div class="align-self:center">
@@ -58,7 +58,7 @@ eleventyNavigation:
             {% if note.data.page.excerpt %}
             <p>{{ note.data.page.excerpt }}</p>
             {% else %}
-            <p>{{ note.content | safe }}</p>
+            {{ note.content | safe }}
             {% endif %}
           </li>
           {% endfor %}
