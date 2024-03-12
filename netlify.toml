@@ -17,6 +17,7 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
+    X-Clacks-Overhead = "GNU Terry Pratchett"
 
 [[headers]]
   for = "/*.ico"
