@@ -20,14 +20,18 @@ const colorValues = gplLines.filter(line => !line.startsWith('GIMP Palette'))
 .filter(Boolean)
 .map(line => {
   const [r, g, b, name] = line.trim().split(/\s+/);
-  return { r, g, b, name: name.toLowerCase() };
+  return {
+    r: parseInt(r),
+    g: parseInt(g),
+    b: parseInt(b),
+    name: name.toLowerCase() };
 })
 // Sort them by name.
 .toSorted((a, b) => a.name.localeCompare(b.name))
 // Now change them to CSS variable names.
 .map(({ r, g, b, name }) => {
-  const color = (r << 16) | (g << 8) | b;
-  return `--color-${name}: #${color.toString(16)};`;
+  const color = `${r.toString('16').padStart(2, '0')}${g.toString('16').padStart(2, '0')}${b.toString('16').padStart(2, '0')}`;
+  return `--color-${name}: #${color};`;
 });
 
 console.log(colorValues.join('\n'));
