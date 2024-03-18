@@ -33,7 +33,7 @@ body {
 
 a,
 a:visited {
-  color: var(--color-link);
+  color: currentColor;
   text-decoration: underline;
   text-decoration-color: var(--color-link);
   text-decoration-skip-ink: auto;
