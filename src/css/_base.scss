@@ -27,16 +27,22 @@ body {
   line-height: var(--line-height);
   font-variant-numeric: oldstyle-nums proportional-nums;
   text-rendering: optimizeLegibility;
+  background-color: var(--color-background);
+  color: var(--color-primary-text);
 }
 
 a,
 a:visited {
-  color: currentColor;
+  color: var(--color-link);
   text-decoration: underline;
   text-decoration-color: var(--color-link);
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2ex;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
 
   &[aria-current^='page'] {
     &:before {
@@ -60,6 +66,7 @@ h5 {
   font-weight: bold;
   line-height: var(--line-height-small);
   text-wrap: balance;
+  color: var(--color-heading);
 
   a {
     text-decoration: none;
@@ -118,11 +125,10 @@ hr:after {
   color: initial;
 }
 
-p>code,
-li>code,
-a>code {
+:is(p, li, a) code {
+  padding: 2px 4px;
+  border-radius: 4px;
   font-family: var(--code-font);
-  font-weight: bold;
   color: var(--color-code);
   background-color: var(--bg-color-code);
 }
@@ -209,7 +215,7 @@ aside {
 }
 
 strong {
-  text-shadow: 0 0 4px var(--color-strong);
+  color: var(--color-strong);
 }
 
 body>nav {

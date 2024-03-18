@@ -41,6 +41,7 @@ aside {
   border-color: var(--omg-status-border-color);
   border-radius: 0.5em;
   margin-block: var(--s2);
+  color: var(--omg-status-color);
 
   &::before {
     position: absolute;

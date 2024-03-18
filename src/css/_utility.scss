@@ -38,6 +38,15 @@
   line-height: var(--line-height-small);
   gap: var(--s-1);
 
+  .tag {
+    background-color: var(--color-tag-background);
+    padding: 4px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--color-tag-border-color);
+    font-size: var(--s-1);
+    text-decoration: none;
+  }
+
   .tag:before {
     content: '#';
   }
@@ -73,6 +82,8 @@
 }
 
 .badge {
+  padding: 2px 4px;
+  border-radius: 4px;
   font-family: var(--heading-font);
   font-weight: bold;
   font-size: var(--s-1);

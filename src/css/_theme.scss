@@ -57,50 +57,94 @@
   --color-blue: hsl(210 50% 50%);
   --color-red: hsl(0 100% 50%);
 
-  --color-link: var(--color-blue);
-  --color-code: var(--color-blue);
-  --bg-color-code: var(--color-lightish);
-  --color-bq: var(--color-blue);
-  --color-code-block-shadow: var(--color-dark-40);
-  --color-strong: var(--color-dark-20);
-  --color-time: var(--color-gray-50);
-  --color-box-bg-color: var(--color-light);
-  --color-box-invert: var(--color-light);
+  /* This is the Endesga 32 palette by Endesga: https://lospec.com/palette-list/endesga-32 */
+  /* Generated from the GIMP palette in Aseprite: https://github.com/aseprite/aseprite/blob/e129fefb2e50e3abe8b9f4b0be177476966ce2be/data/extensions/endesga-palettes/edg32.gpl */
+  --color-aluminum: #c0cbdc;
+  --color-amber: #f77622;
+  --color-archaeon: #0095e9;
+  --color-birch: #ead4aa;
+  --color-blood: #9e2835;
+  --color-darkbark: #3f2832;
+  --color-deep: #124e89;
+  --color-fabric: #e43b44;
+  --color-flora: #3e8948;
+  --color-glade: #63c74d;
+  --color-glow: #feae34;
+  --color-iiem: #ff0044;
+  --color-ink: #181425;
+  --color-ion: #2ce8f5;
+  --color-iron: #5a6988;
+  --color-light: #fee761;
+  --color-lilac: #68386c;
+  --color-mold: #193c3e;
+  --color-moss: #265c42;
+  --color-oak: #b86f50;
+  --color-peach: #f6757a;
+  --color-petal: #b55088;
+  --color-pine: #743f39;
+  --color-rust: #d87644;
+  --color-sap: #e4a672;
+  --color-shade: #262b44;
+  --color-shadeskin: #c28569;
+  --color-skin: #e8b796;
+  --color-steel: #3a4466;
+  --color-tetanus: #be4a2f;
+  --color-white: #ffffff;
+  --color-zinc: #8b9bb4;
+
+  --color-background: var(--color-ink);
+  --color-primary-text: var(--color-aluminum);
+  --color-heading: var(--color-fabric);
+  --color-time: var(--color-zinc);
+  --color-link: var(--color-ion);
+  --color-link-hover: var(--color-white);
+  --color-code: var(--color-white);
+  --bg-color-code: var(--color-deep);
+  --color-bq: var(--color-archaeon);
+  --color-code-block-shadow: var(--color-shade);
+  --color-strong: var(--color-white);
+  --color-box-bg-color: var(--color-deep);
+  --color-box-invert: var();
   --color-box-invert-bg-color: var(--color-dark);
-  --color-tag: var(--color-blue);
-  --color-tag-hover: var(--color-dark);
+  --color-tag: var(--color-ion);
+  --color-tag-background: var(--color-steel);
+  --color-tag-border-color: var(--color-zinc);
+  --color-tag-hover: var(--color-white);
   --color-tag-orphan: var(--color-gray-60);
-  --color-badge-bg-color: var(--color-light);
-  --color-badge-draft: var(--color-blue);
+  --color-badge-bg-color: var(--color-iron);
+  --color-badge-draft: var(--color-white);
   --color-game-text-outline: var(--color-blue);
   --color-target-bg-color: var(--color-lightish);
 
-  --aside-background-color: var(--color-light);
-  --aside-header-color: var(--color-dark);
-  --aside-text-color: var(--color-dark);
-  --aside-border-color: var(--color-gray-60);
+  --aside-background-color: var(--color-steel);
+  --aside-header-color: var(--color-white);
+  --aside-text-color: var(--color-white);
+  --aside-border-color: var(--color-zinc);
 
-  --warning-background-color: hsl(0 80% 95%);
-  --warning-color: var(--color-red);
-  --warning-border-color: hsl(0 50% 80%);
-  --joke-background-color: hsl(92.9, 100%, 93.9%);
-  --joke-color: hsl(139.5, 82.2%, 35.3%);
-  --joke-border-color: hsl(139.5, 60%, 80%);
-  --draft-background-color: hsl(210 80% 97%);
-  --draft-color: hsl(210 60% 50%);
-  --draft-color-text: var(--color-blue);
-  --draft-border-color: hsl(210 90% 80%);
-  --omg-status-label-background-color: hsl(210 90% 90%);
-  --omg-status-border-color: hsl(210 90% 75%);
+  --warning-background-color: color-mix(in srgb, var(--color-fabric), white 80%);
+  --warning-color: var(--color-fabric);
+  --warning-border-color: var(--color-fabric);
+  --joke-background-color: color-mix(in srgb, var(--color-flora), white 80%);
+  --joke-color: var(--color-flora);
+  --joke-border-color: var(--color-flora);
+  --draft-background-color: color-mix(in srgb, var(--color-archaeon), white 80%);
+  --draft-color: var(--color-steel);
+  --draft-color-text: var(--color-steel);
+  --draft-border-color: var(--color-steel);
+  --omg-status-color: var(--color-aluminum);
+  --omg-status-label-background-color: color-mix(in lch, var(--color-deep), white 10%);
+  --omg-status-border-color: var(--color-iron);
   --blue-gradient: linear-gradient(100deg,
       hsl(240, 70%, 50%),
       hsl(200, 100%, 50%));
   --color-game-caption: var(--color-lightish);
+  --selection-color: var(--color-lightish);
+  --selection-bg-color: var(--color-dark);
 
   font-size: var(--s0);
 }
 
 ::selection {
-  color: var(--color-darkish);
-  background-color: var(--color-lightish);
+  color: var(--selection-color);
+  background-color: var(--selection-bg-color);
 }
