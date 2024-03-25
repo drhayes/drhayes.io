@@ -1,6 +1,6 @@
 ---
 title: Quotes
-description: Some saying that I've found meaningful.
+description: Some sayings that I've found meaningful.
 eleventyImport:
   collections:
     - quotes
@@ -9,7 +9,7 @@ eleventyImport:
 <hr>
 
 <ul class="stack list-style-type:none" style="padding-inline-start:0">
-  {% for quote in collections.quotes %}
+  {% for quote in collections.quotes | dateSort | reverse %}
     <li>
       <a href="{{ quote.url }}">{{ quote.data.title }}</a>
     </li>
