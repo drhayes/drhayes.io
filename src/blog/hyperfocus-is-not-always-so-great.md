@@ -4,6 +4,8 @@ date: 2024-03-26
 tags:
   - adhd
   - hyperfocus
+  - mental-health
+updated: 2024-03-28
 ---
 
 I have ADHD.
