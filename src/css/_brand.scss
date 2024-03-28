@@ -2,6 +2,10 @@
   color: var(--draft-color-text);
 }
 
+.post-metadata {
+  color: var(--color-zinc);
+}
+
 aside {
   &#toc {
     --aside-text: 'toc';

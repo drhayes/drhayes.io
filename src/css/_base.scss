@@ -129,6 +129,9 @@ blockquote {
 }
 
 blockquote cite {
+  display: block;
+  text-align: right;
+
   &:before {
     content: '— ';
   }
