@@ -30,11 +30,12 @@
   font-style: italic;
 }
 
-.post-metadata {
-  margin-block-start: var(--s-4);
+.post-metadata time {
+  font-size: var(--s0);
 }
 
 .tags {
+  font-family: var(--subheading-font);
   line-height: var(--line-height-small);
   gap: var(--s-1);
 

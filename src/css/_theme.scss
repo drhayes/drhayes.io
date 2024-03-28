@@ -1,8 +1,14 @@
 :root {
-  --body-font: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
-  --heading-font: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-  --code-font: 'Inconsolata', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  --measure: 65ch;
+  // --body-font: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  // --heading-font: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  // --code-font: 'Inconsolata', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  // --body-font: "Berkeley Mono", monospace;
+  --body-font: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  // --heading-font: "Berkeley Mono", monospace;
+  --heading-font: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+  --subheading-font: "Helvetica Neue", sans-serif;
+  --code-font: "Berkeley Mono", monospace;
+  --measure: 75ch;
 
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.25,5,5,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --s-5: clamp(0.37rem, 0.41rem + -0.06vw, 0.4rem);
@@ -93,14 +99,16 @@
   --color-zinc: #8b9bb4;
 
   --color-background: var(--color-ink);
-  --color-primary-text: var(--color-aluminum);
-  --color-heading: var(--color-fabric);
+  --color-primary-text: var(--color-white);
+  // --color-heading: color-mix(in lch, var(--color-iiem), white 15%);
+  --color-heading: var(--color-peach);
   --color-time: var(--color-zinc);
-  --color-link: var(--color-ion);
+  --color-link: color-mix(in lch, var(--color-ion), transparent 30%);
   --color-link-hover: var(--color-white);
   --color-code: var(--color-white);
+  --color-accent-color: var(--color-archaeon);
   --bg-color-code: var(--color-deep);
-  --color-bq: var(--color-archaeon);
+  --color-bq: color-mix(in lch, var(--color-archaeon), transparent 50%);
   --color-code-block-shadow: var(--color-shade);
   --color-strong: var(--color-white);
   --color-box-bg-color: var(--color-deep);
@@ -131,7 +139,7 @@
   --draft-color: var(--color-steel);
   --draft-color-text: var(--color-steel);
   --draft-border-color: var(--color-steel);
-  --omg-status-color: var(--color-aluminum);
+  --omg-status-color: var(--color-white);
   --omg-status-label-background-color: color-mix(in lch, var(--color-deep), white 10%);
   --omg-status-border-color: var(--color-iron);
   --blue-gradient: linear-gradient(100deg,

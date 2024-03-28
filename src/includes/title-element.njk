@@ -1,12 +1,4 @@
 <header class="stack">
-  {% if title %}
-  <h1 class="p-name p-bridgy-mastodon-content">
-    {{ title }}
-  </h1>
-  {% endif %}
-
-  <span class="hidden h-card p-author">{{ site.author.name }}</span>
-
   {% if date | isValidIsoDate or updated | isValidIsoDate %}
   <div class="post-metadata">
     {% if date or updated %}
@@ -19,6 +11,16 @@
     {% endif %}
   </div>
   {% endif %}
+
+  {% if title %}
+  <h1 class="p-name p-bridgy-mastodon-content">
+    {{ title }}
+  </h1>
+  {% endif %}
+
+  {% include 'tags.njk' %}
+
+  <span class="hidden h-card p-author">{{ site.author.name }}</span>
 
   {% if inReplyTo %}
     {% set post = inReplyTo | getPost %}

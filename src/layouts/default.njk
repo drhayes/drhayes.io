@@ -11,7 +11,6 @@
   {%- if inReplyTo -%}<h2>I said...</h2>{%- endif -%}
   <article class="stack e-content">
     {{ content | safe }}
-    {% include 'tags.njk' %}
   </article>
 
   {% include 'posse.njk' %}
