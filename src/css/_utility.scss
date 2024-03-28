@@ -27,11 +27,8 @@
 }
 
 .p-summary {
+  font-size: var(--font-size-lg);
   font-style: italic;
-}
-
-.post-metadata time {
-  font-size: var(--font-size-base);
 }
 
 .tags {

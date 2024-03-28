@@ -106,6 +106,10 @@ nav {
   background-color: var(--color-shade);
 }
 
+main {
+  padding-block-end: var(--space-l);
+}
+
 body>main.stack>header.stack {
   margin-block-end: var(--font-size-base);
 }

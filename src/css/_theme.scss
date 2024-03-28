@@ -9,37 +9,25 @@
   --code-font: 'Inconsolata', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   --measure: 75ch;
 
-  --font-size-xs: clamp(0.69rem, 0.69rem + 0.04vw, 0.72rem);
-  --font-size-sm: clamp(0.83rem, 0.81rem + 0.12vw, 0.9rem);
-  --font-size-base: clamp(1rem, 0.96rem + 0.22vw, 1.13rem);
-  --font-size-lg: clamp(1.2rem, 1.13rem + 0.36vw, 1.41rem);
-  --font-size-xl: clamp(1.44rem, 1.33rem + 0.55vw, 1.76rem);
-  --font-size-2xl: clamp(1.73rem, 1.56rem + 0.82vw, 2.2rem);
-  --font-size-3xl: clamp(2.07rem, 1.84rem + 1.17vw, 2.75rem);
-  --font-size-4xl: clamp(2.49rem, 2.16rem + 1.64vw, 3.43rem);
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
 
-  --space-3xs: clamp(0.25rem, 0.23rem + 0.11vw, 0.31rem);
-  --space-2xs: clamp(0.5rem, 0.48rem + 0.11vw, 0.56rem);
-  --space-xs: clamp(0.75rem, 0.71rem + 0.22vw, 0.88rem);
-  --space-s: clamp(1rem, 0.96rem + 0.22vw, 1.13rem);
-  --space-m: clamp(1.5rem, 1.43rem + 0.33vw, 1.69rem);
-  --space-l: clamp(2rem, 1.91rem + 0.43vw, 2.25rem);
-  --space-xl: clamp(3rem, 2.87rem + 0.65vw, 3.38rem);
-  --space-2xl: clamp(4rem, 3.83rem + 0.87vw, 4.5rem);
-  --space-3xl: clamp(6rem, 5.74rem + 1.3vw, 6.75rem);
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-l: 2rem;
+  --space-xl: 3rem;
 
-  --space-3xs-2xs: clamp(0.25rem, 0.14rem + 0.54vw, 0.56rem);
-  --space-2xs-xs: clamp(0.5rem, 0.37rem + 0.65vw, 0.88rem);
-  --space-xs-s: clamp(0.75rem, 0.62rem + 0.65vw, 1.13rem);
-  --space-s-m: clamp(1rem, 0.76rem + 1.2vw, 1.69rem);
-  --space-m-l: clamp(1.5rem, 1.24rem + 1.3vw, 2.25rem);
-  --space-l-xl: clamp(2rem, 1.52rem + 2.39vw, 3.38rem);
-  --space-xl-2xl: clamp(3rem, 2.48rem + 2.61vw, 4.5rem);
-  --space-2xl-3xl: clamp(4rem, 3.04rem + 4.78vw, 6.75rem);
-
-  --space-s-l: clamp(1rem, 0.57rem + 2.17vw, 2.25rem);
-  --line-height: 1.5;
-  --line-height-small: 1.25;
+  --line-height: 1.6;
+  --line-height-small: 1.4;
   --border-thin: 0.02em;
 
   --color-dark: hsl(0 0% 5%);
@@ -92,7 +80,6 @@
 
   --color-background: var(--color-ink);
   --color-primary-text: var(--color-white);
-  // --color-heading: color-mix(in lch, var(--color-iiem), white 15%);
   --color-heading: var(--color-peach);
   --color-time: var(--color-zinc);
   --color-link: color-mix(in lch, var(--color-ion), transparent 30%);
@@ -103,7 +90,7 @@
   --color-bq: color-mix(in lch, var(--color-archaeon), transparent 50%);
   --color-code-block-shadow: var(--color-shade);
   --color-strong: var(--color-white);
-  --color-box-bg-color: var(--color-deep);
+  --color-box-bg-color: var(--color-steel);
   --color-box-invert: var();
   --color-box-invert-bg-color: var(--color-dark);
   --color-tag: var(--color-ion);
@@ -132,10 +119,10 @@
   --draft-color-text: var(--color-steel);
   --draft-border-color: var(--color-steel);
   --omg-status-color: var(--color-white);
-  --omg-status-label-background-color: color-mix(in lch, var(--color-deep), white 10%);
+  --omg-status-label-background-color: color-mix(in lch, var(--color-deep), white 20%);
   --omg-status-border-color: var(--color-iron);
   --blue-gradient: linear-gradient(100deg,
-      hsl(240, 70%, 50%),
+      hsl(250, 70%, 55%),
       hsl(200, 100%, 50%));
   --color-game-caption: var(--color-lightish);
   --selection-color: var(--color-lightish);
