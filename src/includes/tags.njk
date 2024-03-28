@@ -1,6 +1,6 @@
 {% if tags %}
 {% set tags = tags | onlyRealTags %}
-<ul class="inline-list tags" style="--space:var(--s0);">
+<ul class="inline-list tags" style="--space:var(--font-size-base);">
   {% for tag in tags %}
   <li>
     {% if collections.writingByTag.get(tag).length > 1 %}

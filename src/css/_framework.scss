@@ -2,8 +2,8 @@
   box-sizing: content-box;
   margin-inline: auto;
   max-inline-size: var(--measure);
-  padding-inline-start: var(--s1);
-  padding-inline-end: var(--s1);
+  padding-inline-start: var(--font-size-lg);
+  padding-inline-end: var(--font-size-lg);
 
   &.intrinsic {
     display: flex;
@@ -18,7 +18,7 @@
   justify-content: flex-start;
 
   &.tight {
-    --space: var(--s-1);
+    --space: var(--font-size-sm);
   }
 }
 
@@ -27,11 +27,11 @@
 }
 
 .stack>*+* {
-  margin-block-start: var(--space, var(--s0));
+  margin-block-start: var(--space, var(--font-size-base));
 }
 
 .box {
-  padding: var(--s1);
+  padding: var(--font-size-lg);
   border-width: var(--border-thin);
   border-style: solid;
 }
@@ -52,7 +52,7 @@
 .with-sidebar {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space, var(--s0));
+  gap: var(--space, var(--font-size-base));
 }
 
 .with-sidebar> :first-child {
@@ -68,7 +68,7 @@
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space, var(--s0));
+  gap: var(--space, var(--font-size-base));
   justify-content: flex-start;
   align-items: center;
 }

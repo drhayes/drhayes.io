@@ -23,7 +23,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--body-font);
-  font-size: var(--s0);
+  font-size: var(--font-size-base);
   line-height: var(--line-height);
   font-variant-numeric: oldstyle-nums proportional-nums;
   text-rendering: optimizeLegibility;
@@ -80,25 +80,25 @@ h5 {
 }
 
 h1 {
-  font-size: var(--s5);
+  font-size: var(--font-size-4xl);
   line-height: 1;
   // letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: var(--s3);
+  font-size: var(--font-size-2xl);
 }
 
 h3 {
-  font-size: var(--s2);
+  font-size: var(--font-size-xl);
 }
 
 h4 {
-  font-size: var(--s1);
+  font-size: var(--font-size-lg);
 }
 
 h5 {
-  font-size: var(--s0);
+  font-size: var(--font-size-base);
 }
 
 main,
@@ -107,7 +107,7 @@ nav {
 }
 
 body>main.stack>header.stack {
-  margin-block-end: var(--s0);
+  margin-block-end: var(--font-size-base);
 }
 
 p {
@@ -116,11 +116,11 @@ p {
 
 blockquote {
   margin-inline-start: 0;
-  padding-inline-start: var(--s0);
-  font-size: var(--s1);
+  padding-inline-start: var(--font-size-base);
+  font-size: var(--font-size-lg);
   font-style: italic;
   border-inline-start-style: solid;
-  border-width: var(--s-2);
+  border-width: var(--font-size-xs);
   border-color: var(--color-bq);
 }
 
@@ -132,7 +132,7 @@ blockquote cite {
 
 hr {
   border: 0;
-  height: var(--s2);
+  height: var(--font-size-xl);
 }
 
 hr:after {
@@ -156,18 +156,18 @@ kbd {
 
 pre,
 .stack pre {
-  margin-block: var(--s2);
-  box-shadow: 0 0 var(--s0) var(--color-code-block-shadow);
+  margin-block: var(--font-size-xl);
+  box-shadow: 0 0 var(--font-size-base) var(--color-code-block-shadow);
 }
 
 figcaption {
   text-align: center;
-  font-size: var(--s-1);
+  font-size: var(--font-size-sm);
 }
 
 ol,
 ul {
-  padding-inline-start: var(--s0);
+  padding-inline-start: var(--font-size-base);
 }
 
 figure {
@@ -188,11 +188,11 @@ aside {
   color: var(--aside-text-color);
 
   &.box {
-    margin-block: var(--s2);
+    margin-block: var(--font-size-xl);
   }
 
   h4+p:first-of-type {
-    margin-block-start: var(--s-1);
+    margin-block-start: var(--font-size-sm);
   }
 
   &.box::before {
@@ -201,7 +201,7 @@ aside {
     inset-block-start: 0;
     inset-inline-start: 50%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: var(--s-2);
+    font-size: var(--font-size-xs);
     background-color: var(--aside-background-color);
     border: var(--border-thin) solid;
     border-color: var(--aside-border-color);
@@ -216,7 +216,7 @@ aside {
     inset-block-end: 0;
     inset-inline-start: 50%;
     transform: translateX(-50%) translateY(50%);
-    font-size: var(--s-2);
+    font-size: var(--font-size-xs);
     background-color: var(--aside-background-color);
     border: var(--border-thin) solid;
     border-color: var(--aside-border-color);
@@ -237,13 +237,13 @@ strong {
 
 body>nav {
   margin: 0;
-  padding-block-start: var(--s-5);
-  padding-block-end: var(--s0);
+  padding-block-start: var(--space-s);
+  padding-block-end: var(--font-size-base);
 
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--s0);
+    gap: var(--font-size-base);
     justify-content: flex-start;
     align-items: center;
     text-transform: lowercase;
