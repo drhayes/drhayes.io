@@ -6,7 +6,11 @@
   <h1>Quote</h1>
   <article class="stack box">
     <blockquote class="e-content p-quote">
+      {% if not content %}
       {{ title }}
+      {% else %}
+      {{ content | safe }}
+      {% endif %}
       {% if source or sourceUrl %}
       <p>
         <cite class="h-cite">
