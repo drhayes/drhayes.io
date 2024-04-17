@@ -8,6 +8,10 @@
 [functions]
   node_bundler = "esbuild"
 
+[[edge_functions]]
+function = "block-bots"
+path = "/*"
+
 [[headers]]
   for = "/*"
   [headers.values]
