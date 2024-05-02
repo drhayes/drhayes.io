@@ -1,15 +1,15 @@
 ---
 title: I don't need a zettelkasten exactly
 description: In which I convince myself about not needing a zettelkasten
-date: 2024-03-11
+date: 2024-05-02
 tags:
   - text
   - exocortex
   - zettelkasten
-draft: true
+  - weblogpomo
 ---
 
-I love thinking about personal knowledge management but I don't know what it is.
+I love thinking about personal knowledge management but I don't really know what it is.
 I love writing with pens and paper but my most prolific writing is happening digitally *by far*.
 
 What's up with that?
@@ -33,8 +33,8 @@ If you wanted to be **really** organized, you could index your commonplace book 
 I currently keep most of my brain in a [local Tiddlywiki instance](https://tiddlywiki.com/) that I run on my desktop computer.
 It's my journal and my to do tracker, my notes app, and my exocortex.
 I occasionally write notes about things I'm reading in it, or save highlights of passages into it.
-I've spent an inordinate amount of time playing with other such systems for keeping notes: [writing things in Baronfig notebooks](https://baronfig.com/products/confidant-hardcover-notebook?variant=35638867020), [Roam Research](https://roamresearch.com/), [Logseq](https://logseq.com/), and [Obsidian](https://obsidian.md/) to name a few.
-Tiddlywiki hits the sweet spot of being 100% local and very customizable.
+I have an ADHDer's love of productivity systems and, thus, I've spent an inordinate amount of time playing with other such systems for keeping notes: [writing things in Baronfig notebooks](https://baronfig.com/products/confidant-hardcover-notebook?variant=35638867020), [Roam Research](https://roamresearch.com/), [Logseq](https://logseq.com/), and [Obsidian](https://obsidian.md/) to name a few.
+But Tiddlywiki hits the sweet spot of being 100% local and very customizable.
 I think it's a [convivial tool](https://econation.one/blog/convivial-tools/).
 
 Ultimately, though, what am I doing?
@@ -58,15 +58,29 @@ You can read [this post by someone adopting the method](https://blog.viktomas.co
 You could be very grateful to [Writing Slowly](https://writingslowly.com/) for digging through [the top ten Zettelkasten posts on Hacker News so you don't have to](https://writingslowly.com/2023/05/21/i-read-the.html).
 You could be *even more grateful* to read [Writing Slowly's very useful article on starting a zettelkasten](https://writingslowly.com/2024/03/06/how-to-start.html).
 
-Or you could become a heretic and [read about antinet zettelkastens](https://www.scottscheper.com/fg).
+If you feel like crossing Tiddlywiki and zettelkastens you could [check out Soren Bjornstad's tiddlywiki zettelkasten](https://zettelkasten.sorenbjornstad.com/#PublicHomepage:PublicHomepage), which is a fun phrase to say a few times to yourself.
 
+Or you could become a heretic and [read about antinet zettelkastens](https://www.scottscheper.com/fg).
 
 ## Counterpoint
 
 [Julian Simpson](https://www.cartoongravity.com/) is a writer whose [work I've enjoyed very much](https://www.bbc.co.uk/programmes/p06spb8w).
-He's been tinkering with lots of public knowledge management apps, very publicly.
+He's been tinkering with lots of personal knowledge management apps, very publicly.
 Recently, though, [he came to a realization](https://www.cartoongravity.com/a-realisation/):
 
 > As I plunge into yet another notes app (UpNote this time, which is excellent), I am hit with the sudden realisation that this is the purest of pure procrastination...
 >
 > Maybe notes don't want to be indexed and Zettelkastened and back-linked. Maybe they want to just be filled out and worked on until they go from a spark to something actionable? Or they want to be left alone in the dark, to grow on their own, until someone stumbles over them again? Write the idea down and walk away. Maybe that is the key. Maybe serendipity is just flicking through those notes until something catches your eye?
+
+## Where does that leave me, though?
+
+Not making a zettelkasten, probably.
+I kind of think of it like a spectator sport: I don't play it myself, but I sure do have fun learning about it and seeing other people do it.
+
+Maybe it doesn't have a point.
+My main creative output is *not* writing; mostly it's programs and music.
+And maybe it's just an activity I enjoy and that's the end of it.
+
+In that vein I bought a [Midori MD Notebook in an A6 size with a grid](https://www.jetpens.com/Midori-MD-Notebook-A6-Grid/pd/13604) for writing down quotes and things.
+I'm trying to keep mundanity out of that notebook; no shopping lists or todo items or project management, just interesting tidbits about stuff I'm thinking about these days.
+I think there is a certain magic to writing things with pens and I'm trying to type less these days, if I can help it.
