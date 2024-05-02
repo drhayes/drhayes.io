@@ -7,6 +7,7 @@ const pluginTOC = require('eleventy-plugin-toc');
 const tagFilters = require('./lib/filters/tagFilters');
 const md = require('./lib/markdown');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const pluginLightningCss = require('@11tyrocks/eleventy-plugin-lightningcss');
 
 module.exports = (eleventyConfig) => {
   // Server options.
@@ -44,6 +45,7 @@ module.exports = (eleventyConfig) => {
     ul: true,
   });
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(pluginLightningCss);
 
   // Filters.
   eleventyConfig.addFilter('md', (value, o = {}) => {
