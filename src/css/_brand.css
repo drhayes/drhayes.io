@@ -57,11 +57,12 @@ aside {
     color: var(--color-primary-text);
   }
 
+  .omg-status-icon {
+    font-size: var(--font-size-4xl);
+  }
+
   .omg-status-text {
     margin: 0;
-    font-family: var(--body-font);
-    font-size: var(--font-size-base);
-    font-weight: normal;
   }
 }
 
