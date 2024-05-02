@@ -1,7 +1,7 @@
-@use '_fonts';
-@use '_dracula';
-@use '_theme';
-@use '_framework';
-@use '_base';
-@use '_utility';
-@use '_brand';
+@import '_fonts.css';
+@import '_dracula.css';
+@import '_theme.css';
+@import '_framework.css';
+@import '_base.css';
+@import '_utility.css';
+@import '_brand.css';
