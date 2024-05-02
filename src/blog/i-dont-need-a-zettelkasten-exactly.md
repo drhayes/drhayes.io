@@ -11,6 +11,7 @@ tags:
 
 I love thinking about personal knowledge management but I don't really know what it is.
 I love writing with pens and paper but my most prolific writing is happening digitally *by far*.
+I'm entranced by zettelkastens but I'm pretty sure I don't need one.
 
 What's up with that?
 
@@ -71,6 +72,15 @@ Recently, though, [he came to a realization](https://www.cartoongravity.com/a-re
 > As I plunge into yet another notes app (UpNote this time, which is excellent), I am hit with the sudden realisation that this is the purest of pure procrastination...
 >
 > Maybe notes don't want to be indexed and Zettelkastened and back-linked. Maybe they want to just be filled out and worked on until they go from a spark to something actionable? Or they want to be left alone in the dark, to grow on their own, until someone stumbles over them again? Write the idea down and walk away. Maybe that is the key. Maybe serendipity is just flicking through those notes until something catches your eye?
+
+I *do* believe that zettelkastens can fall prey to [fetzenwissen, the illusion of integrated thought](https://writingslowly.com/2024/02/12/how-to-overcome.html).
+Thanks again, Writing Slowly!
+
+What if I [lock myself in a labyrinth of my own preconceptions?](https://reallifemag.com/rank-and-file/)
+
+Ultimately, I think I would not be using my own little pile of notes to write anything creative.
+I would be [recording my own deep experience,](https://writingslowly.com/2024/03/06/how-to-start.html), sure.
+But without an overarching purpose I'm just building an encyclopedia of my thoughts, not trying to actually *grow* something out of them.
 
 ## Where does that leave me, though?
 
