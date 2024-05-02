@@ -30,7 +30,6 @@ body {
   background-color: var(--color-background);
   color: var(--color-primary-text);
   accent-color: var(--color-accent-color);
-  // letter-spacing: -0.02em;
 }
 
 a,
@@ -82,7 +81,6 @@ h5 {
 h1 {
   font-size: var(--font-size-4xl);
   line-height: 1;
-  // letter-spacing: -0.02em;
 }
 
 h2 {

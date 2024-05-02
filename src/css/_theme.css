@@ -87,7 +87,7 @@
   --color-code-block-shadow: var(--color-shade);
   --color-strong: var(--color-white);
   --color-box-bg-color: var(--color-steel);
-  --color-box-invert: var();
+  --color-box-invert: var(--color-steel);
   --color-box-invert-bg-color: var(--color-dark);
   --color-tag: var(--color-ion);
   --color-tag-background: var(--color-steel);

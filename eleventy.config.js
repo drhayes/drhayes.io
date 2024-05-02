@@ -150,9 +150,6 @@ module.exports = (eleventyConfig) => {
     excerpt_separator: '<!--more-->',
   });
 
-  // What are we watching for changes?
-  eleventyConfig.addWatchTarget('./src/css/**/*');
-
   return {
     dir: {
       input: 'src',
