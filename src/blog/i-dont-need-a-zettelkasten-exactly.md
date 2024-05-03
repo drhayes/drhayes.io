@@ -7,6 +7,7 @@ tags:
   - exocortex
   - zettelkasten
   - weblogpomo
+  - weblogpomo2024
 ---
 
 I love thinking about personal knowledge management but I don't really know what it is.

@@ -137,6 +137,10 @@ blockquote cite {
   }
 }
 
+blockquote>*+* {
+  margin-block-start: var(--space-s);
+}
+
 hr {
   border: 0;
   height: var(--font-size-xl);
