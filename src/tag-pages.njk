@@ -15,7 +15,7 @@
 },
   permalink: 'tags/{{ tag | slugify }}/',
   eleventyComputed: {
-    title: "Things tagged with #{{ tag }}",
+    title: "Things tagged with '{{ tag }}'",
   },
   changefreq: 'weekly',
   eleventyExcludeFromCollections: true,
@@ -23,6 +23,6 @@
 ---
 {% set taglist = collections[tag] %}
 {% set postList = taglist | dateSort | reverse %}
-<main class="stack">
+<main class="stack" id="main">
   {% include "post-list.njk" %}
 </main>

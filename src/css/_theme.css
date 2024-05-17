@@ -1,18 +1,18 @@
 :root {
-  --body-font: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-  --heading-font: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
-  --subheading-font: "Helvetica Neue", sans-serif;
-  --code-font: 'Inconsolata', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --body-font: "Berkeley Mono";
+  --heading-font: "Berkeley Mono";
+  --subheading-font: "Berkeley Mono";
+  --code-font: "Berkeley Mono";
   --measure: 75ch;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
-  --font-size-3xl: 3rem;
-  --font-size-4xl: 4rem;
+  --font-size-base: 18px;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
 
   --space-3xs: 0.25rem;
   --space-2xs: 0.5rem;
@@ -22,8 +22,8 @@
   --space-l: 2rem;
   --space-xl: 3rem;
 
-  --line-height: 1.6;
-  --line-height-small: 1.4;
+  --line-height: 1.75;
+  --line-height-small: 1.5;
   --border-thin: 0.02em;
 
   --color-dark: hsl(0 0% 5%);
@@ -45,6 +45,7 @@
   --color-amber: #f77622;
   --color-archaeon: #0095e9;
   --color-birch: #ead4aa;
+  --color-black: #000000;
   --color-blood: #9e2835;
   --color-darkbark: #3f2832;
   --color-deep: #124e89;
@@ -74,7 +75,7 @@
   --color-white: #ffffff;
   --color-zinc: #8b9bb4;
 
-  --color-background: var(--color-ink);
+  --color-background: var(--color-black);
   --color-primary-text: var(--color-white);
   --color-heading: var(--color-peach);
   --color-time: var(--color-zinc);
@@ -90,7 +91,7 @@
   --color-box-invert: var(--color-steel);
   --color-box-invert-bg-color: var(--color-dark);
   --color-tag: var(--color-ion);
-  --color-tag-background: var(--color-steel);
+  --color-tag-background: var(--color-shade);
   --color-tag-border-color: var(--color-zinc);
   --color-tag-hover: var(--color-white);
   --color-tag-orphan: var(--color-gray-60);
@@ -125,6 +126,8 @@
   --selection-bg-color: var(--color-dark);
 
   font-size: var(--font-size-base);
+  letter-spacing: -0.03em;
+  ;
 }
 
 ::selection {
