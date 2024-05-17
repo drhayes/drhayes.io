@@ -101,7 +101,7 @@ h5 {
 
 main,
 nav {
-  background-color: var(--color-shade);
+  background-color: var(--color-ink);
 }
 
 main {
@@ -282,11 +282,23 @@ dl {
   }
 }
 
-:target {
-  background-color: var(--color-target-bg-color);
-}
-
 .u-logo {
   stroke: var(--color-white);
   fill: var(--color-white);
+}
+
+.skip-to-content {
+  font-size: var(--font-size-xs);
+  text-align: center;
+}
+
+nav section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav h1 {
+  display: inline-block;
+  font-size: var(--font-size-lg);
 }

@@ -37,16 +37,16 @@
   gap: var(--font-size-sm);
 
   .tag {
-    background-color: var(--color-tag-background);
-    padding: 4px 6px;
-    border-radius: 4px;
-    border: 1px solid var(--color-tag-border-color);
+    &::before {
+      content: '#';
+    }
+
     font-size: var(--font-size-sm);
     text-decoration: none;
   }
 
-  .tag:before {
-    content: '#';
+  li+li::before {
+    content: "•";
   }
 
   .tag[href] {

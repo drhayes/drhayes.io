@@ -37,7 +37,7 @@ eleventyExcludeFromCollections: true
             Because why shouldn't my atom feed look nice?
           </p>
         </header>
-        <main class="stack">
+        <main class="stack" id="main">
           <h2>Recent Stuff</h2>
           <xsl:for-each select="//atom:entry">
             <xsl:sort select="atom:updated" order="descending" />
