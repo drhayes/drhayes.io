@@ -4,7 +4,6 @@ description: All the ways I syndicate what's on the site.
 date: 2024-02-15
 eleventyNavigation:
   key: Feeds
-  title: 🛜
   order: 6
 ---
 
