@@ -8,6 +8,9 @@ tags:
 ---
 
 My son has been sick for a couple of weeks.
+
+<!--more-->
+
 It's nothing critical, but it *is* kinda serious.
 After a couple of tries the doctors found the antibiotics that seem to be clearing it up and he's on the mend.
 

@@ -3,18 +3,16 @@ title: Hi there
 description: It's my front page.
 layout: base.njk
 eleventyImport:
-  collections:
-    - allTheWriting
+collections:
+- allTheWriting
 ---
 
 <main class="stack front-page" style="--space: 1rem;">
 
   <div class="with-sidebar">
-    <div class="align-self:center">
+    <div class="stack info-column">
       {% include "raven.svg" %}
-    </div>
 
-    <div class="stack">
       <h1>
         <span class="blue-gradient">Hi there.</span>
         <span>👋🏽</span>
@@ -28,14 +26,41 @@ eleventyImport:
 
       <p><a href="mailto:hi@drhayes.io">✉️ hi@drhayes.io</a></p>
 
+      <h2>Me Elsewhere</h2>
+      <ul>
+        <li>
+          <a rel="noopener me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
+        </li>
+        <li>
+          <a rel="noopener me" href="https://github.com/drhayes">GitHub</a>
+        </li>
+        <li>
+          <a rel="noopener me" href="https://proven.lol/f3518f">Proof</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stack">
       <div class="stack h-feed">
         <h2 class="p-name">
           <a href="/writing">Recent Blogs</a>
         </h2>
-        <ol class="list-style-type:none">
+        <ol class="stack list-style-type:none">
           {%- for post in collections.blog | dateSort | reverse | first -%}
           <li class="h-entry">
             <a href="{{ post.url }}" class="u-url p-name">{{ post.data.title }}</a>
+            <p>
+              {%- if post.data.updated | isValidIsoDate %}
+              <time datetime="{{ post.data.updated | datetime }}" class="dt-updated">{{ post.data.updated | dateformat }}</time>
+              {%- elif post.date | isValidIsoDate %}
+                <time datetime="{{ post.date | datetime }}" class="dt-published">{{ post.date | dateformat }}</time>
+              {% endif -%}
+              {%- if post.page.excerpt %}
+              - {{ post.page.excerpt | trim }}
+              {%- elif post.data.description %}
+              - {{ post.data.description }}
+              {%- endif %}
+            </p>
           </li>
           {% endfor %}
         </ol>
@@ -74,21 +99,9 @@ eleventyImport:
         </ol>
       </div>
 
-      <h2>Me Elsewhere</h2>
-      <ul>
-        <li>
-          <a rel="noopener me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
-        </li>
-        <li>
-          <a rel="noopener me" href="https://github.com/drhayes">GitHub</a>
-        </li>
-        <li>
-          <a rel="noopener me" href="https://proven.lol/f3518f">Proof</a>
-        </li>
-      </ul>
-      {% include "webring.njk" %}
     </div>
   </div>
+  {% include "webring.njk" %}
 
 </main>
 

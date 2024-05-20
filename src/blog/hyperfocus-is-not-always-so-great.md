@@ -11,6 +11,8 @@ updated: 2024-03-28
 I have ADHD.
 I sometimes get hyperfocused on things.
 
+<!--more-->
+
 ## Definition
 
 [Additude Magazine defines hyperfocus as:](https://www.additudemag.com/understanding-adhd-hyperfocus/)

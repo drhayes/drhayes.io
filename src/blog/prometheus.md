@@ -1,6 +1,6 @@
 ---
 title: Prometheus
-description: The story behind my favorite myth
+description: The story behind my favorite myth.
 date: 2024-05-06
 tags:
   - weblogpomo
