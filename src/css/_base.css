@@ -105,14 +105,9 @@ footer {
   background-color: var(--color-ink);
 }
 
-main {
-  padding-block-end: var(--space-2xl);
+footer hr {
+  padding: var(--space-xl);
 }
-
-body>main.stack>header.stack {
-  margin-block-end: var(--font-size-base);
-}
-
 
 p {
   margin-block: 0;
