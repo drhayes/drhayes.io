@@ -30,6 +30,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-primary-text);
   accent-color: var(--color-accent-color);
+  text-shadow: 0 0 .05em currentColor;
 }
 
 a,

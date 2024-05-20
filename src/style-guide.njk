@@ -11,14 +11,10 @@ eleventyExcludeFromCollections: true
   </header>
 
   <h2>Tags</h2>
-  <ul class="inline-list tags" style="--space:var(--font-size-base);">
-    <li><a class="tag" href="#tag1">Tag 1</a></li>
-    <li><a class="tag" href="#tag2">Tag 2</a></li>
-    <li><a class="tag" href="#tag3">Tag 3</a></li>
-    <li><a class="tag" href="#tag3">Somewhat longer tag</a></li>
-    <li><span class="tag orphan-tag">Orphan tag 1</span></li>
-    <li><span class="tag orphan-tag">Orphan tag 2</span></li>
-  </ul>
+  <header class="stack">
+    {% set tags = ["projects", "game", "weblogpomo", "Somewhat longer tag", "Orphan tag 1"] %}
+    {% include "tags.njk" %}
+  </header>
 
   <section class="stack big-letter">
     <p>So begins the article content. It is really long and hopefully wraps, but just in case... Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. De carne cerebro lumbering animata cervello corpora quaeritis. Summus thalamus brains sit​​, morbo basal ganglia vel maleficia? De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve, imo evil braaiinns stalking monstra hypothalamus adventus resi hippocampus dentevil vultus brain comedat cerebella pitiutary gland viventium. Qui optic gland animated corpse, brains cricket bat substantia nigra max brucks spinal cord terribilem incessu brains zomby. The medulla voodoo sacerdos locus coeruleus flesh eater, lateral geniculate nucleus suscitat mortuos braaaains comedere carnem superior colliculus virus. Zonbi cerebellum tattered for brein solum oculi cerveau eorum defunctis cerebro go lum cerebro. Nescio brains an Undead cervello zombies. Sicut thalamus malus putrid brains voodoo horror. Nigh basal ganglia tofth eliv ingdead.
