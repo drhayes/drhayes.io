@@ -95,7 +95,7 @@ aside {
   }
 
   .info-column {
-    width: 45%;
+    max-width: 20rem;
   }
 }
 
