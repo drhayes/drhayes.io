@@ -249,6 +249,17 @@ body>nav {
   padding-block-start: var(--space-s);
   padding-block-end: var(--font-size-base);
 
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h1 {
+    display: inline-block;
+    font-size: var(--font-size-lg);
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -258,7 +269,17 @@ body>nav {
     text-transform: lowercase;
     list-style-type: none;
     padding-inline-start: 0;
+    font-size: var(--font-size-lg);
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
+
 }
 
 time {
@@ -290,15 +311,4 @@ dl {
 .skip-to-content {
   font-size: var(--font-size-xs);
   text-align: center;
-}
-
-nav section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-nav h1 {
-  display: inline-block;
-  font-size: var(--font-size-lg);
 }

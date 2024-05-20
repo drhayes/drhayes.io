@@ -1,13 +1,7 @@
 @font-face {
-  font-family: Inconsolata;
-  src: local('Inconsolata'),
-    url('/fonts/inconsolata/Inconsolata-Regular.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inconsolata Bold';
-  src: local('Inconsolata Bold'),
-    url('/fonts/inconsolata/Inconsolata-Bold.woff2') format('woff2');
+  font-family: "Berkeley Mono";
+  src: local('Berkeley Mono'),
+    url('/fonts/berkeley-mono/BerkeleyMono-Regular.woff') format('woff'),
+    url('/fonts/berkeley-mono/BerkeleyMono-Regular.woff2') format('woff2');
   font-display: swap;
 }
