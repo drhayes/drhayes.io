@@ -1,18 +1,10 @@
 <nav class="center" aria-labelledby="site-link">
-  <p class="skip-to-content">
+  <section class="skip-to-content">
     <a href="#main">Skip to content</a>
-  </p>
-  {% set navPages = collections.all | eleventyNavigation %}
+  </section>
   <section>
     <h1>
       <a href="/">drhayes.io</a>
     </h1>
-    <ul>
-      {%- for navPage in navPages -%}
-      <li>
-        <a href="{{ navPage.url }}" title="{{ navPage.key }}">{{ navPage.title }}</a>
-      </li>
-      {%- endfor -%}
-    </ul>
   </section>
 </nav>

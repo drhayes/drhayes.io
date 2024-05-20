@@ -21,6 +21,7 @@
   --space-m: 1.5rem;
   --space-l: 2rem;
   --space-xl: 3rem;
+  --space-2xl: 4rem;
 
   --line-height: 1.75;
   --line-height-small: 1.5;
@@ -77,7 +78,7 @@
 
   --color-background: var(--color-black);
   --color-primary-text: var(--color-white);
-  --color-heading: var(--color-peach);
+  --color-heading: var(--color-fabric);
   --color-time: var(--color-zinc);
   --color-link: color-mix(in lch, var(--color-ion), transparent 30%);
   --color-link-hover: var(--color-white);

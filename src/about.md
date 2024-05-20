@@ -5,7 +5,6 @@ priority: 1.0
 updated: 2023-08-11
 eleventyNavigation:
   key: About
-  title: ❔
   order: 10
 ---
 
