@@ -7,6 +7,8 @@ tags:
   - imposter-syndrome
   - mental-health
   - mentoring
+aliases:
+  - /writing/i-have-imposter-syndrome
 ---
 
 A few years ago, we were sitting around trying to come up with Halloween costumes. My friend Alex asked me what I was most scared of. "That people will find out," I said. He laughed, not unkindly, because he knows.

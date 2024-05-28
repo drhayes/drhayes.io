@@ -1,11 +1,11 @@
 ---
-title: Writing
-description: The collection of everything I've published on the site.
+title: Blog
+description: For all that blogging I sometimes do.
 layout: base.njk
 aliases:
-  - /blog
+  - /writing
 eleventyNavigation:
-  key: Writing
+  key: Blog
   order: 3
 ---
 
@@ -17,16 +17,8 @@ eleventyNavigation:
   <section class="stack">
 
     <p>
-      A bit of an experiment, these are things that I'm writing that are basically never truly complete and published. They're out here, reflecting my thinking, but never truly <em>done</em>.
-    </p>
-
-    <p>
       Anything marked {% include "draft-badge.njk" %} is especially fresh out of the oven and still in flux.
     </p>
-
-    <h2>Essays and Things</h2>
-    {% set postList = collections.myWriting | dateSort | reverse %}
-    {% include "post-list.njk" %}
 
     <h2>Blog</h2>
     {% set postList = collections.blog | reverse %}
