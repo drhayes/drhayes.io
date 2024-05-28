@@ -4,7 +4,9 @@ description: It's my front page.
 layout: base.njk
 eleventyImport:
 collections:
-- allTheWriting
+- blog
+- notes
+- links
 ---
 
 <main class="stack front-page" style="--space: 1rem;">
@@ -43,7 +45,7 @@ collections:
     <div class="stack">
       <div class="stack h-feed">
         <h2 class="p-name">
-          <a href="/writing">Recent Blogs</a>
+          <a href="/blog">Recent Blogs</a>
         </h2>
         <ol class="stack list-style-type:none">
           {%- for post in collections.blog | dateSort | reverse | first -%}

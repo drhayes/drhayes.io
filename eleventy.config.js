@@ -116,7 +116,6 @@ module.exports = (eleventyConfig) => {
   );
 
   // Collections.
-  eleventyConfig.addCollection('myWriting', require('./lib/collections/myWriting'));
   eleventyConfig.addCollection('games', require('./lib/collections/games'));
   eleventyConfig.addCollection(
     'allTheWriting',
