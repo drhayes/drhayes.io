@@ -4,13 +4,6 @@ const slugify = require('@sindresorhus/slugify');
 const dateFns = require('date-fns');
 const path = require('path');
 
-function createPinboard(pinboardApiToken) {
-  const pinboard = new Pinboard(pinboardApiToken);
-  pinboard.recent = util.promisify(pinboard.recent);
-  pinboard.all = util.promisify(pinboard.all);
-  return pinboard;
-}
-
 async function writeLinks(linksDir, pinboardLinks, fsPromises) {
   const processedLinks = pinboardLinks.map(processPinboardLink);
   for (const link of processedLinks) {
@@ -89,7 +82,6 @@ async function getLastSevenDays(pinboard, today) {
 
 module.exports = {
   createLinkPost,
-  createPinboard,
   formatLinkDir,
   getLastSevenDays,
   maybeWriteLinkFile,

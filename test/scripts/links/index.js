@@ -116,7 +116,7 @@ describe('Links', () => {
     });
   });
 
-  describe('processPinboardLink', ()  => {
+  describe('processPinboardLink', () => {
     const testLink = {
       href: 'https://piccalil.li/blog/react-is-getting-a-bit-of-a-kicking-recently/',
       description: 'It feels like React is getting a bit of a kicking recently - Piccalilli',
@@ -220,7 +220,7 @@ describe('Links', () => {
     it('creates expected link post', () => {
       const post = createLinkPost(processedLink);
       assert.equal(post,
-`---
+        `---
 title: "🔗 Some Title"
 description: "Some description would be nice but is optional"
 date: 2024-02-09
@@ -239,7 +239,7 @@ Check it out: https://drhayes.io/test/thing`);
       processedLink.description = '';
       const post = createLinkPost(processedLink);
       assert.equal(post,
-`---
+        `---
 title: "🔗 Some Title"
 date: 2024-02-09
 tags:
