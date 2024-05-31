@@ -130,6 +130,29 @@ collections:
         <img alt="Best viewed in any browser badge" src="/img/any-browser.gif" width="88" height="31">
       </li>
     </ul>
+
+    {% set navPages = collections.all | eleventyNavigation %}
+    <ul class="inline-list">
+      <li><b>Here:</b></li>
+      {%- for navPage in navPages -%}
+      <li>
+        <a href="{{ navPage.url }}" title="{{ navPage.key }}">{{ navPage.title }}</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+    <ul class="inline-list">
+      <li><b>Elsewhere:</b></li>
+      <li>
+        <a rel="noopener me" href="https://social.lol/@drhayes">@drhayes@social.lol</a>
+      </li>
+      <li>
+        <a rel="noopener me" href="https://github.com/drhayes">GitHub</a>
+      </li>
+      <li>
+        <a rel="noopener me" href="https://proven.lol/f3518f">Proof</a>
+      </li>
+    </ul>
+
     {% include "webring.njk" %}
   </footer>
 
