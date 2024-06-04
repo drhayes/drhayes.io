@@ -9,7 +9,7 @@
   {% include 'toc.njk' %}
 
   {%- if inReplyTo -%}<h2>I said...</h2>{%- endif -%}
-  <article class="stack e-content">
+  <article class="stack e-content" style="--space: var(--space-l);">
     {{ content | safe }}
   </article>
 
