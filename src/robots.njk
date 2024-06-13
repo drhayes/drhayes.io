@@ -5,11 +5,11 @@ eleventyExcludeFromCollections: true
 ---
 Sitemap: {{ global.baseUrl }}/sitemap.xml
 
-User-agent: *
-Disallow:
-
 {% for badRobot in badRobots %}
 User-agent: {{ badRobot }}
 Disallow: /
 {% endfor -%}
+
+User-agent: *
+Disallow:
 

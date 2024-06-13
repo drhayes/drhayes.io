@@ -1,5 +1,6 @@
 const badRobots = [
   'AdsBot-Google',
+  'Applebot',
   'Amazonbot',
   'AwarioRssBot',
   'AwarioSmartBot',
