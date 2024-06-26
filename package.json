@@ -36,7 +36,7 @@
     "sanitize-html": "2.13.0"
   },
   "devDependencies": {
-    "mocha": "10.3.0",
+    "mocha": "10.5.1",
     "sinon": "17.0.1"
   }
 }
