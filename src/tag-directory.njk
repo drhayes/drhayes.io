@@ -1,0 +1,25 @@
+---
+title: Tag Directory
+description: A list of tags used on this site.
+layout: base.njk
+permalink: /tags/index.html
+eleventyExcludeFromCollections: true
+---
+
+{% include "header.njk" %}
+
+<main class="center stack" id="main">
+  <h1>All the tags</h1>
+
+  <p>This is not the friendliest "all the tags" page, but at least I have one now.</p>
+
+  <p>In the future I'm hoping to include a description for each tag.</p>
+
+  <ol class="list-style-type:none h-feed">
+    {% for tag in collections.allTheTags %}
+    <li class="h-entry">
+      <a href="/tags/{{ tag | slugify }}/" class="u-url">{{ tag }} ({{ collections.writingByTag.get(tag).length }})</a>
+    </li>
+    {% endfor %}
+  </ol>
+</main>
