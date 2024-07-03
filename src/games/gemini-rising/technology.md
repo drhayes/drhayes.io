@@ -2,7 +2,7 @@
 title: Technology
 date: 2018-09-13
 description: The tech I'm using in Gemini Rising.
-updated: 2022-01-20
+updated: 2024-07-03
 aliases:
   - /games/gemini-rising/articles/technology
 ---
@@ -14,14 +14,17 @@ I always want to know what tools were used to make the games that I play, so I t
 ## The List
 
 - [Löve][love2d]
-- Multiple Lua libraries:
+- Multiple Lua libraries (including but not limited to):
   - [anim8][]
   - [baton][]
   - [batteries][]
+  - [beehive][]
   - [classic][]
   - [flux][]
+  - [jprof][]
   - [lily][]
   - [lume][]
+  - [moonshine][]
   - [ripple][]
   - [serpent][]
   - [squeak][]
@@ -71,3 +74,6 @@ My toolchain consists of Git, a `Makefile`, and the outputs of lots of those pro
 [Neovim]: https://neovim.io
 [ghactions]: https://github.com/features/actions
 [Butler]: https://itch.io/docs/butler/
+[beehive]: https://github.com/drhayes/beehive.lua
+[jprof]: https://github.com/pfirsich/jprof
+[moonshine]: https://github.com/vrld/moonshine
