@@ -41,8 +41,8 @@ As Prometheus was immortal, his liver would grow back each day and he would live
 There are so many resonant interpretations of this myth for me: fire as technology, Prometheus as a trickster figure and humanity's champion, also as a cautionary tale about overreach and hubris.
 
 But my favorite personal interpretation is this:
-Prometheus has the gift of foresight; therefore, he knew exactly what would happen as a result of his actions... but he did them anyway.
+Prometheus has the gift of foresight; therefore, he knew exactly what would happen as a result of his actions... But he did them anyway.
 Knowing full well that he would end up chained to a rock and tortured for all eternity (or, at least, for a very, very long time until freed by Heracles) he chose to do all these things to defend humanity.
-He knew what was right and he knew it would hurt him to do it but went ahead with it.
+He knew what was right and he knew it would hurt him to do it but went ahead anyway.
 
 I have this story tattooed on my left arm as a half sleeve.
