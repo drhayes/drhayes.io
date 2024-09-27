@@ -10,7 +10,6 @@
   <link href="{{ site.host }}{{ permalink }}" rel="self"/>
   <link href="{{ site.host }}"/>
   <updated>{{ collections[feed] | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <updated>{{ collections.allTheWriting | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ global.baseUrl }}</id>
   <generator uri="https://www.11ty.dev/" version="{{ eleventy.version }}">{{ eleventy.generator }}</generator>
   <author>
@@ -37,10 +36,15 @@
     <summary>{{ post.data.description | trim }}</summary>
     {%- endif %}
     <content xml:lang="{{ site.language }}" type="html">
+      <![CDATA[
       {%- if post.data.definition -%}
       {{ post.data.definition | md | trim }}
       {%- endif -%}
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | trim }}
+      {%- if post.data.source -%}
+      - <cite>{{ post.data.source | trim }}</cite>
+      {%- endif -%}
+      ]]>
     </content>
     <rights type="text">{{ site.copyright }}</rights>
   </entry>
