@@ -1,8 +1,8 @@
 :root {
-  --body-font: "Berkeley Mono";
-  --heading-font: "Berkeley Mono";
-  --subheading-font: "Berkeley Mono";
-  --code-font: "Berkeley Mono";
+  --body-font: 'Berkeley Mono';
+  --heading-font: 'Berkeley Mono';
+  --subheading-font: 'Berkeley Mono';
+  --code-font: 'Berkeley Mono';
   --measure: 75ch;
 
   --font-size-xs: 0.75rem;
@@ -99,36 +99,53 @@
   --color-badge-bg-color: var(--color-iron);
   --color-badge-draft: var(--color-white);
   --color-game-text-outline: var(--color-blue);
-  --color-target-bg-color: color-mix(in lch, var(--color-deep), transparent 50%);
+  --color-target-bg-color: color-mix(
+    in lch,
+    var(--color-deep),
+    transparent 50%
+  );
 
   --aside-background-color: var(--color-steel);
   --aside-header-color: var(--color-white);
   --aside-text-color: var(--color-white);
   --aside-border-color: var(--color-zinc);
 
-  --warning-background-color: color-mix(in srgb, var(--color-fabric), white 80%);
+  --warning-background-color: color-mix(
+    in srgb,
+    var(--color-fabric),
+    white 80%
+  );
   --warning-color: var(--color-fabric);
   --warning-border-color: var(--color-fabric);
   --joke-background-color: color-mix(in srgb, var(--color-flora), white 80%);
   --joke-color: var(--color-flora);
   --joke-border-color: var(--color-flora);
-  --draft-background-color: color-mix(in srgb, var(--color-archaeon), white 80%);
+  --draft-background-color: color-mix(
+    in srgb,
+    var(--color-archaeon),
+    white 80%
+  );
   --draft-color: var(--color-steel);
   --draft-color-text: var(--color-steel);
   --draft-border-color: var(--color-steel);
   --omg-status-color: var(--color-white);
-  --omg-status-label-background-color: color-mix(in lch, var(--color-deep), white 20%);
+  --omg-status-label-background-color: color-mix(
+    in lch,
+    var(--color-deep),
+    white 20%
+  );
   --omg-status-border-color: var(--color-iron);
-  --blue-gradient: linear-gradient(100deg,
-      hsl(250, 70%, 55%),
-      hsl(200, 100%, 50%));
+  --blue-gradient: linear-gradient(
+    100deg,
+    hsl(250, 70%, 55%),
+    hsl(200, 100%, 50%)
+  );
   --color-game-caption: var(--color-lightish);
-  --selection-color: var(--color-lightish);
-  --selection-bg-color: var(--color-dark);
+  --selection-color: var(--color-dark);
+  --selection-bg-color: var(--color-archaeon);
 
   font-size: var(--font-size-base);
   letter-spacing: -0.03em;
-  ;
 }
 
 ::selection {
