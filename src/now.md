@@ -1,7 +1,7 @@
 ---
 title: Now
 description: What am I doing right now.
-updated: 2024-02-15
+updated: 2025-01-24
 eleventyNavigation:
   key: Now
   order: 2
@@ -11,15 +11,15 @@ eleventyNavigation:
 
 ## Overall
 
-Texas in February is a weird month. I bet we've got one last freeze in us coming up, which I'm not looking forward to given how [previous ice storms](https://www.statesman.com/story/news/2022/01/04/246-texans-died-february-freeze-and-power-loss-officials-say/9080688002/) have gone for us.
+Things are cold down here in Texas. But I bet we haven't seen our last freeze.
 
 ## 🎲 Role-playing Games
 
-Still Mask-ing it up. Still thinking about Vaesen and, possibly, running [Pasion de las Pasiones](https://magpiegames.com/pages/pasion).
+We're playing [Homebrew World](https://spoutinglore.blogspot.com/2018/07/homebrew-world.html) and [Fabula Ultima](https://need.games/fabula-ultima/) right now and having a lot of fun. I wonder if I should write up something about my characters and post it to the site, hmm...
 
 ## 🖥️ Programming
 
-Still an enthusiastic member of the [anti-JavaScript JavaScript club](https://anti-javascript-javascript.club/). My [anti-JavaScript JavaScript shirt](https://www.bonfire.com/anti-javascript-javascript-club/) got here and it's great!
+Playing around with Go. Still doing (mostly) JS for work.
 
 ## 🎶 Music
 
