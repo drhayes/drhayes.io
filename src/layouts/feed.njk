@@ -21,7 +21,11 @@
   {%- set absolutePostUrl = post.url | absoluteUrl(global.baseUrl) -%}
   {% if not post.data.unlisted -%}
   <entry>
+    {%- if post.data.url %}
+    <title>🔗 {{ post.data.title }}</title>
+    {%- else -%}
     <title>{{ post.data.title }}</title>
+    {% endif -%}
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>

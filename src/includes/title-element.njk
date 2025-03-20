@@ -14,7 +14,7 @@
 
   {% if title %}
   <h1 class="p-name p-bridgy-mastodon-content">
-    {{ title }}
+    {%- if url %}🔗 {%- endif %}{{ title }}
   </h1>
   {% endif %}
 

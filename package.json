@@ -5,7 +5,6 @@
     "build": "eleventy",
     "postbuild": "scripts/send-webmentions.sh",
     "send-webmentions": "webmention dist/feed.xml --limit 1 --debug --send",
-    "get-links": "node scripts/get-links.js",
     "start": "BASE_URL=http://localhost:3000 NODE_ENV=development ELEVENTY_ENV=development eleventy --serve --quiet",
     "test": "mocha --recursive",
     "create": "./scripts/create-post.js"
