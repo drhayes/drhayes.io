@@ -1,12 +1,12 @@
 ---
-title: "🔗 “I've Rediscovered A Mode Of Expression That Was Important To Me As A Kid”: A Talk with Jordan Mechner - The Comics Journal"
+title: "“I've Rediscovered A Mode Of Expression That Was Important To Me As A Kid”: A Talk with Jordan Mechner - The Comics Journal"
 date: 2024-03-18
 tags:
   - inspiration
 url: https://www.tcj.com/ive-rediscovered-a-mode-of-expression-that-was-important-to-me-as-a-kid-a-talk-with-jordan-mechner/
 ---
 
-Jordan Mechner's games were hugely influential on me growing up. Playing *Karateka* and *Prince of Persia* were formative experiences; the smooth animation! The storytelling! One guy did this?!
+Jordan Mechner's games were hugely influential on me growing up. Playing _Karateka_ and _Prince of Persia_ were formative experiences; the smooth animation! The storytelling! One guy did this?!
 
 Once I had wider access to the Internet I found out that his original calling was as a screenwriter; he'd always wanted to make movies.
 
@@ -15,3 +15,4 @@ This article is about how his actual first love was comics. The handmade comics 
 I think his story is pretty inspiring, all the way around; he always did what he loved, made that his guiding principle, and charged forward. He put his art first and it worked out for him. There are cynical parts of me poking at me, at how much of a fanboy I am, but I'm just asking them to be quiet for a few minutes.
 
 Check it out: https://www.tcj.com/ive-rediscovered-a-mode-of-expression-that-was-important-to-me-as-a-kid-a-talk-with-jordan-mechner/
+

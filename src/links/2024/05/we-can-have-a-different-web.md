@@ -1,5 +1,5 @@
 ---
-title: "🔗 We can have a different web"
+title: 'We can have a different web'
 date: 2024-05-02
 tags:
   - culture
@@ -14,3 +14,4 @@ In an age soaked in cynicism and irony, hope is punk as fuck. I dig the message 
 Thanks, Molly. This is awesome.
 
 Check it out: https://www.citationneeded.news/we-can-have-a-different-web/
+

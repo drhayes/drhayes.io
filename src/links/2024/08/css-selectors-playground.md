@@ -1,5 +1,5 @@
 ---
-title: "🔗 CSS Selectors Playground"
+title: 'CSS Selectors Playground'
 date: 2024-08-05
 tags:
   - css
@@ -11,3 +11,4 @@ url: https://selectors.sandroroth.com/
 An excellent, interactive resource for learning and refreshing CSS. I really dig this site!
 
 Check it out: https://selectors.sandroroth.com/
+

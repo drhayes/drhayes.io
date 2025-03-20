@@ -1,5 +1,5 @@
 ---
-title: "🔗 The yaml document from hell"
+title: 'The yaml document from hell'
 date: 2024-03-12
 tags:
   - yaml
@@ -14,3 +14,4 @@ I fully accept that JSON isn't very humane or pleasant for regular ol' humans to
 If JSON won't due, I'd prefer [TOML](https://toml.io/en/).
 
 Check it out: https://ruudvanasseldonk.com/2023/01/11/the-yaml-document-from-hell
+

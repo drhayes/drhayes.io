@@ -1,5 +1,5 @@
 ---
-title: "🔗 Rebecca Solnit · In the Shadow of Silicon Valley: Losing San Francisco"
+title: 'Rebecca Solnit · In the Shadow of Silicon Valley: Losing San Francisco'
 date: 2024-02-21
 tags:
   - capitalism
@@ -12,3 +12,4 @@ url: https://www.lrb.co.uk/the-paper/v46/n03/rebecca-solnit/in-the-shadow-of-sil
 This is heart-breaking. There are times I don't like my industry very much.
 
 Check it out: https://www.lrb.co.uk/the-paper/v46/n03/rebecca-solnit/in-the-shadow-of-silicon-valley
+

@@ -1,5 +1,5 @@
 ---
-title: "🔗 Easy Releasy by Jannik Boysen"
+title: 'Easy Releasy by Jannik Boysen'
 date: 2024-05-30
 tags:
   - itchio
@@ -16,3 +16,4 @@ When it comes time to make my own pages for itch.io I have no idea what I'm doin
 This template pack works like a signpost of the resources you might need. That's just right for me and hopefully is useful for other people.
 
 Check it out: https://jannikboysen.itch.io/easy-releasy
+

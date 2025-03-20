@@ -1,5 +1,5 @@
 ---
-title: "🔗 A dozen thoughts about AI | daverupert.com"
+title: 'A dozen thoughts about AI | daverupert.com'
 date: 2024-02-16
 tags:
   - ai
@@ -19,3 +19,4 @@ The tools should serve the humans. [Only give fucks to things that can give them
 I think there exists a future that will frown judgmentally at our times for the things we did to the actual, living humans of our time. I think the crimes we've committed against ourselves in the names of companies making shit-tons of money is horrendous.
 
 Check it out: https://daverupert.com/2024/02/robo-barf/
+

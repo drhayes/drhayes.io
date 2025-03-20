@@ -1,5 +1,5 @@
 ---
-title: "🔗 A Message from the Chancellor on the Recent Student Protest - McSweeney’s Internet Tendency"
+title: 'A Message from the Chancellor on the Recent Student Protest - McSweeney’s Internet Tendency'
 date: 2024-05-02
 tags:
   - culture
@@ -14,3 +14,4 @@ url: https://www.mcsweeneys.net/articles/a-message-from-the-chancellor-on-the-re
 Skewered.
 
 Check it out: https://www.mcsweeneys.net/articles/a-message-from-the-chancellor-on-the-recent-student-protest
+

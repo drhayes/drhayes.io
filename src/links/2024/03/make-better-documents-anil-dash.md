@@ -1,5 +1,5 @@
 ---
-title: "🔗 Make better documents. - Anil Dash"
+title: 'Make better documents. - Anil Dash'
 date: 2024-03-11
 tags:
   - communication
@@ -19,3 +19,4 @@ Practicing empathy continues to be a valuable skill in basically every part of l
 Looks like I need to re-write that spec I've been working on at my job as well, hmm...
 
 Check it out: https://www.anildash.com/2024/03/10/make-better-documents/
+
