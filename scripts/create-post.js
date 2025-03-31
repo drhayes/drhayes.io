@@ -1,10 +1,12 @@
 #! /usr/bin/env node
 
-const { program } = require('commander');
+const { Command } = require('commander');
 const slugify = require('@sindresorhus/slugify');
 const { join: joinPath, dirname } = require('path');
 const dateFns = require('date-fns');
 const { writeFileSync, mkdirSync } = require('fs');
+
+const program = new Command();
 
 program
   .name('create-post')
