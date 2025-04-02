@@ -5,6 +5,7 @@ const slugify = require('@sindresorhus/slugify');
 const { join: joinPath, dirname } = require('path');
 const dateFns = require('date-fns');
 const { writeFileSync, mkdirSync } = require('fs');
+const { spawn } = require('child_process');
 
 const program = new Command();
 
@@ -30,6 +31,13 @@ program
     const template = linkTemplate({ link, title, formattedDate });
     mkdirSync(dirname(path), { recursive: true });
     writeFileSync(path, template);
+    const editor = process.env.EDITOR;
+    if (editor) {
+      spawn(editor, [path], {
+        stdio: 'inherit',
+        detached: true,
+      });
+    }
   });
 
 function linkTemplate({ link, title, formattedDate }) {
