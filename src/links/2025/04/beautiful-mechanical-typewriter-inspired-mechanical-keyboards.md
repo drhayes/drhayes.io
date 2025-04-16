@@ -4,6 +4,7 @@ date: 2025-04-16
 tags:
   - mechanical-keyboards
 url: https://www.qwerkywriter.com/
+description: Pretty mechanical keyboards that look like they belong on typewriters!
 ---
 
 Found via Julian Simpson's [Cartoon Gravity](https://www.cartoongravity.com/2024-04-14/).
