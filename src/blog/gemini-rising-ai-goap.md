@@ -352,7 +352,8 @@ function WanderOnPlatform:run(entity)
     self.wanderDir = 'left'
   end
 
-  brain.context.destination = dest aiSystem:set(entity, 'hasDestination', true)
+  brain.context.destination = dest
+  aiSystem:set(entity, 'hasDestination', true)
 
   return 'success'
 end
