@@ -296,7 +296,7 @@ function behaviors.seek(entity, dt)
 end
 ```
 
-Check out that `slowRadius` stuff. That's pretty legendary. It makes enemies look very natural as the slow to a stop as they arrive at their destinations.
+Check out that `slowRadius` stuff. That's pretty legendary. It makes enemies look very natural as they slow to a stop as they arrive at their destinations.
 
 As always when I praise something, it's because I got the idea from something else. My goto reference for the basics of AI game programming has always been [AI for Games by Ian Millington][aiforgames]. I adore this book and have read it cover-to-cover multiple times. I have the second edition but I can only imagine the third edition is just as good.
 
