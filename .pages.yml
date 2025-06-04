@@ -1,8 +1,0 @@
-media:
-  input: src/img/
-  output: /img/
-content:
-  - name: blog
-    label: Blog Posts
-    path: src/blog
-    type: collection
